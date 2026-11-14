@@ -1,0 +1,3965 @@
+{
+  "title": "Your Life as Jesse Livermore | Won $100 Million, Lost It All",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Jesse Livermore",
+      "face": "jesse-livermore",
+      "shirt": "#2b2b30",
+      "faceIdea": "Jesse Livermore, American stock trader, slicked-back sandy blond hair, pale blue eyes, clean-shaven, high white collar and dark suit"
+    },
+    "mother": {
+      "name": "Your mother",
+      "face": "livermore-mother",
+      "faceIdea": "poor New England farm wife, 1890s, tired kind face, hair pulled back in a bun, plain high-necked dress"
+    },
+    "nettie": {
+      "name": "Nettie Jordan",
+      "face": "nettie-jordan",
+      "faceIdea": "young Indianapolis wife, 1900, Gibson-girl pompadour hair, high lace collar, pearl earrings"
+    },
+    "price": {
+      "name": "Teddy Price",
+      "face": "teddy-price",
+      "faceIdea": "Theodore H. Price, New York cotton merchant, 1900s, round face, neat dark moustache, bowler hat, wing collar"
+    },
+    "morgan": {
+      "name": "J. P. Morgan",
+      "face": "jp-morgan",
+      "faceIdea": "J. P. Morgan, banker, 1900s, large red bulbous nose, thick white moustache, stern dark eyes, balding, wing collar"
+    },
+    "dorothy": {
+      "name": "Dorothy Wendt",
+      "face": "dorothy-wendt",
+      "faceIdea": "former Ziegfeld showgirl, 1920s, blonde finger-waved bob, pearl necklace, glamorous"
+    },
+    "harriet": {
+      "name": "Harriet Metz Noble",
+      "face": "harriet-noble",
+      "faceIdea": "Omaha singer and socialite, 1930s, dark marcel-waved hair, fur collar, pearl necklace"
+    },
+    "shopowner": {
+      "name": "Bucket shop owner",
+      "face": "new-york-banker",
+      "faceIdea": "stern Gilded Age financier, 1890s, top hat, monocle"
+    },
+    "crowd1": {
+      "name": "Broker",
+      "face": "broker-1870s",
+      "faceIdea": "unnamed Wall Street broker, 1870s, top hat, mutton-chop whiskers, dark coat"
+    },
+    "crowd2": {
+      "name": "Townswoman",
+      "face": "townswoman-1880s",
+      "faceIdea": "unnamed working woman, 1880s, plain bonnet and shawl, hair in a bun"
+    },
+    "crowd3": {
+      "name": "Old clerk",
+      "face": "clerk-1890s",
+      "faceIdea": "unnamed elderly bank clerk, 1890s, green eyeshade visor, spectacles, grey moustache"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's October 1929, and the New York stock market is falling apart.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M?"
+      },
+      "bgIdea": "Wall Street outside the New York Stock Exchange during the October 1929 crash: classical columns, overcast sky, papers blowing on the pavement, 1920s cars parked",
+      "stamp": "NEW YORK, 1929",
+      "crowd": 6,
+      "fx": "storm"
+    },
+    {
+      "text": "Men who were millionaires on Monday are begging for cab fare by Thursday.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millionaires",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M?"
+      },
+      "bgIdea": "Wall Street outside the New York Stock Exchange during the October 1929 crash: classical columns, overcast sky, papers blowing on the pavement, 1920s cars parked",
+      "crowd": 8
+    },
+    {
+      "text": "And in a quiet office on Fifth Avenue, you are smiling.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "smiling",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M?"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan",
+      "callouts": [
+        {
+          "text": "YOU, JESSE LIVERMORE",
+          "word": "office",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Because months ago, you bet that all of this would happen.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bet",
+          "pose": "point"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M?"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "By the end of it, you'll be about a hundred million dollars richer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hundred",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan",
+      "callouts": [
+        {
+          "text": "$100 MILLION",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Eleven years later, you'll die alone in a hotel cloakroom, calling yourself a failure.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "$?"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight",
+      "stamp": "NEW YORK, 1940"
+    },
+    {
+      "text": "So how do you win that much, and still lose?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lose",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "$?"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight"
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "$?"
+      }
+    },
+    {
+      "text": "And whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "idle"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "$?"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "$?"
+      }
+    },
+    {
+      "text": "It's 1877, and you're born in Shrewsbury, Massachusetts.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "born",
+          "expression": "happy"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1877",
+        "value": "AGE 0"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "SHREWSBURY, 1877",
+      "callouts": [
+        {
+          "text": "YOU, AGE 0",
+          "word": "born",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your name is Jesse Lauriston Livermore, and your family is very poor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poor",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1877",
+        "value": "AGE 0"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "Keep count of three things: the money, the wives, and the times you go broke.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "count",
+          "pose": "point"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1877",
+        "value": "AGE 0"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "You're going to need more fingers for that last one.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fingers",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1877",
+        "value": "AGE 0"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "Your family moves to a farm in Acton, where the soil mostly grows rocks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rocks",
+          "pose": "idle"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1883",
+        "value": "AGE 6"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "ACTON, MASSACHUSETTS"
+    },
+    {
+      "text": "You're a quick child: you can read and write at three and a half.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "quick",
+          "expression": "happy"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1883",
+        "value": "AGE 6"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "And you're especially good at one thing: numbers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1883",
+        "value": "AGE 6"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "good",
+          "label": "1+1=2"
+        }
+      ]
+    },
+    {
+      "text": "In 1891, at fourteen, your father pulls you out of school to work the farm.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "school",
+          "expression": "shock"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1891",
+        "value": "AGE 14"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "1891",
+      "callouts": [
+        {
+          "text": "YOU, 14",
+          "word": "fourteen",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You do not want to spend your life walking behind a plow.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "plow",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1891",
+        "value": "AGE 14"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "So your mother helps you run away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1891",
+        "value": "AGE 14"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOUR MOTHER",
+          "word": "mother",
+          "target": "mother"
+        }
+      ]
+    },
+    {
+      "text": "She gives you five dollars for the road.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "five",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Remember that five dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You walk out with one suit and five dollars, heading for Boston.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "walk",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "BOSTON, 1891",
+      "crowd": 4
+    },
+    {
+      "text": "Within days, you get a job at the PaineWebber brokerage.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "job",
+          "expression": "happy"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "callouts": [
+        {
+          "text": "PAINEWEBBER, BOSTON",
+          "word": "brokerage"
+        }
+      ]
+    },
+    {
+      "text": "Your job title is board boy, which is exactly what it sounds like.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "Prices arrive by telegraph, and you chalk them onto a giant board.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "chalk",
+          "pose": "point"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "The pay is five dollars a week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "week",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "pay",
+          "label": "$5/WEEK"
+        }
+      ]
+    },
+    {
+      "text": "And you notice something the grown men around you miss.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "notice",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Prices move in patterns, like the same tune played again and again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "vision": {
+        "image": "exchange",
+        "word": "patterns"
+      }
+    },
+    {
+      "text": "So you start writing them down in a little notebook.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "paper": {
+        "text": "UNION PACIFIC 48 - 49 - 47 - 50 - 52",
+        "word": "notebook"
+      }
+    },
+    {
+      "text": "Remember that notebook.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "notebook",
+          "pose": "point"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags",
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "The crash that makes you a hundred million is thirty-eight years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1891",
+        "value": "$5"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "In 1892, a friend talks you into trying a bucket shop.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bucket",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "AGE 15"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "1892",
+      "crowd": 4
+    },
+    {
+      "text": "A bucket shop: a parlor where you bet on stock prices without buying any stock.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "AGE 15"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "It's like betting on a horse race without ever owning a horse.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "horse",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "AGE 15"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "You bet five dollars on a railroad, the Chicago, Burlington and Quincy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "five",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "AGE 15"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "shopowner",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Two days later, you collect three dollars and twelve cents in profit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "profit",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "$8.12"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "callouts": [
+        {
+          "text": "+$3.12",
+          "word": "profit"
+        }
+      ]
+    },
+    {
+      "text": "It's the first money you've ever made without moving a single rock.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "money",
+          "pose": "idle"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1892",
+        "value": "$8.12"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "At sixteen, you quit your job to trade full time.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1893",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "1893",
+      "callouts": [
+        {
+          "text": "YOU, 16, FULL-TIME TRADER",
+          "word": "sixteen",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your one law: bet only on what the price tape shows, never on tips.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tape",
+          "pose": "point"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1893",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "paper": {
+        "text": "TRUST THE TAPE. NEVER TIPS.",
+        "word": "law"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1893",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "By 1894, you're making about two hundred dollars a week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "two",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1894",
+        "value": "$200/WK"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "1894",
+      "crowd": 5
+    },
+    {
+      "text": "That's forty times your old salary, and you're seventeen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1894",
+        "value": "$200/WK"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "forty",
+          "label": "x40"
+        }
+      ]
+    },
+    {
+      "text": "Boston's bucket shops start calling you the Boy Plunger.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Plunger",
+          "pose": "idle"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1894",
+        "value": "$200/WK"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "THE BOY PLUNGER",
+          "word": "Plunger",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You go home and hand your mother a thousand dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hand",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1894",
+        "value": "$1,000"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$1,000",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "That's her five dollars, two hundred times over.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "five",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1894",
+        "value": "$1,000"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "She calls it gambling.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1894",
+        "value": "$1,000"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You call it speculating: betting on where a price goes next, with a reason.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "speculating",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1894",
+        "value": "$1,000"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "By 1897, the Boston bucket shops have had quite enough of you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "enough",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "stamp": "1897",
+      "extras": [
+        {
+          "who": "shopowner",
+          "expression": "shock",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "You've taken about ten thousand dollars from them in three years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "shopowner",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$10,000",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "So they ban you, because a casino hates nothing more than a winner.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ban",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bucketshop1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "bgIdea": "Boston bucket shop, 1890s: narrow betting parlor, chalk quotation board, stock ticker machine under a glass dome, wooden counter with a cashier's window, spittoons",
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "extras": [
+        {
+          "who": "shopowner",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "One firm, Haight and Freese, still takes your bets, but quietly tilts the odds.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "It charges you more on every trade, hoping you'll finally lose.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "charges",
+          "label": "FEES"
+        }
+      ]
+    },
+    {
+      "text": "You keep winning anyway.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "winning",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1897",
+        "value": "$10K"
+      },
+      "looks": {
+        "you": "jesse-livermore-young"
+      }
+    },
+    {
+      "text": "On September 14, 1900, you step off the train in New York.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "step",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1900",
+        "value": "$10K"
+      },
+      "stamp": "NEW YORK, 1900",
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "YOU, 23",
+          "word": "train",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You bring ten thousand dollars and a great deal of confidence.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1900",
+        "value": "$10K"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "ten",
+          "label": "$10,000"
+        }
+      ]
+    },
+    {
+      "text": "At a real brokerage, you turn it into fifty thousand in five days.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fifty",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1900",
+        "value": "$50K"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "$50,000 IN 5 DAYS",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "The crash that makes you a hundred million is now twenty-nine years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1900",
+        "value": "$50K"
+      }
+    },
+    {
+      "text": "That October, you marry Nettie Jordan of Indianapolis, after knowing her a few weeks.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1900",
+        "value": "$50K"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "NETTIE JORDAN, YOUR WIFE",
+          "word": "Nettie",
+          "target": "nettie"
+        }
+      ]
+    },
+    {
+      "text": "You buy her beautiful jewelry, because you're rich now.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "jewelry",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1900",
+        "value": "$50K"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Remember that jewelry.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "jewelry",
+          "pose": "idle"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1900",
+        "value": "$50K"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In May 1901, you bet hard against the market with borrowed money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "against",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1901",
+        "value": "$50K"
+      },
+      "stamp": "1901",
+      "crowd": 6
+    },
+    {
+      "text": "The market goes up instead, and you lose everything.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "everything",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "$50,000 GONE",
+          "word": "lose"
+        }
+      ]
+    },
+    {
+      "text": "That bet has a name, and one day it will make you famous: short selling.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "short",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Imagine your neighbor lends you his bicycle for a month.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bicycle",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window"
+    },
+    {
+      "text": "You sell it today for one hundred dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window",
+      "callouts": [
+        {
+          "text": "SOLD: $100",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Next week, the same bicycle costs sixty, so you buy one.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut",
+          "hold": null
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window"
+    },
+    {
+      "text": "You give it back to your neighbor and keep forty dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "forty",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window",
+      "callouts": [
+        {
+          "text": "PROFIT: $40",
+          "word": "forty"
+        }
+      ]
+    },
+    {
+      "text": "That's short selling: borrow a stock, sell it, buy it back cheaper later.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "short",
+          "pose": "point"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window"
+    },
+    {
+      "text": "But if the price rises instead, you lose, with no ceiling on the loss.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lose",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "price",
+          "label": "UP?"
+        }
+      ]
+    },
+    {
+      "text": "And with borrowed money, even a small move the wrong way wipes you out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wipes",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window"
+    },
+    {
+      "text": "Which is exactly what just happened to you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "happened",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bikeshop1900",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "small-town bicycle shop, 1900: tall safety bicycles in a row, wheels hanging on the wall, workbench with tools, sunny shop window"
+    },
+    {
+      "text": "You ask Nettie to pawn her jewelry, so you can trade again.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pawn",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Pawn: hand it to a shop for a loan; miss a payment, it's gone.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "She says no.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The marriage never quite recovers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "recovers",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You borrow two thousand dollars from a broker friend, Ed Hutton, and leave town.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1901",
+        "value": "$2K"
+      },
+      "crowd": 4,
+      "icons": [
+        {
+          "icon": "money",
+          "word": "two",
+          "label": "$2,000"
+        }
+      ]
+    },
+    {
+      "text": "In the bucket shops of St. Louis, you build it back up.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "build",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1901",
+        "value": "$2K"
+      },
+      "stamp": "ST. LOUIS, 1901",
+      "crowd": 4
+    },
+    {
+      "text": "Then a bet on Northern Pacific railroad stock turns ten thousand into half a million.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "half",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1901",
+        "value": "$500K"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "$500,000",
+          "word": "half"
+        }
+      ]
+    },
+    {
+      "text": "You're twenty-four, and you've already been broke twice.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "broke",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1901",
+        "value": "$500K"
+      },
+      "callouts": [
+        {
+          "text": "YOU, 24, BROKE TWICE",
+          "word": "twenty-four",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "In April 1906, you get a strange feeling about Union Pacific, a railroad stock.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "feeling",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1906",
+        "value": "$500K"
+      },
+      "stamp": "1906"
+    },
+    {
+      "text": "Nothing looks wrong, but you bet against it anyway.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "against",
+          "pose": "point"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1906",
+        "value": "$500K"
+      }
+    },
+    {
+      "text": "The next day, an earthquake destroys San Francisco.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sanfrancisco1906",
+      "counter": {
+        "label": "1906",
+        "value": "$500K"
+      },
+      "bgIdea": "San Francisco street after the 1906 earthquake: collapsed brick buildings, cracked cobbles, smoke rising in the distance, cable car tracks",
+      "stamp": "SAN FRANCISCO, 1906",
+      "empty": true,
+      "fx": "storm"
+    },
+    {
+      "text": "Union Pacific's railroad runs straight into that city, and its stock collapses.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collapses",
+          "expression": "shock"
+        }
+      ],
+      "bg": "sanfrancisco1906",
+      "counter": {
+        "label": "1906",
+        "value": "$500K"
+      },
+      "bgIdea": "San Francisco street after the 1906 earthquake: collapsed brick buildings, cracked cobbles, smoke rising in the distance, cable car tracks"
+    },
+    {
+      "text": "You make about two hundred and fifty thousand dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "two",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1906",
+        "value": "$750K"
+      },
+      "callouts": [
+        {
+          "text": "+$250,000",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "Everybody calls it luck. You call it reading the tape.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tape",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1906",
+        "value": "$750K"
+      }
+    },
+    {
+      "text": "Then Ed Hutton talks you out of a rebound bet, and you lose forty thousand.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "forty",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1906",
+        "value": "$710K"
+      }
+    },
+    {
+      "text": "It's October 1907, and New York's banks are running out of cash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cash",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1907",
+        "value": "$710K"
+      },
+      "stamp": "NEW YORK, 1907",
+      "crowd": 8,
+      "fx": "rain"
+    },
+    {
+      "text": "The cost of borrowing money for one night shoots past one hundred percent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1907",
+        "value": "$710K"
+      },
+      "crowd": 5,
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "borrowing",
+          "label": "100%+"
+        }
+      ]
+    },
+    {
+      "text": "And you are short on almost everything.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "short",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1907",
+        "value": "$710K"
+      }
+    },
+    {
+      "text": "In a single day, you make one million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "million",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1907",
+        "value": "$1M+"
+      },
+      "callouts": [
+        {
+          "text": "$1 MILLION IN ONE DAY",
+          "word": "million"
+        }
+      ]
+    },
+    {
+      "text": "Then a message arrives from J. P. Morgan, the most powerful banker in America.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1907",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "morgan",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "J. P. MORGAN",
+          "word": "Morgan",
+          "target": "morgan"
+        }
+      ]
+    },
+    {
+      "text": "Morgan asks you to stop selling, before you break the whole market.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stop",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1907",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "morgan",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Being asked a favor by Morgan is not something that happens twice.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "favor",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1907",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "morgan",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You agree, flip around, and start buying instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buying",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1907",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "morgan",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "When stocks bounce back, you're worth about three million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "three",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1907",
+        "value": "$3M"
+      },
+      "callouts": [
+        {
+          "text": "$3 MILLION",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "You buy a two-hundred-thousand-dollar yacht, a private railroad car, and an apartment.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yacht",
+          "pose": "point"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1907",
+        "value": "$3M"
+      }
+    },
+    {
+      "text": "The crash that makes you a hundred million is twenty-two years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1907",
+        "value": "$3M"
+      }
+    },
+    {
+      "text": "In 1908, you meet Teddy Price, a famous cotton trader.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "stamp": "1908",
+      "extras": [
+        {
+          "who": "price",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "TEDDY PRICE, COTTON TRADER",
+          "word": "Price",
+          "target": "price"
+        }
+      ]
+    },
+    {
+      "text": "He is charming, he is confident, and he is very sure about cotton.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charming",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "extras": [
+        {
+          "who": "price",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He says prices are going up, so you buy, and buy, and buy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "extras": [
+        {
+          "who": "price",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "That's a tip: the one thing you swore never to trade on.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tip",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "extras": [
+        {
+          "who": "price",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "What you don't know: Price is secretly selling.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "selling",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "extras": [
+        {
+          "who": "price",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Cotton falls, and you hold on while it falls further.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "falls",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1908",
+        "value": "$3M"
+      },
+      "crowd": 6,
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "By the end, most of your three million is gone.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1908",
+        "value": "LOSSES"
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "MOST OF $3M: GONE",
+          "word": "gone"
+        }
+      ],
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "The tape told you to sell, but you listened to a man instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tape",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1908",
+        "value": "LOSSES"
+      },
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "Or as the book about you will later put it:",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1908",
+        "value": "LOSSES"
+      },
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "There is only one side to the stock market: the right side.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "right",
+          "pose": "point"
+        }
+      ],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1908",
+        "value": "LOSSES"
+      },
+      "quote": {
+        "who": "you",
+        "text": "There is only one side to the stock market... the right side.",
+        "word": "only"
+      },
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "For years after that, nothing you try quite works.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nothing",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1911",
+        "value": "IN DEBT"
+      },
+      "stamp": "1911"
+    },
+    {
+      "text": "In 1915, you file for bankruptcy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1915",
+        "value": "BANKRUPT"
+      },
+      "stamp": "NEW YORK, 1915",
+      "crowd": 4,
+      "paper": {
+        "text": "PETITION IN BANKRUPTCY: J. L. LIVERMORE",
+        "word": "bankruptcy"
+      }
+    },
+    {
+      "text": "Bankruptcy: a court agrees you can't pay, so your creditors must stop chasing you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1915",
+        "value": "BANKRUPT"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "You're thirty-seven, and you are starting over from nothing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1915",
+        "value": "BANKRUPT"
+      },
+      "callouts": [
+        {
+          "text": "YOU, 37, BANKRUPT",
+          "word": "thirty-seven",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "A broker agrees to let you trade again, on credit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trade",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1915",
+        "value": "BANKRUPT"
+      }
+    },
+    {
+      "text": "You wait, and wait, for the one trade the tape is begging you to make.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wait",
+          "pose": "idle"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1915",
+        "value": "BANKRUPT"
+      }
+    },
+    {
+      "text": "In 1917, you finally make it big again.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "big",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1917",
+        "value": "$1M+"
+      },
+      "stamp": "1917"
+    },
+    {
+      "text": "You pay back every creditor, even though the court says you don't have to.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1917",
+        "value": "$1M+"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Some of them probably count the money twice, out of pure surprise.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "count",
+          "hold": null
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1917",
+        "value": "$1M+"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "That same year, you and Nettie divorce.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "divorce",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1917",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Neither of you ever really got past that jewelry.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1917",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "nettie",
+          "expression": "neutral"
+        }
+      ],
+      "paper": {
+        "text": "DIVORCE GRANTED, OCTOBER 1917",
+        "word": "jewelry"
+      }
+    },
+    {
+      "text": "Around 1918, you quietly corner the cotton market.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "corner",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "stamp": "1918",
+      "crowd": 5,
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "Corner: owning so much of something that everyone else must buy it from you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "crowd": 4,
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "Yes, the same cotton that broke you ten years ago.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cotton",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "cottonexchange1908",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "bgIdea": "New York Cotton Exchange trading floor, 1908: octagonal trading ring, cotton bales and sample tables, big price board, tall arched windows"
+    },
+    {
+      "text": "President Woodrow Wilson gets involved, and you agree to sell at no profit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      }
+    },
+    {
+      "text": "Asked why you did it, you reportedly answer:",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      }
+    },
+    {
+      "text": "To see if I could, Mr. President.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "see",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "quote": {
+        "who": "you",
+        "text": "To see if I could, Mr. President.",
+        "word": "see"
+      }
+    },
+    {
+      "text": "In December 1918, you marry Dorothy Wendt, a former Ziegfeld showgirl.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "stamp": "DECEMBER 1918",
+      "crowd": 5,
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "DOROTHY WENDT, WIFE NO. 2",
+          "word": "Dorothy",
+          "target": "dorothy"
+        }
+      ]
+    },
+    {
+      "text": "Ziegfeld: the most famous chorus line on Broadway.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You're past forty, and she's in her early twenties.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "forty",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1918",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You have two sons, Jesse Junior and Paul.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1922",
+        "value": "$1M+"
+      },
+      "stamp": "1922",
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You spend about three and a half million dollars on a house in Great Neck.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "house",
+          "pose": "point"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1922",
+        "value": "$1M+"
+      },
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$3.5 MILLION HOUSE",
+          "word": "house"
+        }
+      ]
+    },
+    {
+      "text": "In 1923, a book about you comes out.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "stamp": "1923",
+      "crowd": 4
+    },
+    {
+      "text": "Its title: Reminiscences of a Stock Operator.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "paper": {
+        "text": "REMINISCENCES OF A STOCK OPERATOR",
+        "word": "Reminiscences"
+      }
+    },
+    {
+      "text": "The internet says it's your autobiography.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "autobiography",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      }
+    },
+    {
+      "text": "It isn't: a journalist, Edwin Lefevre, wrote it after interviewing you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "paper": {
+        "text": "BY EDWIN LEFEVRE",
+        "word": "journalist"
+      }
+    },
+    {
+      "text": "And the hero isn't even called Jesse Livermore: he's Larry Livingston.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Larry",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "callouts": [
+        {
+          "text": "'LARRY LIVINGSTON'",
+          "word": "Larry",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Close enough that everyone on Wall Street knows exactly who it is.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "In it, you say there is nothing new in Wall Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nothing",
+          "pose": "point"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "quote": {
+        "who": "you",
+        "text": "There is nothing new in Wall Street.",
+        "word": "nothing"
+      }
+    },
+    {
+      "text": "Its most famous line is about patience.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "patience",
+          "pose": "idle"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      }
+    },
+    {
+      "text": "It never was my thinking that made the big money. It always was my sitting.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      },
+      "quote": {
+        "who": "you",
+        "text": "It never was my thinking that made the big money... It always was my sitting.",
+        "word": "thinking"
+      }
+    },
+    {
+      "text": "The crash that makes you a hundred million is six years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1923",
+        "value": "$1M+"
+      }
+    },
+    {
+      "text": "By early 1929, everyone is buying stocks, many with borrowed money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buying",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "$1M+"
+      },
+      "bgIdea": "Wall Street outside the New York Stock Exchange during the October 1929 crash: classical columns, overcast sky, papers blowing on the pavement, 1920s cars parked",
+      "stamp": "NEW YORK, 1929",
+      "crowd": 8
+    },
+    {
+      "text": "Your price notes tell you prices are climbing on fewer and fewer buyers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$1M+"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan",
+      "vision": {
+        "image": "exchange",
+        "word": "notes"
+      }
+    },
+    {
+      "text": "So you quietly bet against the market, through more than a hundred brokers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "against",
+          "pose": "point"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$1M+"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan",
+      "callouts": [
+        {
+          "text": "100+ BROKERS",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "That way, nobody can see how big your bet really is.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nobody",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "$1M+"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "By spring, you're down more than six million dollars on paper.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "six",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$6M"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan",
+      "callouts": [
+        {
+          "text": "-$6 MILLION",
+          "word": "six"
+        }
+      ]
+    },
+    {
+      "text": "Every instinct says give up. You sit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sit",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$6M"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "And then it's October 1929 again, and the floor gives way.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$6M"
+      },
+      "bgIdea": "Wall Street outside the New York Stock Exchange during the October 1929 crash: classical columns, overcast sky, papers blowing on the pavement, 1920s cars parked",
+      "stamp": "OCTOBER 1929",
+      "crowd": 8,
+      "fx": "storm"
+    },
+    {
+      "text": "In two days, the market falls almost a quarter.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1929",
+        "value": "-$6M"
+      },
+      "crowd": 8,
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "falls",
+          "label": "-23%"
+        }
+      ]
+    },
+    {
+      "text": "In your office, bets you made months ago pay off all at once.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$6M"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "You clear about one hundred million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hundred",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "callouts": [
+        {
+          "text": "$100 MILLION",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "That's almost two billion dollars in today's money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "billion",
+          "label": "~$2B"
+        }
+      ]
+    },
+    {
+      "text": "The newspapers call you the Great Bear of Wall Street.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "crowd": 5,
+      "paper": {
+        "text": "THE GREAT BEAR OF WALL STREET",
+        "word": "Bear"
+      }
+    },
+    {
+      "text": "A bear: someone who bets that prices will fall.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bear",
+          "pose": "point"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      }
+    },
+    {
+      "text": "The internet says you caused the crash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "caused",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "You didn't: one man can't sink a market that big, only see it coming.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "But angry people skip the fine print, and you get death threats.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "threats",
+          "expression": "shock"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "So you hire an armed bodyguard to walk you to work.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bodyguard",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1929",
+        "value": "$100M"
+      }
+    },
+    {
+      "text": "And then, slowly, the money starts leaking out of your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "leaking",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1931",
+        "value": "$?"
+      }
+    },
+    {
+      "text": "In 1932, Dorothy divorces you, reportedly for a ten million dollar settlement.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "divorces",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1932",
+        "value": "$?"
+      },
+      "stamp": "1932",
+      "extras": [
+        {
+          "who": "dorothy",
+          "expression": "neutral"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$10 MILLION SETTLEMENT",
+          "word": "ten"
+        }
+      ]
+    },
+    {
+      "text": "In 1933, you marry Harriet Metz Noble, a singer from Omaha.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "expression": "happy"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1933",
+        "value": "$?"
+      },
+      "stamp": "1933",
+      "crowd": 4,
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "HARRIET NOBLE, WIFE NO. 3",
+          "word": "Harriet",
+          "target": "harriet"
+        }
+      ]
+    },
+    {
+      "text": "You are her fifth husband.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fifth",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1933",
+        "value": "$?"
+      },
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The internet says all four husbands before you took their own lives.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "internet",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1933",
+        "value": "$?"
+      },
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Records show at least two did, including one after the 1929 crash.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1933",
+        "value": "$?"
+      },
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1934, Washington creates the SEC: a new referee for Wall Street.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1934",
+        "value": "$?"
+      },
+      "stamp": "1934",
+      "paper": {
+        "text": "SECURITIES EXCHANGE ACT OF 1934",
+        "word": "SEC"
+      }
+    },
+    {
+      "text": "Your secret, giant bets now come with rules and paperwork.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rules",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1934",
+        "value": "$?"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "That same year, you go bankrupt again.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bankrupt",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1934",
+        "value": "-$2.5M"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "You list eighty-four thousand dollars in assets, and two and a half million in debts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1934",
+        "value": "-$2.5M"
+      },
+      "callouts": [
+        {
+          "text": "DEBTS: $2.5 MILLION",
+          "word": "million"
+        }
+      ]
+    },
+    {
+      "text": "In 1935, Dorothy, drunk, shoots your son Jesse Junior.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shoots",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1935",
+        "value": "-$2.5M"
+      },
+      "stamp": "1935",
+      "fx": "rain"
+    },
+    {
+      "text": "He survives.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "survives",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1935",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "You never fully recover from that year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1935",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "In 1937, the tax office still sends you a bill for eight hundred thousand dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1937",
+        "value": "-$2.5M"
+      },
+      "stamp": "1937",
+      "paper": {
+        "text": "TAX DUE: $800,000",
+        "word": "bill"
+      }
+    },
+    {
+      "text": "In 1939, you open a business selling your trading system to others.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "selling",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1939",
+        "value": "-$2.5M"
+      },
+      "stamp": "1939"
+    },
+    {
+      "text": "And Jesse Junior suggests you write a book.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "book",
+          "pose": "idle"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1939",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "In March 1940, it comes out: How to Trade in Stocks.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "stamp": "MARCH 1940",
+      "paper": {
+        "text": "HOW TO TRADE IN STOCKS",
+        "word": "Trade"
+      }
+    },
+    {
+      "text": "It's built on the habit you started at fourteen, in that little notebook.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "vision": {
+        "image": "exchange",
+        "word": "notebook"
+      }
+    },
+    {
+      "text": "Patterns, rules and prices, written down and studied for almost fifty years.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rules",
+          "pose": "point"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "But the world is busy with a war, and the book sells poorly.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poorly",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "It's Thanksgiving Day, November 28, 1940.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight",
+      "stamp": "NEW YORK, 1940",
+      "empty": true
+    },
+    {
+      "text": "You sit at the bar of the Sherry-Netherland hotel in Manhattan.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sit",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight"
+    },
+    {
+      "text": "Then you walk into the cloakroom, and take your own life.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight",
+      "fx": "rain"
+    },
+    {
+      "text": "You are sixty-three.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight"
+    },
+    {
+      "text": "You leave Harriet an eight-page note.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "shock"
+        }
+      ],
+      "paper": {
+        "text": "I AM TIRED OF FIGHTING... I AM A FAILURE.",
+        "word": "note"
+      }
+    },
+    {
+      "text": "It says: I am tired of fighting. I am a failure.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      },
+      "extras": [
+        {
+          "who": "harriet",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "The internet says you died broke.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "broke",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "-$2.5M"
+      }
+    },
+    {
+      "text": "Not quite: most accounts put your estate at about five million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1940",
+        "value": "~$5M"
+      },
+      "callouts": [
+        {
+          "text": "ESTATE: ABOUT $5M",
+          "word": "five"
+        }
+      ]
+    },
+    {
+      "text": "Much of it reportedly sat in trusts you set up in the good years.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trusts",
+          "pose": "point"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1940",
+        "value": "~$5M"
+      }
+    },
+    {
+      "text": "So how does the man who won a hundred million call himself a failure?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "failure",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "~$5M"
+      }
+    },
+    {
+      "text": "You broke your own rules, again and again: tips, borrowed money, impatience.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rules",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "~$5M"
+      }
+    },
+    {
+      "text": "And your rules were the only part of the market you could control.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "control",
+          "pose": "idle"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1940",
+        "value": "~$5M"
+      }
+    },
+    {
+      "text": "Here is the money rule from your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "stamp": "THE MONEY RULE",
+      "paper": {
+        "text": "MONEY RULE: NEVER BREAK YOUR OWN RULES",
+        "word": "rule"
+      }
+    },
+    {
+      "text": "Decide your rules while you're calm, and follow them while you're scared.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calm",
+          "pose": "idle"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "private trading office on Fifth Avenue, 1929: wall-size green chalkboard of stock prices, stock ticker machine with paper tape, Art Deco desk, tall window over Manhattan"
+    },
+    {
+      "text": "Say your rule is: never invest money you'll need within five years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "piggy",
+          "word": "rule",
+          "label": "5 YEARS"
+        }
+      ]
+    },
+    {
+      "text": "In 2022, big tech stocks as a group fall about a third.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "third",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "2022: TECH -33%",
+          "word": "third"
+        }
+      ]
+    },
+    {
+      "text": "If your rule held, you wait, and by 2024 they've climbed back.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wait",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "If you broke it and need that cash now, you sell at the bottom.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "But rules fail too: buyers at the 1929 peak waited twenty-five years to break even.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "twenty-five",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Wall Street outside the New York Stock Exchange during the October 1929 crash: classical columns, overcast sky, papers blowing on the pavement, 1920s cars parked",
+      "callouts": [
+        {
+          "text": "1929 TO 1954",
+          "word": "waited"
+        }
+      ]
+    },
+    {
+      "text": "And you knew every rule by heart, and still couldn't keep them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "heart",
+          "pose": "idle"
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "elegant Manhattan hotel bar, 1940: dark wood bar counter, brass rail, mirrors, leather stools, a cloakroom door at the side, evening lamplight"
+    },
+    {
+      "text": "Writing a rule down is easy. Keeping it is the whole job.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Keeping",
+          "pose": "point"
+        }
+      ],
+      "bg": "quoteboard1891",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Boston brokerage office, 1891: huge blackboard of stock prices along one wall, wooden ladder, telegraph sounder on a desk, chalk and rags"
+    },
+    {
+      "text": "The market never tests what you know. It tests what you'll do.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "title": "YOUR LIFE AS JESSE LIVERMORE"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Jesse Livermore | The Great Bear of Wall Street",
+      "Your Life as the Man Who Shorted the 1929 Crash",
+      "Your Life as Jesse Livermore | Broke Four Times"
+    ],
+    "thumbnail": "A 1929 trading floor in chaos: a giant chalkboard of crashing stock prices, ticker tape flying, panicked brokers in the background; text: 'SHORTED 1929'",
+    "description": "It's 1929. Wall Street is collapsing, and you just made a hundred million dollars betting on it.\nEleven years later, you call yourself a failure. This is the life of Jesse Livermore.\n\nA comedic dramatization of documented history. Quotes marked as from 'Reminiscences of a Stock Operator' come from Edwin Lefevre's 1923 book about a lightly fictionalized Livermore.\nThis video discusses suicide. If you are struggling, in the US you can call or text 988 (Suicide & Crisis Lifeline); elsewhere, contact your local emergency or crisis line.\nGeneral education only, not financial advice.\n\nSources:\n- Jesse Livermore, Wikipedia: https://en.wikipedia.org/wiki/Jesse_Livermore\n- Edwin Lefevre, Reminiscences of a Stock Operator (1923)\n- Jesse Livermore, How to Trade in Stocks (1940)\n- MoneyWeek profile: https://moneyweek.com/30284/profile-of-jesse-livermore-worlds-greatest-trader-23100",
+    "factCheck": [
+      "Born July 26, 1877, Shrewsbury MA; moved to Acton as a child; read and wrote at 3.5 (Wikipedia).",
+      "1891 at 14: pulled from school by father, ran away with mother's blessing and $5; PaineWebber board boy at $5/week (Wikipedia).",
+      "1892 first bucket shop bet: $5 on Chicago, Burlington & Quincy, $3.12 profit; 'two days later' from Reminiscences.",
+      "1893-94 about $200/week, nicknamed Boy Plunger; $1,000 to mother; 1895-97 about $10,000, barred by Boston bucket shops; Haight & Freese 1898-1900 (Wikipedia).",
+      "Sept 14, 1900 to New York at 23 with $10,000; $50,000 in five days at Harris, Hutton; married Nettie Jordan Oct 1900; May 1901 lost all on margin short; borrowed $2,000 from E. F. Hutton; St. Louis; Northern Pacific $10K to $500K in 1901 (Wikipedia).",
+      "1906 Union Pacific short before San Francisco earthquake: +$250,000; Hutton talked him out of rebound, -$40,000 (Wikipedia). Running money totals on the counter are rough estimates.",
+      "1907: call money rates above 100% (widely reported, about 125% on Oct 24); $1M in one day; Morgan asked him to stop; net worth about $3M; $200,000 yacht, rail car, apartment (Wikipedia).",
+      "1908 cotton: Theodore H. 'Teddy' Price (called Percy Thomas in Reminiscences) urged buying while secretly selling (Wikipedia).",
+      "1915 bankruptcy; 1917 repaid creditors (Reminiscences; widely repeated). Nettie divorce Oct 1917. Cotton corner after WWI and Wilson quote 'To see if I could, Mr. President' are on Wikipedia but thinly sourced: DISPUTED. 'Around 1918' is approximate.",
+      "Married Dorothy Fox Wendt Dec 2, 1918, former Ziegfeld girl aged about 22-23; sons Jesse Jr (1919) and Paul (1922); $3.5M Great Neck house (Wikipedia).",
+      "1929: shorts via 100+ brokers, down over $6M by spring, netted about $100M; 'Great Bear of Wall Street'; death threats, armed bodyguard (Wikipedia). Today's value ~ $1.9B using CPI x19 (1929 to 2026, approx).",
+      "Dow fell 12.8% Oct 28 and 11.7% Oct 29, 1929: about 23% in two days.",
+      "Divorce Sept 1932, reported $10M settlement; married Harriet Metz Noble March 28, 1933, her fifth husband; at least two prior husbands died by suicide (Wikipedia).",
+      "SEC created 1934; bankruptcy 1934 with $84,000 assets, $2.5M debts; 1935 Dorothy shot Jesse Jr (non-fatal); $800,000 tax bill paid in 1937 (Wikipedia).",
+      "1939 advisory business; How to Trade in Stocks, March 1940, suggested by Jesse Jr, sold poorly (Wikipedia).",
+      "Died Nov 28, 1940 (Thanksgiving) at the Sherry-Netherland hotel, aged 63; eight-page note to Harriet ('I am tired of fighting', 'I am a failure') (Wikipedia).",
+      "Estate about $5M, partly in trusts: repeated in secondary sources (MoneyWeek etc.), no probate record found: DISPUTED.",
+      "2022: Nasdaq Composite fell about 33%; recovered its prior high in 2024. Dow regained its 1929 peak in November 1954."
+    ],
+    "sources": [
+      "Jesse Livermore, Wikipedia: https://en.wikipedia.org/wiki/Jesse_Livermore",
+      "Edwin Lefevre, Reminiscences of a Stock Operator (1923): 'There is nothing new in Wall Street.'; 'There is only one side to the stock market; and it is not the bull side or the bear side, but the right side.'; 'It never was my thinking that made the big money for me. It always was my sitting.' (narrator Larry Livingston, modelled on Livermore)",
+      "'To see if I could, Mr. President.' as quoted on https://en.wikipedia.org/wiki/Jesse_Livermore (thinly sourced)",
+      "Suicide note excerpts as quoted on https://en.wikipedia.org/wiki/Jesse_Livermore",
+      "MoneyWeek, Jesse Livermore profile (estate about $5M): https://moneyweek.com/30284/profile-of-jesse-livermore-worlds-greatest-trader-23100",
+      "Jesse Livermore, How to Trade in Stocks (Duell, Sloan and Pearce, 1940)"
+    ],
+    "wordCount": 2111,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "The Crash That Made You Rich"
+      },
+      {
+        "scene": 10,
+        "title": "A Farm Full of Rocks (1877)"
+      },
+      {
+        "scene": 22,
+        "title": "Board Boy in Boston (1891)"
+      },
+      {
+        "scene": 32,
+        "title": "The Boy Plunger (1892)"
+      },
+      {
+        "scene": 54,
+        "title": "New York and Nettie (1900)"
+      },
+      {
+        "scene": 64,
+        "title": "Short Selling, Explained"
+      },
+      {
+        "scene": 80,
+        "title": "The Earthquake Trade (1906)"
+      },
+      {
+        "scene": 87,
+        "title": "The Panic of 1907"
+      },
+      {
+        "scene": 98,
+        "title": "The Cotton Tip (1908)"
+      },
+      {
+        "scene": 108,
+        "title": "Bankrupt, Then Back (1915)"
+      },
+      {
+        "scene": 125,
+        "title": "Dorothy and the Book (1918)"
+      },
+      {
+        "scene": 140,
+        "title": "The Great Bear (1929)"
+      },
+      {
+        "scene": 157,
+        "title": "Losing It All Again (1932)"
+      },
+      {
+        "scene": 171,
+        "title": "How to Trade in Stocks (1940)"
+      },
+      {
+        "scene": 189,
+        "title": "The Money Rule"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

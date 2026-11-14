@@ -1,0 +1,3082 @@
+{
+  "title": "Your Life as Ivar Kreuger | The Match King's Empire of Paper",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Ivar Kreuger",
+      "face": "ivar-kreuger",
+      "shirt": "#2f3a4a",
+      "faceIdea": "Swedish financier Ivar Kreuger, 1929, age 49: high forehead, thinning slicked-back fair hair, calm pale blue eyes, thin lips, dark business suit with white collar and tie"
+    },
+    "father": {
+      "name": "Ernst Kreuger",
+      "face": "ernst-kreuger",
+      "faceIdea": "Swedish match factory owner Ernst Kreuger, 1890s: grey beard and moustache, stern face, dark three-piece suit"
+    },
+    "toll": {
+      "name": "Paul Toll",
+      "face": "paul-toll",
+      "faceIdea": "Swedish engineer Paul Toll, 1910, age 28: round face, short dark hair, small moustache, round spectacles, grey suit"
+    },
+    "littorin": {
+      "name": "Krister Littorin",
+      "face": "krister-littorin",
+      "faceIdea": "Swedish businessman Krister Littorin, 1930: friendly middle-aged face, neat grey hair, bow tie, dark suit"
+    },
+    "ingeborg": {
+      "name": "Ingeborg Eberth",
+      "face": "ingeborg-eberth",
+      "faceIdea": "Swedish woman Ingeborg Eberth, 1920, age 30s: kind face, short wavy blonde 1920s bob, pearl necklace"
+    },
+    "hoover": {
+      "name": "Herbert Hoover",
+      "face": "herbert-hoover",
+      "faceIdea": "US President Herbert Hoover, 1930: round full face, parted grey hair, high stiff white collar, dark suit"
+    },
+    "auditor": {
+      "name": "Price Waterhouse accountant",
+      "face": "pw-accountant-1932",
+      "faceIdea": "unnamed British accountant, 1932: thin face, round wire spectacles, neat moustache, three-piece grey suit"
+    },
+    "galbraith": {
+      "name": "John Kenneth Galbraith",
+      "face": "john-kenneth-galbraith",
+      "faceIdea": "economist John Kenneth Galbraith, 1954, age 45: very long thin face, short dark hair, amused look, tweed jacket and tie"
+    },
+    "crowd1": {
+      "name": "Investor",
+      "face": "investor-man-1929",
+      "faceIdea": "unnamed American investor, 1929, grey fedora hat, round glasses, moustache"
+    },
+    "crowd2": {
+      "name": "Investor's wife",
+      "face": "investor-woman-1929",
+      "faceIdea": "unnamed woman, 1929, short black bob haircut, cloche hat, red lipstick"
+    },
+    "crowd3": {
+      "name": "Old shareholder",
+      "face": "old-shareholder-1929",
+      "faceIdea": "unnamed elderly man, 1929, white walrus moustache, bowler hat, wing collar"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's March 12th, 1932, and you're alone in your Paris apartment.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "callouts": [
+        {
+          "text": "YOU, IVAR KREUGER",
+          "word": "alone",
+          "target": "you"
+        }
+      ],
+      "stamp": "PARIS, 1932"
+    },
+    {
+      "text": "They call you the Match King. You make about three of every four matches on Earth.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Match",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "callouts": [
+        {
+          "text": "THE MATCH KING",
+          "word": "King"
+        }
+      ]
+    },
+    {
+      "text": "You've lent money to entire countries. France. Germany. Poland.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "countries",
+          "pose": "point"
+        }
+      ],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp"
+    },
+    {
+      "text": "And this morning, you know something nobody else knows yet.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "know",
+          "expression": "shock"
+        }
+      ],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp"
+    },
+    {
+      "text": "Hundreds of millions of dollars in your empire don't exist.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "callouts": [
+        {
+          "text": "$250 MILLION: GONE",
+          "word": "millions"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "Within weeks, it will be the biggest corporate collapse anyone has ever seen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp"
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's 1880, and you're born in Kalmar, Sweden.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1880",
+        "value": "AGE 0"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "stamp": "KALMAR, 1880",
+      "empty": true
+    },
+    {
+      "text": "Your name is Ivar Kreuger. Keep count of two things: the money, and the lies.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "callouts": [
+        {
+          "text": "YOU, IVAR, 10",
+          "word": "Ivar",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your family owns small match factories. The whole house smells of pine and sulfur.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ERNST, YOUR FATHER",
+          "word": "family",
+          "target": "father"
+        }
+      ]
+    },
+    {
+      "text": "Matches are cheap, but everybody needs them, every single day.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Sweden is famous for them. A Swedish inventor made the safety match popular in the 1850s.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "callouts": [
+        {
+          "text": "SAFETY MATCHES",
+          "word": "safety"
+        }
+      ]
+    },
+    {
+      "text": "Strike it on the box, not on your boot. Fewer fires, more sales.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Strike",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window"
+    },
+    {
+      "text": "Your father's factories are small, though. A few dozen workers, a lot of competition.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Every town seems to have its own little match maker, all cutting prices.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cutting",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window"
+    },
+    {
+      "text": "A billion tiny sales add up to a lot of money. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "billion",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "kalmar1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small match factory in Kalmar, Sweden, 1890s: wooden workbenches with piles of matchsticks, stacks of matchboxes, pine logs, a brick chimney through the window",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "At school, you're brilliant at maths, and you find tests a bit beneath you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "maths",
+          "expression": "happy"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Classmates later say you sold homework answers to other boys.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sold",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Small, quiet, and already selling something.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "selling",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "At sixteen, you start engineering school in Stockholm. You graduate at twenty, with two degrees.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1900",
+        "value": "AGE 20"
+      },
+      "callouts": [
+        {
+          "text": "TWO DEGREES AT 20",
+          "word": "twenty"
+        }
+      ],
+      "stamp": "STOCKHOLM, 1900"
+    },
+    {
+      "text": "Your father wants you in the family business. You want somewhere bigger.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bigger",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1900",
+        "value": "AGE 20"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "So you sail to America, with almost no money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "stamp": "NEW YORK, 1901",
+      "crowd": 4
+    },
+    {
+      "text": "You work as an engineer on new steel-and-concrete buildings in New York.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "engineer",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "crowd": 5
+    },
+    {
+      "text": "At first, the work is hard to find. You take whatever engineering job comes up.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "whatever",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind"
+    },
+    {
+      "text": "You go home to Sweden, get bored, and come back again.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bored",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind"
+    },
+    {
+      "text": "You also work in Mexico and South Africa. Seven years of building other people's towers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "crowd": 4
+    },
+    {
+      "text": "In South Africa, you build a restaurant and a hotel. You're barely twenty-five.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hotel",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind"
+    },
+    {
+      "text": "You learn a new way to build with reinforced concrete: the Kahn system.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "callouts": [
+        {
+          "text": "REINFORCED CONCRETE",
+          "word": "concrete"
+        }
+      ]
+    },
+    {
+      "text": "And you learn something about Americans. They love a fixed deadline and a confident man.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "confident",
+          "expression": "happy"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "crowd": 4
+    },
+    {
+      "text": "You lie about your experience to get some of these jobs. It works.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lie",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind"
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1901",
+        "value": "$0"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind"
+    },
+    {
+      "text": "In 1907, you buy the rights to the concrete system for Sweden and Germany, and go home.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nyconstruction1903",
+      "counter": {
+        "label": "1907",
+        "value": "RIGHTS"
+      },
+      "bgIdea": "construction site of a steel-and-concrete skyscraper in New York, 1903: steel beams, wooden scaffolding, cranes, cement bags, city buildings behind",
+      "stamp": "1907",
+      "paper": {
+        "text": "KAHN SYSTEM: SWEDEN & GERMANY",
+        "word": "rights"
+      }
+    },
+    {
+      "text": "In 1908 you start a building company in Stockholm with an engineer, Paul Toll.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1908",
+        "value": "SMALL FIRM"
+      },
+      "extras": [
+        {
+          "who": "toll",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "PAUL TOLL, PARTNER",
+          "word": "Toll",
+          "target": "toll"
+        }
+      ],
+      "stamp": "STOCKHOLM, 1908"
+    },
+    {
+      "text": "Your trick: you promise fixed finish dates. Late? You pay a penalty. Early? You get a bonus.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "promise",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1908",
+        "value": "SMALL FIRM"
+      },
+      "extras": [
+        {
+          "who": "toll",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Nobody in Europe does that. Clients love it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "love",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1908",
+        "value": "SMALL FIRM"
+      },
+      "extras": [
+        {
+          "who": "toll",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You build a stadium for the 1912 Stockholm Olympics. And you finish on time.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1912",
+        "value": "GROWING"
+      },
+      "extras": [
+        {
+          "who": "toll",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "1912"
+    },
+    {
+      "text": "Kreuger and Toll is now a famous name. You're thirty-two.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1912",
+        "value": "GROWING"
+      },
+      "extras": [
+        {
+          "who": "toll",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "But building houses is slow money. You want fast money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fast",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1912",
+        "value": "GROWING"
+      }
+    },
+    {
+      "text": "You look at your family's little match factories, and you see a monopoly.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1912",
+        "value": "GROWING"
+      },
+      "vision": {
+        "image": "factory1900",
+        "word": "look"
+      }
+    },
+    {
+      "text": "You merge your family's match factories in 1913, and then the whole Swedish industry.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1913",
+        "value": "MATCH KING"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "stamp": "JONKOPING, 1913",
+      "crowd": 5
+    },
+    {
+      "text": "In 1917 it becomes Swedish Match, and you own about half of it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "callouts": [
+        {
+          "text": "SWEDISH MATCH",
+          "word": "Swedish"
+        }
+      ],
+      "crowd": 5,
+      "stamp": "1917"
+    },
+    {
+      "text": "Remember the billion tiny sales? Now they're yours.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yours",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "crowd": 4
+    },
+    {
+      "text": "You buy match factories in country after country. Then you close the competition.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "close",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "crowd": 4
+    },
+    {
+      "text": "Your biggest Swedish rival holds out until 1917. Then it merges with you too.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "crowd": 3
+    },
+    {
+      "text": "You standardize everything: the wood, the chemicals, the size of the box.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "box",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "crowd": 4
+    },
+    {
+      "text": "Fewer factories, cheaper matches, much bigger profits.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "profits",
+          "label": "UP"
+        }
+      ]
+    },
+    {
+      "text": "Your workers are mostly young women, packing millions of boxes a day.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "crowd": 6
+    },
+    {
+      "text": "To them, you're a name on the wall. To the world, you're about to become a legend.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "legend",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights"
+    },
+    {
+      "text": "Where you can't buy a factory, you try to buy a law instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "law",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights"
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights"
+    },
+    {
+      "text": "By the late 1920s, you control between two thirds and three quarters of the world's matches.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchfactory1915",
+      "counter": {
+        "label": "1917",
+        "value": "$5M"
+      },
+      "bgIdea": "big Swedish match factory floor, 1915: long machines feeding matchsticks, conveyor belts, mountains of matchboxes, workers' aprons on hooks, skylights",
+      "callouts": [
+        {
+          "text": "UP TO 75% OF ALL MATCHES",
+          "word": "quarters"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You build a headquarters in Stockholm, so grand people call it the Match Palace.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows",
+      "stamp": "MATCH PALACE, 1928"
+    },
+    {
+      "text": "Kings, bankers and journalists come to see it, and to see you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "see",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows"
+    },
+    {
+      "text": "You speak softly, never raise your voice, and remember every number.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows",
+      "callouts": [
+        {
+          "text": "THE SILENT MAN",
+          "word": "softly"
+        }
+      ]
+    },
+    {
+      "text": "Gold mosaics. A fountain. Your office has a fake telephone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fake",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows"
+    },
+    {
+      "text": "During meetings, an assistant rings it, and you take calls from imaginary prime ministers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rings",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows"
+    },
+    {
+      "text": "Visitors are very impressed. That's the point.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "impressed",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows"
+    },
+    {
+      "text": "Remember the lie that got you jobs in America? It's a whole department now.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "1928",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows"
+    },
+    {
+      "text": "Let's pause and look at how your empire actually works.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Imagine a set of nesting boxes, each one a company.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "boxes",
+          "label": "BOXES"
+        }
+      ]
+    },
+    {
+      "text": "Box A owns Box B. Box B lends to Box C. Box C owns part of Box A.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lends",
+          "pose": "point"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Money can move between the boxes, and each box can report a profit from it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "profit",
+          "label": "PROFIT?"
+        }
+      ]
+    },
+    {
+      "text": "But from outside, you only see the lid of the biggest box.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lid",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Accountants call debts kept outside the main company off-balance-sheet.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "callouts": [
+        {
+          "text": "OFF-BALANCE-SHEET",
+          "word": "off-balance-sheet"
+        }
+      ]
+    },
+    {
+      "text": "You set up hundreds of companies, in Sweden, Liechtenstein, the Netherlands, America.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "callouts": [
+        {
+          "text": "200+ COMPANIES",
+          "word": "hundreds"
+        }
+      ]
+    },
+    {
+      "text": "If one box is empty, you just move money in from another box before anyone looks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "move",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "It works, as long as nobody opens all the boxes on the same day.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nobody",
+          "pose": "idle",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "And you're the only person who knows what's in all the boxes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "only",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Your partners don't. Your auditors don't. Your investors certainly don't.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "investors",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "In 1923 you start International Match Corporation in America, and sell its shares on Wall Street.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "stamp": "NEW YORK, 1923",
+      "crowd": 6
+    },
+    {
+      "text": "Your companies pay huge dividends. Kreuger and Toll pays twenty-five percent a year, sometimes more.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "callouts": [
+        {
+          "text": "25% DIVIDENDS",
+          "word": "percent"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "Investors love the dividends. They don't ask where they come from.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "love",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "Partly, they come from new money raised from the investors themselves.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "investors",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      }
+    },
+    {
+      "text": "You invent new kinds of shares too, ones with almost no voting power.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "shares",
+          "label": "B-SHARES"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "So people give you money, and you keep total control.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "control",
+          "pose": "point"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      }
+    },
+    {
+      "text": "You sell gold-backed bonds that can turn into shares. Investors line up.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bonds",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "You sell American certificates for your Swedish shares, so Americans can buy you too.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "certificates",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Your financial ideas are clever. Some of them are still used today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "clever",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      }
+    },
+    {
+      "text": "Time magazine puts you on its cover in October 1929.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1923",
+        "value": "$100M+?"
+      },
+      "crowd": 4,
+      "paper": {
+        "text": "TIME, OCTOBER 1929: IVAR KREUGER",
+        "word": "cover"
+      }
+    },
+    {
+      "text": "A few days later, Wall Street crashes. And you keep paying dividends.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "crashes",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M+?"
+      },
+      "fx": "storm",
+      "crowd": 6,
+      "stamp": "OCTOBER 1929"
+    },
+    {
+      "text": "You look like the only safe man in finance.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "safe",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1929",
+        "value": "$100M+?"
+      }
+    },
+    {
+      "text": "Now for your boldest idea: lending money to entire countries.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1927",
+        "value": "$100M+?"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "stamp": "1927",
+      "crowd": 3
+    },
+    {
+      "text": "After the war, Europe is broke. Governments can't borrow anywhere.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1927",
+        "value": "$100M+?"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "crowd": 3
+    },
+    {
+      "text": "You offer them loans. In return, they give you a monopoly on matches.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1927",
+        "value": "$100M+?"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "crowd": 3,
+      "paper": {
+        "text": "LOAN FOR A MATCH MONOPOLY",
+        "word": "monopoly"
+      }
+    },
+    {
+      "text": "In 1927, France gets seventy-five million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1927",
+        "value": "-$75M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "callouts": [
+        {
+          "text": "FRANCE: $75 MILLION",
+          "word": "France"
+        }
+      ]
+    },
+    {
+      "text": "In 1929, Germany gets one hundred and twenty-five million.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "callouts": [
+        {
+          "text": "GERMANY: $125 MILLION",
+          "word": "Germany"
+        }
+      ],
+      "stamp": "BERLIN, 1929"
+    },
+    {
+      "text": "Remember buying a law instead of a factory? This is it. Germany's match monopoly is yours.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "monopoly",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts"
+    },
+    {
+      "text": "That German monopoly lasts so long that it only ends in 1983.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "callouts": [
+        {
+          "text": "UNTIL 1983",
+          "word": "1983"
+        }
+      ]
+    },
+    {
+      "text": "Poland, Hungary, Romania, Yugoslavia, and more. Fifteen countries in total.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "callouts": [
+        {
+          "text": "15 COUNTRIES",
+          "word": "Fifteen"
+        }
+      ]
+    },
+    {
+      "text": "By 1930, you've lent governments about three hundred and eighty-seven million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "berlin1929",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "bgIdea": "German Finance Ministry meeting hall in Berlin, 1929: long oak conference table, leather chairs, portraits, heavy curtains, a fountain pen and contracts",
+      "callouts": [
+        {
+          "text": "$387 MILLION",
+          "word": "eighty-seven"
+        }
+      ]
+    },
+    {
+      "text": "Newspapers call you the Saviour of Europe.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Saviour",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "But here's the catch. You borrow most of that money first, from investors.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "catch",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      }
+    },
+    {
+      "text": "The loans pay you back slowly. Your investors expect dividends now.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "slowly",
+          "label": "SLOW"
+        }
+      ]
+    },
+    {
+      "text": "The gap between those two speeds is about to swallow you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "swallow",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1929",
+        "value": "-$125M"
+      }
+    },
+    {
+      "text": "In 1930, President Herbert Hoover invites you to the White House.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace",
+      "extras": [
+        {
+          "who": "hoover",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "PRESIDENT HOOVER",
+          "word": "Hoover",
+          "target": "hoover"
+        }
+      ],
+      "stamp": "WASHINGTON, 1930"
+    },
+    {
+      "text": "He wants your advice on the world economy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "advice",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace",
+      "extras": [
+        {
+          "who": "hoover",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "That June, a university gives you an honorary doctorate in business.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace",
+      "extras": [
+        {
+          "who": "hoover",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "DR. KREUGER",
+          "word": "doctorate",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Newspapers report you're worth more than any man in Europe. Nobody can check.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "check",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace",
+      "extras": [
+        {
+          "who": "hoover",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You're probably the most trusted businessman in the world.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trusted",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace"
+    },
+    {
+      "text": "The day your empire collapses is less than two years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "the White House Oval Office in 1930: big wooden desk, flags, armchairs, tall windows with curtains, a fireplace"
+    },
+    {
+      "text": "You spend summers on your private island near Stockholm.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "stamp": "ANGSHOLMEN, 1930"
+    },
+    {
+      "text": "Guests arrive by boat for long dinners. You hardly eat, and leave early to work.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "work",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water"
+    },
+    {
+      "text": "One of your yachts can go faster than fifty knots. You rarely have time to ride it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "faster",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water"
+    },
+    {
+      "text": "You own fast motor yachts, and apartments in Stockholm, New York, Paris and Warsaw.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yachts",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water"
+    },
+    {
+      "text": "For years, a woman named Ingeborg Eberth is your companion. You never marry her.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "extras": [
+        {
+          "who": "ingeborg",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "INGEBORG EBERTH",
+          "word": "Ingeborg",
+          "target": "ingeborg"
+        }
+      ]
+    },
+    {
+      "text": "You never marry anyone. You barely talk about yourself at all.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "barely",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "extras": [
+        {
+          "who": "ingeborg",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Your friends say you sleep very little, and almost never relax.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "extras": [
+        {
+          "who": "ingeborg",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Your old friend Krister Littorin helps run the business. He trusts you completely.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "KRISTER LITTORIN",
+          "word": "Littorin",
+          "target": "littorin"
+        }
+      ]
+    },
+    {
+      "text": "Asked once about his success, Kreuger said it was built on the foolishness of people.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "angsholmen1930",
+      "counter": {
+        "label": "1930",
+        "value": "$100M+?"
+      },
+      "bgIdea": "private summer island villa near Stockholm, 1930: white wooden house, pine trees, a wooden jetty with a fast motor yacht, calm blue water",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "I built my enterprise on the foolishness of people.",
+        "word": "foolishness"
+      }
+    },
+    {
+      "text": "After the crash, the money stops coming in. The dividends don't stop going out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stops",
+          "expression": "shock"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "stamp": "1930"
+    },
+    {
+      "text": "You need more money every month just to keep paying.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "more",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling"
+    },
+    {
+      "text": "So, in secret, you create Italian government bonds that Italy never issued.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "paper": {
+        "text": "KINGDOM OF ITALY: 500,000 POUNDS",
+        "word": "bonds"
+      }
+    },
+    {
+      "text": "You design them yourself, and sign the officials' names. Some names are misspelled.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sign",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling"
+    },
+    {
+      "text": "On paper, they're worth more than one hundred million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "callouts": [
+        {
+          "text": "FAKE BONDS: $100M+",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "You use them to show your companies have assets they don't have.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "show",
+          "pose": "point"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling"
+    },
+    {
+      "text": "Remember the boxes? This is what's in one of them.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "icons": [
+        {
+          "icon": "question",
+          "word": "boxes",
+          "label": "FAKE"
+        }
+      ]
+    },
+    {
+      "text": "You also borrow from one of your companies to prop up another.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "borrow",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling"
+    },
+    {
+      "text": "You're running faster and faster just to stand still.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "faster",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling"
+    },
+    {
+      "text": "You gamble on markets too, trying to win it all back. You lose tens of millions.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "callouts": [
+        {
+          "text": "-$50M TO -$100M?",
+          "word": "millions"
+        }
+      ]
+    },
+    {
+      "text": "You stop sleeping. Your friends notice you forgetting things, staring into space.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Nobody asks to see the boxes. You've trained them not to.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trained",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "forgeroom1930",
+      "counter": {
+        "label": "1930",
+        "value": "CASH SHORT"
+      },
+      "bgIdea": "locked private study at night, 1930: desk lamp, sheets of blank bond paper, inkwells, a magnifying glass, rubber stamps, dark wood paneling",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1931, an American company agrees to buy your Swedish phone company, Ericsson.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1931",
+        "value": "CASH SHORT"
+      },
+      "stamp": "NEW YORK, 1931",
+      "crowd": 3
+    },
+    {
+      "text": "Its accountants check the books before paying. Most of your partners never did.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1931",
+        "value": "CASH SHORT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "THE ACCOUNTANTS",
+          "word": "accountants",
+          "target": "auditor"
+        }
+      ]
+    },
+    {
+      "text": "They find that cash you claimed is missing, replaced by your own IOUs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "IOUs",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "1931",
+        "value": "CASH SHORT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "The deal is off. You have to pay back the money. You don't have it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "1932",
+        "value": "CASH SHORT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "neutral"
+        }
+      ],
+      "stamp": "1932"
+    },
+    {
+      "text": "You ask the Swedish central bank for a big emergency loan.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "loan",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "stamp": "STOCKHOLM, 1932"
+    },
+    {
+      "text": "The bank says yes, if it can see all your accounts first.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "accounts",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      }
+    },
+    {
+      "text": "Nobody has ever seen all your accounts. Not even Littorin.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Nobody",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In New York, you can't find the money anywhere. The banks are broke too.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "broke",
+          "expression": "shock"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "stamp": "NEW YORK, 1932"
+    },
+    {
+      "text": "You need more than ten million dollars in a few weeks, just for payments.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "callouts": [
+        {
+          "text": "$10M+ DUE",
+          "word": "ten"
+        }
+      ]
+    },
+    {
+      "text": "You sail to New York, then back to Europe. You arrive in Paris on March 11th.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "stamp": "PARIS, MARCH 1932"
+    },
+    {
+      "text": "That same afternoon, you buy a pistol.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pistol",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey afternoon light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "fx": "rain"
+    },
+    {
+      "text": "You write letters to your family and friends.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "I have made such a mess of things that I believe this is the best solution.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "I have made such a mess of things that I believe this is the best solution.",
+        "word": "mess"
+      }
+    },
+    {
+      "text": "That morning, you shoot yourself. You're fifty-two.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shoot",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "paris1932",
+      "counter": {
+        "label": "1932",
+        "value": "BROKE"
+      },
+      "bgIdea": "elegant Paris apartment bedroom, 1932: tall windows with grey morning light, an unmade bed, a writing desk with letters, dark wood wardrobe, Art Deco lamp",
+      "fx": "rain"
+    },
+    {
+      "text": "Your death makes front pages around the world.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "stamp": "NEW YORK, 1932",
+      "crowd": 8,
+      "fx": "storm"
+    },
+    {
+      "text": "Then the accountants open all the boxes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "About two hundred and fifty million dollars in assets turn out not to exist.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$250M: NOT THERE",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "The manipulations were so childish anyone with basic bookkeeping should have seen them.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "extras": [
+        {
+          "who": "auditor",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "auditor",
+        "text": "So childish.",
+        "word": "childish"
+      }
+    },
+    {
+      "text": "Thousands of ordinary investors lose their savings.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "savings",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "Kreuger and Toll was the most traded stock in the world. Now it's paper.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "In Stockholm, the stock exchange closes for a week to stop the panic.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "callouts": [
+        {
+          "text": "EXCHANGE CLOSED",
+          "word": "closes"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "Littorin and the other directors are put on trial. They swear they knew nothing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "The scary part is that they're probably telling the truth.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "extras": [
+        {
+          "who": "littorin",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Lenders get back about forty-three cents on the dollar. Shareholders get almost nothing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1932",
+        "value": "BANKRUPT"
+      },
+      "callouts": [
+        {
+          "text": "43 CENTS ON THE DOLLAR",
+          "word": "forty-three"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "The internet says you were murdered, and the scandal was framed on a dead man.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "murdered",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGEND"
+      },
+      "stamp": "TODAY"
+    },
+    {
+      "text": "Your brother wrote a whole book saying so. The police found it was suicide.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGEND"
+      },
+      "callouts": [
+        {
+          "text": "POLICE: SUICIDE",
+          "word": "suicide"
+        }
+      ]
+    },
+    {
+      "text": "Even if someone else pulled the trigger, the fake bonds were real. Well, really fake.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fake",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGEND"
+      }
+    },
+    {
+      "text": "And there's a second myth: that you were a genius who just had bad luck in the crash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "luck",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGEND"
+      }
+    },
+    {
+      "text": "The crash exposed the hole. You dug it years earlier.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dug",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGEND"
+      }
+    },
+    {
+      "text": "In 1933 and 1934, America passes new laws forcing companies to publish audited accounts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1934",
+        "value": "LEGACY"
+      },
+      "stamp": "1934",
+      "paper": {
+        "text": "SECURITIES ACTS, 1933 AND 1934",
+        "word": "laws"
+      }
+    },
+    {
+      "text": "Your collapse is one of the big reasons why.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1934",
+        "value": "LEGACY"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Later, the economist John Kenneth Galbraith writes about you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1934",
+        "value": "LEGACY"
+      },
+      "extras": [
+        {
+          "who": "galbraith",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "J. K. GALBRAITH, ECONOMIST",
+          "word": "Galbraith",
+          "target": "galbraith"
+        }
+      ]
+    },
+    {
+      "text": "He calls you the Leonardo of their craft: the greatest of all swindlers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1929",
+      "counter": {
+        "label": "1934",
+        "value": "LEGACY"
+      },
+      "extras": [
+        {
+          "who": "galbraith",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "galbraith",
+        "text": "The Leonardo of their craft.",
+        "word": "Leonardo"
+      }
+    },
+    {
+      "text": "So how does the most trusted businessman in the world end up alone in Paris?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      },
+      "stamp": "PARIS, 1932"
+    },
+    {
+      "text": "He paid out money he didn't earn, to look like a man who never fails.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paid",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      }
+    },
+    {
+      "text": "And he made sure nobody could check.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "check",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "hotel1940",
+      "counter": {
+        "label": "1932",
+        "value": "$0?"
+      }
+    },
+    {
+      "text": "That brings us to today's money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: NO AUDIT, NO TRUST",
+        "word": "rule"
+      },
+      "bgIdea": "modern bank branch, 2020s"
+    },
+    {
+      "text": "Before you trust a company with your money, ask who checked its numbers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "checked",
+          "pose": "point"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Here's a modern example. In August 2000, Enron shares traded at about ninety dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "shares",
+          "label": "$90"
+        }
+      ]
+    },
+    {
+      "text": "By December 2001, after its hidden debts came out, they were worth under one dollar.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "$90 TO UNDER $1",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "Like your boxes, Enron hid debts in side companies most investors never looked at.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hid",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "A ten thousand dollar investment at the top was worth about a hundred dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "worth",
+          "label": "$100"
+        }
+      ]
+    },
+    {
+      "text": "So read the auditor's report, and be suspicious of profits nobody can explain.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "read",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "And the rule isn't perfect. Enron had famous auditors too. They got it wrong.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "perfect",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "An audit lowers the risk. It doesn't remove it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lowers",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "So spread your money out. Never let one company hold all your savings.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "piggy",
+          "word": "spread",
+          "label": "SPREAD"
+        }
+      ]
+    },
+    {
+      "text": "Kreuger's investors trusted one man. That was the real risk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trusted",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "The brightest flame can be the one that burns the house down.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "matchpalace1928",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "the Match Palace headquarters in Stockholm, 1928: grand marble hall, golden mosaics, a fountain, a huge polished desk, tall windows",
+      "title": "YOUR LIFE AS IVAR KREUGER"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Ivar Kreuger | The Match King",
+      "Your Life as the Man Who Lent Money to Countries",
+      "Your Life as Ivar Kreuger | Fake Bonds, Real Empire"
+    ],
+    "thumbnail": "A grand 1920s marble office with towers of matchboxes and a burning match; text: 'THE MATCH KING'",
+    "description": "It's 1932. You make three of every four matches on Earth and you've lent money to entire countries.\nThis morning, you know hundreds of millions of it don't exist. This is the life of Ivar Kreuger.\n\nA comedic dramatization of documented history.\nThis video discusses suicide. If you are struggling, in the US you can call or text 988 (Suicide & Crisis Lifeline); elsewhere, contact your local emergency or crisis line.\nGeneral education only, not financial advice.\n\nSources:\n- Ivar Kreuger, Wikipedia: https://en.wikipedia.org/wiki/Ivar_Kreuger\n- Frank Partnoy, The Match King (2009)\n- John Kenneth Galbraith, The Great Crash, 1929 (1954)\n- Enron scandal, Wikipedia: https://en.wikipedia.org/wiki/Enron_scandal",
+    "factCheck": [
+      "Born 2 March 1880 in Kalmar, son of match industrialist Ernst August Kreuger; engineering degrees from the Royal Institute of Technology at 20 (Wikipedia).",
+      "Selling homework answers at school: Partnoy (2009), anecdotal, DISPUTED.",
+      "About seven years abroad, mostly the US, also Mexico and South Africa; Kahn system of reinforced concrete; 1907 representation rights for Sweden and Germany (Wikipedia). Exaggerating his experience to get jobs: Partnoy, DISPUTED.",
+      "Kreuger & Toll founded May 1908 with Paul Toll; fixed completion dates with penalties and bonuses (Wikipedia). Built the Stockholm Olympic Stadium for 1912 (Kreuger & Toll; widely cited).",
+      "Family factories merged 1912; Swedish combine 1913; Swedish Match 1917, Kreuger owning about half (Wikipedia). Jonkoping was a centre of Swedish match making.",
+      "Controlled two-thirds to three-quarters of world match production; International Match Corporation 1923 (Wikipedia).",
+      "Match Palace (Tandstickspalatset) completed 1928; fake telephone anecdote (Partnoy; widely cited, DISPUTED).",
+      "About 200 (other sources 400) companies; off-balance-sheet entities; B-shares; Kreuger & Toll paid 15% dividends (Wikipedia).",
+      "Time magazine cover 28 October 1929; Wall Street crash 28-29 October 1929.",
+      "Loans for match monopolies: France 1927 $75m; Germany 1929 $125m; total to foreign states about $387m by 1930; 'Saviour of Europe' (Wikipedia). 15 countries: commonly cited (Partnoy).",
+      "White House visit and Syracuse honorary doctorate, June 1930; island Angsholmen; yachts; apartments in Stockholm, New York, Paris, Warsaw; companion Ingeborg Eberth; never married (Wikipedia).",
+      "'The foolishness of people' quote: reported Kreuger remark (Wikipedia); exact wording DISPUTED.",
+      "Forged Italian government bonds, 42 bonds of 500,000 pounds each, about $142 million face value (Partnoy 2009; widely cited). Script says 'more than one hundred million'.",
+      "1931 sale of Ericsson control to ITT; ITT's audit found missing cash replaced by Kreuger IOUs; deal cancelled (Partnoy; widely cited).",
+      "February 1932 Riksbank loan request requiring full accounts; arrived Paris 11 March, found dead 12 March 1932, shot himself; letter to Littorin: 'I have made such a mess of things that I believe this to be the most satisfactory solution for everybody concerned' (Wikipedia). Script quote shortened.",
+      "About $250m claimed assets non-existent; creditors recovered about 43%; Price Waterhouse called the manipulations 'so childish' (Wikipedia). Script quote paraphrased in narration; bubble is a shortened paraphrase: DISPUTED.",
+      "Murder theory from brother Torsten Kreuger's 1965 book; police concluded suicide (Wikipedia).",
+      "Securities Acts of 1933 and 1934 heavily influenced by his collapse; Galbraith called him 'the Leonardo of their craft' in The Great Crash, 1929 (Wikipedia).",
+      "Enron traded near $90 in August 2000 and below $1 by late November-December 2001; hidden debts in special purpose entities; auditor Arthur Andersen (Wikipedia, Enron scandal)."
+    ],
+    "sources": [
+      "Ivar Kreuger, Wikipedia: https://en.wikipedia.org/wiki/Ivar_Kreuger",
+      "'I built my enterprise on the foolishness of people.': Kreuger remark as reported on Wikipedia (wording varies)",
+      "'I have made such a mess of things that I believe this is the best solution.': shortened from Kreuger's letter to Krister Littorin, 12 March 1932 (Wikipedia)",
+      "'So childish.': Price Waterhouse report on Kreuger & Toll, 1932, as quoted on Wikipedia",
+      "Frank Partnoy, The Match King: Ivar Kreuger, the Financial Genius Behind a Century of Wall Street Scandals (2009)",
+      "'The Leonardo of their craft.': John Kenneth Galbraith on Kreuger, The Great Crash, 1929 (1954), as quoted on Wikipedia",
+      "Enron scandal, Wikipedia: https://en.wikipedia.org/wiki/Enron_scandal"
+    ],
+    "wordCount": 2045,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "A Quiet Morning in Paris",
+        "mood": "tense"
+      },
+      {
+        "scene": 9,
+        "title": "The Matchstick Boy",
+        "mood": "calm"
+      },
+      {
+        "scene": 21,
+        "title": "Steel and Concrete",
+        "mood": "triumph"
+      },
+      {
+        "scene": 32,
+        "title": "Kreuger and Toll",
+        "mood": "triumph"
+      },
+      {
+        "scene": 39,
+        "title": "Becoming the Match King",
+        "mood": "triumph"
+      },
+      {
+        "scene": 58,
+        "title": "The Box Inside the Box",
+        "mood": "mystery"
+      },
+      {
+        "scene": 70,
+        "title": "America Loves You",
+        "mood": "triumph"
+      },
+      {
+        "scene": 82,
+        "title": "Lending to Nations",
+        "mood": "triumph"
+      },
+      {
+        "scene": 95,
+        "title": "The President's Guest",
+        "mood": "calm"
+      },
+      {
+        "scene": 110,
+        "title": "Printing Your Own Bonds",
+        "mood": "tense"
+      },
+      {
+        "scene": 122,
+        "title": "The Auditors Arrive",
+        "mood": "tense"
+      },
+      {
+        "scene": 136,
+        "title": "The Biggest Bankruptcy",
+        "mood": "sad"
+      },
+      {
+        "scene": 155,
+        "title": "How Did It Happen?",
+        "mood": "mystery"
+      },
+      {
+        "scene": 158,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

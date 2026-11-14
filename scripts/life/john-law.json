@@ -1,0 +1,3234 @@
+{
+  "title": "Your Life as John Law | The Man Who Printed France",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "John Law",
+      "face": "john-law",
+      "shirt": "#3a2a20",
+      "faceIdea": "John Law, Scottish economist, 1720: long curly brown powdered periwig, long face, strong nose, confident half-smile, lace cravat and embroidered coat"
+    },
+    "father": {
+      "name": "William Law",
+      "face": "william-law",
+      "faceIdea": "William Law, Edinburgh goldsmith, 1670s: shoulder-length dark hair, plain dark coat with white band collar, serious face"
+    },
+    "wilson": {
+      "name": "Edward Wilson",
+      "face": "beau-wilson",
+      "faceIdea": "Edward 'Beau' Wilson, London dandy, 1694: huge blond curly periwig, haughty face, lace cravat, velvet coat"
+    },
+    "catherine": {
+      "name": "Katherine Knollys",
+      "face": "katherine-knollys",
+      "faceIdea": "Lady Katherine Knollys, English noblewoman, 1710s: dark hair piled high with ribbons, pearl necklace, elegant face, satin gown"
+    },
+    "regent": {
+      "name": "Philippe d'Orleans",
+      "face": "philippe-orleans",
+      "faceIdea": "Philippe II, Duke of Orleans, Regent of France, 1716: long brown periwig, plump face, heavy-lidded eyes, armor collar with blue sash"
+    },
+    "liselotte": {
+      "name": "Elisabeth Charlotte",
+      "face": "liselotte-palatine",
+      "faceIdea": "Elisabeth Charlotte, Duchess of Orleans, 1719: elderly, round red-cheeked face, white lace cap, ermine-trimmed robe"
+    },
+    "montesquieu": {
+      "name": "Montesquieu",
+      "face": "montesquieu",
+      "faceIdea": "Montesquieu, French philosopher, 1740s: profile-like long nose, short powdered wig, thin smile, plain dark coat"
+    },
+    "crowd1": {
+      "name": "Paris merchant",
+      "face": "paris-merchant-1720",
+      "faceIdea": "unnamed Paris merchant, 1720, tricorn hat, brown wig, plain coat"
+    },
+    "crowd2": {
+      "name": "Paris woman",
+      "face": "paris-woman-1720",
+      "faceIdea": "unnamed Paris working woman, 1720, white linen cap, shawl, rosy cheeks"
+    },
+    "crowd3": {
+      "name": "Old servant",
+      "face": "paris-servant-1720",
+      "faceIdea": "unnamed old manservant, 1720, grey tied-back hair, plain livery coat"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's December 1719, and the busiest street in Paris is a narrow lane, rue Quincampoix.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "callouts": [
+        {
+          "text": "RUE QUINCAMPOIX",
+          "word": "street"
+        }
+      ],
+      "stamp": "PARIS, 1719",
+      "crowd": 8
+    },
+    {
+      "text": "Dukes, maids and shoemakers are fighting to buy one thing: shares in your company.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "company",
+          "expression": "happy"
+        }
+      ],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "callouts": [
+        {
+          "text": "YOU, JOHN LAW",
+          "word": "company",
+          "target": "you"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "A share that cost five hundred livres two years ago now sells for ten thousand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "callouts": [
+        {
+          "text": "500 → 10,000",
+          "word": "thousand"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "share",
+          "label": "x20"
+        }
+      ]
+    },
+    {
+      "text": "People who were poor last month are now called a brand-new word: millionaire.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millionaire",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "crowd": 6
+    },
+    {
+      "text": "You run the bank. You run the company. Soon you'll run the entire finances of France.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "France",
+          "pose": "point"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      }
+    },
+    {
+      "text": "And you're not even French. You're a Scottish gambler who killed a man in a duel.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Scottish",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      }
+    },
+    {
+      "text": "In one year, all of it will be worthless, and you'll flee the country.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "worthless",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "fx": "storm"
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's 1671, and you're born in Edinburgh, Scotland.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1671",
+        "value": "AGE 0"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "stamp": "EDINBURGH, 1671",
+      "empty": true
+    },
+    {
+      "text": "Your name is John Law. Keep count of two things: the money, and the paper.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "callouts": [
+        {
+          "text": "YOU, JOHN LAW",
+          "word": "John",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your father, William, is a goldsmith. In Scotland, that also makes him a banker.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "WILLIAM LAW, YOUR FATHER",
+          "word": "father",
+          "target": "father"
+        }
+      ]
+    },
+    {
+      "text": "People leave gold with him for safekeeping, and he hands them a paper receipt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ],
+      "paper": {
+        "text": "RECEIVED: 100 POUNDS IN GOLD. W. LAW",
+        "word": "receipt"
+      }
+    },
+    {
+      "text": "Then something interesting happens. People start paying each other with the receipts.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paying",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The gold never moves. Only the paper does. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paper",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "You're good at numbers. Very good. Especially odds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "odds",
+          "expression": "happy"
+        }
+      ],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "He even buys an estate near Edinburgh called Lauriston. You are John Law of Lauriston.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1680",
+        "value": "AGE 9"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Your father dies when you're twelve, and leaves you a decent inheritance.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1683",
+        "value": "INHERITANCE"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "You leave school and head for London with it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "London",
+          "pose": "point"
+        }
+      ],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1692",
+        "value": "AGE 21"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "In London, you're tall, handsome, and very good at cards.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cards",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1692",
+        "value": "AGE 21"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "stamp": "LONDON, 1692"
+    },
+    {
+      "text": "They call you Beau Law: beau means a fashionable dandy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1692",
+        "value": "AGE 21"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "callouts": [
+        {
+          "text": "BEAU LAW",
+          "word": "Beau",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You calculate odds at the gambling tables while everyone else just hopes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calculate",
+          "pose": "point"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1692",
+        "value": "AGE 21"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "vision": {
+        "image": "ballroom1890",
+        "word": "tables"
+      }
+    },
+    {
+      "text": "You win a lot. You also lose a lot. You lose your inheritance.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lose",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1693",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Gambling is fine for a gentleman. Losing everything is just embarrassing.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "embarrassing",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1693",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Then you get into a quarrel with another dandy, Edward Wilson.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "wilson",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDWARD 'BEAU' WILSON",
+          "word": "Wilson",
+          "target": "wilson"
+        }
+      ]
+    },
+    {
+      "text": "Nobody knows exactly what the fight was about. Possibly a woman.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "wilson",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "On April 9th, 1694, you meet in Bloomsbury Square with swords.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "swords",
+          "pose": "point"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "wilson",
+          "expression": "neutral"
+        }
+      ],
+      "stamp": "BLOOMSBURY, APRIL 1694"
+    },
+    {
+      "text": "One thrust. Wilson dies on the spot.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bloomsbury1694",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "bgIdea": "Bloomsbury Square in London at dawn, 1694: grand brick townhouses, gravel square, iron railings, morning mist",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "wilson",
+          "expression": "shock"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "You're arrested for murder.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "murder",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "john-law-young"
+      },
+      "stamp": "OLD BAILEY, 1694"
+    },
+    {
+      "text": "The court finds you guilty and sentences you to hang.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "john-law-young"
+      },
+      "callouts": [
+        {
+          "text": "SENTENCE: DEATH",
+          "word": "hang"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "The King reduces it to a fine, but Wilson's family appeals.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fine",
+          "expression": "happy"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1694",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "So you escape from prison and get on a boat to the Netherlands.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "escape",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Some historians think the escape was quietly arranged. Either way, you're gone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gone",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "In Amsterdam, you find the most advanced bank in Europe.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bank",
+          "expression": "happy"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "stamp": "AMSTERDAM, 1695"
+    },
+    {
+      "text": "The Bank of Amsterdam keeps coins in its vault and lets merchants pay with entries in a book.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "coins",
+          "label": "VAULT"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Trade moves faster. Credit is cheap. The Dutch are rich.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rich",
+          "pose": "point"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Next door, shares of the Dutch East India Company trade every single day.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "shares",
+          "label": "VOC"
+        }
+      ]
+    },
+    {
+      "text": "Paper shares of a company, bought and sold like bread. You watch closely.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watch",
+          "pose": "point"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "You start to wonder: what if the problem in poor countries is just not enough money?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wonder",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "vision": {
+        "image": "home1880",
+        "word": "poor"
+      }
+    },
+    {
+      "text": "Not enough gold and silver to go around, so nobody can trade.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "But paper can be printed. Remember your father's receipts?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "printed",
+          "pose": "point"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "vision": {
+        "image": "home1880",
+        "word": "father's"
+      }
+    },
+    {
+      "text": "This is the idea that will shape your whole life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "idea",
+          "expression": "happy"
+        }
+      ],
+      "bg": "amsterdam1700",
+      "counter": {
+        "label": "1695",
+        "value": "FUGITIVE"
+      },
+      "bgIdea": "hall of the Bank of Amsterdam, 1700: tall arched windows, heavy wooden counters, ledgers and coin scales, canal houses outside",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Meanwhile you need to eat, so you gamble across Europe for the next twenty years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "stamp": "VENICE, 1700s",
+      "crowd": 4
+    },
+    {
+      "text": "Venice. Genoa. Paris. The Hague. Turin.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "Venice",
+          "label": "CARDS"
+        }
+      ]
+    },
+    {
+      "text": "You often play as the bank: the house that takes everyone's bets.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bank",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "callouts": [
+        {
+          "text": "YOU ARE THE HOUSE",
+          "word": "house"
+        }
+      ]
+    },
+    {
+      "text": "Because you understand the odds, the house usually wins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "odds",
+          "expression": "happy"
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Several cities throw you out for winning too much.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "throw",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "Players say you calculate the odds of a game faster than anyone at the table.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calculate",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "You meet Lady Katherine Knollys, who leaves her husband for you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "KATHERINE KNOLLYS",
+          "word": "Katherine",
+          "target": "catherine"
+        }
+      ]
+    },
+    {
+      "text": "You never formally marry, but you raise two children together.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "children",
+          "expression": "happy"
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1700",
+        "value": "WINNING"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "By now, you're rich again: well over a hundred thousand pounds, by some estimates.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rich",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1710",
+        "value": "RICH AGAIN"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "But you don't want to be a gambler. You want to fix a whole country's money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1710",
+      "counter": {
+        "label": "1710",
+        "value": "RICH AGAIN"
+      },
+      "bgIdea": "Venetian gambling salon (ridotto), 1710s: candlelit room, card tables with green cloth, masks on a side table, gilded mirrors",
+      "looks": {
+        "you": "john-law-young"
+      }
+    },
+    {
+      "text": "In 1705, you go home and pitch Scotland a bank that issues paper money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street",
+      "stamp": "EDINBURGH, 1705"
+    },
+    {
+      "text": "You publish a book: Money and Trade Considered.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "paper": {
+        "text": "MONEY AND TRADE CONSIDERED, 1705",
+        "word": "book"
+      }
+    },
+    {
+      "text": "Money is not the value for which goods are exchanged, but the value by which they are exchanged.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "value",
+          "pose": "point"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "quote": {
+        "who": "you",
+        "text": "Money is not the value for which goods are exchanged, but the value by which...",
+        "word": "Money"
+      }
+    },
+    {
+      "text": "In other words: money is a tool for trading, not treasure to hoard.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "callouts": [
+        {
+          "text": "MONEY = A TOOL",
+          "word": "tool"
+        }
+      ]
+    },
+    {
+      "text": "Domestic trade depends on the money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "quote": {
+        "who": "you",
+        "text": "Domestick trade depends on the money.",
+        "word": "trade"
+      }
+    },
+    {
+      "text": "The Scottish Parliament says no. Then Scotland joins England in 1707, and you're still wanted for murder there.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "expression": "shock"
+        }
+      ],
+      "bg": "edinburgh1680",
+      "counter": {
+        "label": "1707",
+        "value": "REJECTED"
+      },
+      "bgIdea": "goldsmith's shop in Edinburgh, 1680s: dark wood counter, scales, silver cups, a strongbox, small leaded windows onto a stone street"
+    },
+    {
+      "text": "So what exactly are you selling? Let's use an island with apples.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "apples",
+          "pose": "point"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      }
+    },
+    {
+      "text": "The island grows one hundred apples a year and has one hundred coins.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      },
+      "callouts": [
+        {
+          "text": "100 APPLES",
+          "word": "apples"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "coins",
+          "label": "100"
+        }
+      ]
+    },
+    {
+      "text": "So an apple costs one coin.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "one",
+          "label": "1"
+        }
+      ]
+    },
+    {
+      "text": "If coins are scarce, people can't trade, and apples rot. That's your argument.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "scarce",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      }
+    },
+    {
+      "text": "Add paper money, and more apples get sold, picked and planted. Trade grows.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Trade",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "grows",
+          "label": "UP"
+        }
+      ]
+    },
+    {
+      "text": "But here's the catch. Print a thousand paper coins, and the island still grows one hundred apples.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "catch",
+          "expression": "shock"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      }
+    },
+    {
+      "text": "Now each apple costs about ten coins. That's inflation: prices rising because money is plentiful.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      },
+      "callouts": [
+        {
+          "text": "INFLATION",
+          "word": "inflation"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "ten",
+          "label": "x10"
+        }
+      ]
+    },
+    {
+      "text": "Paper money helps when it matches real trade. It hurts when it outruns it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      },
+      "callouts": [
+        {
+          "text": "PAPER ≤ REAL TRADE",
+          "word": "matches"
+        }
+      ]
+    },
+    {
+      "text": "Keep this island in mind. France is about to become it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "France",
+          "pose": "point"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "IDEA",
+        "value": "PAPER"
+      }
+    },
+    {
+      "text": "In September 1715, King Louis the Fourteenth dies after seventy-two years on the throne.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "stamp": "VERSAILLES, 1715",
+      "empty": true,
+      "fx": "rain"
+    },
+    {
+      "text": "He leaves palaces, wars, and a debt of about two billion livres.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "callouts": [
+        {
+          "text": "DEBT: 2 BILLION LIVRES",
+          "word": "billion"
+        }
+      ]
+    },
+    {
+      "text": "France can barely pay the interest. Tax collectors keep a big share of the taxes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "barely",
+          "expression": "shock"
+        }
+      ],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "taxes",
+          "label": "TAX"
+        }
+      ]
+    },
+    {
+      "text": "The new king is five years old. The real ruler is his uncle, Philippe, Duke of Orleans.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "PHILIPPE, THE REGENT",
+          "word": "Philippe",
+          "target": "regent"
+        }
+      ]
+    },
+    {
+      "text": "And Philippe happens to know you from the gambling tables.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tables",
+          "expression": "happy"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You tell him the problem isn't the debt. It's that France has no money moving.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "moving",
+          "pose": "point"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Give you a bank that prints paper, and trade will boom and the debt will melt.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "boom",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He's desperate enough to say yes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yes",
+          "expression": "happy"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1715",
+        "value": "RICH"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In May 1716, you open the Banque Generale, a private bank in Paris.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "stamp": "PARIS, MAY 1716",
+      "paper": {
+        "text": "BANQUE GENERALE",
+        "word": "Banque"
+      }
+    },
+    {
+      "text": "Its paper notes can be swapped for coins anytime you like.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "swapped",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches"
+    },
+    {
+      "text": "And the government accepts them for taxes. So people trust them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trust",
+          "expression": "happy"
+        }
+      ],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "crowd": 4
+    },
+    {
+      "text": "It works. Trade picks up. Interest rates fall.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "Trade",
+          "label": "UP"
+        }
+      ]
+    },
+    {
+      "text": "In 1718, the King takes the bank over and renames it the Banque Royale.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1718",
+        "value": "ROYAL BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "paper": {
+        "text": "BANQUE ROYALE",
+        "word": "renames"
+      }
+    },
+    {
+      "text": "Now it's the government's bank. And it can print notes without enough coins behind them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "print",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1718",
+        "value": "ROYAL BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches"
+    },
+    {
+      "text": "Remember the island? You're about to print a lot of paper apples.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1718",
+        "value": "ROYAL BANK"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "vision": {
+        "image": "orchard1850",
+        "word": "island"
+      }
+    },
+    {
+      "text": "In 1717, you take over a trading company with a monopoly on French Louisiana.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "MISSISSIPPI COMPANY",
+          "word": "company"
+        }
+      ]
+    },
+    {
+      "text": "You call it the Company of the West. Everyone else calls it the Mississippi Company.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Louisiana is a huge territory around the Mississippi River.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "louisiana1719",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "early French settlement on the Mississippi River, 1719: muddy riverbank, a few wooden huts, swamp cypress trees with moss, a small sailing ship",
+      "stamp": "LOUISIANA, 1719",
+      "empty": true
+    },
+    {
+      "text": "In 1718, your company founds a small town on the river. It calls it New Orleans.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "louisiana1719",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "early French settlement on the Mississippi River, 1719: muddy riverbank, a few wooden huts, swamp cypress trees with moss, a small sailing ship",
+      "icons": [
+        {
+          "icon": "calendar",
+          "word": "town",
+          "label": "1718"
+        }
+      ]
+    },
+    {
+      "text": "It's mostly swamp, forest and a few hundred settlers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "louisiana1719",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "early French settlement on the Mississippi River, 1719: muddy riverbank, a few wooden huts, swamp cypress trees with moss, a small sailing ship",
+      "icons": [
+        {
+          "icon": "question",
+          "word": "swamp",
+          "label": "GOLD?"
+        }
+      ]
+    },
+    {
+      "text": "Your advertisements say it's full of gold, silver and gentle native allies.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "louisiana1719",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "early French settlement on the Mississippi River, 1719: muddy riverbank, a few wooden huts, swamp cypress trees with moss, a small sailing ship",
+      "paper": {
+        "text": "LOUISIANA: MOUNTAINS OF GOLD",
+        "word": "advertisements"
+      }
+    },
+    {
+      "text": "There are no mountains of gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "louisiana1719",
+      "counter": {
+        "label": "1717",
+        "value": "MONOPOLY"
+      },
+      "bgIdea": "early French settlement on the Mississippi River, 1719: muddy riverbank, a few wooden huts, swamp cypress trees with moss, a small sailing ship"
+    },
+    {
+      "text": "To get settlers, prisoners and orphans are shipped there, sometimes by force.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "crowd": 5,
+      "fx": "storm"
+    },
+    {
+      "text": "Many of them die of disease within months.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "Back in Paris, your company keeps swallowing others.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Tobacco. The East India trade. The China trade. The mint. Tax collection.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "Tobacco",
+          "label": "TOBACCO"
+        },
+        {
+          "icon": "chart",
+          "word": "Tax",
+          "label": "TAXES"
+        }
+      ]
+    },
+    {
+      "text": "Then you offer to take over the entire national debt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ALL OF FRANCE'S DEBT",
+          "word": "debt"
+        }
+      ]
+    },
+    {
+      "text": "People can swap their government bonds for company shares. And they can buy shares with your bank's paper.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "swap",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1719",
+        "value": "SETTLERS"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe"
+    },
+    {
+      "text": "The bank prints notes. The notes buy shares. The shares push the price up.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prints",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1719",
+        "value": "BOOM"
+      }
+    },
+    {
+      "text": "Which makes people want more shares. Which makes the bank print more notes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1719",
+        "value": "BOOM"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "more",
+          "label": "LOOP"
+        }
+      ]
+    },
+    {
+      "text": "Shares go from five hundred livres to ten thousand in about six months.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "callouts": [
+        {
+          "text": "10,000 LIVRES",
+          "word": "thousand"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "New shares can be bought with a small down payment, and the rest paid later.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "callouts": [
+        {
+          "text": "BUY NOW, PAY LATER",
+          "word": "down"
+        }
+      ]
+    },
+    {
+      "text": "So people buy far more shares than they can actually afford.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "crowd": 6
+    },
+    {
+      "text": "Rue Quincampoix becomes an open-air stock market, packed day and night.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "crowd": 8
+    },
+    {
+      "text": "Foreigners pour into Paris to speculate. Rooms in the city run out.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Soldiers block the street at night so people go home.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "A servant reportedly makes enough to buy his master's carriage.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "carriage",
+          "expression": "shock"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "extras": [
+        {
+          "who": "crowd3",
+          "expression": "happy",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "The Regent's mother writes letters home describing the madness.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "extras": [
+        {
+          "who": "liselotte",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "THE REGENT'S MOTHER",
+          "word": "mother",
+          "target": "liselotte"
+        }
+      ],
+      "stamp": "PARIS, 1719"
+    },
+    {
+      "text": "Everybody speaks in millions. I don't understand it at all.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1719",
+        "value": "SHARES x20"
+      },
+      "extras": [
+        {
+          "who": "liselotte",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "liselotte",
+        "text": "Everybody speaks in millions. I don't understand it at all.",
+        "word": "Everybody"
+      }
+    },
+    {
+      "text": "You're the most famous man in Europe. Princes wait in your hallway.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "famous",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "BILLIONS?"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "You buy grand houses, estates, and much of a whole neighborhood in Paris.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "BILLIONS?"
+      }
+    },
+    {
+      "text": "On paper, you might be the richest private person in the world.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paper",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1719",
+        "value": "BILLIONS?"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "richest",
+          "label": "MAYBE"
+        }
+      ]
+    },
+    {
+      "text": "But to run France's finances, you'd need to be Catholic.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1719",
+        "value": "BILLIONS?"
+      }
+    },
+    {
+      "text": "So in December 1719, you convert. Problem solved.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "convert",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1719",
+        "value": "CONVERTED"
+      }
+    },
+    {
+      "text": "In January 1720, you become Controller General of Finances. You're in charge of France's money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charge",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1720",
+        "value": "IN CHARGE"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "callouts": [
+        {
+          "text": "CONTROLLER GENERAL",
+          "word": "Controller",
+          "target": "you"
+        }
+      ],
+      "stamp": "JANUARY 1720"
+    },
+    {
+      "text": "The man who once escaped the gallows in London now runs the treasury of France.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1720",
+        "value": "IN CHARGE"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The crash that ruins you is less than a year away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1720",
+        "value": "IN CHARGE"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "fx": "storm"
+    },
+    {
+      "text": "By early 1720, there's far more paper than anything it can buy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "vision": {
+        "image": "orchard1850",
+        "word": "paper"
+      }
+    },
+    {
+      "text": "Prices in Paris shoot up. Bread, rent, candles, everything.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "Prices",
+          "label": "UP"
+        },
+        {
+          "icon": "coin",
+          "word": "Bread",
+          "label": "BREAD"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "In February 1720, you merge the bank and the company. If one falls, both fall.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "callouts": [
+        {
+          "text": "BANK + COMPANY",
+          "word": "merge"
+        }
+      ]
+    },
+    {
+      "text": "Smart investors quietly sell shares and swap the notes for gold coins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "expression": "shock"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "One prince reportedly takes his notes to the bank and leaves with wagons of gold.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "gold",
+          "label": "GOLD"
+        }
+      ]
+    },
+    {
+      "text": "So you make it illegal to own more than five hundred livres in gold or silver.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "illegal",
+          "pose": "point"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "callouts": [
+        {
+          "text": "MAX 500 LIVRES IN GOLD",
+          "word": "illegal"
+        }
+      ]
+    },
+    {
+      "text": "Police search houses. Neighbors report each other.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "crowd": 4,
+      "fx": "rain"
+    },
+    {
+      "text": "You've banned the thing your father's receipts were promising: real metal.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1720",
+        "value": "TOO MUCH PAPER"
+      },
+      "vision": {
+        "image": "home1880",
+        "word": "father's"
+      }
+    },
+    {
+      "text": "In May 1720, you announce that notes and shares will be cut to half their value.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "stamp": "MAY 21, 1720",
+      "paper": {
+        "text": "NOTES: 100 LIVRES",
+        "fix": {
+          "strike": "100",
+          "write": "50",
+          "word": "half"
+        },
+        "word": "announce"
+      }
+    },
+    {
+      "text": "Paris explodes. The decree is withdrawn within a week. The trust never comes back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "fx": "storm",
+      "crowd": 8
+    },
+    {
+      "text": "In July, crowds crush each other trying to change notes at the bank. People die in the crush.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "crush",
+          "expression": "shock"
+        }
+      ],
+      "bg": "banqueroyale1720",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      },
+      "bgIdea": "Royal Bank of France office in Paris, 1720: long wooden counter with iron grilles, piles of paper banknotes, clerks' desks, stone arches",
+      "stamp": "JULY 1720",
+      "crowd": 8,
+      "fx": "rain"
+    },
+    {
+      "text": "Mobs attack your carriage. You need guards to cross the street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Mobs",
+          "expression": "shock"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Your coachman is dragged from the carriage and beaten. You stay hidden in the Palais-Royal.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hidden",
+          "expression": "shock"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      }
+    },
+    {
+      "text": "By the end of 1720, shares are worth a small fraction of their peak.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-50%"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "shares",
+          "label": "CRASH"
+        }
+      ]
+    },
+    {
+      "text": "The Regent fires you in December. You leave France with almost nothing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1720",
+        "value": "$0"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe",
+      "extras": [
+        {
+          "who": "regent",
+          "expression": "neutral"
+        }
+      ],
+      "fx": "snow"
+    },
+    {
+      "text": "Your houses, your estates and your shares all stay behind.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "behind",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "palaisroyal1716",
+      "counter": {
+        "label": "1720",
+        "value": "$0"
+      },
+      "bgIdea": "the Regent's private study in the Palais-Royal, Paris, 1716: gilded wood panels, writing desk with quills and papers, tall windows, globe"
+    },
+    {
+      "text": "A song goes around Paris about a man who buys shares on Monday and ends up in the poorhouse by Saturday.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "1720",
+        "value": "$0"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "paper": {
+        "text": "MONDAY: SHARES. TUESDAY: MILLIONS. SATURDAY: POORHOUSE.",
+        "word": "song"
+      }
+    },
+    {
+      "text": "You leave Paris in a borrowed carriage, with very little money and one family jewel.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "$0"
+      },
+      "fx": "snow"
+    },
+    {
+      "text": "You wander Europe again. Brussels, Venice, back to London.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wander",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1721",
+        "value": "BROKE"
+      },
+      "looks": {
+        "you": "john-law-old"
+      },
+      "stamp": "1721"
+    },
+    {
+      "text": "England pardons you for the duel. Twenty-five years too late to matter much.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pardons",
+          "expression": "happy"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1721",
+        "value": "BROKE"
+      },
+      "looks": {
+        "you": "john-law-old"
+      },
+      "callouts": [
+        {
+          "text": "PARDONED",
+          "word": "pardons"
+        }
+      ]
+    },
+    {
+      "text": "Your son, John, travels with you. Katherine and your daughter cannot leave France.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1721",
+        "value": "BROKE"
+      },
+      "looks": {
+        "you": "john-law-old"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Katherine is stuck in France, and your property there has been seized.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1721",
+        "value": "BROKE"
+      },
+      "looks": {
+        "you": "john-law-old"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "shock"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "So you do the one thing you know will pay. You gamble.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gamble",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1726",
+        "value": "GAMBLING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "stamp": "VENICE, 1726"
+    },
+    {
+      "text": "You play the same games you played at twenty-five, in the same city where you once ran the bank.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "same",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1726",
+        "value": "GAMBLING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      }
+    },
+    {
+      "text": "You still win. Just never enough to get it all back.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "win",
+          "expression": "happy"
+        }
+      ],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1726",
+        "value": "GAMBLING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      }
+    },
+    {
+      "text": "The internet says you died penniless and forgotten. You weren't forgotten.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "forgotten",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1726",
+        "value": "GAMBLING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      }
+    },
+    {
+      "text": "Visitors come to see the man who printed France, and you still argue that the idea was right.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1726",
+        "value": "GAMBLING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "On March 21st, 1729, you die of pneumonia in Venice, aged fifty-seven.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "stamp": "VENICE, MARCH 1729",
+      "fx": "rain"
+    },
+    {
+      "text": "Your estate is mostly a collection of paintings, and a lot of debts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "paintings",
+          "label": "ESTATE"
+        }
+      ]
+    },
+    {
+      "text": "Years later, the philosopher Montesquieu writes about you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "extras": [
+        {
+          "who": "montesquieu",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "MONTESQUIEU",
+          "word": "Montesquieu",
+          "target": "montesquieu"
+        }
+      ]
+    },
+    {
+      "text": "Mr. Law was one of the greatest promoters of despotism ever known in Europe.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "extras": [
+        {
+          "who": "montesquieu",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "montesquieu",
+        "text": "Mr. Law... one of the greatest promoters of despotism... ever known in Europe.",
+        "word": "greatest"
+      }
+    },
+    {
+      "text": "Despotism: unlimited power in one man's hands. Which, for one year, was you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "venice1729",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "bgIdea": "small rented room in Venice, 1729: peeling plaster, a narrow bed, a card table, a window over a canal, winter light",
+      "looks": {
+        "you": "john-law-old"
+      },
+      "callouts": [
+        {
+          "text": "ONE MAN, ALL THE MONEY",
+          "word": "power"
+        }
+      ]
+    },
+    {
+      "text": "France stays suspicious of banks and paper money for generations.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "looks": {
+        "you": "john-law-old"
+      }
+    },
+    {
+      "text": "It doesn't get a real central bank again until 1800, under Napoleon.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1729",
+        "value": "A PAINTING"
+      },
+      "looks": {
+        "you": "john-law-old"
+      },
+      "callouts": [
+        {
+          "text": "BANQUE DE FRANCE, 1800",
+          "word": "1800"
+        }
+      ]
+    },
+    {
+      "text": "So how did a Scottish fugitive end up running France?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor",
+      "crowd": 6
+    },
+    {
+      "text": "He had a real idea, a desperate government, and no one to tell him to stop printing.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stop",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor"
+    },
+    {
+      "text": "Your system lasted about four years. The idea behind it lasted three centuries.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "versailles1715",
+      "counter": {
+        "label": "1719",
+        "value": "RICHEST MAN?"
+      },
+      "bgIdea": "hall of mirrors at the Palace of Versailles, 1715: gilded arches, crystal chandeliers, polished parquet floor"
+    },
+    {
+      "text": "Today, most countries use paper money with no gold behind it. Your idea won.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "won",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "PAPER WON"
+      }
+    },
+    {
+      "text": "But central banks are built to say no to the government. You never were.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "PAPER WON"
+      }
+    },
+    {
+      "text": "That brings us to today's money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: PRINTED MONEY ISN'T NEW WEALTH",
+        "word": "money"
+      }
+    },
+    {
+      "text": "More money only makes people richer if there's more stuff to buy with it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "money",
+          "label": "MORE $"
+        },
+        {
+          "icon": "question",
+          "word": "stuff",
+          "label": "STUFF?"
+        }
+      ]
+    },
+    {
+      "text": "Paper can move goods faster. It can't grow apples.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "apples",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Here's what that looks like now. Say your pay rises three percent this year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "pay",
+          "label": "+3%"
+        }
+      ]
+    },
+    {
+      "text": "If prices rise seven percent, you didn't get a raise. You got about four percent poorer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poorer",
+          "expression": "shock"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "REAL PAY: -4%",
+          "word": "poorer"
+        }
+      ]
+    },
+    {
+      "text": "In 2008, prices in Zimbabwe were doubling roughly every day, after years of printing money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "doubling",
+          "label": "x2/DAY"
+        }
+      ]
+    },
+    {
+      "text": "Most central banks today aim for about two percent inflation a year, not zero, and not twenty.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "TARGET: ~2%",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "So watch the real number: what your money buys, not how much of it you have.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "real",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "And the rule isn't perfect. You were right that a little paper money can wake up a sleepy economy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "right",
+          "expression": "happy"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      }
+    },
+    {
+      "text": "Your first bank actually worked. It was the second part that went wrong.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "worked",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1716",
+        "value": "BANK"
+      }
+    },
+    {
+      "text": "The printing press is a tool. You just couldn't stop pressing it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "paris1719",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "rue Quincampoix in Paris, 1719: narrow street of tall stone houses with wooden shutters, wooden stalls and benches, papers on the cobbles, hanging shop signs (blank)",
+      "title": "YOUR LIFE AS JOHN LAW"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as John Law | The Mississippi Bubble",
+      "Your Life as the Gambler Who Ran France's Money",
+      "Your Life as John Law | Duelist, Gambler, Banker"
+    ],
+    "thumbnail": "A crowded 1719 Paris street with people waving paper shares, a mountain of banknotes; text: 'PRINTED FRANCE'",
+    "description": "It's 1719. Paris is crowded with new millionaires, and every one of them is holding shares in your company.\nIn one year, it will all be worthless. This is the life of John Law.\n\nA comedic dramatization of documented history.\nGeneral education only, not financial advice.\n\nSources:\n- John Law (economist), Wikipedia: https://en.wikipedia.org/wiki/John_Law_(economist)\n- Mississippi Company, Wikipedia: https://en.wikipedia.org/wiki/Mississippi_Company\n- John Law, Money and Trade Considered (1705)\n- Montesquieu, The Spirit of the Laws (1748), Book II, chapter 4\n- Antoin E. Murphy, John Law: Economic Theorist and Policy-Maker (1997)\n- James Buchan, John Law: A Scottish Adventurer of the Eighteenth Century (2018)",
+    "factCheck": [
+      "Born April 21, 1671, Edinburgh; father William Law a goldsmith-banker, died 1683 (Wikipedia). Goldsmith receipts circulating as money is the standard history of goldsmith banking (general, not specific to William Law).",
+      "London 1690s, nickname 'Beau Law', gambled and lost his inheritance; killed Edward 'Beau' Wilson in a duel in Bloomsbury Square, April 9, 1694; convicted of murder and sentenced to death, sentence commuted to a fine, Wilson's brother appealed, Law escaped to Amsterdam (Wikipedia). Cause of the duel unclear (possibly Elizabeth Villiers): DISPUTED.",
+      "Studied the Bank of Amsterdam; gambled professionally across Europe for about twenty years; companion Lady Katherine Knollys (Seignieur), two children (Wikipedia). 'Over £100,000' wealth by 1710s is an estimate in secondary sources: DISPUTED.",
+      "1705 'Money and Trade Considered' proposed a land-backed paper money bank to the Scottish Parliament, rejected; Act of Union 1707 made him liable to arrest in England's jurisdiction (Wikipedia).",
+      "Louis XIV died September 1, 1715 after a 72-year reign; debt roughly 2-3 billion livres (sources vary; 2 billion used); Louis XV aged five; Regent Philippe II, Duke of Orleans (Wikipedia).",
+      "Banque Generale founded May 1716; notes convertible to coin and accepted for taxes; nationalized as Banque Royale December 1718 (Wikipedia).",
+      "1717 Compagnie d'Occident with Louisiana monopoly; merged into Compagnie des Indes 1719, absorbing tobacco, East India and China companies, the mint and tax farms; took over the national debt (Wikipedia, Mississippi Company).",
+      "Forced migration of prisoners and vagrants to Louisiana; high mortality (Wikipedia, Mississippi Company).",
+      "Shares rose from 500 livres to about 10,000 livres between mid- and late 1719 (Wikipedia). Rue Quincampoix trading; servant-turned-rich anecdotes are contemporary reports, details DISPUTED. Word 'millionaire' popularized in this period (commonly cited, DISPUTED as first use).",
+      "Converted to Catholicism late 1719; Controller General of Finances January 5, 1720 (Wikipedia).",
+      "1720: limits on holding gold and silver (about 500 livres), house searches; May 21, 1720 decree halving notes and shares, withdrawn days later; July 1720 crushes at the bank killed several people; dismissed and left France December 1720 (Wikipedia). Prince de Conti withdrew gold in carts (Wikipedia).",
+      "Mobs attacked Law's carriage in July 1720 and his coachman was injured; Law sheltered in the Palais-Royal (Wikipedia; details DISPUTED). Left France December 1720 with little money. Son John went with him; Katherine and daughter stayed in France.",
+      "Pardoned in England 1721; died in Venice March 21, 1729 of pneumonia, aged 57; estate mostly paintings (Wikipedia).",
+      "Montesquieu, Spirit of the Laws (1748), Book II ch. 4: 'Mr. Law, through ignorance both of a republican and monarchical constitution, was one of the greatest promoters of despotism that had ever been known in Europe.'",
+      "Elisabeth Charlotte, Duchess of Orleans, letter 1719 (as quoted in Buchan 2018 and others): 'Everybody speaks in millions... I don't understand it at all.' Wording varies by translation: DISPUTED.",
+      "Paris satirical rhyme 1720 (Monday shares, Tuesday millions, Saturday hospital/poorhouse): widely quoted.",
+      "Zimbabwe 2008: peak monthly inflation ~79.6 billion percent in November 2008, prices doubling about every 24.7 hours (Hanke & Kwok, Cato Journal 2009)."
+    ],
+    "sources": [
+      "John Law (economist), Wikipedia: https://en.wikipedia.org/wiki/John_Law_(economist)",
+      "Mississippi Company, Wikipedia: https://en.wikipedia.org/wiki/Mississippi_Company",
+      "John Law, Money and Trade Considered (1705): 'Money is not the value for which goods are exchanged, but the value by which they are exchanged.'; 'Domestick trade depends on the money.'",
+      "Montesquieu, The Spirit of the Laws (1748), Book II, ch. 4 (Nugent translation): 'Mr. Law... was one of the greatest promoters of despotism that had ever been known in Europe.'",
+      "Elisabeth Charlotte, Duchess of Orleans, letters (1719), as quoted in James Buchan, John Law (2018): 'Everybody speaks in millions... I don't understand it at all.'",
+      "Steve H. Hanke and Alex K. F. Kwok, 'On the Measurement of Zimbabwe's Hyperinflation', Cato Journal 29(2), 2009"
+    ],
+    "wordCount": 2039,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "The Street of Millionaires"
+      },
+      {
+        "scene": 10,
+        "title": "The Goldsmith's Son (1671)"
+      },
+      {
+        "scene": 18,
+        "title": "Beau Law and the Duel (1692)"
+      },
+      {
+        "scene": 32,
+        "title": "Amsterdam and the Paper Bank (1695)"
+      },
+      {
+        "scene": 41,
+        "title": "The Professional Gambler (1700)"
+      },
+      {
+        "scene": 51,
+        "title": "The Paper Money Pitch (1705)"
+      },
+      {
+        "scene": 57,
+        "title": "Paper Money and Inflation, Explained"
+      },
+      {
+        "scene": 66,
+        "title": "A Bankrupt Kingdom (1715)"
+      },
+      {
+        "scene": 74,
+        "title": "The Banque Generale (1716)"
+      },
+      {
+        "scene": 81,
+        "title": "The Mississippi Company (1717)"
+      },
+      {
+        "scene": 96,
+        "title": "Everybody Speaks in Millions (1719)"
+      },
+      {
+        "scene": 113,
+        "title": "The Paper Melts (1720)"
+      },
+      {
+        "scene": 130,
+        "title": "Back to the Tables (1721)"
+      },
+      {
+        "scene": 152,
+        "title": "The Money Rule"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

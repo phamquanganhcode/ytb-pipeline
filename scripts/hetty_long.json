@@ -1,0 +1,3694 @@
+{
+  "title": "Your Life as Hetty Green | The Witch of Wall Street",
+  "iconStyle": "bubble",
+  "cast": {
+    "father": {
+      "name": "Edward Mott Robinson",
+      "face": "edward-mott-robinson",
+      "faceIdea": "stern New England whaling merchant, 1840s, grey sideburns, dark frock coat"
+    },
+    "aunt": {
+      "name": "Sylvia Ann Howland",
+      "face": "sylphatina-howland",
+      "faceIdea": "elderly Quaker aunt, 1850s, quiet lace bonnet, dark dress"
+    },
+    "edward": {
+      "name": "Edward Henry Green",
+      "face": "edward-green",
+      "faceIdea": "wealthy silk trader, 1860s, thick mustache, broad suit"
+    },
+    "ned": {
+      "name": "Ned Green",
+      "face": "ned-green",
+      "size": 0.6,
+      "faceIdea": "young son, 1870s, knee pants, small cap"
+    },
+    "banker": {
+      "name": "New York Banker",
+      "face": "new-york-banker",
+      "faceIdea": "stern Gilded Age financier, 1890s, top hat, monocle"
+    },
+    "you": {
+      "face": "hetty-green",
+      "shirt": "#1f1f22"
+    },
+    "peirce": {
+      "name": "Benjamin Peirce",
+      "face": "benjamin-peirce",
+      "faceIdea": "Benjamin Peirce, Harvard mathematician, 1860s, long grey beard, wire spectacles, dark coat"
+    },
+    "crowd1": {
+      "name": "Broker",
+      "face": "broker-1870s",
+      "faceIdea": "unnamed Wall Street broker, 1870s, top hat, mutton-chop whiskers, dark coat"
+    },
+    "crowd2": {
+      "name": "Townswoman",
+      "face": "townswoman-1880s",
+      "faceIdea": "unnamed working woman, 1880s, plain bonnet and shawl, hair in a bun"
+    },
+    "crowd3": {
+      "name": "Old clerk",
+      "face": "clerk-1890s",
+      "faceIdea": "unnamed elderly bank clerk, 1890s, green eyeshade visor, spectacles, grey moustache"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's 1873, and Wall Street is collapsing in a panic.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "stamp": "NEW YORK, 1873",
+      "crowd": 4,
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "Wall Street outside a bank during the 1873 panic: granite columns, closed iron doors, papers scattered on the cobbles, overcast sky"
+    },
+    {
+      "text": "Panicked men are screaming as banks lock their doors around them.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "crowd": 8,
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "Wall Street outside a bank during the 1873 panic: granite columns, closed iron doors, papers scattered on the cobbles, overcast sky"
+    },
+    {
+      "text": "And you are one of the few who stays calm.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calm",
+          "expression": "happy"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "crowd": 8,
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "Wall Street outside a bank during the 1873 panic: granite columns, closed iron doors, papers scattered on the cobbles, overcast sky"
+    },
+    {
+      "text": "Because you're holding the one thing nobody else has: cash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cash",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "callouts": [
+        {
+          "text": "$10M IN CASH",
+          "word": "cash"
+        }
+      ]
+    },
+    {
+      "text": "When you die, you will be the richest woman in America.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richest",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "stamp": "NEW YORK, 1916",
+      "callouts": [
+        {
+          "text": "RICHEST WOMAN IN AMERICA",
+          "word": "richest",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "And the entire nation will call you the Witch of Wall Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Witch",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "crowd": 5,
+      "paper": {
+        "text": "THE WITCH OF WALL STREET DIES",
+        "word": "Witch"
+      }
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you there, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      }
+    },
+    {
+      "text": "But to get there, we have to go back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1834",
+        "value": "AGE 0"
+      }
+    },
+    {
+      "text": "It's 1834, and you're born in New Bedford, Massachusetts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1834",
+        "value": "AGE 0"
+      },
+      "stamp": "NEW BEDFORD, 1834",
+      "callouts": [
+        {
+          "text": "YOU, AGE 0",
+          "word": "born",
+          "target": "you"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Your name is Henrietta Howland Robinson.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1834",
+        "value": "AGE 0"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "That panic is thirty-nine years away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "thirty-nine",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1834",
+        "value": "AGE 0"
+      },
+      "stamp": "NEW BEDFORD, 1834",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Keep count of the money, the children, and the enemies.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1834",
+        "value": "AGE 0"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "money",
+          "label": "COUNT"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Your family built a massive fortune selling whale oil.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1840",
+        "value": "AGE 6"
+      },
+      "stamp": "1840",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Because whale oil burns cleanly, everyone pays top dollar for it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1840",
+        "value": "AGE 6"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "dollar"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Your grandfather has failing eyes, so at age six, you read him financial papers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1840",
+        "value": "AGE 6"
+      },
+      "callouts": [
+        {
+          "text": "YOU, AGE 6",
+          "word": "six",
+          "target": "you"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Other kids hear fairy tales, but you learn bond yields: interest paid on debt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1840",
+        "value": "AGE 6"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "yields"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "By age eight, you open your very first bank account.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "account",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1842",
+        "value": "AGE 8"
+      },
+      "stamp": "1842",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Your father is a strict businessman who hates unnecessary spending.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "father",
+          "pose": "idle",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1842",
+        "value": "AGE 8"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDWARD ROBINSON, FATHER",
+          "word": "father",
+          "target": "father"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "He wears old clothes until they rot.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1842",
+        "value": "AGE 8"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "neutral"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1842",
+        "value": "AGE 8"
+      },
+      "callouts": [
+        {
+          "text": "REMEMBER THIS #1",
+          "word": "Remember"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Your mother is constantly sick, so your family sends you to Aunt Sylvia.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mother",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "stamp": "1847",
+      "extras": [
+        {
+          "who": "aunt",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "AUNT SYLVIA ANN HOWLAND",
+          "word": "Aunt",
+          "target": "aunt"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Aunt Sylvia is a wealthy Quaker spinster who lives extremely simply.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "extras": [
+        {
+          "who": "aunt",
+          "expression": "neutral"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "She teaches you that wealth is preserved by avoiding wasteful habits.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "extras": [
+        {
+          "who": "aunt",
+          "expression": "neutral"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "She also saves every scrap of paper and reuses old ribbon.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "extras": [
+        {
+          "who": "aunt",
+          "expression": "neutral"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "callouts": [
+        {
+          "text": "REMEMBER THIS #2",
+          "word": "Remember"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "By age thirteen, you take over the family ledgers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ledgers",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "paper": {
+        "text": "ROBINSON FAMILY ACCOUNT LEDGER",
+        "word": "ledgers"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You calculate shipping profits faster than adult clerks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "profits",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1847",
+        "value": "AGE 13"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "At twenty, your father sends you to New York to buy fashionable dresses.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1854",
+        "value": "AGE 20"
+      },
+      "stamp": "NEW YORK, 1854",
+      "crowd": 4,
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "He gives you twelve hundred dollars, which is about forty thousand today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dollars",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "callouts": [
+        {
+          "text": "$40,000 TODAY",
+          "word": "dollars"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You buy cheap clothes instead and invest the rest in government bonds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bonds",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "bonds",
+          "label": "BONDS"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You return home wearing plain cotton.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cotton",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "stamp": "NEW BEDFORD, 1854",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Your father is so impressed that he entrusts you with more capital.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "extras": [
+        {
+          "who": "father",
+          "expression": "happy"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "Now let's explain compound interest: the money idea at the heart of your strategy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "compound",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "callouts": [
+        {
+          "text": "THE BIG IDEA",
+          "word": "compound"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "Imagine planting one apple tree in your garden.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "Every year, it drops ten apples.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "apples",
+          "label": "10"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "Instead of eating them, you plant the seeds of all ten apples.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "Soon you have eleven trees dropping one hundred and ten apples.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "eleven",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "You keep planting every single seed, never taking a bite.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "planting",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "That is compound interest: earning returns on your previous returns.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "orchard1850",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "returns"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New England apple orchard, 1850s: rows of apple trees heavy with red apples, wooden ladder, baskets, summer afternoon"
+    },
+    {
+      "text": "The panic that makes you rich is nineteen years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1854",
+        "value": "$1,200"
+      },
+      "vision": {
+        "image": "bank1880",
+        "word": "panic"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "In 1860, your mother passes away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mother",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1860",
+        "value": "$8,000"
+      },
+      "stamp": "1860",
+      "fx": "rain",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "She leaves you an eight thousand dollar house, and the rest goes to your father.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1860",
+        "value": "$8,000"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "dollar"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "You are furious at the unequal distribution.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "furious",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "whalinghouse1840",
+      "counter": {
+        "label": "1860",
+        "value": "$8,000"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "New Bedford whaling merchant's house interior, 1840s: ship paintings, ledgers on a desk, oil lamps, harbor through the window"
+    },
+    {
+      "text": "In 1865, your father dies in New York.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "stamp": "1865",
+      "fx": "storm",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "He leaves an estate of about six million dollars: around two hundred million today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dollars",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1865",
+        "value": "$6M"
+      },
+      "callouts": [
+        {
+          "text": "$200 MILLION TODAY",
+          "word": "dollars"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "All but one million goes into a trust that pays you only the interest.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trust",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1865",
+        "value": "$6M"
+      },
+      "paper": {
+        "text": "ROBINSON WILL: PRINCIPAL LOCKED",
+        "word": "trust"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Just two weeks later, Aunt Sylvia dies as well.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "fx": "rain",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You expect her two million dollar estate to come directly to you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "expect",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "vision": {
+        "image": "vault1880",
+        "word": "estate"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Instead, her will leaves half to charity and half in trust.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charity",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "paper": {
+        "text": "SYLVIA'S WILL: HALF TO CHARITY",
+        "word": "will"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You produce a second document claiming she wanted you to have everything.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "document",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "paper": {
+        "text": "OLDER WILL: EVERYTHING TO CHARITY",
+        "word": "document",
+        "fix": {
+          "strike": "CHARITY",
+          "write": "HETTY",
+          "word": "everything"
+        }
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "The family accuses you of forging her signature.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "forging",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "crowd": 3,
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "This leads to the famous Howland Will case.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "crowd": 5,
+      "callouts": [
+        {
+          "text": "HOWLAND WILL CASE",
+          "word": "case"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Mathematicians analyze the strokes to argue the signature is traced.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "crowd": 5,
+      "icons": [
+        {
+          "icon": "question",
+          "word": "signature"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "The experts are Benjamin Peirce and his son Charles, famous Harvard mathematicians.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "experts",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "callouts": [
+        {
+          "text": "BENJAMIN PEIRCE, HARVARD",
+          "word": "Peirce",
+          "target": "peirce"
+        }
+      ],
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "They compare dozens of your aunt's real signatures, stroke by stroke.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "compare",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "paper": {
+        "text": "42 REAL SIGNATURES",
+        "word": "signatures"
+      },
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Real signatures never match perfectly, because a hand never moves the same way twice.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "perfectly",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "But the signature on your page matches another one almost exactly.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "exactly",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Their answer: the odds of that by chance are less than one in a billion trillion.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "odds",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "paper": {
+        "text": "ODDS: 1 IN 2,666 x 10^21",
+        "word": "odds"
+      },
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "extras": [
+        {
+          "who": "peirce",
+          "expression": "neutral"
+        }
+      ],
+      "text": "Benjamin Peirce tells the court: so vast an improbability is practically an impossibility.",
+      "speaker": "narrator",
+      "actions": [],
+      "quote": {
+        "who": "peirce",
+        "text": "So vast an improbability is practically an impossibility.",
+        "word": "vast"
+      }
+    },
+    {
+      "text": "It's one of the first times statistics is used as evidence in an American court.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "STATISTICS AS EVIDENCE",
+          "word": "statistics"
+        }
+      ],
+      "counter": {
+        "label": "1865",
+        "value": "$5M"
+      }
+    },
+    {
+      "text": "Facing potential forgery charges, you decide to leave the country.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "leave",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1867",
+        "value": "$5M"
+      },
+      "stamp": "1867",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "In 1867, you marry Edward Henry Green, a wealthy silk trader.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1867",
+        "value": "$5M"
+      },
+      "stamp": "NEW YORK, 1867",
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDWARD GREEN, HUSBAND",
+          "word": "marry",
+          "target": "edward"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Before saying yes, you make him sign a strict prenuptial agreement.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "agreement",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1867",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ],
+      "paper": {
+        "text": "PRENUP: SEPARATE FINANCES ENTIRELY",
+        "word": "agreement"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Your money stays entirely yours, and his money stays entirely his.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1867",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Which is a pretty bold thing to ask of a groom in 1867.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bold",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1867",
+        "value": "$5M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "shock"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You move to London, away from the lawsuit, and start investing heavy cash.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      },
+      "stamp": "LONDON, 1868",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "In 1868, you give birth to your son, Ned Green.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "NED GREEN, SON",
+          "word": "Ned",
+          "target": "ned"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Back home, the court rules against you in 1868, and the trust stands.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "against",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "stamp": "1868",
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      }
+    },
+    {
+      "text": "You never get the principal, only the income it pays.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "income",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "courtroom1870",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      }
+    },
+    {
+      "text": "The fight leaves you convinced that everyone is after your money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "everyone",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "home1880",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "crowd": 5,
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      }
+    },
+    {
+      "text": "The American Civil War has left government bonds heavily discounted.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "bonds"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "People think the United States government will collapse and fail to pay.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collapse",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1868",
+        "value": "$6M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You buy millions in greenbacks: paper currency issued during the war.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "greenbacks",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1868",
+        "value": "$7M"
+      },
+      "callouts": [
+        {
+          "text": "BUYING GREENBACKS",
+          "word": "greenbacks"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "Years later, Congress backs greenbacks with gold, and yours soar in value.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "soar",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1868",
+        "value": "$10M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "In 1871, you give birth to your daughter, Sylvia.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1871",
+        "value": "$10M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "stamp": "1871"
+    },
+    {
+      "text": "The panic that makes you rich is two years away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "panic",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1871",
+        "value": "$10M"
+      },
+      "vision": {
+        "image": "bank1880",
+        "word": "panic"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "In 1873, the Panic hits Wall Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Panic",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "stamp": "NEW YORK, 1873",
+      "crowd": 8,
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "Wall Street outside a bank during the 1873 panic: granite columns, closed iron doors, papers scattered on the cobbles, overcast sky"
+    },
+    {
+      "text": "Railroads go bankrupt and major banking houses fail.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "crowd": 8,
+      "paper": {
+        "text": "BANKRUPT RAILROADS AND BANK FAILURES",
+        "word": "bankrupt"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "bgIdea": "Wall Street outside a bank during the 1873 panic: granite columns, closed iron doors, papers scattered on the cobbles, overcast sky"
+    },
+    {
+      "text": "While everyone panics, you hold pure liquid cash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cash",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1873",
+        "value": "$10M"
+      },
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "You buy distressed railroad stocks for pennies on the dollar.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stocks",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1874",
+        "value": "$12M"
+      },
+      "stamp": "1874",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "stocks"
+        }
+      ],
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "When the market recovers, your investments multiply several times over.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1878",
+        "value": "$20M"
+      },
+      "stamp": "1878",
+      "looks": {
+        "you": "hetty-green-young"
+      }
+    },
+    {
+      "text": "After years in London, your family finally sails home to America.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "home",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "counter": {
+        "label": "1878",
+        "value": "$20M"
+      }
+    },
+    {
+      "text": "You move into your mother-in-law's house in Bellows Falls, Vermont.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "move",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "farmland1880",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "stamp": "BELLOWS FALLS, VERMONT",
+      "counter": {
+        "label": "1878",
+        "value": "$20M"
+      }
+    },
+    {
+      "text": "Your children grow up watching you count every penny.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "count",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "farmland1880",
+      "looks": {
+        "you": "hetty-green-young"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "counter": {
+        "label": "1878",
+        "value": "$20M"
+      }
+    },
+    {
+      "text": "Your husband Edward loves grand living, fine cigars, and speculation.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1880",
+        "value": "$25M"
+      },
+      "stamp": "1880",
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He makes high-risk investments using borrowed money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1880",
+        "value": "$25M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In 1885, your bank, John J. Cisco and Son, goes bankrupt.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bankrupt",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "stamp": "1885",
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "shock"
+        }
+      ],
+      "paper": {
+        "text": "JOHN J. CISCO & SON FAILS",
+        "word": "bankrupt"
+      }
+    },
+    {
+      "text": "Edward owes the bank money, and they hold your deposits.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The bank demands you cover his debt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "NEW YORK BANKER",
+          "word": "bank",
+          "target": "banker"
+        }
+      ]
+    },
+    {
+      "text": "Remember that prenuptial agreement?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "callouts": [
+        {
+          "text": "PRENUP PAYOFF",
+          "word": "Remember"
+        }
+      ]
+    },
+    {
+      "text": "You pull out the signed contract and fight for every penny.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fight",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "shock"
+        }
+      ],
+      "paper": {
+        "text": "PRENUP: HETTY NOT LIABLE",
+        "word": "contract"
+      }
+    },
+    {
+      "text": "You move your money to another bank and Edward out of your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Edward",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Which is a pretty harsh end to an eighteen year marriage.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      }
+    },
+    {
+      "text": "Now let's address the popular rumors about your frugality.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rumors",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "MYTH BUSTING TIME",
+          "word": "rumors"
+        }
+      ]
+    },
+    {
+      "text": "The internet says you let your son lose his leg to avoid paying a doctor.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "It didn't happen.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "didn't",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "paper": {
+        "text": "MYTH: REFUSED ALL DOCTORS FOR NED",
+        "word": "didn't",
+        "fix": {
+          "strike": "REFUSED",
+          "write": "HIRED",
+          "word": "happen"
+        }
+      }
+    },
+    {
+      "text": "You took him to free clinics, but you also hired specialists.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "His leg was amputated years later after a long infection.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "infection",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      }
+    },
+    {
+      "text": "The internet also says you never used warm water to save on heating.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      }
+    },
+    {
+      "text": "There's no solid evidence it's true.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1885",
+        "value": "$30M"
+      }
+    },
+    {
+      "text": "You lived in cheap boarding houses mainly to avoid tax assessors.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "assessors",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      },
+      "stamp": "BROOKLYN, 1888"
+    },
+    {
+      "text": "You rent small rooms in Hoboken, New Jersey, across the river from Wall Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rent",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "stamp": "HOBOKEN, NEW JERSEY",
+      "crowd": 3,
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "You sign the lease under fake names, like Mrs. C. Dewey.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sign",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "paper": {
+        "text": "LEASE: MRS. C. DEWEY",
+        "word": "lease"
+      },
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "Why? New York tax collectors want a share of your fortune.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tax",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "Here is a tax residence: the place that decides which city taxes you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "boardinghouse1890",
+      "callouts": [
+        {
+          "text": "TAX RESIDENCE",
+          "word": "residence"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "question",
+          "word": "decides"
+        }
+      ],
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "Move often enough, and no city can prove where you live.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prove",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "crowd": 4,
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "You ride the ferry to Manhattan every day, carrying your bag of bonds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bag",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "crowd": 6,
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "You also carry a revolver, in case anyone tries to rob you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "revolver",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1888",
+        "value": "$35M"
+      }
+    },
+    {
+      "text": "You carry your papers in a battered black bag and wear one dark dress.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bag",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1890",
+        "value": "$40M"
+      },
+      "stamp": "1890",
+      "crowd": 3,
+      "callouts": [
+        {
+          "text": "YOU, THE BLACK DRESS",
+          "word": "dress",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You only wash the bottom hem of the dress to save soap.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wash",
+          "pose": "idle"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1890",
+        "value": "$40M"
+      }
+    },
+    {
+      "text": "Remember Aunt Sylvia's lessons on avoiding waste?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1890",
+        "value": "$40M"
+      },
+      "vision": {
+        "image": "parlor",
+        "word": "Aunt"
+      }
+    },
+    {
+      "text": "Press reporters label you the Witch of Wall Street.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1890",
+        "value": "$40M"
+      },
+      "crowd": 6,
+      "paper": {
+        "text": "HETTY GREEN: THE WITCH OF WALL STREET",
+        "word": "Witch"
+      }
+    },
+    {
+      "text": "You work from a desk at the Chemical Bank.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "desk",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1892",
+        "value": "$45M"
+      },
+      "stamp": "1892",
+      "bgIdea": "cluttered back office of a big New York bank, 1890s: plain desk piled with bonds and papers, radiator, iron safe, frosted glass partition"
+    },
+    {
+      "text": "You eat oatmeal warmed on a radiator instead of buying lunch.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "oatmeal",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1892",
+        "value": "$45M"
+      },
+      "icons": [
+        {
+          "icon": "coffee",
+          "word": "oatmeal",
+          "label": "OATMEAL"
+        }
+      ],
+      "bgIdea": "cluttered back office of a big New York bank, 1890s: plain desk piled with bonds and papers, radiator, iron safe, frosted glass partition"
+    },
+    {
+      "text": "Remember your father wearing old clothes until they rotted?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1892",
+        "value": "$45M"
+      },
+      "vision": {
+        "image": "home1880",
+        "word": "father"
+      },
+      "bgIdea": "cluttered back office of a big New York bank, 1890s: plain desk piled with bonds and papers, radiator, iron safe, frosted glass partition"
+    },
+    {
+      "text": "In 1893, another massive financial panic strikes Wall Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "panic",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "stamp": "1893",
+      "crowd": 8
+    },
+    {
+      "text": "Major banks run completely out of cash.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "Here is a bank run: when everyone tries to withdraw cash at once.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bank",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "WHAT IS A BANK RUN",
+          "word": "bank"
+        }
+      ]
+    },
+    {
+      "text": "Banks keep only a small fraction of deposits in their vault.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "icons": [
+        {
+          "icon": "piggy",
+          "word": "deposits"
+        }
+      ]
+    },
+    {
+      "text": "When customers panic and line up outside, the cash runs out fast.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "panic",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "The bank closes its doors, leaving depositors broke.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "While banks fail around you, your money sits safely in cash and bonds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "safely",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "You lend to desperate borrowers, but only against real property.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lend",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "Here is a mortgage: a loan where the borrower pledges land or buildings.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "callouts": [
+        {
+          "text": "MORTGAGE",
+          "word": "mortgage"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "money",
+          "word": "loan"
+        }
+      ],
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "If the borrower can't pay, the lender takes the property.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "takes",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "Over the years, you end up owning large amounts of Chicago real estate.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Chicago",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "stamp": "CHICAGO",
+      "crowd": 5,
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "Panics don't scare you, because you never borrow to invest.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "never",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "crowd": 7,
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      },
+      "bgIdea": "cluttered back office of a big New York bank, 1890s: plain desk piled with bonds and papers, radiator, iron safe, frosted glass partition"
+    },
+    {
+      "text": "Remember Edward's borrowed money?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "vision": {
+        "image": "bank1880",
+        "word": "borrowed"
+      },
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "That's exactly what ruined him.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ruined",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1893",
+        "value": "$50M"
+      }
+    },
+    {
+      "text": "When railroad lines default, you take control of the actual tracks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "control",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      },
+      "stamp": "1898"
+    },
+    {
+      "text": "You gain control of a Texas railroad.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      }
+    },
+    {
+      "text": "You personally inspect the lines to stop wasteful managers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "inspect",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      },
+      "stamp": "TEXAS, 1898"
+    },
+    {
+      "text": "You send Ned to Texas to run the Texas Midland Railroad.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "send",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "trainstation1890",
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "stamp": "TEXAS",
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      }
+    },
+    {
+      "text": "He's in his twenties, with one leg and a big appetite for spending.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "spending",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trainstation1890",
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "neutral"
+        }
+      ],
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      }
+    },
+    {
+      "text": "He turns the railroad around and even gets into Texas politics.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "politics",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "railroad1890",
+      "crowd": 6,
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      }
+    },
+    {
+      "text": "In 1902, your estranged husband Edward falls seriously ill.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ill",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1902",
+        "value": "$70M"
+      },
+      "stamp": "1902",
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Despite the past, you return to nurse him in his final months.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1902",
+        "value": "$70M"
+      },
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "He dies in 1902, and you wear black mourning dress for good.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "black",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1902",
+        "value": "$70M"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "The Panic of 1907 brings Wall Street to its knees once again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "stamp": "1907",
+      "crowd": 8
+    },
+    {
+      "text": "Major trust companies fail and stock prices collapse nationwide.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collapse",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "Financier J.P. Morgan scrambles to organize a massive bailout.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Desperate city leaders ask you for another emergency loan.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "shock",
+          "enter": true
+        }
+      ],
+      "bgIdea": "New York City Hall mayor's office, 1907: dark wood panels, tall windows, city seal on the wall, desk with ledgers"
+    },
+    {
+      "text": "You write a check for one point one million dollars to save the city.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "check",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "happy"
+        }
+      ],
+      "paper": {
+        "text": "CHECK TO NEW YORK CITY: $1,100,000",
+        "word": "check"
+      },
+      "bgIdea": "New York City Hall mayor's office, 1907: dark wood panels, tall windows, city seal on the wall, desk with ledgers"
+    },
+    {
+      "text": "In return, you take short-term city revenue bonds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bonds",
+          "pose": "idle",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "extras": [
+        {
+          "who": "banker",
+          "expression": "neutral"
+        }
+      ],
+      "bgIdea": "New York City Hall mayor's office, 1907: dark wood panels, tall windows, city seal on the wall, desk with ledgers"
+    },
+    {
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "text": "Of your panic loans you say: those to whom I loaned money got it at six percent.",
+      "speaker": "narrator",
+      "actions": [],
+      "quote": {
+        "who": "you",
+        "text": "Those to whom I loaned money got it at 6%.",
+        "word": "loaned"
+      },
+      "bgIdea": "New York City Hall mayor's office, 1907: dark wood panels, tall windows, city seal on the wall, desk with ledgers"
+    },
+    {
+      "text": "Your rule: when I see a good thing going cheap, I buy a lot of it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1907",
+        "value": "$80M"
+      },
+      "quote": {
+        "who": "you",
+        "text": "When I see a good thing going cheap, I buy a lot of it.",
+        "word": "cheap"
+      },
+      "bgIdea": "New York City Hall mayor's office, 1907: dark wood panels, tall windows, city seal on the wall, desk with ledgers"
+    },
+    {
+      "text": "While rival investors lose everything, your wealth keeps climbing.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wealth",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1907",
+        "value": "$90M"
+      }
+    },
+    {
+      "text": "Your son Ned keeps running your business in Texas.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1907",
+        "value": "$90M"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He spends lavishly and collects expensive automobiles.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lavishly",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1907",
+        "value": "$90M"
+      },
+      "extras": [
+        {
+          "who": "ned",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In 1909, your daughter Sylvia finally marries, at thirty-eight.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marries",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1909",
+        "value": "$90M"
+      },
+      "stamp": "1909",
+      "crowd": 4
+    },
+    {
+      "text": "Her groom is Matthew Astor Wilks, from the wealthy Astor family.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "groom",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1909",
+        "value": "$90M"
+      }
+    },
+    {
+      "text": "Before the wedding, you make him sign away any claim to her fortune.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sign",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1909",
+        "value": "$90M"
+      },
+      "paper": {
+        "text": "WILKS WAIVES ALL CLAIMS",
+        "word": "sign"
+      }
+    },
+    {
+      "text": "Remember your own prenuptial agreement?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1909",
+        "value": "$90M"
+      },
+      "vision": {
+        "image": "office1880",
+        "word": "prenuptial"
+      }
+    },
+    {
+      "text": "Your daughter Sylvia lives quietly under your strict financial guidance.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Sylvia",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1912",
+        "value": "$95M"
+      },
+      "stamp": "1912",
+      "bgIdea": "small rented Manhattan apartment, 1910s: narrow bed, plain dresser, radiator, one window over brick buildings"
+    },
+    {
+      "text": "In 1916, at eighty-one, you argue with a maid over skimmed milk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "argue",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "stamp": "NEW YORK, 1916",
+      "vision": {
+        "image": "cafe1880",
+        "word": "milk"
+      },
+      "bgIdea": "small rented Manhattan apartment, 1910s: narrow bed, plain dresser, radiator, one window over brick buildings"
+    },
+    {
+      "text": "A series of strokes soon ends your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ends",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "You die on July third, 1916, in New York, at eighty-one.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "apartment1910",
+      "stamp": "JULY 3, 1916",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true,
+      "bgIdea": "small rented Manhattan apartment, 1910s: narrow bed, plain dresser, radiator, one window over brick buildings"
+    },
+    {
+      "text": "Your fortune goes to your two children, Ned and Sylvia.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true
+    },
+    {
+      "text": "Ned spends his share on yachts, coins, stamps, and a seaside mansion.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "YACHTS, COINS, STAMPS",
+          "word": "yachts"
+        }
+      ]
+    },
+    {
+      "text": "He even buys a whole sheet of the rare Inverted Jenny airmail stamps.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "callouts": [
+        {
+          "text": "INVERTED JENNY, 1918",
+          "word": "Inverted"
+        }
+      ],
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true
+    },
+    {
+      "text": "Sylvia dies in 1951 and leaves most of the money to charities and friends.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "stamp": "1951",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true
+    },
+    {
+      "text": "Decades later, Guinness World Records lists you as the greatest miser.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "paper": {
+        "text": "GUINNESS: GREATEST MISER",
+        "word": "miser"
+      },
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "empty": true
+    },
+    {
+      "text": "So how did a girl from New Bedford become the richest woman in America?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richest",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "callouts": [
+        {
+          "text": "ESTATE: $100 MILLION",
+          "word": "richest"
+        }
+      ]
+    },
+    {
+      "text": "You let interest compound, held cash for the panics, and skipped the vanity.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      }
+    },
+    {
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "text": "In your own words: all you have to do is buy cheap and sell dear.",
+      "speaker": "narrator",
+      "actions": [],
+      "quote": {
+        "who": "you",
+        "text": "All you have to do is buy cheap and sell dear.",
+        "word": "cheap"
+      }
+    },
+    {
+      "text": "Your fortune is worth billions in today's money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "billions",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1916",
+        "value": "$100M"
+      },
+      "callouts": [
+        {
+          "text": "BILLIONS TODAY",
+          "word": "billions"
+        }
+      ]
+    },
+    {
+      "text": "Here is the money rule from your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: KEEP CASH FOR PANICS",
+        "word": "rule"
+      },
+      "stamp": "THE MONEY RULE"
+    },
+    {
+      "text": "Keep some cash ready, so a crash becomes a sale instead of a disaster.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sale",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "In early 2020, stocks fell about a third in one month.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "third",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "2020: STOCKS -34%",
+          "word": "third"
+        }
+      ]
+    },
+    {
+      "text": "If you had to sell then, you locked in that loss.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "loss",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "If you had cash waiting, you bought the same things at a discount.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "discount",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "But idle cash loses value to inflation every single year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "inflation",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "And your way cost you comfort, family warmth, and almost every friend.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "friend",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Buy when everyone sells, hold cash, and never pay for an expensive lunch.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "title": "YOUR LIFE AS HETTY GREEN"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Hetty Green | The Witch of Wall Street",
+      "Your Life as the Richest Woman in Gilded Age America",
+      "Your Life as Hetty Green | Cash in Every Panic"
+    ],
+    "thumbnail": "Hetty Green in a plain black dress clutching a bag of cash while a bank crowd panics behind her; text: 'WITCH OF WALL STREET'.",
+    "description": "It's 1834, and you're born into a whaling fortune in New Bedford. Decades later, you hold the cash when Wall Street panics.\n\nA comedic dramatization of documented history. Some well-known anecdotes about her thrift are disputed.\n\nSources:\n- Hetty Green, Wikipedia: https://en.wikipedia.org/wiki/Hetty_Green\n- Fortune, how the richest woman in the world helped save New York City in the Panic of 1907: https://fortune.com/2024/03/17/how-richest-woman-world-saved-new-york-city-panic-1907/\n- Vermont Historical Society, Henrietta Howland Robinson Green: https://hub.catalogit.app/vermont-historical-society/folder/entry/89dd1eb0-a79f-11ea-8dbd-dd0b3b7e0130\nFurther reading:\n- Janet Wallach, The Richest Woman in America (2012)",
+    "factCheck": [
+      "Checked 2026-11-10 against web sources: aunt's name, 1873 return, 1907 loan ($1.1M, 5.5%); 1893 loan removed. Unverified: 42 signatures, Ned's Texas year, thrift anecdotes."
+    ],
+    "sources": [
+      "Janet Wallach, The Richest Woman in America (2012)",
+      "Sparkes and Moore, The Witch of Wall Street (1930)",
+      "New York Times obituary, July 4, 1916",
+      "Benjamin Peirce testimony, Howland will case (1867): 'So vast an improbability is practically an impossibility.' https://en.wikipedia.org/wiki/Howland_will_forgery_trial",
+      "Hetty Green on her 1907 panic loans, quoted in Fortune (2024): 'Those to whom I loaned money got it at 6%.' https://fortune.com/2024/03/17/how-richest-woman-world-saved-new-york-city-panic-1907/",
+      "Hetty Green: 'There is no great secret in fortune making. All you have to do is buy cheap and sell dear...' https://en.wikipedia.org/wiki/Hetty_Green"
+    ],
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "Cash in a Panic",
+        "mood": "tense"
+      },
+      {
+        "scene": 8,
+        "title": "A Whaling Fortune (1834)",
+        "mood": "calm"
+      },
+      {
+        "scene": 32,
+        "title": "Compound Interest, Explained",
+        "mood": "mystery"
+      },
+      {
+        "scene": 43,
+        "title": "The Inheritance Fight (1865)",
+        "mood": "tense"
+      },
+      {
+        "scene": 61,
+        "title": "Marriage and London (1867)",
+        "mood": "calm"
+      },
+      {
+        "scene": 77,
+        "title": "The Panic of 1873",
+        "mood": "tense"
+      },
+      {
+        "scene": 85,
+        "title": "Edward's Debts (1885)",
+        "mood": "sad"
+      },
+      {
+        "scene": 94,
+        "title": "The Miser Myths",
+        "mood": "mystery"
+      },
+      {
+        "scene": 116,
+        "title": "The Panic of 1893",
+        "mood": "tense"
+      },
+      {
+        "scene": 130,
+        "title": "Texas Railroads (1898)",
+        "mood": "triumph"
+      },
+      {
+        "scene": 139,
+        "title": "Saving New York (1907)",
+        "mood": "triumph"
+      },
+      {
+        "scene": 155,
+        "title": "Death and the Fortune (1916)",
+        "mood": "sad"
+      },
+      {
+        "scene": 167,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

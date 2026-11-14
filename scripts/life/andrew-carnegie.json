@@ -1,0 +1,4194 @@
+{
+  "title": "Your Life as Andrew Carnegie | The $480 Million Slip of Paper",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Andrew Carnegie",
+      "face": "andrew-carnegie",
+      "shirt": "#3a3a40",
+      "faceIdea": "Scottish-American steel magnate Andrew Carnegie, 1892, age 56: small man, round friendly face, short neat white beard and moustache, white hair, bright eyes, dark grey suit, wing collar and bow tie"
+    },
+    "mother": {
+      "name": "Margaret Morrison Carnegie",
+      "face": "margaret-carnegie",
+      "faceIdea": "Scottish weaver's wife Margaret Morrison Carnegie, 1848, age 38: firm square face, dark hair parted in the middle under a white lace cap, plain dark dress with a plaid shawl"
+    },
+    "father": {
+      "name": "William Carnegie",
+      "face": "william-carnegie",
+      "faceIdea": "Scottish handloom weaver William Carnegie, 1845, age 40: gentle tired thin face, sandy side-whiskers, flat cloth cap, collarless linen shirt and worn waistcoat"
+    },
+    "scott": {
+      "name": "Thomas A. Scott",
+      "face": "thomas-scott",
+      "faceIdea": "Pennsylvania Railroad superintendent Thomas A. Scott, 1856, age 32: handsome confident face, wavy fair hair, long side-whiskers, clean-shaven chin, dark frock coat and silk cravat"
+    },
+    "frick": {
+      "name": "Henry Clay Frick",
+      "face": "henry-clay-frick",
+      "faceIdea": "coke and steel boss Henry Clay Frick, 1892, age 42: cold handsome face, pale grey eyes, full neatly trimmed dark beard going grey, dark hair, black suit with high stiff collar"
+    },
+    "schwab": {
+      "name": "Charles M. Schwab",
+      "face": "charles-schwab-1900",
+      "faceIdea": "steel company president Charles M. Schwab, 1900, age 38: broad smiling clean-shaven face, dark hair parted on the side, stout, black evening suit with white bow tie"
+    },
+    "morgan": {
+      "name": "J. P. Morgan",
+      "face": "jp-morgan",
+      "faceIdea": "banker J. P. Morgan, 1901, age 63: heavy stern face, large red nose, big walrus moustache, piercing eyes, black suit, wing collar, watch chain"
+    },
+    "louise": {
+      "name": "Louise Whitfield Carnegie",
+      "face": "louise-carnegie",
+      "faceIdea": "Louise Whitfield Carnegie, 1887, age 30: calm oval face, dark hair pinned up in a soft bun, high lace collar, dark silk dress with a brooch"
+    },
+    "crowd1": {
+      "name": "Steelworker",
+      "face": "steelworker-1890s",
+      "faceIdea": "Pittsburgh steelworker, 1892: weathered face, thick dark moustache, soot smudges, flat cloth cap, collarless work shirt"
+    },
+    "crowd2": {
+      "name": "Townswoman",
+      "face": "townswoman-1880s",
+      "faceIdea": "mill-town woman, 1880s: plain face, hair in a bun, dark dress with a shawl"
+    },
+    "crowd3": {
+      "name": "Clerk",
+      "face": "clerk-1890s",
+      "faceIdea": "office clerk, 1890s: thin face, spectacles, centre parting, stiff collar"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's July 6th, 1892, four in the morning, on a river near Pittsburgh.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "stamp": "HOMESTEAD, 1892",
+      "empty": true
+    },
+    {
+      "text": "Two barges slide through the fog, carrying three hundred armed guards.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "barges",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "callouts": [
+        {
+          "text": "300 ARMED GUARDS",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "On the bank, thousands of steelworkers and their families are waiting.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "crowd": 8
+    },
+    {
+      "text": "It's your mill. They're your workers. The guards were hired in your name.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "callouts": [
+        {
+          "text": "YOU, ANDREW CARNEGIE",
+          "word": "your",
+          "target": "you"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "By nightfall, at least ten men will be dead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dead",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "callouts": [
+        {
+          "text": "10 DEAD",
+          "word": "ten"
+        }
+      ],
+      "fx": "storm",
+      "crowd": 6
+    },
+    {
+      "text": "And you are three thousand miles away, on holiday in Scotland.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "holiday",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "callouts": [
+        {
+          "text": "3,000 MILES AWAY",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "Six years ago, you wrote that a worker's right to a union is sacred.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "paper": {
+        "text": "THE RIGHT TO FORM A UNION IS SACRED",
+        "word": "wrote"
+      }
+    },
+    {
+      "text": "You'll become the richest man in the world, then give almost all of it away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richest",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "callouts": [
+        {
+          "text": "$350 MILLION GIVEN AWAY",
+          "word": "give"
+        }
+      ]
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here,",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rule",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      }
+    },
+    {
+      "text": "and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's 1835, in Dunfermline, Scotland.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1835",
+        "value": "AGE 0"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "stamp": "DUNFERMLINE, 1835",
+      "empty": true
+    },
+    {
+      "text": "You're born on November 25th, in a weaver's cottage. Your name is Andrew.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "born",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1835",
+        "value": "AGE 0"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "callouts": [
+        {
+          "text": "YOU, AGE 0",
+          "word": "born",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Keep count of three things: the money, the promises, and who pays for them.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1835",
+        "value": "AGE 0"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "money"
+        },
+        {
+          "icon": "question",
+          "word": "pays"
+        }
+      ]
+    },
+    {
+      "text": "Your father, William, weaves fine linen on a handloom in the front room.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1835",
+        "value": "AGE 0"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "WILLIAM, YOUR FATHER",
+          "word": "William",
+          "target": "father"
+        }
+      ]
+    },
+    {
+      "text": "Your mother, Margaret, runs everything else.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1835",
+        "value": "AGE 0"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father"
+        },
+        {
+          "who": "mother",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "MARGARET, YOUR MOTHER",
+          "word": "Margaret",
+          "target": "mother"
+        }
+      ]
+    },
+    {
+      "text": "Then steam-powered looms arrive in town, and they weave faster and cheaper than any man.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "steam-powered",
+          "expression": "shock"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1843",
+        "value": "AGE 7"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Your father's orders stop.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1843",
+        "value": "AGE 7"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "shock"
+        },
+        {
+          "who": "mother"
+        }
+      ]
+    },
+    {
+      "text": "A machine has lowered the cost of cloth, and your family was the cost.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1843",
+        "value": "AGE 7"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "shock"
+        },
+        {
+          "who": "mother"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOUR FAMILY = THE COST",
+          "word": "cost"
+        }
+      ]
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1843",
+        "value": "AGE 7"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane"
+    },
+    {
+      "text": "Your mother stitches shoes and opens a tiny shop to keep you fed.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1843",
+        "value": "AGE 7"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "mother"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, AGE 10",
+          "word": "you",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "In 1848, she borrows twenty pounds for tickets to America.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "borrows",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1848",
+        "value": "-£20"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "mother"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "BORROWED: £20",
+          "word": "twenty"
+        }
+      ],
+      "stamp": "1848"
+    },
+    {
+      "text": "Fifty days at sea, in the cheap part of the ship.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1848",
+        "value": "-£20"
+      },
+      "extras": [
+        {
+          "who": "mother"
+        },
+        {
+          "who": "father"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "50 DAYS",
+          "word": "Fifty"
+        }
+      ]
+    },
+    {
+      "text": "You're twelve, and you make friends with the sailors. Your parents mostly hold on.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "friends",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1848",
+        "value": "-£20"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "shock"
+        },
+        {
+          "who": "father",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "You land in Allegheny, Pennsylvania: a smoky town across the river from Pittsburgh.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "land",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1848",
+        "value": "-£20"
+      },
+      "extras": [
+        {
+          "who": "mother"
+        },
+        {
+          "who": "father"
+        }
+      ],
+      "stamp": "ALLEGHENY, 1848"
+    },
+    {
+      "text": "The morning at Homestead is forty-four years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1848",
+        "value": "-£20"
+      },
+      "callouts": [
+        {
+          "text": "44 YEARS AWAY",
+          "word": "forty-four"
+        }
+      ],
+      "vision": {
+        "image": "factory1900",
+        "word": "Homestead"
+      }
+    },
+    {
+      "text": "At thirteen, you get your first job, in a cotton mill.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bobbinmill1848",
+      "counter": {
+        "label": "1848",
+        "value": "$1.20/WEEK"
+      },
+      "bgIdea": "cotton mill in Allegheny, Pennsylvania, 1848: rows of spinning frames with wooden bobbins, leather belts from the ceiling, baskets of spools, dusty light from high windows",
+      "callouts": [
+        {
+          "text": "YOU, 13, BOBBIN BOY",
+          "word": "thirteen",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "You're a bobbin boy: you change the spools of thread on the machines.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "spools",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bobbinmill1848",
+      "counter": {
+        "label": "1848",
+        "value": "$1.20/WEEK"
+      },
+      "bgIdea": "cotton mill in Allegheny, Pennsylvania, 1848: rows of spinning frames with wooden bobbins, leather belts from the ceiling, baskets of spools, dusty light from high windows"
+    },
+    {
+      "text": "Twelve hours a day, for a dollar twenty a week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dollar",
+          "pose": "handOut",
+          "expression": "neutral",
+          "hold": "coin"
+        }
+      ],
+      "bg": "bobbinmill1848",
+      "counter": {
+        "label": "1848",
+        "value": "$1.20/WEEK"
+      },
+      "bgIdea": "cotton mill in Allegheny, Pennsylvania, 1848: rows of spinning frames with wooden bobbins, leather belts from the ceiling, baskets of spools, dusty light from high windows",
+      "callouts": [
+        {
+          "text": "$1.20 A WEEK",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "The next job pays two dollars: you tend a boiler in a cellar and oil bobbins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "boiler",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "bobbinmill1848",
+      "counter": {
+        "label": "1848",
+        "value": "$2/WEEK"
+      },
+      "bgIdea": "cotton mill in Allegheny, Pennsylvania, 1848: rows of spinning frames with wooden bobbins, leather belts from the ceiling, baskets of spools, dusty light from high windows"
+    },
+    {
+      "text": "The smell of the oil makes you sick. You do it anyway.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sick",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bobbinmill1848",
+      "counter": {
+        "label": "1848",
+        "value": "$2/WEEK"
+      },
+      "bgIdea": "cotton mill in Allegheny, Pennsylvania, 1848: rows of spinning frames with wooden bobbins, leather belts from the ceiling, baskets of spools, dusty light from high windows"
+    },
+    {
+      "text": "In 1849, you become a telegraph messenger boy in Pittsburgh, at two fifty a week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "messenger",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "telegraph1850",
+      "counter": {
+        "label": "1849",
+        "value": "$2.50/WEEK"
+      },
+      "bgIdea": "telegraph office in Pittsburgh, 1850: wooden counter, brass telegraph keys and sounders on desks, paper tape, pigeonholes of message slips, a wall clock, a window onto a smoky street",
+      "callouts": [
+        {
+          "text": "$2.50 A WEEK",
+          "word": "two"
+        }
+      ],
+      "stamp": "PITTSBURGH, 1849"
+    },
+    {
+      "text": "You memorize every street, and the face of every businessman in town.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "memorize",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "telegraph1850",
+      "counter": {
+        "label": "1849",
+        "value": "$2.50/WEEK"
+      },
+      "bgIdea": "telegraph office in Pittsburgh, 1850: wooden counter, brass telegraph keys and sounders on desks, paper tape, pigeonholes of message slips, a wall clock, a window onto a smoky street",
+      "vision": {
+        "image": "street1900",
+        "word": "street"
+      }
+    },
+    {
+      "text": "That way, you can hand over a telegram right on the sidewalk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hand",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "telegraph1850",
+      "counter": {
+        "label": "1849",
+        "value": "$2.50/WEEK"
+      },
+      "bgIdea": "telegraph office in Pittsburgh, 1850: wooden counter, brass telegraph keys and sounders on desks, paper tape, pigeonholes of message slips, a wall clock, a window onto a smoky street",
+      "crowd": 3
+    },
+    {
+      "text": "Then you learn to read the clicking of the telegraph by ear.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "clicking",
+          "pose": "point"
+        }
+      ],
+      "bg": "telegraph1850",
+      "counter": {
+        "label": "1849",
+        "value": "$2.50/WEEK"
+      },
+      "bgIdea": "telegraph office in Pittsburgh, 1850: wooden counter, brass telegraph keys and sounders on desks, paper tape, pigeonholes of message slips, a wall clock, a window onto a smoky street",
+      "callouts": [
+        {
+          "text": "MORSE CODE, BY EAR",
+          "word": "ear"
+        }
+      ]
+    },
+    {
+      "text": "Almost nobody in the country can do that. Remember that, too.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nobody",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "telegraph1850",
+      "counter": {
+        "label": "1849",
+        "value": "$2.50/WEEK"
+      },
+      "bgIdea": "telegraph office in Pittsburgh, 1850: wooden counter, brass telegraph keys and sounders on desks, paper tape, pigeonholes of message slips, a wall clock, a window onto a smoky street"
+    },
+    {
+      "text": "On Saturdays, a local man, Colonel James Anderson, opens his library to working boys.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "library",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1850",
+        "value": "$2.50/WEEK"
+      },
+      "callouts": [
+        {
+          "text": "400 BOOKS",
+          "word": "library"
+        }
+      ]
+    },
+    {
+      "text": "Four hundred books. You borrow one every week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "borrow",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1850",
+        "value": "$2.50/WEEK"
+      }
+    },
+    {
+      "text": "It's the only school you have. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1850",
+        "value": "$2.50/WEEK"
+      }
+    },
+    {
+      "text": "In 1853, Thomas Scott of the Pennsylvania Railroad hires you as his telegraph operator.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1853",
+        "value": "$35/MONTH"
+      },
+      "extras": [
+        {
+          "who": "scott",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "THOMAS SCOTT, YOUR BOSS",
+          "word": "Scott",
+          "target": "scott"
+        }
+      ],
+      "stamp": "1853"
+    },
+    {
+      "text": "Thirty-five dollars a month. You're seventeen, and you think you've made it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "made",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1853",
+        "value": "$35/MONTH"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$35 A MONTH",
+          "word": "Thirty-five"
+        }
+      ]
+    },
+    {
+      "text": "Two years later, your father dies, still looking for weaving work.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1855",
+        "value": "$35/MONTH"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "1855",
+      "fx": "rain"
+    },
+    {
+      "text": "You're nineteen, and now the family depends on you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nineteen",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1855",
+        "value": "$35/MONTH"
+      },
+      "extras": [
+        {
+          "who": "mother"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, 19, BREADWINNER",
+          "word": "nineteen",
+          "target": "you"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "In 1856, Scott offers you a tip: ten shares of a delivery company called Adams Express.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "stamp": "1856"
+    },
+    {
+      "text": "The price is about six hundred dollars. You have nowhere near that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nowhere",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "10 SHARES: ~$600",
+          "word": "six"
+        }
+      ]
+    },
+    {
+      "text": "So you borrow it all: some from Scott, the rest against your mother's house.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "borrow",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        },
+        {
+          "who": "mother",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "Here's the idea your whole life will run on.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "idea",
+          "pose": "point"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      }
+    },
+    {
+      "text": "A share is a slice of a company. Think of it as owning one hen on a big farm.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      },
+      "callouts": [
+        {
+          "text": "1 SHARE = 1 HEN",
+          "word": "hen"
+        }
+      ]
+    },
+    {
+      "text": "You don't feed the hen. You don't clean the barn. Someone else does.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "clean",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      }
+    },
+    {
+      "text": "But the hen lays eggs, and the eggs are yours. An egg is called a dividend.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yours",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      },
+      "callouts": [
+        {
+          "text": "EGG = DIVIDEND",
+          "word": "dividend"
+        }
+      ]
+    },
+    {
+      "text": "Wages stop when you stop working. Eggs keep coming while you sleep.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "Eggs",
+          "label": "DIVIDEND"
+        }
+      ]
+    },
+    {
+      "text": "The catch: hens can die. Then you've lost the hen and the eggs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1856",
+        "value": "-$600"
+      }
+    },
+    {
+      "text": "A month later, an envelope arrives with a check for ten dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "check",
+          "pose": "handOut",
+          "expression": "neutral",
+          "hold": "money"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "+$10"
+      },
+      "paper": {
+        "text": "ADAMS EXPRESS CO. DIVIDEND: $10",
+        "word": "check"
+      }
+    },
+    {
+      "text": "It's the first money you've ever made without working for it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "first",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "+$10"
+      }
+    },
+    {
+      "text": "You shout: Eureka! Here's the goose that lays the golden eggs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Eureka",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1856",
+        "value": "+$10"
+      },
+      "quote": {
+        "who": "you",
+        "text": "Eureka! Here's the goose that lays the golden eggs.",
+        "word": "Eureka"
+      }
+    },
+    {
+      "text": "Next, Scott lets you into a company that builds sleeping cars for trains.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lets",
+          "pose": "idle",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1858",
+        "value": "-$217"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "stamp": "1858"
+    },
+    {
+      "text": "You borrow two hundred and seventeen dollars for your share.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1858",
+        "value": "-$217"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LOAN: $217.50",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "Within two years, it pays you about five thousand dollars a year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pays",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1860",
+        "value": "$5K/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "~$5,000 A YEAR",
+          "word": "five"
+        }
+      ]
+    },
+    {
+      "text": "It helps that the railroad you work for is the one buying the sleeping cars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "helps",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1860",
+        "value": "$5K/YEAR"
+      },
+      "extras": [
+        {
+          "who": "scott",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Today, that would raise questions. In 1858, it raises your income.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1860",
+        "value": "$5K/YEAR"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "questions"
+        },
+        {
+          "icon": "chart",
+          "word": "income"
+        }
+      ]
+    },
+    {
+      "text": "At twenty-four, you run the railroad's whole Pittsburgh division.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1859",
+        "value": "$1,500/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "YOU, 24, SUPERINTENDENT",
+          "word": "twenty-four",
+          "target": "you"
+        }
+      ],
+      "stamp": "1859",
+      "crowd": 4
+    },
+    {
+      "text": "In 1861, the Civil War begins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "War",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1861",
+        "value": "$1,500/YEAR"
+      },
+      "extras": [
+        {
+          "who": "scott",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "WASHINGTON, 1861"
+    },
+    {
+      "text": "You go to Washington with Scott, to run the Union army's trains and telegraphs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "run",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1861",
+        "value": "$1,500/YEAR"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "Meanwhile, you put eleven thousand dollars into an oil farm in Pennsylvania.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "put",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "oilcreek1862",
+      "counter": {
+        "label": "1862",
+        "value": "-$11K"
+      },
+      "bgIdea": "Oil Creek valley in Pennsylvania, 1862: wooden oil derricks on a muddy hillside, barrels stacked by a creek, a pond of black oil, bare trees, grey sky",
+      "callouts": [
+        {
+          "text": "$11,000 IN",
+          "word": "eleven"
+        }
+      ],
+      "stamp": "OIL CREEK, 1862"
+    },
+    {
+      "text": "In one year, it pays you back nearly eighteen thousand.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pays",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "oilcreek1862",
+      "counter": {
+        "label": "1863",
+        "value": "+$17,868"
+      },
+      "bgIdea": "Oil Creek valley in Pennsylvania, 1862: wooden oil derricks on a muddy hillside, barrels stacked by a creek, a pond of black oil, bare trees, grey sky",
+      "callouts": [
+        {
+          "text": "$17,868 OUT",
+          "word": "eighteen"
+        }
+      ]
+    },
+    {
+      "text": "In 1864, the army drafts you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "drafts",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      },
+      "stamp": "1864"
+    },
+    {
+      "text": "You pay another man eight hundred and fifty dollars to go in your place.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "handOut",
+          "expression": "neutral",
+          "hold": "money"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "SUBSTITUTE: $850",
+          "word": "eight"
+        }
+      ]
+    },
+    {
+      "text": "It's legal. You don't bring it up much.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "legal",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      }
+    },
+    {
+      "text": "The internet says you got rich by working hard in a steel mill. It didn't happen.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "didn't",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "internet",
+          "label": "MYTH"
+        }
+      ]
+    },
+    {
+      "text": "By 1863, your income is about forty-two thousand dollars a year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "income",
+          "pose": "point"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "INCOME: ~$42,000",
+          "word": "forty-two"
+        }
+      ]
+    },
+    {
+      "text": "Your salary is twenty-four hundred of that. The rest is eggs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "eggs",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1864",
+        "value": "$42K/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "SALARY: $2,400",
+          "word": "twenty-four"
+        }
+      ]
+    },
+    {
+      "text": "In 1865, you quit the railroad for good. You're twenty-nine.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "quit",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1865",
+        "value": "$50K/YEAR"
+      },
+      "extras": [
+        {
+          "who": "scott"
+        }
+      ],
+      "stamp": "1865"
+    },
+    {
+      "text": "You build iron bridges, and sell American railroad bonds in Europe.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1865",
+        "value": "$50K/YEAR"
+      },
+      "vision": {
+        "image": "londonstreet1870",
+        "word": "Europe"
+      }
+    },
+    {
+      "text": "The morning at Homestead is twenty-seven years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1865",
+        "value": "$50K/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "27 YEARS AWAY",
+          "word": "twenty-seven"
+        }
+      ]
+    },
+    {
+      "text": "December 1868, New York. You sit alone in a hotel room and write a note to yourself.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "write",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "stamp": "NEW YORK, 1868"
+    },
+    {
+      "text": "You're thirty-three, with an income of fifty thousand dollars a year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "paper": {
+        "text": "THIRTY-THREE AND AN INCOME OF $50,000 PER ANNUM",
+        "word": "income"
+      }
+    },
+    {
+      "text": "You write that the amassing of wealth is one of the worst species of idolatry.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "worst",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "quote": {
+        "who": "you",
+        "text": "The amassing of wealth is one of the worst species of idolatry.",
+        "word": "amassing"
+      }
+    },
+    {
+      "text": "Idolatry: worshipping the wrong thing. In this case, money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "money",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "icons": [
+        {
+          "icon": "money",
+          "word": "money"
+        }
+      ]
+    },
+    {
+      "text": "The plan: work two more years, then stop, study at Oxford, and give the extra away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "callouts": [
+        {
+          "text": "RETIRE IN 2 YEARS",
+          "word": "two"
+        }
+      ],
+      "vision": {
+        "image": "trinity1665",
+        "word": "Oxford"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night"
+    },
+    {
+      "text": "You keep the note all your life. You ignore it for thirty-three years.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ignore",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1868",
+        "value": "$400K"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "callouts": [
+        {
+          "text": "33 YEARS LATE",
+          "word": "thirty-three"
+        }
+      ]
+    },
+    {
+      "text": "Because in 1872, in England, you watch a Bessemer converter at work.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watch",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1872",
+        "value": "$400K"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "stamp": "ENGLAND, 1872"
+    },
+    {
+      "text": "A converter: a giant pot that blows air through melted iron.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1872",
+        "value": "$400K"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "callouts": [
+        {
+          "text": "BESSEMER CONVERTER",
+          "word": "converter"
+        }
+      ]
+    },
+    {
+      "text": "Twenty minutes later, the iron is steel: stronger, and suddenly cheap.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "steel",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1872",
+        "value": "$400K"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "callouts": [
+        {
+          "text": "20 MINUTES",
+          "word": "Twenty"
+        }
+      ]
+    },
+    {
+      "text": "People think you invented this. You didn't. Henry Bessemer did.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "didn't",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1872",
+        "value": "$400K"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "icons": [
+        {
+          "icon": "question",
+          "word": "invented",
+          "label": "MYTH"
+        }
+      ]
+    },
+    {
+      "text": "You barely follow the chemistry. You follow the price.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "price",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1872",
+        "value": "$400K"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "price"
+        }
+      ]
+    },
+    {
+      "text": "So you sell your other investments, and put nearly everything into one steel mill.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "everything",
+          "pose": "handOut",
+          "expression": "neutral",
+          "hold": "money"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      },
+      "callouts": [
+        {
+          "text": "ALL IN ON STEEL",
+          "word": "everything"
+        }
+      ]
+    },
+    {
+      "text": "You name it after Edgar Thomson, the president of the Pennsylvania Railroad.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "name",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      },
+      "paper": {
+        "text": "EDGAR THOMSON STEEL WORKS",
+        "word": "name"
+      }
+    },
+    {
+      "text": "Which is a thoughtful gift for the man who buys the most rails.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "thoughtful",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      }
+    },
+    {
+      "text": "Then, in 1873, the banks collapse, and a long depression begins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collapse",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      },
+      "stamp": "1873",
+      "fx": "rain",
+      "crowd": 8
+    },
+    {
+      "text": "Everyone stops building.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      },
+      "fx": "rain",
+      "crowd": 6
+    },
+    {
+      "text": "You keep building, because workers and materials are suddenly cheap.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "keep",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "ALL IN"
+      },
+      "callouts": [
+        {
+          "text": "BUILD WHEN IT'S CHEAP",
+          "word": "cheap"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "The mill opens in 1875. The first order: two thousand rails, for the Pennsylvania Railroad.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "opens",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1875",
+        "value": "ONE MILL"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "callouts": [
+        {
+          "text": "ORDER NO. 1: 2,000 RAILS",
+          "word": "two"
+        }
+      ],
+      "stamp": "BRADDOCK, 1875"
+    },
+    {
+      "text": "Your rule for the mill: know the cost of everything, down to the cent.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cost",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1875",
+        "value": "ONE MILL"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "cent",
+          "label": "COST"
+        }
+      ]
+    },
+    {
+      "text": "Clerks weigh and write down whatever goes into every furnace.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1875",
+        "value": "ONE MILL"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "crowd": 3
+    },
+    {
+      "text": "If a new machine saves a dollar a ton, you scrap the old one, even if it's a year old.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "scrap",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "1875",
+        "value": "ONE MILL"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor",
+      "callouts": [
+        {
+          "text": "SAVE $1 A TON",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "In 1875, a ton of rails costs about fifty-six dollars to make.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ton",
+          "pose": "point"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1875",
+        "value": "ONE MILL"
+      },
+      "callouts": [
+        {
+          "text": "1875: ~$56 A TON",
+          "word": "fifty-six"
+        }
+      ]
+    },
+    {
+      "text": "By the late 1890s, it's about twelve.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "twelve",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1898",
+        "value": "MILLIONS"
+      },
+      "callouts": [
+        {
+          "text": "1898: ~$12 A TON",
+          "word": "twelve"
+        }
+      ]
+    },
+    {
+      "text": "In 1885, you give a class of Pittsburgh students your secret.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "secret",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1885",
+        "value": "MILLIONS"
+      },
+      "stamp": "1885",
+      "crowd": 5
+    },
+    {
+      "text": "Put all your eggs in one basket, and then watch that basket.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watch",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1885",
+        "value": "MILLIONS"
+      },
+      "crowd": 5,
+      "quote": {
+        "who": "you",
+        "text": "Put all your eggs in one basket, and then watch that basket.",
+        "word": "eggs"
+      }
+    },
+    {
+      "text": "The internet gives that line to Mark Twain. He printed it nine years after you said it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Twain",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1885",
+        "value": "MILLIONS"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "internet",
+          "label": "MYTH"
+        }
+      ]
+    },
+    {
+      "text": "In 1881, you take on a partner: Henry Clay Frick.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1881",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "HENRY CLAY FRICK",
+          "word": "Frick",
+          "target": "frick"
+        }
+      ],
+      "stamp": "1881"
+    },
+    {
+      "text": "Frick owns the coke: the baked coal that steel furnaces burn.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1881",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "COKE = FURNACE FUEL",
+          "word": "coke"
+        }
+      ]
+    },
+    {
+      "text": "Soon you own the fuel, the iron ore, and the ships and railroads in between.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1881",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ]
+    },
+    {
+      "text": "Frick is cold, exact, and very good at costs. In 1889, you make him chairman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "chairman",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1881",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "FRICK, CHAIRMAN",
+          "word": "chairman",
+          "target": "frick"
+        }
+      ]
+    },
+    {
+      "text": "In 1886, your brother Tom and your mother die within days of each other.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1886",
+        "value": "MILLIONS"
+      },
+      "stamp": "1886",
+      "fx": "rain"
+    },
+    {
+      "text": "You're in bed with typhoid fever, too ill to go to either funeral.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1886",
+        "value": "MILLIONS"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "The next year, at fifty-one, you marry Louise Whitfield.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1887",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "louise",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LOUISE, YOUR WIFE",
+          "word": "Louise",
+          "target": "louise"
+        }
+      ],
+      "stamp": "1887"
+    },
+    {
+      "text": "You had promised your mother you wouldn't marry while she was alive.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "promised",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1887",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "louise"
+        }
+      ]
+    },
+    {
+      "text": "In 1889, you publish an essay called Wealth.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1889",
+        "value": "MILLIONS"
+      },
+      "stamp": "1889",
+      "paper": {
+        "text": "WEALTH, BY ANDREW CARNEGIE",
+        "word": "essay"
+      }
+    },
+    {
+      "text": "It says a rich man should give his fortune away while he's still alive.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1889",
+        "value": "MILLIONS"
+      }
+    },
+    {
+      "text": "Its most famous line: the man who dies thus rich dies disgraced.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "disgraced",
+          "pose": "point"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1889",
+        "value": "MILLIONS"
+      },
+      "quote": {
+        "who": "you",
+        "text": "The man who dies thus rich dies disgraced.",
+        "word": "dies"
+      }
+    },
+    {
+      "text": "You are extremely rich when you write it. Readers notice.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "notice",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1889",
+        "value": "MILLIONS"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "The morning at Homestead is three years away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "three",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1889",
+        "value": "MILLIONS"
+      },
+      "callouts": [
+        {
+          "text": "3 YEARS AWAY",
+          "word": "three"
+        }
+      ],
+      "vision": {
+        "image": "factory1900",
+        "word": "Homestead"
+      }
+    },
+    {
+      "text": "By 1892, the union contract at your Homestead mill is about to run out.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "stamp": "1892"
+    },
+    {
+      "text": "Steel prices are down. You and Frick want wages down, and the union gone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gone",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ]
+    },
+    {
+      "text": "You sail for Britain, and leave the fight to Frick.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "leave",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "vision": {
+        "image": "shipdeck1860",
+        "word": "sail"
+      }
+    },
+    {
+      "text": "In June, you write to him: we are with you to the end.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "write",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "quote": {
+        "who": "you",
+        "text": "We are with you to the end.",
+        "word": "with"
+      }
+    },
+    {
+      "text": "Frick builds a fence around the mill, three miles long, with barbed wire on top.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "3 MILES OF FENCE",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "The workers call it Fort Frick.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "FORT FRICK",
+          "word": "Fort"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "He locks them out, and sends for three hundred Pinkerton guards: a private army for hire.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "300 PINKERTONS",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "Which brings us back to the river. It's July 6th, 1892.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "stamp": "JULY 6, 1892",
+      "empty": true,
+      "fx": "storm"
+    },
+    {
+      "text": "The barges land before dawn. Nobody agrees on who fires first.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fires",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "fx": "storm",
+      "crowd": 8
+    },
+    {
+      "text": "The shooting lasts most of the day. By evening, the guards surrender.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "fx": "storm",
+      "crowd": 8
+    },
+    {
+      "text": "At least seven workers and three guards are dead.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "callouts": [
+        {
+          "text": "7 WORKERS, 3 GUARDS",
+          "word": "seven"
+        }
+      ],
+      "fx": "storm",
+      "crowd": 6
+    },
+    {
+      "text": "The governor sends eight thousand soldiers. The mill reopens with new men.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "callouts": [
+        {
+          "text": "8,000 SOLDIERS",
+          "word": "eight"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "The union is finished. Wages fall, and the twelve-hour day stays.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "callouts": [
+        {
+          "text": "12-HOUR DAYS",
+          "word": "twelve-hour"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Remember the looms? A machine made your father too expensive.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "looms",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Now your workers are the cost. And you are the machine.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "machine",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "dunfermline1840",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "weaver's cottage in Dunfermline, Scotland, 1840: one stone room with a big wooden handloom, rolls of white linen, a small fireplace, a tiny window onto a cobbled lane",
+      "extras": [
+        {
+          "who": "father",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU = THE MACHINE",
+          "word": "machine",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Later, you'll say it would have gone differently if you'd been there.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "say",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light"
+    },
+    {
+      "text": "But you approved the plan in writing. And you, of all people, know how to use a telegraph.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "telegraph",
+          "pose": "point"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light"
+    },
+    {
+      "text": "That July, an anarchist shoots and stabs Frick in his office.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shoots",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "JULY 23, 1892"
+    },
+    {
+      "text": "Frick survives, and finishes the day's paperwork before he goes home.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paperwork",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ]
+    },
+    {
+      "text": "One newspaper writes that ten thousand Carnegie libraries couldn't make up for Homestead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "libraries",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      },
+      "paper": {
+        "text": "10,000 LIBRARIES WOULD NOT MAKE UP FOR HOMESTEAD",
+        "word": "writes"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "Years later, you write that nothing in your life ever wounded you so deeply.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wounded",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1892",
+        "value": "MILLIONS"
+      }
+    },
+    {
+      "text": "The mills, meanwhile, have never made more money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "money",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "stamp": "1900"
+    },
+    {
+      "text": "In 1900, the company's profit is forty million dollars. About twenty-five is yours.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "yours",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "callouts": [
+        {
+          "text": "PROFIT: $40 MILLION",
+          "word": "forty"
+        }
+      ]
+    },
+    {
+      "text": "You and Frick fall out over the price of coke, and then over everything.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fall",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "frick",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "He leaves in 1900, after a lawsuit and a shouting match.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "leaves",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "frick",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "That December, your young company president, Charles Schwab, gives a dinner speech in New York.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "CHARLES SCHWAB",
+          "word": "Schwab",
+          "target": "schwab"
+        }
+      ],
+      "stamp": "NEW YORK, DEC 1900",
+      "crowd": 5
+    },
+    {
+      "text": "He describes one giant steel company that could make everything, cheaper.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab",
+          "expression": "happy"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "The banker J. P. Morgan is sitting beside him, listening.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab"
+        },
+        {
+          "who": "morgan",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "J. P. MORGAN, BANKER",
+          "word": "Morgan",
+          "target": "morgan"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Morgan asks Schwab to find out your price.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab"
+        },
+        {
+          "who": "morgan"
+        }
+      ]
+    },
+    {
+      "text": "Schwab asks you after a round of golf, when you're in a good mood. Your wife's idea.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "golf",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1901",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab"
+        },
+        {
+          "who": "louise",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "1901"
+    },
+    {
+      "text": "The next morning, you take a pencil and write one number on a slip of paper.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pencil",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1901",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab"
+        }
+      ],
+      "paper": {
+        "text": "$480,000,000",
+        "word": "number"
+      }
+    },
+    {
+      "text": "Four hundred and eighty million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1901",
+        "value": "$25M/YEAR"
+      },
+      "extras": [
+        {
+          "who": "schwab",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$480 MILLION",
+          "word": "Four"
+        }
+      ]
+    },
+    {
+      "text": "Morgan looks at it and says: I accept this price.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$25M/YEAR"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan"
+        },
+        {
+          "who": "schwab"
+        }
+      ],
+      "quote": {
+        "who": "morgan",
+        "text": "I accept this price.",
+        "word": "accept"
+      }
+    },
+    {
+      "text": "No haggling. The deal creates U.S. Steel, the first company valued at over a billion dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "billion",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$25M/YEAR"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "FIRST $1 BILLION COMPANY",
+          "word": "billion"
+        }
+      ]
+    },
+    {
+      "text": "Your share is about two hundred and twenty-six million dollars, in gold bonds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "share",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOURS: ~$226 MILLION",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "That's roughly eight billion in today's prices, and far more as a slice of the economy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "eight",
+          "pose": "point"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "callouts": [
+        {
+          "text": "~$8 BILLION TODAY",
+          "word": "eight"
+        }
+      ]
+    },
+    {
+      "text": "Morgan shakes your hand, and congratulates you on being the richest man in the world.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hand",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, RICHEST MAN ALIVE",
+          "word": "richest",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Later, the story goes, you tell him you should have asked for a hundred million more.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "more",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan"
+        }
+      ]
+    },
+    {
+      "text": "He says you would have got it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "got",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "morganstudy1901",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "banker's private library in New York, 1901: dark red silk walls, tall carved bookcases, a massive desk, a marble fireplace, a green-shaded lamp",
+      "extras": [
+        {
+          "who": "morgan",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Remember the hotel note? Retire in two years. It took thirty-three.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "note",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hotelroom1868",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "room in a grand New York hotel, 1868: writing desk with an oil lamp, pen and a sheet of paper, heavy curtains, a carved bed, gaslight on Broadway through the window at night",
+      "paper": {
+        "text": "RETIRE IN 2 YEARS",
+        "word": "note",
+        "fix": {
+          "strike": "2",
+          "write": "33",
+          "word": "thirty-three"
+        }
+      }
+    },
+    {
+      "text": "Now for the second half of the note: give it away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "extras": [
+        {
+          "who": "louise"
+        }
+      ]
+    },
+    {
+      "text": "Remember Colonel Anderson and his four hundred books?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "library1905",
+      "counter": {
+        "label": "1901",
+        "value": "$226M"
+      },
+      "bgIdea": "small-town American public library, 1905: reading room with oak tables, tall shelves of books, a librarian's desk, arched windows, children's corner, morning light",
+      "vision": {
+        "image": "parlor",
+        "word": "books"
+      }
+    },
+    {
+      "text": "You pay for two thousand five hundred and nine public libraries.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "library1905",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "small-town American public library, 1905: reading room with oak tables, tall shelves of books, a librarian's desk, arched windows, children's corner, morning light",
+      "callouts": [
+        {
+          "text": "2,509 LIBRARIES",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "The deal: you build it, and the town must buy the books and pay the staff.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "deal",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "library1905",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "small-town American public library, 1905: reading room with oak tables, tall shelves of books, a librarian's desk, arched windows, children's corner, morning light",
+      "crowd": 4
+    },
+    {
+      "text": "You also give churches more than seven thousand pipe organs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "organs",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "callouts": [
+        {
+          "text": "7,000+ ORGANS",
+          "word": "seven"
+        }
+      ]
+    },
+    {
+      "text": "You're said to joke that it makes the sermons easier to sit through.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "joke",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "A concert hall in New York. A university in Pittsburgh. Pensions for teachers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "concert",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "You spend your summers at Skibo, your castle in Scotland.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "castle",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "extras": [
+        {
+          "who": "louise",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "SKIBO, SCOTLAND"
+    },
+    {
+      "text": "A bagpiper walks around it every morning to wake you up. Guests do not get a vote.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "vote",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "extras": [
+        {
+          "who": "louise"
+        }
+      ]
+    },
+    {
+      "text": "The internet says you personally taught your secrets to a young writer, Napoleon Hill.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "secrets",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "icons": [
+        {
+          "icon": "question",
+          "word": "internet",
+          "label": "MYTH"
+        }
+      ]
+    },
+    {
+      "text": "Your biographer searched your papers, and found no sign that you ever met him.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "no",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "1910",
+        "value": "GIVING"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light",
+      "callouts": [
+        {
+          "text": "MEETINGS ON RECORD: 0",
+          "word": "no"
+        }
+      ]
+    },
+    {
+      "text": "Your biggest hope is peace. You pay for a Peace Palace in the Netherlands.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Peace",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1913",
+        "value": "GIVING"
+      },
+      "stamp": "THE HAGUE, 1913"
+    },
+    {
+      "text": "The idea: countries settle their arguments in a courtroom, not on a battlefield.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1913",
+        "value": "GIVING"
+      },
+      "vision": {
+        "image": "courtroom1870",
+        "word": "courtroom"
+      }
+    },
+    {
+      "text": "It opens in August 1913.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "opens",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1913",
+        "value": "GIVING"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "Eleven months later, the First World War begins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "War",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1914",
+        "value": "GIVING"
+      },
+      "stamp": "1914",
+      "fx": "storm"
+    },
+    {
+      "text": "Your memoir stops right there. You never see Scotland again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1914",
+        "value": "GIVING"
+      },
+      "extras": [
+        {
+          "who": "louise",
+          "expression": "shock"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "In 1919, the story goes, you send Frick a message: let's meet, and make peace.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "message",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1919",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "frick",
+          "enter": true
+        }
+      ],
+      "stamp": "NEW YORK, 1919"
+    },
+    {
+      "text": "Frick's reported answer: tell him I'll see him in Hell, where we both are going.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Hell",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1919",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "frick"
+        }
+      ],
+      "quote": {
+        "who": "frick",
+        "text": "Tell him I'll see him in Hell, where we both are going.",
+        "word": "Hell"
+      }
+    },
+    {
+      "text": "On August 11th, 1919, you die in Lenox, Massachusetts. You're eighty-three.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1919",
+        "value": "$30M"
+      },
+      "extras": [
+        {
+          "who": "louise",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "LENOX, 1919",
+      "fx": "rain"
+    },
+    {
+      "text": "Frick dies four months later.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1919",
+        "value": "$30M"
+      },
+      "fx": "rain",
+      "empty": true
+    },
+    {
+      "text": "By then, you've given away about three hundred and fifty million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "given",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "library1905",
+      "counter": {
+        "label": "1919",
+        "value": "$30M"
+      },
+      "bgIdea": "small-town American public library, 1905: reading room with oak tables, tall shelves of books, a librarian's desk, arched windows, children's corner, morning light",
+      "callouts": [
+        {
+          "text": "GIVEN AWAY: ~$350 MILLION",
+          "word": "three"
+        }
+      ]
+    },
+    {
+      "text": "Most of the last thirty million goes to charity and pensions in your will.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "will",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "library1905",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "small-town American public library, 1905: reading room with oak tables, tall shelves of books, a librarian's desk, arched windows, children's corner, morning light",
+      "paper": {
+        "text": "LAST $30 MILLION: MOSTLY TO CHARITY",
+        "word": "will"
+      }
+    },
+    {
+      "text": "So how did the man who called unions sacred end up with ten dead on a riverbank?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sacred",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "how"
+        }
+      ]
+    },
+    {
+      "text": "The same way he got everything else. He watched the cost.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cost",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      }
+    },
+    {
+      "text": "Here's the money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: ONE BASKET, WATCHED CLOSELY",
+        "word": "rule"
+      }
+    },
+    {
+      "text": "The rule: put your money and effort where you understand every cost, then pay attention.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cost",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "It built your fortune. But most experts today say the opposite: spread your eggs.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "opposite",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "experts"
+        },
+        {
+          "icon": "piggy",
+          "word": "eggs"
+        }
+      ]
+    },
+    {
+      "text": "Here's why. Say you earn a salary, and keep fifty thousand dollars of savings in your employer's shares.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fifty",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "$50,000 IN ONE COMPANY",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "If that company falls ninety percent, your savings are five thousand, and your job may go too.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "five",
+          "pose": "idle",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "$50,000 -> $5,000",
+          "word": "five"
+        }
+      ]
+    },
+    {
+      "text": "One basket only works if you're the one holding it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "holding",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor"
+    },
+    {
+      "text": "You owned the mill, set the prices, and read the cost sheets every week.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "owned",
+          "pose": "idle"
+        }
+      ],
+      "bg": "steelmill1875",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Bessemer steel works near Pittsburgh, 1875: a giant egg-shaped converter tilting and blowing a fountain of sparks, glowing ingots, iron ladles, brick walls, rails stacked on the floor"
+    },
+    {
+      "text": "A hen on someone else's farm is a different deal.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "different",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "And here's where the rule hurt. Your basket had nearly four thousand workers in it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hurt",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "~3,800 WORKERS",
+          "word": "four"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "You watched every cost. Their wages were a cost.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "And in July 1892, you weren't even watching.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watching",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "highlands1890",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Scottish Highlands estate, 1890s: grey stone castle with turrets beside a calm loch, heather hills, a small rowing boat with fishing rods, soft summer light"
+    },
+    {
+      "text": "Watch the basket. But remember who's in it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "remember",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "homestead1892",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "bank of the Monongahela River at Homestead, Pennsylvania, July 1892, before dawn: two covered wooden barges at a landing, fog on the water, a huge steel mill with smokestacks and a high board fence behind",
+      "title": "YOUR LIFE AS ANDREW CARNEGIE"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Andrew Carnegie | $1.20 a Week to Richest Man Alive",
+      "Your Life as Andrew Carnegie | He Gave Away $350 Million",
+      "Your Life as Andrew Carnegie | One Basket, Ten Dead"
+    ],
+    "thumbnail": "You, small and white-bearded in a grey suit, holding up a tiny slip of paper in front of a steel mill pouring sparks; text: '$480,000,000'",
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "The Barges",
+        "mood": "tense"
+      },
+      {
+        "scene": 10,
+        "title": "A Weaver's Son",
+        "mood": "calm"
+      },
+      {
+        "scene": 25,
+        "title": "$1.20 a Week",
+        "mood": "calm"
+      },
+      {
+        "scene": 42,
+        "title": "The Golden Goose",
+        "mood": "mystery"
+      },
+      {
+        "scene": 60,
+        "title": "War, Oil and Eggs",
+        "mood": "tense"
+      },
+      {
+        "scene": 73,
+        "title": "The Hotel Note",
+        "mood": "mystery"
+      },
+      {
+        "scene": 80,
+        "title": "One Basket",
+        "mood": "triumph"
+      },
+      {
+        "scene": 100,
+        "title": "Frick",
+        "mood": "calm"
+      },
+      {
+        "scene": 113,
+        "title": "Homestead",
+        "mood": "tense"
+      },
+      {
+        "scene": 134,
+        "title": "One Slip of Paper",
+        "mood": "triumph"
+      },
+      {
+        "scene": 153,
+        "title": "Giving It Away",
+        "mood": "calm"
+      },
+      {
+        "scene": 164,
+        "title": "The War",
+        "mood": "sad"
+      },
+      {
+        "scene": 171,
+        "title": "The Count",
+        "mood": "sad"
+      },
+      {
+        "scene": 177,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ],
+    "description": "You start at $1.20 a week in a cotton mill.\nYou sell out for $480 million, written in pencil on a slip of paper. Then you give it away.\n\nA comedic dramatization of documented history.\n\n0:00 The Barges\n0:46 A Weaver's Son\n1:52 $1.20 a Week\n3:12 The Golden Goose\n4:43 War, Oil and Eggs\n5:38 The Hotel Note\n6:11 One Basket\n7:44 Frick\n8:45 Homestead\n10:26 One Slip of Paper\n12:00 Giving It Away\n12:54 The War\n13:26 The Count\n13:54 The Money Rule\n\nSources:\nAndrew Carnegie, Autobiography of Andrew Carnegie (1920): https://www.gutenberg.org/ebooks/17976\nDavid Nasaw, Andrew Carnegie (Penguin, 2006)\nJoseph Frazier Wall, Andrew Carnegie (Oxford University Press, 1970)\nBurton J. Hendrick, The Life of Andrew Carnegie (1932)\nAndrew Carnegie, 'Wealth', North American Review, June 1889: https://www.carnegie.org/about/our-history/gospelofwealth/\nAndrew Carnegie, 'An Employer's View of the Labor Question', Forum, April 1886\nAndrew Carnegie, 'The Road to Business Success', address at Curry Commercial College, Pittsburgh, 23 June 1885 (in The Empire of Business, 1902)\nCarnegie's 1868 St. Nicholas Hotel memorandum (New York Public Library; quoted in Wall and Nasaw)\nPBS American Experience, 'The Richest Man in the World: Andrew Carnegie' and 'The Strike at Homestead Mill': https://www.pbs.org/wgbh/americanexperience/features/carnegie-strike-homestead-mill\nHistory.com, 'Andrew Carnegie Claimed to Support Unions, But Then Destroyed Them': https://www.history.com/articles/andrew-carnegie-unions-homestead-strike\nHenry Clay Frick Business Records, University of Pittsburgh (Carnegie letters of 10 June 1892): https://digital.library.pitt.edu/islandora/object/pitt:31735061570564\nCarnegie Corporation of New York, 'Andrew Carnegie's Story': https://carnegie.org/about/andrew-carnegie-story/\nLes Standiford, Meet You in Hell (2005) for the Frick reply, first printed by James H. Bridge\nMatt Novak, 'The Untold Story of Napoleon Hill', Gizmodo (2016), quoting David Nasaw: https://gizmodo.com/the-untold-story-of-napoleon-hill-the-greatest-self-he-1789385645",
+    "factCheck": [
+      "Born 25 Nov 1835, Dunfermline; father William a handloom weaver, mother Margaret Morrison (Autobiography; Nasaw)",
+      "Power looms ended William's trade in the 1840s; Margaret bound shoes and kept a small shop (Autobiography)",
+      "Emigrated 1848 on the Wiscasset, about 50 days; passage paid with a borrowed 20 pounds (Autobiography; Wall)",
+      "Bobbin boy at $1.20 a week, 12-hour days, 1848; then $2 a week tending a boiler and oiling bobbins; oil smell made him ill (Autobiography)",
+      "Telegraph messenger 1849 at $2.50 a week; learned to take messages by ear (Autobiography)",
+      "Colonel James Anderson lent his ~400 books to working boys on Saturdays (Autobiography)",
+      "Hired by Thomas A. Scott, Pennsylvania Railroad, 1853, $35 a month (Autobiography)",
+      "William Carnegie died 1855",
+      "Adams Express: ten shares, 1856, about $600 total; Autobiography says his mother mortgaged the house for $500, Nasaw found Scott advanced the money first; first dividend check $10; 'goose' quote from the Autobiography",
+      "Woodruff sleeping cars: loan of $217.50; returned about $5,000 a year within two years (Autobiography; Nasaw)",
+      "Superintendent of the Western (Pittsburgh) Division 1859, $1,500 a year",
+      "1861: organised military railroads and telegraphs in Washington under Scott",
+      "Columbia Oil Company (Storey farm): about $11,000 invested, $17,868 returned in the first year (Nasaw)",
+      "Drafted 1864; paid a substitute $850 (Nasaw)",
+      "1863 income about $42,000, of which $2,400 was salary (Nasaw; PBS timeline)",
+      "Left the railroad 1865, age 29; Keystone Bridge; bond sales in Europe",
+      "December 1868 memo: 'Thirty three and an income of 50,000$ per annum'; assets about $400,000; plan to retire in two years and study at Oxford; idolatry quote (Wall; Nasaw)",
+      "Saw Bessemer plants in England 1872; Edgar Thomson Steel Works at Braddock opened 1875; first order 2,000 rails for the Pennsylvania Railroad",
+      "Rail cost per ton about $56 in 1875 and about $12 by 1898: commonly cited figures, cost and price are mixed in some sources (APPROXIMATE)",
+      "'Eggs in one basket' said in the 1885 Curry Commercial College address; Mark Twain used it in Pudd'nhead Wilson, 1894",
+      "Frick partnership from 1881-82; Frick chairman of Carnegie Brothers 1889",
+      "Tom Carnegie and Margaret Carnegie both died autumn 1886 while Andrew had typhoid; married Louise Whitfield 22 April 1887",
+      "'Wealth' published June 1889; 'The man who dies thus rich dies disgraced'",
+      "1886 Forum essay: the right of working-men to combine is 'no less sacred' than the manufacturer's (paper text is a paraphrase)",
+      "Homestead: 'We are with you to the end' is from a Carnegie letter to Frick before the lockout (PBS; History.com); the exact date, usually given as 10 June 1892, was not confirmed online",
+      "Homestead: fence about three miles long; lockout from 29-30 June; 300 Pinkertons on two barges, 6 July 1892; deaths usually given as 7 workers and 3 Pinkertons (some counts 9 and 3 or more); about 8,000 militia arrived 12 July",
+      "Carnegie was in Britain (letters from Sunningdale, England, then Rannoch, Scotland). 'On holiday in Scotland' on 6 July 1892 follows the usual telling",
+      "Alexander Berkman shot and stabbed Frick 23 July 1892; Frick finished the day's work",
+      "'Ten thousand Carnegie Public Libraries would not compensate the country' is attributed to the St. Louis Post-Dispatch, 1892; shown as a paraphrase",
+      "Carnegie on Homestead: 'Nothing... wounded me so deeply' (Autobiography), reported indirectly",
+      "Carnegie Steel profit 1900: $40 million, Carnegie's share about $25 million (Wall)",
+      "Frick left 1899-1900 after the coke-price dispute and a lawsuit",
+      "Schwab's University Club dinner speech 12 Dec 1900; golf at St Andrews, Westchester, suggested by Louise; pencilled price $480 million; Morgan 'I accept this price' (Hendrick; Wall)",
+      "U.S. Steel formed 1901, capitalised at about $1.4 billion; Carnegie's share $225,639,000 in 5% gold bonds",
+      "Today's value: about 38x by consumer prices from 1901, so roughly $8 billion; this is a rough CPI basis only",
+      "Morgan's 'richest man in the world' congratulation and the 'a hundred million more' exchange are anecdotes from Hendrick (1932)",
+      "2,509 libraries (1,679 in the US); 7,689 church organs; the sermon joke is an attribution",
+      "Carnegie Hall 1891; Carnegie Technical Schools 1900; teachers' pensions 1905",
+      "Skibo Castle bought 1898; a piper woke the household each morning",
+      "Napoleon Hill: Nasaw found no evidence the two ever met (Gizmodo, 2016)",
+      "Peace Palace opened 28 Aug 1913; war began 28 July - 4 Aug 1914 (about eleven months later); the Autobiography breaks off at the outbreak of war",
+      "Frick's 'see him in Hell' reply, 1919: anecdote first printed by James Bridge, no document survives (DISPUTED)",
+      "Died 11 Aug 1919 at Shadowbrook, Lenox, Massachusetts, age 83; Frick died 2 Dec 1919",
+      "Gave away about $350 million in his lifetime; about $30 million left, most of it to the Carnegie Corporation, charities and pensions",
+      "Homestead works employed about 3,800 men in 1892",
+      "Money Rule example ($50,000 falling 90% to $5,000) is arithmetic, not a real case"
+    ],
+    "sources": [
+      "Andrew Carnegie, Autobiography of Andrew Carnegie (1920): https://www.gutenberg.org/ebooks/17976",
+      "David Nasaw, Andrew Carnegie (Penguin, 2006)",
+      "Joseph Frazier Wall, Andrew Carnegie (Oxford University Press, 1970)",
+      "Burton J. Hendrick, The Life of Andrew Carnegie (1932)",
+      "Andrew Carnegie, 'Wealth', North American Review, June 1889: https://www.carnegie.org/about/our-history/gospelofwealth/",
+      "Andrew Carnegie, 'An Employer's View of the Labor Question', Forum, April 1886",
+      "Andrew Carnegie, 'The Road to Business Success', address at Curry Commercial College, Pittsburgh, 23 June 1885 (in The Empire of Business, 1902)",
+      "Carnegie's 1868 St. Nicholas Hotel memorandum (New York Public Library; quoted in Wall and Nasaw)",
+      "PBS American Experience, 'The Richest Man in the World: Andrew Carnegie' and 'The Strike at Homestead Mill': https://www.pbs.org/wgbh/americanexperience/features/carnegie-strike-homestead-mill",
+      "History.com, 'Andrew Carnegie Claimed to Support Unions, But Then Destroyed Them': https://www.history.com/articles/andrew-carnegie-unions-homestead-strike",
+      "Henry Clay Frick Business Records, University of Pittsburgh (Carnegie letters of 10 June 1892): https://digital.library.pitt.edu/islandora/object/pitt:31735061570564",
+      "Carnegie Corporation of New York, 'Andrew Carnegie's Story': https://carnegie.org/about/andrew-carnegie-story/",
+      "Les Standiford, Meet You in Hell (2005) for the Frick reply, first printed by James H. Bridge",
+      "Matt Novak, 'The Untold Story of Napoleon Hill', Gizmodo (2016), quoting David Nasaw: https://gizmodo.com/the-untold-story-of-napoleon-hill-the-greatest-self-he-1789385645"
+    ],
+    "wordCount": 2229
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

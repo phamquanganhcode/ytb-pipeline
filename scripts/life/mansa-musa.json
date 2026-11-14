@@ -1,0 +1,3195 @@
+{
+  "title": "Your Life as Mansa Musa | Too Much Gold",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Mansa Musa",
+      "face": "mansa-musa",
+      "shirt": "#e2c044",
+      "faceIdea": "Mansa Musa, emperor of Mali, 1324: dark-skinned West African man in his forties, short black beard, tall golden crown, white and gold robe, calm proud face"
+    },
+    "predecessor": {
+      "name": "The Mansa Before You",
+      "face": "mali-mansa-1310",
+      "faceIdea": "West African king of Mali, 1310: dark-skinned man with a grey beard, white turban, gold earrings, embroidered robe"
+    },
+    "sultan": {
+      "name": "Sultan al-Nasir Muhammad",
+      "face": "al-nasir-muhammad",
+      "faceIdea": "Mamluk sultan of Egypt al-Nasir Muhammad, 1324: thin face, short dark beard, large white Mamluk turban, red and gold robe"
+    },
+    "hajib": {
+      "name": "Ibn Amir Hajib",
+      "face": "ibn-amir-hajib",
+      "faceIdea": "Mamluk governor of a Cairo district, 1324: middle-aged man, neat brown beard, yellow turban, green robe"
+    },
+    "umari": {
+      "name": "Al-Umari",
+      "face": "al-umari",
+      "faceIdea": "Arab scholar al-Umari of Damascus, 1340s: thoughtful face, long dark beard, white scholar's turban, plain dark robe"
+    },
+    "siraj": {
+      "name": "Siraj al-Din",
+      "face": "siraj-al-din",
+      "faceIdea": "wealthy Cairo merchant Siraj al-Din, 1324: plump face, grey beard, striped turban, rich brocade robe"
+    },
+    "sahili": {
+      "name": "Al-Sahili",
+      "face": "al-sahili",
+      "faceIdea": "Andalusian poet al-Sahili, 1320s: lean face, trimmed black beard, small white turban, blue travelling cloak"
+    },
+    "crowd1": {
+      "name": "Mali trader",
+      "face": "mali-trader-1320",
+      "faceIdea": "unnamed West African trader, 1320s, dark skin, indigo cloth wrap headscarf, young face"
+    },
+    "crowd2": {
+      "name": "Cairo woman",
+      "face": "cairo-woman-1324",
+      "faceIdea": "unnamed Cairo woman, 1324, plain head veil, dark eyes, brown dress"
+    },
+    "crowd3": {
+      "name": "Old Cairo merchant",
+      "face": "cairo-merchant-1324",
+      "faceIdea": "unnamed elderly Cairo shopkeeper, 1324, white beard, small brown turban, striped robe"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's July 1324, and you're riding into Cairo with more gold than anyone has seen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "callouts": [
+        {
+          "text": "YOU, MANSA MUSA OF MALI",
+          "word": "Cairo",
+          "target": "you"
+        }
+      ],
+      "stamp": "CAIRO, 1324",
+      "crowd": 8
+    },
+    {
+      "text": "Behind you walk thousands of people, many of them carrying gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "crowd": 8
+    },
+    {
+      "text": "You hand it out to officials, to beggars, to anyone who asks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hand",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "crowd": 6
+    },
+    {
+      "text": "A few months later, you'll be borrowing money in this same city, at high interest.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "borrowing",
+          "pose": "idle",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun"
+    },
+    {
+      "text": "And seven hundred years later, the internet will call you the richest person who ever lived.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richest",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun"
+    },
+    {
+      "text": "Your gold even changes what gold is worth in Egypt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "callouts": [
+        {
+          "text": "TOO MUCH GOLD",
+          "word": "gold"
+        }
+      ]
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun"
+    },
+    {
+      "text": "But to get here, we have to go back. It's about 1280, and you're born in Mali.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1280",
+        "value": "AGE 0"
+      },
+      "stamp": "MALI, ABOUT 1280",
+      "empty": true,
+      "bgIdea": "West African family compound, about 1280: round mud-brick houses, thatched roofs, a courtyard with a mortar and pestle"
+    },
+    {
+      "text": "Your name is Musa. Keep count of two things: the gold, and the debts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      },
+      "callouts": [
+        {
+          "text": "YOU, MUSA, 10",
+          "word": "Musa",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Mali is a young empire in West Africa, founded by your great-uncle's family.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "empire",
+          "expression": "happy"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Its first great ruler was Sunjata. You're from his family, but not first in line.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "line",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Your family name says you're royal. It doesn't say you'll ever rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Kings in Mali are called mansa: the word just means ruler.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      },
+      "callouts": [
+        {
+          "text": "MANSA = RULER",
+          "word": "mansa"
+        }
+      ]
+    },
+    {
+      "text": "The empire is huge: it stretches from the Atlantic coast deep into the Sahara.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "huge",
+          "label": "HOW BIG?"
+        }
+      ]
+    },
+    {
+      "text": "It controls the trade routes where salt from the north meets gold from the south.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "gold",
+          "label": "GOLD"
+        }
+      ]
+    },
+    {
+      "text": "You grow up a Muslim, like most of the royal court.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Muslim",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "You learn Arabic, the language of trade and religion across the desert.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Arabic will matter later. It lets you talk directly to Cairo.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Cairo",
+          "pose": "point"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1290",
+        "value": "AGE 10"
+      }
+    },
+    {
+      "text": "Now, the gold. Mali sits near some of the biggest gold fields of the medieval world.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light",
+      "stamp": "BAMBUK, ABOUT 1300",
+      "crowd": 5
+    },
+    {
+      "text": "Miners dig shallow pits in the red earth and wash the gravel in wooden bowls.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wash",
+          "pose": "point"
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light",
+      "crowd": 5
+    },
+    {
+      "text": "Gold dust from these fields travels north, on camels, to North Africa and Europe.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "dust",
+          "label": "GOLD"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Here's the surprising part: the king doesn't actually own the mines.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "surprising",
+          "expression": "shock"
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "The miners keep digging, and pay the king a share, as long as he leaves them alone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "share",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light",
+      "crowd": 4
+    },
+    {
+      "text": "Later writers say kings who tried to take over the mines saw the gold dry up.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dry",
+          "pose": "idle",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "So the gold comes from fields you don't control. Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "The king does keep every gold nugget. Merchants may only trade the dust.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light",
+      "callouts": [
+        {
+          "text": "NUGGETS: KING ONLY",
+          "word": "nugget"
+        }
+      ]
+    },
+    {
+      "text": "Which is a nice rule to have when you're the king.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "king",
+          "expression": "happy"
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "Salt from the desert is so scarce here that it trades almost weight for weight with gold, some writers claim.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "salt",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "That last one is probably exaggerated, but salt really is precious in the south.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldfield1300",
+      "counter": {
+        "label": "1300",
+        "value": "AGE 20"
+      },
+      "bgIdea": "West African gold field near a river, about 1300: shallow pits in red earth, wooden bowls for washing gravel, river bank, baobab trees, morning light"
+    },
+    {
+      "text": "By about 1310, you're a trusted man at the royal court.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1310",
+        "value": "AGE 30"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "THE MANSA BEFORE YOU",
+          "word": "court",
+          "target": "predecessor"
+        }
+      ],
+      "stamp": "NIANI, ABOUT 1310",
+      "crowd": 4
+    },
+    {
+      "text": "The mansa on the throne has one obsession: the ocean.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1310",
+        "value": "AGE 30"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He wants to know what's on the other side of the Atlantic.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Atlantic",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1310",
+        "value": "AGE 30"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "So he sends two hundred ships west. Only one comes back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "callouts": [
+        {
+          "text": "200 SHIPS",
+          "word": "hundred"
+        }
+      ],
+      "stamp": "ATLANTIC COAST, 1311",
+      "crowd": 5
+    },
+    {
+      "text": "Its captain says the others sailed into a strong current and vanished.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "vanished",
+          "expression": "shock"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "crowd": 3
+    },
+    {
+      "text": "Most kings would take that as a no. This one builds a bigger fleet.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bigger",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Two thousand ships, some for men, some for food and water.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "2,000 SHIPS",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "And this time, he goes himself. He leaves you in charge until he returns.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charge",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "extras": [
+        {
+          "who": "predecessor",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "He never returns.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "never",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1311",
+        "value": "AGE 31"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "fx": "storm"
+    },
+    {
+      "text": "So you become mansa of Mali. Remember how you got the job.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mansa",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1312",
+        "value": "KING"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "callouts": [
+        {
+          "text": "YOU, MANSA OF MALI",
+          "word": "mansa",
+          "target": "you"
+        }
+      ],
+      "stamp": "1312",
+      "crowd": 6
+    },
+    {
+      "text": "The internet calls that sailor king Abubakari the Second, and says he reached America.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "America",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1312",
+        "value": "KING"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean"
+    },
+    {
+      "text": "The only source is your own story, told later in Cairo. It doesn't even name him.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1312",
+        "value": "KING"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "callouts": [
+        {
+          "text": "ONE SOURCE: YOU",
+          "word": "source"
+        }
+      ]
+    },
+    {
+      "text": "Some historians think the voyage was real. Others think you simply took the throne.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "took",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1312",
+        "value": "KING"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean"
+    },
+    {
+      "text": "Either way, you're king now, and he isn't.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "atlantic1311",
+      "counter": {
+        "label": "1312",
+        "value": "KING"
+      },
+      "bgIdea": "West African Atlantic coast, about 1311: wide beach with hundreds of long wooden canoes pulled up on the sand, palm trees, open grey ocean",
+      "empty": true
+    },
+    {
+      "text": "As mansa, you sit under a silk canopy, and nobody speaks to you directly.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1315",
+        "value": "KING"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "stamp": "1315",
+      "crowd": 6
+    },
+    {
+      "text": "People throw dust on their heads before they talk to you: a sign of respect.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "respect",
+          "expression": "happy"
+        }
+      ],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1315",
+        "value": "KING"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "crowd": 6
+    },
+    {
+      "text": "Your generals push the empire east, to the trading city of Gao on the Niger River.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      },
+      "stamp": "GAO, ABOUT 1320",
+      "crowd": 5,
+      "bgIdea": "mud-brick trading town on the Niger River, 1320: flat roofs, market stalls, river boats"
+    },
+    {
+      "text": "In Cairo, you'll later claim to have conquered twenty-four cities.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      },
+      "callouts": [
+        {
+          "text": "24 CITIES",
+          "word": "twenty-four"
+        }
+      ]
+    },
+    {
+      "text": "Gold tax, salt tax, copper trade: money pours into your treasury.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pours",
+          "pose": "cheer",
+          "hold": "money"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      }
+    },
+    {
+      "text": "You picture all of it piled in one place.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      },
+      "vision": {
+        "image": "vault1880",
+        "word": "picture"
+      }
+    },
+    {
+      "text": "But in your faith, a king with this much has a duty: the pilgrimage to Mecca.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Mecca",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      }
+    },
+    {
+      "text": "It's called the hajj, and every Muslim who can afford it should go once.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      },
+      "callouts": [
+        {
+          "text": "THE HAJJ",
+          "word": "hajj"
+        }
+      ]
+    },
+    {
+      "text": "You can afford it. Very, very much.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "afford",
+          "expression": "happy"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      }
+    },
+    {
+      "text": "The day you run out of money in Cairo is about twelve years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1320",
+        "value": "KING"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "Before you pack, let's talk about what gold is actually worth.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "bgIdea": "village market fair with food stalls and a ticket booth"
+    },
+    {
+      "text": "Imagine a village fair where everything costs one ticket.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "ticket",
+          "label": "1 TICKET"
+        }
+      ]
+    },
+    {
+      "text": "A bowl of rice: one ticket. A ride on a camel: one ticket.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rice",
+          "pose": "point"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "Now a rich visitor arrives and hands every family fifty free tickets.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hands",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "The fair didn't get more rice. It just got more tickets.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rice",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "So the stall owners raise the price. A bowl of rice now costs two tickets.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "price",
+          "label": "x2"
+        }
+      ]
+    },
+    {
+      "text": "Each ticket is worth less, because there are more of them chasing the same stuff.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "worth",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      }
+    },
+    {
+      "text": "That's inflation: prices go up because money goes down in value.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "callouts": [
+        {
+          "text": "INFLATION",
+          "word": "inflation"
+        }
+      ]
+    },
+    {
+      "text": "Gold works the same way. It's only worth a lot while it's rare.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "Gold",
+          "label": "RARE"
+        }
+      ]
+    },
+    {
+      "text": "In Cairo, one gold coin, a mithqal, buys about twenty-five silver coins. Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "callouts": [
+        {
+          "text": "1 GOLD = 25 SILVER",
+          "word": "mithqal"
+        }
+      ]
+    },
+    {
+      "text": "In 1324 you set out for Mecca, about four thousand kilometers away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "stamp": "SAHARA, 1324",
+      "crowd": 6
+    },
+    {
+      "text": "Arab writers later describe thousands of servants dressed in silk.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "crowd": 8
+    },
+    {
+      "text": "They say about eighty camels carried loads of gold dust.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "callouts": [
+        {
+          "text": "80 CAMELS OF GOLD?",
+          "word": "eighty"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "Those numbers are big, round and repeated by people who weren't there.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "round",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky"
+    },
+    {
+      "text": "But everybody agrees on one thing: it was a lot of gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lot",
+          "expression": "happy"
+        }
+      ],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky"
+    },
+    {
+      "text": "Your wife, Inari Konte, travels with her own court of servants.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "crowd": 5
+    },
+    {
+      "text": "Crossing the Sahara takes months. Water is worth more than gold out here.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Water",
+          "pose": "point"
+        }
+      ],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky"
+    },
+    {
+      "text": "The internet says you built a mosque every Friday along the way.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Friday",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky"
+    },
+    {
+      "text": "That story comes from a chronicle written three centuries later. Nobody can find the mosques.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "callouts": [
+        {
+          "text": "300 YEARS LATER",
+          "word": "centuries"
+        }
+      ]
+    },
+    {
+      "text": "Even for you, that would be a lot of mosques.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky"
+    },
+    {
+      "text": "You camp for three days by the pyramids, outside Cairo.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "sahara1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "camel caravan route across the Sahara desert, 1324: huge sand dunes, a line of tents and camel saddles, a small well, blazing sky",
+      "stamp": "GIZA, JULY 1324",
+      "crowd": 4
+    },
+    {
+      "text": "On July 19th, you enter Cairo, one of the biggest cities in the world.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "stamp": "CAIRO CITADEL, 1324",
+      "crowd": 5
+    },
+    {
+      "text": "The sultan of Egypt, al-Nasir Muhammad, wants to meet you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "SULTAN AL-NASIR MUHAMMAD",
+          "word": "sultan",
+          "target": "sultan"
+        }
+      ]
+    },
+    {
+      "text": "There's a problem. Visitors must kiss the ground in front of the sultan.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "problem",
+          "expression": "shock"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You're a king too. You don't kiss anybody's floor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "floor",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "For days, you refuse to go. Officials keep politely insisting.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "neutral"
+        },
+        {
+          "who": "hajib",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "IBN AMIR HAJIB, YOUR HOST",
+          "word": "Officials",
+          "target": "hajib"
+        }
+      ]
+    },
+    {
+      "text": "Finally you bow, and you tell everyone who you're bowing to.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bow",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "neutral"
+        },
+        {
+          "who": "hajib",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "I prostrate myself to God who created me.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "happy"
+        },
+        {
+          "who": "hajib",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "I prostrate myself to God who created me.",
+        "word": "prostrate"
+      }
+    },
+    {
+      "text": "A good answer. The sultan seats you beside him, which is a very big deal.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "beside",
+          "expression": "happy"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He gives you a palace to stay in, and fine horses. Remember the palace.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "palace",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "sultan",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You and your Cairo host become friends. You talk in Arabic, no translator needed.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Arabic",
+          "pose": "point"
+        }
+      ],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "hajib",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You tell him the story of the king who sailed away, and how you got the throne.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "hajib",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The ruler who preceded me did not believe it impossible to reach the ocean's end.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "citadel1324",
+      "counter": {
+        "label": "1324",
+        "value": "TONS OF GOLD"
+      },
+      "bgIdea": "Mamluk sultan's audience hall in the Cairo Citadel, 1324: striped stone arches, marble floor, carved throne platform, brass lamps, silk carpets",
+      "extras": [
+        {
+          "who": "hajib",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "The ruler who preceded me did not believe it impossible to reach the ocean's end.",
+        "word": "ruler"
+      }
+    },
+    {
+      "text": "Then the gold comes out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "coin"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "crowd": 8
+    },
+    {
+      "text": "You give gold to every official at court, to mosques, to the poor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poor",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "crowd": 8
+    },
+    {
+      "text": "Your people buy whatever Cairo sells: silk, slaves, books, horses.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "callouts": [
+        {
+          "text": "BUY EVERYTHING",
+          "word": "buy"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "Shopkeepers figure out fast that you don't ask prices. So prices rise.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prices",
+          "pose": "shrug",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "crowd": 6
+    },
+    {
+      "text": "You also tell your new friends that gold grows like a plant in your country.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "plant",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "extras": [
+        {
+          "who": "hajib",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "It doesn't. But remember those miners? You don't really know how they find it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "miners",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "cairo1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "busy street in medieval Cairo, 1324: sandstone houses with carved wooden balconies, minarets, market awnings, palm trees, bright sun",
+      "extras": [
+        {
+          "who": "hajib",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Years later, a scholar named al-Umari comes to Cairo and interviews people who saw you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "umari",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "AL-UMARI, HISTORIAN",
+          "word": "al-Umari",
+          "target": "umari"
+        }
+      ],
+      "stamp": "GOLD MARKET, CAIRO",
+      "crowd": 5
+    },
+    {
+      "text": "This man flooded Cairo with his benefactions.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "umari",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "umari",
+        "text": "This man flooded Cairo with his benefactions.",
+        "word": "flooded"
+      }
+    },
+    {
+      "text": "Remember the gold coin worth twenty-five silver coins? In the market, that changes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "umari",
+          "expression": "neutral"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Gold was at a high price in Egypt until they came in that year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "umari",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "umari",
+        "text": "Gold was at a high price in Egypt until they came in that year.",
+        "word": "Gold"
+      }
+    },
+    {
+      "text": "The coin falls below twenty-two silver, and stays down for at least twelve years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "umari",
+          "expression": "neutral"
+        }
+      ],
+      "paper": {
+        "text": "1 GOLD = 25 SILVER",
+        "word": "coin",
+        "fix": {
+          "strike": "25",
+          "write": "22",
+          "word": "twenty-two"
+        }
+      }
+    },
+    {
+      "text": "Like the free tickets at the fair: more gold, same stuff, so each coin buys less.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "less",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "crowd": 4
+    },
+    {
+      "text": "The internet says you crashed Egypt's economy for twelve years.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "crashed",
+          "expression": "shock"
+        }
+      ],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley"
+    },
+    {
+      "text": "That's a stretch. A drop of about twelve percent was normal for gold prices back then.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "callouts": [
+        {
+          "text": "ABOUT -12%",
+          "word": "twelve"
+        }
+      ]
+    },
+    {
+      "text": "You moved the gold market in a giant city. You didn't break a country.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "break",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley"
+    },
+    {
+      "text": "In October, you leave Cairo with the official caravan to Mecca.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "stamp": "ARABIA, 1324",
+      "crowd": 6
+    },
+    {
+      "text": "You complete the hajj, like millions before and after you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hajj",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "crowd": 6
+    },
+    {
+      "text": "You give generously in the holy cities too.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "crowd": 4
+    },
+    {
+      "text": "And you go shopping for something gold can't make: scholars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "scholars",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings"
+    },
+    {
+      "text": "You invite learned men to come back with you to Mali.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "crowd": 3
+    },
+    {
+      "text": "One of them is a poet from Spain, Abu Ishaq al-Sahili.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "AL-SAHILI, POET",
+          "word": "poet",
+          "target": "sahili"
+        }
+      ]
+    },
+    {
+      "text": "He's not an architect. That will matter later, when people tell your story wrong.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "architect",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "On the way home, your caravan gets lost in the desert, and many people die.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "shock"
+        }
+      ],
+      "bg": "hejaz1324",
+      "counter": {
+        "label": "1324",
+        "value": "SPENDING"
+      },
+      "bgIdea": "pilgrim camp in the desert hills of Arabia, 1324: rows of white tents, camels resting, rocky hills, evening light, no buildings",
+      "fx": "storm",
+      "crowd": 3
+    },
+    {
+      "text": "When you finally stagger back to Cairo, something is missing. The gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "stamp": "CAIRO, 1325",
+      "crowd": 4
+    },
+    {
+      "text": "You spent it. All of it. The richest king Cairo ever saw is now short of cash.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "bgIdea": "Cairo merchant's office, 1325: carpets, ledgers on a low desk, money chest, lamp"
+    },
+    {
+      "text": "Your people sell their goods at a loss, just to eat.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "loss",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      }
+    },
+    {
+      "text": "So you do what kings do. You borrow.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "SIRAJ AL-DIN, MERCHANT",
+          "word": "borrow",
+          "target": "siraj"
+        }
+      ]
+    },
+    {
+      "text": "A merchant family, led by Siraj al-Din, lends you fifty thousand gold dinars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "happy"
+        }
+      ],
+      "paper": {
+        "text": "LOAN: 50,000 DINARS",
+        "word": "lends"
+      }
+    },
+    {
+      "text": "That's more than two hundred kilos of gold, well over ten million dollars today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$10M+ TODAY",
+          "word": "million"
+        }
+      ]
+    },
+    {
+      "text": "At high interest, of course. Lenders can see when a king is desperate.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "desperate",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Remember the palace the sultan gave you? You sell it to the lenders.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The man who handed out gold in July is pawning his house by spring.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pawning",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The gold you spent in Cairo made gold cheap. Now you're buying it back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "cheap",
+          "label": "COST"
+        }
+      ]
+    },
+    {
+      "text": "You make it home in 1325, with no gold, many debts, and a city of scholars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "stamp": "TIMBUKTU, 1325",
+      "crowd": 5
+    },
+    {
+      "text": "Your empire now includes Timbuktu, a trading town on the edge of the Sahara.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "callouts": [
+        {
+          "text": "TIMBUKTU",
+          "word": "Timbuktu"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "You order a great mosque built there, the Djinguereber Mosque.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mosque",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "crowd": 4
+    },
+    {
+      "text": "Its walls are mud brick, with wooden beams sticking out to hold the scaffolding.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1325",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "crowd": 4
+    },
+    {
+      "text": "You also pay your poet friend twelve thousand gold coins for a royal audience hall.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1327",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "12,000 MITHQALS",
+          "word": "thousand"
+        }
+      ],
+      "stamp": "1327"
+    },
+    {
+      "text": "That's about fifty kilos of gold, for a poet who isn't an architect.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poet",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1327",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Later writers will say he designed all of Mali's famous mosques. He didn't.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "didn't",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1327",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Mud-brick building in West Africa is older than him, and older than you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1327",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "extras": [
+        {
+          "who": "sahili",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Timbuktu fills with teachers, judges and astronomers, and with their books.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "books",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1327",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "crowd": 6
+    },
+    {
+      "text": "In 1330, a neighboring kingdom raids Timbuktu. You take it back and build a fort.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "back",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1330",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "stamp": "1330",
+      "fx": "storm",
+      "crowd": 4
+    },
+    {
+      "text": "Back in Cairo, Siraj al-Din is still waiting for his fifty thousand dinars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1332",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "neutral"
+        }
+      ],
+      "stamp": "CAIRO, 1332"
+    },
+    {
+      "text": "So he sends a man across the desert to Mali to collect.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collect",
+          "expression": "shock"
+        }
+      ],
+      "bg": "goldsouk1324",
+      "counter": {
+        "label": "1332",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "gold and money changers' market in medieval Cairo, 1324: small shop counters with balance scales, piles of coins, gold dust in dishes, arched alley",
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The man dies in Timbuktu before he collects anything.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "timbuktu1330",
+      "counter": {
+        "label": "1332",
+        "value": "-50,000 DINARS"
+      },
+      "bgIdea": "Timbuktu, 1330: earthen mud-brick mosque under construction with wooden beams sticking out of the walls, sandy square, palm-wood ladders",
+      "fx": "storm",
+      "crowd": 3
+    },
+    {
+      "text": "Later, Siraj al-Din's son makes the trip and gets some of the money back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1335",
+        "value": "SOME REPAID"
+      },
+      "extras": [
+        {
+          "who": "siraj",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Arab historians disagree on how much was ever repaid. Some say most of it never was.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "never",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "1335",
+        "value": "SOME REPAID"
+      }
+    },
+    {
+      "text": "Lending to a king two months away by camel is a special kind of risk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "risk",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "1335",
+        "value": "SOME REPAID"
+      }
+    },
+    {
+      "text": "Sometime around 1337, after about twenty-five years as mansa, you die.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1337",
+        "value": "KING"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "stamp": "NIANI, ABOUT 1337",
+      "fx": "rain",
+      "crowd": 4
+    },
+    {
+      "text": "Nobody even agrees on the year. It might be 1332.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "year",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1337",
+        "value": "KING"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard"
+    },
+    {
+      "text": "Your son Maghan becomes mansa. Within a few generations, Mali's empire shrinks.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1337",
+        "value": "KING"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "crowd": 4
+    },
+    {
+      "text": "Ibn Battuta visits Mali in 1352 and finds your brother on the throne.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1352",
+        "value": "LEGACY"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard",
+      "crowd": 4,
+      "stamp": "1352"
+    },
+    {
+      "text": "The famous traveler complains he's stingy. So much for the family reputation.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stingy",
+          "expression": "happy"
+        }
+      ],
+      "bg": "niani1300",
+      "counter": {
+        "label": "1352",
+        "value": "LEGACY"
+      },
+      "bgIdea": "royal court of the Mali Empire, about 1300: large round mud-brick audience hall with a thatched roof, carved wooden stools, drums, silk canopy, courtyard"
+    },
+    {
+      "text": "But Europe doesn't forget you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea",
+      "stamp": "MAJORCA, 1375",
+      "empty": true
+    },
+    {
+      "text": "In 1375, a mapmaker in Majorca paints a huge map of the known world.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "map",
+          "pose": "point"
+        }
+      ],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea"
+    },
+    {
+      "text": "In the middle of Africa, he paints you: on a throne, holding a big gold nugget.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nugget",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "coin"
+        }
+      ],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea"
+    },
+    {
+      "text": "Next to you, he writes a note.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "note",
+          "pose": "point",
+          "hold": null
+        }
+      ],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea"
+    },
+    {
+      "text": "So abundant is the gold, he writes, you're the richest and most noble king in the land.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea",
+      "paper": {
+        "text": "THE RICHEST AND MOST NOBLE KING",
+        "word": "richest"
+      }
+    },
+    {
+      "text": "Your Cairo spending spree became your advertisement.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "advertisement",
+          "expression": "happy"
+        }
+      ],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea"
+    },
+    {
+      "text": "For two hundred years, Europeans dream about the gold of Mali.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "majorca1375",
+      "counter": {
+        "label": "1375",
+        "value": "LEGACY"
+      },
+      "bgIdea": "mapmaker's workshop in Majorca, 1375: big hand-painted world map spread on a wooden table, ink pots, quills, compasses, arched window over the sea",
+      "vision": {
+        "image": "vault1880",
+        "word": "dream"
+      }
+    },
+    {
+      "text": "Now, the internet's favorite fact: you were the richest person in history.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      },
+      "callouts": [
+        {
+          "text": "$400 BILLION?",
+          "word": "richest"
+        }
+      ],
+      "stamp": "TODAY"
+    },
+    {
+      "text": "Some websites say four hundred billion dollars. Some say your wealth is impossible to count.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "billion",
+          "label": "$?"
+        }
+      ]
+    },
+    {
+      "text": "The honest answer is the second one. Nobody wrote down your treasury.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Nobody",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      }
+    },
+    {
+      "text": "You didn't own the mines. You taxed them. Remember?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "taxed",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      }
+    },
+    {
+      "text": "And you couldn't even pay your own bills in Cairo.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bills",
+          "expression": "shock"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      }
+    },
+    {
+      "text": "Rich? Spectacularly. Richest ever? Nobody can know.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Spectacularly",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "$400B?"
+      }
+    },
+    {
+      "text": "So how does the richest-looking man in Cairo end up borrowing from its merchants?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "He spent faster than he could earn, in a city where his gold was losing value.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "losing",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "Every coin he gave away made the next coin worth a little less.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "less",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      }
+    },
+    {
+      "text": "And he was buying with that cheaper gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cheaper",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1325",
+        "value": "BROKE"
+      }
+    },
+    {
+      "text": "That brings us to today's money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: PRICES FOLLOW THE MONEY",
+        "word": "rule"
+      },
+      "bgIdea": "modern bank branch, 2020s"
+    },
+    {
+      "text": "When money grows faster than the things it buys, each unit buys less.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "less",
+          "pose": "point"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Here's a recent example. Between 2020 and 2022, the US money supply grew about forty percent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "money",
+          "label": "+40%"
+        }
+      ]
+    },
+    {
+      "text": "In June 2022, prices were up nine percent in a single year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "+9.1% IN A YEAR",
+          "word": "nine"
+        }
+      ]
+    },
+    {
+      "text": "Say your boss gave you a three percent raise that year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "raise",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Your paycheck grew three percent. Your rent and groceries grew about eight.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "eight",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "You got a raise and still got poorer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "poorer",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "So when you ask for a raise, compare it to prices, not to last year's paycheck.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "calendar",
+          "word": "year",
+          "label": "VS PRICES"
+        }
+      ]
+    },
+    {
+      "text": "And the rule isn't perfect. Cairo's gold barely dropped twelve percent.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "perfect",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "When more things are made too, more money doesn't have to mean higher prices.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Even Mansa Musa's gold couldn't buy what Cairo didn't have.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Spend like a king, and the price of everything learns your name.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "title": "YOUR LIFE AS MANSA MUSA"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Mansa Musa | The King Who Spent Too Much",
+      "Your Life as the King Who Made Gold Cheap",
+      "Your Life as Mansa Musa | Richest Man Ever?"
+    ],
+    "thumbnail": "A Cairo street in 1324 with a camel caravan and gold dust in the air; text: 'TOO MUCH GOLD'",
+    "description": "It's 1324. You ride into Cairo with so much gold that it changes what gold is worth in Egypt.\nA few months later, you're borrowing money there. This is the life of Mansa Musa.\n\nA comedic dramatization of documented history.\nGeneral education only, not financial advice.\n\nSources:\n- Mansa Musa, Wikipedia: https://en.wikipedia.org/wiki/Mansa_Musa\n- Al-Umari, Masalik al-Absar, in N. Levtzion and J. F. P. Hopkins (eds.), Corpus of Early Arabic Sources for West African History (1981)\n- Ibn Khaldun, Kitab al-Ibar, in Levtzion and Hopkins (1981)\n- Catalan Atlas (1375), Bibliotheque nationale de France, Espagnol 30\n- US Bureau of Labor Statistics, CPI-U (June 2022); Federal Reserve, M2 money stock",
+    "factCheck": [
+      "Born about 1280 (exact date unknown); reigned c. 1312 to c. 1337, about 25 years per Ibn Khaldun; death year disputed (1332 or 1337) (Wikipedia).",
+      "Descendant of Sunjata's family; Ibn Khaldun calls him Musa ibn Abu Bakr; exact lineage DISPUTED (Wikipedia). 'Great-uncle's family' is a simplification.",
+      "Mansa means ruler/king in Mandinka (Wikipedia).",
+      "Gold fields of Bambuk and Bure; Mali kings taxed gold and reserved nuggets for themselves, merchants traded dust (al-Umari via Levtzion & Hopkins; widely cited). Claim that gold production stopped when rulers tried to convert or control miners comes from al-Umari: DISPUTED.",
+      "Salt traded 'weight for weight' with gold: popular exaggeration, flagged as such in the script.",
+      "Predecessor's Atlantic voyages: 200 ships then 2,000, Musa left as deputy; told by Musa in Cairo to Ibn Amir Hajib, recorded by al-Umari; predecessor presumably Muhammad ibn Qu; the name Abubakari II and the America claim are modern: DISPUTED (Wikipedia).",
+      "Gao taken by general Saghmanja (Ibn Khaldun); Musa claimed 24 cities in Cairo (Wikipedia).",
+      "Hajj 1324-1325; camped three days near Giza, entered Cairo 19 July 1324, left 18 October with the official caravan (Wikipedia). Distance Niani-Mecca roughly 4,000 km (journey given as about 2,700 miles).",
+      "Caravan: thousands of servants in silk, about 80 camels with gold dust: figures from later Arabic accounts, rhetorical, DISPUTED (Wikipedia). Wife Inari Konte (Wikipedia).",
+      "'Mosque every Friday' from the Tarikh al-Sudan (17th century): DISPUTED (Wikipedia).",
+      "Refused to prostrate before Sultan al-Nasir Muhammad, then said he prostrated to God; seated beside the sultan; given a palace (al-Umari via Wikipedia).",
+      "Told people in Cairo gold grew like a plant in his country (Wikipedia).",
+      "Gold mithqal fell from 25 dirhams to under 22 and did not recover for at least 12 years (al-Umari); Warren Schultz argues the fall was within normal Mamluk fluctuation; ~12% = 3/25 (Wikipedia).",
+      "Caravan lost in the desert on return with many deaths (al-Umari, widely cited): DISPUTED in detail.",
+      "Ran short of money, sold goods at a loss, borrowed at high interest; Siraj al-Din ibn al-Kuwayk lent 50,000 dinars; Musa sold him the palace; Siraj's agent died trying to collect; son Fakhr al-Din recovered some; repayment DISPUTED (Wikipedia). 50,000 dinars x ~4.25 g = ~212 kg of gold; at over $60 per gram that is over $10 million today.",
+      "Djinguereber Mosque commissioned 1327; al-Sahili paid 12,000 mithqals (about 51 kg) for a royal audience chamber; idea that al-Sahili designed Mali's mosques is a historiographical myth (Wikipedia).",
+      "Mossi took Timbuktu in 1330; Musa retook it and built a fort (Wikipedia).",
+      "Successor Maghan; Ibn Battuta visited Mali 1352 under Mansa Sulayman, Musa's brother, and found him stingy (Ibn Battuta, Rihla).",
+      "Catalan Atlas 1375 by Abraham Cresques in Majorca shows Musa holding a gold nugget; inscription calls him the richest and most noble king in all the land because of the abundance of gold (BnF).",
+      "$400 billion figure comes from modern websites; historians say his wealth cannot be calculated (Time, quoting Richard Smith).",
+      "US M2 rose from about $15.4 trillion (Feb 2020) to about $21.7 trillion (early 2022), about +40% (Federal Reserve). CPI-U +9.1% year over year in June 2022 and about 8% for 2022 (BLS). Raise example is illustrative."
+    ],
+    "sources": [
+      "Mansa Musa, Wikipedia: https://en.wikipedia.org/wiki/Mansa_Musa",
+      "'I prostrate myself to God who created me.': Mansa Musa as reported by al-Umari, Masalik al-Absar, in Levtzion & Hopkins, Corpus of Early Arabic Sources for West African History (1981)",
+      "'The ruler who preceded me did not believe it impossible to reach the ocean's end.': shortened from Mansa Musa's account in al-Umari, Masalik al-Absar (Levtzion & Hopkins 1981)",
+      "'This man flooded Cairo with his benefactions.': al-Umari, Masalik al-Absar (Levtzion & Hopkins 1981)",
+      "'Gold was at a high price in Egypt until they came in that year.': al-Umari, Masalik al-Absar (Levtzion & Hopkins 1981)",
+      "Catalan Atlas (1375), BnF Espagnol 30: inscription on Musse Melly, 'the richest and most noble king in all the land'",
+      "Ibn Battuta, Rihla (1355), visit to Mali 1352-1353",
+      "Time, 'Meet Mansa Musa I of Mali', 2015 (Richard Smith quote)",
+      "US Bureau of Labor Statistics, CPI news release July 13, 2022; Federal Reserve Economic Data, M2SL"
+    ],
+    "wordCount": 2105,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "Raining Gold on Cairo",
+        "mood": "tense"
+      },
+      {
+        "scene": 9,
+        "title": "A Prince of Mali",
+        "mood": "calm"
+      },
+      {
+        "scene": 19,
+        "title": "Where the Gold Comes From",
+        "mood": "mystery"
+      },
+      {
+        "scene": 30,
+        "title": "The King Who Sailed Away",
+        "mood": "mystery"
+      },
+      {
+        "scene": 44,
+        "title": "King of Gold",
+        "mood": "triumph"
+      },
+      {
+        "scene": 54,
+        "title": "What Gold Is Worth",
+        "mood": "calm"
+      },
+      {
+        "scene": 64,
+        "title": "Across the Sahara",
+        "mood": "triumph"
+      },
+      {
+        "scene": 75,
+        "title": "The Sultan's Floor",
+        "mood": "tense"
+      },
+      {
+        "scene": 87,
+        "title": "Spending Like a Mansa",
+        "mood": "triumph"
+      },
+      {
+        "scene": 102,
+        "title": "The Pilgrim",
+        "mood": "calm"
+      },
+      {
+        "scene": 111,
+        "title": "The Richest Borrower in Cairo",
+        "mood": "sad"
+      },
+      {
+        "scene": 120,
+        "title": "Mosques and Books",
+        "mood": "triumph"
+      },
+      {
+        "scene": 130,
+        "title": "The Debt Collectors",
+        "mood": "mystery"
+      },
+      {
+        "scene": 136,
+        "title": "Gold on the Map",
+        "mood": "sad"
+      },
+      {
+        "scene": 148,
+        "title": "Richest Ever?",
+        "mood": "mystery"
+      },
+      {
+        "scene": 154,
+        "title": "How Did It End?",
+        "mood": "sad"
+      },
+      {
+        "scene": 158,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

@@ -1,0 +1,3395 @@
+{
+  "title": "Your Life as Cornelius Vanderbilt | $100 to America's Richest",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Cornelius Vanderbilt",
+      "face": "cornelius-vanderbilt",
+      "shirt": "#2b2b33",
+      "faceIdea": "American shipping and railroad tycoon Cornelius Vanderbilt, 1868, age 74: tall, long stern face, thick white mutton-chop sideburns, clean-shaven chin, swept-back white hair, black frock coat, high white collar and black cravat"
+    },
+    "phebe": {
+      "name": "Phebe Hand Vanderbilt",
+      "face": "phebe-hand-vanderbilt",
+      "faceIdea": "Staten Island farm wife Phebe Hand Vanderbilt, 1810, age 40s: strong plain face, hair under a white linen cap, dark wool dress with shawl"
+    },
+    "sophia": {
+      "name": "Sophia Johnson Vanderbilt",
+      "face": "sophia-johnson-vanderbilt",
+      "faceIdea": "Sophia Johnson Vanderbilt, 1820, age 25: gentle oval face, dark hair parted in the middle with side curls, high-waisted dress, lace collar"
+    },
+    "gibbons": {
+      "name": "Thomas Gibbons",
+      "face": "thomas-gibbons",
+      "faceIdea": "wealthy Georgia lawyer and steamboat owner Thomas Gibbons, 1818, age 60s: heavy-jowled scowling face, powdered grey hair tied back, old-fashioned black coat with high collar"
+    },
+    "marshall": {
+      "name": "John Marshall",
+      "face": "john-marshall",
+      "faceIdea": "US Chief Justice John Marshall, 1824, age 69: long face, grey hair brushed forward, black judicial robe, white cravat"
+    },
+    "billy": {
+      "name": "William Henry Vanderbilt",
+      "face": "william-henry-vanderbilt",
+      "faceIdea": "William Henry Vanderbilt, 1868, age 47: round fleshy face, bushy brown side-whiskers and chin beard, dark suit, watch chain"
+    },
+    "fisk": {
+      "name": "Jim Fisk",
+      "face": "jim-fisk",
+      "faceIdea": "Wall Street speculator Jim Fisk, 1868, age 33: plump jolly face, waxed curled moustache, slicked hair, flashy checked vest, diamond tie pin"
+    },
+    "gould": {
+      "name": "Jay Gould",
+      "face": "jay-gould",
+      "faceIdea": "railroad speculator Jay Gould, 1868, age 32: small thin pale face, full black beard, dark intense eyes, black suit"
+    },
+    "twain": {
+      "name": "Mark Twain",
+      "face": "mark-twain-1869",
+      "faceIdea": "writer Mark Twain, 1869, age 33: bushy reddish-brown hair and moustache, sharp eyes, dark coat, loose bow tie"
+    },
+    "frank": {
+      "name": "Frank Crawford Vanderbilt",
+      "face": "frank-crawford-vanderbilt",
+      "faceIdea": "Frank Armstrong Crawford Vanderbilt, 1869, age 30: refined southern lady, dark hair in a low chignon, high-necked dark silk dress, cameo brooch"
+    },
+    "crowd1": {
+      "name": "Passenger",
+      "face": "passenger-1860s",
+      "faceIdea": "New York man, 1860s: top hat, bushy side-whiskers, dark overcoat"
+    },
+    "crowd2": {
+      "name": "Lady passenger",
+      "face": "lady-1860s",
+      "faceIdea": "New York woman, 1860s: bonnet tied under the chin, hair in a center part, plaid shawl"
+    },
+    "crowd3": {
+      "name": "Old sailor",
+      "face": "sailor-1830s",
+      "faceIdea": "old New York harbor sailor, 1830s: weathered face, white stubble, knit cap, pea coat"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's January 1867, and snow is falling on the Hudson River at Albany.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "stamp": "ALBANY, 1867",
+      "fx": "snow",
+      "empty": true
+    },
+    {
+      "text": "You own the railroad that runs from here to New York City.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "callouts": [
+        {
+          "text": "YOU, CORNELIUS VANDERBILT",
+          "word": "You",
+          "target": "you"
+        }
+      ],
+      "fx": "snow"
+    },
+    {
+      "text": "And this morning, you've ordered your trains to stop at the river.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stop",
+          "pose": "point"
+        }
+      ],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "crowd": 6
+    },
+    {
+      "text": "Thousands of passengers from the West are stuck in the snow, with nowhere to go.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "crowd": 8
+    },
+    {
+      "text": "Your rival's railroad has just become worthless, and everyone knows who did it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "everyone",
+          "expression": "happy"
+        }
+      ],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "crowd": 6
+    },
+    {
+      "text": "You started with a hundred dollars borrowed from your mother.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hundred",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls",
+      "callouts": [
+        {
+          "text": "$100",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "When you die, you'll be the richest man in America, worth about a hundred million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richest",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "callouts": [
+        {
+          "text": "~$100 MILLION",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Within a few generations, almost all of it will be gone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gone",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "By the end, you'll know the one money rule that made you,",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's 1794, on Staten Island, New York.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1794",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "stamp": "STATEN ISLAND, 1794",
+      "empty": true
+    },
+    {
+      "text": "You're born on May 27th, in a farmhouse by the water. Your name is Cornelius.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "born",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1794",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "callouts": [
+        {
+          "text": "YOU, AGE 0",
+          "word": "born",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your father farms, and ferries vegetables to Manhattan in a small boat.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1794",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "vision": {
+        "image": "harbor1850",
+        "word": "Manhattan"
+      }
+    },
+    {
+      "text": "Your mother, Phebe, is the one who handles the money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1794",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "PHEBE, YOUR MOTHER",
+          "word": "Phebe",
+          "target": "phebe"
+        }
+      ]
+    },
+    {
+      "text": "Family legend says she keeps the savings hidden in the old grandfather clock.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1794",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Keep count of three things: the money, your enemies, and your thirteen children.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1800",
+        "value": "AGE 6"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning"
+    },
+    {
+      "text": "You quit school at eleven. You'll never read or write well. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "quit",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1805",
+        "value": "AGE 11"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "callouts": [
+        {
+          "text": "SCHOOL: DONE AT 11",
+          "word": "eleven"
+        }
+      ]
+    },
+    {
+      "text": "Instead, you work on your father's boat, and you learn the harbor like a map.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "work",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1805",
+        "value": "AGE 11"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls"
+    },
+    {
+      "text": "You also learn that you hate to lose. At anything.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hate",
+          "expression": "shock"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1805",
+        "value": "AGE 11"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls"
+    },
+    {
+      "text": "You race other boys, on horses and on boats, and you usually win.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "win",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1805",
+        "value": "AGE 11"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls"
+    },
+    {
+      "text": "That temper, too. Remember it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "temper",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1805",
+        "value": "AGE 11"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls"
+    },
+    {
+      "text": "In 1810, you're sixteen, and you want your own boat.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "pose": "point"
+        }
+      ],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1810",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe"
+        }
+      ],
+      "stamp": "1810"
+    },
+    {
+      "text": "The family story goes that your mother makes you a deal.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1810",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Clear and plant eight acres of rocky land by your birthday, and she'll lend you a hundred dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1810",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe"
+        }
+      ],
+      "paper": {
+        "text": "8 ACRES = $100",
+        "word": "hundred"
+      }
+    },
+    {
+      "text": "You get your friends to help, and finish in time.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "finish",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1810",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "With the hundred dollars, you buy a periauger: a flat-bottomed sailboat with two masts.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1810",
+        "value": "-$100"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls",
+      "callouts": [
+        {
+          "text": "YOUR FIRST BOAT",
+          "word": "periauger"
+        }
+      ]
+    },
+    {
+      "text": "You ferry people and goods between Staten Island and Manhattan, for eighteen cents a trip.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ferry",
+          "hold": null
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1810",
+        "value": "-$100"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls",
+      "callouts": [
+        {
+          "text": "18 CENTS A TRIP",
+          "word": "eighteen"
+        }
+      ],
+      "crowd": 3
+    },
+    {
+      "text": "You sail in weather the other boatmen won't touch.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "weather",
+          "expression": "shock"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1810",
+        "value": "-$100"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls",
+      "fx": "storm"
+    },
+    {
+      "text": "Within a year, the story goes, you pay your mother back and hand her a thousand dollars more.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hand",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "statenisland1800",
+      "counter": {
+        "label": "1811",
+        "value": "~$1,000"
+      },
+      "bgIdea": "Port Richmond, Staten Island, 1800s: small Dutch farmhouse with a stone chimney, vegetable fields, a wooden dock, sailboats on the Kill Van Kull, morning",
+      "extras": [
+        {
+          "who": "phebe",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In time, other captains start calling you the Commodore, as a joke. The name sticks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Commodore",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1811",
+        "value": "~$1,000"
+      },
+      "callouts": [
+        {
+          "text": "THE COMMODORE",
+          "word": "Commodore"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "The snowy day you stop the trains is fifty-seven years away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "snowy",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1811",
+        "value": "~$1,000"
+      }
+    },
+    {
+      "text": "During the War of 1812, you win a contract to carry supplies to the forts around the harbor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "win",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "periauger1810",
+      "counter": {
+        "label": "1813",
+        "value": "~$3,000"
+      },
+      "bgIdea": "a small two-masted flat-bottomed sailing ferry (periauger) crossing New York harbor, 1810: choppy water, Manhattan's low skyline and church steeples, gulls"
+    },
+    {
+      "text": "In 1813, you marry your cousin, Sophia Johnson. You're both teenagers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1813",
+        "value": "~$3,000"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "SOPHIA, YOUR WIFE",
+          "word": "Sophia",
+          "target": "sophia"
+        }
+      ],
+      "stamp": "1813"
+    },
+    {
+      "text": "You'll have thirteen children. Keep counting.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1813",
+        "value": "~$3,000"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "By 1817, you own several sailing ships and about nine thousand dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "callouts": [
+        {
+          "text": "~$9,000",
+          "word": "nine"
+        }
+      ]
+    },
+    {
+      "text": "Then something new appears on the water: the steamboat.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "empty": true
+    },
+    {
+      "text": "It doesn't need wind. You realize sailing is finished.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "realize",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope"
+    },
+    {
+      "text": "So you do something strange for a rich young captain: you sell your ships and take a job.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut"
+        },
+        {
+          "who": "you",
+          "word": "job",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope"
+    },
+    {
+      "text": "You become captain of a steamboat called the Bellona, for a man named Thomas Gibbons.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "extras": [
+        {
+          "who": "gibbons",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "THOMAS GIBBONS, YOUR BOSS",
+          "word": "Gibbons",
+          "target": "gibbons"
+        }
+      ]
+    },
+    {
+      "text": "You want to learn the steam business from the inside, with someone else's money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "learn",
+          "pose": "point"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "extras": [
+        {
+          "who": "gibbons"
+        }
+      ]
+    },
+    {
+      "text": "There's one problem: running steamboats in New York waters is illegal.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "illegal",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "extras": [
+        {
+          "who": "gibbons",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "The state has given a monopoly to the heirs of Robert Fulton and Robert Livingston.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "paper": {
+        "text": "STEAM MONOPOLY: FULTON & LIVINGSTON ONLY",
+        "word": "monopoly"
+      }
+    },
+    {
+      "text": "A monopoly: the only company allowed to sell something, so it can charge what it likes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "callouts": [
+        {
+          "text": "MONOPOLY = NO RIVALS",
+          "word": "monopoly"
+        }
+      ]
+    },
+    {
+      "text": "Gibbons doesn't care. Neither do you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Neither",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "extras": [
+        {
+          "who": "gibbons",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You run your boat cheaper than theirs, and when sheriffs come to arrest you, you hide.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cheaper",
+          "pose": "point"
+        },
+        {
+          "who": "you",
+          "word": "hide",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope",
+      "crowd": 4
+    },
+    {
+      "text": "Legend says you built a secret compartment on board to hide in. You usually just outran them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "outran",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bellona1818",
+      "counter": {
+        "label": "1817",
+        "value": "~$9,000"
+      },
+      "bgIdea": "deck of a small paddle-wheel steamboat on New York Bay, 1818: smokestack with black smoke, wooden paddle box, passengers in top hats and bonnets, rail and rope"
+    },
+    {
+      "text": "Sophia runs an inn at the New Brunswick landing, called Bellona Hall.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellonahall1820",
+      "counter": {
+        "label": "1820",
+        "value": "AGE 26"
+      },
+      "bgIdea": "Bellona Hall inn in New Brunswick, New Jersey, 1820: a busy tavern dining room, long tables, fireplace, travelers with luggage, a counter with ledgers",
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "NEW BRUNSWICK, 1820",
+      "crowd": 5
+    },
+    {
+      "text": "Travelers sleep and eat there between your boat and the stagecoach to Philadelphia.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Travelers",
+          "pose": "point"
+        }
+      ],
+      "bg": "bellonahall1820",
+      "counter": {
+        "label": "1820",
+        "value": "AGE 26"
+      },
+      "bgIdea": "Bellona Hall inn in New Brunswick, New Jersey, 1820: a busy tavern dining room, long tables, fireplace, travelers with luggage, a counter with ledgers",
+      "extras": [
+        {
+          "who": "sophia"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "She's earning money while raising your growing pile of children. Remember her.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bellonahall1820",
+      "counter": {
+        "label": "1820",
+        "value": "AGE 26"
+      },
+      "bgIdea": "Bellona Hall inn in New Brunswick, New Jersey, 1820: a busy tavern dining room, long tables, fireplace, travelers with luggage, a counter with ledgers",
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Gibbons takes the monopoly all the way to the Supreme Court.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles",
+      "extras": [
+        {
+          "who": "gibbons"
+        }
+      ],
+      "stamp": "WASHINGTON, 1824"
+    },
+    {
+      "text": "The case is called Gibbons versus Ogden.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles",
+      "extras": [
+        {
+          "who": "gibbons"
+        }
+      ],
+      "paper": {
+        "text": "GIBBONS v. OGDEN",
+        "word": "Gibbons"
+      }
+    },
+    {
+      "text": "Chief Justice John Marshall rules that only Congress can regulate trade between the states.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles",
+      "extras": [
+        {
+          "who": "marshall",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "CHIEF JUSTICE MARSHALL",
+          "word": "Marshall",
+          "target": "marshall"
+        }
+      ]
+    },
+    {
+      "text": "Commerce, he writes, is traffic, but it is something more.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles",
+      "extras": [
+        {
+          "who": "marshall"
+        }
+      ],
+      "quote": {
+        "who": "marshall",
+        "text": "Commerce, undoubtedly, is traffic, but it is something more.",
+        "word": "Commerce"
+      }
+    },
+    {
+      "text": "The monopoly is dead. The water is open to anyone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dead",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles",
+      "extras": [
+        {
+          "who": "marshall"
+        }
+      ]
+    },
+    {
+      "text": "And nobody knows how to run a cheap steamboat better than you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "you",
+          "pose": "point"
+        }
+      ],
+      "bg": "supremecourt1824",
+      "counter": {
+        "label": "1824",
+        "value": "AGE 30"
+      },
+      "bgIdea": "the US Supreme Court chamber in the Capitol basement, 1824: vaulted ceiling, semicircle of judges' chairs, black-robed justices, lawyers at tables, candles"
+    },
+    {
+      "text": "In 1829, you leave Gibbons and start your own steamboat line.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "hudson1835",
+      "counter": {
+        "label": "1829",
+        "value": "~$30,000"
+      },
+      "bgIdea": "two paddle steamboats racing side by side on the Hudson River, 1830s: thick smoke, cliffs of the Palisades, passengers crowding the rails, bright day",
+      "stamp": "1829"
+    },
+    {
+      "text": "Your weapon is always the same: a lower price.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lower",
+          "pose": "point"
+        }
+      ],
+      "bg": "hudson1835",
+      "counter": {
+        "label": "1829",
+        "value": "~$30,000"
+      },
+      "bgIdea": "two paddle steamboats racing side by side on the Hudson River, 1830s: thick smoke, cliffs of the Palisades, passengers crowding the rails, bright day"
+    },
+    {
+      "text": "Here's how a fare war works.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      }
+    },
+    {
+      "text": "Imagine two coffee carts on the same corner, both charging two dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "icons": [
+        {
+          "icon": "coffee",
+          "word": "coffee",
+          "label": "$2"
+        },
+        {
+          "icon": "coffee",
+          "word": "two",
+          "label": "$2"
+        }
+      ]
+    },
+    {
+      "text": "You cut your price to one dollar. Every customer walks to you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cut",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "callouts": [
+        {
+          "text": "$1 COFFEE",
+          "word": "dollar"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You barely make a profit, but your rival makes nothing at all.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nothing",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "crowd": 2
+    },
+    {
+      "text": "You can survive this because your costs are lower: cheaper fuel, cheaper crews, tighter ships.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "callouts": [
+        {
+          "text": "LOWER COSTS",
+          "word": "costs"
+        }
+      ]
+    },
+    {
+      "text": "Soon your rival has two choices: go broke, or pay you to leave the corner.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "paper": {
+        "text": "PLEASE LEAVE: $$$",
+        "word": "pay"
+      }
+    },
+    {
+      "text": "Either way, you win. Customers win too, until the war is over.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "win",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      }
+    },
+    {
+      "text": "On the Hudson, you cut the fare from Albany to New York to almost nothing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hudson1835",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "bgIdea": "two paddle steamboats racing side by side on the Hudson River, 1830s: thick smoke, cliffs of the Palisades, passengers crowding the rails, bright day",
+      "callouts": [
+        {
+          "text": "FARE: ALMOST FREE",
+          "word": "nothing"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "Some days, you carry passengers for free and sell them dinner on board.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "free",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "hudson1835",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "bgIdea": "two paddle steamboats racing side by side on the Hudson River, 1830s: thick smoke, cliffs of the Palisades, passengers crowding the rails, bright day",
+      "crowd": 6
+    },
+    {
+      "text": "The big Hudson River steamboat owners can't take it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hudson1835",
+      "counter": {
+        "label": "1830",
+        "value": "~$30,000"
+      },
+      "bgIdea": "two paddle steamboats racing side by side on the Hudson River, 1830s: thick smoke, cliffs of the Palisades, passengers crowding the rails, bright day",
+      "crowd": 4
+    },
+    {
+      "text": "So they pay you about a hundred thousand dollars, plus five thousand a year, to go away.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1834",
+        "value": "~$500,000"
+      },
+      "callouts": [
+        {
+          "text": "~$100,000 TO LEAVE",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "You take it, and go fight on another river.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "take",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1834",
+        "value": "~$500,000"
+      }
+    },
+    {
+      "text": "Critics call it blackmail. You call it a business model.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "blackmail",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1834",
+        "value": "~$500,000"
+      }
+    },
+    {
+      "text": "By the mid-1840s, you're a millionaire.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millionaire",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "callouts": [
+        {
+          "text": "~$1.2 MILLION",
+          "word": "millionaire"
+        }
+      ]
+    },
+    {
+      "text": "The snowy day you stop the trains is twenty-one years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      }
+    },
+    {
+      "text": "At home, things are colder.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You move the family into a big house on Washington Place, in Manhattan. Sophia doesn't want to go.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "NEW YORK, 1846"
+    },
+    {
+      "text": "When she resists and falls into depression, you have her committed to an asylum.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "committed",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "shock"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "The woman who ran Bellona Hall for you spends months locked away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "You're not much kinder to your son William, whom everyone calls Billy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "BILLY, YOUR SON",
+          "word": "Billy",
+          "target": "billy"
+        }
+      ]
+    },
+    {
+      "text": "You think he's slow, and you send him to run a farm on Staten Island.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "slow",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Billy. Remember him.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1846",
+        "value": "~$1.2M"
+      },
+      "extras": [
+        {
+          "who": "billy"
+        }
+      ]
+    },
+    {
+      "text": "In 1848, gold is found in California, and everyone wants to get there fast.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1849",
+        "value": "~$1.5M"
+      },
+      "stamp": "NEW YORK, 1849",
+      "crowd": 8
+    },
+    {
+      "text": "By land, it takes months. By sea around South America, months more.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1849",
+        "value": "~$1.5M"
+      },
+      "vision": {
+        "image": "shipdeck1860",
+        "word": "sea"
+      }
+    },
+    {
+      "text": "Most people cross at Panama, through the jungle.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Panama",
+          "pose": "point"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1849",
+        "value": "~$1.5M"
+      }
+    },
+    {
+      "text": "You pick a route through Nicaragua instead: shorter by hundreds of miles.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1851",
+        "value": "~$5M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "callouts": [
+        {
+          "text": "SHORTER ROUTE",
+          "word": "shorter"
+        }
+      ],
+      "stamp": "NICARAGUA, 1851"
+    },
+    {
+      "text": "Your boats go up the San Juan River, across Lake Nicaragua, then a coach ride to the Pacific.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "River",
+          "pose": "point"
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1851",
+        "value": "~$5M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "crowd": 5
+    },
+    {
+      "text": "You go yourself, and push a steamboat up the rapids personally. You're fifty-six.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rapids",
+          "pose": "handOut",
+          "expression": "shock"
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1851",
+        "value": "~$5M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "callouts": [
+        {
+          "text": "YOU, 56",
+          "word": "fifty",
+          "target": "you"
+        }
+      ],
+      "fx": "storm"
+    },
+    {
+      "text": "And of course, you charge less than Panama.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "less",
+          "expression": "happy"
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1851",
+        "value": "~$5M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "crowd": 5
+    },
+    {
+      "text": "Soon your Accessory Transit Company is carrying thousands of gold-seekers a year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1851",
+        "value": "~$5M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "callouts": [
+        {
+          "text": "ACCESSORY TRANSIT CO.",
+          "word": "Transit"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "In 1853, you take a break. You build a giant yacht, the North Star, and sail to Europe.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "break",
+          "expression": "happy"
+        }
+      ],
+      "bg": "northstar1853",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "grand saloon of the steam yacht North Star, 1853: carved rosewood panels, velvet sofas, chandeliers, portholes showing the sea",
+      "stamp": "1853"
+    },
+    {
+      "text": "You tell a newspaper you're worth about eleven million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "northstar1853",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "grand saloon of the steam yacht North Star, 1853: carved rosewood panels, velvet sofas, chandeliers, portholes showing the sea",
+      "callouts": [
+        {
+          "text": "~$11 MILLION",
+          "word": "eleven"
+        }
+      ]
+    },
+    {
+      "text": "While you're away, your partners Charles Morgan and Cornelius Garrison take control of the company.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "partners",
+          "expression": "shock"
+        }
+      ],
+      "bg": "northstar1853",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "grand saloon of the steam yacht North Star, 1853: carved rosewood panels, velvet sofas, chandeliers, portholes showing the sea"
+    },
+    {
+      "text": "When you come home, the money's moving into their pockets, not yours.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "home",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      }
+    },
+    {
+      "text": "This is where you write the most famous business letter in America.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      }
+    },
+    {
+      "text": "Gentlemen: You have undertaken to cheat me. I won't sue you, for the law is too slow. I'll ruin you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "paper": {
+        "text": "I WON'T SUE YOU. I'LL RUIN YOU.",
+        "word": "ruin"
+      }
+    },
+    {
+      "text": "Except, the historian T. J. Stiles found no evidence you ever wrote it. It appears decades later.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "paper": {
+        "text": "I'LL RUIN YOU. - C.V.",
+        "word": "evidence",
+        "fix": {
+          "strike": "RUIN",
+          "write": "MYTH",
+          "word": "later"
+        }
+      }
+    },
+    {
+      "text": "What you really do is just as brutal. You start a rival line and undercut them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "undercut",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze"
+    },
+    {
+      "text": "Then it gets stranger.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze"
+    },
+    {
+      "text": "An American adventurer named William Walker invades Nicaragua with a small army and makes himself president.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1853",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "crowd": 6,
+      "fx": "storm"
+    },
+    {
+      "text": "In 1856, Walker cancels your company's rights and gives them to your partners.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1856",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "paper": {
+        "text": "TRANSIT CHARTER: CANCELLED",
+        "word": "cancels"
+      }
+    },
+    {
+      "text": "So you help fund Walker's enemies, and send your own agent to Costa Rica.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fund",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1856",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze",
+      "crowd": 4
+    },
+    {
+      "text": "In 1857, Walker's army is beaten. You've helped overthrow a government to win a business dispute.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "beaten",
+          "pose": "cheer",
+          "hold": null
+        }
+      ],
+      "bg": "nicaragua1851",
+      "counter": {
+        "label": "1857",
+        "value": "~$11M"
+      },
+      "bgIdea": "river steamer on the San Juan River in Nicaragua, 1851: dense jungle banks, rapids, gold rush travelers with carpet bags, a volcano in the distance, humid haze"
+    },
+    {
+      "text": "Then the big Panama steamship lines pay you to stop competing. Again.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Again",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1857",
+        "value": "~$11M"
+      }
+    },
+    {
+      "text": "In 1861, the Civil War begins.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1861",
+        "value": "~$15M"
+      },
+      "stamp": "1861",
+      "fx": "storm"
+    },
+    {
+      "text": "You give the Union Navy your biggest steamship, the Vanderbilt, worth hundreds of thousands of dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1861",
+        "value": "~$15M"
+      },
+      "callouts": [
+        {
+          "text": "SHIP GIVEN AWAY",
+          "word": "steamship"
+        }
+      ]
+    },
+    {
+      "text": "Congress thanks you with a gold medal.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "medal",
+          "expression": "happy"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1861",
+        "value": "~$15M"
+      },
+      "paper": {
+        "text": "THE THANKS OF CONGRESS",
+        "word": "Congress"
+      }
+    },
+    {
+      "text": "But your youngest son, George, falls ill while serving in the army, and dies in 1864.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "expression": "shock"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1861",
+        "value": "~$15M"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "You're about to turn seventy. Most rich men retire. You switch industries.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "switch",
+          "pose": "point"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1862",
+        "value": "~$15M"
+      }
+    },
+    {
+      "text": "Ships are yesterday. You think railroads are tomorrow.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1862",
+        "value": "~$15M"
+      },
+      "vision": {
+        "image": "trainstation1890",
+        "word": "railroads"
+      }
+    },
+    {
+      "text": "You start buying the New York and Harlem Railroad, a small line everyone thinks is junk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buying",
+          "pose": "handOut",
+          "hold": "chart"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1862",
+        "value": "~$15M"
+      },
+      "callouts": [
+        {
+          "text": "HARLEM RAILROAD",
+          "word": "Harlem"
+        }
+      ]
+    },
+    {
+      "text": "Some city politicians try to make money by selling Harlem stock short.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "short",
+          "hold": null
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1863",
+        "value": "~$20M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Selling short: selling shares you don't own yet, betting you can buy them back cheaper later.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1863",
+        "value": "~$20M"
+      },
+      "callouts": [
+        {
+          "text": "SHORT = BET ON A FALL",
+          "word": "short"
+        }
+      ]
+    },
+    {
+      "text": "So you quietly buy up almost every share in existence.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "every",
+          "pose": "point"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1863",
+        "value": "~$20M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "When the short sellers have to buy shares to pay back, you're the only seller left.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "only",
+          "expression": "happy"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1863",
+        "value": "~$20M"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "The price shoots past a hundred dollars a share. They're ruined.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ruined",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1863",
+        "value": "~$20M"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "price",
+          "label": "$100+"
+        }
+      ]
+    },
+    {
+      "text": "Then you buy the Hudson River Railroad too. Now you own both lines into New York City.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1864",
+        "value": "~$25M"
+      }
+    },
+    {
+      "text": "You make Billy, the son you called slow, your vice president. He turns out to be very good at it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1864",
+        "value": "~$25M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "BILLY, VICE PRESIDENT",
+          "word": "vice",
+          "target": "billy"
+        }
+      ]
+    },
+    {
+      "text": "Which brings us back to that snowy morning in Albany.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "stamp": "ALBANY, 1867",
+      "fx": "snow"
+    },
+    {
+      "text": "The New York Central Railroad runs from Buffalo to Albany. Your lines carry its passengers to the city.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "crowd": 6
+    },
+    {
+      "text": "The Central's owners have been playing games with you on the deals.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "games",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow"
+    },
+    {
+      "text": "So you stop your trains at the river. Nobody connects to the Central anymore.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stop",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "crowd": 8
+    },
+    {
+      "text": "Passengers and freight pile up in the snow. The Central's stock price collapses.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "stock",
+          "label": "DOWN"
+        }
+      ],
+      "fx": "snow",
+      "crowd": 8
+    },
+    {
+      "text": "By the end of 1867, the Central's shareholders beg you to take over. You do.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "take",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "Now you control the road from New York City all the way to Buffalo and the Great Lakes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1867",
+        "value": "~$40M"
+      },
+      "vision": {
+        "image": "railroad1890",
+        "word": "road"
+      }
+    },
+    {
+      "text": "But one railroad still competes with you: the Erie.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Erie",
+          "pose": "point"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "You start buying Erie shares to take it over.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buying",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Its directors, Daniel Drew, Jay Gould, and Jim Fisk, have a better idea.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "idea",
+          "hold": null
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "extras": [
+        {
+          "who": "gould",
+          "enter": true
+        },
+        {
+          "who": "fisk",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "JAY GOULD",
+          "word": "Gould",
+          "target": "gould"
+        },
+        {
+          "text": "JIM FISK",
+          "word": "Fisk",
+          "target": "fisk"
+        }
+      ]
+    },
+    {
+      "text": "They print new Erie shares, as fast as you can buy them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "print",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "extras": [
+        {
+          "who": "gould"
+        },
+        {
+          "who": "fisk",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Fisk jokes: if this printing press don't break down, I'll give the old hog all he wants of Erie.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "extras": [
+        {
+          "who": "fisk",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "fisk",
+        "text": "If this printing press don't break down, I'll give the old hog all he wants of Erie.",
+        "word": "printing"
+      }
+    },
+    {
+      "text": "The old hog is you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hog",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "A judge you're friendly with orders their arrest. They flee across the river to Jersey City.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "extras": [
+        {
+          "who": "gould",
+          "expression": "shock"
+        },
+        {
+          "who": "fisk",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "They take millions of dollars of your cash with them, in bundles.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      },
+      "extras": [
+        {
+          "who": "gould"
+        },
+        {
+          "who": "fisk",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "~$7 MILLION OF YOURS",
+          "word": "millions"
+        }
+      ]
+    },
+    {
+      "text": "After months of lawsuits and bribed lawmakers on both sides, you settle.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "settle",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "You get most of your money back, and you leave the Erie alone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "back",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "You've finally lost a race. It doesn't happen often.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lost",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1868",
+        "value": "~$40M"
+      }
+    },
+    {
+      "text": "In 1868, Sophia dies. A year later, you're seventy-five and married again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "extras": [
+        {
+          "who": "sophia",
+          "expression": "neutral"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "Your new wife, Frank Crawford, is a cousin from Alabama, about forty-five years younger.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "extras": [
+        {
+          "who": "frank",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "FRANK CRAWFORD, WIFE #2",
+          "word": "Frank",
+          "target": "frank"
+        }
+      ]
+    },
+    {
+      "text": "Yes, her name is Frank. And yes, she's a woman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "woman",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "extras": [
+        {
+          "who": "frank",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Now remember the Erie men printing shares? You do something similar.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "printing",
+          "pose": "point"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      }
+    },
+    {
+      "text": "You merge your railroads and issue tens of millions in new stock, backed by nothing new.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "paper": {
+        "text": "NEW STOCK: +$23 MILLION",
+        "word": "issue"
+      }
+    },
+    {
+      "text": "It's called watered stock, after cattle fed water before they're weighed at market.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "callouts": [
+        {
+          "text": "WATERED STOCK",
+          "word": "watered"
+        }
+      ]
+    },
+    {
+      "text": "Mark Twain writes you an open letter, mocking your worship of money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "extras": [
+        {
+          "who": "twain",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "MARK TWAIN",
+          "word": "Twain",
+          "target": "twain"
+        }
+      ]
+    },
+    {
+      "text": "Go and surprise the whole country, he says, by doing something right.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      },
+      "extras": [
+        {
+          "who": "twain",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "twain",
+        "text": "Go and surprise the whole country by doing something right.",
+        "word": "surprise"
+      }
+    },
+    {
+      "text": "You also become a believer in spiritualism: talking to the dead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "spiritualism",
+          "expression": "shock"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1869",
+        "value": "~$50M"
+      }
+    },
+    {
+      "text": "Two of your mediums, Victoria Woodhull and her sister Tennessee Claflin, open a stockbroker's office with your backing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1870",
+        "value": "~$60M"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "They're the first women to run a brokerage firm on Wall Street. The press is scandalized.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "first",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1870",
+        "value": "~$60M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "In 1871, you open Grand Central Depot in Manhattan.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "open",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "grandcentral1871",
+      "counter": {
+        "label": "1871",
+        "value": "~$70M"
+      },
+      "bgIdea": "Grand Central Depot in New York, 1871: vast iron-and-glass train shed, steam locomotives, gas lamps, crowds with luggage, a big clock",
+      "stamp": "NEW YORK, 1871",
+      "crowd": 8
+    },
+    {
+      "text": "It's one of the biggest buildings in the country. Today, your bronze statue stands outside its replacement.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "grandcentral1871",
+      "counter": {
+        "label": "1871",
+        "value": "~$70M"
+      },
+      "bgIdea": "Grand Central Depot in New York, 1871: vast iron-and-glass train shed, steam locomotives, gas lamps, crowds with luggage, a big clock",
+      "crowd": 8
+    },
+    {
+      "text": "The Panic of 1873 crashes Wall Street. You calmly keep building.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calmly",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "wallstreet1873",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      },
+      "crowd": 8,
+      "fx": "storm"
+    },
+    {
+      "text": "Remember the boy who quit school at eleven?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      }
+    },
+    {
+      "text": "That year, you give a million dollars to a college in Nashville, Tennessee.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      },
+      "callouts": [
+        {
+          "text": "$1,000,000",
+          "word": "million"
+        }
+      ],
+      "stamp": "1873"
+    },
+    {
+      "text": "A Methodist bishop married to Frank's cousin has asked you to help unite the North and South after the war.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "help",
+          "hold": null
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      },
+      "extras": [
+        {
+          "who": "frank",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You write that you hope it helps strengthen the ties between all sections of our common country.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      },
+      "quote": {
+        "who": "you",
+        "text": "...strengthening the ties which should exist between all sections of our common country.",
+        "word": "strengthen"
+      }
+    },
+    {
+      "text": "They rename it Vanderbilt University. It's the biggest gift you ever give.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1873",
+        "value": "~$80M"
+      },
+      "paper": {
+        "text": "VANDERBILT UNIVERSITY",
+        "word": "rename"
+      }
+    },
+    {
+      "text": "By 1876, you're eighty-two, sick, and in pain.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pain",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      }
+    },
+    {
+      "text": "Reporters camp outside your house on Washington Place for months, waiting.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "londonstreet1870",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "crowd": 6,
+      "fx": "snow"
+    },
+    {
+      "text": "On January 4th, 1877, you die at home.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mansion1900",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "stamp": "JANUARY 4, 1877",
+      "fx": "snow"
+    },
+    {
+      "text": "You're the richest man in America. Your fortune: about a hundred million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "callouts": [
+        {
+          "text": "~$100 MILLION",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "That's more than two billion dollars today, in a much smaller economy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault1880",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "callouts": [
+        {
+          "text": "~$2.9 BILLION TODAY",
+          "word": "billion"
+        }
+      ]
+    },
+    {
+      "text": "Your will leaves about ninety million dollars to just one child.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "paper": {
+        "text": "TO WILLIAM: ~$90,000,000",
+        "word": "will"
+      }
+    },
+    {
+      "text": "Billy. The slow son you sent to the farm.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Your daughters get small shares. Two of your children sue.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "shock"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "At trial, the family's secrets, including the séances and Sophia's asylum, end up in the newspapers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "secrets",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1876",
+        "value": "~$100M"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Billy settles, and then doubles the fortune in eight years. You were wrong about him.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wrong",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1885",
+        "value": "~$200M"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "So how did the richest man in America leave a fortune that disappeared?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "SPENDING"
+      }
+    },
+    {
+      "text": "Billy's children build palaces: The Breakers, Biltmore, a row of mansions on Fifth Avenue.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "SPENDING"
+      },
+      "crowd": 6,
+      "vision": {
+        "image": "mansion1900",
+        "word": "palaces"
+      }
+    },
+    {
+      "text": "Nobody in the family builds a new business. Everybody spends.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "SPENDING"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Myth time: you're often quoted saying, the public be damned.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "SPENDING"
+      },
+      "paper": {
+        "text": "THE PUBLIC BE DAMNED",
+        "word": "damned"
+      }
+    },
+    {
+      "text": "That wasn't you. It was Billy, to a reporter, in 1882.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wasn't",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1900",
+        "value": "SPENDING"
+      },
+      "extras": [
+        {
+          "who": "billy",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "In 1973, about a hundred and twenty members of your family hold a reunion at Vanderbilt University.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "grandcentral1871",
+      "counter": {
+        "label": "1973",
+        "value": "$0"
+      },
+      "bgIdea": "Grand Central Depot in New York, 1871: vast iron-and-glass train shed, steam locomotives, gas lamps, crowds with luggage, a big clock",
+      "stamp": "1973",
+      "crowd": 8
+    },
+    {
+      "text": "By one family historian's count, not one of them is a millionaire.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Not",
+          "expression": "shock"
+        }
+      ],
+      "bg": "grandcentral1871",
+      "counter": {
+        "label": "1973",
+        "value": "$0"
+      },
+      "bgIdea": "Grand Central Depot in New York, 1871: vast iron-and-glass train shed, steam locomotives, gas lamps, crowds with luggage, a big clock",
+      "callouts": [
+        {
+          "text": "MILLIONAIRES: 0",
+          "word": "millionaire"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "Here's the money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: LOWEST COST WINS",
+        "word": "rule"
+      }
+    },
+    {
+      "text": "The rule: whoever can do the job for less can afford to win the price war.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "less",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Today it's budget airlines: no free meals, packed seats, cheap fares, huge profits.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "airlines"
+        }
+      ]
+    },
+    {
+      "text": "And it works for a household too. Cut two hundred dollars of monthly costs, and that's twenty-four hundred a year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "$200 x 12 = $2,400",
+          "word": "twenty"
+        }
+      ]
+    },
+    {
+      "text": "A raise you give yourself, with no new boss.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "raise",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "But here's where the rule failed. Once you won, you raised prices and watered stock.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "failed",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Customers only win the price war while it lasts.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "And your heirs never learned the rule. They learned to spend.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "A cheap boat can beat a big one. A big fortune can't survive a lazy heir.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "albany1867",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "East Albany rail yard on the Hudson River, January 1867: snow falling, stopped steam locomotives and passenger cars, frozen river, crowds with luggage, grey sky",
+      "fx": "snow",
+      "title": "YOUR LIFE AS CORNELIUS VANDERBILT"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Cornelius Vanderbilt | $100 to America's Richest",
+      "Your Life as Cornelius Vanderbilt | The Man Who Stopped the Trains",
+      "Your Life as Cornelius Vanderbilt | Where Did $100 Million Go?"
+    ],
+    "thumbnail": "You, white-whiskered in a black frock coat, standing in front of a snow-stopped locomotive with arms crossed; text: '$100 TO $100M'",
+    "description": "You borrow $100 from your mother at 16 and buy a sailboat.\nYou die the richest man in America. Then your family spends it all.\n\nA comedic dramatization of documented history.\n\nSources:\nT. J. Stiles, The First Tycoon: The Epic Life of Cornelius Vanderbilt (2009)\nArthur T. Vanderbilt II, Fortune's Children (1989)\nGibbons v. Ogden, 22 U.S. 1 (1824)\nMark Twain, 'Open Letter to Com. Vanderbilt', Packard's Monthly (March 1869)",
+    "factCheck": [
+      "Born 27 May 1794, Port Richmond, Staten Island; parents Cornelius van Derbilt and Phebe Hand (Stiles)",
+      "Grandfather-clock savings and 8-acre loan deal are family stories, flagged as legend in script (Stiles; Lane, Commodore Vanderbilt 1942)",
+      "Left school ~age 11; limited literacy (Stiles)",
+      "Bought periauger 1810 with $100 from mother; ferry fare 18 cents; repaid plus ~$1,000 within a year (family accounts, Stiles)",
+      "'Commodore' nickname from young age; War of 1812 harbor-fort supply contract",
+      "Married cousin Sophia Johnson Dec 1813; 13 children",
+      "~$9,000 by 1817; captain of Gibbons's Bellona from 1818 (Stiles)",
+      "Fulton-Livingston steam monopoly in NY waters; Vanderbilt evaded arrest; Gibbons v. Ogden decided 2 March 1824, opinion by Marshall",
+      "Sophia ran Bellona Hall, New Brunswick NJ",
+      "Own line from 1829; Hudson River Association paid ~$100,000 plus $5,000/yr to withdraw (mid-1830s; Stiles)",
+      "Millionaire by mid-1840s (~$1.2M estimated 1846)",
+      "Moved to 10 Washington Place ~1846; Sophia committed to Bloomingdale Asylum ~1846-47 (Stiles)",
+      "William Henry sent to Staten Island farm; thought dull by father",
+      "Gold Rush; Accessory Transit Company Nicaragua route from 1851; Vanderbilt personally piloted a steamer up the San Juan rapids, age 56-57",
+      "North Star grand tour 1853; told press fortune ~$11M; Morgan and Garrison took control of Transit",
+      "'I'll ruin you' letter: Stiles found no contemporary evidence; first printed decades later (The First Tycoon, notes)",
+      "William Walker seized Nicaragua 1855-56, revoked Transit charter Feb 1856; Vanderbilt backed Costa Rica, agent Sylvanus Spencer; Walker surrendered May 1857",
+      "Donated steamship Vanderbilt to Union 1862 (valued ~$800,000); Congressional gold medal/joint resolution of thanks 1864",
+      "Son George Washington Vanderbilt died 1864 of illness contracted in service",
+      "Harlem corner 1863-64: price rose from under $10 (1862) to over $100 (Stiles)",
+      "Hudson River Railroad control 1864; William Henry vice president",
+      "New York Central blockade at East Albany, January 1867; control of Central by Dec 1867",
+      "Erie War 1868 with Drew, Gould, Fisk; Fisk 'printing press' quote widely reported; directors fled to Jersey City with ~$7M; settlement July 1868, Vanderbilt recovered most losses",
+      "Sophia died Aug 1868; married Frank Armstrong Crawford Aug 1869 (she ~30, he 75)",
+      "Consolidation Nov 1869 with ~$23M stock dividend ('watered stock')",
+      "Twain open letter, Packard's Monthly, March 1869",
+      "Backed Woodhull, Claflin & Co., first women-run Wall Street brokerage, Feb 1870",
+      "Grand Central Depot opened 1871; statue at St. John's Park freight depot 1869",
+      "Panic of 1873; $1M gift to Central University, Nashville, 1873 via Bishop Holland McTyeire (Frank's cousin), renamed Vanderbilt University",
+      "Died 4 Jan 1877 at 10 Washington Place, age 82; fortune ~$100M; richest man in America at the time (Stiles); ~$2.9B today via CPI x ~29 (1877-2026); as share of GDP far larger",
+      "Will left ~$90M+ to William Henry; contested by Cornelia and Cornelius Jeremiah; settled 1879",
+      "William Henry roughly doubled fortune to ~$200M by his death in 1885",
+      "'The public be damned': William Henry Vanderbilt, 1882 interview, Chicago Daily News",
+      "1973 family reunion at Vanderbilt University, ~120 descendants, no millionaire among them (Arthur T. Vanderbilt II, Fortune's Children)",
+      "Household example numbers are illustrative arithmetic"
+    ],
+    "sources": [
+      "T. J. Stiles, The First Tycoon (Knopf, 2009)",
+      "John Marshall, Gibbons v. Ogden, 22 U.S. 1 (1824): 'Commerce, undoubtedly, is traffic, but it is something more: it is intercourse.' https://www.law.cornell.edu/supremecourt/text/22/1",
+      "Jim Fisk 'printing press... old hog' quote: reported in Charles Francis Adams Jr., 'A Chapter of Erie' (1869) and Stiles",
+      "Mark Twain, 'Open Letter to Com. Vanderbilt', Packard's Monthly, March 1869",
+      "Vanderbilt letter to Holland McTyeire, 1873, Vanderbilt University history: https://www.vanderbilt.edu/about/history/",
+      "Arthur T. Vanderbilt II, Fortune's Children: The Fall of the House of Vanderbilt (1989)"
+    ],
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "You Stop the Trains",
+        "mood": "tense"
+      },
+      {
+        "scene": 10,
+        "title": "A Boy and a Boat",
+        "mood": "calm"
+      },
+      {
+        "scene": 34,
+        "title": "Steam and the Law",
+        "mood": "calm"
+      },
+      {
+        "scene": 55,
+        "title": "The Fare Wars",
+        "mood": "triumph"
+      },
+      {
+        "scene": 72,
+        "title": "A Cold Man at Home",
+        "mood": "sad"
+      },
+      {
+        "scene": 79,
+        "title": "Gold Rush Shortcut",
+        "mood": "triumph"
+      },
+      {
+        "scene": 87,
+        "title": "Cheated",
+        "mood": "tense"
+      },
+      {
+        "scene": 101,
+        "title": "War and Railroads",
+        "mood": "tense"
+      },
+      {
+        "scene": 115,
+        "title": "The Snowy Morning",
+        "mood": "tense"
+      },
+      {
+        "scene": 122,
+        "title": "The Erie War",
+        "mood": "tense"
+      },
+      {
+        "scene": 133,
+        "title": "Old Man, New Tricks",
+        "mood": "calm"
+      },
+      {
+        "scene": 152,
+        "title": "The Will",
+        "mood": "sad"
+      },
+      {
+        "scene": 162,
+        "title": "Where Did It Go?",
+        "mood": "mystery"
+      },
+      {
+        "scene": 169,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ],
+    "wordCount": 2219
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

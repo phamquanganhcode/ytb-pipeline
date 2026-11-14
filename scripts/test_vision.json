@@ -1,0 +1,18 @@
+{
+  "title": "Vision test",
+  "iconStyle": "bubble",
+  "captions": false,
+  "cast": {
+    "you": {"face": "hetty-green", "shirt": "#1f1f22"}
+  },
+  "scenes": [
+    {
+      "text": "At night, you lie awake and picture the vault, stacked to the ceiling with gold.",
+      "speaker": "narrator",
+      "actions": [{"who": "you", "word": "picture", "expression": "happy"}],
+      "bg": "home1880",
+      "counter": {"label": "1880", "value": "$20M"},
+      "vision": {"image": "vault1880", "word": "picture"}
+    }
+  ]
+}

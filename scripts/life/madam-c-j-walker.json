@@ -1,0 +1,3561 @@
+{
+  "title": "Your Life as Madam C. J. Walker | From Washtub to Mansion",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Madam C. J. Walker",
+      "face": "madam-cj-walker",
+      "shirt": "#5a2d4a",
+      "faceIdea": "African American businesswoman Madam C. J. Walker, 1914, age 46: round warm face, dark brown skin, thick dark hair swept up in a full pompadour, small pearl earrings, high lace collar"
+    },
+    "owen": {
+      "name": "Owen Breedlove",
+      "face": "owen-breedlove",
+      "faceIdea": "formerly enslaved Black Louisiana sharecropper, 1867, age 40s: lean weathered face, short grey-flecked beard, worn straw hat, rough cotton shirt"
+    },
+    "minerva": {
+      "name": "Minerva Breedlove",
+      "face": "minerva-breedlove",
+      "faceIdea": "formerly enslaved Black Louisiana woman, 1867, age 30s: tired gentle face, dark skin, hair wrapped in a plain headscarf, simple calico dress"
+    },
+    "louvenia": {
+      "name": "Louvenia Breedlove",
+      "face": "louvenia-breedlove",
+      "faceIdea": "young Black woman in Mississippi, 1878, age 20s: thin serious face, hair tied back, plain work dress with apron"
+    },
+    "lelia": {
+      "name": "Lelia McWilliams",
+      "face": "lelia-child",
+      "size": 0.6,
+      "faceIdea": "Black girl, 1890, age 5: round cheerful face, hair in two braids with ribbons, simple pinafore dress"
+    },
+    "alelia": {
+      "name": "A'Lelia Walker",
+      "face": "alelia-walker",
+      "faceIdea": "African American heiress A'Lelia Walker, 1918, age 33: tall, elegant long face, dark skin, short pressed hair under a jeweled turban, pearl necklace"
+    },
+    "annie": {
+      "name": "Annie Turnbo Malone",
+      "face": "annie-turnbo-malone",
+      "faceIdea": "African American businesswoman Annie Turnbo Malone, 1905, age 36: oval face, light brown skin, hair in a neat high bun, high-necked white blouse with brooch"
+    },
+    "cj": {
+      "name": "Charles Joseph Walker",
+      "face": "charles-joseph-walker",
+      "faceIdea": "African American newspaper advertising salesman Charles Joseph Walker, 1906, age 30s: round face, neat moustache, short hair, bowler hat, checked suit"
+    },
+    "booker": {
+      "name": "Booker T. Washington",
+      "face": "booker-t-washington",
+      "faceIdea": "African American educator Booker T. Washington, 1912, age 56: broad serious face, close-cropped greying hair, dark suit, high white collar, dark tie"
+    },
+    "ransom": {
+      "name": "Freeman B. Ransom",
+      "face": "freeman-ransom",
+      "faceIdea": "African American lawyer Freeman B. Ransom, 1915, age 30: young earnest face, round wire spectacles, short side-parted hair, three-piece suit"
+    },
+    "crowd1": {
+      "name": "Walker agent",
+      "face": "walker-agent-1915",
+      "faceIdea": "African American woman hair culturist, 1915: neat pressed hair in a bun, white uniform blouse, black skirt"
+    },
+    "crowd2": {
+      "name": "Church deacon",
+      "face": "deacon-1900s",
+      "faceIdea": "older African American man, 1900s, church deacon: grey moustache, round spectacles, black suit, bowler hat"
+    },
+    "crowd3": {
+      "name": "Washerwoman",
+      "face": "washerwoman-1890s",
+      "faceIdea": "African American washerwoman, St. Louis 1890s, age 50s: kind lined face, hair under a plain headscarf, rolled-up sleeves"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's August 1912, in Chicago, in a hall full of Black business leaders.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "stamp": "CHICAGO, 1912",
+      "crowd": 6
+    },
+    {
+      "text": "For two days, you've asked to speak. For two days, the answer is no.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "asked",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "callouts": [
+        {
+          "text": "YOU, MADAM C. J. WALKER",
+          "word": "asked",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "The man running this meeting is Booker T. Washington, one of the most powerful Black men in America.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "extras": [
+        {
+          "who": "booker"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "BOOKER T. WASHINGTON",
+          "word": "Booker",
+          "target": "booker"
+        }
+      ]
+    },
+    {
+      "text": "He thinks hair products are not serious business.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "serious",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "extras": [
+        {
+          "who": "booker"
+        }
+      ]
+    },
+    {
+      "text": "So you stand up anyway, without being called.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stand",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "crowd": 6
+    },
+    {
+      "text": "Surely, you tell him, you are not going to shut the door in my face.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "extras": [
+        {
+          "who": "booker",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "Surely you are not going to shut the door in my face.",
+        "word": "Surely"
+      }
+    },
+    {
+      "text": "Twenty-five years ago, you were washing other people's clothes for about a dollar and a half a day.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "washing",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "callouts": [
+        {
+          "text": "$1.50 A DAY",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "Seven years from now, you'll die in a mansion on the Hudson River.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mansion",
+          "expression": "happy"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "callouts": [
+        {
+          "text": "34 ROOMS",
+          "word": "mansion"
+        }
+      ]
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you there,",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond"
+    },
+    {
+      "text": "and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "empty": true,
+      "stamp": "DELTA, LOUISIANA, 1867"
+    },
+    {
+      "text": "It's December 23rd, 1867, and you're born in a cabin on a cotton plantation.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "born",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "callouts": [
+        {
+          "text": "YOU, AGE 0",
+          "word": "born",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your name is Sarah Breedlove.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "callouts": [
+        {
+          "text": "SARAH BREEDLOVE",
+          "word": "Sarah"
+        }
+      ]
+    },
+    {
+      "text": "Your parents, Owen and Minerva, were enslaved on this same plantation.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "extras": [
+        {
+          "who": "owen"
+        },
+        {
+          "who": "minerva"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "OWEN, YOUR FATHER",
+          "word": "Owen",
+          "target": "owen"
+        },
+        {
+          "text": "MINERVA, YOUR MOTHER",
+          "word": "Minerva",
+          "target": "minerva"
+        }
+      ]
+    },
+    {
+      "text": "The Civil War ended two years ago. You're the first child in your family born free.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "extras": [
+        {
+          "who": "owen",
+          "expression": "happy"
+        },
+        {
+          "who": "minerva",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "BORN FREE",
+          "word": "free"
+        }
+      ]
+    },
+    {
+      "text": "Keep count of three things: the money, the women working with you, and the doors closed in your face.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1867",
+        "value": "AGE 0"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze"
+    },
+    {
+      "text": "Freedom doesn't pay much yet.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1872",
+        "value": "AGE 4"
+      }
+    },
+    {
+      "text": "Your family still picks cotton, now as sharecroppers: farmers who pay their rent with part of the crop.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1872",
+        "value": "AGE 4"
+      },
+      "extras": [
+        {
+          "who": "owen"
+        },
+        {
+          "who": "minerva"
+        }
+      ]
+    },
+    {
+      "text": "At the end of the season, the landowner's books somehow always say you owe him.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "farmland1880",
+      "counter": {
+        "label": "1872",
+        "value": "AGE 4"
+      },
+      "extras": [
+        {
+          "who": "owen",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Your mother dies when you're about five. Your father, a year or two later.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "expression": "shock"
+        }
+      ],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1875",
+        "value": "AGE 7"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "fx": "rain"
+    },
+    {
+      "text": "By seven, you're an orphan.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1875",
+        "value": "AGE 7"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "callouts": [
+        {
+          "text": "YOU, ORPHAN, 7",
+          "word": "orphan",
+          "target": "you"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "Your big sister, Louvenia, takes you in.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "delta1867",
+      "counter": {
+        "label": "1875",
+        "value": "AGE 7"
+      },
+      "bgIdea": "sharecropper's log cabin in Delta, Louisiana, 1867: one room, a fireplace with an iron pot, a straw mattress on the floor, cotton fields through the open door, Mississippi River haze",
+      "extras": [
+        {
+          "who": "louvenia",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LOUVENIA, YOUR SISTER",
+          "word": "Louvenia",
+          "target": "louvenia"
+        }
+      ]
+    },
+    {
+      "text": "In 1878, the two of you cross the river to Vicksburg, Mississippi.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1878",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "louvenia"
+        }
+      ],
+      "stamp": "VICKSBURG, 1878"
+    },
+    {
+      "text": "You're ten years old, and you work as a maid, scrubbing other people's floors.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "work",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1878",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window"
+    },
+    {
+      "text": "You get about three months of school in your whole life, at Sunday school.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "school",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1878",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "callouts": [
+        {
+          "text": "3 MONTHS OF SCHOOL",
+          "word": "months"
+        }
+      ]
+    },
+    {
+      "text": "Louvenia's husband, Jesse Powell, is cruel to you, and the house is not safe.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cruel",
+          "expression": "shock"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1878",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "louvenia",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "You see one way out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "way",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1878",
+        "value": "AGE 10"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window"
+    },
+    {
+      "text": "At fourteen, you marry a man named Moses McWilliams.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1882",
+        "value": "AGE 14"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "stamp": "1882"
+    },
+    {
+      "text": "Later you'll explain it simply: I married at the age of fourteen in order to get a home of my own.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1882",
+        "value": "AGE 14"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "quote": {
+        "who": "you",
+        "text": "I married at the age of fourteen in order to get a home of my own.",
+        "word": "married"
+      }
+    },
+    {
+      "text": "In 1885, you have a daughter. You name her Lelia.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "daughter",
+          "expression": "happy"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1885",
+        "value": "AGE 17"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "lelia",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LELIA, YOUR DAUGHTER",
+          "word": "Lelia",
+          "target": "lelia"
+        }
+      ],
+      "stamp": "1885"
+    },
+    {
+      "text": "Remember that name. One day it'll be carved over the door of a mansion.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1885",
+        "value": "AGE 17"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "lelia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The convention that won't let you speak is twenty-seven years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1885",
+        "value": "AGE 17"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "lelia"
+        }
+      ]
+    },
+    {
+      "text": "Two years later, Moses dies. Nobody knows exactly how.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dies",
+          "expression": "shock"
+        }
+      ],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1887",
+        "value": "AGE 19"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "fx": "rain"
+    },
+    {
+      "text": "You're nineteen, a widow, with a two-year-old and no money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vicksburg1880",
+      "counter": {
+        "label": "1887",
+        "value": "AGE 19"
+      },
+      "bgIdea": "small wooden house kitchen in Vicksburg, Mississippi, 1880: wood stove, washboard and bucket, a steep hillside street and river boats through the window",
+      "extras": [
+        {
+          "who": "lelia"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, WIDOW, 19",
+          "word": "widow",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your four older brothers have moved to St. Louis, where they work as barbers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1888",
+        "value": "AGE 20"
+      },
+      "extras": [
+        {
+          "who": "lelia"
+        }
+      ],
+      "stamp": "ST. LOUIS, 1888"
+    },
+    {
+      "text": "Barbers. Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1888",
+        "value": "AGE 20"
+      },
+      "vision": {
+        "image": "bucketshop1890",
+        "word": "Barbers"
+      }
+    },
+    {
+      "text": "So you take Lelia north on a riverboat, to a city of half a million people.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "take",
+          "pose": "point"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1888",
+        "value": "AGE 20"
+      },
+      "extras": [
+        {
+          "who": "lelia"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You find work as a washerwoman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "washerwoman",
+          "pose": "idle"
+        }
+      ],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1888",
+        "value": "$1.50/DAY"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "crowd": 2
+    },
+    {
+      "text": "You boil other families' laundry in a tub, scrub it on a board, and iron it by hand.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "scrub",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1888",
+        "value": "$1.50/DAY"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky"
+    },
+    {
+      "text": "For all that, you earn about a dollar and a half a day.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1888",
+        "value": "$1.50/DAY"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "callouts": [
+        {
+          "text": "$1.50 A DAY",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "Remember that number.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1888",
+        "value": "$1.50/DAY"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "number",
+          "label": "$1.50"
+        }
+      ]
+    },
+    {
+      "text": "You save enough to send Lelia to school. She'll get the education you never did.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "save",
+          "expression": "happy"
+        }
+      ],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1888",
+        "value": "$1.50/DAY"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "extras": [
+        {
+          "who": "lelia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "On Sundays, you go to St. Paul African Methodist Episcopal Church.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 22"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "The church women there are teachers and club women. They wear neat dresses and neat hair.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "neat",
+          "expression": "happy"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 22"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "You watch them, and you start to picture a different life.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "church1870",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 22"
+      },
+      "vision": {
+        "image": "parlor",
+        "word": "picture"
+      }
+    },
+    {
+      "text": "In 1894, you marry again, a man named John Davis.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1894",
+        "value": "AGE 26"
+      },
+      "stamp": "1894"
+    },
+    {
+      "text": "He drinks, and he's not faithful. By around 1903, it's over.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "drinks",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1894",
+        "value": "AGE 26"
+      }
+    },
+    {
+      "text": "And then, in your thirties, something frightening starts to happen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      }
+    },
+    {
+      "text": "Your hair is falling out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "falling",
+          "expression": "shock"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      },
+      "callouts": [
+        {
+          "text": "BALD SPOTS",
+          "word": "falling"
+        }
+      ]
+    },
+    {
+      "text": "It's common among Black women of your time, and it's not mysterious.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "common",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      }
+    },
+    {
+      "text": "Most homes have no indoor plumbing, so you wash your hair rarely, with harsh lye soap.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "plumbing",
+          "label": "NO TAPS"
+        }
+      ]
+    },
+    {
+      "text": "Add poor food, stress, and scalp infections, and the hair simply stops growing.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stops",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      }
+    },
+    {
+      "text": "You ask your brothers the barbers for help. They know a lot about scalps.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "brothers",
+          "pose": "point"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      }
+    },
+    {
+      "text": "You try every home remedy and store tonic you can find. Nothing works.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Nothing",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 30"
+      }
+    },
+    {
+      "text": "Then, around 1903, you try a product made by a young St. Louis woman named Annie Turnbo.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "extras": [
+        {
+          "who": "annie",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ANNIE TURNBO",
+          "word": "Annie",
+          "target": "annie"
+        }
+      ]
+    },
+    {
+      "text": "Her Great Wonderful Hair Grower actually helps. Your hair starts coming back.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "helps",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "extras": [
+        {
+          "who": "annie",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "And Annie doesn't sell in stores. She sells through agents.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "agents",
+          "pose": "point"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "extras": [
+        {
+          "who": "annie"
+        }
+      ]
+    },
+    {
+      "text": "Here's the idea that will make you rich.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      }
+    },
+    {
+      "text": "Imagine you bake the best bread in town, but you have only two hands.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "best",
+          "expression": "happy"
+        },
+        {
+          "who": "you",
+          "word": "hands",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      }
+    },
+    {
+      "text": "You can bake maybe a hundred loaves a day. That's your ceiling.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "callouts": [
+        {
+          "text": "100 LOAVES A DAY",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Now teach a hundred neighbors your recipe, and sell each of them the flour.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "teach",
+          "pose": "point"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "They bake and sell in their own streets, and keep the profit from every loaf they sell.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "callouts": [
+        {
+          "text": "THEIR PROFIT",
+          "word": "profit"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "You earn a little on every bag of flour, a hundred times over.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hundred",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "callouts": [
+        {
+          "text": "100 x YOUR SALES",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "That's selling through agents: people who sell your product and keep a share for themselves.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "paper": {
+        "text": "AGENT = SELLS FOR YOU, KEEPS A SHARE",
+        "word": "agents"
+      }
+    },
+    {
+      "text": "You don't grow by working harder. You grow by making other people money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "grow",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      }
+    },
+    {
+      "text": "You become one of Annie's agents, selling her grower door to door in St. Louis.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "selling",
+          "pose": "handOut",
+          "hold": "piggy"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      },
+      "extras": [
+        {
+          "who": "annie"
+        }
+      ],
+      "crowd": 3
+    },
+    {
+      "text": "You're a good saleswoman. You know exactly what it feels like to lose your hair.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lose",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 35"
+      }
+    },
+    {
+      "text": "In 1904, the World's Fair comes to St. Louis.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Fair",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1904",
+        "value": "AGE 36"
+      },
+      "stamp": "ST. LOUIS, 1904",
+      "crowd": 8
+    },
+    {
+      "text": "There you see Margaret Murray Washington, Booker T. Washington's wife, speak to a crowd of Black club women.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "see",
+          "pose": "point"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1904",
+        "value": "AGE 36"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "She's polished, educated, confident. You wonder if a washerwoman could ever stand on a stage like that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1904",
+        "value": "AGE 36"
+      },
+      "vision": {
+        "image": "ballroom1890",
+        "word": "stage"
+      }
+    },
+    {
+      "text": "The convention that won't let you speak is eight years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1904",
+        "value": "AGE 36"
+      }
+    },
+    {
+      "text": "In July 1905, at thirty-seven, you take a train to Denver, Colorado.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "train",
+          "pose": "point"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "stamp": "DENVER, 1905"
+    },
+    {
+      "text": "You'll later say you arrived with about a dollar and fifty cents.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "arrived",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "callouts": [
+        {
+          "text": "$1.50 IN SAVINGS",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "Denver has a lot of sun, very dry air, and almost no hair products for Black women.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "almost",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      }
+    },
+    {
+      "text": "You rent an attic room, and you sell Annie's grower as her Denver agent.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut",
+          "hold": "piggy"
+        }
+      ],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light"
+    },
+    {
+      "text": "To pay the rent, you also cook for a pharmacist named Edmund Scholtz.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cook",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light"
+    },
+    {
+      "text": "A pharmacist. Remember that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light",
+      "vision": {
+        "image": "hospital1890",
+        "word": "pharmacist"
+      }
+    },
+    {
+      "text": "Then you have a dream.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dream",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light"
+    },
+    {
+      "text": "You'll say a big black man appeared to you and told you what to mix up for your hair.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light",
+      "quote": {
+        "who": "you",
+        "text": "A big black man appeared to me and told me what to mix up for my hair.",
+        "word": "appeared"
+      }
+    },
+    {
+      "text": "Some of the ingredients came from Africa, you'll say, and you sent away for them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Africa",
+          "pose": "point"
+        }
+      ],
+      "bg": "denver1905",
+      "counter": {
+        "label": "1905",
+        "value": "$1.50"
+      },
+      "bgIdea": "Denver attic room, 1905: sloping ceiling, a single iron bed, a wash basin, tins and jars on a shelf, the Rocky Mountains through a small window, bright dry light"
+    },
+    {
+      "text": "Historians think the real recipe is more ordinary: petroleum jelly, sulfur, and a strong scent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1905",
+        "value": "AGE 37"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table",
+      "paper": {
+        "text": "PETROLATUM, SULFUR, PERFUME",
+        "word": "petroleum"
+      }
+    },
+    {
+      "text": "Sulfur is an old treatment for scalp infections. The pharmacist you cook for may well have helped.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Sulfur",
+          "pose": "point"
+        }
+      ],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1905",
+        "value": "AGE 37"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table"
+    },
+    {
+      "text": "Whatever the source, you mix it in your kitchen, pack it in tins, and test it on yourself.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mix",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1905",
+        "value": "AGE 37"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table"
+    },
+    {
+      "text": "You call it Madam Walker's Wonderful Hair Grower.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "call",
+          "hold": null
+        }
+      ],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1905",
+        "value": "AGE 37"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table",
+      "paper": {
+        "text": "MADAM WALKER'S WONDERFUL HAIR GROWER",
+        "word": "Wonderful"
+      }
+    },
+    {
+      "text": "Wait. Walker?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1905",
+        "value": "AGE 37"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table"
+    },
+    {
+      "text": "In January 1906, you marry Charles Joseph Walker, a newspaper advertising salesman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "handOut",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "cj",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "C. J. WALKER, HUSBAND #3",
+          "word": "Charles",
+          "target": "cj"
+        }
+      ],
+      "stamp": "1906"
+    },
+    {
+      "text": "He knows how to write ads, and he knows how to get them printed cheaply.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "cj",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You take his name and add a French-sounding title. From now on, you're Madam C. J. Walker.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "cj"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, MADAM C. J. WALKER",
+          "word": "Madam",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "In the beauty trade, Madam sounds expensive. Which is the point.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "expensive",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      }
+    },
+    {
+      "text": "Annie Turnbo is not pleased that her Denver agent now sells her own grower.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "annie",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Her ads start warning customers to beware of imitators.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "annie",
+          "expression": "shock"
+        }
+      ],
+      "paper": {
+        "text": "BEWARE OF IMITATIONS!",
+        "word": "beware"
+      }
+    },
+    {
+      "text": "The two of you will be rivals for the rest of your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rivals",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "annie"
+        }
+      ]
+    },
+    {
+      "text": "Your ads show a before photo of you, short-haired, and an after photo with long hair.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      },
+      "extras": [
+        {
+          "who": "cj"
+        }
+      ],
+      "paper": {
+        "text": "BEFORE / AFTER",
+        "word": "before"
+      }
+    },
+    {
+      "text": "The before photo is the washerwoman. The after photo is the brand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1906",
+        "value": "AGE 38"
+      }
+    },
+    {
+      "text": "For eighteen months, you and C. J. travel the South, selling door to door.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "travel",
+          "pose": "point"
+        }
+      ],
+      "bg": "railroad1890",
+      "counter": {
+        "label": "1907",
+        "value": "AGE 39"
+      },
+      "extras": [
+        {
+          "who": "cj"
+        }
+      ]
+    },
+    {
+      "text": "You demonstrate in churches and lodges: you wash a woman's hair, treat her scalp, and press it smooth.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wash",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1907",
+        "value": "AGE 39"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Then you sell her the tin, for about fifty cents.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "hold": null
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1907",
+        "value": "AGE 39"
+      },
+      "callouts": [
+        {
+          "text": "50 CENTS A TIN",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "Soon you're making about ten dollars a day. Seven times what the washtub paid.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ten",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1907",
+        "value": "$10/DAY"
+      },
+      "callouts": [
+        {
+          "text": "$10 A DAY",
+          "word": "ten"
+        }
+      ]
+    },
+    {
+      "text": "C. J. thinks ten dollars a day is plenty. You'll later say he thought you were aiming too high.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1907",
+        "value": "$10/DAY"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table",
+      "extras": [
+        {
+          "who": "cj",
+          "expression": "neutral",
+          "pose": "shrug"
+        }
+      ]
+    },
+    {
+      "text": "You don't want ten dollars a day. You want an empire.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "empire",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1907",
+        "value": "$10/DAY"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table"
+    },
+    {
+      "text": "In 1908, you open a school in Pittsburgh, and call it Lelia College.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LELIA, NOW 23",
+          "word": "Lelia",
+          "target": "alelia"
+        }
+      ],
+      "stamp": "PITTSBURGH, 1908"
+    },
+    {
+      "text": "Your daughter runs it. Lelia's all grown up.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Here, women learn the Walker System: shampoo, grower, a brisk scalp massage, then a hot comb.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "crowd": 5,
+      "paper": {
+        "text": "THE WALKER SYSTEM",
+        "word": "Walker"
+      }
+    },
+    {
+      "text": "They graduate as hair culturists: trained beauty workers who use only your products.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "callouts": [
+        {
+          "text": "HAIR CULTURISTS",
+          "word": "culturists"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "Many of them used to be maids, cooks, and washerwomen. Like you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Like",
+          "expression": "happy"
+        }
+      ],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "crowd": 5
+    },
+    {
+      "text": "They pay for the course, buy your products at a discount, and sell them at full price.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "icons": [
+        {
+          "icon": "money",
+          "word": "pay"
+        },
+        {
+          "icon": "chart",
+          "word": "full"
+        }
+      ]
+    },
+    {
+      "text": "A Walker agent can earn several dollars a day. Some say up to fifteen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "callouts": [
+        {
+          "text": "$5 TO $15 A DAY",
+          "word": "dollars"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "Remember the washtub? A dollar and a half a day.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "callouts": [
+        {
+          "text": "THEN: $1.50 A DAY",
+          "word": "dollar"
+        }
+      ]
+    },
+    {
+      "text": "For a Black woman in 1908, there are very few jobs that pay like this, and no boss looking over her shoulder.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "crowd": 4
+    },
+    {
+      "text": "Myth time. The internet says you invented the hot comb.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "internet",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      }
+    },
+    {
+      "text": "You didn't. Metal heated combs were already sold in Paris and in American catalogs.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      },
+      "paper": {
+        "text": "INVENTED THE HOT COMB",
+        "word": "didn't",
+        "fix": {
+          "strike": "INVENTED",
+          "write": "SOLD",
+          "word": "sold"
+        }
+      }
+    },
+    {
+      "text": "Your real invention isn't a tool. It's a business, built out of thousands of other women.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "business",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1908",
+        "value": "AGE 40"
+      }
+    },
+    {
+      "text": "In 1910, you move the company to Indianapolis, a railroad hub in the middle of the country.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1910",
+        "value": "AGE 42"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "stamp": "INDIANAPOLIS, 1910"
+    },
+    {
+      "text": "Trains leave from here in every direction. So do your tins.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Trains",
+          "pose": "point"
+        }
+      ],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1910",
+        "value": "AGE 42"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows"
+    },
+    {
+      "text": "You build a factory, a lab, a salon, and a training school.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "build",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1910",
+        "value": "AGE 42"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "crowd": 6
+    },
+    {
+      "text": "You hire a young lawyer named Freeman Ransom to run the business side.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1910",
+        "value": "AGE 42"
+      },
+      "extras": [
+        {
+          "who": "ransom",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "F. B. RANSOM, YOUR LAWYER",
+          "word": "Ransom",
+          "target": "ransom"
+        }
+      ]
+    },
+    {
+      "text": "In 1911, you incorporate. You are the sole shareholder.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1911",
+        "value": "AGE 43"
+      },
+      "extras": [
+        {
+          "who": "ransom"
+        }
+      ],
+      "paper": {
+        "text": "SOLE OWNER: MADAM C. J. WALKER",
+        "word": "sole"
+      }
+    },
+    {
+      "text": "That same year, you give a thousand dollars to build a Black YMCA in Indianapolis.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "give",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1911",
+        "value": "AGE 43"
+      },
+      "callouts": [
+        {
+          "text": "$1,000 GIFT",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "It's the kind of gift people expect from rich white men, not from a former washerwoman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gift",
+          "hold": null
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1911",
+        "value": "AGE 43"
+      },
+      "extras": [
+        {
+          "who": "ransom",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "C. J. wants a bigger say. He also, reportedly, wants other women.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "say",
+          "expression": "shock"
+        }
+      ],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1911",
+        "value": "AGE 43"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table",
+      "extras": [
+        {
+          "who": "cj",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1912, you divorce him. You keep his name. It's on every tin.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table",
+      "paper": {
+        "text": "MRS. C. J. WALKER",
+        "word": "keep",
+        "fix": {
+          "strike": "MRS.",
+          "write": "MADAM",
+          "word": "tin"
+        }
+      }
+    },
+    {
+      "text": "The convention that won't let you speak is now just months away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kitchenlab1906",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "small Denver kitchen turned workshop, 1906: a stove with simmering pots, rows of round tins with paper labels, mixing bowls, a hand-written recipe on the table"
+    },
+    {
+      "text": "August 1912. Chicago. The National Negro Business League.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "stamp": "CHICAGO, 1912",
+      "crowd": 7
+    },
+    {
+      "text": "Booker T. Washington founded it to show the country what Black business can do.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "extras": [
+        {
+          "who": "booker"
+        }
+      ],
+      "crowd": 5
+    },
+    {
+      "text": "Day after day, he calls on bankers, farmers, and undertakers. Not on you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Not",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "extras": [
+        {
+          "who": "booker"
+        }
+      ]
+    },
+    {
+      "text": "A friend asks him to give you a moment. Washington moves on.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cityhall1907",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "extras": [
+        {
+          "who": "booker"
+        }
+      ]
+    },
+    {
+      "text": "So, on the last day, you stand up and take it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stand",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "crowd": 6
+    },
+    {
+      "text": "I am a woman who came from the cotton fields of the South, you tell the hall.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "quote": {
+        "who": "you",
+        "text": "I am a woman who came from the cotton fields of the South.",
+        "word": "woman"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "I was promoted to the washtub, then to the cook kitchen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "washtub1890",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "St. Louis back yard, 1890s: steaming wooden washtubs over a fire, washboards, lines of white sheets drying, brick tenements behind, smoky sky",
+      "callouts": [
+        {
+          "text": "WASHTUB, THEN KITCHEN",
+          "word": "washtub"
+        }
+      ]
+    },
+    {
+      "text": "And from there, you say, I promoted myself into the business of manufacturing hair goods.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "myself",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "quote": {
+        "who": "you",
+        "text": "I promoted myself into the business of manufacturing hair goods.",
+        "word": "promoted"
+      }
+    },
+    {
+      "text": "You tell them you've built your own factory on your own ground.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "factory",
+          "pose": "point"
+        }
+      ],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "extras": [
+        {
+          "who": "booker",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "The hall goes quiet. Washington doesn't reply. But he heard you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "1912",
+        "value": "AGE 44"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "extras": [
+        {
+          "who": "booker",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "A year later, he invites you to speak from the stage.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "invites",
+          "expression": "happy"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "extras": [
+        {
+          "who": "booker",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "1913",
+      "crowd": 6
+    },
+    {
+      "text": "The door that was shut in your face is now open. Remember that, too.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "extras": [
+        {
+          "who": "booker",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "By now, you have thousands of agents across the country.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "callouts": [
+        {
+          "text": "THOUSANDS OF AGENTS",
+          "word": "thousands"
+        }
+      ],
+      "crowd": 6
+    },
+    {
+      "text": "You sail to Cuba, Jamaica, Haiti, Costa Rica, and Panama to recruit more.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sail",
+          "pose": "point"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "stamp": "CARIBBEAN, 1913"
+    },
+    {
+      "text": "You make sure you travel with tins. Every port is a market.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tins",
+          "pose": "handOut",
+          "hold": "coin"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      }
+    },
+    {
+      "text": "Meanwhile, Lelia moves to Harlem, in New York City, and opens a beauty salon there.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Lelia",
+          "hold": null
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "HARLEM, 1913"
+    },
+    {
+      "text": "Years later, she'll change her name to A'Lelia. It sounds grander.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1913",
+        "value": "AGE 45"
+      },
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "A'LELIA WALKER",
+          "word": "A'Lelia",
+          "target": "alelia"
+        }
+      ]
+    },
+    {
+      "text": "In 1916, you join her in Harlem, in a pair of townhouses on 136th Street.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "join",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1916",
+        "value": "AGE 48"
+      },
+      "extras": [
+        {
+          "who": "alelia"
+        }
+      ],
+      "stamp": "NEW YORK, 1916"
+    },
+    {
+      "text": "Harlem is becoming the capital of Black America, and you want to be in the middle of it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "middle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1916",
+        "value": "AGE 48"
+      }
+    },
+    {
+      "text": "In 1917, you gather your agents in Philadelphia for a national convention.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "stamp": "PHILADELPHIA, 1917",
+      "crowd": 8
+    },
+    {
+      "text": "It's one of the first national meetings of American businesswomen, of any color.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "callouts": [
+        {
+          "text": "200 AGENTS",
+          "word": "national"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "You give prizes to the agents who sold the most.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prizes",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "And prizes to the agents who gave the most to charity.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charity",
+          "pose": "cheer",
+          "hold": null
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "There is no royal flower-strewn path to success, you tell people.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "quote": {
+        "who": "you",
+        "text": "There is no royal flower-strewn path to success.",
+        "word": "royal"
+      }
+    },
+    {
+      "text": "You also tell your agents: use your money and your voice.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "voice",
+          "pose": "point"
+        }
+      ],
+      "bg": "ballroom1890",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "That summer, white mobs in East St. Louis kill dozens of Black residents.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "fx": "storm",
+      "empty": true,
+      "stamp": "EAST ST. LOUIS, 1917"
+    },
+    {
+      "text": "You join a delegation to the White House to ask President Wilson to act.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "White",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "bgIdea": "outside the White House, Washington, 1917: iron fence and gate, the white columned portico across the lawn, a guard, summer trees",
+      "crowd": 3
+    },
+    {
+      "text": "The President is too busy to see you. His secretary takes your petition instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "busy",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "bgIdea": "outside the White House, Washington, 1917: iron fence and gate, the white columned portico across the lawn, a guard, summer trees",
+      "paper": {
+        "text": "PETITION TO THE PRESIDENT",
+        "word": "petition"
+      }
+    },
+    {
+      "text": "Another door shut. This one, money can't open.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "1917",
+        "value": "AGE 49"
+      },
+      "bgIdea": "outside the White House, Washington, 1917: iron fence and gate, the white columned portico across the lawn, a guard, summer trees",
+      "fx": "rain"
+    },
+    {
+      "text": "In 1918, you finish building a mansion in Irvington, on the Hudson River.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "stamp": "IRVINGTON, N.Y., 1918"
+    },
+    {
+      "text": "Your neighbors are some of the richest white families in New York.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "neighbors",
+          "pose": "point"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond"
+    },
+    {
+      "text": "They assume a Black woman this rich must be somebody's housekeeper.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "housekeeper",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond"
+    },
+    {
+      "text": "The architect is Vertner Tandy, the first licensed Black architect in New York State.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "callouts": [
+        {
+          "text": "ARCHITECT: VERTNER TANDY",
+          "word": "Tandy"
+        }
+      ]
+    },
+    {
+      "text": "You want the house to prove what a Black woman can build.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prove",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond"
+    },
+    {
+      "text": "The opera singer Enrico Caruso visits, and suggests a name.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "paper": {
+        "text": "LE + WA + RO",
+        "word": "name"
+      }
+    },
+    {
+      "text": "Lelia, Walker, Robinson: your daughter's married name at the time. Villa Lewaro.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ],
+      "paper": {
+        "text": "VILLA LEWARO",
+        "word": "Lewaro"
+      }
+    },
+    {
+      "text": "The little girl born in 1885 now has her name over the door.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "door",
+          "expression": "happy"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1918",
+        "value": "AGE 50"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "But your doctors have been warning you for years about your blood pressure.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "warning",
+          "expression": "shock"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      }
+    },
+    {
+      "text": "You keep traveling anyway, and speaking, and selling.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "anyway",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      }
+    },
+    {
+      "text": "In spring 1919, you pledge five thousand dollars to the NAACP's fight against lynching.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pledge",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      },
+      "extras": [
+        {
+          "who": "ransom"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$5,000 PLEDGE",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "It's the biggest single gift that fund has ever received.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gift",
+          "hold": null
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      },
+      "extras": [
+        {
+          "who": "ransom",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Weeks later, on May 25th, 1919, you die at Villa Lewaro of kidney failure.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "fx": "rain",
+      "stamp": "MAY 25, 1919"
+    },
+    {
+      "text": "You're fifty-one years old.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "villalewaro1918",
+      "counter": {
+        "label": "1919",
+        "value": "AGE 51"
+      },
+      "bgIdea": "Villa Lewaro in Irvington, New York, 1918: grand Italianate mansion with columns, a terrace with stone balustrade, gardens, the Hudson River and Palisades beyond",
+      "callouts": [
+        {
+          "text": "YOU, 51",
+          "word": "fifty",
+          "target": "you"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "Your will leaves a third of your estate to A'Lelia, and two-thirds of future profits to charity.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "neutral"
+        }
+      ],
+      "paper": {
+        "text": "2/3 OF PROFITS TO CHARITY",
+        "word": "charity"
+      }
+    },
+    {
+      "text": "A'Lelia will turn your Harlem home into a famous salon for writers and artists.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "apartment1910",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "extras": [
+        {
+          "who": "alelia",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "So, how did a washerwoman end up with a mansion on the Hudson?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      }
+    },
+    {
+      "text": "Myth number two: you're often called America's first self-made female millionaire.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millionaire",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "paper": {
+        "text": "FIRST SELF-MADE MILLIONAIRE",
+        "word": "millionaire"
+      }
+    },
+    {
+      "text": "Your estate was valued at about six hundred thousand dollars. Close, but not a million.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "paper": {
+        "text": "$1,000,000",
+        "word": "valued",
+        "fix": {
+          "strike": "$1,000,000",
+          "write": "$600,000",
+          "word": "six"
+        }
+      }
+    },
+    {
+      "text": "That's roughly eleven million dollars today. Not bad for someone with three months of school.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bad",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "callouts": [
+        {
+          "text": "~$11 MILLION TODAY",
+          "word": "eleven"
+        }
+      ]
+    },
+    {
+      "text": "And it was never the money that mattered most.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      }
+    },
+    {
+      "text": "Tens of thousands of women learned a trade under your name, and kept their own earnings.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "crowd": 8
+    },
+    {
+      "text": "Many of them would never wash another stranger's sheets.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "crowd": 6
+    },
+    {
+      "text": "You once summed it up: I got my start by giving myself a start.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "walkerfactory1911",
+      "counter": {
+        "label": "1919",
+        "value": "$600K"
+      },
+      "bgIdea": "Madam C. J. Walker Manufacturing Company in Indianapolis, 1911: brick workroom, women in white aprons filling and labeling round tins at long tables, crates stamped WALKER, tall factory windows",
+      "quote": {
+        "who": "you",
+        "text": "I got my start by giving myself a start.",
+        "word": "start"
+      }
+    },
+    {
+      "text": "Here's the money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MONEY RULE: GROW BY MAKING OTHERS EARN",
+        "word": "rule"
+      }
+    },
+    {
+      "text": "The rule: your income can only grow as far as the people you help earn.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "income",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Picture a hairdresser who cuts ten heads a day at forty dollars each. Four hundred a day, maximum.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "$400/DAY CEILING",
+          "word": "Four"
+        }
+      ]
+    },
+    {
+      "text": "Now she rents five chairs to other stylists for two hundred a week each.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "rents"
+        }
+      ]
+    },
+    {
+      "text": "That's another thousand a week, and five people building their own businesses.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "thousand",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "callouts": [
+        {
+          "text": "+$1,000 A WEEK",
+          "word": "thousand"
+        }
+      ]
+    },
+    {
+      "text": "But here's where the rule goes wrong.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wrong",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Many modern direct-selling schemes copy your model, and most of their sellers earn little or lose money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1929",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "paper": {
+        "text": "MOST SELLERS: LITTLE OR NOTHING",
+        "word": "lose"
+      }
+    },
+    {
+      "text": "The test is simple: do people earn from real customers, or only from recruiting more people?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "test",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1929",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      }
+    },
+    {
+      "text": "Your agents had real customers, who came back every month because the hair grew back.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains",
+      "crowd": 5
+    },
+    {
+      "text": "You didn't get rich off women. You got rich with them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "with",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "leliacollege1908",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "bgIdea": "Lelia College beauty school in Pittsburgh, 1908: bright parlor classroom, rows of chairs with students, washbasins, combs and tins on a counter, a chalkboard, lace curtains"
+    },
+    {
+      "text": "Some doors open when you knock. The rest, you build.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "convention1912",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "Chicago meeting hall, 1912: raised wooden stage with a long table and a podium, rows of wooden chairs, bunting with 'National Negro Business League' banner, tall windows, afternoon light",
+      "title": "YOUR LIFE AS MADAM C. J. WALKER"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Madam C. J. Walker | From Washtub to Mansion",
+      "Your Life as Madam C. J. Walker | They Wouldn't Let You Speak",
+      "Your Life as Madam C. J. Walker | $1.50 a Day to an Empire"
+    ],
+    "thumbnail": "You, in a pearl-collared dress, standing on a hall stage holding a round tin of hair grower, a washtub behind you; text: 'FROM $1.50'",
+    "description": "Born free on a Louisiana plantation, orphaned at seven, washing clothes for $1.50 a day.\nThen you build an army of saleswomen and a mansion on the Hudson.\n\nA comedic dramatization of documented history.\n\nSources:\nA'Lelia Bundles, On Her Own Ground: The Life and Times of Madam C. J. Walker (2001)\nMadam C. J. Walker Papers, Indiana Historical Society\nNational Park Service and Smithsonian NMAAHC articles on Madam C. J. Walker",
+    "factCheck": [
+      "Born Sarah Breedlove, 23 Dec 1867, Delta, Madison Parish, Louisiana, on the Burney plantation; parents Owen and Minerva had been enslaved; first child born free (Bundles; Indiana Historical Society)",
+      "Mother died ~1872, father ~1875 (dates vary by source; 'about' used)",
+      "Moved to Vicksburg with sister Louvenia ~1878; brother-in-law Jesse Powell's cruelty (Walker's own account)",
+      "Said she had only about three months of formal schooling, in Sunday school (Walker's account via Bundles)",
+      "Married Moses McWilliams 1882 at 14; daughter Lelia born 6 June 1885; Moses died ~1887, cause unknown",
+      "Moved to St. Louis ~1888 where her brothers were barbers; laundress earning about $1.50 a day (Bundles)",
+      "St. Paul AME Church, St. Louis; married John Davis 1894, separated by ~1903",
+      "Hair loss from scalp disorders, harsh soaps, infrequent washing (Bundles; Smithsonian)",
+      "Became Annie Turnbo (later Malone) agent ~1903-1904; Turnbo's products sold via agents",
+      "1904 St. Louis World's Fair; heard Margaret Murray Washington at the National Association of Colored Women meeting (Bundles)",
+      "Moved to Denver July 1905 with about $1.50 by her own later account; cooked for pharmacist Edmund L. Scholtz",
+      "Dream story from Walker's own 1917-18 interviews; formula likely petrolatum, sulfur and scent (Bundles; analyses of the product)",
+      "Married Charles Joseph Walker Jan 1906; became Madam C. J. Walker",
+      "Turnbo ads warned against imitators; long rivalry",
+      "Traveled ~18 months 1906-1908; C. J. thought $10/day was enough (Walker's account); tins ~50 cents",
+      "Lelia College, Pittsburgh, 1908; 'hair culturists'; agents earned about $5-$15 a day by Walker's advertising claims",
+      "Hot comb not invented by Walker: heated metal combs sold in France and US catalogs before 1900",
+      "Moved to Indianapolis 1910; factory, lab, school; Freeman B. Ransom attorney; incorporated 1911 with Walker as sole shareholder",
+      "$1,000 pledge to Indianapolis Black YMCA, 1911",
+      "Divorced C. J. Walker ~1912",
+      "National Negro Business League, Chicago, Aug 1912: Washington ignored her; she spoke unbidden on the last day; invited to speak in 1913",
+      "Caribbean/Central America trip 1913-14 (Cuba, Jamaica, Haiti, Costa Rica, Panama)",
+      "A'Lelia opened Harlem salon 1913; Walker moved to 108-110 W. 136th St. 1916",
+      "Philadelphia convention of the Madam C. J. Walker Hair Culturists Union of America, Aug 1917, ~200 agents; prizes for sales and philanthropy",
+      "East St. Louis massacre July 1917; delegation to White House Aug 1917 not received by Wilson",
+      "Villa Lewaro, Irvington NY, 34 rooms, completed 1918; architect Vertner Tandy, first licensed Black architect in NY; name suggested by Enrico Caruso from Lelia Walker Robinson",
+      "$5,000 pledge to NAACP anti-lynching fund, May 1919, its largest single gift at the time",
+      "Died 25 May 1919 at Villa Lewaro, age 51, kidney failure from hypertension",
+      "Will: company to A'Lelia; one-third of net profits to charity",
+      "Estate ~ $600,000 (Bundles); 'first self-made female millionaire' is a popular claim not supported by the estate value; ~$11M today using CPI x ~18.5 (1919-2026)",
+      "Modern example numbers are illustrative; FTC research: most direct-selling/MLM participants earn little or lose money"
+    ],
+    "sources": [
+      "A'Lelia Bundles, On Her Own Ground (Scribner, 2001), quotes from the 1912 NNBL speech: 'Surely you are not going to shut the door in my face', 'I am a woman who came from the cotton fields of the South', 'I promoted myself into the business of manufacturing hair goods'",
+      "Proceedings of the National Negro Business League, 1912 (Walker's speech)",
+      "'I married at the age of fourteen in order to get a home of my own' and dream account: Walker interviews, Kansas City Star 1917 / New York Times Magazine 1917, via Bundles",
+      "'There is no royal flower-strewn path to success' and 'I got my start by giving myself a start': Walker, quoted in Bundles and madamcjwalker.com",
+      "Indiana Historical Society, Madam C. J. Walker Papers: https://indianahistory.org",
+      "Smithsonian NMAAHC: https://nmaahc.si.edu",
+      "FTC, Business Guidance Concerning Multi-Level Marketing: https://www.ftc.gov/business-guidance/resources/business-guidance-concerning-multi-level-marketing"
+    ],
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "A Door Shut in Your Face",
+        "mood": "tense"
+      },
+      {
+        "scene": 10,
+        "title": "Born Free",
+        "mood": "calm"
+      },
+      {
+        "scene": 34,
+        "title": "The Washtub",
+        "mood": "calm"
+      },
+      {
+        "scene": 47,
+        "title": "Losing Your Hair",
+        "mood": "mystery"
+      },
+      {
+        "scene": 57,
+        "title": "Selling Through Agents",
+        "mood": "calm"
+      },
+      {
+        "scene": 71,
+        "title": "Denver and the Dream",
+        "mood": "mystery"
+      },
+      {
+        "scene": 85,
+        "title": "Madam Walker",
+        "mood": "triumph"
+      },
+      {
+        "scene": 100,
+        "title": "Building an Army",
+        "mood": "triumph"
+      },
+      {
+        "scene": 122,
+        "title": "Promoted Myself",
+        "mood": "tense"
+      },
+      {
+        "scene": 134,
+        "title": "Harlem and the Agents",
+        "mood": "triumph"
+      },
+      {
+        "scene": 151,
+        "title": "Villa Lewaro",
+        "mood": "triumph"
+      },
+      {
+        "scene": 159,
+        "title": "The End of the Road",
+        "mood": "sad"
+      },
+      {
+        "scene": 167,
+        "title": "Were You a Millionaire?",
+        "mood": "mystery"
+      },
+      {
+        "scene": 175,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ],
+    "wordCount": 2328
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

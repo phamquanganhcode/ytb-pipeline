@@ -1,0 +1,3764 @@
+{
+  "title": "Your Life as Charles Ponzi | The Scheme Named After You",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Charles Ponzi",
+      "face": "charles-ponzi",
+      "shirt": "#2b2b30",
+      "faceIdea": "Charles Ponzi, Italian-American swindler, 1920: short, slicked-back dark hair, thin neat moustache, sharp dark eyes, straw boater hat, high collar and dark suit"
+    },
+    "mother": {
+      "name": "Imelda Ponzi",
+      "face": "imelda-ponzi",
+      "faceIdea": "elderly Italian mother, 1900s, grey hair in a bun, black lace shawl, kind proud face"
+    },
+    "zarossi": {
+      "name": "Luigi Zarossi",
+      "face": "luigi-zarossi",
+      "faceIdea": "Montreal Italian banker, 1907, round face, waxed black moustache, bowler hat, three-piece suit"
+    },
+    "morse": {
+      "name": "Charles W. Morse",
+      "face": "charles-morse",
+      "faceIdea": "Charles W. Morse, American financier, 1910s, heavy-set, bald head, grey walrus moustache, prison-grey shirt"
+    },
+    "rose": {
+      "name": "Rose Gnecco",
+      "face": "rose-gnecco",
+      "faceIdea": "Rose Maria Gnecco, young Italian-American stenographer, 1918, dark wavy bobbed hair, gentle round face, white blouse"
+    },
+    "barron": {
+      "name": "Clarence Barron",
+      "face": "clarence-barron",
+      "faceIdea": "Clarence W. Barron, financial publisher, 1920, very portly, large white beard, small spectacles, three-piece suit"
+    },
+    "mcmasters": {
+      "name": "William McMasters",
+      "face": "william-mcmasters",
+      "faceIdea": "William McMasters, Boston publicity agent, 1920, lean face, round glasses, center-parted hair, bow tie"
+    },
+    "crowd1": {
+      "name": "Broker",
+      "face": "broker-1870s",
+      "faceIdea": "unnamed Wall Street broker, 1870s, top hat, mutton-chop whiskers, dark coat"
+    },
+    "crowd2": {
+      "name": "Townswoman",
+      "face": "townswoman-1880s",
+      "faceIdea": "unnamed working woman, 1880s, plain bonnet and shawl, hair in a bun"
+    },
+    "crowd3": {
+      "name": "Old clerk",
+      "face": "clerk-1890s",
+      "faceIdea": "unnamed elderly bank clerk, 1890s, green eyeshade visor, spectacles, grey moustache"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's July 1920, and the line outside your office goes around the block.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "office",
+          "expression": "happy"
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "callouts": [
+        {
+          "text": "YOU, CHARLES PONZI",
+          "word": "office",
+          "target": "you"
+        }
+      ],
+      "stamp": "BOSTON, 1920",
+      "crowd": 8
+    },
+    {
+      "text": "Thousands of people are pushing to hand you their savings.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "crowd": 8
+    },
+    {
+      "text": "You promise them fifty percent profit in forty-five days.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "promise",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "callouts": [
+        {
+          "text": "50% IN 45 DAYS",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "A bank pays them about five percent a year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bank",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "icons": [
+        {
+          "icon": "piggy",
+          "word": "bank",
+          "label": "5%/YEAR"
+        }
+      ]
+    },
+    {
+      "text": "And it works. Every old investor gets paid, right on time.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans"
+    },
+    {
+      "text": "Here's the secret: there is no business. There never was.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "secret",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "fx": "storm"
+    },
+    {
+      "text": "Thirty years from now, you'll die in a charity ward in Brazil with seventy-five dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1949",
+        "value": "$75"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "stamp": "RIO DE JANEIRO, 1949",
+      "empty": true
+    },
+    {
+      "text": "And your name will become the word for this kind of fraud.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "name",
+          "pose": "point"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      }
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's 1882, and you're born in Lugo, Italy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1882",
+        "value": "AGE 0"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "stamp": "LUGO, ITALY, 1882",
+      "empty": true
+    },
+    {
+      "text": "Your name is Carlo Ponzi. Keep count of two things: the money, and the jail cells.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 8"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "YOU, CARLO PONZI",
+          "word": "Carlo",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your family isn't rich, but your mother has big dreams for you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 8"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "IMELDA, YOUR MOTHER",
+          "word": "mother",
+          "target": "mother"
+        }
+      ]
+    },
+    {
+      "text": "She tells everyone her son will be a gentleman.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1890",
+        "value": "AGE 8"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You work as a postal clerk, which matters later. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "postal",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 16"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "clerk",
+          "label": "POST"
+        }
+      ]
+    },
+    {
+      "text": "In Lugo, the post office handles money orders and stamps, and you learn exactly how they work.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1898",
+        "value": "AGE 16"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Then you get into the University of Rome.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "University",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1901",
+        "value": "AGE 19"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Rome is full of rich young men from famous families.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1901",
+        "value": "AGE 19"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Your new friends are rich. You are not.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "not",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1901",
+        "value": "AGE 19"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "So you spend like them anyway: cafes, theaters, nice clothes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "spend",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1902",
+        "value": "AGE 20"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "You never finish a degree. You finish your money instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "finish",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1902",
+        "value": "AGE 20"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "$0",
+          "word": "money"
+        }
+      ]
+    },
+    {
+      "text": "Your family decides America might fix you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1902",
+        "value": "AGE 20"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You've been the best-dressed man in town on borrowed money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "best-dressed",
+          "expression": "happy"
+        }
+      ],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1902",
+        "value": "AGE 20"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "vision": {
+        "image": "ballroom1890",
+        "word": "best-dressed"
+      }
+    },
+    {
+      "text": "In America, everyone says the streets are paved with gold.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "America",
+          "pose": "point"
+        }
+      ],
+      "bg": "lugo1890",
+      "counter": {
+        "label": "1902",
+        "value": "AGE 20"
+      },
+      "bgIdea": "small town square in Lugo, northern Italy, 1890s: arcaded medieval buildings, stone fortress walls, cobbles, bicycles, warm afternoon light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "vision": {
+        "image": "street1900",
+        "word": "streets"
+      }
+    },
+    {
+      "text": "In November 1903, you sail into Boston on a steamer.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 21"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "YOU, 21",
+          "word": "sail",
+          "target": "you"
+        }
+      ],
+      "stamp": "BOSTON HARBOR, 1903"
+    },
+    {
+      "text": "Your family gave you two hundred dollars for the trip.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 21"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "hundred",
+          "label": "$200"
+        }
+      ]
+    },
+    {
+      "text": "Card players on the ship took most of it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "took",
+          "expression": "shock"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1903",
+        "value": "AGE 21"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "You step off with two dollars and fifty cents.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1903",
+        "value": "$2.50"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "$2.50",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "I landed in this country with $2.50 in cash and $1 million in hopes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hopes",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1903",
+        "value": "$2.50"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "quote": {
+        "who": "you",
+        "text": "I landed in this country with $2.50 in cash and $1 million in hopes.",
+        "word": "landed"
+      }
+    },
+    {
+      "text": "The streets are not paved with gold. They're barely paved.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "barely",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1903",
+        "value": "$2.50"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "stamp": "BOSTON, 1903"
+    },
+    {
+      "text": "You wash dishes in a restaurant and sleep on its floor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wash",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1904",
+        "value": "$3/WEEK"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Your English gets good. So does your charm.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "charm",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1904",
+        "value": "$3/WEEK"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "They promote you to waiter. That's your first big break.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1904",
+        "value": "$3/WEEK"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "WAITER",
+          "word": "waiter",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Then they catch you short-changing customers and stealing.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "catch",
+          "expression": "shock"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1904",
+        "value": "$3/WEEK"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "You move from city to city along the East Coast, always a little behind on rent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1904",
+        "value": "$3/WEEK"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "They fire you. For the next four years, job after job goes the same way.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fire",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1906",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Grocery clerk. Factory hand. Fired, fired, fired.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1906",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Somewhere in all this, you learn your first real lesson.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1906",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "People trust a man who looks rich more than a man who is rich.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "looks",
+          "pose": "point"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1906",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Remember",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "boardinghouse1890",
+      "counter": {
+        "label": "1906",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "In 1907, you move to Montreal and get a job in a bank.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bank",
+          "expression": "happy"
+        }
+      ],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "stamp": "MONTREAL, 1907"
+    },
+    {
+      "text": "It's a tiny bank for Italian immigrants, run by Luigi Zarossi.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LUIGI ZAROSSI, YOUR BOSS",
+          "word": "Zarossi",
+          "target": "zarossi"
+        }
+      ]
+    },
+    {
+      "text": "Zarossi pays six percent interest. Other banks pay half that.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "6% INTEREST",
+          "word": "six"
+        }
+      ]
+    },
+    {
+      "text": "Customers love him. Deposits pour in.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "happy"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You move into the Zarossi family home, and you help run the place.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You're the assistant teller, so you see the books.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "books",
+          "pose": "point"
+        }
+      ],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "And the books are a disaster.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "disaster",
+          "expression": "shock"
+        }
+      ],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "paper": {
+        "text": "LOANS: BAD. CASH: GONE.",
+        "word": "books"
+      }
+    },
+    {
+      "text": "The bank's loans have gone bad. There's no profit to pay that six percent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "So Zarossi pays old depositors with new depositors' money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "old",
+          "pose": "point"
+        }
+      ],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You watch this closely. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watch",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "The new money stops. The bank collapses.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "shock"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "Zarossi runs off to Mexico with a large part of the money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "montrealbank1907",
+      "counter": {
+        "label": "1907",
+        "value": "$0"
+      },
+      "bgIdea": "tiny immigrant bank in Montreal, 1907: narrow storefront office, one teller window, ledgers, Italian flag pennant, snow outside the window",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "zarossi",
+          "expression": "happy",
+          "pose": "cheer"
+        }
+      ]
+    },
+    {
+      "text": "You're broke again, in a strange city, in winter.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "broke",
+          "expression": "shock"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1908",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "fx": "snow"
+    },
+    {
+      "text": "You've learned how a bank can look healthy while it is completely empty.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "healthy",
+          "pose": "point"
+        }
+      ],
+      "bg": "nightstreet1910",
+      "counter": {
+        "label": "1908",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "So you walk into an office and write yourself a check.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "check",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Four hundred and twenty-three dollars, signed with someone else's name.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "paper": {
+        "text": "PAY TO C. PONZI: $423.58",
+        "fix": {
+          "strike": "PONZI:",
+          "write": "FORGED",
+          "word": "else's"
+        },
+        "word": "Four"
+      }
+    },
+    {
+      "text": "The police find you within days.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "police",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1908",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "You get three years in a Quebec prison.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1908",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "callouts": [
+        {
+          "text": "3 YEARS",
+          "word": "three"
+        }
+      ],
+      "stamp": "QUEBEC, 1908"
+    },
+    {
+      "text": "You write to your mother in Italy with exciting news.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "write",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1908",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "vision": {
+        "image": "home1880",
+        "word": "Italy"
+      }
+    },
+    {
+      "text": "You tell her you've taken a job as special assistant to a prison warden.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1908",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "paper": {
+        "text": "DEAR MOTHER: I AM NOW SPECIAL ASSISTANT TO THE WARDEN",
+        "word": "job"
+      }
+    },
+    {
+      "text": "Which is one way to describe being an inmate.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "inmate",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1908",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "You're out after twenty months, in 1911.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "out",
+          "expression": "happy"
+        }
+      ],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "$0"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "Then you help smuggle five Italian immigrants across the border into the United States.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "smuggle",
+          "pose": "point"
+        }
+      ],
+      "bg": "trainstation1890",
+      "counter": {
+        "label": "1911",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "That's another two years, this time in Atlanta's federal prison.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Atlanta",
+          "expression": "shock"
+        }
+      ],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "stamp": "ATLANTA, 1911"
+    },
+    {
+      "text": "You become the warden's translator, reading Italian prisoners' mail.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      }
+    },
+    {
+      "text": "And you meet a fellow inmate: Charles Morse, a famous Wall Street banker.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "CHARLES MORSE, BANKER",
+          "word": "Morse",
+          "target": "morse"
+        }
+      ]
+    },
+    {
+      "text": "Morse had a fifteen-year sentence for bank fraud.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "He eats soap shavings to make himself look terribly sick.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Doctors are fooled. The President pardons him, and he walks out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "walks",
+          "expression": "shock"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "happy",
+          "pose": "cheer"
+        }
+      ]
+    },
+    {
+      "text": "Prison, it turns out, is a pretty good business school.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You learn your second lesson: rich men don't stay in prison long.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1911",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "looks": {
+        "you": "charles-ponzi-young"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "By 1917 you're back in Boston, and you meet Rose Gnecco.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1917",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ROSE GNECCO",
+          "word": "Rose",
+          "target": "rose"
+        }
+      ],
+      "stamp": "BOSTON, 1917"
+    },
+    {
+      "text": "She's a stenographer: a typist who takes notes in shorthand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1917",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You marry her in 1918. She has no idea about the prisons.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "expression": "happy"
+        }
+      ],
+      "bg": "church1870",
+      "counter": {
+        "label": "1918",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOUR WIFE",
+          "word": "marry",
+          "target": "rose"
+        }
+      ]
+    },
+    {
+      "text": "You take over her father's grocery business.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1918",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You run it into the ground in months.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ground",
+          "expression": "shock"
+        }
+      ],
+      "bg": "cafe1880",
+      "counter": {
+        "label": "1918",
+        "value": "$0"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Then you try a business catalog for export merchants. Nobody buys ads.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Nobody",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      }
+    },
+    {
+      "text": "But one day in August 1919, a letter comes from Spain.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "letter",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "stamp": "BOSTON, 1919"
+    },
+    {
+      "text": "Inside is a small slip of paper: an International Reply Coupon.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "paper": {
+        "text": "INTERNATIONAL REPLY COUPON",
+        "word": "slip"
+      }
+    },
+    {
+      "text": "You can trade it at any post office for a stamp to send a reply.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trade",
+          "pose": "point"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "stamp",
+          "label": "STAMP"
+        }
+      ]
+    },
+    {
+      "text": "Remember being a postal clerk in Italy? This is where it pays off.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "vision": {
+        "image": "home1880",
+        "word": "Italy"
+      }
+    },
+    {
+      "text": "The coupon prices were set before the war, and the Italian lira has crashed since.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor"
+    },
+    {
+      "text": "So coupons are cheap to buy in Italy, and they buy more stamps in America.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cheap",
+          "expression": "happy"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "cheap",
+          "label": "LIRA"
+        }
+      ]
+    },
+    {
+      "text": "On paper, every dollar of coupons turns into several.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "several",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor",
+      "callouts": [
+        {
+          "text": "BUY LOW, SWAP HIGH",
+          "word": "paper"
+        }
+      ]
+    },
+    {
+      "text": "There's just one problem. You'd need millions of coupons, and you can't sell stamps for cash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "problem",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor"
+    },
+    {
+      "text": "You decide that's a detail.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "detail",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor"
+    },
+    {
+      "text": "On December 26th, 1919, you open the Securities Exchange Company.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "stamp": "BOSTON, DEC 1919",
+      "paper": {
+        "text": "SECURITIES EXCHANGE COMPANY",
+        "word": "Securities"
+      }
+    },
+    {
+      "text": "You promise fifty percent in forty-five days. Or double your money in ninety.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "promise",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "callouts": [
+        {
+          "text": "50% IN 45 DAYS",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "The first few investors are friends and neighbors.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1919",
+        "value": "$0"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "When their forty-five days are up, you pay them. In full.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      }
+    },
+    {
+      "text": "With money from the next investors.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "next",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      }
+    },
+    {
+      "text": "Remember Zarossi? This is exactly what he did. Just bigger.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "vision": {
+        "image": "bank1880",
+        "word": "Zarossi"
+      }
+    },
+    {
+      "text": "Let's be clear about how this works, because it's named after you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light"
+    },
+    {
+      "text": "Imagine a bakery that sells no bread.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bakery",
+          "pose": "point"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "icons": [
+        {
+          "icon": "coffee",
+          "word": "bakery",
+          "label": "BAKERY"
+        }
+      ]
+    },
+    {
+      "text": "It borrows ten dollars from Anna and promises her fifteen next month.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "icons": [
+        {
+          "icon": "money",
+          "word": "ten",
+          "label": "$10"
+        },
+        {
+          "icon": "coin",
+          "word": "fifteen",
+          "label": "$15"
+        }
+      ]
+    },
+    {
+      "text": "Next month, it borrows twenty from Ben, and pays Anna her fifteen.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pays",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light"
+    },
+    {
+      "text": "Anna tells everyone how great the bakery is.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "great",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light"
+    },
+    {
+      "text": "Now it needs Ben's thirty, so it needs even more new customers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "thirty",
+          "label": "MORE"
+        }
+      ]
+    },
+    {
+      "text": "It only survives while new money grows faster than the promises.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "callouts": [
+        {
+          "text": "NEW MONEY > OLD PROMISES",
+          "word": "faster"
+        }
+      ]
+    },
+    {
+      "text": "Every month, the bakery must find more new customers than the month before.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "more",
+          "label": "GROWTH"
+        }
+      ]
+    },
+    {
+      "text": "The day new money slows down, the whole bakery collapses at once.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "collapses",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light"
+    },
+    {
+      "text": "Someone is always last in line. They lose everything.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bakery1920",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "bgIdea": "empty corner bakery, 1920: bare wooden shelves, glass display case with no bread, flour sacks, a chalk price board, morning light",
+      "fx": "rain"
+    },
+    {
+      "text": "You weren't the first to do this. In 1899, William Miller in Brooklyn promised ten percent a week.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchange",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      }
+    },
+    {
+      "text": "The internet calls you the inventor of the Ponzi scheme. You didn't invent it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "didn't",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      }
+    },
+    {
+      "text": "You just made it famous. Very, very famous.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "famous",
+          "expression": "happy"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      }
+    },
+    {
+      "text": "In February 1920, investors hand you about five thousand dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1920",
+        "value": "$5K"
+      },
+      "callouts": [
+        {
+          "text": "$5,000",
+          "word": "five"
+        }
+      ],
+      "stamp": "FEBRUARY 1920"
+    },
+    {
+      "text": "In March, it's thirty thousand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "chemicalbank1890",
+      "counter": {
+        "label": "1920",
+        "value": "$30K"
+      },
+      "stamp": "MARCH 1920"
+    },
+    {
+      "text": "You hire agents and pay them ten percent for every dollar they bring in.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hire",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$30K"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "crowd": 3
+    },
+    {
+      "text": "In May, it's four hundred and twenty thousand.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "May",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$420K"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "stamp": "MAY 1920"
+    },
+    {
+      "text": "Police officers invest. Bank clerks invest. Your own lawyers invest.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1920",
+        "value": "$420K"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "People mortgage their houses to buy your paper notes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1920",
+        "value": "$420K"
+      },
+      "crowd": 4,
+      "paper": {
+        "text": "PROMISSORY NOTE: $1,000 PAYS $1,500 IN 45 DAYS",
+        "word": "notes"
+      }
+    },
+    {
+      "text": "By July, money arrives faster than your clerks can count it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$1M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "callouts": [
+        {
+          "text": "$250,000 A DAY",
+          "word": "faster"
+        }
+      ],
+      "stamp": "JULY 1920",
+      "crowd": 6
+    },
+    {
+      "text": "Your agents work on commission, so they sign up their own families first.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$1M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "crowd": 4
+    },
+    {
+      "text": "They stuff cash into closets, drawers and wastebaskets.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cash",
+          "expression": "shock"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$1M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans"
+    },
+    {
+      "text": "You start dressing like the gentleman your mother always promised.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dressing",
+          "expression": "happy"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$1M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans"
+    },
+    {
+      "text": "You buy control of a real bank: the Hanover Trust Company.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "callouts": [
+        {
+          "text": "HANOVER TRUST",
+          "word": "Hanover"
+        }
+      ]
+    },
+    {
+      "text": "You buy a mansion in Lexington, with air conditioning and a heated pool.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mansion",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "happy"
+        }
+      ],
+      "stamp": "LEXINGTON, 1920"
+    },
+    {
+      "text": "In 1920, air conditioning is basically science fiction.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You bring your mother over from Italy in a first-class cabin.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy",
+          "enter": true
+        },
+        {
+          "who": "rose",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "Remember? She always said you'd be a gentleman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gentleman",
+          "expression": "happy"
+        }
+      ],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "And you look exactly like one. Remember that lesson about looking rich?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "look",
+          "pose": "point"
+        }
+      ],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "vision": {
+        "image": "boardinghouse1890",
+        "word": "lesson"
+      }
+    },
+    {
+      "text": "You buy maybe a few dollars of actual coupons, as a test.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "few",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans"
+    },
+    {
+      "text": "The newspaper that ends you is just weeks away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "ponzioffice1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "small busy investment office in Boston, 1920: wooden counter with brass teller grilles, stacks of cash and paper notes on desks, filing cabinets, ceiling fans",
+      "fx": "storm"
+    },
+    {
+      "text": "In July, a furniture dealer sues you for a million dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sues",
+          "expression": "shock"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      }
+    },
+    {
+      "text": "Then the Boston Post publishes a front-page story asking how you do it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "stamp": "JULY 26, 1920",
+      "paper": {
+        "text": "BOSTON POST: QUESTIONS ON PONZI PROFITS",
+        "word": "story"
+      }
+    },
+    {
+      "text": "A crowd rushes your office to pull their money out.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "crowd": 8,
+      "fx": "storm"
+    },
+    {
+      "text": "And you pay every single one of them.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pay",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun"
+    },
+    {
+      "text": "You even hand out coffee and doughnuts to the people in line.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "coffee",
+          "pose": "handOut",
+          "hold": "coffee"
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "crowd": 6
+    },
+    {
+      "text": "Someone in the crowd shouts that you're the greatest Italian of them all.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "extras": [
+        {
+          "who": "crowd1",
+          "expression": "happy"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You play modest. Columbus discovered America. Marconi discovered the wireless.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "modest",
+          "pose": "shrug",
+          "hold": null
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "extras": [
+        {
+          "who": "crowd1",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "Columbus discovered America. Marconi discovered the wireless.",
+        "word": "Columbus"
+      }
+    },
+    {
+      "text": "Another voice shouts back: But you discovered money!",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "extras": [
+        {
+          "who": "crowd3",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "quote": {
+        "who": "crowd3",
+        "text": "But you discovered money!",
+        "word": "discovered"
+      }
+    },
+    {
+      "text": "The run stops. The crowds come back to invest more.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "invest",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun"
+    },
+    {
+      "text": "Then a financial journalist named Clarence Barron does some math.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "barron",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "CLARENCE BARRON",
+          "word": "Barron",
+          "target": "barron"
+        }
+      ]
+    },
+    {
+      "text": "To cover your notes, you'd need about one hundred sixty million coupons.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "barron",
+          "expression": "neutral"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "160,000,000 NEEDED",
+          "word": "sixty"
+        }
+      ]
+    },
+    {
+      "text": "There are only about twenty-seven thousand in circulation.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "barron",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "27,000 EXIST",
+          "word": "twenty-seven"
+        }
+      ]
+    },
+    {
+      "text": "Barron asks one more question: why don't you put your own money in your own scheme?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "own",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "barron",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "And the post office confirms nobody is buying coupons in bulk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nobody",
+          "expression": "shock"
+        }
+      ],
+      "bg": "postoffice1919",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "bgIdea": "Boston post office counter, 1919: brass mail slots, stamp windows, scales, wanted posters board, wooden floor"
+    },
+    {
+      "text": "You've hired a publicity man, William McMasters, to polish your image.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "mcmasters",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "WILLIAM McMASTERS",
+          "word": "McMasters",
+          "target": "mcmasters"
+        }
+      ]
+    },
+    {
+      "text": "He reads your books instead.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "books",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "mcmasters",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "On August 2nd, he tells the Boston Post you're hopelessly insolvent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "mcmasters",
+          "expression": "neutral"
+        }
+      ],
+      "stamp": "AUGUST 2, 1920",
+      "paper": {
+        "text": "PONZI HOPELESSLY INSOLVENT",
+        "word": "insolvent"
+      }
+    },
+    {
+      "text": "The man you paid to make you look good just made you look like a fraud.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "extras": [
+        {
+          "who": "mcmasters",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Insolvent means you owe more than you have. Millions more.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "owe",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "$10M+"
+      },
+      "callouts": [
+        {
+          "text": "MILLIONS SHORT",
+          "word": "Millions"
+        }
+      ]
+    },
+    {
+      "text": "A second run starts. This time the money doesn't last.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "crowd": 8,
+      "fx": "storm"
+    },
+    {
+      "text": "Thousands of people now want their money back at the same time.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "schoolstreet1920",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "bgIdea": "School Street in downtown Boston, July 1920: granite office buildings, a long sidewalk outside a doorway, 1920 Ford cars, summer sun",
+      "crowd": 8
+    },
+    {
+      "text": "Then the Post digs up a photo from Montreal.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "vision": {
+        "image": "bank1880",
+        "word": "Montreal"
+      }
+    },
+    {
+      "text": "Charles Ponzi, the financial genius, is a convicted forger.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "paper": {
+        "text": "PONZI IS A FORGER, JAILED IN CANADA",
+        "word": "forger"
+      }
+    },
+    {
+      "text": "Remember that letter to your mother about the warden? Boston is reading the real story.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "real",
+          "expression": "shock"
+        }
+      ],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      }
+    },
+    {
+      "text": "On August 12th, 1920, you turn yourself in.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "turn",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "stamp": "AUGUST 12, 1920"
+    },
+    {
+      "text": "The Hanover Trust and five other banks fail with you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1920",
+        "value": "-$3M?"
+      },
+      "fx": "rain",
+      "crowd": 4
+    },
+    {
+      "text": "Investors have lost about twenty million dollars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1920",
+        "value": "-$20M"
+      },
+      "callouts": [
+        {
+          "text": "$20 MILLION LOST",
+          "word": "twenty"
+        }
+      ]
+    },
+    {
+      "text": "That's roughly three hundred million dollars today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "1920",
+        "value": "-$20M"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "today",
+          "label": "~$300M"
+        }
+      ]
+    },
+    {
+      "text": "The Boston Post wins a Pulitzer Prize for the story.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1920",
+        "value": "-$20M"
+      },
+      "paper": {
+        "text": "PULITZER PRIZE: BOSTON POST",
+        "word": "Pulitzer"
+      }
+    },
+    {
+      "text": "You plead guilty to mail fraud and get five years in federal prison.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1920",
+        "value": "PRISON"
+      },
+      "callouts": [
+        {
+          "text": "5 YEARS",
+          "word": "five"
+        }
+      ]
+    },
+    {
+      "text": "After that, Massachusetts tries you again for larceny.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "courtroom1870",
+      "counter": {
+        "label": "1924",
+        "value": "PRISON"
+      }
+    },
+    {
+      "text": "Out on bail, you head to Florida, where everyone is buying land.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Florida",
+          "expression": "happy"
+        }
+      ],
+      "bg": "florida1925",
+      "counter": {
+        "label": "1925",
+        "value": "$0"
+      },
+      "bgIdea": "Florida swampland lot for sale, 1925: palmettos, standing water, wooden survey stakes, a hand-painted blank sign, hot sun",
+      "stamp": "FLORIDA, 1925"
+    },
+    {
+      "text": "Florida land prices are rising so fast that people buy lots they have never seen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "florida1925",
+      "counter": {
+        "label": "1925",
+        "value": "$0"
+      },
+      "bgIdea": "Florida swampland lot for sale, 1925: palmettos, standing water, wooden survey stakes, a hand-painted blank sign, hot sun",
+      "crowd": 3
+    },
+    {
+      "text": "You sell lots in a new development and promise two hundred percent in sixty days.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "promise",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "florida1925",
+      "counter": {
+        "label": "1925",
+        "value": "$0"
+      },
+      "bgIdea": "Florida swampland lot for sale, 1925: palmettos, standing water, wooden survey stakes, a hand-painted blank sign, hot sun",
+      "callouts": [
+        {
+          "text": "200% IN 60 DAYS",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Many of the lots are underwater. Literally: it's a swamp.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "swamp",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "florida1925",
+      "counter": {
+        "label": "1925",
+        "value": "$0"
+      },
+      "bgIdea": "Florida swampland lot for sale, 1925: palmettos, standing water, wooden survey stakes, a hand-painted blank sign, hot sun"
+    },
+    {
+      "text": "Investors get a piece of paper, and you get their cash. Sound familiar?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "familiar",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "florida1925",
+      "counter": {
+        "label": "1925",
+        "value": "$0"
+      },
+      "bgIdea": "Florida swampland lot for sale, 1925: palmettos, standing water, wooden survey stakes, a hand-painted blank sign, hot sun"
+    },
+    {
+      "text": "Florida convicts you too. You skip bail, shave your head, and try to sail to Italy as a sailor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sail",
+          "expression": "shock"
+        }
+      ],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1926",
+        "value": "$0"
+      }
+    },
+    {
+      "text": "They catch you at the dock in New Orleans.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1926",
+        "value": "$0"
+      },
+      "stamp": "NEW ORLEANS, 1926",
+      "crowd": 3
+    },
+    {
+      "text": "Back to Massachusetts. Seven more years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "prison1910",
+      "counter": {
+        "label": "1927",
+        "value": "PRISON"
+      },
+      "bgIdea": "early 1900s prison cell block: iron bars, stone walls, narrow cot, tin cup, a high barred window with grey light",
+      "callouts": [
+        {
+          "text": "7 MORE YEARS",
+          "word": "Seven"
+        }
+      ]
+    },
+    {
+      "text": "Remember Morse, who ate soap to get out? It doesn't work for you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "doesn't",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "hospital1890",
+      "counter": {
+        "label": "1927",
+        "value": "PRISON"
+      },
+      "extras": [
+        {
+          "who": "morse",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In 1934, America deports you to Italy. You never became a citizen.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1934",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "callouts": [
+        {
+          "text": "YOU, 52",
+          "word": "deports",
+          "target": "you"
+        }
+      ],
+      "stamp": "1934"
+    },
+    {
+      "text": "By now you've spent about fourteen years of your life behind bars.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "1934",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "callouts": [
+        {
+          "text": "14 YEARS INSIDE",
+          "word": "fourteen"
+        }
+      ]
+    },
+    {
+      "text": "Rose stays in Boston. She divorces you a few years later.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1934",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "extras": [
+        {
+          "who": "rose",
+          "expression": "neutral"
+        }
+      ],
+      "fx": "rain"
+    },
+    {
+      "text": "You write a book about yourself, The Rise of Mister Ponzi.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1934",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "paper": {
+        "text": "THE RISE OF MR. PONZI",
+        "word": "book"
+      }
+    },
+    {
+      "text": "Italy gives you a job with its national airline, in Rio de Janeiro.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1939",
+        "value": "AIRLINE JOB"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "stamp": "RIO DE JANEIRO, 1939",
+      "empty": true
+    },
+    {
+      "text": "Then the war starts, Brazil sides against Italy, and the job disappears.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "disappears",
+          "expression": "shock"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1942",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      }
+    },
+    {
+      "text": "You teach English. You translate letters. You get sick.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1942",
+        "value": "$0"
+      },
+      "looks": {
+        "you": "charles-ponzi-old"
+      }
+    },
+    {
+      "text": "A stroke leaves you half paralyzed and nearly blind.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "stroke",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1948",
+        "value": "$0"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      }
+    },
+    {
+      "text": "Late in life, a reporter asks if you have regrets. You don't, really.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1948",
+        "value": "$0"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      }
+    },
+    {
+      "text": "Even if they never got anything for it, it was cheap at that price.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1948",
+        "value": "$0"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "quote": {
+        "who": "you",
+        "text": "Even if they never got anything for it, it was cheap at that price.",
+        "word": "Even"
+      }
+    },
+    {
+      "text": "I had given them the best show since the landing of the Pilgrims!",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "show",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1948",
+        "value": "$0"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "quote": {
+        "who": "you",
+        "text": "I had given them the best show... since the landing of the Pilgrims!",
+        "word": "best"
+      }
+    },
+    {
+      "text": "On January 18th, 1949, you die in a charity hospital in Rio.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1949",
+        "value": "$75"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "stamp": "RIO, JANUARY 1949",
+      "fx": "rain"
+    },
+    {
+      "text": "You leave seventy-five dollars, enough for a funeral.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1949",
+        "value": "$75"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "callouts": [
+        {
+          "text": "$75",
+          "word": "seventy-five"
+        }
+      ]
+    },
+    {
+      "text": "The internet says you hid millions somewhere. Nobody ever found a cent.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hid",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1949",
+        "value": "$75"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "looks": {
+        "you": "charles-ponzi-old"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "millions",
+          "label": "HIDDEN?"
+        }
+      ]
+    },
+    {
+      "text": "Your scheme ran for about eight months. Your name has lasted for more than a hundred years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "rioward1949",
+      "counter": {
+        "label": "1949",
+        "value": "$75"
+      },
+      "bgIdea": "charity hospital ward in Rio de Janeiro, 1940s: rows of white iron beds, tall shuttered windows, ceiling fans, tropical light",
+      "empty": true
+    },
+    {
+      "text": "So how did a man with two dollars and fifty cents get Boston to hand him millions?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "He paid the first people on time. And they did his selling for him.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "first",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "Nobody asked where the profit came from, because the checks cleared.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "asked",
+          "expression": "neutral",
+          "hold": null
+        }
+      ],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "That brings us to today's money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "paper": {
+        "text": "MONEY RULE: FIND WHERE PROFIT COMES FROM",
+        "word": "money"
+      }
+    },
+    {
+      "text": "If you can't see where the profit comes from, assume it comes from you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "you",
+          "pose": "point"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "Say a website promises you three percent a month, guaranteed.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "three",
+          "label": "3%/MONTH"
+        }
+      ]
+    },
+    {
+      "text": "That sounds small. It's over forty percent a year.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "callouts": [
+        {
+          "text": "42% A YEAR",
+          "word": "forty"
+        }
+      ]
+    },
+    {
+      "text": "A US savings account paid about four or five percent a year in 2024.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "icons": [
+        {
+          "icon": "piggy",
+          "word": "savings",
+          "label": "~4-5%"
+        }
+      ]
+    },
+    {
+      "text": "A gap that big needs a business that big. Ask to see it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Ask",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "Real profit comes from a product, rent, interest, or work that someone can check.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "crowd": 3
+    },
+    {
+      "text": "Payments from you to old investors look exactly the same, until the day they stop.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank1880",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "And the rule isn't perfect. Your early investors asked questions too, and got paid.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "paid",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Ask for audited accounts: reports checked by an outside accountant.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "audited",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "If the answer is a secret system, that is your answer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "secret",
+          "pose": "point"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "Getting paid once proves nothing. Seeing the business proves something.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1920",
+        "value": "$15M?"
+      },
+      "looks": {
+        "you": "charles-ponzi"
+      }
+    },
+    {
+      "text": "You promised them the best show in Boston. They just had to buy the tickets.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "lexington1920",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "large colonial-revival mansion in Lexington, Massachusetts, 1920: white columns, wide lawn, gravel drive, a shiny 1920 limousine",
+      "looks": {
+        "you": "charles-ponzi"
+      },
+      "title": "YOUR LIFE AS CHARLES PONZI"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Charles Ponzi | 50% in 45 Days",
+      "Your Life as the Man Who Became a Word for Fraud",
+      "Your Life as Charles Ponzi | $2.50 to $15 Million"
+    ],
+    "thumbnail": "A crowded 1920 Boston street with a long line of people waving cash at an office door, paper notes flying; text: '50% IN 45 DAYS'",
+    "description": "It's July 1920. Thousands of people line up to hand you their savings, and you pay every one of them on time.\nThere is no business. There never was. This is the life of Charles Ponzi.\n\nA comedic dramatization of documented history.\nGeneral education only, not financial advice.\n\nSources:\n- Charles Ponzi, Wikipedia: https://en.wikipedia.org/wiki/Charles_Ponzi\n- Mitchell Zuckoff, Ponzi's Scheme: The True Story of a Financial Legend (2005)\n- Charles Ponzi, The Rise of Mr. Ponzi (1935)\n- Ponzi scheme, Wikipedia: https://en.wikipedia.org/wiki/Ponzi_scheme",
+    "factCheck": [
+      "Born March 3, 1882, in Lugo, Italy; worked as a postal clerk, attended the University of Rome without graduating, spent beyond his means (Wikipedia).",
+      "Arrived in Boston November 1903 aboard the SS Vancouver with $2.50 after gambling away most of his savings on the voyage; the $200 figure is from his own account and DISPUTED.",
+      "Dishwasher who slept on the restaurant floor, promoted to waiter, fired for short-changing customers and theft (Wikipedia).",
+      "1907 Montreal: assistant teller at Banco Zarossi, run by Luigi 'Louis' Zarossi, paying 6% interest (double the going rate) from new deposits; bank failed and Zarossi fled to Mexico with much of the money (Wikipedia).",
+      "Forged a check for $423.58 from the Canadian Warehousing Company; three years at St. Vincent de Paul Penitentiary, released after about 20 months (Wikipedia). Letter to his mother calling himself special assistant to the warden (Wikipedia).",
+      "1911: two years in Atlanta federal prison for smuggling five Italian immigrants across the Canadian border; translator for the warden; met Charles W. Morse, who ate soap shavings to appear ill and won early release (Wikipedia). Morse was sentenced to 15 years in 1908 and pardoned by President Taft in 1912.",
+      "1918 married Rose Maria Gnecco, a stenographer; ran her father's grocery business badly; export trade catalog failed (Wikipedia).",
+      "August 1919: letter from a Spanish company containing an International Reply Coupon; post-war inflation made IRCs bought in Italy worth more in US stamps; IRCs could not be resold for cash (Wikipedia).",
+      "Securities Exchange Company founded Dec 26, 1919; 50% in 45 days or 100% in 90 days; Feb 1920 about $5,000, March $30,000, May $420,000; by July millions, about $250,000 a day (Wikipedia). Agents paid commissions (10% is commonly cited).",
+      "William F. '520 Percent' Miller, Brooklyn 1899, promised 10% a week (Wikipedia, Ponzi scheme article).",
+      "Bought controlling interest in Hanover Trust Company; Lexington mansion with air conditioning and a heated swimming pool; brought his mother from Italy in a first-class stateroom (Wikipedia). 'Twenty-room' is approximate.",
+      "July 1920: furniture dealer Joseph Daniels sued for $1 million; July 26 Boston Post article questioned the business; Ponzi paid out the run and served coffee and doughnuts (Wikipedia).",
+      "Clarence Barron: 160 million coupons needed, about 27,000 in circulation (Wikipedia). Post office said IRCs were not being bought in quantity.",
+      "Publicist William McMasters; Aug 2, 1920 Boston Post article declared Ponzi hopelessly insolvent; Post then revealed his Montreal conviction; Ponzi surrendered Aug 12, 1920 (Wikipedia). Running money totals on the counter are rough estimates.",
+      "Hanover Trust and five other banks failed; investors lost about $20 million; ~$300M today using CPI x16 (1920 to 2026, approx). Boston Post won the 1921 Pulitzer Prize for Public Service (Wikipedia).",
+      "Pleaded guilty to mail fraud, five years federal prison; then state larceny charges; out on bail, 1925 Florida land scheme (Charpon Land Syndicate) promising 200% in 60 days, land partly swamp; convicted in Florida, fled, shaved head, caught in New Orleans 1926 trying to sail to Italy as a crew member; seven more years in Massachusetts (Wikipedia).",
+      "Deported to Italy in 1934 (never naturalized); Rose divorced him in 1937; wrote The Rise of Mr. Ponzi; worked for Ala Littoria airline in Brazil from 1939 until Brazil joined the Allies in 1942 (Wikipedia).",
+      "Stroke, partial paralysis, nearly blind; died January 18, 1949 in a charity hospital in Rio de Janeiro, leaving $75 for burial (Wikipedia).",
+      "Quotes from Wikipedia: '$2.50 in cash and $1 million in hopes' and 'best show... since the landing of the Pilgrims' (late-life interview). Columbus/Marconi exchange with the crowd from Zuckoff via Wikipedia.",
+      "2024 US savings accounts: high-yield accounts paid about 4-5% APY (FDIC national rate was lower). 3% a month compounds to about 42.6% a year."
+    ],
+    "sources": [
+      "Charles Ponzi, Wikipedia: https://en.wikipedia.org/wiki/Charles_Ponzi",
+      "'I landed in this country with $2.50 in cash and $1 million in hopes, and those hopes never left me.' as quoted on https://en.wikipedia.org/wiki/Charles_Ponzi",
+      "'Even if they never got anything for it, it was cheap at that price. Without malice aforethought I had given them the best show that was ever staged in their territory since the landing of the Pilgrims!' as quoted on https://en.wikipedia.org/wiki/Charles_Ponzi",
+      "Crowd exchange ('the greatest Italian of them all'; 'Columbus discovered America. Marconi discovered the wireless.'; 'But you discovered money!'): Mitchell Zuckoff, Ponzi's Scheme (2005), as quoted on https://en.wikipedia.org/wiki/Charles_Ponzi",
+      "Ponzi scheme history (William Miller, 1899): https://en.wikipedia.org/wiki/Ponzi_scheme",
+      "Charles Ponzi, The Rise of Mr. Ponzi (1935)"
+    ],
+    "wordCount": 2106,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "The Line Around the Block"
+      },
+      {
+        "scene": 11,
+        "title": "A Small Town Boy (1882)"
+      },
+      {
+        "scene": 23,
+        "title": "Two Dollars and Fifty Cents (1903)"
+      },
+      {
+        "scene": 39,
+        "title": "The Bank of Zarossi (1907)"
+      },
+      {
+        "scene": 56,
+        "title": "Special Assistant to the Warden (1908)"
+      },
+      {
+        "scene": 70,
+        "title": "Rose and a Letter from Spain (1917)"
+      },
+      {
+        "scene": 85,
+        "title": "Fifty Percent in Forty-Five Days (1919)"
+      },
+      {
+        "scene": 91,
+        "title": "The Ponzi Scheme, Explained"
+      },
+      {
+        "scene": 104,
+        "title": "Boston Goes Crazy (1920)"
+      },
+      {
+        "scene": 122,
+        "title": "The Boston Post Asks Questions (1920)"
+      },
+      {
+        "scene": 136,
+        "title": "Your Own Publicist Turns on You (1920)"
+      },
+      {
+        "scene": 151,
+        "title": "Prison, Florida, Prison (1920)"
+      },
+      {
+        "scene": 162,
+        "title": "Deported (1934)"
+      },
+      {
+        "scene": 180,
+        "title": "The Money Rule"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}

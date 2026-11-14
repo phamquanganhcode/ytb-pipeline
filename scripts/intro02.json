@@ -1,0 +1,89 @@
+{
+  "title": "What If Your Salary Doubled Every Month?",
+  "voice": "am_michael",
+  "friendVoice": "am_puck",
+  "scenes": [
+    {
+      "text": "Month 1. Your boss slides a paycheck across the desk. Three thousand dollars.",
+      "speaker": "narrator",
+      "actions": [
+        {"who": "you", "word": "paycheck", "pose": "handOut", "hold": "money"},
+        {"who": "you", "word": "Three", "expression": "happy"}
+      ],
+      "bg": "office",
+      "bgIdea": "open-plan office, boss's desk",
+      "counter": {"label": "MONTH 1", "value": "$3,000"},
+      "icons": [{"icon": "money", "word": "Three", "label": "$3,000"}]
+    },
+    {
+      "text": "Same as last month. Wake me up when it gets interesting.",
+      "speaker": "friend",
+      "actions": [{"who": "friend", "word": "Wake", "pose": "shrug"}],
+      "bg": "office",
+      "bgIdea": "same office, friend leaning on the next desk",
+      "counter": {"label": "MONTH 1", "value": "$3,000"},
+      "icons": []
+    },
+    {
+      "text": "But from today, there's a new rule. Every month, your salary doubles.",
+      "speaker": "narrator",
+      "actions": [
+        {"who": "friend", "word": "new", "pose": "idle"},
+        {"who": "you", "word": "rule", "pose": "idle", "hold": null, "expression": "neutral"},
+        {"who": "you", "word": "doubles", "pose": "point", "expression": "shock"}
+      ],
+      "bg": "office",
+      "bgIdea": "office, a glowing x2 appears above the desk",
+      "counter": {"label": "MONTH 1", "value": "$3,000"},
+      "icons": [
+        {"icon": "calendar", "word": "month"},
+        {"icon": "chart", "word": "doubles", "label": "x2"}
+      ],
+      "callouts": [{"text": "x2 EVERY MONTH", "word": "salary"}]
+    },
+    {
+      "text": "Loser washes the other one's car for a year. I say you blow it all by Christmas.",
+      "speaker": "friend",
+      "actions": [
+        {"who": "friend", "word": "Loser", "pose": "handOut", "expression": "happy"},
+        {"who": "you", "word": "Christmas", "pose": "handOut", "expression": "happy", "face": "left"}
+      ],
+      "bg": "office",
+      "bgIdea": "office, the two shake hands on the bet",
+      "counter": {"label": "MONTH 1", "value": "$3,000"},
+      "icons": [{"icon": "question", "word": "Christmas"}]
+    },
+    {
+      "text": "Month 12. Your paycheck is six million dollars. In hundred dollar bills, it weighs about sixty kilograms.",
+      "speaker": "narrator",
+      "actions": [
+        {"who": "friend", "word": "Month", "pose": "idle", "expression": "shock"},
+        {"who": "you", "word": "paycheck", "pose": "handOut", "hold": "money", "expression": "shock", "face": "right"},
+        {"who": "you", "word": "weighs", "pose": "idle", "hold": null}
+      ],
+      "bg": "vault",
+      "bgIdea": "bank vault, shelves of cash",
+      "counter": {"label": "MONTH 12", "value": "$6,144,000"},
+      "icons": [
+        {"icon": "money", "word": "million", "label": "$6.1M"},
+        {"icon": "piggy", "word": "weighs", "label": "61 KG"}
+      ],
+      "callouts": [{"text": "61 KG OF CASH", "word": "hundred"}]
+    },
+    {
+      "text": "What if your salary doubled every month?",
+      "speaker": "narrator",
+      "actions": [{"who": "you", "word": "What", "expression": "happy"}, {"who": "friend", "word": "if", "expression": "happy"}],
+      "bg": "vault",
+      "bgIdea": "title card",
+      "title": "WHAT IF YOUR SALARY DOUBLED EVERY MONTH?"
+    }
+  ],
+  "meta": {
+    "factCheck": [
+      "Month 12 salary = 3,000 x 2^11 = 6,144,000",
+      "Bills = 6,144,000 / 100 = 61,440; a US bill weighs about 1 g, so about 61 kg"
+    ],
+    "sources": ["US Bureau of Engraving and Printing: each note weighs about 1 gram - https://www.bep.gov"]
+  }
+}

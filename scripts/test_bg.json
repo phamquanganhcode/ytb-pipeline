@@ -1,0 +1,211 @@
+{
+  "title": "Background test",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "face": "hetty-green",
+      "shirt": "#1f1f22"
+    },
+    "edward": {
+      "name": "Edward Henry Green",
+      "face": "edward-green",
+      "faceIdea": "Edward Henry Green, American businessman (1821-1902), tall, bald with long white side whiskers, 1870s frock coat"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's 1873, and panic hits the stock exchange.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "panic",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchange",
+      "counter": {
+        "label": "1873",
+        "value": "$12M"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "panic",
+          "label": "-30%"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "PANIC OF 1873",
+          "word": "panic"
+        },
+        {
+          "text": "HETTY GREEN, 39",
+          "word": "stock",
+          "target": "you"
+        }
+      ],
+      "stamp": "WALL STREET, 1873"
+    },
+    {
+      "text": "You walk the streets of New York with millions in cash.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millions",
+          "pose": "handOut",
+          "hold": "money",
+          "expression": "happy"
+        }
+      ],
+      "bg": "street1900",
+      "counter": {
+        "label": "1893",
+        "value": "$55M"
+      },
+      "icons": [],
+      "callouts": [
+        {
+          "text": "$55 MILLION",
+          "word": "walk"
+        },
+        {
+          "text": "HETTY GREEN, 59",
+          "word": "streets",
+          "target": "you"
+        }
+      ],
+      "stamp": "NEW YORK, 1893"
+    },
+    {
+      "text": "At home, you heat your oatmeal on the radiator.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "oatmeal",
+          "pose": "shrug",
+          "hold": null,
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1898",
+        "value": "$60M"
+      },
+      "icons": [
+        {
+          "icon": "coffee",
+          "word": "home"
+        }
+      ]
+    },
+    {
+      "text": "Years later, a storm rolls over New York.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "street1900",
+      "counter": {
+        "label": "1885",
+        "value": "$25M"
+      },
+      "icons": [],
+      "empty": true,
+      "fx": "storm",
+      "stamp": "NEW YORK, 1885"
+    },
+    {
+      "text": "Your husband Edward wants you to pay his debts. You tell him no.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "tell",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "parlor",
+      "counter": {
+        "label": "1885",
+        "value": "$25M"
+      },
+      "icons": [],
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "shock",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDWARD GREEN, YOUR HUSBAND",
+          "word": "husband",
+          "target": "edward"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "Pay your own debts.",
+        "word": "tell"
+      }
+    },
+    {
+      "text": "Edward sighs and says you love money more than him.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "parlor",
+      "counter": {
+        "label": "1885",
+        "value": "$25M"
+      },
+      "icons": [],
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "edward",
+        "text": "You love money more than me!",
+        "word": "says"
+      }
+    },
+    {
+      "text": "Then his bank collapses, and the money he owes you is gone.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gone",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "1885",
+        "value": "$25M"
+      },
+      "icons": [],
+      "extras": [
+        {
+          "who": "edward",
+          "expression": "shock"
+        }
+      ],
+      "paper": {
+        "text": "EDWARD OWES YOU $702,000",
+        "word": "owes",
+        "fix": {
+          "strike": "$702,000",
+          "write": "$0",
+          "word": "gone"
+        }
+      }
+    }
+  ]
+}

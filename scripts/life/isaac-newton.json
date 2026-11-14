@@ -1,0 +1,3506 @@
+{
+  "title": "Your Life as Isaac Newton | The Genius Who Lost a Fortune",
+  "iconStyle": "bubble",
+  "cast": {
+    "you": {
+      "name": "Isaac Newton",
+      "face": "isaac-newton",
+      "shirt": "#5a2a2a",
+      "faceIdea": "Sir Isaac Newton, 1720, age 77: long white shoulder-length hair, sharp nose, thin lips, heavy-lidded serious eyes, white cravat, dark red coat"
+    },
+    "mother": {
+      "name": "Hannah Ayscough",
+      "face": "hannah-ayscough",
+      "faceIdea": "English countrywoman Hannah Ayscough, 1650s: stern face, white linen coif cap, plain dark dress with white collar"
+    },
+    "halley": {
+      "name": "Edmond Halley",
+      "face": "edmond-halley",
+      "faceIdea": "astronomer Edmond Halley, 1687, age 30: friendly face, long brown periwig, plain brown coat, white cravat"
+    },
+    "hooke": {
+      "name": "Robert Hooke",
+      "face": "robert-hooke",
+      "faceIdea": "scientist Robert Hooke, 1680s: thin pale face, long untidy dark hair, sharp eyes, plain grey coat (no authentic portrait survives, imagined)"
+    },
+    "chaloner": {
+      "name": "William Chaloner",
+      "face": "william-chaloner",
+      "faceIdea": "London counterfeiter William Chaloner, 1698: sly grin, flashy curly black wig, gold-trimmed blue coat, lace cravat"
+    },
+    "catherine": {
+      "name": "Catherine Barton",
+      "face": "catherine-barton",
+      "faceIdea": "Catherine Barton, Newton's niece, 1710, age 30: elegant pretty face, dark hair piled up with a ribbon, pearl earrings, blue silk gown"
+    },
+    "voltaire": {
+      "name": "Voltaire",
+      "face": "voltaire",
+      "faceIdea": "French writer Voltaire, 1727, age 33: thin face, sly smile, long powdered wig, brown velvet coat"
+    },
+    "crowd1": {
+      "name": "London merchant",
+      "face": "london-merchant-1720",
+      "faceIdea": "unnamed London merchant, 1720, black tricorn hat, grey periwig, round face, brown coat"
+    },
+    "crowd2": {
+      "name": "London woman",
+      "face": "london-woman-1720",
+      "faceIdea": "unnamed London shopkeeper's wife, 1720, white lace cap, rosy cheeks, green shawl"
+    },
+    "crowd3": {
+      "name": "Old Londoner",
+      "face": "london-oldman-1720",
+      "faceIdea": "unnamed elderly Londoner, 1720, bald with white side hair, spectacles, plain black coat"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's the summer of 1720, and the smartest man in Europe is buying back into a bubble.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "callouts": [
+        {
+          "text": "YOU, SIR ISAAC NEWTON",
+          "word": "smartest",
+          "target": "you"
+        }
+      ],
+      "stamp": "LONDON, 1720",
+      "crowd": 8
+    },
+    {
+      "text": "You discovered the laws of gravity. You invented a new kind of mathematics.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gravity",
+          "expression": "happy"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "crowd": 6
+    },
+    {
+      "text": "And right now, you're buying shares in the South Sea Company at the highest price ever.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buying",
+          "pose": "handOut",
+          "hold": "money"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "crowd": 8
+    },
+    {
+      "text": "A few months ago, you sold those same shares, at a nice profit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "profit",
+          "pose": "cheer",
+          "expression": "happy",
+          "hold": null
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "crowd": 6
+    },
+    {
+      "text": "Then you watched your friends get richer. So you're back in, with much more money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richer",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "crowd": 6
+    },
+    {
+      "text": "By winter, you'll have lost a fortune: more than most people earn in a lifetime.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lost",
+          "expression": "shock"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "fx": "storm"
+    },
+    {
+      "text": "By the end, you'll know the one money rule that got you here, and whether it still works today.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1720",
+        "value": "£20,000+?"
+      }
+    },
+    {
+      "text": "But to get here, we have to go back. It's Christmas Day, 1642, and you're born in Lincolnshire.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1642",
+        "value": "AGE 0"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "stamp": "WOOLSTHORPE, 1642",
+      "empty": true
+    },
+    {
+      "text": "Your name is Isaac Newton. Keep count of two things: the money, and the enemies.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "YOU, ISAAC, 7",
+          "word": "Isaac",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your father, also called Isaac, died three months before you were born.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "died",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "You're born so early and so small, your mother says you'd fit in a quart mug.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "HANNAH, YOUR MOTHER",
+          "word": "mother",
+          "target": "mother"
+        }
+      ]
+    },
+    {
+      "text": "When you're three, she marries a rich old minister, Barnabas Smith, and moves out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "moves",
+          "expression": "shock"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "She leaves you behind with your grandmother.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "behind",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "You don't take it well.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "well",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Years later, you write a list of your sins, and one of them stands out.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "paper": {
+        "text": "THREATENING TO BURN THEM AND THE HOUSE",
+        "word": "list"
+      }
+    },
+    {
+      "text": "Threatening my father and mother Smith to burn them and the house over them.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "quote": {
+        "who": "you",
+        "text": "Threatening my father and mother Smith to burn them and the house over them.",
+        "word": "Threatening"
+      }
+    },
+    {
+      "text": "You keep lists of everything, even your own sins. Remember that.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lists",
+          "pose": "point"
+        }
+      ],
+      "bg": "home",
+      "counter": {
+        "label": "1650",
+        "value": "AGE 7"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "When you're ten, your stepfather dies, and your mother comes home with three new children.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1653",
+        "value": "AGE 10"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "1653",
+      "bgIdea": "apothecary's shop in Grantham, 1650s: shelves of jars and bottles, herbs drying, a wooden counter",
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "At twelve you go to school in Grantham. A windmill model. Sundials. A kite with a lantern that scares the neighbors at night.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "windmill",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1655",
+        "value": "AGE 12"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "lantern",
+          "label": "UFO?"
+        }
+      ],
+      "stamp": "GRANTHAM, 1655"
+    },
+    {
+      "text": "At sixteen, your mother pulls you out of school.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "1659"
+    },
+    {
+      "text": "You're going to run the family farm.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "farm",
+          "expression": "shock"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You are a terrible farmer. You read books while the sheep wander off.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "read",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "crowd": 0
+    },
+    {
+      "text": "The local court fines you because your animals broke into a neighbor's fields.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "fines",
+          "label": "FINE"
+        }
+      ]
+    },
+    {
+      "text": "Remember that: you can't even manage a few sheep.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Your old schoolmaster begs your mother to send you to university. She gives in.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "university",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1659",
+        "value": "AGE 16"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "mother",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1661, you arrive at Trinity College, Cambridge, as a subsizar: a student who works as a servant.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1661",
+        "value": "AGE 18"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "CAMBRIDGE, 1661"
+    },
+    {
+      "text": "You empty richer students' chamber pots to pay your way.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "chamber",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1661",
+        "value": "AGE 18"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Your mother has money. She just doesn't send much of it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "money",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1661",
+        "value": "AGE 18"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "You win a scholarship in 1664, and then the plague arrives.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "plague",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "1665",
+      "fx": "rain"
+    },
+    {
+      "text": "The university shuts down, and you go home to the farm for about two years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "WOOLSTHORPE, 1666"
+    },
+    {
+      "text": "Alone, with no teachers, you start working out calculus, light and gravity.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "calculus",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "And yes, there's an apple.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "apple",
+          "expression": "happy"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "The internet says it fell on your head. It didn't.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "head",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Decades later, you tell a friend you saw an apple fall in the garden, and wondered why straight down.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wondered",
+          "pose": "point"
+        }
+      ],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "No bump on the head. Just a man staring at fruit for a very long time.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "woolsthorpe1650",
+      "counter": {
+        "label": "1665",
+        "value": "AGE 22"
+      },
+      "bgIdea": "Woolsthorpe Manor farmhouse in Lincolnshire, 1650s: small grey stone house, apple tree in the garden, sheep in a field, low stone wall, overcast sky",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Back in Cambridge, you become a professor at twenty-six.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "PROFESSOR, 26",
+          "word": "professor",
+          "target": "you"
+        }
+      ],
+      "stamp": "CAMBRIDGE, 1669"
+    },
+    {
+      "text": "Your lectures are so hard that sometimes nobody comes, and you lecture to the walls.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "walls",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "You buy prisms at a fair and split sunlight into colors in your darkened room.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "prisms",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "To study vision, you push a blunt needle behind your own eyeball, and write down what you see.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "needle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Yes, you take notes. Of course you take notes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "notes",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Secretly, you also spend years on alchemy: trying to turn cheap metals into gold.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "ALCHEMY",
+          "word": "alchemy"
+        }
+      ]
+    },
+    {
+      "text": "You never manage it. But gold is about to become your job anyway.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gold",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "1669",
+        "value": "AGE 26"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "In London, a scientist named Robert Hooke criticizes your work on light.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1675",
+        "value": "AGE 32"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "hooke",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ROBERT HOOKE",
+          "word": "Hooke",
+          "target": "hooke"
+        }
+      ],
+      "stamp": "LONDON, 1675"
+    },
+    {
+      "text": "You write him a famous letter.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1675",
+        "value": "AGE 32"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "hooke",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "If I have seen further it is by standing on the shoulders of giants.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1675",
+        "value": "AGE 32"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "hooke",
+          "expression": "neutral"
+        }
+      ],
+      "quote": {
+        "who": "you",
+        "text": "If I have seen further it is by standing on the shoulders of giants.",
+        "word": "seen"
+      }
+    },
+    {
+      "text": "It sounds humble. Hooke was very short. Some historians think that was the joke.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "short",
+          "expression": "happy"
+        }
+      ],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1675",
+        "value": "AGE 32"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "hooke",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Either way, you hate each other for the rest of his life. Enemy number one.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hate",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1675",
+        "value": "AGE 32"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "hooke",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1684, the astronomer Edmond Halley visits you with a question about planets.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDMOND HALLEY",
+          "word": "Halley",
+          "target": "halley"
+        }
+      ],
+      "stamp": "1684"
+    },
+    {
+      "text": "You tell him you've already solved it. You just lost the paper.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lost",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "He talks you into writing the whole thing down. It becomes the Principia.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "happy"
+        }
+      ],
+      "paper": {
+        "text": "PHILOSOPHIAE NATURALIS PRINCIPIA MATHEMATICA",
+        "word": "Principia"
+      }
+    },
+    {
+      "text": "One problem. The Royal Society has spent its printing money on a book about fish.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fish",
+          "expression": "shock"
+        }
+      ],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The fish book flopped. So Halley pays to print your book himself.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "HALLEY PAYS",
+          "word": "pays"
+        }
+      ]
+    },
+    {
+      "text": "The Society even pays Halley's salary in unsold copies of the fish book.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "copies",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "royalsociety1687",
+      "counter": {
+        "label": "1684",
+        "value": "AGE 41"
+      },
+      "bgIdea": "Royal Society meeting room in London, 1680s: long table with a green cloth, globes, telescopes, a pile of printed books, tall windows",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "extras": [
+        {
+          "who": "halley",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "In 1687, the Principia explains gravity, the tides and the planets.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gravity",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1687",
+        "value": "FAMOUS"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "stamp": "1687"
+    },
+    {
+      "text": "You're famous. You're still not rich.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rich",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1687",
+        "value": "FAMOUS"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "The bubble that costs you a fortune is thirty-three years away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "trinity1665",
+      "counter": {
+        "label": "1687",
+        "value": "FAMOUS"
+      },
+      "bgIdea": "student room at Trinity College, Cambridge, 1660s: wooden desk with candles, prisms and books, a window with a beam of sunlight, narrow bed",
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Now, a money problem that's about to become your job.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "bgIdea": "small market stall with a coin box"
+    },
+    {
+      "text": "English silver coins in the 1690s are made by hand, with plain edges.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "coins",
+          "label": "SILVER"
+        }
+      ]
+    },
+    {
+      "text": "So people shave a little silver off the edges, melt it, and sell it.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shave",
+          "pose": "point"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "That's called clipping. Do it to every coin you touch, and you get rich slowly.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "CLIPPING",
+          "word": "clipping"
+        }
+      ]
+    },
+    {
+      "text": "Imagine two kinds of gift card. One is full. One has had money shaved off it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "full",
+          "label": "FULL"
+        },
+        {
+          "icon": "money",
+          "word": "shaved",
+          "label": "SHAVED"
+        }
+      ]
+    },
+    {
+      "text": "Shops have to treat both cards the same. Which one would you spend?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "spend",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "The shaved one. You keep the full one at home.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "home",
+          "expression": "happy"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "Soon only shaved cards are in circulation. The good ones vanish.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "vanish",
+          "label": "BAD WINS"
+        }
+      ]
+    },
+    {
+      "text": "That's Gresham's law: bad money drives out good money.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "BAD DRIVES OUT GOOD",
+          "word": "law"
+        }
+      ]
+    },
+    {
+      "text": "By 1695, many English coins have lost close to half their silver.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "HALF THE SILVER",
+          "word": "half"
+        }
+      ]
+    },
+    {
+      "text": "Prices go up, trade gets messy, and nobody trusts a shilling.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trusts",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "cafe",
+      "counter": {
+        "label": "TODAY",
+        "value": "EXPLAINER"
+      },
+      "looks": {
+        "you": "isaac-newton-young"
+      }
+    },
+    {
+      "text": "In 1696, a friend in government, Charles Montagu, offers you a job: Warden of the Royal Mint.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton-young"
+      },
+      "callouts": [
+        {
+          "text": "WARDEN OF THE MINT",
+          "word": "Warden",
+          "target": "you"
+        }
+      ],
+      "stamp": "TOWER OF LONDON, 1696"
+    },
+    {
+      "text": "It's meant to be an easy, well-paid job for a famous man.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "easy",
+          "expression": "happy"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Remember the boy who couldn't manage sheep? He's now helping run England's money factory.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "money",
+          "pose": "point"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "And he takes it very seriously.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "seriously",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "England is replacing all its old silver coins in one go: the Great Recoinage.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "New coins get milled edges, the little ridges, so clipping shows right away.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "ridges",
+          "label": "RIDGES"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "You learn the furnaces, the presses, the cost of every step.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "presses",
+          "pose": "point"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "While the old coins are melted down, there's hardly any money to pay wages with.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wages",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "You push the presses to run day and night until the new coins come out.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "night",
+          "pose": "cheer",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You estimate that one coin in five coming in is fake.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "1 IN 5 FAKE",
+          "word": "five"
+        }
+      ]
+    },
+    {
+      "text": "Counterfeiting is high treason. The punishment is death.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "death",
+          "expression": "shock"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "fx": "storm"
+    },
+    {
+      "text": "And the Warden's job includes catching the counterfeiters. Most wardens don't bother. You do.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "You",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "mint1696",
+      "counter": {
+        "label": "1696",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Royal Mint inside the Tower of London, 1696: heavy screw presses for stamping coins, furnaces, sacks of silver, stone walls, lanterns",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You build a network of informers in London's taverns.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "LONDON, 1698",
+      "crowd": 6
+    },
+    {
+      "text": "Some accounts say you went in disguise yourself. Nobody knows how often.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "disguise",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Remember the boy who wrote down every sin? Now you write down everyone else's.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 4,
+      "paper": {
+        "text": "DEPOSITIONS: 100+",
+        "word": "write"
+      }
+    },
+    {
+      "text": "You run more than a hundred interrogations in about eighteen months.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "100+ INTERROGATIONS",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "Your biggest target is William Chaloner, the best counterfeiter in England.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "WILLIAM CHALONER",
+          "word": "Chaloner",
+          "target": "chaloner"
+        }
+      ]
+    },
+    {
+      "text": "He makes fake coins, fake banknotes, and lives like a gentleman.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gentleman",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "A few years earlier, he turned in some printers of illegal pamphlets, and collected a thousand-pound reward.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "£1,000 REWARD",
+          "word": "thousand-pound"
+        }
+      ]
+    },
+    {
+      "text": "Some say he'd helped set the printers up in the first place.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "first",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He's a man who makes money from crime, and then makes money from reporting crime.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "He even tells Parliament the Mint is incompetent, and offers to run it better.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "incompetent",
+          "expression": "shock"
+        }
+      ],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "That makes him enemy number two.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "two",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "You spend a year gathering witnesses against him.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "tavern1698",
+      "counter": {
+        "label": "1698",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "rough London tavern, 1698: low wooden beams, barrels, tankards on sticky tables, a fireplace, dim candlelight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In 1699, he's convicted of high treason.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "shock"
+        }
+      ],
+      "stamp": "NEWGATE PRISON, 1699"
+    },
+    {
+      "text": "From his cell he writes to you, begging.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "O dear Sir, nobody can save me but you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "chaloner",
+          "expression": "shock"
+        }
+      ],
+      "quote": {
+        "who": "chaloner",
+        "text": "O dear Sir, nobody can save me but you.",
+        "word": "nobody"
+      }
+    },
+    {
+      "text": "You don't answer. In March 1699, Chaloner is hanged.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "answer",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "fx": "storm"
+    },
+    {
+      "text": "Enemy number two, gone. You file the paperwork.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "file",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You prosecute twenty-eight coiners in total. The money gets better.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newgate1699",
+      "counter": {
+        "label": "1699",
+        "value": "£400/YEAR"
+      },
+      "bgIdea": "Newgate Prison cell in London, 1699: damp stone walls, straw on the floor, iron chains on the wall, a small barred window, a wooden stool",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "28 COINERS",
+          "word": "twenty-eight"
+        }
+      ]
+    },
+    {
+      "text": "At the end of 1699 you become Master of the Mint, the top job.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "1700",
+        "value": "£1,000s/YEAR"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "MASTER OF THE MINT",
+          "word": "Master",
+          "target": "you"
+        }
+      ],
+      "stamp": "1700",
+      "crowd": 4
+    },
+    {
+      "text": "The Master gets a cut of every coin made. In good years, that's well over a thousand pounds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cut",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "coin"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "1700",
+        "value": "£1,000s/YEAR"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "For the first time in your life, you're rich.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "rich",
+          "pose": "cheer"
+        }
+      ],
+      "bg": "vault",
+      "counter": {
+        "label": "1700",
+        "value": "£1,000s/YEAR"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Since 1696 you've lived in a fine house on Jermyn Street in London.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "house",
+          "pose": "idle",
+          "hold": null
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1700",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "JERMYN STREET, 1710"
+    },
+    {
+      "text": "Your half-niece, Catherine Barton, runs the house and charms your guests.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1700",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "CATHERINE, YOUR NIECE",
+          "word": "Catherine",
+          "target": "catherine"
+        }
+      ]
+    },
+    {
+      "text": "London says she's the most charming woman in town. You never marry.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "marry",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1700",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "In 1705, Queen Anne knights you. You're Sir Isaac now.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "SIR ISAAC",
+          "word": "Sir",
+          "target": "you"
+        }
+      ],
+      "stamp": "1705"
+    },
+    {
+      "text": "Historians think it was mostly about winning an election, not about gravity.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "election",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Then enemy number three appears: Gottfried Leibniz, a German genius.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "three",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "He published calculus first. You worked it out first, but kept it in a drawer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "drawer",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You're now President of the Royal Society, so it sets up a committee to decide who was right.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "PRESIDENT, ROYAL SOCIETY",
+          "word": "President"
+        }
+      ]
+    },
+    {
+      "text": "The committee's report says you were. You wrote the report yourself.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "paper": {
+        "text": "REPORT: NEWTON WAS FIRST",
+        "word": "report"
+      }
+    },
+    {
+      "text": "Historians today say both of you invented calculus, separately.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "separately",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Remember that list of sins? This one probably didn't make it on.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sins",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1705",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "In 1717, you write a report on gold coins, and the government sets a guinea at twenty-one shillings.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1717",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "1717",
+      "paper": {
+        "text": "ONE GUINEA = 21 SHILLINGS",
+        "word": "guinea"
+      }
+    },
+    {
+      "text": "You set gold a little too high, so silver quietly leaves the country.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "silver",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1717",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Remember Gresham's law? Britain ends up on a gold standard, by accident or not.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "jermynstreet1710",
+      "counter": {
+        "label": "1717",
+        "value": "RICH"
+      },
+      "bgIdea": "elegant London townhouse parlour on Jermyn Street, 1710: wood-panelled walls, portraits, a writing desk with letters, a fireplace, crimson curtains",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "coin",
+          "word": "gold",
+          "label": "GOLD"
+        }
+      ]
+    },
+    {
+      "text": "Now we're back where we started. 1720, Exchange Alley.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "EXCHANGE ALLEY, 1720",
+      "crowd": 8
+    },
+    {
+      "text": "The South Sea Company has a monopoly on trade with South America, and almost no trade.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "trade",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "What it does have is a deal to take over the government's debt.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Its shares go from about one hundred pounds in January to about one thousand in June.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "shares",
+          "label": "x10"
+        }
+      ],
+      "crowd": 8
+    },
+    {
+      "text": "Remember the planets you calculated? This is harder.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "harder",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You own shares already. In the spring, you sell them, and make a solid profit.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sell",
+          "pose": "handOut",
+          "expression": "happy",
+          "hold": "money"
+        }
+      ],
+      "bg": "exchangealley1720",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "bgIdea": "Jonathan's Coffee House in Exchange Alley, London, 1720: crowded wooden benches, chalk boards of share prices (blank), coffee pots, papers on tables, smoky light",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Then the price keeps going up. And up. Without you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "up",
+          "pose": "idle",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "Everyone you know is getting richer. Catherine's friends. Your neighbors. Strangers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "richer",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "Copycat companies pop up every week, selling shares in almost anything.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 8
+    },
+    {
+      "text": "One famous story says a company sold shares in an undertaking of great advantage, nobody to know what it is.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nobody",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 6
+    },
+    {
+      "text": "That one might be a legend. The craze around it is not.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 4
+    },
+    {
+      "text": "In June, Parliament passes the Bubble Act to stop the copycats. Nobody stops buying.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 6,
+      "paper": {
+        "text": "THE BUBBLE ACT, 1720",
+        "word": "Act"
+      }
+    },
+    {
+      "text": "So in the summer, you buy back in, near the top, with much more money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "buy",
+          "pose": "handOut",
+          "expression": "neutral",
+          "hold": "money"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You picture your money growing like the shares in the papers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "vault",
+      "counter": {
+        "label": "1720",
+        "value": "RICH"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "vision": {
+        "image": "vault1880",
+        "word": "picture"
+      }
+    },
+    {
+      "text": "In September, the bubble bursts. The shares fall back toward one hundred.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bursts",
+          "expression": "shock",
+          "hold": null
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "fx": "storm",
+      "crowd": 6
+    },
+    {
+      "text": "You lose at least ten thousand pounds, and probably more than twenty thousand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "-£20,000?",
+          "word": "twenty"
+        }
+      ]
+    },
+    {
+      "text": "That's millions in today's money.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "millions",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "The internet says you sighed: I can calculate the motions of heavenly bodies, but not the madness of people.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "madness",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "That line comes from a secondhand story, written down years later. You may never have said it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "PROBABLY NOT YOU",
+          "word": "secondhand"
+        }
+      ]
+    },
+    {
+      "text": "Your relatives say you couldn't bear to hear the words South Sea for the rest of your life.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bear",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "city",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You keep working at the Mint into your eighties.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "KENSINGTON, 1727"
+    },
+    {
+      "text": "You still check the coins, the accounts and the counterfeiters, line by line.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "line",
+          "pose": "point"
+        }
+      ],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Your health fails slowly: kidney stones, coughing, and pain you rarely complain about.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pain",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Catherine and her husband, John Conduitt, look after you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "neutral",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "Conduitt writes down your stories, including the one about the apple.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "On March 20th, 1727, you die in Kensington, aged eighty-four.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "die",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "fx": "rain"
+    },
+    {
+      "text": "Even after the bubble, you leave about thirty thousand pounds.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "£30,000",
+          "word": "thirty"
+        }
+      ]
+    },
+    {
+      "text": "You leave no will. Your relatives split the money, and argue over your papers for years.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "catherine",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Among those papers are about a million words on alchemy, hidden for two centuries.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "alchemy",
+          "expression": "shock"
+        }
+      ],
+      "bg": "kensington1727",
+      "counter": {
+        "label": "1727",
+        "value": "£30,000"
+      },
+      "bgIdea": "bedroom in a Kensington house, 1727: four-poster bed with heavy curtains, medicine bottles on a side table, candle, quiet evening light",
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "You're buried in Westminster Abbey, the first scientist ever buried there.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1727",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "stamp": "WESTMINSTER ABBEY",
+      "crowd": 6
+    },
+    {
+      "text": "A young French writer, Voltaire, is in London and watches it all.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1727",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "voltaire",
+          "expression": "neutral",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "VOLTAIRE",
+          "word": "Voltaire",
+          "target": "voltaire"
+        }
+      ],
+      "crowd": 4
+    },
+    {
+      "text": "He writes that you never had a passion in your life.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1727",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "voltaire",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "voltaire",
+        "text": "He was never sensible to any passion.",
+        "word": "passion"
+      }
+    },
+    {
+      "text": "He clearly never saw your list of sins.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1727",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "extras": [
+        {
+          "who": "voltaire",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The poet Alexander Pope writes your most famous epitaph.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "1727",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "paper": {
+        "text": "GOD SAID, LET NEWTON BE! AND ALL WAS LIGHT",
+        "word": "epitaph"
+      }
+    },
+    {
+      "text": "So how does the man who explained gravity lose a fortune to a bubble?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "crowd": 5
+    },
+    {
+      "text": "He didn't lose it by being dumb. He lost it by watching other people get rich.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "watching",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Selling was the smart move. Buying back in because of his neighbors was the mistake.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "mistake",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office",
+      "counter": {
+        "label": "1720",
+        "value": "-£20,000?"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "That brings us to today's money rule.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "paper": {
+        "text": "MONEY RULE: DON'T CHASE WHAT YOU SOLD",
+        "word": "rule"
+      },
+      "bgIdea": "modern bank branch, 2020s"
+    },
+    {
+      "text": "If you sold for a reason, a higher price later isn't a new reason to buy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "reason",
+          "pose": "point"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Here's a real example. In March 2000, the Nasdaq index of tech stocks peaked above five thousand.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "peaked",
+          "label": "5,048"
+        }
+      ]
+    },
+    {
+      "text": "Over the next two and a half years, it fell about seventy-eight percent.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "callouts": [
+        {
+          "text": "-78%",
+          "word": "seventy-eight"
+        }
+      ]
+    },
+    {
+      "text": "Say you sold some tech shares in 1999, with a profit, and then watched them double.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "double",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "If you bought back in at the top, ten thousand dollars became about two thousand two hundred.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "thousand",
+          "label": "$2,200"
+        }
+      ]
+    },
+    {
+      "text": "Before you buy back, write down why you sold. Has that reason changed?",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "write",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "If the only new fact is that other people made money, that's not a reason. That's envy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "envy",
+          "expression": "shock"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "And never buy back with more money than you sold, just to catch up.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "icons": [
+        {
+          "icon": "money",
+          "word": "catch",
+          "label": "NO"
+        }
+      ]
+    },
+    {
+      "text": "And the rule isn't perfect. Sometimes the price keeps rising, and buying back was right.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "perfect",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Even Newton held some shares that recovered a little.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "recovered",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "bank",
+      "counter": {
+        "label": "TODAY",
+        "value": "RULE"
+      },
+      "looks": {
+        "you": "isaac-newton"
+      }
+    },
+    {
+      "text": "Gravity always wins. Bubbles too, eventually.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "westminster1727",
+      "counter": {
+        "label": "TODAY",
+        "value": "LEGACY"
+      },
+      "bgIdea": "nave of Westminster Abbey, 1727: tall Gothic arches, stone floor, candles, banners, a carved monument, cool daylight",
+      "looks": {
+        "you": "isaac-newton"
+      },
+      "title": "YOUR LIFE AS ISAAC NEWTON"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Your Life as Isaac Newton | Genius, Mint Boss, Bubble Loser",
+      "Your Life as the Smartest Man Who Lost to a Bubble",
+      "Your Life as Isaac Newton | Hunting Counterfeiters"
+    ],
+    "thumbnail": "A packed 1720 London coffee house with share-price boards and flying papers; text: 'LOST TO A BUBBLE'",
+    "description": "It's 1720. You explained gravity, you run the Royal Mint, and you're buying back into the biggest bubble in England.\nBy winter, you'll have lost a fortune. This is the life of Isaac Newton.\n\nA comedic dramatization of documented history.\nGeneral education only, not financial advice.\n\nSources:\n- Isaac Newton, Wikipedia: https://en.wikipedia.org/wiki/Isaac_Newton\n- South Sea Company, Wikipedia: https://en.wikipedia.org/wiki/South_Sea_Company\n- Thomas Levenson, Newton and the Counterfeiter (2009)\n- Andrew Odlyzko, 'Newton's financial misadventures in the South Sea Bubble', Notes and Records of the Royal Society (2019)\n- Richard S. Westfall, Never at Rest (1980)",
+    "factCheck": [
+      "Born 25 December 1642 (Julian; 4 January 1643 Gregorian) at Woolsthorpe; father died three months before; premature, 'fit in a quart mug'; mother married Barnabas Smith when he was three and left him with grandmother Margery Ayscough (Wikipedia).",
+      "List of sins up to age 19 (Fitzwilliam notebook, 1662) includes 'Threatening my father and mother Smith to burn them and the house over them' (Wikipedia; Westfall).",
+      "King's School Grantham from about 12, lodging with apothecary Clark; built windmill model, sundials, lantern kite (Stukeley's memoir; widely cited, details DISPUTED).",
+      "Mother pulled him out by October 1659 to farm; fined by the manor court for letting animals stray (Westfall, Never at Rest; DISPUTED in detail); schoolmaster and uncle persuaded her to send him back (Wikipedia).",
+      "Trinity College June 1661 as subsizar doing valet duties; scholarship 1664; university closed for plague 1665; worked at Woolsthorpe 1665-1667 (Wikipedia). 'Emptying chamber pots' is the usual description of sizar duties: DISPUTED.",
+      "Apple story: Stukeley's memoir of a 1726 conversation, apple fell in the garden, did not hit his head (Wikipedia). Lucasian professor 1669 aged 26; lectures sometimes to empty rooms (Humphrey Newton's account, as cited by Westfall).",
+      "Letter to Hooke, February 1675/76: 'If I have seen further it is by standing on the shoulders of giants'; possible jab at Hooke's short stature is a historians' reading: DISPUTED (Wikipedia).",
+      "Halley's 1684 visit; Principia published 5 July 1687 with Halley's financial help; Royal Society had spent its funds on Willughby's De Historia Piscium (1686) and paid Halley in copies of it (Royal Society history; widely cited).",
+      "Clipping and the Great Recoinage of 1696; coins had lost close to half their weight by 1695 (Wikipedia, Great Recoinage); Gresham's law (general).",
+      "Warden of the Mint 1696 via Charles Montagu; salary about £400 a year (Westfall); estimated 20% of coins counterfeit; counterfeiting was high treason; disguise in taverns (Wikipedia, DISPUTED how often); 100+ cross-examinations June 1698-Christmas 1699; 28 coiners prosecuted; William Chaloner hanged March 1699 (Wikipedia; Levenson).",
+      "Chaloner told Parliament the Mint was badly run and offered methods to stop counterfeiting (Levenson 2009).",
+      "Master of the Mint from 1699 (Wikipedia); income often over £1,000 a year from fees on coinage (Westfall; DISPUTED by year).",
+      "Catherine Barton his half-niece kept house on Jermyn Street (Wikipedia); never married (Wikipedia). Knighted April 1705 by Queen Anne, likely for political reasons (Wikipedia).",
+      "Report of 21 September 1717; proclamation 22 December 1717 fixed the guinea at no more than 21 shillings, moving Britain to a de facto gold standard; whether intended is debated (Wikipedia).",
+      "South Sea shares rose from about £128 in January 1720 to about £1,000 in June-August, then collapsed in September to near £150 by year end (Wikipedia, South Sea Company).",
+      "Newton sold shares in spring 1720 at a profit and bought back in summer; lost at least £10,000 and plausibly over £20,000 (Wikipedia; Odlyzko 2019). Over £1.5 million today using a rough 180-200x multiplier.",
+      "'I can calculate the motions of the heavenly bodies, but not the madness of people': secondhand anecdote recorded later (Spence), attribution DISPUTED (Odlyzko 2019). Relatives' remark that he could not bear to hear of the South Sea: Spence anecdote, DISPUTED.",
+      "Died 20 March 1726/27 in Kensington, aged 84; estate about £30,000; first scientist buried in Westminster Abbey (Wikipedia).",
+      "Voltaire in London wrote Newton 'was never sensible to any passion' (Wikipedia, Letters on the English). Pope's epitaph 'Nature and Nature's laws lay hid in night: God said, Let Newton be! and all was light' (Wikipedia).",
+      "Nasdaq Composite peaked at 5,048.62 on 10 March 2000 and fell about 78% to 1,114 by 9 October 2002 (Nasdaq historical data). $10,000 at the top would have been about $2,200 at the bottom."
+    ],
+    "sources": [
+      "Isaac Newton, Wikipedia: https://en.wikipedia.org/wiki/Isaac_Newton",
+      "'Threatening my father and mother Smith to burn them and the house over them.': Newton's list of sins (1662), Fitzwilliam notebook, as quoted in Westfall, Never at Rest (1980) and Wikipedia",
+      "'If I have seen further it is by standing on the shoulders of giants.': Newton, letter to Robert Hooke, 5 February 1675/76",
+      "'O dear Sir, nobody can save me but you.': William Chaloner, letter to Newton, March 1699, as quoted in Levenson, Newton and the Counterfeiter (2009)",
+      "'He was never sensible to any passion.': Voltaire, Letters on the English (1733), as quoted on Wikipedia",
+      "Alexander Pope, epitaph for Newton (1730): 'God said, Let Newton be! and all was light.'",
+      "South Sea Company, Wikipedia: https://en.wikipedia.org/wiki/South_Sea_Company",
+      "Andrew Odlyzko, 'Newton's financial misadventures in the South Sea Bubble', Notes and Records of the Royal Society 73 (2019)",
+      "Nasdaq Composite historical data (peak 10 March 2000, trough 9 October 2002)"
+    ],
+    "wordCount": 2045,
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "The Smartest Man in the Bubble",
+        "mood": "tense"
+      },
+      {
+        "scene": 9,
+        "title": "A Small, Angry Boy",
+        "mood": "calm"
+      },
+      {
+        "scene": 25,
+        "title": "The Servant Student",
+        "mood": "mystery"
+      },
+      {
+        "scene": 42,
+        "title": "The First Enemy",
+        "mood": "tense"
+      },
+      {
+        "scene": 56,
+        "title": "Clipped Coins",
+        "mood": "calm"
+      },
+      {
+        "scene": 67,
+        "title": "The Money Factory",
+        "mood": "triumph"
+      },
+      {
+        "scene": 79,
+        "title": "Hunting Coiners",
+        "mood": "tense"
+      },
+      {
+        "scene": 97,
+        "title": "Master of the Mint",
+        "mood": "triumph"
+      },
+      {
+        "scene": 114,
+        "title": "The South Sea Bubble",
+        "mood": "tense"
+      },
+      {
+        "scene": 134,
+        "title": "Let Newton Be",
+        "mood": "sad"
+      },
+      {
+        "scene": 148,
+        "title": "How Did It Happen?",
+        "mood": "mystery"
+      },
+      {
+        "scene": 151,
+        "title": "The Money Rule",
+        "mood": "calm"
+      }
+    ]
+  },
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck"
+}
