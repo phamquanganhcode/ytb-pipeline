@@ -1,0 +1,137 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5f7fa6"/>
+      <stop offset="0.55" stop-color="#e9b98a"/>
+      <stop offset="1" stop-color="#f6dca6"/>
+    </linearGradient>
+    <linearGradient id="sea" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5d8aa3"/>
+      <stop offset="1" stop-color="#2f5f7d"/>
+    </linearGradient>
+    <linearGradient id="iron" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#6a6660"/>
+      <stop offset="1" stop-color="#3a3733"/>
+    </linearGradient>
+    <linearGradient id="turret" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#3b3936"/>
+      <stop offset="0.35" stop-color="#7a766f"/>
+      <stop offset="1" stop-color="#2e2c2a"/>
+    </linearGradient>
+    <pattern id="planks" width="240" height="46" patternUnits="userSpaceOnUse">
+      <rect width="240" height="46" fill="#9a6a3c"/>
+      <path d="M0 0H240M0 46H240" stroke="#3a2416" stroke-width="4"/>
+      <path d="M150 0V46" stroke="#3a2416" stroke-width="3"/>
+      <path d="M20 22q40 -8 90 0M170 30q30 6 60 0" stroke="#7d5229" stroke-width="3" fill="none"/>
+    </pattern>
+    <g id="smoke">
+      <circle cx="0" cy="0" r="46"/><circle cx="52" cy="-30" r="58"/><circle cx="120" cy="-50" r="70"/>
+      <circle cx="205" cy="-78" r="82"/><circle cx="300" cy="-96" r="92"/><circle cx="410" cy="-120" r="104"/>
+    </g>
+    <g id="puff">
+      <circle cx="0" cy="0" r="34"/><circle cx="34" cy="-18" r="40"/><circle cx="76" cy="-4" r="36"/><circle cx="44" cy="20" r="30"/>
+    </g>
+  </defs>
+
+  <rect width="1920" height="700" fill="url(#sky)"/>
+  <!-- clouds -->
+  <g fill="#f7e6c8" stroke="#3a2416" stroke-width="4" opacity="0.95">
+    <path d="M90 190q30 -60 110 -40q40 -60 130 -20q80 -10 90 50q40 10 20 40H90q-50 -10 0 -30z"/>
+    <path d="M1380 120q40 -50 120 -30q60 -40 130 10q70 0 70 50q30 20 0 40H1380q-50 -20 0 -70z"/>
+  </g>
+
+  <!-- far shore with fort -->
+  <path d="M0 560q200 -40 420 -30q160 -30 330 -10q260 -30 520 0q300 -30 650 20V640H0z" fill="#6f8566" stroke="#3a2416" stroke-width="4"/>
+  <g fill="#b7a58a" stroke="#3a2416" stroke-width="4">
+    <path d="M1480 548h260v-34h-30v-18h-40v18h-40v-18h-40v18h-40v-18h-40v18h-30z"/>
+    
+  </g>
+
+  <!-- stranded wooden frigate, far -->
+  <g stroke="#3a2416" stroke-width="4" stroke-linejoin="round">
+    <path d="M760 566q10 44 40 52h300q40 -10 56 -56q-200 16 -396 4z" fill="#6b4226"/>
+    <path d="M790 584h340" fill="none" stroke="#e8d9b5" stroke-width="7"/>
+    <path d="M850 566V330M960 566V290M1070 566V340" fill="none" stroke-width="7"/>
+    <path d="M800 400h100M800 470h100M900 350h120M900 430h120M900 510h120M1025 400h90M1025 480h90" fill="none" stroke-width="5"/>
+    <path d="M850 330L760 566M960 290L1156 562M1070 340L1156 562M850 330L960 290L1070 340" fill="none" stroke-width="2.5"/>
+    <path d="M960 290h54l-14 14l14 14h-54z" fill="#c9433b" stroke-width="3"/>
+  </g>
+
+  <!-- sea -->
+  <rect y="606" width="1920" height="264" fill="url(#sea)"/>
+  <path d="M0 606H1920" stroke="#3a2416" stroke-width="4"/>
+  <g fill="none" stroke="#cfe3ea" stroke-width="4" stroke-linecap="round" opacity="0.85">
+    <path d="M40 650q30 -14 60 0t60 0M330 640q30 -14 60 0t60 0M620 660q30 -14 60 0t60 0M1240 646q30 -14 60 0t60 0M1640 656q30 -14 60 0t60 0"/>
+    <path d="M150 820q30 -14 60 0t60 0M520 838q30 -14 60 0t60 0M900 824q30 -14 60 0t60 0M1300 842q30 -14 60 0t60 0M1700 826q30 -14 60 0t60 0"/>
+  </g>
+
+  <!-- CSS Virginia (left): long low hull, sloped iron casemate, one funnel -->
+  <g fill="#2a2725" stroke="#3a2416" stroke-width="4" opacity="0.92"><use href="#smoke" transform="translate(530 430) scale(-1 1)"/></g>
+  <g stroke="#2b1a10" stroke-width="6" stroke-linejoin="round">
+    <path d="M60 748h820l-30 34H100z" fill="#4b3a2c"/>
+    <path d="M170 748L250 608H700L790 748z" fill="url(#iron)"/>
+    <path d="M250 608H700" stroke-width="8"/>
+    <path d="M196 702H764M222 656H736" fill="none" stroke="#2b2826" stroke-width="3"/>
+    <g fill="none" stroke="#2b2826" stroke-width="3">
+      <path d="M300 608L270 748M380 608L365 748M460 608V748M540 608L555 748M620 608L650 748"/>
+    </g>
+    <g fill="#141210" stroke-width="4">
+      <rect x="296" y="672" width="40" height="34" rx="6"/><rect x="408" y="672" width="40" height="34" rx="6"/>
+      <rect x="520" y="672" width="40" height="34" rx="6"/><rect x="632" y="672" width="40" height="34" rx="6"/>
+    </g>
+    <rect x="496" y="470" width="62" height="140" fill="#2f2c2a"/>
+    <rect x="488" y="462" width="78" height="18" fill="#1f1d1b"/>
+    <path d="M300 608V500" fill="none" stroke-width="5"/>
+    <path d="M300 500h70l-16 20l16 20h-70z" fill="#b8322c" stroke-width="4"/>
+    <path d="M300 500l34 40M334 500l-34 40" stroke="#f1e6d0" stroke-width="5" fill="none"/>
+    <!-- gun barrel from the bow port -->
+    <rect x="770" y="690" width="92" height="20" rx="6" fill="#1b1917"/>
+  </g>
+  <path d="M40 782q40 -18 80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0" fill="none" stroke="#e7f1f3" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- muzzle flash and powder smoke between the ships -->
+  <g stroke="#2b1a10" stroke-width="4">
+    <path d="M866 700l70 -34l-30 30l76 4l-76 12l34 28z" fill="#ffd66b"/>
+    <g fill="#efe7d8"><use href="#puff" x="960" y="676"/><use href="#puff" x="1170" y="690"/></g>
+    <path d="M1372 694l-70 -30l30 28l-76 6l76 10l-34 30z" fill="#ffd66b"/>
+  </g>
+
+  <!-- USS Monitor (right): flat raft, round turret, small pilothouse -->
+  <g stroke="#2b1a10" stroke-width="6" stroke-linejoin="round">
+    <path d="M1190 766h640q30 0 40 -22H1150q10 22 40 22z" fill="#3a3632"/>
+    <path d="M1150 744h720" stroke-width="8"/>
+    <rect x="1440" y="630" width="180" height="114" fill="url(#turret)"/>
+    <ellipse cx="1530" cy="630" rx="90" ry="16" fill="#8b867e"/>
+    <path d="M1440 668H1620M1440 706H1620" fill="none" stroke="#2b2826" stroke-width="3"/>
+    <g fill="#2b2826" stroke="none">
+      <circle cx="1460" cy="650" r="4"/><circle cx="1500" cy="650" r="4"/><circle cx="1560" cy="650" r="4"/><circle cx="1600" cy="650" r="4"/>
+      <circle cx="1460" cy="688" r="4"/><circle cx="1600" cy="688" r="4"/><circle cx="1460" cy="726" r="4"/><circle cx="1500" cy="726" r="4"/><circle cx="1560" cy="726" r="4"/><circle cx="1600" cy="726" r="4"/>
+    </g>
+    <g fill="#141210" stroke-width="4"><ellipse cx="1474" cy="694" rx="13" ry="17"/><ellipse cx="1514" cy="694" rx="13" ry="17"/></g>
+    <rect x="1376" y="686" width="92" height="16" rx="6" fill="#1b1917" stroke-width="4"/>
+    <rect x="1196" y="712" width="56" height="32" fill="#55514b"/>
+    <path d="M1204 724h40" stroke="#141210" stroke-width="5"/>
+    <rect x="1690" y="700" width="26" height="44" fill="#2f2c2a"/><rect x="1730" y="700" width="26" height="44" fill="#2f2c2a"/>
+    <path d="M1820 744V640" fill="none" stroke-width="5"/>
+    <path d="M1820 640h-76v48h76z" fill="#f1e6d0" stroke-width="4"/>
+    <path d="M1744 652h76M1744 664h76M1744 676h76" stroke="#b8322c" stroke-width="5" fill="none"/>
+    <rect x="1744" y="640" width="32" height="24" fill="#2f4f86" stroke-width="3"/>
+  </g>
+  <g fill="#3b3836" stroke="#3a2416" stroke-width="4" opacity="0.8"><use href="#puff" x="1700" y="650" transform="translate(0 0)"/></g>
+  <path d="M1130 770q40 -18 80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0t80 0" fill="none" stroke="#e7f1f3" stroke-width="6" stroke-linecap="round"/>
+
+  <!-- shore battery wharf: flat ground for the characters -->
+  <rect y="860" width="1920" height="220" fill="url(#planks)"/>
+  <path d="M0 860H1920" stroke="#2b1a10" stroke-width="8"/>
+  <rect y="1040" width="1920" height="40" fill="#000" opacity="0.18"/>
+  <g stroke="#2b1a10" stroke-width="6" stroke-linejoin="round">
+    <rect x="1700" y="770" width="48" height="96" fill="#6b4226"/><ellipse cx="1724" cy="770" rx="24" ry="8" fill="#8a5a34"/>
+    <rect x="120" y="770" width="48" height="96" fill="#6b4226"/><ellipse cx="144" cy="770" rx="24" ry="8" fill="#8a5a34"/>
+    <path d="M144 800q780 90 1580 0" fill="none" stroke="#c9a66b" stroke-width="9"/>
+    <path d="M144 800q780 90 1580 0" fill="none" stroke-width="2" stroke-dasharray="4 14"/>
+    <!-- pile of round shot -->
+    <g fill="#2f2c2a" stroke-width="5">
+      <circle cx="1790" cy="900" r="26"/><circle cx="1842" cy="900" r="26"/><circle cx="1894" cy="900" r="26"/><circle cx="1816" cy="858" r="26"/><circle cx="1868" cy="858" r="26"/>
+    </g>
+  </g>
+</svg>

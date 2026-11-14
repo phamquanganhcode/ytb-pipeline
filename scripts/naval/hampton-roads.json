@@ -1,0 +1,1485 @@
+{
+  "title": "The 4-Hour Battle That Made Every Navy Obsolete",
+  "iconStyle": "bubble",
+  "lang": "en",
+  "tts": "kokoro",
+  "voice": "am_michael",
+  "friendVoice": "am_puck",
+  "cast": {
+    "you": {
+      "name": "Samuel Dana Greene",
+      "shirt": "#1f2a44"
+    },
+    "worden": {
+      "name": "John L. Worden",
+      "shirt": "#1f2a44"
+    },
+    "ericsson": {
+      "name": "John Ericsson",
+      "shirt": "#4a3626"
+    },
+    "crowd1": {
+      "name": "Sailor",
+      "face": "sailor-1830s"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It's nine p.m. on March 8th, 1862, and a warship is burning in front of you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "burning",
+          "expression": "shock"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "stamp": "HAMPTON ROADS, 1862"
+    },
+    {
+      "text": "She is the USS Congress: fifty guns, and this morning she was the pride of the fleet.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "USS CONGRESS, 50 GUNS",
+          "word": "fifty"
+        }
+      ]
+    },
+    {
+      "text": "One enemy ship did this, in a single afternoon.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "One",
+          "pose": "point"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      }
+    },
+    {
+      "text": "It destroyed two warships and killed more than two hundred and forty men.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "destroyed",
+          "pose": "idle"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "240+ DEAD",
+          "word": "killed"
+        }
+      ]
+    },
+    {
+      "text": "Every cannonball the fleet fired at it just bounced off.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bounced",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      }
+    },
+    {
+      "text": "Tomorrow morning, it comes back to finish the job.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Tomorrow",
+          "pose": "idle"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      }
+    },
+    {
+      "text": "The only thing in its way is you: Lieutenant Samuel Dana Greene, age twenty-two.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "YOU, LT. GREENE, AGE 22",
+          "word": "you",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "Your ship is brand new, and it almost sank yesterday.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "almost",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      }
+    },
+    {
+      "text": "By the end, you'll know how four hours tomorrow make every navy on Earth obsolete.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "four",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "4 HOURS",
+          "word": "four"
+        }
+      ]
+    },
+    {
+      "text": "But first: how does one ship beat a whole fleet?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "icons": [
+        {
+          "icon": "question",
+          "word": "how"
+        }
+      ]
+    },
+    {
+      "text": "Go back one year, to the navy yard at Norfolk, Virginia.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "stamp": "NORFOLK, 1861",
+      "empty": true
+    },
+    {
+      "text": "The Confederacy has almost no navy.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "But it does have the burned hull of a Union frigate: the Merrimack.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "USS MERRIMACK",
+          "word": "Merrimack"
+        }
+      ]
+    },
+    {
+      "text": "So engineers cut her down to the waterline, and build an iron barn on top.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "The walls are four inches of iron, over two feet of wood.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "4 IN. IRON + 2 FT. WOOD",
+          "word": "four"
+        }
+      ]
+    },
+    {
+      "text": "And the walls slope.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "So a cannonball doesn't punch through: it skips off, like a stone off a pond.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "They rename her the CSS Virginia, and bolt an iron ram to her bow.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "CSS VIRGINIA",
+          "word": "Virginia"
+        }
+      ]
+    },
+    {
+      "text": "She is slow, she leaks, and she needs half an hour to turn around.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "30 MINUTES TO TURN",
+          "word": "half"
+        }
+      ]
+    },
+    {
+      "text": "None of that matters, if nothing can hurt you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "factory1900",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "March 8th, 1862. The Virginia steams out toward the Union's wooden fleet.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "stamp": "MARCH 8, 1862",
+      "empty": true
+    },
+    {
+      "text": "On the USS Cumberland, the gunners fire broadside after broadside.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "USS CUMBERLAND, 24 GUNS",
+          "word": "Cumberland"
+        }
+      ]
+    },
+    {
+      "text": "The shots ring off the iron, and fly into the sky.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "The Virginia doesn't slow down. She rams the Cumberland below the waterline.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "RAMMED",
+          "word": "rams"
+        }
+      ]
+    },
+    {
+      "text": "The Cumberland goes down with her flag still flying, and her guns still firing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Next, the Congress runs aground, surrenders, and is set on fire.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "It stays the US Navy's worst day for almost eighty years, until Pearl Harbor.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "shipdeck1860",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "WORST DAY UNTIL 1941",
+          "word": "worst"
+        }
+      ]
+    },
+    {
+      "text": "In Washington, the Secretary of War keeps walking to the window.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "stamp": "WASHINGTON",
+      "empty": true
+    },
+    {
+      "text": "He expects the Virginia to steam up the river and shell the White House.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "She can't. She sits far too deep in the water.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "But nobody in that room knows it.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "whitehouse1917",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "The Union's answer comes from a Swedish-born engineer in New York: John Ericsson.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "answer",
+          "expression": "neutral",
+          "pose": "idle"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "stamp": "NEW YORK, 1861",
+      "extras": [
+        {
+          "who": "ericsson",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "JOHN ERICSSON, ENGINEER",
+          "word": "John",
+          "target": "ericsson"
+        }
+      ]
+    },
+    {
+      "text": "His design has no masts, no sails, and almost no ship.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "almost",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "pose": "handOut"
+        }
+      ]
+    },
+    {
+      "text": "It is a flat iron raft, with one spinning iron tower in the middle.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "flat",
+          "pose": "idle"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson"
+        }
+      ],
+      "paper": {
+        "text": "IRON RAFT + ONE SPINNING GUN TOWER",
+        "word": "raft"
+      }
+    },
+    {
+      "text": "Two giant guns sit in a turret that turns to aim, so the ship doesn't have to.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "pose": "point"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "TWO 11-INCH GUNS",
+          "word": "Two"
+        }
+      ]
+    },
+    {
+      "text": "The Navy is not convinced: if it fails, Ericsson must pay back every dollar.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "pose": "shrug"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$275,000, REFUNDABLE",
+          "word": "pay"
+        }
+      ]
+    },
+    {
+      "text": "He builds it in about a hundred days.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hundred",
+          "expression": "shock"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "expression": "happy",
+          "pose": "idle"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "ABOUT 100 DAYS",
+          "word": "hundred"
+        }
+      ]
+    },
+    {
+      "text": "People call it a cheesebox on a raft. Its real name is the USS Monitor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cheesebox",
+          "expression": "happy"
+        }
+      ],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "USS MONITOR",
+          "word": "Monitor"
+        }
+      ]
+    },
+    {
+      "text": "You run the turret, and the whole crew is fifty-eight volunteers.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "turret",
+          "expression": "neutral",
+          "pose": "point"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 7",
+        "value": ""
+      },
+      "stamp": "USS MONITOR, MARCH 7",
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "58 VOLUNTEERS",
+          "word": "fifty-eight"
+        }
+      ]
+    },
+    {
+      "text": "On the way south, a storm nearly sinks you.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "storm",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 7",
+        "value": ""
+      },
+      "fx": "storm"
+    },
+    {
+      "text": "Water pours in under the turret, and fumes knock out the engineers.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 7",
+        "value": ""
+      },
+      "fx": "storm"
+    },
+    {
+      "text": "You arrive one day late.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "late",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 7",
+        "value": ""
+      }
+    },
+    {
+      "text": "Which brings you back to the burning Congress. After midnight, she explodes.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "explodes",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "MARCH 8, 9 PM",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "12:30 A.M.",
+          "word": "midnight"
+        }
+      ]
+    },
+    {
+      "text": "Sunday morning. The Virginia comes back for a stranded Union frigate, the Minnesota.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "stamp": "MARCH 9, 1862",
+      "empty": true
+    },
+    {
+      "text": "Instead, she finds a cheesebox in the way.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Inside the turret, you pull the firing cord yourself.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "pull",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 4
+    },
+    {
+      "text": "A solid iron ball, eleven inches wide, hits the Virginia.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "solid",
+          "pose": "idle"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 4,
+      "vision": {
+        "image": "hamptonroads1862",
+        "word": "hits"
+      }
+    },
+    {
+      "text": "It dents her. That's all.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dents",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 4
+    },
+    {
+      "text": "Her shells hit your turret. They dent it. That's all.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shells",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 4
+    },
+    {
+      "text": "For about four hours the two ships circle, sometimes close enough to touch.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "ABOUT 4 HOURS",
+          "word": "four"
+        }
+      ]
+    },
+    {
+      "text": "So why can't either one win? Two reasons, and both are a little embarrassing.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Reason one: your guns are a new size, and the Navy is afraid they will burst.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "guns",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "REASON 1",
+          "word": "one"
+        }
+      ]
+    },
+    {
+      "text": "So you are ordered to load only half the gunpowder.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "ordered",
+          "pose": "idle"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "paper": {
+        "text": "ORDER: 15 POUNDS OF POWDER PER SHOT",
+        "word": "ordered"
+      }
+    },
+    {
+      "text": "Later tests show the guns could take double. Today, you'll never know.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "never",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      }
+    },
+    {
+      "text": "Reason two: the Virginia came here to kill wooden ships.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Reason",
+          "pose": "idle"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "vision": {
+        "image": "shipdeck1860",
+        "word": "wooden"
+      },
+      "callouts": [
+        {
+          "text": "REASON 2",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "So she carries exploding shells, and none of the solid shot that breaks iron.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      }
+    },
+    {
+      "text": "Both ships brought the wrong ammunition to the first ironclad duel in history.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "FIRST IRONCLAD DUEL",
+          "word": "first"
+        }
+      ]
+    },
+    {
+      "text": "One Confederate officer stops firing altogether.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "He says he'd do as much damage by snapping his thumb at you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Meanwhile, the speaking tube to your captain breaks.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "breaks",
+          "expression": "shock"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      }
+    },
+    {
+      "text": "So his orders arrive on foot, carried by the paymaster and a clerk.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "orders",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 2
+    },
+    {
+      "text": "It works about as well as it sounds.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "works",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 2
+    },
+    {
+      "text": "And the turret is so hard to stop that you fire while it is still spinning.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "turret",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "FIRING ON THE FLY",
+          "word": "fire"
+        }
+      ]
+    },
+    {
+      "text": "Then, around noon, a shell bursts against the slit your captain is looking through.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "shell",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "shock",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "LT. JOHN WORDEN, CAPTAIN",
+          "word": "captain",
+          "target": "worden"
+        }
+      ]
+    },
+    {
+      "text": "Lieutenant John Worden is blinded. He hands the ship to you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "pose": "handOut"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, IN COMMAND",
+          "word": "you",
+          "target": "you"
+        }
+      ]
+    },
+    {
+      "text": "By the time you steer back into the fight, the Virginia is leaving.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "She is leaking, the tide is falling, and she heads home to Norfolk.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Nobody has died today. Both sides announce that they won.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Both",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "RESULT: A DRAW",
+          "word": "Both"
+        }
+      ]
+    },
+    {
+      "text": "Told that the Minnesota is saved, Worden answers: then I can die happy.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Told",
+          "pose": "idle"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden"
+        }
+      ],
+      "quote": {
+        "who": "worden",
+        "text": "Then I can die happy.",
+        "word": "then"
+      }
+    },
+    {
+      "text": "He doesn't. He lives another thirty-five years, and retires an admiral.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "lives",
+          "expression": "happy"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "happy"
+        }
+      ]
+    },
+    {
+      "text": "The real damage lands three thousand miles away, in London.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "stamp": "LONDON, 1862",
+      "empty": true
+    },
+    {
+      "text": "The Times counts a hundred and forty-nine first-class warships in the Royal Navy. After this fight, it says, there are two.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "empty": true,
+      "paper": {
+        "text": "ROYAL NAVY: 149 FIRST-CLASS WARSHIPS",
+        "word": "counts",
+        "fix": {
+          "strike": "149",
+          "write": "2",
+          "word": "two"
+        }
+      }
+    },
+    {
+      "text": "Every wooden warship on Earth has just become a target.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "newsroom1900",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "The Union alone orders dozens of copies, and calls every one a monitor.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "dozens",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "callouts": [
+        {
+          "text": "DOZENS OF MONITORS",
+          "word": "dozens"
+        }
+      ]
+    },
+    {
+      "text": "The two originals don't survive the year.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "originals",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      }
+    },
+    {
+      "text": "The Virginia is blown up by her own crew in May, to keep her from capture.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "vision": {
+        "image": "hamptonroads1862",
+        "word": "blown"
+      },
+      "callouts": [
+        {
+          "text": "MAY 11, 1862",
+          "word": "May"
+        }
+      ]
+    },
+    {
+      "text": "The Monitor sinks in a storm off Cape Hatteras on New Year's Eve, with sixteen men.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "sinks",
+          "expression": "shock"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "fx": "storm",
+      "callouts": [
+        {
+          "text": "DECEMBER 31, 1862",
+          "word": "New"
+        }
+      ]
+    },
+    {
+      "text": "Her turret was raised in 2002. You can stand next to it today, in Newport News, Virginia.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "turret",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "2002",
+        "value": ""
+      },
+      "vision": {
+        "image": "turret1862",
+        "word": "turret"
+      }
+    },
+    {
+      "text": "And nearly every big-gun warship built since carries the same idea: a gun that turns.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gun",
+          "pose": "point"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "2002",
+        "value": ""
+      }
+    },
+    {
+      "text": "So who really won, if neither ship could hurt the other? Tell me below.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "who",
+          "pose": "shrug",
+          "expression": "happy"
+        }
+      ],
+      "bg": "future",
+      "counter": {
+        "label": "2002",
+        "value": ""
+      },
+      "title": "THE 4 HOURS THAT MADE EVERY NAVY OBSOLETE"
+    }
+  ],
+  "meta": {
+    "titleOptions": [
+      "Why Two Ships That Couldn't Hurt Each Other Changed War Forever",
+      "The Day Wooden Warships Died (Hampton Roads, 1862)",
+      "Monitor vs. Virginia: The Draw That Sank Every Navy"
+    ],
+    "thumbnail": "The round Monitor turret and the sloped Virginia casemate firing point-blank, cannonballs bouncing off both; text: 'NOBODY WON'",
+    "chapters": [
+      {
+        "scene": 0,
+        "title": "One Ship Did This",
+        "mood": "tense"
+      },
+      {
+        "scene": 10,
+        "title": "The Iron Barn",
+        "mood": "mystery"
+      },
+      {
+        "scene": 20,
+        "title": "The Worst Day",
+        "mood": "tense"
+      },
+      {
+        "scene": 31,
+        "title": "A Cheesebox on a Raft",
+        "mood": "calm"
+      },
+      {
+        "scene": 43,
+        "title": "The Duel",
+        "mood": "tense"
+      },
+      {
+        "scene": 63,
+        "title": "In Command",
+        "mood": "sad"
+      },
+      {
+        "scene": 70,
+        "title": "Obsolete",
+        "mood": "mystery"
+      }
+    ],
+    "description": "On March 8, 1862, one Confederate ironclad wrecked a Union fleet in an afternoon. The next morning it met a ship built in about 100 days, and the four-hour draw that followed made every wooden navy obsolete.\n\nA comedic dramatization of documented history.\n\nSources:\nS. Dana Greene, 'In the Monitor Turret', The Century Magazine (March 1885)\nNaval History and Heritage Command, Battle of Hampton Roads - https://www.history.navy.mil\nThe Mariners' Museum and Park, USS Monitor Center - https://www.marinersmuseum.org\nNOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov\nDiary of Gideon Welles (1911)\nThe Times (London), March 1862",
+    "factCheck": [
+      "Monitor reached Hampton Roads about 9 p.m. on 8 March 1862; USS Congress (rated 50 guns) was burning and exploded after midnight (Greene 1885; NHHC)",
+      "8 March: CSS Virginia rammed and sank USS Cumberland (24 guns) and destroyed USS Congress; Union dead about 240-260 depending on the count (NHHC)",
+      "'Worst day until Pearl Harbor' is the common description of 8 March 1862 in US Navy histories; it is a characterisation, not a statistic",
+      "S. Dana Greene born 11 Feb 1840, executive officer of USS Monitor, age 22, fired the turret guns himself until Worden was wounded (Greene 1885)",
+      "CSS Virginia built on the burned hull of USS Merrimack at Gosport Navy Yard, Norfolk: casemate of 4 in. iron (two 2-in. layers) over about 24 in. of wood, sloped about 36 degrees, iron ram; took 30-40 minutes to turn",
+      "Stanton's fear that Virginia would come up the Potomac is from Gideon Welles's diary; the cabinet meeting was on the morning of 9 March (the script places it loosely after the 8 March disaster); Virginia drew about 22 ft, too deep for the river",
+      "USS Monitor: designed by John Ericsson (born in Sweden), contract 4 Oct 1861 for $275,000 with a refund clause, launched 30 Jan 1862 (about 100 days after the keel was laid), two 11-inch Dahlgren guns in a revolving turret, crew of 58 volunteers",
+      "'Cheesebox on a raft' was a contemporary nickname",
+      "Storm on the tow south, 7 March 1862: water entered under the turret and through the blower pipes; engineers overcome by fumes (Greene 1885)",
+      "9 March 1862: the duel lasted about four hours; nobody was killed on either ship",
+      "Monitor was limited to 15-lb powder charges; later tests allowed 30 lb. Whether full charges would have pierced Virginia is a common but unproven claim, so the script only says 'you'll never know'",
+      "Virginia carried mainly explosive shell, not armor-piercing solid shot, on 9 March",
+      "Lt. John Eggleston of Virginia reported he could do as much damage 'by snapping my thumb at her every two minutes and a half' (paraphrased in the script)",
+      "Speaking tube failed; orders were carried by paymaster William Keeler and captain's clerk Daniel Toffey; Greene fired 'on the fly' (Greene 1885)",
+      "Worden was blinded by a shell on the pilot house about noon (the script shows him in the turret for staging; he was in the pilot house); 'Then I can die happy' is from Greene 1885; Worden died in 1897 as a retired rear admiral",
+      "The Times (London): 'Whereas we had available for immediate purposes 149 first-class war-ships, we have now two'",
+      "Virginia destroyed by her crew 11 May 1862; Monitor foundered off Cape Hatteras 31 Dec 1862 with 16 men lost; turret raised 2002, displayed at The Mariners' Museum, Newport News",
+      "The Union ordered several dozen monitor-type ironclads during the war"
+    ],
+    "sources": [
+      "S. Dana Greene, 'In the Monitor Turret', The Century Magazine, March 1885",
+      "Naval History and Heritage Command - https://www.history.navy.mil",
+      "The Mariners' Museum and Park - https://www.marinersmuseum.org",
+      "NOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov",
+      "Diary of Gideon Welles (Houghton Mifflin, 1911)",
+      "The Times (London), March 1862"
+    ],
+    "wordCount": 948
+  }
+}

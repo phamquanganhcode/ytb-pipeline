@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1920 1080" width="1920" height="1080">
+  <defs>
+    <linearGradient id="wall" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2a2826"/>
+      <stop offset="0.5" stop-color="#6b665e"/>
+      <stop offset="1" stop-color="#2a2826"/>
+    </linearGradient>
+    <linearGradient id="gun" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#5a5650"/>
+      <stop offset="1" stop-color="#1d1b19"/>
+    </linearGradient>
+    <linearGradient id="beam" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#ffe9b0" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#ffe9b0" stop-opacity="0"/>
+    </linearGradient>
+    <radialGradient id="lamp" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#ffd27a" stop-opacity="0.7"/>
+      <stop offset="1" stop-color="#ffd27a" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="plates" width="160" height="760" patternUnits="userSpaceOnUse">
+      <path d="M0 0V760" stroke="#1c1a18" stroke-width="5"/>
+      <g fill="#1c1a18">
+        <circle cx="22" cy="40" r="6"/><circle cx="138" cy="40" r="6"/><circle cx="22" cy="150" r="6"/><circle cx="138" cy="150" r="6"/>
+        <circle cx="22" cy="260" r="6"/><circle cx="138" cy="260" r="6"/><circle cx="22" cy="370" r="6"/><circle cx="138" cy="370" r="6"/>
+        <circle cx="22" cy="480" r="6"/><circle cx="138" cy="480" r="6"/><circle cx="22" cy="590" r="6"/><circle cx="138" cy="590" r="6"/>
+        <circle cx="22" cy="700" r="6"/><circle cx="138" cy="700" r="6"/>
+      </g>
+    </pattern>
+    <pattern id="grate" width="60" height="60" patternUnits="userSpaceOnUse">
+      <rect width="60" height="60" fill="#191715"/>
+      <rect x="10" y="10" width="40" height="40" fill="#e9c98a"/>
+    </pattern>
+    <pattern id="planks" width="260" height="48" patternUnits="userSpaceOnUse">
+      <rect width="260" height="48" fill="#7c5330"/>
+      <path d="M0 0H260M0 48H260" stroke="#2b1a10" stroke-width="4"/>
+      <path d="M170 0V48" stroke="#2b1a10" stroke-width="3"/>
+      <path d="M20 24q40 -8 100 0M190 30q30 6 60 0" stroke="#643f22" stroke-width="3" fill="none"/>
+    </pattern>
+  </defs>
+
+  <!-- curved iron wall -->
+  <rect width="1920" height="860" fill="url(#wall)"/>
+  <rect y="100" width="1920" height="760" fill="url(#plates)"/>
+  <path d="M0 290H1920M0 560H1920" stroke="#1c1a18" stroke-width="5"/>
+
+  <!-- roof: iron beams with a grating that lets daylight in -->
+  <rect width="1920" height="100" fill="#1b1917"/>
+  <rect x="520" y="14" width="880" height="72" fill="url(#grate)" stroke="#0e0d0c" stroke-width="6"/>
+  <path d="M0 100H1920" stroke="#0e0d0c" stroke-width="8"/>
+  <path d="M560 100L380 860H1540L1360 100z" fill="url(#beam)"/>
+
+  <!-- two gun ports with daylight -->
+  <g stroke="#0e0d0c" stroke-width="8">
+    <ellipse cx="330" cy="470" rx="80" ry="112" fill="#bfd9e6"/>
+    <ellipse cx="1590" cy="470" rx="80" ry="112" fill="#bfd9e6"/>
+  </g>
+  <path d="M262 500q68 -30 136 0v20q-68 34 -136 0zM1522 500q68 -30 136 0v20q-68 34 -136 0z" fill="#4f7f9a" stroke="#0e0d0c" stroke-width="4"/>
+
+  <!-- left Dahlgren gun: soda-bottle shape, muzzle in the port, on a wooden carriage -->
+  <g stroke="#0e0d0c" stroke-width="7" stroke-linejoin="round">
+    <path d="M360 560h300l24 240H336z" fill="#5b3a20"/>
+    <path d="M350 680H672" fill="none" stroke-width="4"/>
+    <circle cx="400" cy="822" r="34" fill="#2b2826"/><circle cx="620" cy="822" r="34" fill="#2b2826"/>
+    <path d="M300 446L480 432Q560 408 610 440Q650 486 610 536Q560 566 480 540L300 510z" fill="url(#gun)"/>
+    <circle cx="648" cy="488" r="20" fill="#2b2826"/>
+    <path d="M480 432V540M540 420V556" fill="none" stroke-width="4"/>
+    <ellipse cx="300" cy="478" rx="14" ry="32" fill="#0e0d0c"/>
+  </g>
+  <!-- right gun, mirrored -->
+  <g stroke="#0e0d0c" stroke-width="7" stroke-linejoin="round" transform="translate(1920 0) scale(-1 1)">
+    <path d="M360 560h300l24 240H336z" fill="#5b3a20"/>
+    <path d="M350 680H672" fill="none" stroke-width="4"/>
+    <circle cx="400" cy="822" r="34" fill="#2b2826"/><circle cx="620" cy="822" r="34" fill="#2b2826"/>
+    <path d="M300 446L480 432Q560 408 610 440Q650 486 610 536Q560 566 480 540L300 510z" fill="url(#gun)"/>
+    <circle cx="648" cy="488" r="20" fill="#2b2826"/>
+    <path d="M480 432V540M540 420V556" fill="none" stroke-width="4"/>
+    <ellipse cx="300" cy="478" rx="14" ry="32" fill="#0e0d0c"/>
+  </g>
+
+  <!-- lantern on the wall and a rack of round shot at the back -->
+  <circle cx="960" cy="330" r="190" fill="url(#lamp)"/>
+  <g stroke="#0e0d0c" stroke-width="6" stroke-linejoin="round">
+    <path d="M960 230v40" fill="none"/>
+    <path d="M930 270h60l12 80h-84z" fill="#ffd27a"/>
+    <path d="M924 270h72M916 350h88" fill="none" stroke-width="8"/>
+    <rect x="800" y="740" width="320" height="26" fill="#5b3a20"/>
+    <g fill="#2f2c2a"><circle cx="840" cy="706" r="34"/><circle cx="920" cy="706" r="34"/><circle cx="1000" cy="706" r="34"/><circle cx="1080" cy="706" r="34"/></g>
+    <g fill="#8b867e" stroke="none" opacity="0.6"><circle cx="828" cy="694" r="8"/><circle cx="908" cy="694" r="8"/><circle cx="988" cy="694" r="8"/><circle cx="1068" cy="694" r="8"/></g>
+  </g>
+
+  <!-- wooden floor, flat for the characters -->
+  <rect y="856" width="1920" height="224" fill="url(#planks)"/>
+  <path d="M0 856H1920" stroke="#0e0d0c" stroke-width="8"/>
+  <rect y="1030" width="1920" height="50" fill="#000" opacity="0.22"/>
+  <rect width="1920" height="1080" fill="#000" opacity="0.08"/>
+</svg>
