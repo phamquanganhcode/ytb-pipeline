@@ -408,6 +408,11 @@ def validate(script):
         on_screen = {"you"} | {e["who"] for e in extras}
         if has_friend:
             on_screen.add("friend")
+        if scene.get("withoutYou"):
+            # Events "you" did not witness: only supporting characters stand in the scene.
+            if not (extras or crowd) or scene.get("empty") or scene.get("icons") or scene.get("vision") or scene_actions(scene):
+                raise ValueError(f"{where}: a withoutYou scene needs an extra or a crowd, and has no empty, icons, vision or actions (those belong to 'you')")
+            on_screen.discard("you")
         if scene.get("empty"):
             if extras or scene.get("icons") or scene.get("quote") or scene_actions(scene) or any(c.get("target") for c in callouts):
                 raise ValueError(f"{where}: an empty (establishing) scene has no characters, so no extras, icons, quote, actions or targeted callouts")
@@ -423,7 +428,7 @@ def validate(script):
                 raise ValueError(f"{where}: quote needs 'who' on screen (on screen: {sorted(on_screen)}), 'text' of 1-90 characters and a trigger 'word'")
             if quote["who"] == "you" and scene.get("icons") and script.get("iconStyle") == "bubble":
                 raise ValueError(f"{where}: a quote from 'you' and icons would both sit right of your head; drop the icons")
-        if any(w not in on_screen | {"you"} for w in scene.get("looks", {})):
+        if any(w not in (on_screen if scene.get("withoutYou") else on_screen | {"you"}) for w in scene.get("looks", {})):
             raise ValueError(f"{where}: looks may only swap heads of characters in this scene")
         if scene.get("fx") not in (None, "rain", "storm", "snow"):
             raise ValueError(f"{where}: fx must be 'rain', 'storm' or 'snow'")
@@ -736,8 +741,10 @@ def main():
     (ROOT / "out" / f"{episode}.srt").write_text(srt(scenes, lang["captionWords"] * 2), encoding="utf-8")
 
     if not args.no_render:
+        # REMOTION_BROWSER: a Chrome Headless Shell already on this machine, for when Remotion cannot download its own.
+        browser = [f"--browser-executable={os.environ['REMOTION_BROWSER']}"] if os.environ.get("REMOTION_BROWSER") else []
         subprocess.run(
-            ["npx", "remotion", "render", "src/index.ts", "Episode", f"out/{episode}.mp4"],
+            ["npx", "remotion", "render", "src/index.ts", "Episode", f"out/{episode}.mp4", *browser],
             cwd=ROOT, check=True, shell=sys.platform == "win32",
         )
         loudnorm(ROOT / "out" / f"{episode}.mp4")

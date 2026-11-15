@@ -8,24 +8,48 @@
   "cast": {
     "you": {
       "name": "Samuel Dana Greene",
-      "shirt": "#1f2a44"
+      "face": "samuel-dana-greene",
+      "shirt": "#1f2a44",
+      "faceIdea": "US Navy lieutenant Samuel Dana Greene, 1862, early twenties: slim boyish clean-shaven face (called a 'beardless boy' at the time), dark wavy hair, dark blue Union navy frock coat with brass buttons, flat officer's cap"
     },
     "worden": {
       "name": "John L. Worden",
-      "shirt": "#1f2a44"
+      "face": "john-worden",
+      "shirt": "#1f2a44",
+      "faceIdea": "US Navy lieutenant John L. Worden, 1862, age 44: long full dark beard, high forehead, dark hair combed back, dark blue Union navy frock coat with brass buttons"
     },
     "ericsson": {
       "name": "John Ericsson",
-      "shirt": "#4a3626"
+      "face": "john-ericsson",
+      "shirt": "#4a3626",
+      "faceIdea": "Swedish-born engineer John Ericsson, 1861, about 58: square clean-shaven face, bushy grey side-whiskers, strong jaw, receding grey hair, dark frock coat, high white collar and black cravat"
+    },
+    "buchanan": {
+      "name": "Franklin Buchanan",
+      "face": "franklin-buchanan",
+      "shirt": "#6b6b6b",
+      "faceIdea": "Confederate flag officer Franklin Buchanan, 1862, about 61: stern clean-shaven face, hooked nose, thin white hair, high forehead, grey Confederate navy frock coat with gold buttons"
+    },
+    "stanton": {
+      "name": "Edwin Stanton",
+      "face": "edwin-stanton",
+      "shirt": "#2b2b2b",
+      "faceIdea": "US Secretary of War Edwin Stanton, 1862, age 47: long full greying beard, small round wire spectacles, dark hair, stern look, black frock coat"
     },
     "crowd1": {
       "name": "Sailor",
-      "face": "sailor-1830s"
+      "face": "sailor-1862",
+      "faceIdea": "navy sailor, 1862: weathered face, short beard, flat dark blue sailor cap, blue wool shirt with a wide collar"
+    },
+    "crowd2": {
+      "name": "Gunner",
+      "face": "gunner-1862",
+      "faceIdea": "navy gunner, 1862: young face smudged with powder soot, bare head with a sweat rag tied around the forehead, open-necked shirt"
     }
   },
   "scenes": [
     {
-      "text": "It's nine p.m. on March 8th, 1862, and a warship is burning in front of you.",
+      "text": "It's the night of March 8th, 1862, and a warship is burning in front of you.",
       "speaker": "narrator",
       "actions": [
         {
@@ -34,28 +58,30 @@
           "expression": "shock"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
-      "stamp": "HAMPTON ROADS, 1862"
+      "stamp": "HAMPTON ROADS, 1862",
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "She is the USS Congress: fifty guns, and this morning she was the pride of the fleet.",
+      "text": "She is the USS Congress, a frigate that was the pride of the fleet this morning.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
       "callouts": [
         {
-          "text": "USS CONGRESS, 50 GUNS",
-          "word": "fifty"
+          "text": "USS CONGRESS",
+          "word": "Congress"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "One enemy ship did this, in a single afternoon.",
@@ -67,14 +93,15 @@
           "pose": "point"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
-      }
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "It destroyed two warships and killed more than two hundred and forty men.",
+      "text": "It destroyed two warships and killed more than two hundred sailors.",
       "speaker": "narrator",
       "actions": [
         {
@@ -83,17 +110,18 @@
           "pose": "idle"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
       "callouts": [
         {
-          "text": "240+ DEAD",
+          "text": "200+ DEAD",
           "word": "killed"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "Every cannonball the fleet fired at it just bounced off.",
@@ -105,11 +133,12 @@
           "pose": "shrug"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
-      }
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "Tomorrow morning, it comes back to finish the job.",
@@ -121,44 +150,47 @@
           "pose": "idle"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
-      }
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "The only thing in its way is you: Lieutenant Samuel Dana Greene, age twenty-two.",
+      "text": "The only thing in its way is you: Lieutenant Dana Greene, barely out of the Naval Academy.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
       "callouts": [
         {
-          "text": "YOU, LT. GREENE, AGE 22",
+          "text": "YOU, LT. DANA GREENE",
           "word": "you",
           "target": "you"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "Your ship is brand new, and it almost sank yesterday.",
+      "text": "Your ship is brand new, half finished, and it nearly sank on the way here.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "almost",
+          "word": "nearly",
           "pose": "shrug"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
-      }
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "By the end, you'll know how four hours tomorrow make every navy on Earth obsolete.",
@@ -171,9 +203,9 @@
           "expression": "neutral"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
       "callouts": [
@@ -181,15 +213,39 @@
           "text": "4 HOURS",
           "word": "four"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
+    },
+    {
+      "text": "And why neither ship could actually win.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "neither",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "congressfire1862",
+      "counter": {
+        "label": "MARCH 8, NIGHT",
+        "value": ""
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "But first: how does one ship beat a whole fleet?",
       "speaker": "narrator",
-      "actions": [],
-      "bg": "harbor1850",
+      "actions": [
+        {
+          "who": "you",
+          "word": "first",
+          "pose": "idle"
+        }
+      ],
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
       "icons": [
@@ -197,36 +253,39 @@
           "icon": "question",
           "word": "how"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
       "text": "Go back one year, to the navy yard at Norfolk, Virginia.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
       "stamp": "NORFOLK, 1861",
-      "empty": true
+      "empty": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
       "text": "The Confederacy has almost no navy.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true
+      "empty": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
       "text": "But it does have the burned hull of a Union frigate: the Merrimack.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
@@ -237,187 +296,579 @@
           "text": "USS MERRIMACK",
           "word": "Merrimack"
         }
-      ]
+      ],
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
-      "text": "So engineers cut her down to the waterline, and build an iron barn on top.",
+      "text": "So its engineers cut her down to the waterline, and build an iron barn on top.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
       "text": "The walls are four inches of iron, over two feet of wood.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true,
+      "crowd": 5,
       "callouts": [
         {
           "text": "4 IN. IRON + 2 FT. WOOD",
           "word": "four"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
       "text": "And the walls slope.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
       "text": "So a cannonball doesn't punch through: it skips off, like a stone off a pond.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
-      "text": "They rename her the CSS Virginia, and bolt an iron ram to her bow.",
+      "text": "The iron plates arrive so slowly that she takes nearly a year to finish.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true,
+      "crowd": 3,
+      "callouts": [
+        {
+          "text": "NEARLY A YEAR",
+          "word": "nearly"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
+    },
+    {
+      "text": "They rename her the CSS Virginia, and bolt an iron beak to her bow.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "gosport1861",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "crowd": 3,
       "callouts": [
         {
           "text": "CSS VIRGINIA",
           "word": "Virginia"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
-      "text": "She is slow, she leaks, and she needs half an hour to turn around.",
+      "text": "She is slow, and she needs more than half an hour just to turn around.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true,
+      "crowd": 3,
       "callouts": [
         {
-          "text": "30 MINUTES TO TURN",
+          "text": "30+ MINUTES TO TURN",
           "word": "half"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
-      "text": "None of that matters, if nothing can hurt you.",
+      "text": "Her guns cannot be raised, so they only reach about a mile.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "factory1900",
+      "bg": "gosport1861",
       "counter": {
         "label": "1861",
         "value": ""
       },
-      "empty": true
+      "crowd": 3,
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
     },
     {
-      "text": "March 8th, 1862. The Virginia steams out toward the Union's wooden fleet.",
+      "text": "One officer watching the work tells her engineer: she will prove your coffin.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "gosport1861",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "crowd": 3,
+      "callouts": [
+        {
+          "text": "\"YOUR COFFIN\"",
+          "word": "coffin"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
+    },
+    {
+      "text": "In March 1862, her new captain arrives: Flag Officer Franklin Buchanan.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "gosport1861",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "enter": true
+        }
+      ],
+      "callouts": [
+        {
+          "text": "FRANKLIN BUCHANAN, CAPTAIN",
+          "word": "Franklin",
+          "target": "buchanan"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
+    },
+    {
+      "text": "He does not plan a trial run. He tells his engineer: I am going to ram the Cumberland.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "gosport1861",
+      "counter": {
+        "label": "1861",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "pose": "point"
+        }
+      ],
+      "quote": {
+        "who": "buchanan",
+        "text": "I am going to ram the Cumberland.",
+        "word": "ram"
+      },
+      "withoutYou": true,
+      "bgIdea": "stone dry dock at the Gosport Navy Yard, Norfolk, Virginia, 1861: the cut-down hull of a steam frigate being covered with a sloping iron casemate, wooden scaffolding, stacks of iron plates, a crane"
+    },
+    {
+      "text": "March 8th, 1862. Buchanan steams out toward the Union's wooden fleet.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
       "stamp": "MARCH 8, 1862",
-      "empty": true
+      "extras": [
+        {
+          "who": "buchanan"
+        }
+      ],
+      "crowd": 4,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
-      "text": "On the USS Cumberland, the gunners fire broadside after broadside.",
+      "text": "He tells his crew that the Confederacy expects every man to do his duty.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "virginiacasemate1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
-      "empty": true,
+      "extras": [
+        {
+          "who": "buchanan",
+          "pose": "point"
+        }
+      ],
+      "crowd": 4,
+      "quote": {
+        "who": "buchanan",
+        "text": "The Confederacy expects every man to do his duty.",
+        "word": "expects"
+      },
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "On the USS Cumberland, the sailors' washing is still drying in the rigging.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cumberland1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 5,
       "callouts": [
         {
-          "text": "USS CUMBERLAND, 24 GUNS",
+          "text": "USS CUMBERLAND",
           "word": "Cumberland"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
     },
     {
-      "text": "The shots ring off the iron, and fly into the sky.",
+      "text": "Then her gunners fire everything they have.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "cumberland1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
-      "empty": true
+      "crowd": 6,
+      "withoutYou": true,
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
     },
     {
-      "text": "The Virginia doesn't slow down. She rams the Cumberland below the waterline.",
+      "text": "The shells hit the sloping iron, and burst harmlessly in the air.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "cumberland1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
-      "empty": true,
+      "crowd": 6,
+      "withoutYou": true,
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
+    },
+    {
+      "text": "Buchanan shouts across the water: do you surrender?",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "pose": "handOut"
+        }
+      ],
+      "crowd": 4,
+      "quote": {
+        "who": "buchanan",
+        "text": "Do you surrender?",
+        "word": "surrender"
+      },
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "The answer from the Cumberland is one word: never.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cumberland1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "NEVER!",
+          "word": "never"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
+    },
+    {
+      "text": "So he rams her, below the waterline.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "pose": "point"
+        }
+      ],
+      "crowd": 4,
       "callouts": [
         {
           "text": "RAMMED",
           "word": "rams"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
-      "text": "The Cumberland goes down with her flag still flying, and her guns still firing.",
+      "text": "The sinking ship nearly drags the Virginia down with her.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "virginiacasemate1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
-      "empty": true
+      "extras": [
+        {
+          "who": "buchanan",
+          "expression": "shock",
+          "pose": "idle"
+        }
+      ],
+      "crowd": 4,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
-      "text": "Next, the Congress runs aground, surrenders, and is set on fire.",
+      "text": "Then the iron beak snaps off, and stays in the wound. Remember that beak.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "virginiacasemate1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
       },
-      "empty": true
+      "extras": [
+        {
+          "who": "buchanan",
+          "expression": "shock"
+        }
+      ],
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "THE RAM IS GONE",
+          "word": "snaps"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "The Cumberland keeps firing for forty minutes, until she is under water.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cumberland1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "40 MINUTES",
+          "word": "forty"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
+    },
+    {
+      "text": "Next, the Congress runs aground, and raises a white flag.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan"
+        }
+      ],
+      "crowd": 4,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "Buchanan knows that ship: his own brother is an officer on board.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "McKEAN BUCHANAN, HIS BROTHER",
+          "word": "brother"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "Then rifle fire from the shore hits Buchanan himself.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "expression": "shock"
+        }
+      ],
+      "crowd": 4,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "As he is carried below, he orders the Congress set on fire.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "buchanan",
+          "pose": "point"
+        }
+      ],
+      "crowd": 4,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "His gunners heat cannonballs red in the furnaces, and fire them into her.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 5,
+      "callouts": [
+        {
+          "text": "RED-HOT SHOT",
+          "word": "red"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "A third frigate, the Minnesota, is stuck on a sandbank nearby.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 5,
+      "callouts": [
+        {
+          "text": "USS MINNESOTA",
+          "word": "Minnesota"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "But the Virginia sits twenty-three feet deep, and cannot get close enough to kill her.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 5,
+      "callouts": [
+        {
+          "text": "23 FEET DEEP",
+          "word": "twenty-three"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "So she anchors for the night. The Minnesota can wait until morning.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 8",
+        "value": ""
+      },
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
       "text": "It stays the US Navy's worst day for almost eighty years, until Pearl Harbor.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "shipdeck1860",
+      "bg": "cumberland1862",
       "counter": {
         "label": "MARCH 8",
         "value": ""
@@ -428,64 +879,13 @@
           "text": "WORST DAY UNTIL 1941",
           "word": "worst"
         }
-      ]
-    },
-    {
-      "text": "In Washington, the Secretary of War keeps walking to the window.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "whitehouse1917",
-      "counter": {
-        "label": "MARCH 8",
-        "value": ""
-      },
-      "stamp": "WASHINGTON",
-      "empty": true
-    },
-    {
-      "text": "He expects the Virginia to steam up the river and shell the White House.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "whitehouse1917",
-      "counter": {
-        "label": "MARCH 8",
-        "value": ""
-      },
-      "empty": true
-    },
-    {
-      "text": "She can't. She sits far too deep in the water.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "whitehouse1917",
-      "counter": {
-        "label": "MARCH 8",
-        "value": ""
-      },
-      "empty": true
-    },
-    {
-      "text": "But nobody in that room knows it.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "whitehouse1917",
-      "counter": {
-        "label": "MARCH 8",
-        "value": ""
-      },
-      "empty": true
+      ],
+      "bgIdea": "open gun deck of the wooden Union sloop-of-war USS Cumberland at anchor, March 1862: row of black cannons on carriages, masts and rigging with sailors' washing drying on lines, calm bay, morning light"
     },
     {
       "text": "The Union's answer comes from a Swedish-born engineer in New York: John Ericsson.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "answer",
-          "expression": "neutral",
-          "pose": "idle"
-        }
-      ],
+      "actions": [],
       "bg": "office1880",
       "counter": {
         "label": "1861 ",
@@ -504,18 +904,13 @@
           "word": "John",
           "target": "ericsson"
         }
-      ]
+      ],
+      "withoutYou": true
     },
     {
       "text": "His design has no masts, no sails, and almost no ship.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "almost",
-          "pose": "shrug"
-        }
-      ],
+      "actions": [],
       "bg": "office1880",
       "counter": {
         "label": "1861 ",
@@ -526,18 +921,13 @@
           "who": "ericsson",
           "pose": "handOut"
         }
-      ]
+      ],
+      "withoutYou": true
     },
     {
       "text": "It is a flat iron raft, with one spinning iron tower in the middle.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "flat",
-          "pose": "idle"
-        }
-      ],
+      "actions": [],
       "bg": "office1880",
       "counter": {
         "label": "1861 ",
@@ -551,7 +941,8 @@
       "paper": {
         "text": "IRON RAFT + ONE SPINNING GUN TOWER",
         "word": "raft"
-      }
+      },
+      "withoutYou": true
     },
     {
       "text": "Two giant guns sit in a turret that turns to aim, so the ship doesn't have to.",
@@ -573,7 +964,70 @@
           "text": "TWO 11-INCH GUNS",
           "word": "Two"
         }
-      ]
+      ],
+      "withoutYou": true
+    },
+    {
+      "text": "The turret wall is eight layers of iron, each an inch thick.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "8 INCHES OF IRON",
+          "word": "eight"
+        }
+      ],
+      "withoutYou": true
+    },
+    {
+      "text": "The captain steers from a small iron box near the bow, looking out through a one-inch slit.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "pose": "point"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "A ONE-INCH SLIT",
+          "word": "slit"
+        }
+      ],
+      "withoutYou": true
+    },
+    {
+      "text": "Remember that slit.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "pose": "idle"
+        }
+      ],
+      "withoutYou": true
     },
     {
       "text": "The Navy is not convinced: if it fails, Ericsson must pay back every dollar.",
@@ -595,18 +1049,13 @@
           "text": "$275,000, REFUNDABLE",
           "word": "pay"
         }
-      ]
+      ],
+      "withoutYou": true
     },
     {
       "text": "He builds it in about a hundred days.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "hundred",
-          "expression": "shock"
-        }
-      ],
+      "actions": [],
       "bg": "office1880",
       "counter": {
         "label": "1861 ",
@@ -624,18 +1073,13 @@
           "text": "ABOUT 100 DAYS",
           "word": "hundred"
         }
-      ]
+      ],
+      "withoutYou": true
     },
     {
-      "text": "People call it a cheesebox on a raft. Its real name is the USS Monitor.",
+      "text": "Critics call it Ericsson's folly, and a cheesebox on a raft.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "cheesebox",
-          "expression": "happy"
-        }
-      ],
+      "actions": [],
       "bg": "office1880",
       "counter": {
         "label": "1861 ",
@@ -643,7 +1087,26 @@
       },
       "extras": [
         {
-          "who": "ericsson"
+          "who": "ericsson",
+          "pose": "shrug"
+        }
+      ],
+      "withoutYou": true
+    },
+    {
+      "text": "Its real name is the USS Monitor.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1861 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "ericsson",
+          "expression": "happy",
+          "pose": "idle"
         }
       ],
       "callouts": [
@@ -651,64 +1114,142 @@
           "text": "USS MONITOR",
           "word": "Monitor"
         }
-      ]
+      ],
+      "withoutYou": true
     },
     {
-      "text": "You run the turret, and the whole crew is fifty-eight volunteers.",
+      "text": "Her captain, John Worden, volunteered for the job before the keel was even laid.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "turret",
+          "word": "captain",
           "expression": "neutral",
-          "pose": "point"
+          "pose": "idle"
         }
       ],
-      "bg": "turret1862",
+      "bg": "monitordeck1862",
       "counter": {
-        "label": "MARCH 7",
+        "label": "MARCH 6",
         "value": ""
       },
-      "stamp": "USS MONITOR, MARCH 7",
-      "crowd": 4,
+      "stamp": "AT SEA, MARCH 1862",
+      "extras": [
+        {
+          "who": "worden",
+          "enter": true
+        }
+      ],
       "callouts": [
         {
-          "text": "58 VOLUNTEERS",
-          "word": "fifty-eight"
+          "text": "LT. JOHN WORDEN, CAPTAIN",
+          "word": "John",
+          "target": "worden"
         }
-      ]
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
     },
     {
-      "text": "On the way south, a storm nearly sinks you.",
+      "text": "You join her as second in command, with a crew of volunteers.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "storm",
+          "word": "join",
+          "expression": "happy",
+          "pose": "idle"
+        }
+      ],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 6",
+        "value": ""
+      },
+      "crowd": 3,
+      "extras": [
+        {
+          "who": "worden"
+        }
+      ],
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
+    },
+    {
+      "text": "There is no time for trial runs. She goes to sea with nothing finished.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "nothing",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 6",
+        "value": ""
+      },
+      "crowd": 3,
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
+    },
+    {
+      "text": "Off the coast, a gale rolls the sea right over her deck.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "gale",
           "pose": "idle",
           "expression": "shock"
         }
       ],
-      "bg": "turret1862",
+      "bg": "monitordeck1862",
       "counter": {
-        "label": "MARCH 7",
+        "label": "MARCH 6",
         "value": ""
       },
-      "fx": "storm"
+      "fx": "storm",
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
     },
     {
-      "text": "Water pours in under the turret, and fumes knock out the engineers.",
+      "text": "Water pours down the air pipes, and the fans that feed the engine room stop.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "turret1862",
+      "bg": "monitordeck1862",
       "counter": {
-        "label": "MARCH 7",
+        "label": "MARCH 6",
         "value": ""
       },
-      "fx": "storm"
+      "fx": "storm",
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
     },
     {
-      "text": "You arrive one day late.",
+      "text": "Below, the engineers pass out in the fumes.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 6",
+        "value": ""
+      },
+      "fx": "storm",
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
+    },
+    {
+      "text": "The crew drags them up into the air, and the ship stays afloat. Barely.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 6",
+        "value": ""
+      },
+      "fx": "storm",
+      "crowd": 3,
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
+    },
+    {
+      "text": "You arrive a few hours too late, with the Congress still burning.",
       "speaker": "narrator",
       "actions": [
         {
@@ -718,14 +1259,15 @@
           "expression": "neutral"
         }
       ],
-      "bg": "turret1862",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 7",
+        "label": "MARCH 8, NIGHT",
         "value": ""
-      }
+      },
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "Which brings you back to the burning Congress. After midnight, she explodes.",
+      "text": "In the night, her powder magazine explodes.",
       "speaker": "narrator",
       "actions": [
         {
@@ -735,55 +1277,185 @@
           "expression": "shock"
         }
       ],
-      "bg": "harbor1850",
+      "bg": "congressfire1862",
       "counter": {
-        "label": "MARCH 8, 9 PM",
+        "label": "MARCH 8, NIGHT",
         "value": ""
       },
-      "callouts": [
-        {
-          "text": "12:30 A.M.",
-          "word": "midnight"
-        }
-      ]
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
     },
     {
-      "text": "Sunday morning. The Virginia comes back for a stranded Union frigate, the Minnesota.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "hamptonroads1862",
-      "counter": {
-        "label": "MARCH 9",
-        "value": ""
-      },
-      "stamp": "MARCH 9, 1862",
-      "empty": true
-    },
-    {
-      "text": "Instead, she finds a cheesebox in the way.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "hamptonroads1862",
-      "counter": {
-        "label": "MARCH 9",
-        "value": ""
-      },
-      "empty": true
-    },
-    {
-      "text": "Inside the turret, you pull the firing cord yourself.",
+      "text": "Nobody on your ship sleeps tonight.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "pull",
-          "pose": "handOut",
+          "word": "Nobody",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "congressfire1862",
+      "counter": {
+        "label": "MARCH 8, NIGHT",
+        "value": ""
+      },
+      "crowd": 3,
+      "bgIdea": "flat iron deck of the ironclad USS Monitor at night, March 1862: riveted iron plates, the round gun turret rising behind, a wooden sailing frigate burning on the dark horizon, orange glow on calm water"
+    },
+    {
+      "text": "Sunday morning in Washington, the cabinet meets in a panic.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cabinetroom1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "stamp": "WASHINGTON, MARCH 9",
+      "extras": [
+        {
+          "who": "stanton",
+          "enter": true
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "the Cabinet Room of the White House, 1862: long table with green cloth and papers, leather chairs, wall maps, gas chandelier, tall windows looking out toward the Potomac River"
+    },
+    {
+      "text": "The Secretary of War, Edwin Stanton, does most of the talking.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cabinetroom1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "stanton",
+          "pose": "point"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "EDWIN STANTON, WAR SECRETARY",
+          "word": "Edwin",
+          "target": "stanton"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "the Cabinet Room of the White House, 1862: long table with green cloth and papers, leather chairs, wall maps, gas chandelier, tall windows looking out toward the Potomac River"
+    },
+    {
+      "text": "He predicts the Virginia will soon put a cannonball into this very room.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cabinetroom1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "stanton",
+          "expression": "shock",
+          "pose": "point"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "the Cabinet Room of the White House, 1862: long table with green cloth and papers, leather chairs, wall maps, gas chandelier, tall windows looking out toward the Potomac River"
+    },
+    {
+      "text": "She can't. Remember the twenty-three feet? That is far too deep for the river.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cabinetroom1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "stanton",
+          "expression": "shock",
+          "pose": "idle"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "the Cabinet Room of the White House, 1862: long table with green cloth and papers, leather chairs, wall maps, gas chandelier, tall windows looking out toward the Potomac River"
+    },
+    {
+      "text": "But nobody in that room is sure, and nobody there has ever seen your ship.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "cabinetroom1862",
+      "counter": {
+        "label": "MARCH 9",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "stanton",
+          "pose": "shrug"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "the Cabinet Room of the White House, 1862: long table with green cloth and papers, leather chairs, wall maps, gas chandelier, tall windows looking out toward the Potomac River"
+    },
+    {
+      "text": "At eight in the morning, the Virginia comes back for a stranded frigate, the Minnesota.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "stamp": "HAMPTON ROADS, 8 A.M.",
+      "empty": true
+    },
+    {
+      "text": "Out from behind the frigate slides a barrel lid with a cheesebox on top.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Your captain's plan is simple: steam in a circle, and fire each time the circle touches her.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "plan",
+          "pose": "point",
           "expression": "neutral"
         }
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 4
+    },
+    {
+      "text": "An engineer turns the turret. You aim, and you fire every shot yourself.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fire",
+          "pose": "handOut"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 4
@@ -800,7 +1472,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 4,
@@ -821,28 +1493,146 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 4
     },
     {
-      "text": "Her shells hit your turret. They dent it. That's all.",
+      "text": "Then a hundred-and-fifty-pound shell hits your turret, square on.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "shells",
+          "word": "shell",
           "pose": "idle",
           "expression": "shock"
         }
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "150-POUND SHELL",
+          "word": "shell"
+        }
+      ]
+    },
+    {
+      "text": "It leaves a dent two and a half inches deep, and stuns two men.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 4,
+      "callouts": [
+        {
+          "text": "2.5 INCHES DEEP",
+          "word": "two"
+        }
+      ]
+    },
+    {
+      "text": "Not one bolt comes loose.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "bolt",
+          "expression": "happy"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 4
+    },
+    {
+      "text": "At one point your captain crawls out onto the deck, under rifle fire, to inspect a hit.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "He crawls back in through a gun port with good news.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "good",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "enter": true
+        }
+      ]
+    },
+    {
+      "text": "He tells the crew: the Merrimac could not sink us if we let her pound us for a month.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "pose": "point"
+        }
+      ],
+      "quote": {
+        "who": "worden",
+        "text": "The Merrimac could not sink us if we let her pound us for a month.",
+        "word": "Merrimac"
+      }
+    },
+    {
+      "text": "The men cheer.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "cheer",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 4,
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "happy"
+        }
+      ]
     },
     {
       "text": "For about four hours the two ships circle, sometimes close enough to touch.",
@@ -850,7 +1640,7 @@
       "actions": [],
       "bg": "hamptonroads1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "empty": true,
@@ -867,7 +1657,7 @@
       "actions": [],
       "bg": "hamptonroads1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "empty": true
@@ -885,7 +1675,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "callouts": [
@@ -896,7 +1686,7 @@
       ]
     },
     {
-      "text": "So you are ordered to load only half the gunpowder.",
+      "text": "So you are ordered to load no more than fifteen pounds of powder.",
       "speaker": "narrator",
       "actions": [
         {
@@ -907,7 +1697,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "paper": {
@@ -916,7 +1706,7 @@
       }
     },
     {
-      "text": "Later tests show the guns could take double. Today, you'll never know.",
+      "text": "Later, the same guns safely fire double that. Today, you'll never know.",
       "speaker": "narrator",
       "actions": [
         {
@@ -927,56 +1717,81 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       }
     },
     {
       "text": "Reason two: the Virginia came here to kill wooden ships.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "Reason",
-          "pose": "idle"
-        }
-      ],
-      "bg": "turret1862",
+      "actions": [],
+      "bg": "virginiacasemate1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
-      "vision": {
-        "image": "shipdeck1860",
-        "word": "wooden"
-      },
+      "crowd": 5,
       "callouts": [
         {
           "text": "REASON 2",
           "word": "two"
         }
-      ]
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
       "text": "So she carries exploding shells, and none of the solid shot that breaks iron.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "turret1862",
+      "bg": "virginiacasemate1862",
       "counter": {
-        "label": "MARCH 9",
-        "value": ""
-      }
-    },
-    {
-      "text": "Both ships brought the wrong ammunition to the first ironclad duel in history.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "hamptonroads1862",
-      "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
-      "empty": true,
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "And her ram? Still stuck in the Cumberland, at the bottom of the bay.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 5,
+      "callouts": [
+        {
+          "text": "THE RAM IS STILL GONE",
+          "word": "ram"
+        }
+      ],
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "Both ships brought the wrong weapons to the first ironclad duel in history.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "wrong",
+          "pose": "shrug",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "vision": {
+        "image": "hamptonroads1862",
+        "word": "ships"
+      },
       "callouts": [
         {
           "text": "FIRST IRONCLAD DUEL",
@@ -985,40 +1800,45 @@
       ]
     },
     {
-      "text": "One Confederate officer stops firing altogether.",
+      "text": "One Confederate gunnery officer stops firing altogether.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "hamptonroads1862",
+      "bg": "virginiacasemate1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
-      "empty": true
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
       "text": "He says he'd do as much damage by snapping his thumb at you.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "hamptonroads1862",
+      "bg": "virginiacasemate1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
-      "empty": true
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
     },
     {
-      "text": "Meanwhile, the speaking tube to your captain breaks.",
+      "text": "Meanwhile, the speaking tube to your captain fails.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "breaks",
+          "word": "fails",
+          "pose": "idle",
           "expression": "shock"
         }
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       }
     },
@@ -1034,7 +1854,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 2
@@ -1051,7 +1871,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 2
@@ -1068,7 +1888,7 @@
       ],
       "bg": "turret1862",
       "counter": {
-        "label": "MARCH 9",
+        "label": "MARCH 9 ",
         "value": ""
       },
       "crowd": 4,
@@ -1080,12 +1900,65 @@
       ]
     },
     {
-      "text": "Then, around noon, a shell bursts against the slit your captain is looking through.",
+      "text": "Then, through the gun port, you watch the Virginia run hard aground on a sandbar.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "shell",
+          "word": "watch",
+          "pose": "point",
+          "expression": "happy"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "vision": {
+        "image": "hamptonroads1862",
+        "word": "watch"
+      },
+      "callouts": [
+        {
+          "text": "AGROUND",
+          "word": "aground"
+        }
+      ]
+    },
+    {
+      "text": "Her engineers tie down the safety valves, and burn anything that burns.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "She drags herself free, and charges straight at you.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "virginiacasemate1862",
+      "counter": {
+        "label": "MARCH 9 ",
+        "value": ""
+      },
+      "crowd": 5,
+      "withoutYou": true,
+      "bgIdea": "gun deck inside the sloping iron casemate of the Confederate ironclad CSS Virginia, 1862: slanted timber-and-iron walls, heavy cannons on carriages at square ports, lanterns, low beams, smoke"
+    },
+    {
+      "text": "She hits you amidships. Without her beak, it is only a shove.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "hits",
           "pose": "idle",
           "expression": "shock"
         }
@@ -1095,73 +1968,15 @@
         "label": "MARCH 9 ",
         "value": ""
       },
-      "extras": [
-        {
-          "who": "worden",
-          "expression": "shock",
-          "enter": true
-        }
-      ],
-      "callouts": [
-        {
-          "text": "LT. JOHN WORDEN, CAPTAIN",
-          "word": "captain",
-          "target": "worden"
-        }
-      ]
+      "crowd": 4
     },
     {
-      "text": "Lieutenant John Worden is blinded. He hands the ship to you.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "turret1862",
-      "counter": {
-        "label": "MARCH 9 ",
-        "value": ""
-      },
-      "extras": [
-        {
-          "who": "worden",
-          "pose": "handOut"
-        }
-      ],
-      "callouts": [
-        {
-          "text": "YOU, IN COMMAND",
-          "word": "you",
-          "target": "you"
-        }
-      ]
-    },
-    {
-      "text": "By the time you steer back into the fight, the Virginia is leaving.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "hamptonroads1862",
-      "counter": {
-        "label": "MARCH 9 ",
-        "value": ""
-      },
-      "empty": true
-    },
-    {
-      "text": "She is leaking, the tide is falling, and she heads home to Norfolk.",
-      "speaker": "narrator",
-      "actions": [],
-      "bg": "hamptonroads1862",
-      "counter": {
-        "label": "MARCH 9 ",
-        "value": ""
-      },
-      "empty": true
-    },
-    {
-      "text": "Nobody has died today. Both sides announce that they won.",
+      "text": "And her own carpenter reports a new leak in her bow.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "Both",
+          "word": "leak",
           "pose": "shrug",
           "expression": "neutral"
         }
@@ -1171,6 +1986,150 @@
         "label": "MARCH 9 ",
         "value": ""
       },
+      "crowd": 4
+    },
+    {
+      "text": "Around noon, the two ships pass twenty yards apart.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "noon",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "vision": {
+        "image": "hamptonroads1862",
+        "word": "ships"
+      },
+      "callouts": [
+        {
+          "text": "20 YARDS",
+          "word": "twenty"
+        }
+      ]
+    },
+    {
+      "text": "The Virginia's stern gun fires straight into the Monitor's pilot house.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "Your captain was looking through the slit. He is blinded.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "captain",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ],
+      "bg": "monitorcabin1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "shock"
+        }
+      ],
+      "bgIdea": "small captain's cabin below deck on the ironclad USS Monitor, 1862: wood-panelled walls, a narrow sofa, a small desk, an oil lamp, a round deck light in the low ceiling"
+    },
+    {
+      "text": "You help him to his cabin, and the ship is yours.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "monitorcabin1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "YOU, IN COMMAND",
+          "word": "yours",
+          "target": "you"
+        }
+      ],
+      "bgIdea": "small captain's cabin below deck on the ironclad USS Monitor, 1862: wood-panelled walls, a narrow sofa, a small desk, an oil lamp, a round deck light in the low ceiling"
+    },
+    {
+      "text": "For a few minutes, the Monitor drifts out of the fight.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "The Virginia's officers decide not to risk the shallows again, and turn for home.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "empty": true
+    },
+    {
+      "text": "You chase her, and fire one last shot.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "fire",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "crowd": 4
+    },
+    {
+      "text": "By half past twelve, it is over. Both sides announce that they won.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Both",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "turret1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "crowd": 4,
       "callouts": [
         {
           "text": "RESULT: A DRAW",
@@ -1179,18 +2138,35 @@
       ]
     },
     {
-      "text": "Told that the Minnesota is saved, Worden answers: then I can die happy.",
+      "text": "The Virginia goes home for solid shot and a new ram. The two ships never fight again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "hamptonroads1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "empty": true,
+      "callouts": [
+        {
+          "text": "NO REMATCH",
+          "word": "never"
+        }
+      ]
+    },
+    {
+      "text": "Later, Worden asks only one thing: have I saved the Minnesota?",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "Told",
+          "word": "Worden",
           "pose": "idle"
         }
       ],
-      "bg": "turret1862",
+      "bg": "monitorcabin1862",
       "counter": {
-        "label": "MARCH 9 ",
+        "label": "MARCH 9, NOON",
         "value": ""
       },
       "extras": [
@@ -1200,23 +2176,18 @@
       ],
       "quote": {
         "who": "worden",
-        "text": "Then I can die happy.",
-        "word": "then"
-      }
+        "text": "Have I saved the Minnesota?",
+        "word": "have"
+      },
+      "bgIdea": "small captain's cabin below deck on the ironclad USS Monitor, 1862: wood-panelled walls, a narrow sofa, a small desk, an oil lamp, a round deck light in the low ceiling"
     },
     {
-      "text": "He doesn't. He lives another thirty-five years, and retires an admiral.",
+      "text": "Told yes, he says he doesn't care what becomes of him.",
       "speaker": "narrator",
-      "actions": [
-        {
-          "who": "you",
-          "word": "lives",
-          "expression": "happy"
-        }
-      ],
-      "bg": "turret1862",
+      "actions": [],
+      "bg": "monitorcabin1862",
       "counter": {
-        "label": "MARCH 9 ",
+        "label": "MARCH 9, NOON",
         "value": ""
       },
       "extras": [
@@ -1224,25 +2195,88 @@
           "who": "worden",
           "expression": "happy"
         }
-      ]
+      ],
+      "bgIdea": "small captain's cabin below deck on the ironclad USS Monitor, 1862: wood-panelled walls, a narrow sofa, a small desk, an oil lamp, a round deck light in the low ceiling"
+    },
+    {
+      "text": "He recovers, and dies an admiral, thirty-five years later.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "recovers",
+          "expression": "happy"
+        }
+      ],
+      "bg": "monitorcabin1862",
+      "counter": {
+        "label": "MARCH 9, NOON",
+        "value": ""
+      },
+      "extras": [
+        {
+          "who": "worden",
+          "expression": "happy"
+        }
+      ],
+      "bgIdea": "small captain's cabin below deck on the ironclad USS Monitor, 1862: wood-panelled walls, a narrow sofa, a small desk, an oil lamp, a round deck light in the low ceiling"
+    },
+    {
+      "text": "Weeks later, President Lincoln comes aboard to thank the crew in person.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "Lincoln",
+          "pose": "idle",
+          "expression": "happy"
+        }
+      ],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 9, NOON ",
+        "value": ""
+      },
+      "stamp": "WASHINGTON NAVY YARD",
+      "crowd": 3,
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
+    },
+    {
+      "text": "The Navy's assistant secretary admits he never fully believed in armored ships until this fight.",
+      "speaker": "narrator",
+      "actions": [
+        {
+          "who": "you",
+          "word": "never",
+          "pose": "shrug"
+        }
+      ],
+      "bg": "monitordeck1862",
+      "counter": {
+        "label": "MARCH 9, NOON ",
+        "value": ""
+      },
+      "crowd": 3,
+      "bgIdea": "flat iron deck of the ironclad USS Monitor by day, 1862: riveted iron plates, the round riveted gun turret with two gun ports, a small square iron pilot house near the bow, grey sky and open water"
     },
     {
       "text": "The real damage lands three thousand miles away, in London.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "newsroom1900",
+      "bg": "timesoffice1862",
       "counter": {
         "label": "1862",
         "value": ""
       },
       "stamp": "LONDON, 1862",
-      "empty": true
+      "empty": true,
+      "bgIdea": "newspaper office in London, 1862: iron hand printing press, compositors' type cases, tall writing desks with quill pens and inkwells, gas lamps, stacks of printed sheets, fog at the window"
     },
     {
       "text": "The Times counts a hundred and forty-nine first-class warships in the Royal Navy. After this fight, it says, there are two.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "newsroom1900",
+      "bg": "timesoffice1862",
       "counter": {
         "label": "1862",
         "value": ""
@@ -1256,26 +2290,28 @@
           "write": "2",
           "word": "two"
         }
-      }
+      },
+      "bgIdea": "newspaper office in London, 1862: iron hand printing press, compositors' type cases, tall writing desks with quill pens and inkwells, gas lamps, stacks of printed sheets, fog at the window"
     },
     {
-      "text": "Every wooden warship on Earth has just become a target.",
+      "text": "That is an exaggeration. But every admiral on Earth gets the point.",
       "speaker": "narrator",
       "actions": [],
-      "bg": "newsroom1900",
+      "bg": "timesoffice1862",
       "counter": {
         "label": "1862",
         "value": ""
       },
-      "empty": true
+      "empty": true,
+      "bgIdea": "newspaper office in London, 1862: iron hand printing press, compositors' type cases, tall writing desks with quill pens and inkwells, gas lamps, stacks of printed sheets, fog at the window"
     },
     {
-      "text": "The Union alone orders dozens of copies, and calls every one a monitor.",
+      "text": "The Union alone builds more than sixty ships on the Monitor's plan.",
       "speaker": "narrator",
       "actions": [
         {
           "who": "you",
-          "word": "dozens",
+          "word": "sixty",
           "pose": "point",
           "expression": "happy"
         }
@@ -1287,8 +2323,8 @@
       },
       "callouts": [
         {
-          "text": "DOZENS OF MONITORS",
-          "word": "dozens"
+          "text": "60+ MONITORS",
+          "word": "sixty"
         }
       ]
     },
@@ -1310,7 +2346,7 @@
       }
     },
     {
-      "text": "The Virginia is blown up by her own crew in May, to keep her from capture.",
+      "text": "In May, the Virginia's own crew blows her up, to keep her from capture.",
       "speaker": "narrator",
       "actions": [],
       "bg": "future",
@@ -1320,7 +2356,7 @@
       },
       "vision": {
         "image": "hamptonroads1862",
-        "word": "blown"
+        "word": "blows"
       },
       "callouts": [
         {
@@ -1330,7 +2366,7 @@
       ]
     },
     {
-      "text": "The Monitor sinks in a storm off Cape Hatteras on New Year's Eve, with sixteen men.",
+      "text": "On the last night of December, the Monitor sinks in a storm off Cape Hatteras.",
       "speaker": "narrator",
       "actions": [
         {
@@ -1348,7 +2384,24 @@
       "callouts": [
         {
           "text": "DECEMBER 31, 1862",
-          "word": "New"
+          "word": "December"
+        }
+      ]
+    },
+    {
+      "text": "Sixteen of her men go down with her.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "future",
+      "counter": {
+        "label": "1862",
+        "value": ""
+      },
+      "fx": "storm",
+      "callouts": [
+        {
+          "text": "16 LOST",
+          "word": "Sixteen"
         }
       ]
     },
@@ -1421,65 +2474,53 @@
         "mood": "tense"
       },
       {
-        "scene": 10,
+        "scene": 11,
         "title": "The Iron Barn",
         "mood": "mystery"
       },
       {
-        "scene": 20,
+        "scene": 25,
         "title": "The Worst Day",
         "mood": "tense"
       },
       {
-        "scene": 31,
+        "scene": 45,
         "title": "A Cheesebox on a Raft",
         "mood": "calm"
       },
       {
-        "scene": 43,
+        "scene": 66,
+        "title": "Panic in Washington",
+        "mood": "mystery"
+      },
+      {
+        "scene": 71,
         "title": "The Duel",
         "mood": "tense"
       },
       {
-        "scene": 63,
+        "scene": 104,
         "title": "In Command",
         "mood": "sad"
       },
       {
-        "scene": 70,
+        "scene": 118,
         "title": "Obsolete",
         "mood": "mystery"
       }
     ],
-    "description": "On March 8, 1862, one Confederate ironclad wrecked a Union fleet in an afternoon. The next morning it met a ship built in about 100 days, and the four-hour draw that followed made every wooden navy obsolete.\n\nA comedic dramatization of documented history.\n\nSources:\nS. Dana Greene, 'In the Monitor Turret', The Century Magazine (March 1885)\nNaval History and Heritage Command, Battle of Hampton Roads - https://www.history.navy.mil\nThe Mariners' Museum and Park, USS Monitor Center - https://www.marinersmuseum.org\nNOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov\nDiary of Gideon Welles (1911)\nThe Times (London), March 1862",
+    "description": "On March 8, 1862, one Confederate ironclad wrecked a Union fleet in an afternoon. The next morning it met a ship built in about 100 days, and the four-hour draw that followed made every wooden navy obsolete.\n\nA comedic dramatization of documented history.\n\nSources:\nJ. L. Worden, S. D. Greene and H. Ashton Ramsay, The Monitor and the Merrimac: Both Sides of the Story (Harper, 1912) - https://www.gutenberg.org/ebooks/24612\nNOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov/shipwrecks/uss_monitor.html\nThe Mariners' Museum, USS Monitor Story - https://www.marinersmuseum.org/learn/explore-topics/uss-monitor-story/\nAmerican Battlefield Trust, Hampton Roads - https://www.battlefields.org/learn/battles/hampton-roads\nNaval History and Heritage Command, The Battle of Hampton Roads - https://history.navy.mil/content/history/museums/hrnm/explore/the-battle-of-hampton-roads.html",
     "factCheck": [
-      "Monitor reached Hampton Roads about 9 p.m. on 8 March 1862; USS Congress (rated 50 guns) was burning and exploded after midnight (Greene 1885; NHHC)",
-      "8 March: CSS Virginia rammed and sank USS Cumberland (24 guns) and destroyed USS Congress; Union dead about 240-260 depending on the count (NHHC)",
-      "'Worst day until Pearl Harbor' is the common description of 8 March 1862 in US Navy histories; it is a characterisation, not a statistic",
-      "S. Dana Greene born 11 Feb 1840, executive officer of USS Monitor, age 22, fired the turret guns himself until Worden was wounded (Greene 1885)",
-      "CSS Virginia built on the burned hull of USS Merrimack at Gosport Navy Yard, Norfolk: casemate of 4 in. iron (two 2-in. layers) over about 24 in. of wood, sloped about 36 degrees, iron ram; took 30-40 minutes to turn",
-      "Stanton's fear that Virginia would come up the Potomac is from Gideon Welles's diary; the cabinet meeting was on the morning of 9 March (the script places it loosely after the 8 March disaster); Virginia drew about 22 ft, too deep for the river",
-      "USS Monitor: designed by John Ericsson (born in Sweden), contract 4 Oct 1861 for $275,000 with a refund clause, launched 30 Jan 1862 (about 100 days after the keel was laid), two 11-inch Dahlgren guns in a revolving turret, crew of 58 volunteers",
-      "'Cheesebox on a raft' was a contemporary nickname",
-      "Storm on the tow south, 7 March 1862: water entered under the turret and through the blower pipes; engineers overcome by fumes (Greene 1885)",
-      "9 March 1862: the duel lasted about four hours; nobody was killed on either ship",
-      "Monitor was limited to 15-lb powder charges; later tests allowed 30 lb. Whether full charges would have pierced Virginia is a common but unproven claim, so the script only says 'you'll never know'",
-      "Virginia carried mainly explosive shell, not armor-piercing solid shot, on 9 March",
-      "Lt. John Eggleston of Virginia reported he could do as much damage 'by snapping my thumb at her every two minutes and a half' (paraphrased in the script)",
-      "Speaking tube failed; orders were carried by paymaster William Keeler and captain's clerk Daniel Toffey; Greene fired 'on the fly' (Greene 1885)",
-      "Worden was blinded by a shell on the pilot house about noon (the script shows him in the turret for staging; he was in the pilot house); 'Then I can die happy' is from Greene 1885; Worden died in 1897 as a retired rear admiral",
-      "The Times (London): 'Whereas we had available for immediate purposes 149 first-class war-ships, we have now two'",
-      "Virginia destroyed by her crew 11 May 1862; Monitor foundered off Cape Hatteras 31 Dec 1862 with 16 men lost; turret raised 2002, displayed at The Mariners' Museum, Newport News",
-      "The Union ordered several dozen monitor-type ironclads during the war"
+      "See scripts/naval/hampton-roads_facts.md: every claim with its verdict and source."
     ],
     "sources": [
-      "S. Dana Greene, 'In the Monitor Turret', The Century Magazine, March 1885",
-      "Naval History and Heritage Command - https://www.history.navy.mil",
-      "The Mariners' Museum and Park - https://www.marinersmuseum.org",
-      "NOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov",
-      "Diary of Gideon Welles (Houghton Mifflin, 1911)",
-      "The Times (London), March 1862"
+      "The Monitor and the Merrimac: Both Sides of the Story (Harper, 1912) - https://www.gutenberg.org/ebooks/24612",
+      "NOAA Monitor National Marine Sanctuary - https://monitor.noaa.gov/shipwrecks/uss_monitor.html",
+      "The Mariners' Museum - https://www.marinersmuseum.org/learn/explore-topics/uss-monitor-story/",
+      "American Battlefield Trust - https://www.battlefields.org/learn/articles/10-facts-hampton-roads",
+      "Warfare History Network, Clash of the Ironclads - https://warfarehistorynetwork.com/article/clash-of-the-ironclads/",
+      "Emerging Civil War, The Half-Charge Myth - https://emergingcivilwar.com/2024/04/30/uss-monitor-the-half-charge-myth/"
     ],
-    "wordCount": 948
+    "wordCount": 1540
   }
 }

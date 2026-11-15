@@ -34,6 +34,7 @@ export type SceneData = {
 	quote?: {who: string; text: string; at: number}; // comic speech bubble from an on-screen character
 	vision?: Vision; // painted picture inside the thought bubble (bubble style), replaces icons
 	empty?: boolean; // establishing shot: the place alone, no characters
+	withoutYou?: boolean; // only supporting characters (extras) or the crowd are here: "you" is not drawn
 	fx?: Weather; // ambient effect over the scene
 	paper?: PaperData; // hand-written document that slides in, optionally with a word crossed out and rewritten
 	looks?: Record<string, Record<Expression, string>>; // per-scene heads overriding the cast, e.g. a younger "you"
@@ -289,8 +290,11 @@ const Scene: React.FC<{
 	const quoteBy = scene.quote && extras.some((e) => e.who === scene.quote?.who) ? scene.quote.who : null;
 	// Close-ups frame whoever is speaking: a supporting character with a quote, the friend on their lines, otherwise "you".
 	const quoteHead = quoteBy ? headOf(quoteBy) : null;
+	const leadHead = scene.withoutYou && extras.length ? headOf(extras[0].who) : null;
 	const focus = quoteHead
 		? {x: quoteHead.x, y: quoteHead.y + 50}
+		: leadHead
+			? {x: leadHead.x, y: leadHead.y + 50} // without "you", close-ups frame the first supporting character
 		: friendTalking
 			? {x: 285, y: 430}
 			: hasFriend
@@ -334,7 +338,7 @@ const Scene: React.FC<{
 						if (crowdFace) {
 							const fh = h; // drawn heads are big; at the silhouette's height they read as the back of the room
 							// Never stand in front of solo "you" (x 260-680); faded and desaturated so the cast pops.
-							if (!hasFriend && left > 160 && left < 780) return null;
+							if (!hasFriend && !scene.withoutYou && left > 160 && left < 780) return null;
 							return (
 								<div key={`crowd${i}`} style={{position: 'absolute', left: left - fh / 3, top: 830 - fh, width: (fh * 2) / 3, height: fh, filter: 'saturate(0.6) brightness(0.85)'}}>
 									<StickFigure variant="you" arms={POSES.idle} expression="neutral" mouth={0} mirrored={left > 960} stick face={staticFile(crowdFace)} />
@@ -352,7 +356,7 @@ const Scene: React.FC<{
 							</svg>
 						);
 					})}
-			{scene.empty ? null : hasFriend ? (
+			{scene.empty || scene.withoutYou ? null : hasFriend ? (
 				<>
 					{/* Friend on the left, "you" nearest the icon panel so pointing is never blocked.
 					    "you" is shorter; feet of both land on the floor line at y≈860. */}
@@ -392,7 +396,7 @@ const Scene: React.FC<{
 			</AbsoluteFill>
 			{scene.title ? (
 				<Title text={scene.title} />
-			) : scene.empty ? null : iconStyle === 'bubble' ? (
+			) : scene.empty || scene.withoutYou ? null : iconStyle === 'bubble' ? (
 				// Anchored at the right edge of "you"'s head (higher in the solo layout), following the camera zoom.
 				<ThoughtBubble icons={scene.vision ? [] : scene.icons} vision={scene.vision} id={`vision-${index}`} x={bubbleAt.x} y={bubbleAt.y} />
 			) : (

@@ -1,0 +1,112 @@
+{
+  "title": "withoutYou test",
+  "iconStyle": "bubble",
+  "lang": "en",
+  "music": null,
+  "cast": {
+    "you": {
+      "face": "cornelius-vanderbilt",
+      "shirt": "#2b2b33"
+    },
+    "gould": {
+      "face": "jay-gould"
+    },
+    "fisk": {
+      "face": "jim-fisk"
+    },
+    "crowd1": {
+      "face": "sailor-1830s"
+    }
+  },
+  "scenes": [
+    {
+      "text": "You stand on the wharf and watch the harbor wake up this morning.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1868",
+        "value": ""
+      }
+    },
+    {
+      "text": "Across town, Jay Gould and Jim Fisk are printing new shares in a locked office, all night long.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1868",
+        "value": ""
+      },
+      "withoutYou": true,
+      "extras": [
+        {
+          "who": "gould",
+          "enter": true
+        },
+        {
+          "who": "fisk",
+          "expression": "happy"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "JAY GOULD",
+          "word": "Jay",
+          "target": "gould"
+        }
+      ]
+    },
+    {
+      "text": "Gould says nothing at all, and keeps the press running until the morning comes around again.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "office1880",
+      "counter": {
+        "label": "1868",
+        "value": ""
+      },
+      "withoutYou": true,
+      "extras": [
+        {
+          "who": "gould"
+        },
+        {
+          "who": "fisk",
+          "pose": "cheer",
+          "expression": "happy"
+        }
+      ],
+      "quote": {
+        "who": "fisk",
+        "text": "Nothing is lost save honor.",
+        "word": "keeps"
+      }
+    },
+    {
+      "text": "Down on the docks, the sailors wait for news and say nothing at all.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "counter": {
+        "label": "1868",
+        "value": ""
+      },
+      "withoutYou": true,
+      "crowd": 6,
+      "callouts": [
+        {
+          "text": "NO NEWS",
+          "word": "news"
+        }
+      ]
+    },
+    {
+      "text": "The end.",
+      "speaker": "narrator",
+      "actions": [],
+      "bg": "harbor1850",
+      "title": "TEST"
+    }
+  ]
+}

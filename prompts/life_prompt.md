@@ -160,6 +160,9 @@ child `"size": 0.6` so they stand smaller than the adults.
 - `empty`: `true` for an establishing shot of the place with nobody in it, at most one in ten
   scenes, usually with a `stamp` (a new city, a house at night). No `extras`, `icons`, `actions`,
   `quote` or targeted callouts in it.
+- `withoutYou`: `true` for a scene about people "you" never met or an event "you" did not see (a rival's
+  office, an enemy ship, a cabinet meeting): only its `extras` and `crowd` are drawn, so it needs one of them.
+  No `icons`, `vision`, `actions` or `empty` in it, and callouts and quotes can only point at its extras.
 - `fx`: optional `"rain"`, `"storm"` or `"snow"` when the words describe that weather or a dark,
   dramatic moment (a funeral, a crash, a death).
 - `title`: only on the final title-card scene (the person's name in capitals). A scene with
