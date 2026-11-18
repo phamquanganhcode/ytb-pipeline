@@ -56,6 +56,7 @@ TTS_STYLE = {
     "vi": {"narrator": "Kể chuyện bằng tiếng Việt, giọng miền Bắc, tự nhiên và lôi cuốn như một YouTuber kể chuyện, có nhấn nhá và ngắt nghỉ: ",
            "friend": "Nói bằng tiếng Việt, giọng miền Bắc, trẻ trung, nhanh, hay trêu chọc bạn thân: "},
 }
+SFX_NAMES = {"whoosh", "pop", "coin", "scribble", "rain", "thunder", "wind", "boom", "cash", "gavel", "scratch", "buzzer", "thud"}
 
 
 def gemini_call(models, body):
@@ -145,7 +146,7 @@ def synth(text, voice, engine, style=""):
 
 
 def write_sfx(out_dir):
-    """Synthesise transition/icon sounds so there are no third-party licences to track."""
+    """Synthesise transition/comic sounds so there are no third-party licences to track."""
     sr = 44100
     rng = np.random.default_rng(0)
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -170,15 +171,65 @@ def write_sfx(out_dir):
 
     # rain: 4 s of softened noise with a slow swell, looped under rainy scenes
     rain = np.convolve(rng.standard_normal(4 * sr), np.ones(6) / 6, "same") * (0.8 + 0.2 * np.sin(np.linspace(0, 2 * np.pi, 4 * sr)))
-    # thunder: low rumble, sharp crack then a long decay (heavy smoothing keeps only the lows)
+    # thunder: low rumble, sharp crack then a long decay
     tt = np.arange(int(2.5 * sr)) / sr
     thunder = np.convolve(rng.standard_normal(len(tt)), np.ones(400) / 400, "same") * (np.exp(-tt * 1.6) + 0.6 * np.exp(-((tt - 0.05) * 40) ** 2))
     # wind: slowly wavering filtered noise for snow scenes
     wind = np.convolve(rng.standard_normal(4 * sr), np.ones(120) / 120, "same") * (0.6 + 0.4 * np.sin(np.linspace(0, 4 * np.pi, 4 * sr)))
 
-    for name, wave, peak in [("whoosh", whoosh, 0.5), ("pop", pop, 0.6), ("coin", coin, 0.4), ("scribble", scribble, 0.3),
-                             ("rain", rain, 0.3), ("thunder", thunder, 0.8), ("wind", wind, 0.4)]:
-        sf.write(out_dir / f"{name}.wav", (wave / np.abs(wave).max() * peak).astype(np.float32), sr)
+    # 1. boom: cinematic bass drop + impact punch
+    t_boom = np.arange(int(1.2 * sr)) / sr
+    freq_sweep = 110 * np.exp(-t_boom * 3.5) + 35
+    sine_boom = np.sin(2 * np.pi * np.cumsum(freq_sweep) / sr) * np.exp(-t_boom * 2.5)
+    hit_noise = np.convolve(rng.standard_normal(int(0.08 * sr)), np.ones(30) / 30, "same") * np.exp(-np.linspace(0, 10, int(0.08 * sr)))
+    boom = sine_boom
+    boom[:len(hit_noise)] += hit_noise * 0.7
+
+    # 2. cash: mechanical click + rich 3-tone chime
+    t_click = np.arange(int(0.05 * sr)) / sr
+    click = np.sin(2 * np.pi * 3200 * t_click) * np.exp(-t_click * 100)
+    t_bell = np.arange(int(0.7 * sr)) / sr
+    bell = (np.sin(2 * np.pi * 1318.5 * t_bell) * np.exp(-t_bell * 5) * 0.4 +
+            np.sin(2 * np.pi * 1661.2 * t_bell) * np.exp(-t_bell * 4) * 0.4 +
+            np.sin(2 * np.pi * 1975.5 * t_bell) * np.exp(-t_bell * 3.5) * 0.5)
+    cash = np.concatenate([click * 0.6, bell])
+
+    # 3. gavel: sharp wooden crack + resonant wood ring
+    t_gavel = np.arange(int(0.35 * sr)) / sr
+    crack = np.diff(rng.standard_normal(int(0.04 * sr) + 1)) * np.exp(-np.linspace(0, 15, int(0.04 * sr)))
+    wood = np.sin(2 * np.pi * 210 * t_gavel) * np.exp(-t_gavel * 16) + 0.5 * np.sin(2 * np.pi * 440 * t_gavel) * np.exp(-t_gavel * 25)
+    gavel = np.zeros(len(t_gavel))
+    gavel[:len(crack)] += crack * 0.8
+    gavel += wood * 0.7
+
+    # 4. scratch: comic vinyl record stop
+    t_sc = np.arange(int(0.28 * sr)) / sr
+    mod = np.sin(2 * np.pi * 15 * t_sc)
+    noise_sc = rng.standard_normal(len(t_sc)) * (1 - t_sc / 0.28)
+    f_sweep = np.linspace(2500, 400, len(t_sc))
+    scratch = np.sin(2 * np.pi * np.cumsum(f_sweep + 200 * mod) / sr) * 0.5 + noise_sc * 0.35
+    scratch = np.convolve(scratch, np.ones(10) / 10, "same") * np.exp(-t_sc * 2)
+
+    # 5. buzzer: discordant square wave buzzer
+    t_buzz = np.arange(int(0.35 * sr)) / sr
+    buzzer = (np.sign(np.sin(2 * np.pi * 140 * t_buzz)) + np.sign(np.sin(2 * np.pi * 149 * t_buzz))) * 0.5 * np.exp(-t_buzz * 2)
+    buzzer = np.convolve(buzzer, np.ones(8) / 8, "same")
+
+    # 6. thud: comic punch / physical impact
+    t_thud = np.arange(int(0.2 * sr)) / sr
+    f_thud = 180 * np.exp(-t_thud * 18) + 50
+    thud = np.sin(2 * np.pi * np.cumsum(f_thud) / sr) * np.exp(-t_thud * 12)
+
+    sounds = [
+        ("whoosh", whoosh, 0.5), ("pop", pop, 0.6), ("coin", coin, 0.4), ("scribble", scribble, 0.3),
+        ("rain", rain, 0.3), ("thunder", thunder, 0.8), ("wind", wind, 0.4),
+        ("boom", boom, 0.7), ("cash", cash, 0.55), ("gavel", gavel, 0.6),
+        ("scratch", scratch, 0.5), ("buzzer", buzzer, 0.45), ("thud", thud, 0.65)
+    ]
+    for name, wave, peak in sounds:
+        target_file = out_dir / f"{name}.wav"
+        if not target_file.exists():
+            sf.write(target_file, (wave / np.abs(wave).max() * peak).astype(np.float32), sr)
 
 
 def write_music(path):
@@ -440,8 +491,15 @@ def validate(script):
                 raise ValueError(f"{where}: vision needs \"iconStyle\": \"bubble\" and a scene with no extras, icons, empty or quote from 'you' (it fills the thought bubble)")
             if not vision.get("word") or not vision_file(vision.get("image", "")):
                 raise ValueError(f"{where}: vision needs a trigger 'word' and an 'image' that is a painted bg name or a file in public/vision/")
+        if scene.get("sfx"):
+            for s in scene["sfx"]:
+                if not s.get("sound") or not s.get("word"):
+                    raise ValueError(f"{where}: sfx needs 'sound' and 'word'")
+                if s["sound"] not in SFX_NAMES:
+                    raise ValueError(f"{where}: sfx sound {s['sound']!r} must be one of {sorted(SFX_NAMES)}")
         try:
             timed(scene, [vision] if vision else [], None, "Vision")
+            timed(scene, scene.get("sfx", []), None, "SFX")
             timed(scene, scene.get("icons", []), None, "Icon")
             timed(scene, callouts, None, "Callout")
             timed(scene, actions, None, "Action")
@@ -449,6 +507,9 @@ def validate(script):
             timed(scene, [paper] + ([paper["fix"]] if paper.get("fix") else []) if paper else [], None, "Paper")
         except ValueError as e:
             raise ValueError(f"{where}: {e}") from None
+    for c in script.get("meta", {}).get("chapters", []):
+        if c.get("mood") is not None and c["mood"] not in MOODS:
+            raise ValueError(f"chapter {c.get('title')!r}: mood {c['mood']!r} is not one of {MOODS}")
 
 
 VI_RULES = """
@@ -677,6 +738,15 @@ def main():
         frames = math.ceil(len(audio) / SAMPLE_RATE * FPS)
         speech_frames = frames - int(PAD_SECONDS * FPS)
         word_at = word_frames(audio, scene["text"], script.get("lang", "en"), speech_frames)
+        display_words = scene["text"].split()
+        if word_at and len(word_at) == len(display_words):
+            scene_words = [{"word": w, "at": f} for w, f in zip(display_words, word_at)]
+        elif display_words:
+            n_words = len(display_words)
+            n_at = len(word_at) if word_at else 0
+            scene_words = [{"word": w, "at": word_at[min(int(i / n_words * n_at), n_at - 1)] if n_at else int(i / n_words * speech_frames)} for i, w in enumerate(display_words)]
+        else:
+            scene_words = []
         icons = timed(scene, scene.get("icons", []), word_at, "Icon")
         callouts = timed(scene, scene.get("callouts", []), word_at, "Callout")
         actions = timed(scene, scene_actions(scene), word_at, "Action")
@@ -690,6 +760,15 @@ def main():
             # The paper and its correction trigger in order, like icons.
             timed_paper = timed(scene, [scene["paper"]] + ([scene["paper"]["fix"]] if scene["paper"].get("fix") else []), word_at, "Paper")
             paper = {**timed_paper[0], **({"fix": timed_paper[1]} if len(timed_paper) > 1 else {})}
+        scene_sfx = []
+        if scene.get("sfx"):
+            timed_sfx = timed(scene, scene["sfx"], word_at, "SFX")
+            scene_sfx.extend([{"sound": s["sound"], "at": s["at"], "volume": s.get("volume", 0.35)} for s in timed_sfx])
+        for a in actions:
+            if a.get("expression") == "shock" and not any(s["sound"] in ("boom", "thunder") for s in scene_sfx):
+                scene_sfx.append({"sound": "boom", "at": a["at"], "volume": 0.32})
+            elif a.get("hold") in ("money", "gold", "briefcase") and not any(s["sound"] in ("cash", "coin") for s in scene_sfx):
+                scene_sfx.append({"sound": "cash", "at": a["at"], "volume": 0.28})
         # looks: {"you": "hetty-green-young"} swaps a head for this scene (aging); same files as cast faces.
         looks = {who: f for who, f in ((w, resolve_cast({w: {"face": name}})[w].get("faces")) for w, name in scene.get("looks", {}).items()) if f}
         start_state = {who: dict(s) for who, s in state.items()}
@@ -711,18 +790,23 @@ def main():
             **({"vision": vision} if vision else {}),
             "looks": looks,  # always replaces the script's face names with resolved files
             "start": start_state,
+            "sfx": scene_sfx,
             "audio": f"{episode}/{wav.name}",
             "frames": frames,
             "mouth": mouth_track(audio, frames),
+            "words": scene_words,
         })
         print(f"scene {i}: {frames / FPS:.1f}s")
 
     # Burned-in captions and the corner counter are off by default, like the reference channel;
     # "captions": true / "showCounter": true in a script turn them back on. The .srt goes to YouTube CC.
-    manifest = {"title": script["title"], "fps": FPS, "captionWords": lang["captionWords"] if script.get("captions", False) else 0,
+    manifest = {"title": script["title"], "fps": FPS,
+                "captionWords": lang["captionWords"] if script.get("captions") else (script.get("captionWords") or 4),
+                "captionStyle": script.get("captionStyle", "kinetic"),
                 "showCounter": script.get("showCounter", False),
                 "iconStyle": script.get("iconStyle", "panel"), "cast": cast, "scenes": scenes,
-                "music": music_tracks(script, scenes)}
+                "music": music_tracks(script, scenes),
+                "meta": script.get("meta", {})}
     if not (ROOT / "public" / "music" / "bed.wav").exists():
         write_music(ROOT / "public" / "music" / "bed.wav")
     for track in manifest["music"]:
@@ -736,11 +820,20 @@ def main():
     (ROOT / "out" / f"{episode}.srt").write_text(srt(scenes, lang["captionWords"] * 2), encoding="utf-8")
 
     if not args.no_render:
+        remotion_bin = str(ROOT / "node_modules" / ".bin" / "remotion.cmd") if sys.platform == "win32" and (ROOT / "node_modules" / ".bin" / "remotion.cmd").exists() else "npx"
+        render_cmd = [remotion_bin, "render", "src/index.ts", "Episode", f"out/{episode}.mp4"] if remotion_bin != "npx" else ["npx", "remotion", "render", "src/index.ts", "Episode", f"out/{episode}.mp4"]
         subprocess.run(
-            ["npx", "remotion", "render", "src/index.ts", "Episode", f"out/{episode}.mp4"],
+            render_cmd,
             cwd=ROOT, check=True, shell=sys.platform == "win32",
         )
         loudnorm(ROOT / "out" / f"{episode}.mp4")
+
+        thumb_cmd = [remotion_bin, "still", "src/index.ts", "Thumbnail", f"out/{episode}_thumb.png"] if remotion_bin != "npx" else ["npx", "remotion", "still", "src/index.ts", "Thumbnail", f"out/{episode}_thumb.png"]
+        try:
+            subprocess.run(thumb_cmd, cwd=ROOT, check=False, shell=sys.platform == "win32")
+            print(f"thumbnail: out/{episode}_thumb.png")
+        except Exception as e:
+            print(f"warning: thumbnail render skipped: {e}")
 
 
 MOODS = ("tense", "calm", "mystery", "triumph", "sad")
@@ -750,7 +843,8 @@ def music_tracks(script, scenes):
     """[{"from": frame, "src": path}]: one track per run of chapters with the same mood (meta.chapters[].mood
     -> public/music/<mood>.mp3, e.g. from the YouTube Audio Library), else the script's single "music"
     (default the synthesized bed). "music": null turns music off. Episode.tsx crossfades between tracks."""
-    single = script.get("music", "music/bed.wav")
+    default_single = "music/calm.mp3" if (ROOT / "public" / "music" / "calm.mp3").exists() else "music/bed.wav"
+    single = script.get("music", default_single)
     if single is None:
         return []
     starts = [0]

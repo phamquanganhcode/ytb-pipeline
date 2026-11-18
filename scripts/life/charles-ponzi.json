@@ -3701,59 +3701,73 @@
     "chapters": [
       {
         "scene": 0,
-        "title": "The Line Around the Block"
+        "title": "The Line Around the Block",
+        "mood": "mystery"
       },
       {
         "scene": 11,
-        "title": "A Small Town Boy (1882)"
+        "title": "A Small Town Boy (1882)",
+        "mood": "calm"
       },
       {
         "scene": 23,
-        "title": "Two Dollars and Fifty Cents (1903)"
+        "title": "Two Dollars and Fifty Cents (1903)",
+        "mood": "calm"
       },
       {
         "scene": 39,
-        "title": "The Bank of Zarossi (1907)"
+        "title": "The Bank of Zarossi (1907)",
+        "mood": "mystery"
       },
       {
         "scene": 56,
-        "title": "Special Assistant to the Warden (1908)"
+        "title": "Special Assistant to the Warden (1908)",
+        "mood": "tense"
       },
       {
         "scene": 70,
-        "title": "Rose and a Letter from Spain (1917)"
+        "title": "Rose and a Letter from Spain (1917)",
+        "mood": "calm"
       },
       {
         "scene": 85,
-        "title": "Fifty Percent in Forty-Five Days (1919)"
+        "title": "Fifty Percent in Forty-Five Days (1919)",
+        "mood": "mystery"
       },
       {
         "scene": 91,
-        "title": "The Ponzi Scheme, Explained"
+        "title": "The Ponzi Scheme, Explained",
+        "mood": "triumph"
       },
       {
         "scene": 104,
-        "title": "Boston Goes Crazy (1920)"
+        "title": "Boston Goes Crazy (1920)",
+        "mood": "triumph"
       },
       {
         "scene": 122,
-        "title": "The Boston Post Asks Questions (1920)"
+        "title": "The Boston Post Asks Questions (1920)",
+        "mood": "tense"
       },
       {
         "scene": 136,
-        "title": "Your Own Publicist Turns on You (1920)"
+        "title": "Your Own Publicist Turns on You (1920)",
+        "mood": "tense"
       },
       {
         "scene": 151,
-        "title": "Prison, Florida, Prison (1920)"
+        "title": "Prison, Florida, Prison (1920)",
+        "mood": "sad"
       },
       {
         "scene": 162,
-        "title": "Deported (1934)"
+        "title": "Deported (1934)",
+        "mood": "sad"
       },
       {
         "scene": 180,
-        "title": "The Money Rule"
+        "title": "The Money Rule",
+        "mood": "calm"
       }
     ]
   },

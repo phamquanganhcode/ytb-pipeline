@@ -3,7 +3,8 @@
   "private": true,
   "scripts": {
     "studio": "remotion studio src/index.ts",
-    "render": "remotion render src/index.ts Episode out/episode.mp4"
+    "render": "remotion render src/index.ts Episode out/episode.mp4",
+    "thumbnail": "remotion still src/index.ts Thumbnail out/thumbnail.png"
   },
   "dependencies": {
     "@remotion/cli": "4.0.540",

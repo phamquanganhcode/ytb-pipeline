@@ -65,6 +65,9 @@ def check(path):
         raise SystemExit(f"only {quotes} 'quote' speech bubbles; add documented quotes until there are at least {MIN_QUOTES}")
     if any(s.get("crowd") for s in script["scenes"]) and "crowd1" not in script.get("cast", {}):
         raise SystemExit("scenes use 'crowd' but the cast has no crowd1/crowd2/crowd3 faces")
+    chapters = script.get("meta", {}).get("chapters", [])
+    if chapters and any(not c.get("mood") for c in chapters):
+        raise SystemExit("every chapter in meta.chapters must have a 'mood' (one of: tense, calm, mystery, triumph, sad)")
     path.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"ok: {words} words, {len(script['scenes'])} scenes")
 

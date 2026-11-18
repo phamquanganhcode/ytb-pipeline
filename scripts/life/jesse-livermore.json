@@ -3898,63 +3898,78 @@
     "chapters": [
       {
         "scene": 0,
-        "title": "The Crash That Made You Rich"
+        "title": "The Crash That Made You Rich",
+        "mood": "tense"
       },
       {
         "scene": 10,
-        "title": "A Farm Full of Rocks (1877)"
+        "title": "A Farm Full of Rocks (1877)",
+        "mood": "calm"
       },
       {
         "scene": 22,
-        "title": "Board Boy in Boston (1891)"
+        "title": "Board Boy in Boston (1891)",
+        "mood": "calm"
       },
       {
         "scene": 32,
-        "title": "The Boy Plunger (1892)"
+        "title": "The Boy Plunger (1892)",
+        "mood": "triumph"
       },
       {
         "scene": 54,
-        "title": "New York and Nettie (1900)"
+        "title": "New York and Nettie (1900)",
+        "mood": "mystery"
       },
       {
         "scene": 64,
-        "title": "Short Selling, Explained"
+        "title": "Short Selling, Explained",
+        "mood": "calm"
       },
       {
         "scene": 80,
-        "title": "The Earthquake Trade (1906)"
+        "title": "The Earthquake Trade (1906)",
+        "mood": "mystery"
       },
       {
         "scene": 87,
-        "title": "The Panic of 1907"
+        "title": "The Panic of 1907",
+        "mood": "triumph"
       },
       {
         "scene": 98,
-        "title": "The Cotton Tip (1908)"
+        "title": "The Cotton Tip (1908)",
+        "mood": "tense"
       },
       {
         "scene": 108,
-        "title": "Bankrupt, Then Back (1915)"
+        "title": "Bankrupt, Then Back (1915)",
+        "mood": "sad"
       },
       {
         "scene": 125,
-        "title": "Dorothy and the Book (1918)"
+        "title": "Dorothy and the Book (1918)",
+        "mood": "triumph"
       },
       {
         "scene": 140,
-        "title": "The Great Bear (1929)"
+        "title": "The Great Bear (1929)",
+        "mood": "triumph"
       },
       {
         "scene": 157,
-        "title": "Losing It All Again (1932)"
+        "title": "Losing It All Again (1932)",
+        "mood": "sad"
       },
       {
         "scene": 171,
-        "title": "How to Trade in Stocks (1940)"
+        "title": "How to Trade in Stocks (1940)",
+        "mood": "sad"
       },
       {
         "scene": 189,
-        "title": "The Money Rule"
+        "title": "The Money Rule",
+        "mood": "calm"
       }
     ]
   },

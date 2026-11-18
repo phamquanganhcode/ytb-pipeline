@@ -14,14 +14,17 @@ import {Arms, Expression, headCenter, Pose, POSES, StickFigure, Variant} from '.
 import {ThoughtBubble, Vision} from './ThoughtBubble';
 import {ArrowLabel, CalloutData, Callouts, Paper, PaperData, SpeechBubble} from './Callout';
 import {Weather, WeatherFx} from './Weather';
+import {KineticCaptions, WordTiming} from './KineticCaptions';
 
 export type IconData = {icon: IconName; word: string; label?: string; at: number};
+export type SfxData = {sound: string; at: number; volume?: number};
 type Face = 'left' | 'right';
 type CharState = {pose: Pose; expression: Expression; hold: IconName | null; face: Face};
 type Action = {who: Variant; word: string; at: number; pose?: Pose; expression?: Expression; hold?: IconName | null; face?: Face};
 const STATE_KEYS = ['pose', 'expression', 'hold', 'face'];
 export type SceneData = {
 	text: string;
+	words?: WordTiming[];
 	start: Record<Variant, CharState>; // carried over from the previous scene by make_video.py
 	actions: Action[];
 	bg: BgName;
@@ -43,6 +46,7 @@ export type SceneData = {
 	audio: string;
 	frames: number;
 	mouth: number[]; // 0..1 per frame, written by make_video.py
+	sfx?: SfxData[];
 };
 // captionWords: words per caption line; Vietnamese counts syllables, so it needs more per line.
 // 0 turns burned-in captions off (the reference channel relies on YouTube's own CC instead).
@@ -55,6 +59,7 @@ type Extra = {who: string; pose?: Pose; expression?: Expression; face?: Face; en
 export type EpisodeProps = {
 	scenes: SceneData[];
 	captionWords?: number;
+	captionStyle?: 'kinetic' | 'classic' | 'none';
 	showCounter?: boolean; // year/money box top right; off by default, the reference channel has none
 	iconStyle?: 'panel' | 'bubble';
 	cast?: Cast;
@@ -158,7 +163,7 @@ const Music: React.FC<{tracks: MusicTrack[]}> = ({tracks}) => {
 	);
 };
 
-export const Episode: React.FC<EpisodeProps> = ({scenes, captionWords = 6, showCounter = false, iconStyle = 'panel', cast = {}, music}) => {
+export const Episode: React.FC<EpisodeProps> = ({scenes, captionWords = 4, captionStyle = 'kinetic', showCounter = false, iconStyle = 'panel', cast = {}, music}) => {
 	// The sidekick stays on screen for the whole episode once they speak anywhere in it.
 	const hasFriend = scenes.some((s) => s.speaker === 'friend');
 	const children: React.ReactNode[] = [];
@@ -174,7 +179,7 @@ export const Episode: React.FC<EpisodeProps> = ({scenes, captionWords = 6, showC
 		}
 		children.push(
 			<TransitionSeries.Sequence key={`s${i}`} durationInFrames={scene.frames}>
-				<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} index={i} shotBase={shotBase} captionWords={captionWords} iconStyle={iconStyle} cast={cast} />
+				<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} index={i} shotBase={shotBase} captionWords={captionWords} captionStyle={captionStyle} iconStyle={iconStyle} cast={cast} />
 			</TransitionSeries.Sequence>
 		);
 		shotBase += shotsIn(scene);
@@ -237,9 +242,10 @@ const Scene: React.FC<{
 	index: number;
 	shotBase: number;
 	captionWords: number;
+	captionStyle?: 'kinetic' | 'classic' | 'none';
 	iconStyle: 'panel' | 'bubble';
 	cast: Cast;
-}> = ({scene, withWhoosh, hasFriend, index, shotBase, captionWords, iconStyle, cast}) => {
+}> = ({scene, withWhoosh, hasFriend, index, shotBase, captionWords, captionStyle, iconStyle, cast}) => {
 	const frame = useCurrentFrame();
 	const mouth = scene.mouth[frame] ?? 0;
 	const friendTalking = scene.speaker === 'friend';
@@ -320,6 +326,11 @@ const Scene: React.FC<{
 		<AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
 			<Audio src={staticFile(scene.audio)} />
 			{withWhoosh && <Audio src={staticFile('sfx/whoosh.wav')} volume={0.3} />}
+			{scene.sfx?.map((s, idx) => (
+				<Sequence key={`sfx-${idx}`} from={s.at} layout="none">
+					<Audio src={staticFile(`sfx/${s.sound}.wav`)} volume={s.volume ?? 0.35} />
+				</Sequence>
+			))}
 			<AbsoluteFill style={{transform: `scale(${zoom})`, transformOrigin: `${focus.x}px ${focus.y}px`}}>
 			<Background name={scene.bg} shot={medium ? 0 : shot} progress={shotProgress} />
 			{scene.empty
@@ -418,24 +429,36 @@ const Scene: React.FC<{
 			})()}
 			{!scene.title && scene.paper && <Paper paper={scene.paper} />}
 			{scene.stamp && <Stamp text={scene.stamp} delay={withWhoosh ? TRANSITION_FRAMES : 0} />}
-			<div
-				style={{
-					position: 'absolute',
-					left: 360,
-					right: 360,
-					bottom: 50,
-					textAlign: 'center',
-					fontFamily: 'Arial, sans-serif',
-					fontWeight: 700,
-					fontSize: 44,
-					lineHeight: 1.25,
-					color: friendTalking ? FRIEND_CAPTION : 'white',
-					textShadow: '0 0 4px #000, 0 0 4px #000, 0 2px 3px #000',
-				}}
-			>
-				{/* Hidden while a transition overlaps this scene, so two captions never mix. */}
-				{scene.title || (withWhoosh && frame < TRANSITION_FRAMES) || frame >= scene.frames - PAD_FRAMES ? null : caption}
-			</div>
+			{!scene.title && (captionStyle ?? 'kinetic') === 'kinetic' ? (
+				<KineticCaptions
+					text={scene.text}
+					words={scene.words}
+					frames={scene.frames}
+					speaker={scene.speaker}
+					padFrames={PAD_FRAMES}
+					chunkSize={captionWords || 4}
+					disabled={Boolean((withWhoosh && frame < TRANSITION_FRAMES) || frame >= scene.frames - PAD_FRAMES)}
+				/>
+			) : (captionStyle === 'classic' || (captionStyle === undefined && captionWords > 0)) ? (
+				<div
+					style={{
+						position: 'absolute',
+						left: 360,
+						right: 360,
+						bottom: 50,
+						textAlign: 'center',
+						fontFamily: 'Arial, sans-serif',
+						fontWeight: 700,
+						fontSize: 44,
+						lineHeight: 1.25,
+						color: friendTalking ? FRIEND_CAPTION : 'white',
+						textShadow: '0 0 4px #000, 0 0 4px #000, 0 2px 3px #000',
+					}}
+				>
+					{/* Hidden while a transition overlaps this scene, so two captions never mix. */}
+					{scene.title || (withWhoosh && frame < TRANSITION_FRAMES) || frame >= scene.frames - PAD_FRAMES ? null : caption}
+				</div>
+			) : null}
 		</AbsoluteFill>
 	);
 };
@@ -497,6 +520,9 @@ const Stamp: React.FC<{text: string; delay: number}> = ({text, delay}) => {
 				transformOrigin: 'top left',
 			}}
 		>
+			<Sequence from={delay} layout="none">
+				<Audio src={staticFile('sfx/thud.wav')} volume={0.25} />
+			</Sequence>
 			{text}
 		</div>
 	);
@@ -531,9 +557,9 @@ const Icons: React.FC<{icons: IconData[]}> =({icons}) => {
 				return (
 					<div key={i} style={{width: 300, textAlign: 'center', transform: `scale(${pop}) rotate(${(1 - pop) * -15}deg)`}}>
 						<Sequence from={icon.at} layout="none">
-							{/* Kept well under the voice: the coin chime is bright and repeats often. */}
+							{/* Kept well under the voice: the cash chime is bright and punchy. */}
 							{MONEY_ICONS.includes(icon.icon) ? (
-								<Audio src={staticFile('sfx/coin.wav')} volume={0.2} />
+								<Audio src={staticFile('sfx/cash.wav')} volume={0.25} />
 							) : (
 								<Audio src={staticFile('sfx/pop.wav')} volume={0.35} />
 							)}

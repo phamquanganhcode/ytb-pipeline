@@ -3171,59 +3171,73 @@
     "chapters": [
       {
         "scene": 0,
-        "title": "The Street of Millionaires"
+        "title": "The Street of Millionaires",
+        "mood": "mystery"
       },
       {
         "scene": 10,
-        "title": "The Goldsmith's Son (1671)"
+        "title": "The Goldsmith's Son (1671)",
+        "mood": "calm"
       },
       {
         "scene": 18,
-        "title": "Beau Law and the Duel (1692)"
+        "title": "Beau Law and the Duel (1692)",
+        "mood": "tense"
       },
       {
         "scene": 32,
-        "title": "Amsterdam and the Paper Bank (1695)"
+        "title": "Amsterdam and the Paper Bank (1695)",
+        "mood": "mystery"
       },
       {
         "scene": 41,
-        "title": "The Professional Gambler (1700)"
+        "title": "The Professional Gambler (1700)",
+        "mood": "triumph"
       },
       {
         "scene": 51,
-        "title": "The Paper Money Pitch (1705)"
+        "title": "The Paper Money Pitch (1705)",
+        "mood": "calm"
       },
       {
         "scene": 57,
-        "title": "Paper Money and Inflation, Explained"
+        "title": "Paper Money and Inflation, Explained",
+        "mood": "calm"
       },
       {
         "scene": 66,
-        "title": "A Bankrupt Kingdom (1715)"
+        "title": "A Bankrupt Kingdom (1715)",
+        "mood": "tense"
       },
       {
         "scene": 74,
-        "title": "The Banque Generale (1716)"
+        "title": "The Banque Generale (1716)",
+        "mood": "triumph"
       },
       {
         "scene": 81,
-        "title": "The Mississippi Company (1717)"
+        "title": "The Mississippi Company (1717)",
+        "mood": "triumph"
       },
       {
         "scene": 96,
-        "title": "Everybody Speaks in Millions (1719)"
+        "title": "Everybody Speaks in Millions (1719)",
+        "mood": "triumph"
       },
       {
         "scene": 113,
-        "title": "The Paper Melts (1720)"
+        "title": "The Paper Melts (1720)",
+        "mood": "tense"
       },
       {
         "scene": 130,
-        "title": "Back to the Tables (1721)"
+        "title": "Back to the Tables (1721)",
+        "mood": "sad"
       },
       {
         "scene": 152,
-        "title": "The Money Rule"
+        "title": "The Money Rule",
+        "mood": "calm"
       }
     ]
   },
