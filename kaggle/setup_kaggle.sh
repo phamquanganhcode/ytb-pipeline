@@ -16,8 +16,9 @@ echo "Node: $(node -v) | NPM: $(npm -v) | FFmpeg: $(ffmpeg -version | head -n1)"
 echo "=== [2/4] Installing Python dependencies ==="
 PY="${PYTHON_BIN:-$(which python3)}"
 echo "Using Python: $PY ($($PY --version))"
-"$PY" -m pip install -q "kokoro>=0.9.4" faster-whisper soundfile edge-tts pillow numpy
-"$PY" -c "import kokoro, faster_whisper, soundfile, PIL; print('Python deps OK!')"
+"$PY" -m pip install -q faster-whisper soundfile edge-tts pillow numpy
+"$PY" -c "import sys; exit(0 if sys.version_info < (3, 13) else 1)" && "$PY" -m pip install -q "kokoro>=0.9.4" || echo "Python 3.13+ detected: skipping kokoro (using edge-tts)"
+"$PY" -c "import faster_whisper, soundfile, edge_tts, PIL; print('Python deps OK!')"
 
 echo "=== [3/4] Installing Node packages ==="
 npm install --no-audit --no-fund

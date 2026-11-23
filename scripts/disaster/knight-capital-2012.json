@@ -1,9 +1,9 @@
 {
   "title": "HOW ONE MISSED SERVER LOST $440 MILLION IN 45 MINUTES | KNIGHT CAPITAL",
   "lang": "en",
-  "tts": "kokoro",
-  "voice": "am_michael",
-  "friendVoice": "am_puck",
+  "tts": "edge",
+  "voice": "en-US-ChristopherNeural",
+  "friendVoice": "en-US-GuyNeural",
   "captions": true,
   "captionWords": 4,
   "captionStyle": "kinetic",
