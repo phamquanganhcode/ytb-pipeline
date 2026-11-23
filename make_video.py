@@ -159,23 +159,24 @@ def synth(text, voice, engine, style="", rate="+0%", pitch="+0Hz", pad_seconds=P
         if not Path(edge_bin).exists():
             edge_bin = "edge-tts"
         audio = None
-        for attempt in range(5):
+        for attempt in range(8):
             tmp = ROOT / "public" / f"_edge_{os.getpid()}_{int(time.time()*1000)}.mp3"
             try:
-                cmd = [edge_bin, "--text", text, "--voice", voice, f"--rate={rate}", f"--pitch={pitch}", "--write-media", str(tmp)]
-                subprocess.run(cmd, check=True, stdin=subprocess.DEVNULL, capture_output=True, timeout=15)
+                use_pitch = pitch if attempt < 6 else "+0Hz"
+                cmd = [edge_bin, "--text", text, "--voice", voice, f"--rate={rate}", f"--pitch={use_pitch}", "--write-media", str(tmp)]
+                subprocess.run(cmd, check=True, stdin=subprocess.DEVNULL, capture_output=True, timeout=25)
                 if tmp.exists() and tmp.stat().st_size > 0:
                     audio, sr = sf.read(tmp, dtype="float32")
                     if sr != SAMPLE_RATE:
                         raise ValueError(f"Edge TTS returned {sr} Hz audio; expected {SAMPLE_RATE}")
                     break
             except Exception:
-                time.sleep(1.5 * (attempt + 1))
+                time.sleep(2.0 * (attempt + 1))
             finally:
                 if tmp.exists():
                     tmp.unlink()
         if audio is None:
-            raise RuntimeError(f"Edge TTS failed for {text!r} after 5 attempts")
+            raise RuntimeError(f"Edge TTS failed for {text!r} after 8 attempts")
     elif engine == "gemini":
         body = {"contents": [{"parts": [{"text": style + text}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
@@ -896,7 +897,7 @@ def main():
         else:
             audio = synth(scene["text"], voice, engine, styles.get(speaker, ""), rate=rate, pitch=pitch, pad_seconds=pad_seconds, gain=gain)
             sf.write(wav, audio, SAMPLE_RATE)
-            time.sleep(0.6)
+            time.sleep(1.2)
         frames = math.ceil(len(audio) / SAMPLE_RATE * FPS)
         speech_frames = max(1, frames - int(pad_seconds * FPS))
         word_at = word_frames(audio, scene["text"], script.get("lang", "en"), speech_frames)
