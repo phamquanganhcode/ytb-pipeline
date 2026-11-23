@@ -2,8 +2,8 @@
   "title": "HOW ONE MISSED SERVER LOST $440 MILLION IN 45 MINUTES | KNIGHT CAPITAL",
   "lang": "en",
   "tts": "edge",
-  "voice": "en-US-ChristopherNeural",
-  "friendVoice": "en-US-GuyNeural",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "friendVoice": "en-US-BrianMultilingualNeural",
   "captions": true,
   "captionWords": 4,
   "captionStyle": "kinetic",
@@ -12,6 +12,12 @@
   "meta": {
     "format": "disaster",
     "theme": "disaster",
+    "thumbnail": {
+      "badge": "SYSTEM POSTMORTEM",
+      "title": "KNIGHT CAPITAL",
+      "subtitle": "$440M LOST IN 45 MIN",
+      "stat": "1 MISSED SERVER -> BANKRUPT"
+    },
     "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail market maker—lost $440 million in just 45 minutes. Based on the official SEC Administrative Order (Oct 2013), this forensic postmortem breaks down how a single missed deployment on Server 8, a reused dead-code flag, and a disastrous rollback created one of the most expensive software failures in financial history.",
     "timeline": [
       {
@@ -212,6 +218,7 @@
     },
     {
       "text": "Forty-five minutes later, four hundred forty million dollars has vanished forever.",
+      "pace": "dramatic",
       "speaker": "narrator",
       "bg": "control_room",
       "counter": {
@@ -507,6 +514,7 @@
     },
     {
       "text": "The technician copied the new code to seven servers, and accidentally skipped server number eight.",
+      "pace": "dramatic",
       "speaker": "narrator",
       "bg": "server_room",
       "counter": {
@@ -771,6 +779,7 @@
     },
     {
       "text": "Instantly, all eight servers began firing Power Peg orders at the exact same time.",
+      "pace": "fast",
       "speaker": "narrator",
       "bg": "server_room",
       "fx": "fire",

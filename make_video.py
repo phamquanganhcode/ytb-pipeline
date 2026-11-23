@@ -115,7 +115,28 @@ def level(audio):
     return (audio * np.interp(np.arange(len(audio)), centers, g)).astype(np.float32)
 
 
-def synth(text, voice, engine, style=""):
+def _scene_prosody(scene, mood="calm"):
+    """Dynamic (rate, pitch, pad_seconds, gain) so Edge-TTS varies energy across acts instead of reading flat."""
+    pace = scene.get("pace")
+    fx = scene.get("fx")
+    if pace == "dramatic" or scene.get("title"):
+        return ("-9%", "-4Hz", 0.60, 0.96)
+    if pace == "fast":
+        return ("+13%", "+3Hz", 0.14, 1.10)
+    if pace == "slow":
+        return ("-6%", "-3Hz", 0.45, 0.95)
+    if fx in ("alarm", "fire"):
+        return ("+12%", "+3Hz", 0.14, 1.10)
+    if mood == "tense":
+        return ("+8%", "+2Hz", 0.18, 1.05)
+    if mood == "mystery":
+        return ("-4%", "-3Hz", 0.34, 0.96)
+    if mood == "sad":
+        return ("-6%", "-4Hz", 0.44, 0.95)
+    return ("+3%", "+0Hz", PAD_SECONDS, 1.0)
+
+
+def synth(text, voice, engine, style="", rate="+0%", pitch="+0Hz", pad_seconds=PAD_SECONDS, gain=1.0):
     """Speech for one scene as float32 mono at SAMPLE_RATE, followed by the closing pad.
 
     `style` is a delivery note only Gemini TTS understands; the other engines would read it aloud.
@@ -141,8 +162,8 @@ def synth(text, voice, engine, style=""):
         for attempt in range(5):
             tmp = ROOT / "public" / f"_edge_{os.getpid()}_{int(time.time()*1000)}.mp3"
             try:
-                subprocess.run([edge_bin, "--text", text, "--voice", voice, "--write-media", str(tmp)],
-                               check=True, stdin=subprocess.DEVNULL, capture_output=True, timeout=10)
+                cmd = [edge_bin, "--text", text, "--voice", voice, f"--rate={rate}", f"--pitch={pitch}", "--write-media", str(tmp)]
+                subprocess.run(cmd, check=True, stdin=subprocess.DEVNULL, capture_output=True, timeout=15)
                 if tmp.exists() and tmp.stat().st_size > 0:
                     audio, sr = sf.read(tmp, dtype="float32")
                     if sr != SAMPLE_RATE:
@@ -169,8 +190,8 @@ def synth(text, voice, engine, style=""):
     margin = int(0.05 * SAMPLE_RATE)
     if len(loud):
         audio = audio[max(0, loud[0] - margin):loud[-1] + margin]
-    audio = level(audio)
-    return np.concatenate([audio, np.zeros(int(PAD_SECONDS * SAMPLE_RATE), dtype=np.float32)])
+    audio = np.clip(level(audio) * gain, -PEAK, PEAK).astype(np.float32)
+    return np.concatenate([audio, np.zeros(int(pad_seconds * SAMPLE_RATE), dtype=np.float32)])
 
 
 def write_sfx(out_dir):
@@ -859,19 +880,25 @@ def main():
     scenes = []
     # Each character keeps their pose, face and held prop across cuts until an action changes it.
     state = {who: {"pose": "idle", "expression": "neutral", "hold": None, "face": "right"} for who in ("you", "friend")}
+    chapters_meta = sorted(script.get("meta", {}).get("chapters", []), key=lambda c: c.get("scene", 0))
     print(f"Processing {len(script['scenes'])} scenes for {episode} (engine: {engine})...", flush=True)
     for i, scene in enumerate(script["scenes"]):
         speaker = scene.get("speaker", "narrator")
         voice = script.get("friendVoice", lang["friendVoice"]) if speaker == "friend" else script.get("voice", lang["voice"])
+        active_mood = "calm"
+        for ch in chapters_meta:
+            if ch.get("scene", 0) <= i and ch.get("mood"):
+                active_mood = ch["mood"]
+        rate, pitch, pad_seconds, gain = _scene_prosody(scene, active_mood)
         wav = out_dir / f"scene_{i}.wav"
         if wav.exists() and wav.stat().st_size > 1000:
             audio, _ = sf.read(wav, dtype="float32")
         else:
-            audio = synth(scene["text"], voice, engine, styles.get(speaker, ""))
+            audio = synth(scene["text"], voice, engine, styles.get(speaker, ""), rate=rate, pitch=pitch, pad_seconds=pad_seconds, gain=gain)
             sf.write(wav, audio, SAMPLE_RATE)
-            time.sleep(1.0)
+            time.sleep(0.6)
         frames = math.ceil(len(audio) / SAMPLE_RATE * FPS)
-        speech_frames = frames - int(PAD_SECONDS * FPS)
+        speech_frames = max(1, frames - int(pad_seconds * FPS))
         word_at = word_frames(audio, scene["text"], script.get("lang", "en"), speech_frames)
         display_words = scene["text"].split()
         if word_at and len(word_at) == len(display_words):

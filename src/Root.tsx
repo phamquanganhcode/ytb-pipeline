@@ -60,7 +60,7 @@ export const Root: React.FC = () => (
 					const firstBg = manifest.scenes?.[0]?.bg;
 					const bg = firstBg || 'exchange';
 
-					// Extract high-impact headline from manifest title
+					// Extract high-impact headline from manifest title (or explicit meta.thumbnail override)
 					const rawTitle: string = manifest.title || '';
 					const parts = rawTitle.split('|').map((s) => s.trim());
 					const mainHeadline = parts.length > 1 ? parts[1] : parts[0] || 'TRUE STORY';
@@ -70,15 +70,25 @@ export const Root: React.FC = () => (
 						rawTitle.toUpperCase().includes('CHERNOBYL') ||
 						rawTitle.toUpperCase().includes('THẢM HỌA') ||
 						rawTitle.toUpperCase().includes('DISASTER');
+					const thumb = manifest.meta?.thumbnail || {};
+					const defaultBadge = isDisaster
+						? manifest.lang === 'vi'
+							? 'THẢM HỌA KỸ THUẬT'
+							: 'SYSTEM POSTMORTEM'
+						: 'TRUE STORY';
 
 					return {
 						props: {
-							title: mainHeadline.toUpperCase().slice(0, 32),
-							badge: isDisaster ? '⚠️ THẢM HỌA KỸ THUẬT' : 'TRUE STORY',
-							subtitle: parts[0] ? parts[0].toUpperCase().slice(0, 28) : undefined,
+							title: (thumb.title || mainHeadline).toUpperCase().slice(0, 32),
+							badge: thumb.badge || defaultBadge,
+							subtitle: (thumb.subtitle || (parts.length > 1 ? parts[0] : '') || '').toUpperCase().slice(0, 36) || undefined,
 							face,
 							bg,
-							stat: manifest.scenes?.[0]?.counter ? `${manifest.scenes[0].counter.label}: ${manifest.scenes[0].counter.value}` : undefined,
+							stat:
+								thumb.stat ||
+								(manifest.scenes?.[0]?.counter
+									? `${manifest.scenes[0].counter.label}: ${manifest.scenes[0].counter.value}`
+									: undefined),
 						},
 					};
 				} catch {

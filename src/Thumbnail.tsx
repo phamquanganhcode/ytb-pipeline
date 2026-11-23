@@ -28,12 +28,11 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 	const isDisaster =
 		badge.toUpperCase().includes('THẢM HỌA') ||
 		badge.toUpperCase().includes('DISASTER') ||
+		badge.toUpperCase().includes('POSTMORTEM') ||
 		title.toUpperCase().includes('NỔ') ||
 		title.toUpperCase().includes('SẬP') ||
 		title.toUpperCase().includes('CHERNOBYL');
 
-	const effectiveStatIcon = statIcon || (isDisaster ? '⚠️' : '📈');
-	const [emojiTop, emojiBottom] = emojis || (isDisaster ? ['💥', '⚠️'] : ['💸', '💰']);
 	const effectiveAccent = isDisaster ? '#ff3b30' : accentColor;
 
 	return (
@@ -104,9 +103,12 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 					zIndex: 10,
 				}}
 			>
-				{/* Category Badge */}
+				{/* Category Badge (inline SVG icon avoids Linux missing-emoji tofu boxes) */}
 				<div
 					style={{
+						display: 'inline-flex',
+						alignItems: 'center',
+						gap: 12,
 						backgroundColor: '#ff2a2a',
 						color: '#ffffff',
 						fontSize: 26,
@@ -120,7 +122,12 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 						transform: 'rotate(-2deg)',
 					}}
 				>
-					⚡ {badge}
+					<svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+						<path d="M12 2L2 21H22L12 2Z" fill="#ffd23f" stroke="#000" strokeWidth="1.5" />
+						<rect x="11" y="8" width="2" height="6" fill="#000" />
+						<rect x="11" y="16" width="2" height="2" fill="#000" />
+					</svg>
+					{badge}
 				</div>
 
 				{/* Giant Hook Headline */}
@@ -173,7 +180,9 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 							backdropFilter: 'blur(8px)',
 						}}
 					>
-						<span style={{fontSize: 32}}>{effectiveStatIcon}</span>
+						<svg width="30" height="30" viewBox="0 0 24 24" fill="none">
+							<path d="M13 2L4 14H11L10 22L20 10H13L13 2Z" fill={effectiveAccent} />
+						</svg>
 						<span
 							style={{
 								fontSize: 34,
@@ -231,33 +240,24 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 					/>
 				) : null}
 
-				{/* Floating Accent Stickers */}
-				<div
+				{/* Clean SVG Warning Stamp (no Linux emoji tofu boxes) */}
+				<svg
+					width="86"
+					height="86"
+					viewBox="0 0 64 64"
 					style={{
 						position: 'absolute',
 						top: 60,
-						left: -20,
-						fontSize: 88,
-						transform: 'rotate(-25deg)',
+						left: -10,
+						transform: 'rotate(-18deg)',
 						filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.8))',
 						zIndex: 6,
 					}}
 				>
-					{emojiTop}
-				</div>
-				<div
-					style={{
-						position: 'absolute',
-						bottom: 180,
-						right: -10,
-						fontSize: 72,
-						transform: 'rotate(20deg)',
-						filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.8))',
-						zIndex: 6,
-					}}
-				>
-					{emojiBottom}
-				</div>
+					<path d="M32 6L6 56H58L32 6Z" fill={effectiveAccent} stroke="#ffffff" strokeWidth="4" strokeLinejoin="round" />
+					<rect x="29" y="22" width="6" height="18" rx="3" fill="#000000" />
+					<circle cx="32" cy="47" r="3.5" fill="#000000" />
+				</svg>
 			</div>
 
 			{/* Dramatic Corner Framing Elements */}
