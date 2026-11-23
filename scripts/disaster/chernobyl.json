@@ -1,0 +1,542 @@
+{
+  "title": "THẢM HỌA CHERNOBYL: 60 GIÂY ĐỊNH MỆNH | LÒ PHẢN ỨNG SỐ 4",
+  "lang": "vi",
+  "captions": true,
+  "captionWords": 4,
+  "captionStyle": "kinetic",
+  "showCounter": true,
+  "iconStyle": "bubble",
+  "meta": {
+    "format": "disaster",
+    "theme": "disaster",
+    "chapters": [
+      {
+        "title": "Ca Trực Định Mệnh",
+        "scene": 0,
+        "mood": "mystery"
+      },
+      {
+        "title": "Chuỗi Sai Lầm Kỹ Thuật",
+        "scene": 6,
+        "mood": "tense"
+      },
+      {
+        "title": "Vụ Nổ Lò Phản Ứng",
+        "scene": 14,
+        "mood": "tense"
+      },
+      {
+        "title": "Bài Học Xương Máu",
+        "scene": 20,
+        "mood": "sad"
+      }
+    ]
+  },
+  "cast": {
+    "you": {
+      "face": "chernobyl-operator",
+      "shirt": "#2b303a",
+      "faceIdea": "1986 Soviet nuclear control room operator at Chernobyl, late 20s, clean-shaven, white Soviet nuclear plant linen cap, white protective coat collar"
+    },
+    "dyatlov": {
+      "face": "anatoly-dyatlov",
+      "shirt": "#457b9d",
+      "name": "Anatoly Dyatlov",
+      "faceIdea": "Anatoly Dyatlov (1986, age 55), Soviet Deputy Chief Engineer at Chernobyl, stern intense face, receding greying hair, thick dark eyebrows, white nuclear uniform collar"
+    },
+    "akimov": {
+      "face": "aleksandr-akimov",
+      "shirt": "#2a9d8f",
+      "name": "Aleksandr Akimov",
+      "faceIdea": "Aleksandr Akimov (1986, age 33), Shift Supervisor at Chernobyl Reactor 4, short dark hair, square 1980s glasses, neat moustache, white Soviet nuclear cap and uniform collar"
+    }
+  },
+  "scenes": [
+    {
+      "text": "Một giờ hai mươi ba phút sáng.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "CHERNOBYL, 1986",
+      "counter": {
+        "label": "T-MINUS",
+        "value": "00:01:20"
+      },
+      "icons": [
+        {
+          "icon": "timer",
+          "word": "Một",
+          "label": "01:23 AM"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "sáng",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Bạn đang đứng trong phòng điều khiển số bốn.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "T-MINUS",
+        "value": "00:01:05"
+      },
+      "callouts": [
+        {
+          "text": "LÒ SỐ 4",
+          "word": "bốn"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "phòng",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Một thử nghiệm an toàn đang diễn ra.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "CÔNG SUẤT",
+        "value": "200 MW"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "nghiệm",
+          "label": "TEST"
+        }
+      ]
+    },
+    {
+      "text": "Nhưng công suất lò đột ngột tụt dốc thê thảm.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "CÔNG SUẤT",
+        "value": "30 MW"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "tụt"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "dốc",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Hiện tượng ngộ độc Xenon làm tê liệt phản ứng.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "XENON-135",
+        "value": "CRITICAL"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "độc",
+          "label": "XENON"
+        }
+      ]
+    },
+    {
+      "text": "Quy tắc an toàn yêu cầu dừng lò ngay lập tức.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "CẢNH BÁO",
+        "value": "STOP NOW"
+      },
+      "callouts": [
+        {
+          "text": "QUY TẮC BỊ PHỚT LỜ",
+          "word": "Quy"
+        }
+      ]
+    },
+    {
+      "text": "Nhưng phó kỹ sư trưởng ép tiếp tục thử nghiệm.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "LỆNH",
+        "value": "CONTINUE"
+      },
+      "extras": [
+        {
+          "who": "dyatlov",
+          "pose": "point",
+          "expression": "neutral",
+          "face": "left"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "tiếp",
+          "pose": "handOut",
+          "expression": "neutral",
+          "face": "right"
+        }
+      ]
+    },
+    {
+      "text": "Họ rút gần như toàn bộ thanh điều khiển ra ngoài.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "stamp": "VÙNG LÕI LÒ",
+      "counter": {
+        "label": "THANH ĐIỀU KHIỂN",
+        "value": "6 / 211"
+      },
+      "icons": [
+        {
+          "icon": "wrench",
+          "word": "rút",
+          "label": "RODS"
+        }
+      ]
+    },
+    {
+      "text": "Lõi hạt nhân trở thành một quả bom hẹn giờ.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "counter": {
+        "label": "T-MINUS",
+        "value": "00:00:35"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "bom",
+          "label": "DANGER"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "hạt",
+          "pose": "idle",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Hệ số rỗng dương khiến nước sôi làm tăng công suất.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "NHIỆT ĐỘ",
+        "value": "+850°C"
+      },
+      "callouts": [
+        {
+          "text": "HIỆU ỨNG RỖNG DƯƠNG",
+          "word": "rỗng"
+        }
+      ]
+    },
+    {
+      "text": "Kỹ sư Akimov bấm nút khẩn cấp AZ-5.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "NÚT KHẨN CẤP",
+        "value": "AZ-5 ENGAGED"
+      },
+      "extras": [
+        {
+          "who": "akimov",
+          "pose": "point",
+          "expression": "shock",
+          "face": "left"
+        }
+      ],
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "bấm"
+        }
+      ]
+    },
+    {
+      "text": "Nhưng đầu thanh điều khiển lại bọc bằng graphite.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "LỖI THIẾT KẾ",
+        "value": "GRAPHITE TIP"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "đầu",
+          "label": "FLAW"
+        }
+      ]
+    },
+    {
+      "text": "Thay vì dập lửa, graphite đẩy công suất vọt lên đỉnh.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "CÔNG SUẤT",
+        "value": "33,000 MW"
+      },
+      "sfx": [
+        {
+          "sound": "creak",
+          "word": "vọt"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "GẤP 10 LẦN THIẾT KẾ",
+          "word": "đỉnh"
+        }
+      ]
+    },
+    {
+      "text": "Còi báo động thảm họa rú lên inh ỏi.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "TÌNH TRẠNG",
+        "value": "MELTDOWN"
+      },
+      "fx": "alarm",
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "báo"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "siren",
+          "word": "Còi",
+          "label": "SIREN"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "động",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Một tiếng nổ áp suất xé toạc nắp lò nghìn tấn.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "stamp": "01:23:45 AM",
+      "counter": {
+        "label": "ÁP SUẤT",
+        "value": "CRITICAL BOIL"
+      },
+      "fx": "fire",
+      "sfx": [
+        {
+          "sound": "explosion",
+          "word": "nổ"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "NẮP LÒ 1000 TẤN BỊ THỔI BAY",
+          "word": "nắp"
+        }
+      ]
+    },
+    {
+      "text": "Vụ nổ thứ hai giải phóng trực tiếp lõi hạt nhân.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "counter": {
+        "label": "VỤ NỔ THỨ 2",
+        "value": "CORE BREACH"
+      },
+      "fx": "smoke",
+      "sfx": [
+        {
+          "sound": "boom",
+          "word": "giải"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "radiation",
+          "word": "hạt",
+          "label": "LEAK"
+        }
+      ]
+    },
+    {
+      "text": "Cột lửa phóng xạ bốc thẳng lên bầu trời Pripyat.",
+      "speaker": "narrator",
+      "bg": "city",
+      "stamp": "THÀNH PHỐ PRIPYAT",
+      "counter": {
+        "label": "PHÓNG XẠ",
+        "value": "20,000 R/H"
+      },
+      "fx": "smoke",
+      "sfx": [
+        {
+          "sound": "geiger",
+          "word": "xạ"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "fire",
+          "word": "lửa",
+          "label": "FIRE"
+        }
+      ]
+    },
+    {
+      "text": "Kim đo phóng xạ nhảy vọt vượt mọi ngưỡng an toàn.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "DOSIMETER",
+        "value": "OFF SCALE"
+      },
+      "sfx": [
+        {
+          "sound": "geiger",
+          "word": "đo"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "toàn",
+          "label": "DEADLY"
+        }
+      ]
+    },
+    {
+      "text": "Năm mươi nghìn cư dân phải sơ tán vĩnh viễn.",
+      "speaker": "narrator",
+      "bg": "city",
+      "stamp": "VÙNG CẤM ĐỊA",
+      "counter": {
+        "label": "SƠ TÁN",
+        "value": "50,000 NGƯỜI"
+      },
+      "callouts": [
+        {
+          "text": "KHU VỰC BỎ HOANG",
+          "word": "sơ"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "tán",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Thiệt hại kinh tế lên tới hàng trăm tỷ đô la.",
+      "speaker": "narrator",
+      "bg": "city",
+      "counter": {
+        "label": "THIỆT HẠI",
+        "value": "$235 TỶ USD"
+      },
+      "callouts": [
+        {
+          "text": "$235 TỶ USD",
+          "word": "trăm"
+        }
+      ]
+    },
+    {
+      "text": "Thảm họa bắt đầu từ một nút bấm an toàn.",
+      "speaker": "narrator",
+      "bg": "office",
+      "stamp": "ĐIỀU TRA QUỐC TẾ",
+      "counter": {
+        "label": "KẾT LUẬN",
+        "value": "ROOT CAUSE"
+      },
+      "icons": [
+        {
+          "icon": "skull",
+          "word": "Thảm",
+          "label": "LESSON"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "bấm",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Một thiết kế rẻ tiền đã đánh đổi hàng vạn sinh mạng.",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "BÀI HỌC",
+        "value": "SAFETY FIRST"
+      },
+      "callouts": [
+        {
+          "text": "AN TOÀN LÀ TUYỆT ĐỐI",
+          "word": "thiết"
+        }
+      ]
+    },
+    {
+      "text": "Trong ngành kỹ thuật, không có chỗ cho sự thỏa hiệp.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "KỶ NGUYÊN MỚI",
+        "value": "REDESIGNED"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "thuật",
+          "label": "ZERO DEFECT"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "hiệp",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ]
+    }
+  ]
+}

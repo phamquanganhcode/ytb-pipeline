@@ -33,6 +33,12 @@ import urllib.error
 import urllib.request
 from pathlib import Path
 
+if sys.platform == "win32":
+    try:
+        asyncio.set_event_loop_policy(asyncio.WindowsSelectorEventLoopPolicy())
+    except Exception:
+        pass
+
 import numpy as np
 import soundfile as sf
 
@@ -56,7 +62,11 @@ TTS_STYLE = {
     "vi": {"narrator": "Kể chuyện bằng tiếng Việt, giọng miền Bắc, tự nhiên và lôi cuốn như một YouTuber kể chuyện, có nhấn nhá và ngắt nghỉ: ",
            "friend": "Nói bằng tiếng Việt, giọng miền Bắc, trẻ trung, nhanh, hay trêu chọc bạn thân: "},
 }
-SFX_NAMES = {"whoosh", "pop", "coin", "scribble", "rain", "thunder", "wind", "boom", "cash", "gavel", "scratch", "buzzer", "thud"}
+SFX_NAMES = {
+    "whoosh", "pop", "coin", "scribble", "rain", "thunder", "wind", "boom",
+    "cash", "gavel", "scratch", "buzzer", "thud",
+    "alarm", "explosion", "glitch", "creak", "geiger"
+}
 
 
 def gemini_call(models, body):
@@ -120,13 +130,31 @@ def synth(text, voice, engine, style=""):
         chunks = [np.asarray(a, dtype=np.float32) for _, _, a in _kokoro(text, voice=voice)]
         audio = np.concatenate(chunks) if chunks else np.zeros(0, dtype=np.float32)
     elif engine == "edge":
-        import edge_tts
-        tmp = ROOT / "public" / "_edge.mp3"
-        asyncio.run(edge_tts.Communicate(text, voice).save(str(tmp)))
-        audio, sr = sf.read(tmp, dtype="float32")
-        tmp.unlink()
-        if sr != SAMPLE_RATE:
-            raise ValueError(f"Edge TTS returned {sr} Hz audio; expected {SAMPLE_RATE}")
+        # Edge TTS WebSocket hangs on the 2nd call from the same process on Windows (aiohttp
+        # connection pool + IocpProactor bug). Shell out to `edge-tts` CLI instead with stdin=DEVNULL.
+        # Upstream Microsoft server intermittently terminates websocket (error 1006) or throttles;
+        # timeout after 10s and retry with exponential backoff up to 5 times.
+        edge_bin = str(Path(sys.executable).parent / ("edge-tts.exe" if sys.platform == "win32" else "edge-tts"))
+        if not Path(edge_bin).exists():
+            edge_bin = "edge-tts"
+        audio = None
+        for attempt in range(5):
+            tmp = ROOT / "public" / f"_edge_{os.getpid()}_{int(time.time()*1000)}.mp3"
+            try:
+                subprocess.run([edge_bin, "--text", text, "--voice", voice, "--write-media", str(tmp)],
+                               check=True, stdin=subprocess.DEVNULL, capture_output=True, timeout=10)
+                if tmp.exists() and tmp.stat().st_size > 0:
+                    audio, sr = sf.read(tmp, dtype="float32")
+                    if sr != SAMPLE_RATE:
+                        raise ValueError(f"Edge TTS returned {sr} Hz audio; expected {SAMPLE_RATE}")
+                    break
+            except Exception:
+                time.sleep(1.5 * (attempt + 1))
+            finally:
+                if tmp.exists():
+                    tmp.unlink()
+        if audio is None:
+            raise RuntimeError(f"Edge TTS failed for {text!r} after 5 attempts")
     elif engine == "gemini":
         body = {"contents": [{"parts": [{"text": style + text}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
@@ -220,11 +248,46 @@ def write_sfx(out_dir):
     f_thud = 180 * np.exp(-t_thud * 18) + 50
     thud = np.sin(2 * np.pi * np.cumsum(f_thud) / sr) * np.exp(-t_thud * 12)
 
+    # 7. alarm: industrial warning siren (alternating 800Hz / 1050Hz)
+    t_al = np.arange(int(1.0 * sr)) / sr
+    mod_al = np.sin(2 * np.pi * 3 * t_al)
+    f_al = 920 + 130 * np.sign(mod_al)
+    alarm = np.sin(2 * np.pi * np.cumsum(f_al) / sr) * (0.8 + 0.2 * np.sin(2 * np.pi * 12 * t_al))
+
+    # 8. explosion: heavy blast + deep sub-bass shockwave decay
+    t_ex = np.arange(int(1.8 * sr)) / sr
+    f_sub = 80 * np.exp(-t_ex * 2.8) + 30
+    sub_blast = np.sin(2 * np.pi * np.cumsum(f_sub) / sr) * np.exp(-t_ex * 1.5)
+    noise_blast = np.convolve(rng.standard_normal(len(t_ex)), np.ones(80) / 80, "same") * np.exp(-t_ex * 3.2)
+    explosion = sub_blast * 0.7 + noise_blast * 0.9
+
+    # 9. glitch: digital error / electronic spark / bit-crush burst
+    t_gl = np.arange(int(0.35 * sr)) / sr
+    f_gl = 1200 - 800 * (t_gl / 0.35)
+    glitch_carrier = np.sign(np.sin(2 * np.pi * np.cumsum(f_gl + rng.choice([-300, 0, 300], len(t_gl))) / sr))
+    glitch = glitch_carrier * np.exp(-t_gl * 4) * 0.6
+
+    # 10. creak: metal strain / bending structural stress
+    t_cr = np.arange(int(0.65 * sr)) / sr
+    cr_wobble = np.sin(2 * np.pi * 8 * t_cr)
+    f_cr = 110 + 25 * cr_wobble
+    creak = (np.sin(2 * np.pi * np.cumsum(f_cr) / sr) + 0.4 * np.sin(2 * np.pi * np.cumsum(f_cr * 2.1) / sr)) * np.exp(-t_cr * 1.8)
+
+    # 11. geiger: radiation counter stochastic clicks
+    t_ge = np.arange(int(0.8 * sr)) / sr
+    geiger = np.zeros(len(t_ge))
+    click_indices = rng.choice(len(t_ge) - 200, size=18, replace=False)
+    for idx in click_indices:
+        t_click_g = np.arange(150) / sr
+        geiger[idx:idx + 150] += np.sin(2 * np.pi * 3200 * t_click_g) * np.exp(-t_click_g * 800)
+
     sounds = [
         ("whoosh", whoosh, 0.5), ("pop", pop, 0.6), ("coin", coin, 0.4), ("scribble", scribble, 0.3),
         ("rain", rain, 0.3), ("thunder", thunder, 0.8), ("wind", wind, 0.4),
         ("boom", boom, 0.7), ("cash", cash, 0.55), ("gavel", gavel, 0.6),
-        ("scratch", scratch, 0.5), ("buzzer", buzzer, 0.45), ("thud", thud, 0.65)
+        ("scratch", scratch, 0.5), ("buzzer", buzzer, 0.45), ("thud", thud, 0.65),
+        ("alarm", alarm, 0.6), ("explosion", explosion, 0.8), ("glitch", glitch, 0.5),
+        ("creak", creak, 0.5), ("geiger", geiger, 0.65)
     ]
     for name, wave, peak in sounds:
         target_file = out_dir / f"{name}.wav"
@@ -290,7 +353,10 @@ def word_frames(audio, text, lang, speech_frames):
     if _whisper is None:
         try:
             from faster_whisper import WhisperModel
-            _whisper = WhisperModel("small", device="cpu", compute_type="int8")  # ~0.5 GB, downloaded once
+            import torch
+            device = "cuda" if torch.cuda.is_available() else "cpu"
+            compute_type = "float16" if device == "cuda" else "int8"
+            _whisper = WhisperModel("small", device=device, compute_type=compute_type)
         except ImportError:
             print("warning: faster-whisper not installed; trigger timing assumes evenly spaced words")
             _whisper = False
@@ -386,7 +452,10 @@ def mouth_track(audio, frames):
 
 
 # Keep in sync with BACKGROUNDS in src/Backgrounds.tsx and ICONS in src/Icons.tsx.
-SVG_BACKGROUNDS = {"office", "home", "vault", "bank", "city", "cafe", "future"}
+SVG_BACKGROUNDS = {
+    "office", "home", "vault", "bank", "city", "cafe", "future",
+    "control_room", "factory", "server_room", "bridge"
+}
 # Painted backgrounds: public/bg/<name>.png, described in assets/backgrounds.json (batch.py adds new ones).
 PAINTED = json.loads((ROOT / "assets" / "backgrounds.json").read_text(encoding="utf-8"))
 NEW_BG_NAME = re.compile(r"^[a-z][a-z0-9]{2,30}$")
@@ -395,7 +464,11 @@ MAX_NEW_BGS = 10  # new painted settings one script may ask for
 
 def bg_ready(name):
     return name in SVG_BACKGROUNDS or (ROOT / "public" / "bg" / f"{name}.png").exists()
-ICONS = {"coffee", "coin", "money", "calendar", "piggy", "chart", "question"}
+ICONS = {
+    "coffee", "coin", "money", "calendar", "piggy", "chart", "question",
+    "hazard", "radiation", "fire", "gear", "wrench", "skull", "electricity", "siren", "timer"
+}
+FX_KINDS = {"rain", "storm", "snow", "alarm", "smoke", "fire"}
 
 
 def vision_file(name):
@@ -476,8 +549,8 @@ def validate(script):
                 raise ValueError(f"{where}: a quote from 'you' and icons would both sit right of your head; drop the icons")
         if any(w not in on_screen | {"you"} for w in scene.get("looks", {})):
             raise ValueError(f"{where}: looks may only swap heads of characters in this scene")
-        if scene.get("fx") not in (None, "rain", "storm", "snow"):
-            raise ValueError(f"{where}: fx must be 'rain', 'storm' or 'snow'")
+        if scene.get("fx") is not None and scene.get("fx") not in FX_KINDS:
+            raise ValueError(f"{where}: fx must be one of {sorted(FX_KINDS)}")
         paper = scene.get("paper")
         if paper is not None:
             if not 0 < len(paper.get("text", "")) <= 60 or not paper.get("word") or scene.get("icons") or len(extras) > 2:
@@ -512,6 +585,57 @@ def validate(script):
             raise ValueError(f"chapter {c.get('title')!r}: mood {c['mood']!r} is not one of {MOODS}")
 
 
+def _episode_key(path):
+    """Normalize a script path to its base episode slug (language variants like chernobyl / chernobyl_en match)."""
+    stem = Path(path).stem.lower()
+    for suffix in ("_en", "_vi", "_long", "_web"):
+        if stem.endswith(suffix):
+            stem = stem[: -len(suffix)]
+    return stem
+
+
+def validate_unique_faces(script, script_path=None):
+    """Enforce that every video uses its own unique character faces — never duplicated within or across videos."""
+    cast = script.get("cast", {})
+    if not cast:
+        return
+    # 1. No duplicate faces between different characters in the same video
+    seen_local = {}
+    for role, info in cast.items():
+        face = info.get("face")
+        if not face:
+            continue
+        if face in seen_local:
+            raise ValueError(
+                f"duplicate face {face!r} inside the same script (roles {seen_local[face]!r} and {role!r}); "
+                "every character must have its own unique face"
+            )
+        seen_local[face] = role
+
+    # 2. No face reused from another video in scripts/
+    current_key = _episode_key(script_path) if script_path else None
+    scripts_dir = ROOT / "scripts"
+    if not scripts_dir.exists():
+        return
+    for other in sorted(scripts_dir.rglob("*.json")):
+        if other.stem.startswith(("test_", "intro")):
+            continue
+        if current_key and _episode_key(other) == current_key:
+            continue
+        try:
+            other_cast = json.loads(other.read_text(encoding="utf-8")).get("cast", {})
+        except Exception:
+            continue
+        other_faces = {info.get("face") for info in other_cast.values() if isinstance(info, dict) and info.get("face")}
+        conflicts = sorted(seen_local.keys() & other_faces)
+        if conflicts:
+            rel = other.relative_to(ROOT)
+            raise ValueError(
+                f"face(s) {conflicts} already used in {rel}; every video must have its own unique character images "
+                "(generate new faces with gen_face.py and never reuse faces across videos)"
+            )
+
+
 VI_RULES = """
 
 ## Language: Vietnamese (overrides the rules above where they differ)
@@ -535,7 +659,11 @@ the way a Vietnamese storyteller would tell it out loud to friends.
 - Icon and action `word` values are copied exactly from the Vietnamese `text` (one syllable is fine).
 """
 
-PROMPTS = {"whatif": "script_prompt.md", "life": "life_prompt.md"}  # one prompt per channel format
+PROMPTS = {
+    "whatif": "script_prompt.md",
+    "life": "life_prompt.md",
+    "disaster": "disaster_prompt.md",
+}  # one prompt per channel format
 
 
 def ask_json(models, prompt, check, what):
@@ -578,6 +706,7 @@ def generate_script(topic, minutes, friend, model, lang, fmt="whatif", chunked=F
         if fmt == "life":
             script["iconStyle"] = "bubble"  # set before validating: extras need it
         validate(script)
+        validate_unique_faces(script)
         words = count_words(script["scenes"])
         if abs(words - target) > 0.25 * target:
             raise ValueError(f"the narration has {words} {unit} but must have about {target:.0f} (±25%); rewrite to that length")
@@ -649,7 +778,7 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__, formatter_class=argparse.RawDescriptionHelpFormatter)
     parser.add_argument("script", nargs="?", help="existing script JSON (omit when using --topic)")
     parser.add_argument("--topic", help="generate a new script with Gemini, e.g. 'What if rent was free?'")
-    parser.add_argument("--minutes", type=float, help="target length for --topic (default 15 for --format life, else 8)")
+    parser.add_argument("--minutes", type=float, help="target length for --topic (default 15 for life, 12 for disaster, else 8)")
     parser.add_argument("--lang", choices=sorted(LANGS), default="en", help="language for --topic (default en)")
     parser.add_argument("--friend", help="sidekick name for --topic (default Milo, or Tùng for vi)")
     parser.add_argument("--tts", choices=["kokoro", "edge", "gemini"], help="voice engine for --topic (default per language)")
@@ -666,7 +795,7 @@ def main():
     parser.add_argument("--no-render", action="store_true", help="stop after voices and manifest")
     args = parser.parse_args()
     if args.minutes is None:
-        args.minutes = 15 if args.format == "life" else 8  # the reference channel runs 11-52 min
+        args.minutes = 15 if args.format == "life" else 12 if args.format == "disaster" else 8
     if sum(map(bool, (args.script, args.topic, args.topics_file))) != 1:
         parser.error("give exactly one of: a script path, --topic or --topics-file")
 
@@ -713,6 +842,7 @@ def main():
         script_path = Path(args.script)
         script = json.loads(script_path.read_text(encoding="utf-8"))
         validate(script)
+        validate_unique_faces(script, script_path)
     cast = resolve_cast(script.get("cast", {}))  # fail on missing face images before any voice work
     missing_bgs = sorted({s["bg"] for s in script["scenes"] if not bg_ready(s["bg"])})
     if missing_bgs:
@@ -729,12 +859,17 @@ def main():
     scenes = []
     # Each character keeps their pose, face and held prop across cuts until an action changes it.
     state = {who: {"pose": "idle", "expression": "neutral", "hold": None, "face": "right"} for who in ("you", "friend")}
+    print(f"Processing {len(script['scenes'])} scenes for {episode} (engine: {engine})...", flush=True)
     for i, scene in enumerate(script["scenes"]):
         speaker = scene.get("speaker", "narrator")
         voice = script.get("friendVoice", lang["friendVoice"]) if speaker == "friend" else script.get("voice", lang["voice"])
-        audio = synth(scene["text"], voice, engine, styles.get(speaker, ""))
         wav = out_dir / f"scene_{i}.wav"
-        sf.write(wav, audio, SAMPLE_RATE)
+        if wav.exists() and wav.stat().st_size > 1000:
+            audio, _ = sf.read(wav, dtype="float32")
+        else:
+            audio = synth(scene["text"], voice, engine, styles.get(speaker, ""))
+            sf.write(wav, audio, SAMPLE_RATE)
+            time.sleep(1.0)
         frames = math.ceil(len(audio) / SAMPLE_RATE * FPS)
         speech_frames = frames - int(PAD_SECONDS * FPS)
         word_at = word_frames(audio, scene["text"], script.get("lang", "en"), speech_frames)
@@ -765,10 +900,14 @@ def main():
             timed_sfx = timed(scene, scene["sfx"], word_at, "SFX")
             scene_sfx.extend([{"sound": s["sound"], "at": s["at"], "volume": s.get("volume", 0.35)} for s in timed_sfx])
         for a in actions:
-            if a.get("expression") == "shock" and not any(s["sound"] in ("boom", "thunder") for s in scene_sfx):
+            if a.get("expression") == "shock" and not any(s["sound"] in ("boom", "thunder", "explosion") for s in scene_sfx):
                 scene_sfx.append({"sound": "boom", "at": a["at"], "volume": 0.32})
             elif a.get("hold") in ("money", "gold", "briefcase") and not any(s["sound"] in ("cash", "coin") for s in scene_sfx):
                 scene_sfx.append({"sound": "cash", "at": a["at"], "volume": 0.28})
+            elif a.get("hold") in ("hazard", "radiation", "siren") and not any(s["sound"] in ("alarm", "glitch") for s in scene_sfx):
+                scene_sfx.append({"sound": "alarm", "at": a["at"], "volume": 0.30})
+            elif a.get("hold") in ("wrench", "gear") and not any(s["sound"] in ("thud", "creak") for s in scene_sfx):
+                scene_sfx.append({"sound": "creak", "at": a["at"], "volume": 0.25})
         # looks: {"you": "hetty-green-young"} swaps a head for this scene (aging); same files as cast faces.
         looks = {who: f for who, f in ((w, resolve_cast({w: {"face": name}})[w].get("faces")) for w, name in scene.get("looks", {}).items()) if f}
         start_state = {who: dict(s) for who, s in state.items()}
@@ -796,7 +935,7 @@ def main():
             "mouth": mouth_track(audio, frames),
             "words": scene_words,
         })
-        print(f"scene {i}: {frames / FPS:.1f}s")
+        print(f"[{i + 1}/{len(script['scenes'])}] scene {i}: {frames / FPS:.1f}s - {scene['text'][:40]}", flush=True)
 
     # Burned-in captions and the corner counter are off by default, like the reference channel;
     # "captions": true / "showCounter": true in a script turn them back on. The .srt goes to YouTube CC.

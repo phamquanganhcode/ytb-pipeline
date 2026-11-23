@@ -1,0 +1,530 @@
+{
+  "title": "CHERNOBYL DISASTER: THE 60-SECOND CHAIN REACTION | REACTOR 4",
+  "lang": "en",
+  "tts": "edge",
+  "voice": "en-US-ChristopherNeural",
+  "captions": true,
+  "captionWords": 4,
+  "captionStyle": "kinetic",
+  "showCounter": true,
+  "iconStyle": "bubble",
+  "meta": {
+    "format": "disaster",
+    "theme": "disaster",
+    "chapters": [
+      {
+        "title": "The Fatal Night Shift",
+        "scene": 0,
+        "mood": "mystery"
+      },
+      {
+        "title": "The Chain of Failures",
+        "scene": 6,
+        "mood": "tense"
+      },
+      {
+        "title": "The Core Explosion",
+        "scene": 14,
+        "mood": "tense"
+      },
+      {
+        "title": "The Deadly Legacy",
+        "scene": 20,
+        "mood": "sad"
+      }
+    ]
+  },
+  "cast": {
+    "you": {
+      "face": "chernobyl-operator",
+      "shirt": "#2b303a",
+      "faceIdea": "1986 Soviet nuclear control room operator at Chernobyl, late 20s, clean-shaven, white Soviet nuclear plant linen cap, white protective coat collar"
+    },
+    "dyatlov": {
+      "face": "anatoly-dyatlov",
+      "shirt": "#457b9d",
+      "name": "Anatoly Dyatlov",
+      "faceIdea": "Anatoly Dyatlov (1986, age 55), Soviet Deputy Chief Engineer at Chernobyl, stern intense face, receding greying hair, thick dark eyebrows, white nuclear uniform collar"
+    },
+    "akimov": {
+      "face": "aleksandr-akimov",
+      "shirt": "#2a9d8f",
+      "name": "Aleksandr Akimov",
+      "faceIdea": "Aleksandr Akimov (1986, age 33), Shift Supervisor at Chernobyl Reactor 4, short dark hair, square 1980s glasses, neat moustache, white Soviet nuclear cap and uniform collar"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It is one twenty-three in the morning.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "CHERNOBYL, 1986",
+      "counter": {
+        "label": "T-MINUS",
+        "value": "00:01:20"
+      },
+      "icons": [
+        {
+          "icon": "timer",
+          "word": "one",
+          "label": "01:23 AM"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "morning",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "You are standing inside Control Room Number Four.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "T-MINUS",
+        "value": "00:01:05"
+      },
+      "callouts": [
+        {
+          "text": "REACTOR 4",
+          "word": "Four"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "standing",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "A routine safety turbine test is underway.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "REACTOR POWER",
+        "value": "200 MW"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "turbine",
+          "label": "TEST"
+        }
+      ]
+    },
+    {
+      "text": "Suddenly, thermal reactor power collapses unexpectedly.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "REACTOR POWER",
+        "value": "30 MW"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "collapses"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "unexpectedly",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "A massive buildup of Xenon gas poisons the uranium core.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "XENON-135",
+        "value": "CRITICAL"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "poisons",
+          "label": "XENON"
+        }
+      ]
+    },
+    {
+      "text": "Nuclear safety protocols demand an immediate full shutdown.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "WARNING",
+        "value": "HALT TEST"
+      },
+      "icons": [
+        {
+          "icon": "siren",
+          "word": "shutdown",
+          "label": "STOP"
+        }
+      ]
+    },
+    {
+      "text": "Instead, the deputy chief engineer orders the crew to continue.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "ENGINEER ORDER",
+      "counter": {
+        "label": "AUTHORITY",
+        "value": "OVERRIDE"
+      },
+      "callouts": [
+        {
+          "text": "ORDER CONFIRMED",
+          "word": "orders"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "continue",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "They manually withdraw over two hundred control rods.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "CONTROL RODS",
+        "value": "6 / 211"
+      },
+      "sfx": [
+        {
+          "sound": "creak",
+          "word": "withdraw"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "wrench",
+          "word": "withdraw",
+          "label": "PULL"
+        }
+      ]
+    },
+    {
+      "text": "The reactor core becomes an invisible ticking time bomb.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "STABILITY",
+        "value": "UNSTABLE"
+      },
+      "icons": [
+        {
+          "icon": "timer",
+          "word": "bomb",
+          "label": "DANGER"
+        }
+      ]
+    },
+    {
+      "text": "A positive void coefficient causes boiling water to multiply energy.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "VOID COEFF",
+        "value": "+POSITIVE"
+      },
+      "icons": [
+        {
+          "icon": "electricity",
+          "word": "energy",
+          "label": "SURGE"
+        }
+      ]
+    },
+    {
+      "text": "Engineer Akimov slams the emergency scram button AZ-5.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "01:23:40 AM",
+      "counter": {
+        "label": "SCRAM",
+        "value": "AZ-5 PRESSED"
+      },
+      "callouts": [
+        {
+          "text": "AZ-5 ENGAGED",
+          "word": "AZ-5"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "slams",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Every control rod tip was lined with graphite.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "DESIGN FLAW",
+        "value": "GRAPHITE TIPS"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "graphite",
+          "label": "FLAW"
+        }
+      ]
+    },
+    {
+      "text": "As the rods descend, graphite instantly spikes reactivity through the roof.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "REACTOR POWER",
+        "value": "33,000 MW"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "spikes"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "spikes",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Terrifying alarm sirens echo across the plant.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "fx": "alarm",
+      "counter": {
+        "label": "CRITICAL ALARM",
+        "value": "EVACUATE"
+      },
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "sirens"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "siren",
+          "word": "sirens",
+          "label": "ALARM"
+        }
+      ]
+    },
+    {
+      "text": "A monstrous steam explosion blows off the thousand-ton concrete lid.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "fx": "smoke",
+      "counter": {
+        "label": "PRESSURE",
+        "value": "CATASTROPHIC"
+      },
+      "sfx": [
+        {
+          "sound": "explosion",
+          "word": "explosion"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "1,000 TON ROOF BLOWN",
+          "word": "concrete"
+        }
+      ]
+    },
+    {
+      "text": "Seconds later, a second nuclear blast obliterates the entire core.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "fx": "fire",
+      "counter": {
+        "label": "CONTAINMENT",
+        "value": "BREACHED"
+      },
+      "sfx": [
+        {
+          "sound": "explosion",
+          "word": "blast"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "obliterates",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "A lethal pillar of burning radioactive graphite shoots into the night sky.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "fx": "fire",
+      "counter": {
+        "label": "PLUME",
+        "value": "IONIZING SKY"
+      },
+      "icons": [
+        {
+          "icon": "fire",
+          "word": "burning",
+          "label": "FIRE"
+        },
+        {
+          "icon": "radiation",
+          "word": "radioactive",
+          "label": "RADIOACTIVE"
+        }
+      ]
+    },
+    {
+      "text": "Geiger counters max out immediately at lethal dosage levels.",
+      "speaker": "narrator",
+      "bg": "factory",
+      "counter": {
+        "label": "RADIATION",
+        "value": "20,000 R/HR"
+      },
+      "sfx": [
+        {
+          "sound": "geiger",
+          "word": "Geiger"
+        }
+      ],
+      "icons": [
+        {
+          "icon": "radiation",
+          "word": "counters",
+          "label": "LETHAL"
+        }
+      ]
+    },
+    {
+      "text": "Fifty thousand residents of Pripyat are evacuated forever.",
+      "speaker": "narrator",
+      "bg": "city",
+      "stamp": "PRIPYAT EVACUATION",
+      "counter": {
+        "label": "EXCLUSION ZONE",
+        "value": "2,600 KM²"
+      },
+      "actions": [
+        {
+          "who": "you",
+          "word": "evacuated",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Economic damages surpass hundreds of billions of dollars.",
+      "speaker": "narrator",
+      "bg": "city",
+      "counter": {
+        "label": "TOTAL COST",
+        "value": "$235 BILLION"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "damages",
+          "label": "COST"
+        }
+      ]
+    },
+    {
+      "text": "The world's worst nuclear disaster began with a safety shutdown button.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "INSPECTION FINDING",
+      "counter": {
+        "label": "ROOT CAUSE",
+        "value": "SYSTEMIC FLAW"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "disaster",
+          "label": "FAILURE"
+        }
+      ]
+    },
+    {
+      "text": "Flawed design and dangerous secrecy cost tens of thousands of lives.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "LESSON",
+        "value": "TRANSPARENCY"
+      },
+      "icons": [
+        {
+          "icon": "skull",
+          "word": "lives",
+          "label": "CASUALTIES"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "secrecy",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "In engineering, ignoring technical truth always has catastrophic consequences.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "RULE #1",
+        "value": "TRUTH FIRST"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "engineering",
+          "label": "STANDARD"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "consequences",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    }
+  ]
+}

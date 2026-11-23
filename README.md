@@ -121,4 +121,86 @@ Bổ sung 6 hiệu ứng âm thanh kịch tính và hài hước (chuẩn phong 
 #### 3. Tích hợp vào `src/Episode.tsx` & `src/Root.tsx`
 - Bổ sung `KineticCaptions` vào giao diện chính của từng phân cảnh (`Scene`), tự động ẩn khi chuyển cảnh để không bị đè chữ.
 - Cho phép linh hoạt chuyển đổi giữa các phong cách phụ đề qua `captionStyle: 'kinetic' | 'classic' | 'none'`.
-- Kiểm thử thành công xuất ảnh tĩnh tại [out/test_caption.png](file:///d:/youtube-video-pipeline/out/test_caption.png) (1920x1080).
+- **Kiểm thử thành công:** Xuất ảnh tĩnh tại [out/test_caption.png](file:///d:/youtube-video-pipeline/out/test_caption.png) (1920x1080).
+
+### [Đợt 4] - Tối Ưu Hóa GPU CUDA & Môi Trường Render Đám Mây Kaggle (19/11/2026)
+
+#### 1. Tối ưu mã nguồn tự động phát hiện GPU CUDA (`make_video.py`)
+- Cập nhật hàm gọi `faster-whisper`: Tự động nhận diện `torch.cuda.is_available()`.
+  - Nếu có GPU (Kaggle T4 / GPU Local): Chuyển sang `device="cuda"` và `compute_type="float16"`, rút ngắn thời gian Whisper 15 phút từ ~4 phút xuống chỉ còn **~30 giây**.
+  - Nếu không có GPU: Tự động dùng fallback `device="cpu"` và `compute_type="int8"`.
+
+#### 2. Xây dựng bộ công cụ chạy đám mây trên Kaggle (`kaggle/`)
+- **`kaggle/setup_kaggle.sh`:** Script tự động cấu hình Node.js 20, FFmpeg, các thư viện Linux headless Chromium cho Remotion và các package Python.
+- **`kaggle/pipeline_kaggle.ipynb`:** Jupyter Notebook hoàn chỉnh, tối ưu 1-click để chạy toàn bộ quy trình trên Kaggle.
+- **`kaggle/kernel-metadata.json`:** Cấu hình cho người dùng điều khiển tự động qua Kaggle CLI (`kaggle kernels push`).
+
+---
+
+## ☁️ Hướng Dẫn Chạy Pipeline Miễn Phí Trên Kaggle
+
+Chạy trên Kaggle giúp giải phóng hoàn toàn máy tính của bạn và tận dụng **30 giờ GPU T4 miễn phí / tuần / mỗi tài khoản**.
+
+### 1. Cách thiết lập Notebook trên Kaggle:
+1. Đăng nhập vào [Kaggle](https://www.kaggle.com/) ➔ Chọn **Create** ➔ **New Notebook**.
+2. Trên thanh menu Notebook, chọn **File** ➔ **Upload Notebook** ➔ Chọn file [kaggle/pipeline_kaggle.ipynb](file:///d:/youtube-video-pipeline/kaggle/pipeline_kaggle.ipynb).
+3. **Cài đặt bắt buộc ở cột bên phải (Notebook Settings):**
+   - **Accelerator:** Chọn **GPU T4** (hoặc GPU T4 x 2).
+   - **Internet:** Bật **Internet on** (Bắt buộc).
+4. **Treo máy không cần bật máy tính (Background Execution):**
+   - Nhấp vào nút **Save Version** ở góc phải trên ➔ Chọn **Save & Run All (Commit)**.
+   - Bạn có thể tắt máy tính đi ngủ, server Kaggle sẽ tự động chạy ngầm toàn bộ quy trình.
+   - Sau khi chạy xong, vào tab **Output** của Notebook để tải file `.mp4` và thumbnail về máy.
+
+### 2. Chiến lược luân chuyển nhiều tài khoản Kaggle (Không giới hạn GPU):
+- Mỗi tài khoản Kaggle được cấp **30 giờ GPU / tuần**.
+- Khi tài khoản 1 dùng hết hạn mức trong tuần, bạn chỉ cần đăng xuất và đăng nhập tài khoản Kaggle thứ 2 để chạy tiếp tục (2 tài khoản = 60 giờ GPU = sản xuất được **~120 video 15 phút / tuần** hoàn toàn miễn phí).
+
+### 3. Tự động hóa hoàn toàn từ Terminal (Kaggle CLI - Khuyên dùng):
+Tài khoản của bạn đã được kết nối trực tiếp với Kaggle CLI. Bạn có thể điều khiển toàn bộ từ terminal mà không cần mở trình duyệt:
+
+```bash
+# 1. Đẩy code lên Kaggle và tự động kích hoạt GPU chạy ngầm
+kaggle kernels push -p kaggle
+
+# 2. Kiểm tra tiến độ render trên đám mây
+kaggle kernels status phamquanganh867/youtube-video-pipeline-render
+
+# 3. Tải toàn bộ video MP4 và Thumbnail về thư mục out/
+kaggle kernels output phamquanganh867/youtube-video-pipeline-render -p out
+```
+
+---
+
+### Đợt 5: Nâng Cấp Định Dạng Video "Giải Phẫu Thảm Họa Kỹ Thuật & Hạ Tầng" (`--format disaster`)
+
+Hệ thống đã được mở rộng toàn diện để sản xuất video tài liệu/phân tích chuyên sâu về các thảm họa kỹ thuật theo mô hình Swiss Cheese Model:
+
+1. **Giao diện & Đồ họa mới (React / Remotion):**
+   - **9 Icon chuyên dụng mới:** `hazard` (nguy hiểm sinh học/hóa học), `radiation` (phóng xạ), `fire` (lửa), `gear` (bánh răng kỹ thuật), `wrench` (cờ lê sửa chữa), `skull` (tử vong/nguy kịch), `electricity` (điện cao thế), `siren` (còi hú), `timer` (đồng hồ đếm ngược sự cố).
+   - **4 Backgrounds vector SVG mới:** `control_room` (phòng điều khiển hạt nhân/công nghiệp), `factory` (nhà máy lò hơi, đường ống), `server_room` (trung tâm dữ liệu/datacenter), `bridge` (cầu dây văng/công trình hạ tầng).
+   - **3 Hiệu ứng thời tiết/môi trường (WeatherFx):** `alarm` (chớp đỏ cảnh báo khẩn cấp toàn màn hình), `smoke` (khói xám bốc mù mịt), `fire` (tàn lửa bốc cháy).
+   - **Thumbnail thảm họa tự động:** Tự động phát hiện chủ đề thảm họa để đổi badge đỏ `⚠️ THẢM HỌA KỸ THUẬT`, đổi icon cảnh báo ⚠️, emoji 💥⚠️, và hỗ trợ render trực tiếp cả nền SVG lẫn ảnh PNG.
+
+2. **Âm thanh & Hiệu ứng SFX:**
+   - Bổ sung 5 SFX tổng hợp mới: `alarm` (còi hú khẩn cấp), `explosion` (tiếng nổ lớn chấn động), `glitch` (tiếng chập điện nhiễu sóng), `creak` (tiếng kim loại/kết cấu vặn gãy), `geiger` (máy đo phóng xạ Geiger kêu tích tắc dồn dập).
+   - Tự động kích hoạt SFX theo ngữ cảnh đạo cụ (`hazard`/`siren` ➔ `alarm`, `wrench`/`gear` ➔ `creak`).
+
+3. **Cải tiến cốt lõi Engine TTS & Khả năng chịu lỗi:**
+   - **Audio Caching (`scene_i.wav`):** Hệ thống tự động cache âm thanh từng phân cảnh đã tạo. Khi chạy lại, các phân cảnh cũ sẽ nạp tức thì trong 0 giây, không bao giờ phải gọi lại TTS cho những câu đã hoàn thành.
+   - **Khắc phục lỗi treo Edge-TTS trên Windows:** Gọi qua tiến trình CLI với `stdin=subprocess.DEVNULL`, cơ chế timeout 10s + tự động retry 5 lần kèm exponential backoff và giãn cách 1s chống rate-limit từ Microsoft.
+
+4. **Kịch bản mẫu & Ngân hàng chủ đề:**
+   - **Prompt chuyên dụng:** [prompts/disaster_prompt.md](file:///d:/youtube-video-pipeline/prompts/disaster_prompt.md) với quy chuẩn phân tích kỹ thuật khách quan, không phóng đại giật gân, tuân thủ mô hình Swiss Cheese.
+   - **25 Chủ đề tuyển chọn:** [topics/disaster.txt](file:///d:/youtube-video-pipeline/topics/disaster.txt) (Chernobyl, Cầu Tacoma Narrows, Tàu con thoi Challenger, Sự cố sập CrowdStrike, Boeing 737 MAX, Tàu ngầm Titan,...).
+   - **Kịch bản mẫu hoàn chỉnh:** [scripts/disaster/chernobyl.json](file:///d:/youtube-video-pipeline/scripts/disaster/chernobyl.json) (23 phân cảnh tiếng Việt) & [scripts/disaster/chernobyl_en.json](file:///d:/youtube-video-pipeline/scripts/disaster/chernobyl_en.json) (23 phân cảnh tiếng Anh).
+
+5. **Motion Graphics Kỹ Thuật Độc Quyền (Đè bẹp video AI tĩnh thông thường):**
+   - **`src/TimelineBar.tsx` (Trục thời gian sự cố từng giây):** Thanh tiến trình chuyên nghiệp trên cùng màn hình, hiển thị các mốc thời gian và kim scrubber phát sáng trượt mượt mà theo từng giây phân cảnh.
+   - **`src/TechnicalDiagram.tsx` (Sơ đồ kỹ thuật Blueprint SVG thời gian thực):**
+     - `data_flow` & `code_crash`: Mô phỏng luồng cập nhật đám mây ➔ nạp Channel File 291 vào Kernel Driver (Ring 0) ➔ lệch 21 vs 20 input fields gây lỗi đọc bộ nhớ ngoài giới hạn (`Out-of-Bounds Memory Read`) ➔ BSOD vòng lặp sập 8.5 triệu máy tính.
+     - `reactor_core`: Mặt cắt lõi hạt nhân Chernobyl, mô phỏng hơi nước sôi tạo bọt (positive void coefficient), thanh điều khiển chèn đầu graphite gây đột biến công suất 33,000 MW.
+     - `dam_cross_section`: Mặt cắt đập thủy điện trọng lực, vector áp suất thủy tĩnh $P = \rho g h$ ép lên tường đập, vết nứt gãy trượt cấu trúc (shear failure).
+     - `swiss_cheese`: 4 lát cắt phòng thủ chiều sâu (Thiết kế ➔ Đào tạo ➔ Quy trình ➔ Ngắt khẩn cấp), mô phỏng các lỗ hổng thẳng hàng dẫn tới thảm họa.
+   - **Kịch bản mẫu IT Disaster:** [scripts/disaster/crowdstrike_en.json](file:///d:/youtube-video-pipeline/scripts/disaster/crowdstrike_en.json) đã được render hoàn chỉnh ra [out/crowdstrike_en.mp4](file:///d:/youtube-video-pipeline/out/crowdstrike_en.mp4).
+

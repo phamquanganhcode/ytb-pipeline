@@ -11,7 +11,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from make_video import FPS, LANGS, PAINTED, PROMPTS, TRANSITION_FRAMES, count_words, validate
+from make_video import FPS, LANGS, PAINTED, PROMPTS, TRANSITION_FRAMES, count_words, validate, validate_unique_faces
 
 ROOT = Path(__file__).parent
 TOPICS = ROOT / "topics" / "life.txt"
@@ -48,6 +48,7 @@ def check(path):
     script["iconStyle"] = "bubble"  # set before validating: extras need it
     script.update({"lang": "en", **{k: LANGS["en"][k] for k in ("tts", "voice", "friendVoice")}})
     validate(script)
+    validate_unique_faces(script, path)
     words, target = count_words(script["scenes"]), MINUTES * LANGS["en"]["rate"]
     if abs(words - target) > 0.25 * target:
         raise SystemExit(f"the narration has {words} words but must have about {target} (±25%); rewrite to that length")

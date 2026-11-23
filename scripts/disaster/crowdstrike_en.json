@@ -1,0 +1,467 @@
+{
+  "title": "CROWDSTRIKE OUTAGE: THE 20-VS-21 INPUT BUG THAT CRASHED 8.5M PCs",
+  "lang": "en",
+  "tts": "edge",
+  "voice": "en-US-ChristopherNeural",
+  "captions": true,
+  "captionWords": 4,
+  "captionStyle": "kinetic",
+  "showCounter": true,
+  "iconStyle": "bubble",
+  "meta": {
+    "format": "disaster",
+    "theme": "disaster",
+    "timeline": [
+      {
+        "time": "04:09 UTC",
+        "label": "Update Pushed",
+        "status": "normal",
+        "sceneIndex": 0
+      },
+      {
+        "time": "04:15 UTC",
+        "label": "Kernel Panic",
+        "status": "warning",
+        "sceneIndex": 6
+      },
+      {
+        "time": "04:30 UTC",
+        "label": "Global BSOD",
+        "status": "critical",
+        "sceneIndex": 12
+      },
+      {
+        "time": "06:00 UTC",
+        "label": "Airports Paralyzed",
+        "status": "fatal",
+        "sceneIndex": 18
+      }
+    ],
+    "chapters": [
+      {
+        "title": "The Silent Update",
+        "scene": 0,
+        "mood": "mystery"
+      },
+      {
+        "title": "Out-of-Bounds Read",
+        "scene": 6,
+        "mood": "tense"
+      },
+      {
+        "title": "Global Gridlock",
+        "scene": 12,
+        "mood": "tense"
+      },
+      {
+        "title": "The Ring Zero Lesson",
+        "scene": 18,
+        "mood": "sad"
+      }
+    ]
+  },
+  "cast": {
+    "you": {
+      "face": "crowdstrike-sre",
+      "shirt": "#1e293b",
+      "faceIdea": "Modern 2024 Site Reliability Engineer, early 30s, neat short dark hair, dark-rimmed rectangular glasses, light stubble, dark slate-blue hoodie collar"
+    }
+  },
+  "scenes": [
+    {
+      "text": "At four zero nine UTC, a silent security update rolled out worldwide.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "JULY 19, 2024",
+      "counter": {
+        "label": "TIMESTAMP",
+        "value": "04:09:00 UTC"
+      },
+      "icons": [
+        {
+          "icon": "timer",
+          "word": "silent",
+          "label": "04:09 UTC"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "update",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "It was meant to protect against new cyber threats.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "TARGET",
+        "value": "FALCON SENSOR"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "threats",
+          "label": "DEFENSE"
+        }
+      ]
+    },
+    {
+      "text": "Instead, it triggered the largest IT outage in human history.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "IMPACT",
+        "value": "HISTORIC"
+      },
+      "callouts": [
+        {
+          "text": "GLOBAL OUTAGE",
+          "word": "outage"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "history",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Here is the exact data flow of that catastrophic update.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "DIAGRAM",
+        "value": "DATA FLOW"
+      },
+      "diagram": {
+        "type": "data_flow",
+        "title": "CROWDSTRIKE SENSOR ARCHITECTURE",
+        "subtitle": "Content Update Path to Windows Ring 0",
+        "highlightNode": 1
+      }
+    },
+    {
+      "text": "CrowdStrike pushed a tiny config file known as Channel Two Ninety-One.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "PAYLOAD",
+        "value": "Channel 291"
+      },
+      "diagram": {
+        "type": "data_flow",
+        "title": "CHANNEL FILE INJECTION",
+        "subtitle": "Binary Ruleset Delivered to Kernel Driver",
+        "highlightNode": 2
+      }
+    },
+    {
+      "text": "Inside that file lay a template mismatch that triggered an out of bounds memory read.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "INPUT MISMATCH",
+        "value": "21 vs 20"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "bounds"
+        }
+      ],
+      "diagram": {
+        "type": "code_crash",
+        "title": "OUT-OF-BOUNDS MEMORY READ",
+        "subtitle": "CSAgent.sys reads 21st slot of 20-input array",
+        "highlightNode": 2
+      }
+    },
+    {
+      "text": "Channel File 291 requested twenty-one inputs, but the sensor only supplied twenty.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "ARRAY SIZE",
+        "value": "20 / 21"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "inputs",
+          "label": "MISMATCH"
+        }
+      ]
+    },
+    {
+      "text": "With no runtime bounds check, the driver read past the array into invalid memory.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "EXCEPTION",
+        "value": "PAGE_FAULT"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "invalid"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "memory",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Because it operated in Kernel Ring Zero, Windows had zero defense.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "PRIVILEGE LEVEL",
+      "counter": {
+        "label": "SECURITY RING",
+        "value": "RING 0"
+      },
+      "callouts": [
+        {
+          "text": "RING 0 KERNEL",
+          "word": "Zero"
+        }
+      ]
+    },
+    {
+      "text": "When a Ring Zero driver panics, the entire operating system crashes.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "fx": "alarm",
+      "counter": {
+        "label": "SYSTEM STATE",
+        "value": "KERNEL PANIC"
+      },
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "crashes"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "crashes",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Eight and a half million computers instantly threw the Blue Screen of Death.",
+      "speaker": "narrator",
+      "bg": "office",
+      "stamp": "GLOBAL IMPACT",
+      "counter": {
+        "label": "CRASHED HOSTS",
+        "value": "8,500,000"
+      },
+      "callouts": [
+        {
+          "text": "8.5 MILLION MACHINES",
+          "word": "million"
+        }
+      ]
+    },
+    {
+      "text": "Every time they rebooted, the driver crashed again in an endless loop.",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "BOOT STATUS",
+        "value": "BOOT LOOP"
+      },
+      "icons": [
+        {
+          "icon": "timer",
+          "word": "loop",
+          "label": "REBOOT"
+        }
+      ]
+    },
+    {
+      "text": "Five thousand flights were cancelled across international hubs.",
+      "speaker": "narrator",
+      "bg": "city",
+      "stamp": "AVIATION PARALYZED",
+      "counter": {
+        "label": "CANCELLED FLIGHTS",
+        "value": "5,000+"
+      },
+      "actions": [
+        {
+          "who": "you",
+          "word": "cancelled",
+          "pose": "shrug",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "Hospital operating rooms and ambulance dispatch lines went completely dark.",
+      "speaker": "narrator",
+      "bg": "city",
+      "counter": {
+        "label": "HEALTHCARE",
+        "value": "CRITICAL"
+      },
+      "icons": [
+        {
+          "icon": "siren",
+          "word": "ambulance",
+          "label": "911 DOWN"
+        }
+      ]
+    },
+    {
+      "text": "Financial damages quickly exploded past five billion dollars.",
+      "speaker": "narrator",
+      "bg": "city",
+      "counter": {
+        "label": "DIRECT LOSS",
+        "value": "$5.4 BILLION"
+      },
+      "icons": [
+        {
+          "icon": "chart",
+          "word": "damages",
+          "label": "LOSS"
+        }
+      ]
+    },
+    {
+      "text": "How did automated testing and staging environments miss this?",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "INVESTIGATION",
+        "value": "WHY DID IT PASS?"
+      },
+      "actions": [
+        {
+          "who": "you",
+          "word": "miss",
+          "pose": "handOut",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "The Swiss Cheese Model reveals every safeguard that aligned.",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "SWISS CHEESE",
+        "value": "LATENT DEFECTS"
+      },
+      "diagram": {
+        "type": "swiss_cheese",
+        "title": "SAFETY BARRIER BREAKDOWN",
+        "subtitle": "Test Harness Bug + No Canary Rollout"
+      }
+    },
+    {
+      "text": "Validation software had a bug that greenlit the faulty twenty-first field.",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "VALIDATOR",
+        "value": "FALSE POSITIVE"
+      },
+      "icons": [
+        {
+          "icon": "wrench",
+          "word": "bug",
+          "label": "TEST FLAW"
+        }
+      ]
+    },
+    {
+      "text": "And there was zero phased canary deployment to catch it early.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "ROLLOUT",
+        "value": "100% AT ONCE"
+      },
+      "callouts": [
+        {
+          "text": "NO CANARY TESTING",
+          "word": "deployment"
+        }
+      ]
+    },
+    {
+      "text": "Engineers had to walk to millions of machines and delete one file by hand.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "MANUAL FIX",
+        "value": "DEL C-00000291*.sys"
+      },
+      "icons": [
+        {
+          "icon": "wrench",
+          "word": "delete",
+          "label": "MANUAL"
+        }
+      ]
+    },
+    {
+      "text": "A single unchecked array mismatch humbled the digital world.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "SYSTEMIC TAKEAWAY",
+      "counter": {
+        "label": "ROOT LESSON",
+        "value": "MEMORY SAFETY"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "mismatch",
+          "label": "WARNING"
+        }
+      ]
+    },
+    {
+      "text": "Never deploy to Ring Zero without phased rings and memory bounds checking.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "GOLDEN RULE",
+        "value": "RING 0 DISCIPLINE"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "deploy",
+          "label": "ARCH"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "phased",
+          "pose": "point",
+          "expression": "neutral"
+        }
+      ]
+    }
+  ]
+}

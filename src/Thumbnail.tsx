@@ -1,14 +1,17 @@
 import React from 'react';
 import {AbsoluteFill, Img, staticFile} from 'remotion';
+import {BACKGROUNDS} from './Backgrounds';
 
 export type ThumbnailProps = {
 	title?: string;
 	badge?: string;
 	subtitle?: string;
 	stat?: string;
+	statIcon?: string;
 	face?: string;
 	bg?: string;
 	accentColor?: string;
+	emojis?: [string, string];
 };
 
 export const Thumbnail: React.FC<ThumbnailProps> = ({
@@ -16,10 +19,23 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 	badge = 'TRUE STORY',
 	subtitle = 'THE $15M SCAM',
 	stat = '$0 ➜ $15,000,000',
+	statIcon,
 	face = 'faces/charles-ponzi_shock.png',
 	bg = 'bg/exchange.png',
 	accentColor = '#ffd23f',
+	emojis,
 }) => {
+	const isDisaster =
+		badge.toUpperCase().includes('THẢM HỌA') ||
+		badge.toUpperCase().includes('DISASTER') ||
+		title.toUpperCase().includes('NỔ') ||
+		title.toUpperCase().includes('SẬP') ||
+		title.toUpperCase().includes('CHERNOBYL');
+
+	const effectiveStatIcon = statIcon || (isDisaster ? '⚠️' : '📈');
+	const [emojiTop, emojiBottom] = emojis || (isDisaster ? ['💥', '⚠️'] : ['💸', '💰']);
+	const effectiveAccent = isDisaster ? '#ff3b30' : accentColor;
+
 	return (
 		<AbsoluteFill
 			style={{
@@ -30,19 +46,42 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				overflow: 'hidden',
 			}}
 		>
-			{/* Background Image with Dark Dramatic Grading */}
-			{bg ? (
-				<Img
-					src={staticFile(bg)}
-					style={{
-						position: 'absolute',
-						width: '100%',
-						height: '100%',
-						objectFit: 'cover',
-						filter: 'brightness(0.38) contrast(1.25) saturate(1.2)',
-					}}
-				/>
-			) : null}
+			{/* Background Image or SVG with Dark Dramatic Grading */}
+			{(() => {
+				const SvgBg = bg ? BACKGROUNDS[bg as keyof typeof BACKGROUNDS] : null;
+				if (SvgBg) {
+					return (
+						<div
+							style={{
+								position: 'absolute',
+								width: '100%',
+								height: '100%',
+								filter: 'brightness(0.38) contrast(1.25) saturate(1.2)',
+							}}
+						>
+							<svg viewBox="0 0 1920 1080" width="100%" height="100%">
+								<SvgBg />
+							</svg>
+						</div>
+					);
+				}
+				if (bg) {
+					const imgSrc = bg.startsWith('bg/') || bg.includes('/') ? bg : `bg/${bg}.png`;
+					return (
+						<Img
+							src={staticFile(imgSrc)}
+							style={{
+								position: 'absolute',
+								width: '100%',
+								height: '100%',
+								objectFit: 'cover',
+								filter: 'brightness(0.38) contrast(1.25) saturate(1.2)',
+							}}
+						/>
+					);
+				}
+				return null;
+			})()}
 
 			{/* Contrast Vignette Gradient (Dark on left for text, clear on right for face) */}
 			<AbsoluteFill
@@ -104,7 +143,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				{subtitle ? (
 					<div
 						style={{
-							backgroundColor: accentColor,
+							backgroundColor: effectiveAccent,
 							color: '#000000',
 							fontSize: 44,
 							fontWeight: 900,
@@ -128,20 +167,20 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 							alignItems: 'center',
 							gap: 14,
 							backgroundColor: 'rgba(0, 0, 0, 0.75)',
-							border: `3px solid ${accentColor}`,
+							border: `3px solid ${effectiveAccent}`,
 							borderRadius: 14,
 							padding: '12px 24px',
 							backdropFilter: 'blur(8px)',
 						}}
 					>
-						<span style={{fontSize: 32}}>📈</span>
+						<span style={{fontSize: 32}}>{effectiveStatIcon}</span>
 						<span
 							style={{
 								fontSize: 34,
-								color: '#00ff88',
+								color: isDisaster ? '#ff4d4d' : '#00ff88',
 								fontWeight: 900,
 								letterSpacing: 1,
-								textShadow: '0 4px 10px rgba(0, 255, 136, 0.5)',
+								textShadow: isDisaster ? '0 4px 10px rgba(255, 77, 77, 0.5)' : '0 4px 10px rgba(0, 255, 136, 0.5)',
 							}}
 						>
 							{stat}
@@ -172,7 +211,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 						width: 420,
 						height: 420,
 						borderRadius: '50%',
-						background: `radial-gradient(circle, ${accentColor}66 0%, transparent 70%)`,
+						background: `radial-gradient(circle, ${effectiveAccent}66 0%, transparent 70%)`,
 						filter: 'blur(30px)',
 						zIndex: 1,
 					}}
@@ -192,7 +231,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 					/>
 				) : null}
 
-				{/* Floating Money / Cash Accent */}
+				{/* Floating Accent Stickers */}
 				<div
 					style={{
 						position: 'absolute',
@@ -204,7 +243,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 						zIndex: 6,
 					}}
 				>
-					💸
+					{emojiTop}
 				</div>
 				<div
 					style={{
@@ -217,7 +256,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 						zIndex: 6,
 					}}
 				>
-					💰
+					{emojiBottom}
 				</div>
 			</div>
 

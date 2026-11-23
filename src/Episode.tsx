@@ -1,26 +1,28 @@
 import React from 'react';
-import {AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig} from 'remotion';
-import {linearTiming, TransitionPresentation, TransitionSeries} from '@remotion/transitions';
-import {clockWipe} from '@remotion/transitions/clock-wipe';
-import {cube} from '@remotion/transitions/cube';
-import {fade} from '@remotion/transitions/fade';
-import {flip} from '@remotion/transitions/flip';
-import {iris} from '@remotion/transitions/iris';
-import {slide} from '@remotion/transitions/slide';
-import {wipe} from '@remotion/transitions/wipe';
-import {Background, BgName} from './Backgrounds';
-import {Icon, IconName, MONEY_ICONS} from './Icons';
-import {Arms, Expression, headCenter, Pose, POSES, StickFigure, Variant} from './StickFigure';
-import {ThoughtBubble, Vision} from './ThoughtBubble';
-import {ArrowLabel, CalloutData, Callouts, Paper, PaperData, SpeechBubble} from './Callout';
-import {Weather, WeatherFx} from './Weather';
-import {KineticCaptions, WordTiming} from './KineticCaptions';
+import { AbsoluteFill, Audio, interpolate, Sequence, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+import { linearTiming, TransitionPresentation, TransitionSeries } from '@remotion/transitions';
+import { clockWipe } from '@remotion/transitions/clock-wipe';
+import { cube } from '@remotion/transitions/cube';
+import { fade } from '@remotion/transitions/fade';
+import { flip } from '@remotion/transitions/flip';
+import { iris } from '@remotion/transitions/iris';
+import { slide } from '@remotion/transitions/slide';
+import { wipe } from '@remotion/transitions/wipe';
+import { Background, BgName } from './Backgrounds';
+import { Icon, IconName, MONEY_ICONS } from './Icons';
+import { Arms, Expression, headCenter, Pose, POSES, StickFigure, Variant } from './StickFigure';
+import { ThoughtBubble, Vision } from './ThoughtBubble';
+import { ArrowLabel, CalloutData, Callouts, Paper, PaperData, SpeechBubble } from './Callout';
+import { Weather, WeatherFx } from './Weather';
+import { KineticCaptions, WordTiming } from './KineticCaptions';
+import { TechnicalDiagram, DiagramProps } from './TechnicalDiagram';
+import { TimelineBar, TimelineEvent } from './TimelineBar';
 
-export type IconData = {icon: IconName; word: string; label?: string; at: number};
-export type SfxData = {sound: string; at: number; volume?: number};
+export type IconData = { icon: IconName; word: string; label?: string; at: number };
+export type SfxData = { sound: string; at: number; volume?: number };
 type Face = 'left' | 'right';
-type CharState = {pose: Pose; expression: Expression; hold: IconName | null; face: Face};
-type Action = {who: Variant; word: string; at: number; pose?: Pose; expression?: Expression; hold?: IconName | null; face?: Face};
+type CharState = { pose: Pose; expression: Expression; hold: IconName | null; face: Face };
+type Action = { who: Variant; word: string; at: number; pose?: Pose; expression?: Expression; hold?: IconName | null; face?: Face };
 const STATE_KEYS = ['pose', 'expression', 'hold', 'face'];
 export type SceneData = {
 	text: string;
@@ -34,14 +36,15 @@ export type SceneData = {
 	stamp?: string; // place/year card top left as the scene opens, e.g. "NEW BEDFORD, 1834"
 	extras?: Extra[]; // supporting characters standing right of "you" (bubble-style episodes only)
 	crowd?: number; // 0-8 unnamed background people (a bank run, a trading floor)
-	quote?: {who: string; text: string; at: number}; // comic speech bubble from an on-screen character
+	quote?: { who: string; text: string; at: number }; // comic speech bubble from an on-screen character
 	vision?: Vision; // painted picture inside the thought bubble (bubble style), replaces icons
 	empty?: boolean; // establishing shot: the place alone, no characters
 	fx?: Weather; // ambient effect over the scene
 	paper?: PaperData; // hand-written document that slides in, optionally with a word crossed out and rewritten
+	diagram?: DiagramProps; // technical schematic / data flow / mechanical cross-section
 	looks?: Record<string, Record<Expression, string>>; // per-scene heads overriding the cast, e.g. a younger "you"
 	speaker?: 'narrator' | 'friend';
-	counter?: {label: string; value: string};
+	counter?: { label: string; value: string };
 	transition?: 'cut' | 'time' | 'place' | null; // how this scene is entered, set by make_video.py
 	audio: string;
 	frames: number;
@@ -53,9 +56,9 @@ export type SceneData = {
 // iconStyle: "panel" (blurred box on the right) or "bubble" (thought bubble, keeps painted backgrounds visible).
 // cast: drawn heads per expression (public/faces paths, resolved by make_video.py) and shirt colors.
 // Keys "you" and "friend" are the main pair; any other key is a supporting character used in `extras`.
-type CastMember = {faces?: Record<Expression, string>; shirt?: string; size?: number}; // size: 0.6 for a child
+type CastMember = { faces?: Record<Expression, string>; shirt?: string; size?: number }; // size: 0.6 for a child
 type Cast = Record<string, CastMember | undefined>;
-type Extra = {who: string; pose?: Pose; expression?: Expression; face?: Face; enter?: boolean};
+type Extra = { who: string; pose?: Pose; expression?: Expression; face?: Face; enter?: boolean };
 export type EpisodeProps = {
 	scenes: SceneData[];
 	captionWords?: number;
@@ -64,6 +67,11 @@ export type EpisodeProps = {
 	iconStyle?: 'panel' | 'bubble';
 	cast?: Cast;
 	music?: MusicTrack[] | string; // tracks from make_video.music_tracks; a plain path (older manifests) loops alone
+	meta?: {
+		format?: string;
+		theme?: string;
+		timeline?: TimelineEvent[];
+	};
 };
 
 const PAD_FRAMES = 15; // matches PAD_SECONDS in make_video.py
@@ -74,15 +82,15 @@ export const shotsIn = (scene: SceneData) => Math.max(1, Math.round(scene.frames
 // Same place: hard cut (no overlap). New place: rotate through these. Time jump: a clock sweep.
 // eslint-disable-next-line @typescript-eslint/no-explicit-any -- mixed presentation prop types in one rotation
 const PLACE_PRESENTATIONS: TransitionPresentation<any>[] = [
-	slide({direction: 'from-right'}),
-	iris({width: 1920, height: 1080}),
-	wipe({direction: 'from-left'}),
-	flip({direction: 'from-right'}),
-	cube({direction: 'from-right'}),
+	slide({ direction: 'from-right' }),
+	iris({ width: 1920, height: 1080 }),
+	wipe({ direction: 'from-left' }),
+	flip({ direction: 'from-right' }),
+	cube({ direction: 'from-right' }),
 	fade(),
-	slide({direction: 'from-bottom'}),
+	slide({ direction: 'from-bottom' }),
 ];
-const TIME_PRESENTATION = clockWipe({width: 1920, height: 1080});
+const TIME_PRESENTATION = clockWipe({ width: 1920, height: 1080 });
 
 // Frames this scene overlaps the previous one; scripts rendered before transitions existed count as "place".
 export const overlapBefore = (scene: SceneData, i: number) => (i > 0 && scene.transition !== 'cut' ? TRANSITION_FRAMES : 0);
@@ -90,32 +98,32 @@ export const overlapBefore = (scene: SceneData, i: number) => (i > 0 && scene.tr
 const FRIEND_CAPTION = '#8ff0e3';
 
 // Where each character's 400x600 figure box sits on the 1920x1080 frame (feet on the floor line, y≈860).
-type Box = {left: number; top: number; width: number; height: number};
+type Box = { left: number; top: number; width: number; height: number };
 const BOXES: Record<'friend' | 'youWithFriend' | 'youSolo', Box> = {
-	friend: {left: 90, top: 275, width: 390, height: 585},
-	youWithFriend: {left: 420, top: 350, width: 340, height: 510},
-	youSolo: {left: 260, top: 230, width: 420, height: 630},
+	friend: { left: 90, top: 275, width: 390, height: 585 },
+	youWithFriend: { left: 420, top: 350, width: 340, height: 510 },
+	youSolo: { left: 260, top: 230, width: 420, height: 630 },
 };
 // Supporting characters, same size as solo "you", standing on the right where the callout slots
 // and thought bubble would be (scenes with extras use neither).
 // Three or four extras: a tighter, slightly smaller row so a whole family or a board fits in frame.
 const EXTRA_BOXES: Box[] = [
-	{left: 1210, top: 230, width: 420, height: 630},
-	{left: 1510, top: 230, width: 420, height: 630},
+	{ left: 1210, top: 230, width: 420, height: 630 },
+	{ left: 1510, top: 230, width: 420, height: 630 },
 ];
-const EXTRA_BOXES_4: Box[] = [760, 1020, 1280, 1540].map((left) => ({left, top: 290, width: 380, height: 570}));
+const EXTRA_BOXES_4: Box[] = [760, 1020, 1280, 1540].map((left) => ({ left, top: 290, width: 380, height: 570 }));
 // Unnamed background people (crowd: n): x positions of small faceless silhouettes behind the cast.
 const CROWD_X = [40, 1840, 700, 1150, 1500, 260, 950, 1700];
 const headIn = (box: Box, variant: Variant, drawn: boolean) => {
 	const h = headCenter(variant, drawn);
 	const s = box.width / 400;
-	return {x: box.left + h.x * s, y: box.top + h.y * s, r: h.r * s, bottom: box.top + h.bottom * s};
+	return { x: box.left + h.x * s, y: box.top + h.y * s, r: h.r * s, bottom: box.top + h.bottom * s };
 };
 
 // Pose/face/prop for one character at this frame; arms ease from the previous pose to the new one.
 const useCharacter = (scene: SceneData, who: Variant) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	let from = scene.start[who];
 	let to = from;
 	let since = -1000;
@@ -123,24 +131,24 @@ const useCharacter = (scene: SceneData, who: Variant) => {
 	for (const a of scene.actions) {
 		if (a.who !== who || a.at > frame) continue;
 		from = to;
-		to = {...to, ...Object.fromEntries(Object.entries(a).filter(([k]) => STATE_KEYS.includes(k)))};
+		to = { ...to, ...Object.fromEntries(Object.entries(a).filter(([k]) => STATE_KEYS.includes(k))) };
 		since = a.at;
 		if ('hold' in a) holdSince = a.at;
 	}
-	const t = spring({frame: frame - since, fps, config: {damping: 16}});
+	const t = spring({ frame: frame - since, fps, config: { damping: 16 } });
 	const a0 = POSES[from.pose];
 	const a1 = POSES[to.pose];
 	const arms = a0.map((v, i) => v + (a1[i] - v) * t) as Arms;
-	const holdScale = spring({frame: frame - holdSince, fps, config: {damping: 10}});
-	return {arms, expression: to.expression, hold: to.hold, holdScale, mirrored: to.face === 'left'};
+	const holdScale = spring({ frame: frame - holdSince, fps, config: { damping: 10 } });
+	return { arms, expression: to.expression, hold: to.hold, holdScale, mirrored: to.face === 'left' };
 };
 
 // Background music under the voice: looped, quiet, faded in and out at the episode edges.
 // One track per mood run (make_video.music_tracks); each fades in over the previous one's 2 s fade-out.
 const MUSIC_VOLUME = 0.15;
-export type MusicTrack = {from: number; src: string; gain?: number}; // gain: loudness match from make_video
-const Music: React.FC<{tracks: MusicTrack[]}> = ({tracks}) => {
-	const {durationInFrames, fps} = useVideoConfig();
+export type MusicTrack = { from: number; src: string; gain?: number }; // gain: loudness match from make_video
+const Music: React.FC<{ tracks: MusicTrack[] }> = ({ tracks }) => {
+	const { durationInFrames, fps } = useVideoConfig();
 	const fade = 2 * fps;
 	return (
 		<>
@@ -154,7 +162,7 @@ const Music: React.FC<{tracks: MusicTrack[]}> = ({tracks}) => {
 						<Audio
 							src={staticFile(t.src)}
 							loop
-							volume={(f) => MUSIC_VOLUME * (t.gain ?? 1) * interpolate(f, [0, fade, len - tail, len], [0, 1, 1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'})}
+							volume={(f) => MUSIC_VOLUME * (t.gain ?? 1) * interpolate(f, [0, fade, len - tail, len], [0, 1, 1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' })}
 						/>
 					</Sequence>
 				);
@@ -163,18 +171,39 @@ const Music: React.FC<{tracks: MusicTrack[]}> = ({tracks}) => {
 	);
 };
 
-export const Episode: React.FC<EpisodeProps> = ({scenes, captionWords = 4, captionStyle = 'kinetic', showCounter = false, iconStyle = 'panel', cast = {}, music}) => {
+export const Episode: React.FC<EpisodeProps> = ({
+	scenes,
+	captionWords = 4,
+	captionStyle = 'kinetic',
+	showCounter = false,
+	iconStyle = 'panel',
+	cast = {},
+	music,
+	meta,
+}) => {
+	const frame = useCurrentFrame();
 	// The sidekick stays on screen for the whole episode once they speak anywhere in it.
 	const hasFriend = scenes.some((s) => s.speaker === 'friend');
 	const children: React.ReactNode[] = [];
 	let placeCount = 0;
 	let shotBase = 0;
+
+	let start = 0;
+	let currentSceneIndex = 0;
+	scenes.forEach((s, i) => {
+		if (start <= frame) currentSceneIndex = i;
+		start += s.frames - overlapBefore(s, i);
+	});
+
+	const timeline = meta?.timeline;
+	const hasTimeline = Boolean(timeline && timeline.length > 0);
+
 	scenes.forEach((scene, i) => {
 		const overlap = overlapBefore(scene, i);
 		if (overlap) {
 			const presentation = scene.transition === 'time' ? TIME_PRESENTATION : PLACE_PRESENTATIONS[placeCount++ % PLACE_PRESENTATIONS.length];
 			children.push(
-				<TransitionSeries.Transition key={`t${i}`} presentation={presentation} timing={linearTiming({durationInFrames: overlap})} />
+				<TransitionSeries.Transition key={`t${i}`} presentation={presentation} timing={linearTiming({ durationInFrames: overlap })} />
 			);
 		}
 		children.push(
@@ -187,16 +216,17 @@ export const Episode: React.FC<EpisodeProps> = ({scenes, captionWords = 4, capti
 	return (
 		<AbsoluteFill>
 			<TransitionSeries>{children}</TransitionSeries>
-			{music ? <Music tracks={typeof music === 'string' ? [{from: 0, src: music}] : music} /> : null}
-			{showCounter ? <Counter scenes={scenes} /> : null}
+			{music ? <Music tracks={typeof music === 'string' ? [{ from: 0, src: music }] : music} /> : null}
+			{hasTimeline && <TimelineBar events={timeline!} currentSceneIndex={currentSceneIndex} totalScenes={scenes.length} />}
+			{showCounter ? <Counter scenes={scenes} topOffset={hasTimeline ? 96 : 36} /> : null}
 		</AbsoluteFill>
 	);
 };
 
 // Lives outside the transitions so it stays fixed in the corner across scene cuts.
-const Counter: React.FC<{scenes: SceneData[]}> = ({scenes}) => {
+const Counter: React.FC<{ scenes: SceneData[]; topOffset?: number }> = ({ scenes, topOffset = 36 }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	let start = 0;
 	let idx = 0;
 	const starts = scenes.map((s, i) => {
@@ -211,13 +241,13 @@ const Counter: React.FC<{scenes: SceneData[]}> = ({scenes}) => {
 
 	const prev = idx > 0 ? scenes[idx - 1].counter : undefined;
 	const changed = !prev || prev.label !== counter.label || prev.value !== counter.value;
-	const pop = changed ? spring({frame: frame - starts[idx], fps, config: {damping: 9}}) : 1;
+	const pop = changed ? spring({ frame: frame - starts[idx], fps, config: { damping: 9 } }) : 1;
 
 	return (
 		<div
 			style={{
 				position: 'absolute',
-				top: 36,
+				top: topOffset,
 				right: 56,
 				padding: '14px 28px',
 				borderRadius: 18,
@@ -229,8 +259,8 @@ const Counter: React.FC<{scenes: SceneData[]}> = ({scenes}) => {
 				transformOrigin: 'top right',
 			}}
 		>
-			<div style={{fontSize: 30, color: '#fff', letterSpacing: 2}}>{counter.label}</div>
-			<div style={{fontSize: 52, color: '#ffd23f'}}>{counter.value}</div>
+			<div style={{ fontSize: 30, color: '#fff', letterSpacing: 2 }}>{counter.label}</div>
+			<div style={{ fontSize: 52, color: '#ffd23f' }}>{counter.value}</div>
 		</div>
 	);
 };
@@ -245,7 +275,7 @@ const Scene: React.FC<{
 	captionStyle?: 'kinetic' | 'classic' | 'none';
 	iconStyle: 'panel' | 'bubble';
 	cast: Cast;
-}> = ({scene, withWhoosh, hasFriend, index, shotBase, captionWords, captionStyle, iconStyle, cast}) => {
+}> = ({ scene, withWhoosh, hasFriend, index, shotBase, captionWords, captionStyle, iconStyle, cast }) => {
 	const frame = useCurrentFrame();
 	const mouth = scene.mouth[frame] ?? 0;
 	const friendTalking = scene.speaker === 'friend';
@@ -269,7 +299,7 @@ const Scene: React.FC<{
 	const extraBox = (i: number): Box => {
 		const b = boxes[i];
 		const k = cast[extras[i].who]?.size ?? 1;
-		return {left: b.left + (b.width * (1 - k)) / 2, top: b.top + b.height * (1 - k), width: b.width * k, height: b.height * k};
+		return { left: b.left + (b.width * (1 - k)) / 2, top: b.top + b.height * (1 - k), width: b.width * k, height: b.height * k };
 	};
 	const drawn = (who: string) => Boolean(scene.looks?.[who] ?? cast[who]?.faces);
 	const crowdFaces = Object.keys(cast)
@@ -278,16 +308,16 @@ const Scene: React.FC<{
 		.flatMap((k) => cast[k]?.faces?.neutral ?? []);
 	// enter: walks in from off-screen right once the scene is fully on; x offset in px for slot i.
 	const walkIn = (i: number) => {
-		if (!extras[i]?.enter) return {dx: 0, walking: false};
-		const p = spring({frame: frame - (withWhoosh ? TRANSITION_FRAMES : 0), fps: 30, config: {damping: 200}, durationInFrames: 30});
-		return {dx: (1 - p) * (1920 - boxes[i].left), walking: p < 1};
+		if (!extras[i]?.enter) return { dx: 0, walking: false };
+		const p = spring({ frame: frame - (withWhoosh ? TRANSITION_FRAMES : 0), fps: 30, config: { damping: 200 }, durationInFrames: 30 });
+		return { dx: (1 - p) * (1920 - boxes[i].left), walking: p < 1 };
 	};
 	// Head of any on-screen character in layout px (before the camera zoom); tags and bubbles follow walkers.
 	const headOf = (who: string) => {
 		const slot = extras.findIndex((e) => e.who === who);
 		if (slot >= 0) {
 			const h = headIn(extraBox(slot), 'you', drawn(who));
-			return {...h, x: h.x + walkIn(slot).dx};
+			return { ...h, x: h.x + walkIn(slot).dx };
 		}
 		if (who === 'friend') return headIn(BOXES.friend, 'friend', drawn('friend'));
 		return headIn(hasFriend ? BOXES.youWithFriend : BOXES.youSolo, 'you', drawn('you'));
@@ -296,13 +326,13 @@ const Scene: React.FC<{
 	// Close-ups frame whoever is speaking: a supporting character with a quote, the friend on their lines, otherwise "you".
 	const quoteHead = quoteBy ? headOf(quoteBy) : null;
 	const focus = quoteHead
-		? {x: quoteHead.x, y: quoteHead.y + 50}
+		? { x: quoteHead.x, y: quoteHead.y + 50 }
 		: friendTalking
-			? {x: 285, y: 430}
+			? { x: 285, y: 430 }
 			: hasFriend
-				? {x: 590, y: 470}
-				: {x: 470, y: 330};
-	const toScreen = (x: number, y: number) => ({x: focus.x + (x - focus.x) * zoom, y: focus.y + (y - focus.y) * zoom});
+				? { x: 590, y: 470 }
+				: { x: 470, y: 330 };
+	const toScreen = (x: number, y: number) => ({ x: focus.x + (x - focus.x) * zoom, y: focus.y + (y - focus.y) * zoom });
 	// Drawn heads are wider than the round black head, so their bubble starts further right.
 	const headRight = (hasFriend ? 690 : 590) + (drawn('you') ? 50 : 0);
 	const bubbleAt = toScreen(headRight, hasFriend ? 420 : 320);
@@ -311,7 +341,7 @@ const Scene: React.FC<{
 	const look = (who: string, expression: Expression) => {
 		const member = cast[who];
 		const face = (scene.looks?.[who] ?? member?.faces)?.[expression];
-		return {face: face ? staticFile(face) : undefined, shirt: member?.shirt};
+		return { face: face ? staticFile(face) : undefined, shirt: member?.shirt };
 	};
 
 	// shortcut: captions advance evenly over the speech, not per real word timing; use WhisperX timestamps if they drift.
@@ -323,7 +353,7 @@ const Scene: React.FC<{
 	const caption = perCaption ? words.slice(group * perCaption, (group + 1) * perCaption).join(' ') : '';
 
 	return (
-		<AbsoluteFill style={{overflow: 'hidden', background: '#000'}}>
+		<AbsoluteFill style={{ overflow: 'hidden', background: '#000' }}>
 			<Audio src={staticFile(scene.audio)} />
 			{withWhoosh && <Audio src={staticFile('sfx/whoosh.wav')} volume={0.3} />}
 			{scene.sfx?.map((s, idx) => (
@@ -331,11 +361,11 @@ const Scene: React.FC<{
 					<Audio src={staticFile(`sfx/${s.sound}.wav`)} volume={s.volume ?? 0.35} />
 				</Sequence>
 			))}
-			<AbsoluteFill style={{transform: `scale(${zoom})`, transformOrigin: `${focus.x}px ${focus.y}px`}}>
-			<Background name={scene.bg} shot={medium ? 0 : shot} progress={shotProgress} />
-			{scene.empty
-				? null
-				: CROWD_X.slice(0, scene.crowd ?? 0).map((left, i) => {
+			<AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: `${focus.x}px ${focus.y}px` }}>
+				<Background name={scene.bg} shot={medium ? 0 : shot} progress={shotProgress} />
+				{scene.empty
+					? null
+					: CROWD_X.slice(0, scene.crowd ?? 0).map((left, i) => {
 						// Smaller than the cast so they read as the back of the room.
 						const h = 260 + (i % 3) * 22;
 						// Cast keys crowd1, crowd2... are unnamed period faces; without them, faceless ink silhouettes.
@@ -347,14 +377,14 @@ const Scene: React.FC<{
 							// Never stand in front of solo "you" (x 260-680); faded and desaturated so the cast pops.
 							if (!hasFriend && left > 160 && left < 780) return null;
 							return (
-								<div key={`crowd${i}`} style={{position: 'absolute', left: left - fh / 3, top: 830 - fh, width: (fh * 2) / 3, height: fh, filter: 'saturate(0.6) brightness(0.85)'}}>
+								<div key={`crowd${i}`} style={{ position: 'absolute', left: left - fh / 3, top: 830 - fh, width: (fh * 2) / 3, height: fh, filter: 'saturate(0.6) brightness(0.85)' }}>
 									<StickFigure variant="you" arms={POSES.idle} expression="neutral" mouth={0} mirrored={left > 960} stick face={staticFile(crowdFace)} />
 								</div>
 							);
 						}
 						const ink = '#2b2420';
 						return (
-							<svg key={`crowd${i}`} viewBox="0 0 100 260" width={h * 0.385} height={h} style={{position: 'absolute', left, top: 830 - h, opacity: 0.9}}>
+							<svg key={`crowd${i}`} viewBox="0 0 100 260" width={h * 0.385} height={h} style={{ position: 'absolute', left, top: 830 - h, opacity: 0.9 }}>
 								<circle cx={50} cy={34} r={22} fill={ink} />
 								{i % 2 ? <rect x={30} y={4} width={40} height={20} rx={3} fill={ink} /> : <circle cx={50} cy={14} r={10} fill={ink} />}
 								<path d="M22 66 Q50 54 78 66 L84 170 L16 170 Z" fill={ink} />
@@ -363,45 +393,47 @@ const Scene: React.FC<{
 							</svg>
 						);
 					})}
-			{scene.empty ? null : hasFriend ? (
-				<>
-					{/* Friend on the left, "you" nearest the icon panel so pointing is never blocked.
+				{scene.empty ? null : hasFriend ? (
+					<>
+						{/* Friend on the left, "you" nearest the icon panel so pointing is never blocked.
 					    "you" is shorter; feet of both land on the floor line at y≈860. */}
-					<div style={{position: 'absolute', ...BOXES.friend}}>
-						<StickFigure variant="friend" {...friend} {...look('friend', friend.expression)} mouth={friendTalking ? mouth : 0} />
+						<div style={{ position: 'absolute', ...BOXES.friend }}>
+							<StickFigure variant="friend" {...friend} {...look('friend', friend.expression)} mouth={friendTalking ? mouth : 0} />
+						</div>
+						<div style={{ position: 'absolute', ...BOXES.youWithFriend }}>
+							<StickFigure variant="you" {...you} {...look('you', you.expression)} mouth={0} /* "you" never speaks; the narrator is off screen */ />
+						</div>
+					</>
+				) : (
+					<div style={{ position: 'absolute', ...BOXES.youSolo }}>
+						<StickFigure variant="you" {...you} {...look('you', you.expression)} mouth={quoteBy ? 0 : mouth} />
 					</div>
-					<div style={{position: 'absolute', ...BOXES.youWithFriend}}>
-						<StickFigure variant="you" {...you} {...look('you', you.expression)} mouth={0} /* "you" never speaks; the narrator is off screen */ />
-					</div>
-				</>
-			) : (
-				<div style={{position: 'absolute', ...BOXES.youSolo}}>
-					<StickFigure variant="you" {...you} {...look('you', you.expression)} mouth={quoteBy ? 0 : mouth} />
-				</div>
-			)}
-			{extras.map((e, i) => {
-				const expression = e.expression ?? 'neutral';
-				// Their mouth moves with the voice while their quote is up; they face "you" unless told otherwise.
-				const talking = quoteBy === e.who && frame >= (scene.quote?.at ?? 0);
-				const {dx, walking} = walkIn(i);
-				const bob = walking ? -Math.abs(Math.sin(frame / 3)) * 12 : 0; // a bob per step
-				return (
-					<div key={e.who} style={{position: 'absolute', ...extraBox(i), transform: `translate(${dx}px, ${bob}px)`}}>
-						<StickFigure
-							variant="you"
-							arms={POSES[e.pose ?? 'idle']}
-							expression={expression}
-							mouth={talking ? mouth : 0}
-							mirrored={(e.face ?? 'left') === 'left'}
-							stick /* matches the painted style even before their face is drawn */
-							{...look(e.who, expression)}
-						/>
-					</div>
-				);
-			})}
-			{scene.fx && <WeatherFx kind={scene.fx} />}
+				)}
+				{extras.map((e, i) => {
+					const expression = e.expression ?? 'neutral';
+					// Their mouth moves with the voice while their quote is up; they face "you" unless told otherwise.
+					const talking = quoteBy === e.who && frame >= (scene.quote?.at ?? 0);
+					const { dx, walking } = walkIn(i);
+					const bob = walking ? -Math.abs(Math.sin(frame / 3)) * 12 : 0; // a bob per step
+					return (
+						<div key={e.who} style={{ position: 'absolute', ...extraBox(i), transform: `translate(${dx}px, ${bob}px)` }}>
+							<StickFigure
+								variant="you"
+								arms={POSES[e.pose ?? 'idle']}
+								expression={expression}
+								mouth={talking ? mouth : 0}
+								mirrored={(e.face ?? 'left') === 'left'}
+								stick /* matches the painted style even before their face is drawn */
+								{...look(e.who, expression)}
+							/>
+						</div>
+					);
+				})}
+				{scene.fx && <WeatherFx kind={scene.fx} />}
 			</AbsoluteFill>
-			{scene.title ? (
+			{scene.diagram ? (
+				<TechnicalDiagram {...scene.diagram} />
+			) : scene.title ? (
 				<Title text={scene.title} />
 			) : scene.empty ? null : iconStyle === 'bubble' ? (
 				// Anchored at the right edge of "you"'s head (higher in the solo layout), following the camera zoom.
@@ -417,13 +449,13 @@ const Scene: React.FC<{
 					.map((c, i) => {
 						const h = headOf(c.target as string);
 						// Follows the camera like the thought bubble; the tag itself stays full size.
-						const head = {...toScreen(h.x, h.y), r: h.r * zoom, bottom: toScreen(h.x, h.bottom).y};
+						const head = { ...toScreen(h.x, h.y), r: h.r * zoom, bottom: toScreen(h.x, h.bottom).y };
 						if (head.x < 0 || head.x > 1920) return null; // out of frame in a close-up on someone else
 						return <ArrowLabel key={i} callout={c} head={head} side={hasFriend && (c.target === 'you' || c.target === 'friend') ? 'above' : 'left'} />;
 					})}
 			{!scene.title && scene.quote && !scene.empty && (() => {
 				const h = headOf(scene.quote.who);
-				const head = {...toScreen(h.x, h.y), r: h.r * zoom, bottom: toScreen(h.x, h.bottom).y};
+				const head = { ...toScreen(h.x, h.y), r: h.r * zoom, bottom: toScreen(h.x, h.bottom).y };
 				// Bubbles open towards the middle of the frame: right of "you"/friend, left of supporting characters.
 				return <SpeechBubble quote={scene.quote} head={head} side={quoteBy ? 'left' : 'right'} />;
 			})()}
@@ -463,10 +495,10 @@ const Scene: React.FC<{
 	);
 };
 
-const Title: React.FC<{text: string}> = ({text}) => {
+const Title: React.FC<{ text: string }> = ({ text }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const pop = spring({frame: frame - 6, fps, config: {damping: 9}});
+	const { fps } = useVideoConfig();
+	const pop = spring({ frame: frame - 6, fps, config: { damping: 9 } });
 	return (
 		<div
 			style={{
@@ -493,13 +525,13 @@ const Title: React.FC<{text: string}> = ({text}) => {
 
 // Place/year card, top left, like the reference channel's "ELTHAM, 1501": pops in once the scene
 // is fully on screen, holds about 3 s, then fades so it never sits over the whole scene.
-const Stamp: React.FC<{text: string; delay: number}> = ({text, delay}) => {
+const Stamp: React.FC<{ text: string; delay: number }> = ({ text, delay }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const t = frame - delay - 3;
 	if (t < 0) return null;
-	const pop = spring({frame: t, fps, config: {damping: 12}});
-	const opacity = interpolate(t, [90, 105], [1, 0], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	const pop = spring({ frame: t, fps, config: { damping: 12 } });
+	const opacity = interpolate(t, [90, 105], [1, 0], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 	return (
 		<div
 			style={{
@@ -528,12 +560,12 @@ const Stamp: React.FC<{text: string; delay: number}> = ({text, delay}) => {
 	);
 };
 
-const Icons: React.FC<{icons: IconData[]}> =({icons}) => {
+const Icons: React.FC<{ icons: IconData[] }> = ({ icons }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	if (icons.length === 0) return null;
 	// Panel fades in with the first icon so it never sits empty on screen.
-	const panel = spring({frame: frame - icons[0].at + 4, fps, config: {damping: 200}});
+	const panel = spring({ frame: frame - icons[0].at + 4, fps, config: { damping: 200 } });
 
 	return (
 		<div
@@ -553,9 +585,9 @@ const Icons: React.FC<{icons: IconData[]}> =({icons}) => {
 			}}
 		>
 			{icons.map((icon, i) => {
-				const pop = spring({frame: frame - icon.at, fps, config: {damping: 10}});
+				const pop = spring({ frame: frame - icon.at, fps, config: { damping: 10 } });
 				return (
-					<div key={i} style={{width: 300, textAlign: 'center', transform: `scale(${pop}) rotate(${(1 - pop) * -15}deg)`}}>
+					<div key={i} style={{ width: 300, textAlign: 'center', transform: `scale(${pop}) rotate(${(1 - pop) * -15}deg)` }}>
 						<Sequence from={icon.at} layout="none">
 							{/* Kept well under the voice: the cash chime is bright and punchy. */}
 							{MONEY_ICONS.includes(icon.icon) ? (
@@ -566,7 +598,7 @@ const Icons: React.FC<{icons: IconData[]}> =({icons}) => {
 						</Sequence>
 						<Icon name={icon.icon} />
 						{icon.label && (
-							<div style={{fontFamily: 'Arial Black, Impact, sans-serif', fontSize: 64, color: '#ffd23f', textShadow: '0 6px 0 #000'}}>
+							<div style={{ fontFamily: 'Arial Black, Impact, sans-serif', fontSize: 64, color: '#ffd23f', textShadow: '0 6px 0 #000' }}>
 								{icon.label}
 							</div>
 						)}

@@ -184,8 +184,208 @@ const Vault = () => (
 	</>
 );
 
+const ControlRoom = () => (
+	<>
+		<defs>
+			<linearGradient id="controlWall" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#1e252b" />
+				<stop offset="1" stopColor="#11161b" />
+			</linearGradient>
+			<linearGradient id="screenGlow" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#103b42" />
+				<stop offset="1" stopColor="#081e22" />
+			</linearGradient>
+		</defs>
+		<rect width={1920} height={1080} fill="url(#controlWall)" />
+		{/* Wall panel gauges & annunciator tiles */}
+		<rect x={120} y={80} width={1680} height={200} rx={10} fill="#181f26" stroke="#2c3842" strokeWidth={10} />
+		{Array.from({length: 24}, (_, i) => {
+			const x = 145 + (i % 12) * 135;
+			const y = 100 + Math.floor(i / 12) * 80;
+			const isAlarm = i === 4 || i === 11 || i === 17;
+			const isWarn = i === 2 || i === 19;
+			const tileColor = isAlarm ? '#ff2a2a' : isWarn ? '#ffd23f' : '#223843';
+			return (
+				<g key={i}>
+					<rect x={x} y={y} width={120} height={65} rx={4} fill={tileColor} stroke="#111" strokeWidth={4} />
+					{isAlarm && <circle cx={x + 100} cy={y + 15} r={5} fill="#fff" />}
+				</g>
+			);
+		})}
+		{/* Oscilloscopes and dial gauges row */}
+		{[300, 700, 1100, 1500].map((cx, idx) => (
+			<g key={cx}>
+				<circle cx={cx} cy={400} r={75} fill="#0d1419" stroke="#4a5560" strokeWidth={12} />
+				<circle cx={cx} cy={400} r={60} fill="#050a0d" />
+				{/* Needle */}
+				<line
+					x1={cx}
+					y1={400}
+					x2={cx + Math.cos((idx * 1.1) - 1.2) * 50}
+					y2={400 + Math.sin((idx * 1.1) - 1.2) * 50}
+					stroke={idx === 1 ? '#ff2a2a' : '#00f0ff'}
+					strokeWidth={6}
+					strokeLinecap="round"
+				/>
+				<circle cx={cx} cy={400} r={10} fill="#aab6bf" />
+			</g>
+		))}
+		{/* Operator console desk with buttons and angled panels */}
+		<polygon points="0,680 1920,680 1920,860 0,860" fill="#2a333d" stroke="#161c22" strokeWidth={12} />
+		{Array.from({length: 16}, (_, i) => (
+			<circle key={i} cx={140 + i * 110} cy={720} r={12} fill={i % 3 === 0 ? '#ff2a2a' : i % 3 === 1 ? '#ffd23f' : '#3fae5a'} stroke="#111" strokeWidth={4} />
+		))}
+		{Array.from({length: 16}, (_, i) => (
+			<circle key={i} cx={140 + i * 110} cy={765} r={12} fill="#5c6b73" stroke="#111" strokeWidth={4} />
+		))}
+		{/* Warning red beacon light */}
+		<g transform="translate(930, 20)">
+			<rect x={10} y={40} width={40} height={18} fill="#222" />
+			<path d="M15 40 C15 15 45 15 45 40 Z" fill="#ff2a2a" stroke="#111" strokeWidth={4} />
+			<circle cx={30} cy={25} r={6} fill="#fff" opacity={0.8} />
+		</g>
+		{/* Floor */}
+		<rect y={860} width={1920} height={220} fill="#14191f" />
+	</>
+);
+
+const Factory = () => (
+	<>
+		<defs>
+			<linearGradient id="factorySky" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#2b303a" />
+				<stop offset="1" stopColor="#454c59" />
+			</linearGradient>
+		</defs>
+		<rect width={1920} height={1080} fill="url(#factorySky)" />
+		{/* Industrial pipes and towers in distance */}
+		{[240, 500, 1400, 1680].map((x) => (
+			<g key={x}>
+				<rect x={x} y={180} width={90} height={680} fill="#2f3742" stroke="#1c2128" strokeWidth={8} />
+				<polygon points={`${x - 15},180 ${x + 105},180 ${x + 75},120 ${x + 15},120`} fill="#242b33" />
+				{/* Pipe rings */}
+				<rect x={x - 6} y={320} width={102} height={20} fill="#3e4854" />
+				<rect x={x - 6} y={500} width={102} height={20} fill="#3e4854" />
+			</g>
+		))}
+		{/* Cross beam trusses */}
+		<line x1={0} y1={250} x2={1920} y2={250} stroke="#242a33" strokeWidth={16} />
+		<line x1={0} y1={310} x2={1920} y2={310} stroke="#242a33" strokeWidth={12} />
+		{Array.from({length: 12}, (_, i) => (
+			<g key={i}>
+				<line x1={i * 160} y1={250} x2={i * 160 + 160} y2={310} stroke="#1b2026" strokeWidth={8} />
+				<line x1={i * 160 + 160} y1={250} x2={i * 160} y2={310} stroke="#1b2026" strokeWidth={8} />
+			</g>
+		))}
+		{/* Main steam boiler & valves */}
+		<rect x={760} y={380} width={400} height={480} rx={25} fill="#566270" stroke="#1d232a" strokeWidth={14} />
+		<circle cx={960} cy={550} r={70} fill="#363f49" stroke="#1d232a" strokeWidth={10} />
+		<line x1={960} y1={550} x2={1000} y2={520} stroke="#e63946" strokeWidth={8} strokeLinecap="round" />
+		<line x1={600} y1={600} x2={1320} y2={600} stroke="#3b444f" strokeWidth={32} />
+		{/* Floor */}
+		<rect y={860} width={1920} height={220} fill="#20252b" />
+	</>
+);
+
+const ServerRoom = () => (
+	<>
+		<defs>
+			<linearGradient id="serverRoomBg" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#080c14" />
+				<stop offset="1" stopColor="#0f1726" />
+			</linearGradient>
+		</defs>
+		<rect width={1920} height={1080} fill="url(#serverRoomBg)" />
+		{/* Server rack cabinets */}
+		{[120, 480, 840, 1200, 1560].map((x, rackIdx) => (
+			<g key={x}>
+				<rect x={x} y={140} width={260} height={720} rx={8} fill="#141a24" stroke="#222b3a" strokeWidth={12} />
+				{/* 8 server units per rack */}
+				{Array.from({length: 8}, (_, u) => {
+					const uy = 160 + u * 85;
+					return (
+						<g key={u}>
+							<rect x={x + 12} y={uy} width={236} height={70} rx={4} fill="#0d1117" stroke="#1e2736" strokeWidth={4} />
+							{/* Ventilation grid slots */}
+							{Array.from({length: 5}, (_, g) => (
+								<line key={g} x1={x + 30 + g * 18} y1={uy + 20} x2={x + 30 + g * 18} y2={uy + 50} stroke="#1f2937" strokeWidth={4} />
+							))}
+							{/* Status indicator LEDs */}
+							<circle cx={x + 160} cy={uy + 35} r={5} fill={(rackIdx + u) % 4 === 0 ? '#ff2a2a' : '#00f0ff'} />
+							<circle cx={x + 180} cy={uy + 35} r={5} fill={(rackIdx + u) % 3 === 0 ? '#ffd23f' : '#3fae5a'} />
+							<circle cx={x + 200} cy={uy + 35} r={5} fill="#00f0ff" />
+						</g>
+					);
+				})}
+			</g>
+		))}
+		{/* Ceiling cable trays */}
+		<rect y={60} width={1920} height={35} fill="#1e2633" stroke="#0b1017" strokeWidth={6} />
+		<line x1={0} y1={95} x2={1920} y2={95} stroke="#00f0ff" strokeWidth={4} opacity={0.6} />
+		{/* Raised data center tile floor */}
+		<rect y={860} width={1920} height={220} fill="#0c1118" />
+		{Array.from({length: 12}, (_, i) => (
+			<line key={i} x1={i * 160} y1={860} x2={i * 160} y2={1080} stroke="#1b2433" strokeWidth={4} />
+		))}
+	</>
+);
+
+const Bridge = () => (
+	<>
+		<defs>
+			<linearGradient id="stormSky" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#1a2332" />
+				<stop offset="1" stopColor="#3d4e66" />
+			</linearGradient>
+			<linearGradient id="deepWater" x1="0" y1="0" x2="0" y2="1">
+				<stop offset="0" stopColor="#102538" />
+				<stop offset="1" stopColor="#08131d" />
+			</linearGradient>
+		</defs>
+		<rect width={1920} height={1080} fill="url(#stormSky)" />
+		{/* Suspension bridge towers */}
+		{[500, 1420].map((tx) => (
+			<g key={tx}>
+				<polygon points={`${tx - 50},860 ${tx - 25},100 ${tx + 25},100 ${tx + 50},860`} fill="#5a6575" stroke="#252b33" strokeWidth={10} />
+				<polygon points={`${tx - 40},860 ${tx - 20},100 ${tx},100 ${tx - 15},860`} fill="#717d8f" />
+				{/* Tower horizontal braces */}
+				<rect x={tx - 35} y={260} width={70} height={30} fill="#3d4652" />
+				<rect x={tx - 42} y={500} width={84} height={30} fill="#3d4652" />
+			</g>
+		))}
+		{/* Main suspension cable swoop */}
+		<path d="M 0 250 Q 500 100 500 100 Q 960 580 1420 100 Q 1420 100 1920 250" fill="none" stroke="#2f3742" strokeWidth={18} />
+		<path d="M 0 250 Q 500 100 500 100 Q 960 580 1420 100 Q 1420 100 1920 250" fill="none" stroke="#8d99a6" strokeWidth={10} />
+		{/* Vertical suspender cables */}
+		{Array.from({length: 22}, (_, i) => {
+			const x = 120 + i * 78;
+			return <line key={i} x1={x} y1={250 + Math.sin(i * 0.15) * 150} x2={x} y2={760} stroke="#4a5560" strokeWidth={4} />;
+		})}
+		{/* Bridge deck truss */}
+		<rect y={760} width={1920} height={100} fill="#3b4452" stroke="#1d232a" strokeWidth={8} />
+		<line x1={0} y1={800} x2={1920} y2={800} stroke="#ffd23f" strokeWidth={6} strokeDasharray="40 30" />
+		{/* Dark churning water below */}
+		<rect y={860} width={1920} height={220} fill="url(#deepWater)" />
+		{Array.from({length: 8}, (_, w) => (
+			<path key={w} d={`M 0 ${880 + w * 24} Q 480 ${865 + w * 24} 960 ${880 + w * 24} T 1920 ${880 + w * 24}`} fill="none" stroke="#213d54" strokeWidth={6} opacity={0.6} />
+		))}
+	</>
+);
+
 // Pick the place the scene's words describe; the prompt lists these names.
-const BACKGROUNDS = {office: Office, home: Home, vault: Vault, bank: Bank, city: City, cafe: Cafe, future: Future};
+export const BACKGROUNDS = {
+	office: Office,
+	home: Home,
+	vault: Vault,
+	bank: Bank,
+	city: City,
+	cafe: Cafe,
+	future: Future,
+	control_room: ControlRoom,
+	factory: Factory,
+	server_room: ServerRoom,
+	bridge: Bridge,
+};
 // Any other name is a painted background, public/bg/<name>.png (listed in assets/backgrounds.json; make_video.py
 // checks the file exists before rendering).
 export type BgName = string;

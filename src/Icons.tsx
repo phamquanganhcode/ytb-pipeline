@@ -75,6 +75,110 @@ const ICONS = {
 			<text x={100} y={142} fontSize={120} fontWeight={900} textAnchor="middle" fill="#fff" fontFamily="Arial Black, sans-serif">?</text>
 		</>
 	),
+	hazard: (
+		<>
+			<polygon points="100,24 186,172 14,172" fill="#ffd23f" {...O} strokeWidth={10} />
+			<line x1={100} y1={72} x2={100} y2={124} stroke="#111" strokeWidth={14} strokeLinecap="round" />
+			<circle cx={100} cy={150} r={8} fill="#111" />
+		</>
+	),
+	radiation: (
+		<>
+			<circle cx={100} cy={100} r={82} fill="#ffd23f" {...O} strokeWidth={8} />
+			<circle cx={100} cy={100} r={18} fill="#111" />
+			{/* 3 hazard blades */}
+			{[0, 120, 240].map((deg) => (
+				<path
+					key={deg}
+					d="M100 100 L80 40 A64 64 0 0 1 120 40 Z"
+					fill="#111"
+					transform={`rotate(${deg} 100 100)`}
+				/>
+			))}
+			<circle cx={100} cy={100} r={12} fill="#ffd23f" />
+		</>
+	),
+	fire: (
+		<>
+			<path
+				d="M100 20 C115 50 145 75 145 115 A45 45 0 0 1 55 115 C55 90 75 70 85 45 C88 65 98 75 100 20 Z"
+				fill="#e63946"
+				{...O}
+				strokeWidth={8}
+			/>
+			<path
+				d="M100 70 C108 90 125 105 125 125 A25 25 0 0 1 75 125 C75 110 88 100 95 85 C96 95 102 100 100 70 Z"
+				fill="#ffd23f"
+			/>
+		</>
+	),
+	gear: (
+		<>
+			<circle cx={100} cy={100} r={55} fill="#7fa1b3" {...O} strokeWidth={8} />
+			{Array.from({length: 8}, (_, i) => {
+				const a = (i * Math.PI) / 4;
+				const x = 100 + Math.cos(a) * 68;
+				const y = 100 + Math.sin(a) * 68;
+				return <rect key={i} x={x - 12} y={y - 12} width={24} height={24} rx={4} fill="#7fa1b3" stroke="#111" strokeWidth={6} transform={`rotate(${i * 45} ${x} ${y})`} />;
+			})}
+			<circle cx={100} cy={100} r={24} fill="#1c2c48" stroke="#111" strokeWidth={6} />
+		</>
+	),
+	wrench: (
+		<>
+			<g transform="rotate(45 100 100)">
+				<rect x={88} y={40} width={24} height={120} rx={6} fill="#aab6bf" {...O} strokeWidth={8} />
+				{/* Wrench head top */}
+				<path d="M72 45 A32 32 0 1 1 128 45 L116 65 H84 Z" fill="#c9d3da" {...O} strokeWidth={8} />
+				<circle cx={100} cy={140} r={8} fill="#4a5560" />
+			</g>
+		</>
+	),
+	skull: (
+		<>
+			<circle cx={100} cy={85} r={55} fill="#fff" {...O} strokeWidth={8} />
+			<rect x={76} y={115} width={48} height={35} rx={6} fill="#fff" {...O} strokeWidth={8} />
+			{/* eye sockets */}
+			<ellipse cx={82} cy={85} rx={14} ry={18} fill="#111" />
+			<ellipse cx={118} cy={85} rx={14} ry={18} fill="#111" />
+			{/* nose cavity */}
+			<polygon points="100,102 94,115 106,115" fill="#111" />
+			{/* teeth */}
+			<line x1={88} y1={128} x2={88} y2={146} stroke="#111" strokeWidth={4} />
+			<line x1={100} y1={128} x2={100} y2={146} stroke="#111" strokeWidth={4} />
+			<line x1={112} y1={128} x2={112} y2={146} stroke="#111" strokeWidth={4} />
+		</>
+	),
+	electricity: (
+		<>
+			<polygon
+				points="108,18 48,102 96,102 82,182 152,90 106,90"
+				fill="#00f0ff"
+				{...O}
+				strokeWidth={8}
+			/>
+		</>
+	),
+	siren: (
+		<>
+			<rect x={55} y={135} width={90} height={32} rx={6} fill="#333" {...O} strokeWidth={6} />
+			<path d="M65 135 C65 75 135 75 135 135 Z" fill="#ff2a2a" {...O} strokeWidth={8} />
+			{/* light beacon beam lines */}
+			<line x1={40} y1={70} x2={20} y2={55} stroke="#ffd23f" strokeWidth={6} strokeLinecap="round" />
+			<line x1={100} y1={55} x2={100} y2={30} stroke="#ffd23f" strokeWidth={6} strokeLinecap="round" />
+			<line x1={160} y1={70} x2={180} y2={55} stroke="#ffd23f" strokeWidth={6} strokeLinecap="round" />
+		</>
+	),
+	timer: (
+		<>
+			<circle cx={100} cy={110} r={65} fill="#fff" {...O} strokeWidth={8} />
+			<rect x={92} y={28} width={16} height={18} rx={3} fill="#111" />
+			<line x1={80} y1={28} x2={120} y2={28} stroke="#111" strokeWidth={8} strokeLinecap="round" />
+			<line x1={100} y1={110} x2={100} y2={70} stroke="#e63946" strokeWidth={6} strokeLinecap="round" />
+			<line x1={100} y1={110} x2={128} y2={110} stroke="#111" strokeWidth={6} strokeLinecap="round" />
+			<circle cx={100} cy={110} r={6} fill="#e63946" />
+		</>
+	),
 };
 
 export type IconName = keyof typeof ICONS;

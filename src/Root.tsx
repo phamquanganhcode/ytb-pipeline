@@ -29,6 +29,7 @@ export const Root: React.FC = () => (
 						iconStyle: manifest.iconStyle ?? 'panel',
 						cast: manifest.cast ?? {},
 						music: manifest.music,
+						meta: manifest.meta ?? {},
 					},
 				};
 			}}
@@ -57,17 +58,23 @@ export const Root: React.FC = () => (
 					const youFaces = manifest.cast?.you?.faces || {};
 					const face = youFaces.shock || youFaces.happy || youFaces.neutral || 'faces/charles-ponzi_shock.png';
 					const firstBg = manifest.scenes?.[0]?.bg;
-					const bg = firstBg ? `bg/${firstBg}.png` : 'bg/exchange.png';
+					const bg = firstBg || 'exchange';
 
 					// Extract high-impact headline from manifest title
 					const rawTitle: string = manifest.title || '';
 					const parts = rawTitle.split('|').map((s) => s.trim());
 					const mainHeadline = parts.length > 1 ? parts[1] : parts[0] || 'TRUE STORY';
+					const isDisaster =
+						manifest.meta?.format === 'disaster' ||
+						manifest.meta?.theme === 'disaster' ||
+						rawTitle.toUpperCase().includes('CHERNOBYL') ||
+						rawTitle.toUpperCase().includes('THẢM HỌA') ||
+						rawTitle.toUpperCase().includes('DISASTER');
 
 					return {
 						props: {
 							title: mainHeadline.toUpperCase().slice(0, 32),
-							badge: 'TRUE STORY',
+							badge: isDisaster ? '⚠️ THẢM HỌA KỸ THUẬT' : 'TRUE STORY',
 							subtitle: parts[0] ? parts[0].toUpperCase().slice(0, 28) : undefined,
 							face,
 							bg,
