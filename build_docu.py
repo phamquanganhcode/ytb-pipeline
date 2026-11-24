@@ -23,6 +23,15 @@ MEDIA_DIR.mkdir(parents=True, exist_ok=True)
 FPS = 30
 HEADERS = {"User-Agent": "DocuEngineBuilder/1.0 (local-dev)"}
 
+VOICE_PRESETS = {
+    "noir_deep": "voices/my_voices_01.mp3",
+    "v1": "voices/my_voices_01.mp3",
+    "voice1": "voices/my_voices_01.mp3",
+    "investigator_crisp": "voices/my_voices_02.mp3",
+    "v2": "voices/my_voices_02.mp3",
+    "voice2": "voices/my_voices_02.mp3",
+}
+
 
 def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")[:48]
@@ -159,39 +168,64 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument("script", nargs="?", default="scripts/docu/knight-capital-3min.json")
     parser.add_argument("--no-render", action="store_true")
+    parser.add_argument("--voice-ref", default=None, help="Voice preset (noir_deep | investigator_crisp) or path to reference audio")
+    parser.add_argument("--out-slug", default=None, help="Override output file slug (e.g. knight_docu_3min_noir_deep)")
     args = parser.parse_args()
 
     script_path = ROOT / args.script
     script = json.loads(script_path.read_text(encoding="utf-8"))
-    slug = script.get("slug") or script_path.stem
+    slug = args.out_slug or script.get("slug") or script_path.stem
     voice = script.get("voice", "am_michael")
+    voice_ref = args.voice_ref or script.get("voiceRef")
+    if voice_ref:
+        voice_ref = VOICE_PRESETS.get(voice_ref, voice_ref)
     raw_scenes = script["scenes"]
 
     print(f"Resolving real archival media for {len(raw_scenes)} scenes...")
     resolved_media = [resolve_media(s) for s in raw_scenes]
     resolved_lists = [resolve_media_list(s) for s in raw_scenes]
 
-    # Synthesize narration in continuous multi-scene blocks (no per-sentence chop)
+    # Synthesize narration (Chatterbox voice clone if voiceRef is set, else Kokoro / Edge-TTS)
     full_text = " ".join(s["text"].strip() for s in raw_scenes)
-    has_kokoro = importlib.util.find_spec("kokoro") is not None
-    tts_engine = "kokoro" if has_kokoro else "edge"
-    tts_voice = voice if has_kokoro else "en-US-AndrewMultilingualNeural"
-    text_hash = hashlib.sha256(f"{tts_engine}:{tts_voice}:{full_text}".encode("utf-8")).hexdigest()[:12]
-    wav_path = DOCU_DIR / f"{slug}_{text_hash}.wav"
-    if wav_path.exists() and wav_path.stat().st_size > 20000:
-        audio, _ = sf.read(wav_path, dtype="float32")
-        print(f"Using cached narration: {wav_path.name}")
+    if voice_ref:
+        ref_path = Path(voice_ref)
+        if not ref_path.is_absolute():
+            ref_path = (ROOT / ref_path).resolve()
+        if not ref_path.exists():
+            raise FileNotFoundError(f"Missing voiceRef audio: {ref_path}")
+        text_hash = hashlib.sha256(f"chatterbox:{ref_path.name}:{full_text}".encode("utf-8")).hexdigest()[:12]
+        wav_path = DOCU_DIR / f"{slug}_{text_hash}.wav"
+        if wav_path.exists() and wav_path.stat().st_size > 20000:
+            audio, _ = sf.read(wav_path, dtype="float32")
+            print(f"Using cached cloned narration: {wav_path.name}")
+        else:
+            print(f"Synthesizing cloned narration ({len(full_text.split())} words) from {ref_path.name} with Chatterbox...")
+            blocks_json = DOCU_DIR / f"{slug}_{text_hash}_blocks.json"
+            blocks_json.write_text(json.dumps([s["text"].strip() for s in raw_scenes], indent=2), encoding="utf-8")
+            venv_cb = Path(r"C:\Users\phama\.venvs\voice-clone\Scripts\python.exe")
+            cb_python = sys.executable if importlib.util.find_spec("chatterbox") is not None else str(venv_cb)
+            subprocess.run([cb_python, str(ROOT / "tts_chatterbox.py"), str(ref_path), str(blocks_json), str(wav_path)], check=True)
+            audio, _ = sf.read(wav_path, dtype="float32")
     else:
-        print(f"Synthesizing continuous narration ({len(full_text.split())} words) with {tts_engine} ({tts_voice})...")
-        # Synthesize per-act (~5 scenes per chunk for Kokoro, 1 scene for Edge-TTS to avoid timeouts)
-        chunks = []
-        block_size = 5 if has_kokoro else 1
-        for i in range(0, len(raw_scenes), block_size):
-            block_text = " ".join(s["text"].strip() for s in raw_scenes[i : i + block_size])
-            pad = 2.0 if i + block_size >= len(raw_scenes) else 0.25
-            chunks.append(mv.synth(block_text, voice=tts_voice, engine=tts_engine, pad_seconds=pad, gain=1.0))
-        audio = np.concatenate(chunks)
-        sf.write(wav_path, audio, mv.SAMPLE_RATE)
+        has_kokoro = importlib.util.find_spec("kokoro") is not None
+        tts_engine = "kokoro" if has_kokoro else "edge"
+        tts_voice = voice if has_kokoro else "en-US-AndrewMultilingualNeural"
+        text_hash = hashlib.sha256(f"{tts_engine}:{tts_voice}:{full_text}".encode("utf-8")).hexdigest()[:12]
+        wav_path = DOCU_DIR / f"{slug}_{text_hash}.wav"
+        if wav_path.exists() and wav_path.stat().st_size > 20000:
+            audio, _ = sf.read(wav_path, dtype="float32")
+            print(f"Using cached narration: {wav_path.name}")
+        else:
+            print(f"Synthesizing continuous narration ({len(full_text.split())} words) with {tts_engine} ({tts_voice})...")
+            # Synthesize per-act (~5 scenes per chunk for Kokoro, 1 scene for Edge-TTS to avoid timeouts)
+            chunks = []
+            block_size = 5 if has_kokoro else 1
+            for i in range(0, len(raw_scenes), block_size):
+                block_text = " ".join(s["text"].strip() for s in raw_scenes[i : i + block_size])
+                pad = 2.0 if i + block_size >= len(raw_scenes) else 0.25
+                chunks.append(mv.synth(block_text, voice=tts_voice, engine=tts_engine, pad_seconds=pad, gain=1.0))
+            audio = np.concatenate(chunks)
+            sf.write(wav_path, audio, mv.SAMPLE_RATE)
 
     total_frames = math.ceil(len(audio) / mv.SAMPLE_RATE * FPS)
     speech_frames = max(1, total_frames - int(2.0 * FPS))
@@ -281,16 +315,25 @@ def main():
     )
     mv.loudnorm(out_mp4)
 
-    # Render 4 inspection stills verifying all 5 Section-A upgrades
+    # Render inspection stills (4 upgrades for full docu, or 1 per scene for short demos)
     def cue_or(idx, default_off):
         return scenes_out[idx].get("cueFrame", default_off)
 
-    preview_map = [
-        ("docu_up_map.png", min(total_frames - 1, starts[1] + 55)),
-        ("docu_up_gloss.png", min(total_frames - 1, starts[3] + 55)),
-        ("docu_up_doc.png", min(total_frames - 1, starts[5] + cue_or(5, 80) + 22)),
-        ("docu_up_term.png", min(total_frames - 1, starts[7] + cue_or(7, 90) + 12)),
-    ]
+    if len(starts) >= 8:
+        preview_map = [
+            ("docu_up_map.png", min(total_frames - 1, starts[1] + 55)),
+            ("docu_up_gloss.png", min(total_frames - 1, starts[3] + 55)),
+            ("docu_up_doc.png", min(total_frames - 1, starts[5] + cue_or(5, 80) + 22)),
+            ("docu_up_term.png", min(total_frames - 1, starts[7] + cue_or(7, 90) + 12)),
+        ]
+    else:
+        preview_map = [
+            (
+                f"{slug}_scene_{i}.png",
+                min(total_frames - 1, starts[i] + cue_or(i, max(20, scenes_out[i]["duration"] // 2)) + 15),
+            )
+            for i in range(len(starts))
+        ]
     for name, frm in preview_map:
         subprocess.run(
             remotion_cmd + ["still", "src/index.ts", "DocuEngine", f"out/{name}", f"--frame={frm}"],

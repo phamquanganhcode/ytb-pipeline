@@ -1,0 +1,604 @@
+{
+  "title": "How One Skipped Server Wiped Out $440 Million in 45 Minutes | The Knight Capital Collapse",
+  "slug": "knight_docu_10min",
+  "voice": "am_michael",
+  "voiceRef": "noir_deep",
+  "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail stock market maker—lost $440 million in 45 minutes. Based on SEC Administrative Order Release No. 70694, this full-length documentary traces the nine-year-old dormant Power Peg code, a reused feature flag, a skipped eighth server, 97 unread emails, and the catastrophic rollback that multiplied the bleed eightfold.",
+  "factCheck": [
+    "SEC Administrative Order Release No. 34-70694 (October 16, 2013): Knight Capital Americas LLC",
+    "Realized pre-tax trading loss: $440M+ between 09:30 AM and 10:15 AM EDT on August 1, 2012",
+    "212 customer orders triggered 4,000,000+ child executions (~397M shares across 154 stocks)",
+    "Gross unintended exposure reached ~$7 billion; SEC fined Knight Capital $12,000,000"
+  ],
+  "chapters": [
+    {"title": "09:30 AM — The 45-Minute Wipeout", "scene": 0},
+    {"title": "Act I — Wall Street's Invisible Giant", "scene": 4},
+    {"title": "Act II — The Nine-Year-Old Time Bomb", "scene": 12},
+    {"title": "Act III — One Skipped Server", "scene": 20},
+    {"title": "Act IV — Blind in the War Room", "scene": 28},
+    {"title": "Act V — The Rollback That Made It 8x Worse", "scene": 36},
+    {"title": "Act VI — Aftermath & The Swiss Cheese Postmortem", "scene": 42}
+  ],
+  "scenes": [
+    {
+      "kind": "hook_3s",
+      "mood": "tense",
+      "text": "Four hundred forty million dollars vanished in just forty-five minutes because a single technician skipped one server before the Wall Street opening bell.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "credit": "ARCHIVE • NEW YORK STOCK EXCHANGE"},
+      "eyebrow": "09:30:01 AM EDT  •  SYSTEM FAILURE DETECTED",
+      "stat": "$440 MILLION",
+      "headline": "WIPED OUT IN 45 MINUTES",
+      "subline": "163,000 DOLLARS LOST PER SECOND"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Every single second that Wednesday morning, one hundred sixty-three thousand dollars evaporated from a trading firm most everyday investors had never even heard of before.",
+      "mediaListQueries": [
+        {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "push_in", "credit": "WALL STREET • NEW YORK"},
+        {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "crop_right", "credit": "ARCHIVE • NYSE TRADING FLOOR"}
+      ],
+      "eyebrow": "AUGUST 1, 2012  •  MANHATTAN, NEW YORK",
+      "headline": "THE FASTEST LOSS IN WALL STREET HISTORY",
+      "subline": "OVER 4 MILLION UNWANTED TRADES EXECUTED"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "There were no foreign hackers, no encrypted ransomware demands, and no sudden global financial crash. Every single detail you are about to see comes straight from federal investigators.",
+      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "wide", "credit": "SEC HEADQUARTERS • WASHINGTON, D.C."},
+      "eyebrow": "SEC RELEASE NO. 34-70694",
+      "headline": "ZERO HACKERS. ZERO CRASH.",
+      "subline": "A SELF-INFLICTED SOFTWARE CHAIN REACTION"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Instead, a thirty-year financial giant was brought to its knees by a forgotten nine-year-old line of test code, one careless software deploy, and forty-five minutes of blind panic.",
+      "mediaQuery": {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "push_in", "credit": "FINANCIAL DISTRICT • NEW YORK"},
+      "eyebrow": "45 MINUTES TO INSOLVENCY",
+      "headline": "HOW SOFTWARE DESTROYED A TITAN",
+      "subline": "FIVE ORDINARY MISTAKES ALIGNED IN ONE MORNING"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Just across the Hudson River from Manhattan sits Exchange Place in Jersey City. Inside an unmarked office tower, a quiet powerhouse called Knight Capital Group ran Wall Street's plumbing.",
+      "overlayMap": "nyse_link",
+      "mediaListQueries": [
+        {"type": "image", "query": "Jersey City skyline Exchange Place", "cameraPreset": "wide", "credit": "EXCHANGE PLACE • JERSEY CITY, NJ"},
+        {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "crop_left", "credit": "LOWER MANHATTAN • WALL STREET"}
+      ],
+      "eyebrow": "ACT I  •  WALL STREET'S INVISIBLE GIANT",
+      "headline": "ACROSS THE HUDSON RIVER",
+      "subline": "KNIGHT CAPITAL GROUP — JERSEY CITY, NEW JERSEY",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "mystery",
+      "text": "In the summer of twenty twelve, Knight Capital was America's largest retail stock market maker, quietly executing nearly one out of every five everyday stock orders nationwide.",
+      "mediaListQueries": [
+        {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "wide", "credit": "ARCHIVE • NYSE TRADERS"},
+        {"type": "image", "query": "Wall Street Bull Charging Bull New York", "cameraPreset": "crop_detail", "credit": "FINANCIAL DISTRICT • NEW YORK"}
+      ],
+      "eyebrow": "U.S. EQUITIES MARKET SHARE • 2012",
+      "stat": "17%",
+      "headline": "OF ALL U.S. RETAIL STOCK VOLUME",
+      "subline": "ROUGHLY 1 IN 6 EVERYDAY INVESTOR ORDERS"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Whenever an ordinary investor tapped buy on an online brokerage app, brokers rarely sent that order straight to the New York Stock Exchange. They routed it to firms like Knight.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "push_in", "credit": "ARCHIVE • RETAIL ORDER ROUTING"},
+      "eyebrow": "THE BUSINESS OF MARKET MAKING",
+      "headline": "THE MIDDLEMAN BEHIND EVERY TRADE",
+      "subline": "PROVIDING INSTANT LIQUIDITY FOR MILLIONS OF RETAIL ACCOUNTS"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "mystery",
+      "text": "Every single day, Knight's automated trading engines bought and sold more than three point three billion shares, earning fractions of a cent per share at astonishing microsecond speeds.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_left", "credit": "ARCHIVE • NYSE ORDER FLOW"},
+      "eyebrow": "DAILY TRADING THROUGHPUT",
+      "stat": "3.3 BILLION",
+      "headline": "SHARES ROUTED EVERY SINGLE DAY",
+      "subline": "OVER $20 BILLION IN DAILY DOLLAR VOLUME"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "That tiny fraction of a penny added up fast. Knight Capital generated over one billion dollars in annual revenue and held roughly three hundred sixty million dollars in cash.",
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "wide", "credit": "WALL STREET • FINANCIAL POWERHOUSE"},
+      "eyebrow": "FINANCIAL STRENGTH • Q2 2012",
+      "headline": "$1.4 BILLION IN ANNUAL REVENUE",
+      "subline": "PROFITABLE, RESPECTED, AND DEEPLY TRUSTED BY BROKERS"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "At the beating heart of that automated empire sat a router called SMARS. Whenever a large client order arrived, SMARS sliced it into hundreds of tiny child orders automatically.",
+      "overlayMap": "smars_nodes",
+      "glossary": {"term": "SMARS", "definition": "Smart Market Access Routing System — Knight's automated 8-server order execution cluster."},
+      "mediaListQueries": [
+        {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "push_in", "credit": "INFRASTRUCTURE • PRODUCTION CLUSTER"},
+        {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "NETWORKING • LOW-LATENCY SWITCHES"}
+      ],
+      "eyebrow": "CORE INFRASTRUCTURE  •  8 PRODUCTION SERVERS",
+      "headline": "THE SMARS ORDER ROUTER",
+      "subline": "SMART MARKET ACCESS ROUTING SYSTEM",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "SMARS ran across eight identical production servers inside Jersey City. Incoming broker orders were distributed across all eight machines to prevent bottlenecks when trading surged at nine thirty.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "wide", "credit": "JERSEY CITY DATA CENTER"},
+      "eyebrow": "8-NODE CLUSTER ARCHITECTURE",
+      "headline": "BUILT FOR MICROSECOND SCALE",
+      "subline": "ONE OF EIGHT SERVERS HANDLED 12.5% OF TRAFFIC"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "To keep the firm safe, every parent order carried a strict fill counter inside SMARS. The exact millisecond the requested share total filled, the server stopped trading immediately.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "wide", "credit": "PRODUCTION SAFETY LOGIC"},
+      "eyebrow": "PARENT ORDER SAFETY RULE",
+      "headline": "AUTOMATIC FILL-LIMIT TRACKING",
+      "subline": "STOP ONCE CUMULATIVE EXECUTED SHARES EQUAL ORDER SIZE"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Except buried deep inside that fast routing codebase slept a forgotten ghost from nine years earlier—a dead internal script nobody in the building had touched since two thousand three.",
+      "glossary": {"term": "POWER PEG", "definition": "Retired 2003 internal QA algorithm built to intentionally buy high and sell low during stress tests."},
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "crop_detail", "credit": "LEGACY PRODUCTION CODEBASE"},
+      "eyebrow": "ACT II  •  THE NINE-YEAR-OLD TIME BOMB",
+      "headline": "BURIED SINCE 2003",
+      "subline": "LEGACY TEST CODE NEVER REMOVED FROM PRODUCTION",
+      "sfx": "thud"
+    },
+    {
+      "kind": "editorial_vox",
+      "voxMode": "single_8",
+      "mood": "mystery",
+      "cueWord": "buy high",
+      "text": "Engineers had originally written that routine, called Power Peg, strictly for internal testing. Its strange job was to buy high and sell low across live test markets repeatedly.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange traders floor", "credit": "ARCHIVE • 2003 TEST DESIGN"},
+      "eyebrow": "FORENSIC FILE  •  2003 QA SCRIPT",
+      "headline": "Why Engineers Built an Algorithm to Lose Money",
+      "source": "SEC ORDER #70694 • SECTION III.A",
+      "subline": "LEGACY ROUTINE ANALYSIS • POWER PEG (WRITTEN 2003)",
+      "excerpt": "Power Peg was never meant for real customer money. It was designed to move stock prices up and down by intentionally buying high and selling low in closed tests.",
+      "highlight": "intentionally buying high and selling low"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "In a simulated test environment, intentionally losing money on every single fill proved that downstream accounting systems worked. In a live public market, it meant instant financial suicide.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "crop_left", "credit": "ARCHIVE • LIVE MARKET RISK"},
+      "eyebrow": "QA TOOL VS LIVE PRODUCTION",
+      "headline": "BUILT TO BURN CAPITAL IN TESTS",
+      "subline": "SAFE ONLY WHEN ISOLATED FROM REAL EXCHANGE CONNECTIONS"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "So in two thousand three, Knight retired Power Peg for good. Yet instead of deleting those dangerous lines from the repository, engineers simply turned off its activation switch.",
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "crop_right", "credit": "WALL STREET • NEW YORK"},
+      "eyebrow": "RETIRED IN 2003",
+      "headline": "TURNED OFF — NEVER DELETED",
+      "subline": "DEAD CODE LEFT COMPILING INTO EVERY RELEASE FOR 9 YEARS"
+    },
+    {
+      "kind": "document",
+      "mood": "mystery",
+      "cueWord": "stop limit",
+      "text": "Then came a second silent mistake. During a two thousand five code cleanup, developers relocated the share counter elsewhere in SMARS, leaving Power Peg with no stop limit.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "credit": "SEC RECORD"},
+      "source": "SEC ORDER #70694 — SECTION III.B",
+      "date": "2005 REFACTOR",
+      "stamp": "SEC EXHIBIT",
+      "headline": "Cumulative Quantity Tracking Removed",
+      "excerpt": "In 2005, Knight moved the function that tracked cumulative shares from Power Peg to an earlier point in the SMARS code, leaving Power Peg with no stop limit.",
+      "highlight": "leaving Power Peg with no stop limit",
+      "highlightColor": "yellow"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Because nobody thought Power Peg would ever run again, no code reviewer noticed that removing its internal counter had turned a retired test routine into a perpetual motion machine.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "JERSEY CITY DC • 2005–2012"},
+      "eyebrow": "SEVEN YEARS DORMANT",
+      "headline": "A SLEEPING INFINITE LOOP",
+      "subline": "ZERO ERRORS REPORTED UNTIL THE FLAG BIT RETURNED"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "That fateful trigger arrived in July twenty twelve, when the New York Stock Exchange launched its brand-new Retail Liquidity Program, forcing Wall Street brokers to adapt on a deadline.",
+      "glossary": {"term": "NYSE RLP", "definition": "Retail Liquidity Program — new NYSE order routing program launched August 1, 2012."},
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "push_in", "credit": "NYSE • RETAIL LIQUIDITY PROGRAM"},
+      "eyebrow": "JULY 2012  •  NEW EXCHANGE MANDATE",
+      "headline": "RETAIL LIQUIDITY PROGRAM LAUNCH",
+      "subline": "MANDATORY GO-LIVE: AUGUST 1, 2012 AT 09:30 AM",
+      "sfx": "thud"
+    },
+    {
+      "kind": "document",
+      "mood": "tense",
+      "cueWord": "reused the flag",
+      "text": "Instead of inventing a clean new message flag for RLP orders, Knight's developers reused the flag bit that had once pointed straight to Power Peg nine years earlier.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "credit": "SEC RECORD"},
+      "source": "SEC ORDER #70694 — SECTION III.C",
+      "date": "JULY 2012",
+      "stamp": "FLAG REUSED",
+      "headline": "Dormant Activation Bit Reassigned",
+      "excerpt": "To save protocol space for the 2012 NYSE RLP rollout, Knight developers reused the flag field previously reserved for the retired Power Peg test function.",
+      "highlight": "reused the flag field previously reserved for the retired Power Peg",
+      "highlightColor": "red"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "On paper, reusing an old flag looked completely safe—because the new July release replaced Power Peg's behavior whenever that bit arrived. Safe, provided every single server updated cleanly.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "wide", "credit": "SMARS PRODUCTION CLUSTER"},
+      "eyebrow": "ACT III  •  ONE SKIPPED SERVER",
+      "headline": "SAFE CODE — IF DEPLOYED EVERYWHERE",
+      "subline": "ALL EIGHT SMARS SERVERS NEEDED THE NEW BINARY"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "But inside Knight Capital in twenty twelve, there were no automated deployment pipelines pushing updates uniformly across production. Deployment meant logging in by hand, one server at a time.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "push_in", "credit": "MANUAL DEPLOYMENT WORKFLOW"},
+      "eyebrow": "HIGH-RISK OPERATIONS",
+      "headline": "NO AUTOMATED DEPLOYMENT SYSTEM",
+      "subline": "ENGINEERS COPIED PRODUCTION BINARIES BY HAND"
+    },
+    {
+      "kind": "editorial_vox",
+      "voxMode": "single_8",
+      "mood": "mystery",
+      "cueWord": "Server eight",
+      "text": "During the pre-launch rollout, a technician copied the new binary manually onto seven machines, accidentally skipped Server eight completely, and walked away believing the cluster was ready.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "credit": "JERSEY CITY DATA CENTER"},
+      "eyebrow": "FORENSIC AUDIT  •  MANUAL DEPLOYMENT",
+      "headline": "Seven Servers Updated. One Missed.",
+      "source": "SEC ORDER #70694 • SECTION III.D",
+      "subline": "INTERNAL DEPLOYMENT LOG • SMARS-CLUSTER (8 NODES)",
+      "excerpt": "A technician manually copied the new 2012 RLP binary onto seven production machines. Server 8 was accidentally skipped — leaving 2003 Power Peg live.",
+      "highlight": "Server 8 was accidentally skipped — leaving 2003 Power Peg live"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Nobody ran an automated hash check across all eight machines afterward. Knight had no written two-person sign-off rule to confirm Server eight matched Servers one through seven.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "NO DEPLOY VERIFICATION"},
+      "eyebrow": "MISSING SAFEGUARD",
+      "headline": "ZERO AUTOMATED CHECKSUMS",
+      "subline": "NO SECOND ENGINEER VERIFIED SERVER #8 BEFORE MARKET OPEN"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "At eight oh one A.M. on August first, nearly ninety minutes before opening bell, SMARS powered up for the day—and immediately noticed something dangerously wrong on Server eight.",
+      "mediaQuery": {"type": "image", "query": "Wall Street Bull Charging Bull New York", "cameraPreset": "wide", "credit": "AUGUST 1, 2012 • 08:01 AM EDT"},
+      "eyebrow": "08:01 AM EDT  •  PRE-MARKET BOOT",
+      "headline": "THE CLUSTER KNEW SOMETHING WAS WRONG",
+      "subline": "97 WARNING EMAILS GENERATED BEFORE THE BELL"
+    },
+    {
+      "kind": "document",
+      "mood": "tense",
+      "cueWord": "automated emails",
+      "text": "Over the next seventy minutes, SMARS fired ninety-seven automated emails warning that Power Peg had been referenced. Because those warnings were marked low priority, nobody read them.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "credit": "ALERT LOGS"},
+      "source": "SEC ORDER #70694 — SECTION III.E",
+      "date": "08:01 – 09:12 AM EDT",
+      "stamp": "UNREAD ALERTS",
+      "headline": "97 Pre-Market Warning Emails Ignored",
+      "excerpt": "Between 08:01 and 09:12 AM, SMARS generated 97 automated emails warning that Power Peg was active. Knight did not designate those messages as high-priority alerts.",
+      "highlight": "generated 97 automated emails warning that Power Peg was active",
+      "highlightColor": "yellow"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Eight thirty. Nine o'clock. Nine twenty-nine. Across lower Manhattan, brokers read morning research while two hundred twelve new RLP customer orders queued silently inside SMARS.",
+      "mediaListQueries": [
+        {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "wide", "credit": "ARCHIVE • NYSE PRE-OPEN"},
+        {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_left", "credit": "WALL STREET • 09:29 AM EDT"}
+      ],
+      "eyebrow": "09:29:59 AM EDT",
+      "headline": "ONE SECOND BEFORE THE BELL",
+      "subline": "212 RETAIL LIQUIDITY ORDERS WAITING IN QUEUE"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "tense",
+      "text": "At nine thirty sharp, the opening bell rang across Wall Street. Within seconds, one in every eight RLP orders landed on Server eight, firing the forgotten two thousand three code.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "push_in", "credit": "NYSE OPENING BELL • 09:30 AM EDT"},
+      "eyebrow": "09:30:00 AM EDT  •  DETONATION",
+      "stat": "09:30:00",
+      "headline": "SERVER 8 RECEIVES THE REUSED FLAG",
+      "subline": "POWER PEG WAKES UP WITH ZERO STOP LIMIT",
+      "sfx": "boom"
+    },
+    {
+      "kind": "editorial_vox",
+      "voxMode": "single_8",
+      "mood": "tense",
+      "cueWord": "infinite loop",
+      "text": "Each time Server eight filled shares on the exchange, the missing stop counter told it the customer order stayed completely unfilled—trapping it inside a merciless infinite loop.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange trading floor", "credit": "ARCHIVE • RUNAWAY ORDERS"},
+      "eyebrow": "ACT IV  •  BLIND IN THE WAR ROOM",
+      "headline": "Inside the Runaway Feedback Loop",
+      "source": "SEC ORDER #70694 • EXECUTION TRACE",
+      "subline": "EXECUTION CYCLE • SERVER 8 (MISSING STOP CHECK)",
+      "excerpt": "Without cumulative quantity tracking, every market fill bounced back as an unfulfilled parent order — trapping Server 8 in an unbounded infinite loop.",
+      "highlight": "trapping Server 8 in an unbounded infinite loop"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "tense",
+      "text": "Just two hundred twelve customer orders instantly exploded into more than four million rogue child trades. Over three hundred ninety-seven million shares slammed one hundred fifty-four stocks.",
+      "mediaQuery": {"type": "image", "query": "Wall Street Bull Charging Bull New York", "cameraPreset": "push_in", "credit": "WALL STREET • NEW YORK"},
+      "eyebrow": "09:30 – 10:15 AM EDT  •  EXECUTION STORM",
+      "stat": "4,000,000",
+      "headline": "ROGUE TRADES FROM JUST 212 ORDERS",
+      "subline": "397 MILLION SHARES ACROSS 154 NYSE STOCKS",
+      "sfx": "boom"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Across the New York Stock Exchange floor, traders stared in disbelief as quiet blue-chip stocks lurched up and down violently on bizarre floods of tiny hundred-share orders.",
+      "mediaListQueries": [
+        {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "crop_right", "credit": "ARCHIVE • NYSE VOLATILITY"},
+        {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "push_in", "credit": "WALL STREET • NEW YORK"}
+      ],
+      "eyebrow": "PRICE DISTORTION • 154 STOCKS",
+      "headline": "BUYING HIGH AND SELLING LOW AT MACHINE SPEED",
+      "subline": "SHARES SWINGING UP TO 10% WITHIN MINUTES"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Because Power Peg was engineered to test price extremes, Server eight aggressively bought shares on the offer and dumped them on the bid—losing money on practically every single trade.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_detail", "credit": "NYSE • SYSTEMATIC LOSS"},
+      "eyebrow": "PROGRAMMED TO LOSE",
+      "headline": "EVERY EXECUTION LOCKED IN A LOSS",
+      "subline": "SPREADS DRAINED CAPITAL AT MILLISECOND FREQUENCY"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "tense",
+      "text": "Inside Jersey City's war room, risk monitors turned solid crimson as Knight racked up roughly seven billion dollars in unwanted positions, bleeding ten million dollars every single minute.",
+      "mediaQuery": {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "push_in", "credit": "FINANCIAL DISTRICT • NEW YORK"},
+      "eyebrow": "09:42 AM EDT  •  UNINTENDED EXPOSURE",
+      "stat": "$7 BILLION",
+      "headline": "IN ACCIDENTAL MARKET POSITIONS",
+      "subline": "LOSING -$10,000,000 EVERY SINGLE MINUTE"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Worse yet, Knight had zero automated pre-trade dollar limits blocking SMARS once losses crossed a threshold. Even if a router went insane, nothing in software forced it to stop.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "crop_left", "credit": "MISSING CIRCUIT BREAKER"},
+      "eyebrow": "ZERO HARD RISK CAPS",
+      "headline": "NO AUTOMATED CIRCUIT BREAKER",
+      "subline": "SYSTEM KEPT ACCEPTING ORDERS EVEN AT -$200M"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Nobody in the room had a clear incident runbook pointing straight to Server eight. Engineers scrambled frantically through log files while millions of dollars evaporated with every passing breath.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "wide", "credit": "JERSEY CITY WAR ROOM"},
+      "eyebrow": "ZERO DIAGNOSTIC VISIBILITY",
+      "headline": "BLIND IN THE WAR ROOM",
+      "subline": "NO TELEMETRY PINPOINTING THE LEGACY CODE PATH"
+    },
+    {
+      "kind": "silence_twist",
+      "mood": "silence",
+      "text": "Knight had no documented kill switch. After twenty-eight agonizing minutes of blind panic, engineers reached for the oldest instinct in software operations.",
+      "lines": [
+        "NO DOCUMENTED KILL SWITCH.",
+        "28 MINUTES OF BLIND PANIC.",
+        "THEN THEY HIT ROLLBACK."
+      ],
+      "sfx": "thud"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Seeing the disaster start the exact minute the July update went live, the team naturally assumed the brand-new code was broken—so they ordered an emergency rollback immediately.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "09:58 AM EDT • ROLLBACK INITIATED"},
+      "eyebrow": "ACT V  •  THE ROLLBACK THAT MADE IT 8X WORSE",
+      "headline": "UNINSTALLING THE ONLY SAFE CODE",
+      "subline": "ENGINEERS BLAMED THE NEW UPDATE INSTEAD OF SERVER #8"
+    },
+    {
+      "kind": "editorial_vox",
+      "voxMode": "all_8",
+      "mood": "tense",
+      "cueWord": "all eight",
+      "text": "That panic decision turned catastrophic. Removing the update restored the dormant two thousand three code everywhere—meaning all eight servers immediately fired Power Peg at the exact same time.",
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "credit": "WALL STREET • 09:58 AM EDT"},
+      "eyebrow": "09:58:00 AM EDT  •  CATASTROPHIC ROLLBACK",
+      "headline": "8X Multiplier: All Eight Servers Infected",
+      "source": "09:58 AM EDT • EMERGENCY ROLLBACK",
+      "subline": "CLUSTER ROLLBACK LOG • ALL 8 SERVERS REVERTED",
+      "excerpt": "Engineers uninstalled the 2012 release from the seven healthy servers. All eight servers immediately began executing 2003 Power Peg at once.",
+      "highlight": "All eight servers immediately began executing 2003 Power Peg at once",
+      "sfx": "explosion"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Instead of slowing down, Knight's order storm instantly multiplied eightfold. Every single machine in the Jersey City cluster was now hammering the New York Stock Exchange relentlessly.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "crop_right", "credit": "ARCHIVE • 10:00 AM EDT"},
+      "eyebrow": "10:00 AM EDT  •  EXPONENTIAL COLLAPSE",
+      "headline": "EIGHT SERVERS BLEEDING SIMULTANEOUSLY",
+      "subline": "LOSSES SURGED BEYOND $300 MILLION IN MINUTES"
+    },
+    {
+      "kind": "loss_chart",
+      "mood": "tense",
+      "cueWord": "four hundred forty",
+      "text": "At ten fifteen, engineers finally severed SMARS from the markets altogether. By the time Knight unwound its unintended shares, the realized loss totaled four hundred forty million dollars.",
+      "eyebrow": "CUMULATIVE PRE-TAX LOSS  •  AUGUST 1, 2012",
+      "headline": "45 MINUTES TO INSOLVENCY",
+      "stat": "-$440,000,000",
+      "unit": "$M",
+      "points": [
+        {"x": "09:30", "y": 0, "label": "$0"},
+        {"x": "09:38", "y": -80, "label": "-$80M"},
+        {"x": "09:50", "y": -180, "label": "-$180M"},
+        {"x": "09:58", "y": -220, "label": "8X ROLLBACK", "alert": true},
+        {"x": "10:15", "y": -440, "label": "-$440M", "alert": true}
+      ]
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Later that afternoon, the New York Stock Exchange canceled trades in six tiny stocks whose prices moved more than thirty percent—yet left Knight holding the remaining hundred forty-eight stocks.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "wide", "credit": "NYSE • POST-TRADE RULING"},
+      "eyebrow": "THE EXCHANGE VERDICT",
+      "headline": "148 OF 154 STOCKS LEFT UNBROKEN",
+      "subline": "KNIGHT HAD TO ABSORB NEARLY ALL $440M IN LOSSES ALONE"
+    },
+    {
+      "kind": "silence_twist",
+      "mood": "silence",
+      "text": "Forty-five minutes of bad software had erased more than Knight's entire liquid capital—nearly double what the firm earned in an entire year.",
+      "lines": [
+        "45 MINUTES.",
+        "$440,000,000 GONE.",
+        "30 YEARS OF TRUST SHATTERED."
+      ],
+      "sfx": "boom"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "sad",
+      "text": "Once Wall Street grasped the true scale of the loss, Knight Capital's stock collapsed seventy-five percent in forty-eight hours, pushing the trading giant toward overnight bankruptcy.",
+      "mediaListQueries": [
+        {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "pull_out", "credit": "FINANCIAL DISTRICT • NEW YORK"},
+        {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_right", "credit": "WALL STREET • NEW YORK"}
+      ],
+      "eyebrow": "ACT VI  •  AFTERMATH & POSTMORTEM",
+      "stat": "-75%",
+      "headline": "STOCK WIPED OUT IN 48 HOURS",
+      "subline": "MAJOR BROKERS ROUTED ORDER FLOW AWAY IMMEDIATELY"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Before the sun even set on August first, giant brokers including Fidelity and TD Ameritrade temporarily pulled their customer order flow away, cutting off Knight's lifeline.",
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "crop_left", "credit": "WALL STREET • CLIENT EXODUS"},
+      "eyebrow": "CONFIDENCE COLLAPSE • AUGUST 1 EVENING",
+      "headline": "BROKERS HALTED ORDER FLOW OVERNIGHT",
+      "subline": "FIDELITY & TD AMERITRADE STEPPED BACK IMMEDIATELY"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "The next morning, Chief Executive Thomas Joyce went live on national television to confront the crisis directly, admitting the staggering loss came from one software failure.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "wide", "credit": "AUGUST 2, 2012 • PUBLIC RESPONSE"},
+      "eyebrow": "AUGUST 2, 2012  •  PUBLIC ADMISSION",
+      "headline": "A SOFTWARE BUG BROUGHT DOWN THE GIANT",
+      "subline": "CEO THOMAS JOYCE CONFIRMED THE $440M TRADING LOSS"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "sad",
+      "text": "Without fresh cash before Monday morning, Knight could not legally open for business. An investor group injected four hundred million dollars, wiping out seventy-three percent of shareholder ownership.",
+      "mediaQuery": {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "wide", "credit": "MANHATTAN • AUGUST 2012"},
+      "eyebrow": "EMERGENCY CAPITAL RESCUE",
+      "stat": "$400M",
+      "headline": "WEEKEND BAILOUT  •  73% SHAREHOLDER DILUTION",
+      "subline": "ACQUIRED BY RIVAL GETCO JUST MONTHS LATER"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Months later, rival electronic market maker Getco acquired what remained of Knight Capital, effectively ending the independent thirty-year reign of Wall Street's biggest retail router.",
+      "mediaQuery": {"type": "image", "query": "Jersey City skyline Exchange Place", "cameraPreset": "push_in", "credit": "EXCHANGE PLACE • END OF AN ERA"},
+      "eyebrow": "MERGER & ACQUISITION • 2013",
+      "headline": "THE END OF KNIGHT CAPITAL",
+      "subline": "MERGED WITH GETCO TO FORM KCG HOLDINGS"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Shockwaves rippled all the way to Washington. Regulators realized modern electronic routing moved so fast that one unpatched node could destabilize over a hundred public stocks before noon.",
+      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "wide", "credit": "WASHINGTON, D.C. • REGULATORY SHIFT"},
+      "eyebrow": "INDUSTRY WAKE-UP CALL",
+      "headline": "MICROSECOND SPEED DEMANDS HARD LIMITS",
+      "subline": "PRE-TRADE RISK GATES BECAME MANDATORY ON WALL STREET"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "In October twenty thirteen, the Securities and Exchange Commission fined Knight twelve million dollars under the Market Access Rule, publishing every technical failure for the entire world to read.",
+      "glossary": {"term": "RULE 15C3-5", "definition": "SEC Market Access Rule requiring brokers to enforce hard pre-trade risk limits and automated kill controls."},
+      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "push_in", "credit": "SEC HEADQUARTERS • WASHINGTON, D.C."},
+      "eyebrow": "OCTOBER 16, 2013  •  SEC RELEASE NO. 70694",
+      "headline": "$12 MILLION SEC PENALTY",
+      "subline": "LANDMARK MARKET ACCESS RULE ENFORCEMENT ACTION"
+    },
+    {
+      "kind": "swiss_cheese",
+      "mood": "sad",
+      "text": "Looking back, no single mistake killed Knight Capital by itself. Five completely separate defenses failed together, aligning cleanly like holes through five slices of Swiss cheese.",
+      "eyebrow": "SYSTEM POSTMORTEM • JAMES REASON MODEL",
+      "headline": "FIVE ALIGNED FAILURES",
+      "layers": [
+        {"title": "LAYER 1", "sub": "9-Yr Dead Code"},
+        {"title": "LAYER 2", "sub": "Reused Flag"},
+        {"title": "LAYER 3", "sub": "Manual Deploy"},
+        {"title": "LAYER 4", "sub": "97 Ignored Emails"},
+        {"title": "LAYER 5", "sub": "No Kill Switch"}
+      ]
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "First, dead code sat inside production for nine years. Second, its safety counter was stripped away. Third, engineers reused that flag bit and manually skipped Server eight.",
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "crop_right", "credit": "POSTMORTEM CHECKLIST • LESSONS LEARNED"},
+      "eyebrow": "ENGINEERING LESSONS",
+      "headline": "DELETE DEAD CODE. AUTOMATE DEPLOYS.",
+      "subline": "MANUAL DEPLOYMENT TO CRITICAL CLUSTERS IS A TICKING BOMB"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Fourth, ninety-seven urgent error emails vanished unread inside noisy inboxes. And fifth, when disaster finally hit, nobody knew which switch shut down the runaway loop safely.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "pull_out", "credit": "WALL STREET • NEW YORK"},
+      "eyebrow": "OBSERVABILITY & INCIDENT RESPONSE",
+      "headline": "PAGE ON ANOMALIES. TEST YOUR KILL SWITCH.",
+      "subline": "IF YOU CANNOT PROVE A ROLLBACK IS SAFE, DO NOT PRESS IT"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "Today, Knight Capital stands as one of software engineering's most famous case studies—proving that automated deploys and tested circuit breakers are survival tools, not optional extras.",
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "push_in", "credit": "MODERN ENGINEERING STANDARDS"},
+      "eyebrow": "LASTING LEGACY",
+      "headline": "AUTOMATION SAVES COMPANIES",
+      "subline": "REQUIRED READING FOR HIGH-RELIABILITY SOFTWARE TEAMS"
+    },
+    {
+      "kind": "title_card",
+      "mood": "sad",
+      "text": "In high-speed software, the bug that destroys a company is rarely written that morning. Often, it is forgotten code left behind years ago—waiting quietly in the dark.",
+      "mediaQuery": {"type": "image", "query": "Lower Manhattan Financial District skyline", "credit": "WALL STREET • NEW YORK"},
+      "eyebrow": "SYSTEM POSTMORTEM  •  AUGUST 1, 2012",
+      "headline": "THE 45-MINUTE MELTDOWN",
+      "subline": "KNIGHT CAPITAL GROUP"
+    }
+  ]
+}

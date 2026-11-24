@@ -2,6 +2,7 @@
   "title": "One Missed Server Cost $440 Million in 45 Minutes | Knight Capital",
   "slug": "knight_docu_3min",
   "voice": "am_michael",
+  "voiceRef": "voices/my_voices_02.mp3",
   "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail market maker—lost $440 million in 45 minutes. Based on SEC Administrative Order Release No. 70694, this documentary breaks down how a dormant 2003 test script, a reused feature flag, one skipped production server, and a panic rollback destroyed a 30-year trading giant.",
   "factCheck": [
     "SEC Administrative Order Release No. 70694 (October 16, 2013)",
@@ -60,7 +61,7 @@
       "overlayMap": "smars_nodes",
       "glossary": {"term": "SMARS", "definition": "Smart Market Access Routing System — Knight's automated high-speed order router."},
       "mediaListQueries": [
-        {"type": "video", "archiveId": "server-room-with-seismic-isolation-floor-in-east-japan-great-earthquake-disaster-march-11-2011", "clipStartSec": 6, "query": "server room", "fallbackQuery": "Data center server racks", "credit": "INFRASTRUCTURE • DATA CENTER"},
+        {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "push_in", "credit": "INFRASTRUCTURE • DATA CENTER"},
         {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "NETWORKING • PATCH PANEL & SWITCHES"}
       ],
       "eyebrow": "CORE INFRASTRUCTURE  •  8 PRODUCTION NODES",
@@ -73,7 +74,7 @@
       "mood": "mystery",
       "text": "Yet buried deep inside SMARS slept a nine-year-old piece of test code called Power Peg, written back in two thousand three to buy stocks high and sell them low during internal stress tests.",
       "glossary": {"term": "POWER PEG", "definition": "Retired 2003 internal QA script designed to buy high and sell low for stress testing."},
-      "mediaQuery": {"type": "image", "query": "Data center server racks", "cameraPreset": "crop_detail", "credit": "LEGACY PRODUCTION SERVERS"},
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "crop_detail", "credit": "LEGACY PRODUCTION SERVERS"},
       "eyebrow": "2003 LEGACY CODE  •  POWER PEG SCRIPT",
       "headline": "DORMANT INTERNAL TEST ROUTINE",
       "subline": "WRITTEN IN 2003 — NEVER DELETED FROM PRODUCTION"
@@ -83,7 +84,7 @@
       "mood": "mystery",
       "cueWord": "stop counter",
       "text": "Knight retired Power Peg in two thousand three, yet never deleted the code. Worse still, a two thousand five refactor moved its safety stop counter out of the routine, leaving an infinite loop behind.",
-      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "SEC RECORD"},
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "credit": "SEC RECORD"},
       "source": "SEC ORDER #70694 — SECTION III.B",
       "date": "2005 REFACTOR",
       "stamp": "SEC EXHIBIT",
@@ -104,35 +105,24 @@
       "sfx": "thud"
     },
     {
-      "kind": "terminal",
-      "mood": "tense",
+      "kind": "editorial_vox",
+      "voxMode": "single_8",
+      "mood": "mystery",
       "cueWord": "Server eight",
       "text": "Knight deployed the update manually across eight servers. A technician copied the new binary to seven machines, accidentally skipped Server eight, and nobody ran an automated verification check.",
-      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "JERSEY CITY DC"},
-      "eyebrow": "ops@jersey-city-dc: ~/smars-deploy",
-      "headline": "SMARS CLUSTER (7 / 8 UPDATED)",
-      "lines": [
-        "$ deploy-smars --release rlp-2012-08 --manual",
-        "[OK]  srv-01..srv-07.smars.prod  updated (RLP binary)",
-        "[ERR] srv-08.smars.prod  SKIPPED — 2003 POWER PEG ACTIVE",
-        "[WARN] 0 automated checksum checks executed"
-      ],
-      "servers": [
-        {"label": "SRV-01", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-02", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-03", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-04", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-05", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-06", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-07", "sub": "RLP 2012", "status": "ok"},
-        {"label": "SRV-08", "sub": "2003 POWER PEG", "status": "fail"}
-      ]
+      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "credit": "JERSEY CITY DATA CENTER"},
+      "eyebrow": "FORENSIC AUDIT  •  SMARS DEPLOYMENT",
+      "headline": "Seven Servers Updated. One Missed.",
+      "source": "SEC ORDER #70694 • DEPLOYMENT",
+      "subline": "INTERNAL DEPLOYMENT LOG • SMARS-CLUSTER (8 NODES)",
+      "excerpt": "A technician manually copied the new 2012 RLP binary onto seven production machines. Server 8 was accidentally skipped — leaving 2003 Power Peg live.",
+      "highlight": "Server 8 was accidentally skipped — leaving 2003 Power Peg live"
     },
     {
       "kind": "media_hero",
       "mood": "tense",
       "text": "Before the opening bell, SMARS even sent ninety-seven automated warning emails flagging the Power Peg error, but because they were low-priority alerts, nobody read them in time.",
-      "mediaQuery": {"type": "video", "archiveId": "server-room-with-seismic-isolation-floor-in-east-japan-great-earthquake-disaster-march-11-2011", "clipStartSec": 2, "query": "server room", "fallbackQuery": "Ethernet cables network switch server", "credit": "JERSEY CITY DATA CENTER"},
+      "mediaQuery": {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "push_in", "credit": "JERSEY CITY DATA CENTER"},
       "eyebrow": "08:01 – 09:12 AM EDT  •  STARTUP LOGS",
       "headline": "97 WARNING EMAILS UNREAD",
       "subline": "LOW-PRIORITY ALERTS FLAGGED POWER PEG BEFORE BELL"
@@ -141,7 +131,7 @@
       "kind": "big_stat",
       "mood": "tense",
       "text": "At nine thirty sharp, real customer orders hit Server eight. Just two hundred twelve parent orders exploded into four million rogue stock trades across one hundred fifty-four tickers.",
-      "mediaQuery": {"type": "video", "archiveId": "stockmarketcrashof2008", "clipStartSec": 18, "query": "stock market", "fallbackQuery": "New York Stock Exchange trading floor", "credit": "ARCHIVE • MARKET TURMOIL"},
+      "mediaQuery": {"type": "image", "query": "Wall Street Bull Charging Bull New York", "cameraPreset": "push_in", "credit": "WALL STREET • NEW YORK"},
       "eyebrow": "09:30:00 AM EDT  •  SERVER #8 ROGUE EXECUTION",
       "stat": "4,000,000",
       "headline": "ROGUE TRADES FROM JUST 212 ORDERS",
@@ -172,29 +162,18 @@
       "sfx": "thud"
     },
     {
-      "kind": "terminal",
+      "kind": "editorial_vox",
+      "voxMode": "all_8",
       "mood": "tense",
       "cueWord": "all eight",
       "text": "By uninstalling the new code from the seven healthy servers, they restored the old binary across the entire cluster. All eight servers began firing Power Peg at the exact same time.",
-      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "09:58 AM EDT"},
-      "eyebrow": "09:58:00 AM EDT  •  ROLLBACK DEPLOYED",
-      "headline": "8X DAMAGE MULTIPLIER (8 / 8 INFECTED)",
-      "lines": [
-        "$ rollback-smars --target srv-01..srv-07 --revert-2003",
-        "[OK]  srv-01..srv-07 reverted to legacy binary",
-        "[FATAL] ALL 8 SERVERS NOW EXECUTING POWER PEG",
-        "[BURN]  LOSS ACCELERATION: 8X MULTIPLIER"
-      ],
-      "servers": [
-        {"label": "SRV-01", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-02", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-03", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-04", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-05", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-06", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-07", "sub": "POWER PEG", "status": "fail"},
-        {"label": "SRV-08", "sub": "POWER PEG", "status": "fail"}
-      ],
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "credit": "WALL STREET • 09:58 AM EDT"},
+      "eyebrow": "09:58:00 AM EDT  •  EMERGENCY ROLLBACK",
+      "headline": "8X Multiplier: All Eight Servers Infected",
+      "source": "09:58 AM EDT • EMERGENCY ROLLBACK",
+      "subline": "CLUSTER ROLLBACK LOG • ALL 8 SERVERS REVERTED",
+      "excerpt": "Engineers uninstalled the 2012 release from the seven healthy servers. All eight servers immediately began executing 2003 Power Peg at once.",
+      "highlight": "All eight servers immediately began executing 2003 Power Peg at once",
       "sfx": "explosion"
     },
     {
@@ -219,8 +198,8 @@
       "mood": "sad",
       "text": "Within forty-eight hours, Knight's stock collapsed seventy-five percent. Only an emergency four hundred million dollar investor bailout kept the firm from instant liquidation.",
       "mediaListQueries": [
-        {"type": "video", "archiveId": "stockmarketcrashof2008", "clipStartSec": 4, "query": "stock market", "fallbackQuery": "Lower Manhattan Financial District skyline", "credit": "ARCHIVE • MARKET FALLOUT"},
-        {"type": "image", "query": "Lower Manhattan Financial District skyline", "credit": "FINANCIAL DISTRICT • NEW YORK"}
+        {"type": "image", "query": "Lower Manhattan Financial District skyline", "cameraPreset": "pull_out", "credit": "FINANCIAL DISTRICT • NEW YORK"},
+        {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_right", "credit": "WALL STREET • NEW YORK"}
       ],
       "eyebrow": "48-HOUR MARKET COLLAPSE",
       "stat": "-75%",
