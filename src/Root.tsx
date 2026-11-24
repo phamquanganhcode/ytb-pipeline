@@ -2,6 +2,8 @@ import React from 'react';
 import {Composition, staticFile} from 'remotion';
 import {Episode, EpisodeProps, overlapBefore, SceneData} from './Episode';
 import {Thumbnail, ThumbnailProps} from './Thumbnail';
+import {DocuPrototype, DocuPrototypeProps} from './DocuPrototype';
+import {DocuEngine, DocuManifest} from './DocuEngine';
 
 // Scenes and durations come from public/manifest.json, written by make_video.py.
 export const Root: React.FC = () => (
@@ -77,6 +79,7 @@ export const Root: React.FC = () => (
 							: 'SYSTEM POSTMORTEM'
 						: 'TRUE STORY';
 
+					const hasExplicitThumb = Boolean(manifest.meta?.thumbnail);
 					return {
 						props: {
 							title: (thumb.title || mainHeadline).toUpperCase().slice(0, 32),
@@ -85,14 +88,76 @@ export const Root: React.FC = () => (
 							face,
 							bg,
 							stat:
-								thumb.stat ||
-								(manifest.scenes?.[0]?.counter
+								thumb.stat ??
+								(!hasExplicitThumb && manifest.scenes?.[0]?.counter
 									? `${manifest.scenes[0].counter.label}: ${manifest.scenes[0].counter.value}`
-									: undefined),
+									: ''),
 						},
 					};
 				} catch {
 					return {props: {}};
+				}
+			}}
+		/>
+
+		<Composition
+			id="DocuPrototype"
+			component={DocuPrototype}
+			width={1920}
+			height={1080}
+			fps={30}
+			durationInFrames={1500}
+			defaultProps={
+				{
+					audio: 'docu/narration.wav',
+					fps: 30,
+					durationInFrames: 1500,
+					beats: [0, 240, 480, 720, 960, 1140, 1380],
+					hasNyseImg: false,
+					hasFloorImg: false,
+					hasServerImg: false,
+				} as DocuPrototypeProps
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const meta = await fetch(staticFile('docu/proto_manifest.json')).then((r) => r.json());
+					return {
+						fps: meta.fps ?? 30,
+						durationInFrames: meta.durationInFrames ?? 1500,
+						props: meta as DocuPrototypeProps,
+					};
+				} catch {
+					return {props};
+				}
+			}}
+		/>
+
+		<Composition
+			id="DocuEngine"
+			component={DocuEngine}
+			width={1920}
+			height={1080}
+			fps={30}
+			durationInFrames={5400}
+			defaultProps={
+				{
+					title: 'Documentary',
+					fps: 30,
+					durationInFrames: 5400,
+					audio: 'docu/narration_3min.wav',
+					scenes: [],
+				} as DocuManifest
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const manifest = await fetch(staticFile('docu/manifest.json')).then((r) => r.json());
+					return {
+						fps: manifest.fps ?? 30,
+						durationInFrames: manifest.durationInFrames ?? 5400,
+						props: manifest as DocuManifest,
+					};
+				} catch {
+					return {props};
 				}
 			}}
 		/>

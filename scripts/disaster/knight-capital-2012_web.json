@@ -1,0 +1,591 @@
+{
+  "title": "One Missed Server Cost $440 Million in 45 Minutes | Knight Capital",
+  "lang": "en",
+  "tts": "edge",
+  "voice": "en-US-AndrewMultilingualNeural",
+  "friendVoice": "en-US-BrianMultilingualNeural",
+  "captions": true,
+  "captionWords": 4,
+  "captionStyle": "kinetic",
+  "showCounter": true,
+  "iconStyle": "bubble",
+  "meta": {
+    "format": "disaster",
+    "theme": "disaster",
+    "thumbnail": {
+      "badge": "SYSTEM POSTMORTEM",
+      "title": "-$440M",
+      "subtitle": "IN 45 MINUTES"
+    },
+    "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail market maker—lost $440 million in just 45 minutes. Based on the SEC Administrative Order (Oct 2013), this 2-minute forensic preview shows how one skipped server, a reused dead-code flag, and a panic rollback wiped out a 30-year trading giant.",
+    "factCheck": [
+      "SEC Administrative Order Release No. 70694 (Oct 16, 2013)",
+      "Realized pre-tax loss: $440M+ across 45 minutes (09:30 to 10:15 AM EDT)",
+      "212 parent orders triggered >4M child executions across 154 stocks (~397M shares)"
+    ],
+    "timeline": [
+      {
+        "time": "09:30 AM",
+        "label": "Market Opens",
+        "status": "normal",
+        "sceneIndex": 0
+      },
+      {
+        "time": "09:31 AM",
+        "label": "Server 8 Rogue",
+        "status": "warning",
+        "sceneIndex": 9
+      },
+      {
+        "time": "09:58 AM",
+        "label": "Rollback 8x Bug",
+        "status": "critical",
+        "sceneIndex": 15
+      },
+      {
+        "time": "10:15 AM",
+        "label": "-$440M Loss",
+        "status": "fatal",
+        "sceneIndex": 16
+      }
+    ],
+    "chapters": [
+      {
+        "title": "Forty-Five Minutes to Ruin",
+        "scene": 0,
+        "mood": "mystery"
+      },
+      {
+        "title": "The Reused Flag & Skipped Server",
+        "scene": 5,
+        "mood": "calm"
+      },
+      {
+        "title": "09:30 AM: Zombie Code Awakens",
+        "scene": 9,
+        "mood": "tense"
+      },
+      {
+        "title": "The Rollback That Made It 8x Worse",
+        "scene": 14,
+        "mood": "tense"
+      },
+      {
+        "title": "The Swiss Cheese Postmortem",
+        "scene": 18,
+        "mood": "sad"
+      }
+    ]
+  },
+  "cast": {
+    "you": {
+      "face": "knight-engineer",
+      "shirt": "#1e293b",
+      "faceIdea": "2012 Wall Street systems engineer at Knight Capital, early 30s, neat brown hair, thin rectangular glasses, crisp light-blue dress shirt collar and dark navy tie"
+    },
+    "trader": {
+      "name": "Floor Trader",
+      "face": "knight-trader",
+      "shirt": "#0f766e",
+      "faceIdea": "2012 NYSE floor trader in his 40s, short slicked-back dark hair, intense eyes, teal trading jacket collar and white shirt"
+    },
+    "exec": {
+      "name": "Risk Director",
+      "face": "knight-exec",
+      "shirt": "#475569",
+      "faceIdea": "Senior Wall Street risk executive, 50s, silver-streaked hair, sharp jawline, charcoal suit collar and burgundy tie"
+    }
+  },
+  "scenes": [
+    {
+      "text": "It is nine thirty in the morning on August first, twenty twelve, and Wall Street's opening bell just rang.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "JERSEY CITY, 2012",
+      "counter": {
+        "label": "MARKET CLOCK",
+        "value": "09:30:00 AM"
+      },
+      "sfx": [
+        {
+          "sound": "thud",
+          "word": "bell"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "morning",
+          "pose": "idle",
+          "expression": "neutral"
+        }
+      ]
+    },
+    {
+      "text": "Within sixty seconds, your monitors at Knight Capital erupt in crimson alerts as ten million dollars vanishes every minute.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "fx": "alarm",
+      "counter": {
+        "label": "BURN RATE",
+        "value": "-$10M / MIN"
+      },
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "erupt"
+        }
+      ],
+      "actions": [
+        {
+          "who": "you",
+          "word": "alerts",
+          "pose": "point",
+          "expression": "shock"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$163,000 LOST / SECOND",
+          "word": "million"
+        }
+      ]
+    },
+    {
+      "text": "Forty-five minutes later, four hundred forty million dollars is gone.",
+      "pace": "dramatic",
+      "speaker": "narrator",
+      "bg": "city",
+      "counter": {
+        "label": "TOTAL LOSS",
+        "value": "-$440,000,000"
+      },
+      "sfx": [
+        {
+          "sound": "boom",
+          "word": "gone"
+        }
+      ],
+      "callouts": [
+        {
+          "text": "$440M IN 45 MINUTES",
+          "word": "forty"
+        }
+      ]
+    },
+    {
+      "text": "No hacker broke in.",
+      "pace": "dramatic",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "CAUSE",
+        "value": "INTERNAL BUG"
+      },
+      "icons": [
+        {
+          "icon": "hazard",
+          "word": "hacker",
+          "label": "NO HACKER"
+        }
+      ]
+    },
+    {
+      "text": "Instead, a forgotten piece of test code woke up inside Knight's production router, SMARS.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "SYSTEM",
+        "value": "SMARS ROUTER"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "code",
+          "label": "LATENT BUG"
+        }
+      ]
+    },
+    {
+      "text": "Back in two thousand three, engineers wrote a test script called Power Peg that bought shares high and sold low.",
+      "speaker": "narrator",
+      "bg": "office",
+      "stamp": "2003 -> 2012",
+      "counter": {
+        "label": "DEAD CODE",
+        "value": "POWER PEG"
+      },
+      "callouts": [
+        {
+          "text": "BUY HIGH / SELL LOW",
+          "word": "bought"
+        }
+      ]
+    },
+    {
+      "text": "They retired it, stripped out its safety limit in a refactor, yet left the dead code inside SMARS.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "LOOP LIMIT",
+        "value": "INFINITE"
+      },
+      "sfx": [
+        {
+          "sound": "glitch",
+          "word": "refactor"
+        }
+      ],
+      "doc": {
+        "source": "SEC ORDER #70694 — SECTION III.B",
+        "date": "2005 REFACTOR",
+        "headline": "Cumulative Quantity Tracking Removed",
+        "excerpt": "In 2005, Knight moved the function that tracked cumulative shares from Power Peg to an earlier point in the SMARS code, leaving Power Peg with no stop limit.",
+        "highlight": "leaving Power Peg with no stop limit",
+        "highlightColor": "yellow",
+        "stamp": "SEC EXHIBIT",
+        "word": "safety"
+      }
+    },
+    {
+      "text": "In July twenty twelve, to support a new NYSE retail program, developers reused that exact old Power Peg flag.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "JULY 2012",
+      "counter": {
+        "label": "FLAG REUSE",
+        "value": "RLP = POWER PEG"
+      },
+      "sfx": [
+        {
+          "sound": "buzzer",
+          "word": "reused"
+        }
+      ],
+      "diagram": {
+        "type": "data_flow",
+        "title": "SMARS FLAG COLLISION",
+        "subtitle": "Old Power Peg flag reused for new NYSE RLP orders",
+        "rootCause": "NYSE RLP reused the retired 2003 Power Peg flag inside SMARS",
+        "highlightNode": 1,
+        "nodes": [
+          {"tag": "EXCHANGE LAUNCH", "title": "NYSE RLP", "sub": "AUG 1, 2012", "badge": "NEW ORDER FLAG", "status": "ok"},
+          {"tag": "CONFIG COLLISION", "title": "REUSED FLAG", "sub": "OLD BIT REASSIGNED", "badge": "RLP == POWER PEG", "status": "warn"},
+          {"tag": "LEGACY CODE", "title": "POWER PEG", "sub": "NO STOP COUNTER", "badge": "DORMANT SINCE 2003", "status": "fail"},
+          {"tag": "PRODUCTION", "title": "SMARS ROUTER", "sub": "8 SERVERS", "badge": "17% RETAIL FLOW", "status": "ok"}
+        ]
+      }
+    },
+    {
+      "text": "A technician copied the update manually to seven servers and accidentally skipped server number eight.",
+      "pace": "dramatic",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "MANUAL DEPLOY",
+      "counter": {
+        "label": "SERVERS UPDATED",
+        "value": "7 / 8"
+      },
+      "diagram": {
+        "type": "server_grid",
+        "title": "DEPLOYMENT PIPELINE",
+        "subtitle": "7 of 8 SMARS servers received the new RLP binary",
+        "rootCause": "Manual file copy updated Servers 1-7 but missed Server 8",
+        "servers": [
+          {"label": "SRV-01", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-02", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-03", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-04", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-05", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-06", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-07", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-08", "sub": "OLD BINARY", "status": "fail"}
+        ]
+      }
+    },
+    {
+      "text": "When customer orders hit unpatched Server eight at nine thirty, the zombie algorithm fired forty orders every second.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "09:30:00 AM EDT",
+      "fx": "alarm",
+      "counter": {
+        "label": "SERVER #8",
+        "value": "40 ORDERS / SEC"
+      },
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "hit"
+        }
+      ],
+      "diagram": {
+        "type": "code_crash",
+        "title": "SERVER 8 MISMATCH",
+        "subtitle": "New RLP flag hits unpatched Server 8 -> wakes Power Peg",
+        "rootCause": "Unpatched Server 8 misread RLP flag and fired unlimited Power Peg loops",
+        "highlightNode": 2,
+        "nodes": [
+          {"tag": "RETAIL FLOW", "title": "CLIENT ORDER", "sub": "09:30 AM EDT", "badge": "RLP FLAG = TRUE", "status": "ok"},
+          {"tag": "ROUTING", "title": "SERVER #8", "sub": "UNPATCHED NODE", "badge": "2003 BINARY", "status": "warn"},
+          {"tag": "ZOMBIE LOOP", "title": "POWER PEG", "sub": "NO STOP GUARD", "badge": "40 ORDERS / SEC", "status": "fail"},
+          {"tag": "NYSE / NASDAQ", "title": "4M TRADES", "sub": "154 STOCKS HIT", "badge": "$10M LOST / MIN", "status": "fail"}
+        ]
+      }
+    },
+    {
+      "text": "Just two hundred twelve orders exploded into four million rogue executions across one hundred fifty-four stocks.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "counter": {
+        "label": "ROGUE TRADES",
+        "value": "4,000,000"
+      },
+      "sfx": [
+        {
+          "sound": "explosion",
+          "word": "exploded"
+        }
+      ],
+      "extras": [
+        {
+          "who": "trader",
+          "pose": "shrug",
+          "expression": "neutral",
+          "face": "left"
+        }
+      ],
+      "quote": {
+        "who": "trader",
+        "text": "Who is buying everything at any price?!",
+        "word": "rogue"
+      }
+    },
+    {
+      "text": "Three hundred ninety-seven million shares traded wildly while billions in phantom positions piled onto Knight's books.",
+      "speaker": "narrator",
+      "bg": "office",
+      "counter": {
+        "label": "EXPOSURE",
+        "value": "$7 BILLION"
+      },
+      "sfx": [
+        {
+          "sound": "cash",
+          "word": "billions"
+        }
+      ],
+      "extras": [
+        {
+          "who": "exec",
+          "pose": "point",
+          "expression": "neutral",
+          "face": "left"
+        }
+      ],
+      "quote": {
+        "who": "exec",
+        "text": "Shut it down! Where is the kill switch?!",
+        "word": "piled"
+      }
+    },
+    {
+      "text": "There was no documented kill switch.",
+      "pace": "dramatic",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "NO KILL SWITCH",
+      "counter": {
+        "label": "KILL SWITCH",
+        "value": "MISSING"
+      },
+      "sfx": [
+        {
+          "sound": "buzzer",
+          "word": "switch"
+        }
+      ],
+      "doc": {
+        "source": "SEC INTERNAL CONTROL FINDINGS",
+        "date": "AUGUST 1, 2012",
+        "headline": "Absence of Emergency Termination Controls",
+        "excerpt": "Knight had no written supervisory procedures and no documented emergency kill switch capable of immediately halting rogue SMARS order generation.",
+        "highlight": "no documented emergency kill switch",
+        "highlightColor": "red",
+        "stamp": "CRITICAL FINDING",
+        "word": "switch"
+      }
+    },
+    {
+      "text": "If you enjoy deep engineering postmortems like this, subscribe now, because what engineers tried next made everything eight times worse.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "09:58 AM EDT",
+        "value": "PANIC FIX"
+      },
+      "actions": [
+        {
+          "who": "you",
+          "word": "next",
+          "pose": "handOut",
+          "expression": "shock"
+        }
+      ]
+    },
+    {
+      "text": "At nine fifty-eight, panicking engineers rolled back the update on the seven healthy servers.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "stamp": "09:58 AM EDT",
+      "fx": "alarm",
+      "counter": {
+        "label": "ACTION",
+        "value": "ROLLBACK"
+      },
+      "sfx": [
+        {
+          "sound": "alarm",
+          "word": "rolled"
+        }
+      ]
+    },
+    {
+      "text": "Instantly, all eight machines reverted to the old binary and fired Power Peg orders at the exact same time.",
+      "pace": "fast",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "fx": "fire",
+      "counter": {
+        "label": "INFECTED NODES",
+        "value": "8 / 8 SERVERS"
+      },
+      "sfx": [
+        {
+          "sound": "explosion",
+          "word": "fired"
+        }
+      ],
+      "diagram": {
+        "type": "server_grid",
+        "title": "ROLLBACK MULTIPLIER",
+        "subtitle": "Reverting Servers 1-7 turned 1 rogue node into all 8",
+        "rootCause": "Rollback restored old Power Peg binary across all 8 SMARS servers",
+        "servers": [
+          {"label": "SRV-01", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-02", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-03", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-04", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-05", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-06", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-07", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-08", "sub": "POWER PEG", "status": "fail"}
+        ]
+      }
+    },
+    {
+      "text": "They finally severed the routing path at ten fifteen, but unwinding the accidental trades locked in a four hundred forty million dollar loss.",
+      "speaker": "narrator",
+      "bg": "control_room",
+      "stamp": "10:15 AM EDT",
+      "counter": {
+        "label": "REALIZED LOSS",
+        "value": "-$440,000,000"
+      },
+      "sfx": [
+        {
+          "sound": "boom",
+          "word": "loss"
+        }
+      ],
+      "diagram": {
+        "type": "loss_chart",
+        "title": "45-MINUTE CAPITAL WIPEOUT",
+        "subtitle": "Cumulative realized loss from 09:30 AM to 10:15 AM EDT",
+        "rootCause": "$440M pre-tax loss erased Knight Capital's equity in 45 minutes",
+        "unit": "$M",
+        "points": [
+          {"x": "09:30", "y": 0, "label": "$0"},
+          {"x": "09:38", "y": -80, "label": "-$80M"},
+          {"x": "09:50", "y": -180, "label": "-$180M"},
+          {"x": "09:58", "y": -220, "label": "8x ROLLBACK", "alert": true},
+          {"x": "10:15", "y": -440, "label": "-$440M", "alert": true}
+        ]
+      }
+    },
+    {
+      "text": "Knight's stock collapsed seventy-five percent, forcing an emergency four hundred million dollar bailout and a twelve million dollar SEC fine.",
+      "speaker": "narrator",
+      "bg": "city",
+      "stamp": "SEC ORDER, 2013",
+      "counter": {
+        "label": "STOCK DROP",
+        "value": "-75%"
+      },
+      "sfx": [
+        {
+          "sound": "gavel",
+          "word": "fine"
+        }
+      ],
+      "doc": {
+        "source": "SEC RELEASE NO. 70694",
+        "date": "OCTOBER 16, 2013",
+        "headline": "Market Access Rule Violation & Settlement",
+        "excerpt": "The incident caused a pre-tax loss of more than $440 million in 45 minutes. Knight agreed to pay a $12 million penalty to settle SEC charges.",
+        "highlight": "pre-tax loss of more than $440 million",
+        "highlightColor": "red",
+        "stamp": "$12M PENALTY",
+        "word": "fine"
+      }
+    },
+    {
+      "text": "Five separate failures had to align: dead code, a reused flag, a skipped manual deploy, ninety-seven unread warning emails, and zero kill switch.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "DEFECT LAYERS",
+        "value": "5 ALIGNED"
+      },
+      "diagram": {
+        "type": "swiss_cheese",
+        "title": "KNIGHT CAPITAL FAILURE CHAIN",
+        "subtitle": "Dead Code -> Flag Reuse -> Manual Deploy -> Ignored Alerts -> Blind Rollback",
+        "layers": [
+          {"title": "LAYER 1", "sub": "9-Yr Dead Code"},
+          {"title": "LAYER 2", "sub": "Reused Flag"},
+          {"title": "LAYER 3", "sub": "Manual Deploy"},
+          {"title": "LAYER 4", "sub": "97 Ignored Emails"},
+          {"title": "LAYER 5", "sub": "No Kill Switch"}
+        ]
+      }
+    },
+    {
+      "text": "In high-speed software, the bug that destroys you is rarely the code you wrote today.",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "counter": {
+        "label": "GOLDEN RULE",
+        "value": "SYSTEM SAFETY"
+      },
+      "icons": [
+        {
+          "icon": "gear",
+          "word": "software",
+          "label": "DISCIPLINE"
+        }
+      ]
+    },
+    {
+      "text": "It is the forgotten code you left behind nine years ago.",
+      "pace": "dramatic",
+      "speaker": "narrator",
+      "bg": "server_room",
+      "title": "KNIGHT CAPITAL: $440M IN 45 MINUTES",
+      "counter": {
+        "label": "END OF POSTMORTEM",
+        "value": "AUGUST 1, 2012"
+      }
+    }
+  ]
+}

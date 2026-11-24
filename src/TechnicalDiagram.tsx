@@ -7,133 +7,174 @@ export type DiagramType =
 	| 'reactor_core'
 	| 'dam_cross_section'
 	| 'bridge_stress'
-	| 'swiss_cheese';
+	| 'swiss_cheese'
+	| 'server_grid'
+	| 'loss_chart';
+
+export type DiagramNode = {
+	tag?: string;
+	title: string;
+	sub?: string;
+	badge?: string;
+	status?: 'ok' | 'warn' | 'fail';
+};
+export type SwissLayer = {title: string; sub: string};
+export type ServerItem = {label: string; sub?: string; status: 'ok' | 'warn' | 'fail'};
+export type ChartPoint = {x: string; y: number; label?: string; alert?: boolean};
 
 export type DiagramProps = {
 	type: DiagramType;
 	title?: string;
 	subtitle?: string;
+	rootCause?: string;
 	metrics?: {label: string; value: string; alert?: boolean}[];
 	highlightNode?: number;
+	nodes?: DiagramNode[];
+	layers?: SwissLayer[];
+	servers?: ServerItem[];
+	points?: ChartPoint[];
+	unit?: string;
 };
 
-// 1. Data Flow & IT Crash Diagram (CrowdStrike, Pipeline, DDoS, Integer Overflow)
-const DataFlowDiagram: React.FC<{highlightNode?: number; frame: number; fps: number}> = ({
-	highlightNode = 2,
-	frame,
-	fps,
-}) => {
+const STATUS_COLORS: Record<'ok' | 'warn' | 'fail', {fill: string; stroke: string; text: string; badgeBg: string}> = {
+	ok: {fill: '#111927', stroke: '#00dcff', text: '#4ade80', badgeBg: '#0f2922'},
+	warn: {fill: '#1f1910', stroke: '#f59e0b', text: '#fbbf24', badgeBg: '#2e220d'},
+	fail: {fill: '#1c0d12', stroke: '#ff3b30', text: '#ff453a', badgeBg: '#2d1215'},
+};
+
+const DEFAULT_DATA_FLOW_NODES: DiagramNode[] = [
+	{tag: 'CLOUD DISPATCH', title: 'SERVER', sub: 'SYNC ACTIVE', status: 'ok'},
+	{tag: 'LOGIC PAYLOAD', title: 'Channel File 291', badge: '21 FIELDS vs 20', status: 'fail'},
+	{tag: 'KERNEL MEMORY', title: 'RING 0 CRASH', sub: 'OUT-OF-BOUNDS READ', badge: 'PAGE_FAULT_IN_NONPAGED', status: 'fail'},
+	{tag: 'GLOBAL IMPACT', title: ':( BSOD', sub: '8.5M COMPUTERS', badge: 'SYSTEM HALTED', status: 'fail'},
+];
+
+// 1. Data Flow & IT Crash Diagram (Dynamic per-episode nodes with CrowdStrike fallback)
+const DataFlowDiagram: React.FC<{
+	nodes?: DiagramNode[];
+	rootCause?: string;
+	subtitle?: string;
+	highlightNode?: number;
+	frame: number;
+	fps: number;
+}> = ({nodes, rootCause, subtitle, highlightNode = 2, frame}) => {
 	const pulse = (Math.sin(frame / 4) + 1) / 2;
 	const packetOffset = (frame * 6) % 300;
+	const items = (nodes && nodes.length >= 3 ? nodes.slice(0, 4) : DEFAULT_DATA_FLOW_NODES).map((n, idx) => ({
+		...n,
+		status: n.status ?? (idx < highlightNode ? 'ok' : idx === highlightNode ? 'warn' : 'fail'),
+	}));
+	const footerText =
+		rootCause || subtitle || 'IPC Template (21 fields) vs Sensor (20 fields) caused out-of-bounds read in Ring 0';
+
+	// Coordinates for 3 or 4 nodes arranged in a clean pipeline + crash drop
+	const positions =
+		items.length === 3
+			? [
+					{x: 60, y: 150, w: 210, h: 130},
+					{x: 345, y: 150, w: 210, h: 130},
+					{x: 630, y: 150, w: 210, h: 130},
+				]
+			: [
+					{x: 55, y: 120, w: 185, h: 115},
+					{x: 350, y: 115, w: 200, h: 125},
+					{x: 350, y: 315, w: 200, h: 135},
+					{x: 655, y: 120, w: 190, h: 115},
+				];
 
 	return (
 		<svg viewBox="0 0 900 520" width="100%" height="100%">
 			<defs>
-				{/* Blueprint Grid Pattern */}
 				<pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse">
 					<path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 220, 255, 0.12)" strokeWidth="1" />
 				</pattern>
-				<linearGradient id="alertGrad" x1="0" y1="0" x2="1" y2="0">
-					<stop offset="0%" stopColor="#ff2a2a" />
-					<stop offset="100%" stopColor="#ff6b6b" />
-				</linearGradient>
 			</defs>
 
-			{/* Background Blueprint Canvas */}
 			<rect width="900" height="520" fill="#090d16" rx="16" stroke="#00dcff" strokeWidth="2" />
 			<rect width="900" height="520" fill="url(#grid)" rx="16" />
 
-			{/* Connection Cables / Bus Lines */}
-			{/* Node 1 to Node 2 */}
-			<path d="M 220 180 L 420 180" stroke="#00dcff" strokeWidth="4" strokeDasharray="8 4" opacity="0.6" />
-			{/* Moving Data Packets */}
-			<circle cx={220 + (packetOffset % 200)} cy={180} r="6" fill="#00ffff" filter="drop-shadow(0 0 6px #00ffff)" />
+			{/* Connection lines */}
+			{items.length === 3 ? (
+				<>
+					<path d="M 270 215 L 345 215" stroke="#00dcff" strokeWidth="4" strokeDasharray="8 4" opacity="0.65" />
+					<path d="M 555 215 L 630 215" stroke="#ff3b30" strokeWidth="4" strokeDasharray="8 4" />
+					<circle cx={270 + (packetOffset % 75)} cy={215} r="6" fill="#00ffff" />
+				</>
+			) : (
+				<>
+					<path d="M 240 177 L 350 177" stroke="#00dcff" strokeWidth="4" strokeDasharray="8 4" opacity="0.6" />
+					<circle cx={240 + (packetOffset % 110)} cy={177} r="6" fill="#00ffff" />
+					<path
+						d="M 450 240 L 450 315"
+						stroke={highlightNode >= 2 ? '#ff2a2a' : '#00dcff'}
+						strokeWidth="4"
+						strokeDasharray="6 4"
+					/>
+					<path
+						d="M 550 177 L 655 177"
+						stroke={highlightNode >= 3 ? '#ff2a2a' : '#00dcff'}
+						strokeWidth="4"
+					/>
+				</>
+			)}
 
-			{/* Node 2 to Node 3 (Fault Line) */}
-			<path d="M 480 230 L 480 320" stroke={highlightNode >= 2 ? '#ff2a2a' : '#00dcff'} strokeWidth="4" strokeDasharray="6 4" />
-			{/* Node 2 to Node 4 */}
-			<path d="M 540 180 L 710 180" stroke={highlightNode >= 3 ? '#ff2a2a' : '#00dcff'} strokeWidth="4" />
+			{items.map((node, i) => {
+				const pos = positions[i];
+				const colors = STATUS_COLORS[node.status];
+				const isAlert = node.status === 'fail';
+				const cx = pos.w / 2;
+				return (
+					<g key={i} transform={`translate(${pos.x}, ${pos.y})`}>
+						<rect
+							width={pos.w}
+							height={pos.h}
+							rx="10"
+							fill={colors.fill}
+							stroke={colors.stroke}
+							strokeWidth={isAlert ? 3 : 2}
+							filter={isAlert ? 'drop-shadow(0 0 12px rgba(255, 42, 42, 0.35))' : undefined}
+						/>
+						{node.tag && (
+							<text x={cx} y="28" fill={colors.text} fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
+								{node.tag.slice(0, 22)}
+							</text>
+						)}
+						<text x={cx} y={node.tag ? 56 : 46} fill="#ffffff" fontSize="15" fontFamily="Arial Black, sans-serif" textAnchor="middle">
+							{node.title.slice(0, 20)}
+						</text>
+						{node.sub && (
+							<text x={cx} y={pos.h - (node.badge ? 38 : 22)} fill="#cbd5e1" fontSize="11" fontFamily="monospace" textAnchor="middle">
+								{node.sub.slice(0, 24)}
+							</text>
+						)}
+						{node.badge && (
+							<>
+								<rect
+									x="12"
+									y={pos.h - 30}
+									width={pos.w - 24}
+									height="22"
+									rx="4"
+									fill={isAlert ? '#ff2a2a' : colors.badgeBg}
+									opacity={isAlert ? 0.35 + 0.65 * pulse : 1}
+									stroke={colors.stroke}
+									strokeWidth="1"
+								/>
+								<text x={cx} y={pos.h - 15} fill="#ffffff" fontSize="10" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
+									{node.badge.slice(0, 24)}
+								</text>
+							</>
+						)}
+					</g>
+				);
+			})}
 
-			{/* --- NODE 1: Cloud Update Server --- */}
-			<g transform="translate(60, 130)">
-				<rect width="160" height="100" rx="8" fill="#111927" stroke="#00dcff" strokeWidth="2.5" />
-				<text x="80" y="35" fill="#88c0d0" fontSize="13" fontFamily="monospace" textAnchor="middle" fontWeight="bold">CLOUD DISPATCH</text>
-				<text x="80" y="65" fill="#eceff4" fontSize="16" fontFamily="Arial Black" textAnchor="middle">SERVER</text>
-				<circle cx="25" cy="85" r="5" fill="#4ade80" />
-				<text x="38" y="89" fill="#4ade80" fontSize="11" fontFamily="monospace">SYNC ACTIVE</text>
-			</g>
-
-			{/* --- NODE 2: Channel File / Bad Pointer --- */}
-			<g transform="translate(380, 120)">
-				<rect
-					width="180"
-					height="120"
-					rx="10"
-					fill={highlightNode >= 1 ? 'rgba(255, 42, 42, 0.15)' : '#111927'}
-					stroke={highlightNode >= 1 ? '#ff3b30' : '#00dcff'}
-					strokeWidth={highlightNode >= 1 ? 3 : 2}
-				/>
-				<text x="90" y="32" fill="#ff6b6b" fontSize="12" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
-					LOGIC PAYLOAD
-				</text>
-				<text x="90" y="62" fill="#fff" fontSize="15" fontFamily="Arial Black" textAnchor="middle">
-					Channel File 291
-				</text>
-				<rect x="20" y="76" width="140" height="26" rx="4" fill="#2a1215" stroke="#ff453a" strokeWidth="1" />
-				<text x="90" y="94" fill="#ff453a" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
-					21 FIELDS vs 20
-				</text>
-			</g>
-
-			{/* --- NODE 3: Kernel Space (Ring 0) Crash --- */}
-			<g transform="translate(380, 320)">
-				<rect
-					width="180"
-					height="140"
-					rx="10"
-					fill="#1c0d12"
-					stroke="#ff2a2a"
-					strokeWidth="3"
-					filter="drop-shadow(0 0 15px rgba(255, 42, 42, 0.4))"
-				/>
-				<text x="90" y="35" fill="#ff453a" fontSize="13" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
-					KERNEL MEMORY
-				</text>
-				<text x="90" y="65" fill="#fff" fontSize="18" fontFamily="Arial Black" textAnchor="middle">
-					RING 0 CRASH
-				</text>
-				<text x="90" y="95" fill="#ff3b30" fontSize="12" fontFamily="monospace" textAnchor="middle">
-					OUT-OF-BOUNDS READ
-				</text>
-				<rect x="15" y="108" width="150" height="20" rx="3" fill="#ff2a2a" opacity={0.3 + 0.7 * pulse} />
-				<text x="90" y="123" fill="#ffffff" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
-					PAGE_FAULT_IN_NONPAGED
-				</text>
-			</g>
-
-			{/* --- NODE 4: Global Host Crash (BSOD) --- */}
-			<g transform="translate(680, 130)">
-				<rect
-					width="170"
-					height="100"
-					rx="8"
-					fill="#0044aa"
-					stroke="#ffffff"
-					strokeWidth="2"
-					filter="drop-shadow(0 0 12px rgba(0, 100, 255, 0.5))"
-				/>
-				<text x="85" y="35" fill="#ffffff" fontSize="18" fontFamily="Arial Black" textAnchor="middle">:( BSOD</text>
-				<text x="85" y="65" fill="#d0e2ff" fontSize="12" fontFamily="monospace" textAnchor="middle">8.5M COMPUTERS</text>
-				<text x="85" y="85" fill="#ffea79" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">SYSTEM HALTED</text>
-			</g>
-
-			{/* Warning Banner along bottom */}
 			<rect x="30" y="475" width="840" height="32" rx="6" fill="#192231" stroke="#334155" strokeWidth="1" />
-			<text x="50" y="496" fill="#00ffff" fontSize="12" fontFamily="monospace" fontWeight="bold">
+			<text x="46" y="496" fill="#00ffff" fontSize="12" fontFamily="monospace" fontWeight="bold">
 				ROOT CAUSE:
 			</text>
-			<text x="160" y="496" fill="#e2e8f0" fontSize="12" fontFamily="monospace">
-				IPC Template (21 fields) vs Sensor (20 fields) caused out-of-bounds read in Ring 0
+			<text x="145" y="496" fill="#e2e8f0" fontSize="12" fontFamily="monospace">
+				{footerText.slice(0, 88)}
 			</text>
 		</svg>
 	);
@@ -334,9 +375,20 @@ const DamCrossSectionDiagram: React.FC<{frame: number; fps: number}> = ({frame})
 	);
 };
 
-// 4. Swiss Cheese Model / Failure Chain Diagram
-const SwissCheeseDiagram: React.FC<{frame: number; fps: number}> = ({frame}) => {
-	const arrowOffset = Math.min(750, frame * 20);
+const DEFAULT_SWISS_LAYERS: SwissLayer[] = [
+	{title: 'LAYER 1', sub: 'System Design'},
+	{title: 'LAYER 2', sub: 'Operator Training'},
+	{title: 'LAYER 3', sub: 'Safety Protocol'},
+	{title: 'LAYER 4', sub: 'Emergency Backup'},
+];
+
+// 4. Swiss Cheese Model / Failure Chain Diagram (Dynamic 3-5 layers)
+const SwissCheeseDiagram: React.FC<{layers?: SwissLayer[]; frame: number; fps: number}> = ({layers, frame}) => {
+	const items = layers && layers.length >= 3 ? layers.slice(0, 5) : DEFAULT_SWISS_LAYERS;
+	const arrowOffset = Math.min(780, frame * 20);
+	const sliceW = items.length >= 5 ? 72 : 80;
+	const startX = items.length >= 5 ? 95 : 130;
+	const stepX = items.length >= 5 ? 162 : items.length === 4 ? 185 : 240;
 
 	return (
 		<svg viewBox="0 0 900 520" width="100%" height="100%">
@@ -349,48 +401,50 @@ const SwissCheeseDiagram: React.FC<{frame: number; fps: number}> = ({frame}) => 
 
 			<rect width="900" height="520" fill="#0b0f19" rx="16" stroke="#f59e0b" strokeWidth="2" />
 
-			{/* 4 Swiss Cheese Layers (Defense-in-Depth) */}
-			{[
-				{x: 140, title: 'LAYER 1', sub: 'System Design', holeY: 260},
-				{x: 320, title: 'LAYER 2', sub: 'Operator Training', holeY: 260},
-				{x: 500, title: 'LAYER 3', sub: 'Safety Protocol', holeY: 260},
-				{x: 680, title: 'LAYER 4', sub: 'Emergency Backup', holeY: 260},
-			].map((layer, i) => (
-				<g key={i}>
-					{/* Cheese Slice */}
-					<rect
-						x={layer.x}
-						y="90"
-						width="80"
-						height="340"
-						rx="12"
-						fill="url(#cheeseGrad)"
-						stroke="#fbbf24"
-						strokeWidth="3"
-						transform={`skewY(-10)`}
-						opacity="0.9"
-					/>
-					{/* Latent Failure Holes */}
-					<ellipse cx={layer.x + 40} cy={layer.holeY - layer.x * 0.17} rx="26" ry="18" fill="#0b0f19" stroke="#ff3b30" strokeWidth="2" />
-					{/* Decoy random holes */}
-					<ellipse cx={layer.x + 40} cy={160 - layer.x * 0.17} rx="16" ry="12" fill="#0b0f19" opacity="0.6" />
-					<ellipse cx={layer.x + 40} cy={380 - layer.x * 0.17} rx="18" ry="14" fill="#0b0f19" opacity="0.6" />
+			{items.map((layer, i) => {
+				const x = startX + i * stepX;
+				const holeY = 260;
+				return (
+					<g key={i}>
+						<rect
+							x={x}
+							y="90"
+							width={sliceW}
+							height="330"
+							rx="12"
+							fill="url(#cheeseGrad)"
+							stroke="#fbbf24"
+							strokeWidth="3"
+							transform="skewY(-10)"
+							opacity="0.9"
+						/>
+						<ellipse
+							cx={x + sliceW / 2}
+							cy={holeY - x * 0.17}
+							rx="24"
+							ry="17"
+							fill="#0b0f19"
+							stroke="#ff3b30"
+							strokeWidth="2"
+						/>
+						<ellipse cx={x + sliceW / 2} cy={160 - x * 0.17} rx="14" ry="11" fill="#0b0f19" opacity="0.6" />
+						<ellipse cx={x + sliceW / 2} cy={370 - x * 0.17} rx="16" ry="12" fill="#0b0f19" opacity="0.6" />
 
-					{/* Label */}
-					<text x={layer.x + 40} y="445" fill="#fde68a" fontSize="13" fontFamily="Arial Black" textAnchor="middle">
-						{layer.title}
-					</text>
-					<text x={layer.x + 40} y="468" fill="#94a3b8" fontSize="11" fontFamily="monospace" textAnchor="middle">
-						{layer.sub}
-					</text>
-				</g>
-			))}
+						<text x={x + sliceW / 2} y="445" fill="#fde68a" fontSize="13" fontFamily="Arial Black" textAnchor="middle">
+							{layer.title.slice(0, 14)}
+						</text>
+						<text x={x + sliceW / 2} y="468" fill="#94a3b8" fontSize="11" fontFamily="monospace" textAnchor="middle">
+							{layer.sub.slice(0, 18)}
+						</text>
+					</g>
+				);
+			})}
 
 			{/* Red Trajectory Arrow Penetrating All Holes (The Disaster Path) */}
 			<line
-				x1="60"
+				x1="50"
 				y1="235"
-				x2={60 + arrowOffset}
+				x2={50 + arrowOffset}
 				y2="235"
 				stroke="#ff2a2a"
 				strokeWidth="7"
@@ -398,17 +452,227 @@ const SwissCheeseDiagram: React.FC<{frame: number; fps: number}> = ({frame}) => 
 				filter="drop-shadow(0 0 10px #ff2a2a)"
 			/>
 			{arrowOffset > 700 && (
-				<g transform="translate(800, 235)">
-					<circle r="36" fill="#ff2a2a" filter="drop-shadow(0 0 20px #ff2a2a)" />
-					<text y="6" fill="#fff" fontSize="14" fontFamily="Arial Black" textAnchor="middle">
+				<g transform="translate(835, 235)">
+					<circle r="34" fill="#ff2a2a" filter="drop-shadow(0 0 20px #ff2a2a)" />
+					<text y="5" fill="#fff" fontSize="13" fontFamily="Arial Black" textAnchor="middle">
 						CRASH!
 					</text>
 				</g>
 			)}
 
-			{/* Top Header */}
 			<text x="450" y="45" fill="#f59e0b" fontSize="18" fontFamily="Arial Black" textAnchor="middle" letterSpacing="3">
 				THE SWISS CHEESE MODEL: ALIGNMENT OF LATENT FAILURES
+			</text>
+		</svg>
+	);
+};
+
+const DEFAULT_SERVERS: ServerItem[] = Array.from({length: 8}, (_, i) => ({
+	label: `SRV-0${i + 1}`,
+	sub: i === 7 ? 'OLD CODE' : 'UPDATED',
+	status: i === 7 ? 'fail' : 'ok',
+}));
+
+// 5. Server / Node Cluster Grid Diagram
+const ServerGridDiagram: React.FC<{servers?: ServerItem[]; rootCause?: string; subtitle?: string; frame: number}> = ({
+	servers,
+	rootCause,
+	subtitle,
+	frame,
+}) => {
+	const items = servers && servers.length > 0 ? servers.slice(0, 8) : DEFAULT_SERVERS;
+	const pulse = (Math.sin(frame / 3.5) + 1) / 2;
+	const cols = items.length <= 4 ? items.length : 4;
+	const cardW = 180;
+	const cardH = 148;
+	const gapX = 24;
+	const gapY = 28;
+	const totalW = cols * cardW + (cols - 1) * gapX;
+	const offsetX = (900 - totalW) / 2;
+	const footerText = rootCause || subtitle || 'Cluster node state snapshot';
+
+	return (
+		<svg viewBox="0 0 900 520" width="100%" height="100%">
+			<defs>
+				<pattern id="srvGrid" width="30" height="30" patternUnits="userSpaceOnUse">
+					<path d="M 30 0 L 0 0 0 30" fill="none" stroke="rgba(0, 220, 255, 0.1)" strokeWidth="1" />
+				</pattern>
+			</defs>
+			<rect width="900" height="520" fill="#090d16" rx="16" stroke="#00dcff" strokeWidth="2" />
+			<rect width="900" height="520" fill="url(#srvGrid)" rx="16" />
+
+			<text x="450" y="46" fill="#94a3b8" fontSize="13" fontFamily="monospace" textAnchor="middle" letterSpacing="2" fontWeight="bold">
+				PRODUCTION CLUSTER TELEMETRY
+			</text>
+
+			{items.map((srv, i) => {
+				const col = i % cols;
+				const row = Math.floor(i / cols);
+				const x = offsetX + col * (cardW + gapX);
+				const y = 78 + row * (cardH + gapY);
+				const c = STATUS_COLORS[srv.status];
+				const isFail = srv.status === 'fail';
+				return (
+					<g key={i} transform={`translate(${x}, ${y})`}>
+						<rect
+							width={cardW}
+							height={cardH}
+							rx="10"
+							fill={c.fill}
+							stroke={c.stroke}
+							strokeWidth={isFail ? 3 : 2}
+							filter={isFail ? 'drop-shadow(0 0 12px rgba(255,59,48,0.4))' : undefined}
+						/>
+						{/* Rack slot lines */}
+						<rect x="16" y="18" width={cardW - 32} height="12" rx="3" fill="#1e293b" />
+						<rect x="16" y="36" width={cardW - 32} height="12" rx="3" fill="#1e293b" />
+						<circle
+							cx={cardW - 24}
+							cy="24"
+							r="5"
+							fill={c.text}
+							opacity={isFail ? 0.35 + 0.65 * pulse : 1}
+						/>
+						<text x={cardW / 2} y="88" fill="#ffffff" fontSize="18" fontFamily="Arial Black, sans-serif" textAnchor="middle">
+							{srv.label.slice(0, 14)}
+						</text>
+						{srv.sub && (
+							<>
+								<rect x="18" y="104" width={cardW - 36} height="26" rx="5" fill={isFail ? '#ff2a2a' : c.badgeBg} opacity={isFail ? 0.85 : 1} />
+								<text x={cardW / 2} y="122" fill="#ffffff" fontSize="11" fontFamily="monospace" textAnchor="middle" fontWeight="bold">
+									{srv.sub.slice(0, 18)}
+								</text>
+							</>
+						)}
+					</g>
+				);
+			})}
+
+			<rect x="30" y="470" width="840" height="32" rx="6" fill="#192231" stroke="#334155" strokeWidth="1" />
+			<text x="46" y="491" fill="#00ffff" fontSize="12" fontFamily="monospace" fontWeight="bold">
+				STATUS:
+			</text>
+			<text x="115" y="491" fill="#e2e8f0" fontSize="12" fontFamily="monospace">
+				{footerText.slice(0, 90)}
+			</text>
+		</svg>
+	);
+};
+
+const DEFAULT_POINTS: ChartPoint[] = [
+	{x: '09:30', y: 0, label: '$0'},
+	{x: '09:40', y: -110, label: '-$110M'},
+	{x: '09:58', y: -220, label: '-$220M', alert: true},
+	{x: '10:15', y: -440, label: '-$440M', alert: true},
+];
+
+// 6. Animated Telemetry / Loss Chart Diagram
+const LossChartDiagram: React.FC<{
+	points?: ChartPoint[];
+	unit?: string;
+	rootCause?: string;
+	subtitle?: string;
+	frame: number;
+}> = ({points, unit = '', rootCause, subtitle, frame}) => {
+	const data = points && points.length >= 2 ? points : DEFAULT_POINTS;
+	const ys = data.map((p) => p.y);
+	const minY = Math.min(...ys);
+	const maxY = Math.max(...ys);
+	const spanY = Math.max(1e-6, maxY - minY);
+
+	const left = 95;
+	const right = 815;
+	const top = 75;
+	const bottom = 405;
+	const w = right - left;
+	const h = bottom - top;
+
+	const coords = data.map((p, i) => ({
+		...p,
+		px: left + (i / (data.length - 1)) * w,
+		py: top + ((maxY - p.y) / spanY) * h,
+	}));
+
+	const linePath = coords.map((c, i) => `${i === 0 ? 'M' : 'L'} ${c.px.toFixed(1)} ${c.py.toFixed(1)}`).join(' ');
+	const areaPath = `${linePath} L ${coords[coords.length - 1].px.toFixed(1)} ${bottom} L ${coords[0].px.toFixed(1)} ${bottom} Z`;
+	const reveal = Math.min(1, frame / 32);
+	const dashTotal = 1600;
+	const pulse = (Math.sin(frame / 4) + 1) / 2;
+	const footerText = rootCause || subtitle || 'Cumulative impact trajectory';
+
+	return (
+		<svg viewBox="0 0 900 520" width="100%" height="100%">
+			<defs>
+				<pattern id="chartGrid" width="40" height="40" patternUnits="userSpaceOnUse">
+					<path d="M 40 0 L 0 0 0 40" fill="none" stroke="rgba(148, 163, 184, 0.12)" strokeWidth="1" />
+				</pattern>
+				<linearGradient id="lossFill" x1="0" y1="0" x2="0" y2="1">
+					<stop offset="0%" stopColor="#ff3b30" stopOpacity="0.45" />
+					<stop offset="100%" stopColor="#ff3b30" stopOpacity="0.02" />
+				</linearGradient>
+			</defs>
+
+			<rect width="900" height="520" fill="#090d16" rx="16" stroke="#ff3b30" strokeWidth="2" />
+			<rect width="900" height="520" fill="url(#chartGrid)" rx="16" />
+
+			{/* Axes */}
+			<line x1={left} y1={top} x2={left} y2={bottom} stroke="#475569" strokeWidth="2" />
+			<line x1={left} y1={bottom} x2={right} y2={bottom} stroke="#475569" strokeWidth="2" />
+			<text x={left - 12} y={top + 6} fill="#94a3b8" fontSize="12" fontFamily="monospace" textAnchor="end">
+				{`${maxY}${unit}`}
+			</text>
+			<text x={left - 12} y={bottom} fill="#ff6b6b" fontSize="12" fontFamily="monospace" textAnchor="end">
+				{`${minY}${unit}`}
+			</text>
+
+			{/* Area + Animated Line */}
+			<path d={areaPath} fill="url(#lossFill)" opacity={reveal} />
+			<path
+				d={linePath}
+				fill="none"
+				stroke="#ff3b30"
+				strokeWidth="5"
+				strokeLinecap="round"
+				strokeLinejoin="round"
+				strokeDasharray={dashTotal}
+				strokeDashoffset={dashTotal * (1 - reveal)}
+				filter="drop-shadow(0 0 8px rgba(255,59,48,0.6))"
+			/>
+
+			{/* Data Points */}
+			{coords.map((c, i) => {
+				const threshold = i / Math.max(1, coords.length - 1);
+				if (reveal < threshold * 0.85) return null;
+				const labelY = c.py > bottom - 45 ? c.py - 18 : c.py + 26;
+				return (
+					<g key={i}>
+						{c.alert && (
+							<circle cx={c.px} cy={c.py} r={12 + 5 * pulse} fill="rgba(255, 59, 48, 0.28)" />
+						)}
+						<circle cx={c.px} cy={c.py} r={c.alert ? 8 : 6} fill={c.alert ? '#ff3b30' : '#f8fafc'} stroke="#090d16" strokeWidth="2" />
+						<text x={c.px} y={bottom + 24} fill="#cbd5e1" fontSize="12" fontFamily="monospace" textAnchor="middle">
+							{c.x}
+						</text>
+						<text
+							x={c.px}
+							y={labelY}
+							fill={c.alert ? '#ff6b6b' : '#e2e8f0'}
+							fontSize="13"
+							fontFamily="Arial Black, sans-serif"
+							textAnchor="middle"
+						>
+							{c.label || `${c.y}${unit}`}
+						</text>
+					</g>
+				);
+			})}
+
+			<rect x="30" y="470" width="840" height="32" rx="6" fill="#192231" stroke="#334155" strokeWidth="1" />
+			<text x="46" y="491" fill="#ff6b6b" fontSize="12" fontFamily="monospace" fontWeight="bold">
+				IMPACT:
+			</text>
+			<text x="115" y="491" fill="#e2e8f0" fontSize="12" fontFamily="monospace">
+				{footerText.slice(0, 90)}
 			</text>
 		</svg>
 	);
@@ -418,8 +682,13 @@ export const TechnicalDiagram: React.FC<DiagramProps> = ({
 	type,
 	title,
 	subtitle,
-	metrics = [],
+	rootCause,
 	highlightNode,
+	nodes,
+	layers,
+	servers,
+	points,
+	unit,
 }) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
@@ -430,9 +699,9 @@ export const TechnicalDiagram: React.FC<DiagramProps> = ({
 			style={{
 				position: 'absolute',
 				left: 820,
-				top: 140,
+				top: 275,
 				width: 1020,
-				height: 600,
+				height: 545,
 				transform: `scale(${pop})`,
 				transformOrigin: 'left center',
 				zIndex: 20,
@@ -444,22 +713,26 @@ export const TechnicalDiagram: React.FC<DiagramProps> = ({
 				<div
 					style={{
 						position: 'absolute',
-						top: -35,
-						left: 20,
+						top: -36,
+						left: 16,
+						right: 16,
 						display: 'flex',
-						alignItems: 'baseline',
-						gap: 14,
+						alignItems: 'center',
+						gap: 12,
+						whiteSpace: 'nowrap',
+						overflow: 'hidden',
 					}}
 				>
 					<span
 						style={{
 							backgroundColor: '#00dcff',
 							color: '#000',
-							fontSize: 14,
+							fontSize: 13,
 							fontFamily: 'Arial Black',
 							padding: '3px 10px',
 							borderRadius: 4,
 							letterSpacing: 1.5,
+							flexShrink: 0,
 						}}
 					>
 						SCHEMATIC
@@ -467,16 +740,17 @@ export const TechnicalDiagram: React.FC<DiagramProps> = ({
 					<span
 						style={{
 							fontFamily: 'Arial Black, Impact, sans-serif',
-							fontSize: 24,
+							fontSize: 22,
 							color: '#fff',
-							letterSpacing: 1,
+							letterSpacing: 0.5,
 							textShadow: '0 2px 10px rgba(0,0,0,0.8)',
+							flexShrink: 0,
 						}}
 					>
 						{title}
 					</span>
 					{subtitle && (
-						<span style={{fontFamily: 'monospace', fontSize: 14, color: '#94a3b8'}}>
+						<span style={{fontFamily: 'monospace', fontSize: 13, color: '#94a3b8', overflow: 'hidden', textOverflow: 'ellipsis'}}>
 							// {subtitle}
 						</span>
 					)}
@@ -485,13 +759,24 @@ export const TechnicalDiagram: React.FC<DiagramProps> = ({
 
 			{/* Diagram Graphic Content */}
 			{type === 'data_flow' || type === 'code_crash' ? (
-				<DataFlowDiagram highlightNode={highlightNode} frame={frame} fps={fps} />
+				<DataFlowDiagram
+					nodes={nodes}
+					rootCause={rootCause}
+					subtitle={subtitle}
+					highlightNode={highlightNode}
+					frame={frame}
+					fps={fps}
+				/>
 			) : type === 'reactor_core' ? (
 				<ReactorDiagram frame={frame} fps={fps} />
 			) : type === 'dam_cross_section' ? (
 				<DamCrossSectionDiagram frame={frame} fps={fps} />
+			) : type === 'server_grid' ? (
+				<ServerGridDiagram servers={servers} rootCause={rootCause} subtitle={subtitle} frame={frame} />
+			) : type === 'loss_chart' ? (
+				<LossChartDiagram points={points} unit={unit} rootCause={rootCause} subtitle={subtitle} frame={frame} />
 			) : (
-				<SwissCheeseDiagram frame={frame} fps={fps} />
+				<SwissCheeseDiagram layers={layers} frame={frame} fps={fps} />
 			)}
 		</div>
 	);

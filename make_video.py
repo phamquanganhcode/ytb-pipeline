@@ -592,8 +592,14 @@ def validate(script):
                     raise ValueError(f"{where}: sfx needs 'sound' and 'word'")
                 if s["sound"] not in SFX_NAMES:
                     raise ValueError(f"{where}: sfx sound {s['sound']!r} must be one of {sorted(SFX_NAMES)}")
+        doc = scene.get("doc")
+        if doc is not None:
+            for k in ("source", "headline", "excerpt", "highlight"):
+                if not isinstance(doc.get(k), str) or not doc[k].strip():
+                    raise ValueError(f"{where}: doc needs non-empty '{k}'")
         try:
             timed(scene, [vision] if vision else [], None, "Vision")
+            timed(scene, [doc] if doc and doc.get("word") else [], None, "Doc")
             timed(scene, scene.get("sfx", []), None, "SFX")
             timed(scene, scene.get("icons", []), None, "Icon")
             timed(scene, callouts, None, "Callout")
@@ -923,6 +929,9 @@ def main():
             # The paper and its correction trigger in order, like icons.
             timed_paper = timed(scene, [scene["paper"]] + ([scene["paper"]["fix"]] if scene["paper"].get("fix") else []), word_at, "Paper")
             paper = {**timed_paper[0], **({"fix": timed_paper[1]} if len(timed_paper) > 1 else {})}
+        doc = None
+        if scene.get("doc"):
+            doc = timed(scene, [scene["doc"]], word_at, "Doc")[0] if scene["doc"].get("word") else dict(scene["doc"])
         scene_sfx = []
         if scene.get("sfx"):
             timed_sfx = timed(scene, scene["sfx"], word_at, "SFX")
@@ -954,6 +963,7 @@ def main():
             "actions": actions,
             **({"quote": quote} if quote else {}),
             **({"paper": paper} if paper else {}),
+            **({"doc": doc} if doc else {}),
             **({"vision": vision} if vision else {}),
             "looks": looks,  # always replaces the script's face names with resolved files
             "start": start_state,
@@ -985,6 +995,8 @@ def main():
     (ROOT / "public" / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
     (ROOT / "out").mkdir(exist_ok=True)
     (ROOT / "out" / f"{episode}.srt").write_text(srt(scenes, lang["captionWords"] * 2), encoding="utf-8")
+    (ROOT / "out" / f"{episode}_youtube.txt").write_text(youtube_pack(script, scenes), encoding="utf-8")
+    audit_monetization(script, scenes)
 
     if not args.no_render:
         remotion_bin = str(ROOT / "node_modules" / ".bin" / "remotion.cmd") if sys.platform == "win32" and (ROOT / "node_modules" / ".bin" / "remotion.cmd").exists() else "npx"
@@ -1079,6 +1091,87 @@ def srt(scenes, per_cue):
             b = start + speech * (g + 1) // len(groups)
             cues.append(f"{len(cues) + 1}\n{ts(a)} --> {ts(b)}\n{' '.join(chunk)}\n")
     return "\n".join(cues)
+
+
+def audit_monetization(script, scenes=None):
+    """Print non-fatal CTR, watch-time, and YPP 'Inauthentic Content' readiness warnings."""
+    warnings = []
+    lang_code = script.get("lang", "en")
+    rate = LANGS.get(lang_code, LANGS["en"])["rate"]
+    words = count_words(script.get("scenes", []))
+    if scenes:
+        total_frames = sum(s["frames"] - (0 if i == 0 or s.get("transition") == "cut" else TRANSITION_FRAMES) for i, s in enumerate(scenes))
+        minutes = total_frames / FPS / 60
+    else:
+        minutes = words / rate
+
+    if minutes < 8.0:
+        warnings.append(f"Duration is ~{minutes:.1f} min (< 8.0 min): mid-roll ads disabled; expand to 10-14 min (~1,550+ words) for 4,000h watch-time velocity.")
+    title = script.get("title", "")
+    if title and title == title.upper() and any(c.isalpha() for c in title):
+        warnings.append("Title is ALL CAPS: switch to natural Title Case (matches high-CTR documentary channels).")
+
+    raw_scenes = script.get("scenes", [])
+    diagrams = [s["diagram"] for s in raw_scenes if isinstance(s.get("diagram"), dict)]
+    docs = [s["doc"] for s in raw_scenes if isinstance(s.get("doc"), dict)]
+    if len(diagrams) + len(docs) < 4:
+        warnings.append(f"Only {len(diagrams)} diagrams + {len(docs)} doc cards: add 6-12 episode-specific visuals to avoid YPP 'templated/inauthentic content' flags.")
+    generic_flow = sum(1 for d in diagrams if d.get("type") in ("data_flow", "code_crash") and not d.get("nodes"))
+    if generic_flow:
+        warnings.append(f"{generic_flow} data_flow/code_crash diagram(s) lack custom 'nodes' and will fall back to CrowdStrike defaults.")
+
+    thumb = script.get("meta", {}).get("thumbnail", {})
+    thumb_words = len((thumb.get("title", "") + " " + thumb.get("subtitle", "") + " " + thumb.get("stat", "")).split())
+    if thumb_words > 6:
+        warnings.append(f"Thumbnail text has {thumb_words} words (> 6): trim to 2-4 punchy words for mobile legibility.")
+
+    print(f"[Monetization Audit] words={words} | est_duration={minutes:.1f}m | diagrams={len(diagrams)} | docs={len(docs)} | thumb_words={thumb_words}")
+    for w in warnings:
+        print(f"  [WARN] {w}")
+    return warnings
+
+
+def youtube_pack(script, scenes):
+    """Build ready-to-paste YouTube metadata (Title, Description, exact MM:SS Chapters, Pinned Comment)."""
+    meta = script.get("meta", {})
+    starts = [0]
+    for i, s in enumerate(scenes[1:], 1):
+        starts.append(starts[-1] + scenes[i - 1]["frames"] - (0 if s.get("transition") == "cut" else TRANSITION_FRAMES))
+
+    def fmt_ts(frame):
+        sec = max(0, round(frame / FPS))
+        return f"{sec // 60:02d}:{sec % 60:02d}"
+
+    chapters = []
+    for c in meta.get("chapters", []):
+        idx = c.get("scene", 0)
+        if 0 <= idx < len(starts):
+            chapters.append(f"{fmt_ts(starts[idx])} {c.get('title', 'Chapter')}")
+    if not chapters:
+        chapters.append("00:00 Introduction")
+
+    desc = meta.get("description", "").strip()
+    facts = meta.get("factCheck")
+    sources_block = ""
+    if isinstance(facts, list) and facts:
+        sources_block = "\n\nSources & Verification:\n" + "\n".join(f"- {f}" for f in facts)
+    elif isinstance(facts, dict) and facts:
+        sources_block = "\n\nSources & Verification:\n" + "\n".join(f"- {k}: {v}" for k, v in facts.items())
+
+    lines = [
+        f"TITLE:\n{script.get('title', '')}",
+        "",
+        "DESCRIPTION:",
+        desc + sources_block,
+        "",
+        "CHAPTERS:",
+        *chapters,
+        "",
+        "PINNED COMMENT:",
+        "Which single failure in this chain surprised you most — the hidden legacy flaw or the panic fix? Let me know below.",
+        "",
+    ]
+    return "\n".join(lines)
 
 
 if __name__ == "__main__":

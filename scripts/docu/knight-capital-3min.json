@@ -1,0 +1,264 @@
+{
+  "title": "One Missed Server Cost $440 Million in 45 Minutes | Knight Capital",
+  "slug": "knight_docu_3min",
+  "voice": "am_michael",
+  "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail market maker—lost $440 million in 45 minutes. Based on SEC Administrative Order Release No. 70694, this documentary breaks down how a dormant 2003 test script, a reused feature flag, one skipped production server, and a panic rollback destroyed a 30-year trading giant.",
+  "factCheck": [
+    "SEC Administrative Order Release No. 70694 (October 16, 2013)",
+    "Realized pre-tax loss: $440M+ in 45 minutes (09:30 AM to 10:15 AM EDT, Aug 1, 2012)",
+    "212 parent orders generated over 4,000,000 child executions across 154 stocks (~397M shares)"
+  ],
+  "chapters": [
+    {"title": "The 45-Minute Wipeout", "scene": 0},
+    {"title": "Wall Street's Largest Market Maker", "scene": 1},
+    {"title": "The Nine-Year-Old Time Bomb", "scene": 4},
+    {"title": "One Skipped Server", "scene": 7},
+    {"title": "The Rollback That Made It 8x Worse", "scene": 11},
+    {"title": "The Swiss Cheese Postmortem", "scene": 14}
+  ],
+  "scenes": [
+    {
+      "kind": "hook_3s",
+      "mood": "tense",
+      "text": "Four hundred forty million dollars vanished in forty-five minutes because one engineer skipped a single server.",
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "credit": "ARCHIVE • NEW YORK STOCK EXCHANGE"},
+      "eyebrow": "09:30:01 AM EDT  •  SYSTEM FAILURE DETECTED",
+      "stat": "$440 MILLION",
+      "headline": "WIPED OUT IN 45 MINUTES",
+      "subline": "163,000 DOLLARS LOST PER SECOND"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Nine thirty in the morning, August first, twenty twelve. As the opening bell rang across Wall Street, few people realized a quiet firm in Jersey City held the entire retail market together.",
+      "overlayMap": "nyse_link",
+      "mediaListQueries": [
+        {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "push_in", "credit": "WALL STREET • NEW YORK"},
+        {"type": "image", "query": "Jersey City skyline Exchange Place", "cameraPreset": "crop_right", "credit": "EXCHANGE PLACE • JERSEY CITY, NJ"}
+      ],
+      "eyebrow": "AUGUST 1, 2012  •  09:30:00 AM EDT",
+      "headline": "NEW YORK STOCK EXCHANGE",
+      "subline": "KNIGHT CAPITAL GROUP — JERSEY CITY, NEW JERSEY"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "mystery",
+      "text": "Knight Capital Group was America's largest retail market maker, routing roughly seventeen percent of all retail stock volume and moving over three billion shares every single day.",
+      "mediaListQueries": [
+        {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "wide", "credit": "ARCHIVE • NYSE TRADING FLOOR"},
+        {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "crop_left", "credit": "ARCHIVE • NYSE TRADERS ON THE FLOOR"}
+      ],
+      "eyebrow": "KNIGHT CAPITAL GROUP  •  MARKET SHARE",
+      "stat": "17%",
+      "headline": "OF ALL U.S. RETAIL STOCK VOLUME",
+      "subline": "3.3 BILLION SHARES TRADED DAILY"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Every fraction of a second mattered, and all of that order flow ran through Knight's automated flagship router, a high-speed system called SMARS.",
+      "overlayMap": "smars_nodes",
+      "glossary": {"term": "SMARS", "definition": "Smart Market Access Routing System — Knight's automated high-speed order router."},
+      "mediaListQueries": [
+        {"type": "video", "archiveId": "server-room-with-seismic-isolation-floor-in-east-japan-great-earthquake-disaster-march-11-2011", "clipStartSec": 6, "query": "server room", "fallbackQuery": "Data center server racks", "credit": "INFRASTRUCTURE • DATA CENTER"},
+        {"type": "image", "query": "Ethernet cables network switch server", "cameraPreset": "crop_detail", "credit": "NETWORKING • PATCH PANEL & SWITCHES"}
+      ],
+      "eyebrow": "CORE INFRASTRUCTURE  •  8 PRODUCTION NODES",
+      "headline": "THE SMARS ORDER ROUTER",
+      "subline": "AUTOMATED SMART MARKET ACCESS ROUTING SYSTEM",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "mystery",
+      "text": "Yet buried deep inside SMARS slept a nine-year-old piece of test code called Power Peg, written back in two thousand three to buy stocks high and sell them low during internal stress tests.",
+      "glossary": {"term": "POWER PEG", "definition": "Retired 2003 internal QA script designed to buy high and sell low for stress testing."},
+      "mediaQuery": {"type": "image", "query": "Data center server racks", "cameraPreset": "crop_detail", "credit": "LEGACY PRODUCTION SERVERS"},
+      "eyebrow": "2003 LEGACY CODE  •  POWER PEG SCRIPT",
+      "headline": "DORMANT INTERNAL TEST ROUTINE",
+      "subline": "WRITTEN IN 2003 — NEVER DELETED FROM PRODUCTION"
+    },
+    {
+      "kind": "document",
+      "mood": "mystery",
+      "cueWord": "stop counter",
+      "text": "Knight retired Power Peg in two thousand three, yet never deleted the code. Worse still, a two thousand five refactor moved its safety stop counter out of the routine, leaving an infinite loop behind.",
+      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "SEC RECORD"},
+      "source": "SEC ORDER #70694 — SECTION III.B",
+      "date": "2005 REFACTOR",
+      "stamp": "SEC EXHIBIT",
+      "headline": "Cumulative Quantity Tracking Removed",
+      "excerpt": "In 2005, Knight moved the function that tracked cumulative shares from Power Peg to an earlier point in the SMARS code, leaving Power Peg with no stop limit.",
+      "highlight": "leaving Power Peg with no stop limit",
+      "highlightColor": "yellow"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Fast forward to July twenty twelve. To support the New York Stock Exchange's new Retail Liquidity Program, Knight developers reused the exact same software flag that used to trigger Power Peg.",
+      "glossary": {"term": "NYSE RLP", "definition": "Retail Liquidity Program — new exchange order program launched August 1, 2012."},
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "cameraPreset": "crop_detail", "credit": "NYSE • RETAIL LIQUIDITY PROGRAM"},
+      "eyebrow": "JULY 2012  •  NYSE RULE CHANGE",
+      "headline": "RETAIL LIQUIDITY PROGRAM LAUNCH",
+      "subline": "NEW EXCHANGE FEATURE REUSED LEGACY POWER PEG FLAG",
+      "sfx": "thud"
+    },
+    {
+      "kind": "terminal",
+      "mood": "tense",
+      "cueWord": "Server eight",
+      "text": "Knight deployed the update manually across eight servers. A technician copied the new binary to seven machines, accidentally skipped Server eight, and nobody ran an automated verification check.",
+      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "JERSEY CITY DC"},
+      "eyebrow": "ops@jersey-city-dc: ~/smars-deploy",
+      "headline": "SMARS CLUSTER (7 / 8 UPDATED)",
+      "lines": [
+        "$ deploy-smars --release rlp-2012-08 --manual",
+        "[OK]  srv-01..srv-07.smars.prod  updated (RLP binary)",
+        "[ERR] srv-08.smars.prod  SKIPPED — 2003 POWER PEG ACTIVE",
+        "[WARN] 0 automated checksum checks executed"
+      ],
+      "servers": [
+        {"label": "SRV-01", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-02", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-03", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-04", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-05", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-06", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-07", "sub": "RLP 2012", "status": "ok"},
+        {"label": "SRV-08", "sub": "2003 POWER PEG", "status": "fail"}
+      ]
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "Before the opening bell, SMARS even sent ninety-seven automated warning emails flagging the Power Peg error, but because they were low-priority alerts, nobody read them in time.",
+      "mediaQuery": {"type": "video", "archiveId": "server-room-with-seismic-isolation-floor-in-east-japan-great-earthquake-disaster-march-11-2011", "clipStartSec": 2, "query": "server room", "fallbackQuery": "Ethernet cables network switch server", "credit": "JERSEY CITY DATA CENTER"},
+      "eyebrow": "08:01 – 09:12 AM EDT  •  STARTUP LOGS",
+      "headline": "97 WARNING EMAILS UNREAD",
+      "subline": "LOW-PRIORITY ALERTS FLAGGED POWER PEG BEFORE BELL"
+    },
+    {
+      "kind": "big_stat",
+      "mood": "tense",
+      "text": "At nine thirty sharp, real customer orders hit Server eight. Just two hundred twelve parent orders exploded into four million rogue stock trades across one hundred fifty-four tickers.",
+      "mediaQuery": {"type": "video", "archiveId": "stockmarketcrashof2008", "clipStartSec": 18, "query": "stock market", "fallbackQuery": "New York Stock Exchange trading floor", "credit": "ARCHIVE • MARKET TURMOIL"},
+      "eyebrow": "09:30:00 AM EDT  •  SERVER #8 ROGUE EXECUTION",
+      "stat": "4,000,000",
+      "headline": "ROGUE TRADES FROM JUST 212 ORDERS",
+      "subline": "154 NYSE STOCKS HIT  •  397 MILLION SHARES TRADED",
+      "sfx": "boom"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "tense",
+      "text": "On the trading floor, Knight's risk team watched seven billion dollars in unintended positions pile up, bleeding ten million dollars every minute with no idea where the orders were coming from.",
+      "mediaListQueries": [
+        {"type": "image", "query": "New York Stock Exchange traders floor", "credit": "ARCHIVE • NYSE FLOOR"},
+        {"type": "image", "query": "New York Stock Exchange trading floor", "credit": "ARCHIVE • WALL STREET TRADING"}
+      ],
+      "eyebrow": "09:42 AM EDT  •  $7 BILLION PHANTOM EXPOSURE",
+      "headline": "BLIND IN THE WAR ROOM",
+      "subline": "NO RUNBOOK  •  NO CIRCUIT BREAKER  •  -$10M PER MINUTE"
+    },
+    {
+      "kind": "silence_twist",
+      "mood": "silence",
+      "text": "Knight had no documented kill switch. After twenty-eight minutes of pure panic, engineers tried the classic emergency fix: they hit rollback.",
+      "lines": [
+        "NO DOCUMENTED KILL SWITCH.",
+        "28 MINUTES OF BLIND PANIC.",
+        "THEN THEY HIT ROLLBACK."
+      ],
+      "sfx": "thud"
+    },
+    {
+      "kind": "terminal",
+      "mood": "tense",
+      "cueWord": "all eight",
+      "text": "By uninstalling the new code from the seven healthy servers, they restored the old binary across the entire cluster. All eight servers began firing Power Peg at the exact same time.",
+      "mediaQuery": {"type": "image", "query": "Data center server racks", "credit": "09:58 AM EDT"},
+      "eyebrow": "09:58:00 AM EDT  •  ROLLBACK DEPLOYED",
+      "headline": "8X DAMAGE MULTIPLIER (8 / 8 INFECTED)",
+      "lines": [
+        "$ rollback-smars --target srv-01..srv-07 --revert-2003",
+        "[OK]  srv-01..srv-07 reverted to legacy binary",
+        "[FATAL] ALL 8 SERVERS NOW EXECUTING POWER PEG",
+        "[BURN]  LOSS ACCELERATION: 8X MULTIPLIER"
+      ],
+      "servers": [
+        {"label": "SRV-01", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-02", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-03", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-04", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-05", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-06", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-07", "sub": "POWER PEG", "status": "fail"},
+        {"label": "SRV-08", "sub": "POWER PEG", "status": "fail"}
+      ],
+      "sfx": "explosion"
+    },
+    {
+      "kind": "loss_chart",
+      "mood": "tense",
+      "cueWord": "four hundred forty",
+      "text": "Engineers finally severed the routing path at ten fifteen, but unwinding the accidental positions locked in a staggering four hundred forty million dollar loss.",
+      "eyebrow": "CUMULATIVE PRE-TAX LOSS  •  AUGUST 1, 2012",
+      "headline": "45 MINUTES TO INSOLVENCY",
+      "stat": "-$440,000,000",
+      "unit": "$M",
+      "points": [
+        {"x": "09:30", "y": 0, "label": "$0"},
+        {"x": "09:38", "y": -80, "label": "-$80M"},
+        {"x": "09:50", "y": -180, "label": "-$180M"},
+        {"x": "09:58", "y": -220, "label": "8X ROLLBACK", "alert": true},
+        {"x": "10:15", "y": -440, "label": "-$440M", "alert": true}
+      ]
+    },
+    {
+      "kind": "big_stat",
+      "mood": "sad",
+      "text": "Within forty-eight hours, Knight's stock collapsed seventy-five percent. Only an emergency four hundred million dollar investor bailout kept the firm from instant liquidation.",
+      "mediaListQueries": [
+        {"type": "video", "archiveId": "stockmarketcrashof2008", "clipStartSec": 4, "query": "stock market", "fallbackQuery": "Lower Manhattan Financial District skyline", "credit": "ARCHIVE • MARKET FALLOUT"},
+        {"type": "image", "query": "Lower Manhattan Financial District skyline", "credit": "FINANCIAL DISTRICT • NEW YORK"}
+      ],
+      "eyebrow": "48-HOUR MARKET COLLAPSE",
+      "stat": "-75%",
+      "headline": "STOCK WIPED OUT  •  $400M EMERGENCY BAILOUT",
+      "subline": "KNIGHT CAPITAL ACQUIRED BY GETCO IN 2013"
+    },
+    {
+      "kind": "media_hero",
+      "mood": "sad",
+      "text": "In October twenty thirteen, the Securities and Exchange Commission fined Knight twelve million dollars and published the forensic order exposing every missed safeguard.",
+      "glossary": {"term": "SEC ORDER #70694", "definition": "2013 SEC enforcement action under the Market Access Rule (Rule 15c3-5)."},
+      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "push_in", "credit": "SEC HEADQUARTERS • WASHINGTON, D.C."},
+      "eyebrow": "OCTOBER 16, 2013  •  SEC RELEASE NO. 70694",
+      "headline": "$12 MILLION SEC PENALTY",
+      "subline": "MARKET ACCESS RULE VIOLATION & OFFICIAL POSTMORTEM"
+    },
+    {
+      "kind": "swiss_cheese",
+      "mood": "sad",
+      "text": "Five separate failures had to align: dead code left in production, a reused feature flag, a skipped manual deploy, ninety-seven unread alerts, and zero kill switch.",
+      "eyebrow": "POSTMORTEM FAILURE CHAIN",
+      "headline": "FIVE ALIGNED FAILURES",
+      "layers": [
+        {"title": "LAYER 1", "sub": "9-Yr Dead Code"},
+        {"title": "LAYER 2", "sub": "Reused Flag"},
+        {"title": "LAYER 3", "sub": "Manual Deploy"},
+        {"title": "LAYER 4", "sub": "97 Ignored Emails"},
+        {"title": "LAYER 5", "sub": "No Kill Switch"}
+      ]
+    },
+    {
+      "kind": "title_card",
+      "mood": "sad",
+      "text": "In high-speed software, the bug that destroys you is rarely the code you wrote today. It is the forgotten code you left behind nine years ago.",
+      "mediaQuery": {"type": "image", "query": "Lower Manhattan Financial District skyline", "credit": "WALL STREET • NEW YORK"},
+      "eyebrow": "SYSTEM POSTMORTEM  •  AUGUST 1, 2012",
+      "headline": "THE 45-MINUTE MELTDOWN",
+      "subline": "KNIGHT CAPITAL GROUP"
+    }
+  ]
+}

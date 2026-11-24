@@ -1,5 +1,5 @@
 {
-  "title": "HOW ONE MISSED SERVER LOST $440 MILLION IN 45 MINUTES | KNIGHT CAPITAL",
+  "title": "One Missed Server Cost $440 Million in 45 Minutes | Knight Capital",
   "lang": "en",
   "tts": "edge",
   "voice": "en-US-AndrewMultilingualNeural",
@@ -14,9 +14,8 @@
     "theme": "disaster",
     "thumbnail": {
       "badge": "SYSTEM POSTMORTEM",
-      "title": "KNIGHT CAPITAL",
-      "subtitle": "$440M LOST IN 45 MIN",
-      "stat": "1 MISSED SERVER -> BANKRUPT"
+      "title": "-$440M",
+      "subtitle": "IN 45 MINUTES"
     },
     "description": "On August 1, 2012, Knight Capital Group—Wall Street's largest retail market maker—lost $440 million in just 45 minutes. Based on the official SEC Administrative Order (Oct 2013), this forensic postmortem breaks down how a single missed deployment on Server 8, a reused dead-code flag, and a disastrous rollback created one of the most expensive software failures in financial history.",
     "timeline": [
@@ -470,7 +469,14 @@
         "type": "data_flow",
         "title": "SMARS FLAG COLLISION",
         "subtitle": "Old Power Peg flag reused for new NYSE RLP orders",
-        "highlightNode": 1
+        "rootCause": "NYSE RLP reused the retired 2003 Power Peg flag inside SMARS",
+        "highlightNode": 1,
+        "nodes": [
+          {"tag": "EXCHANGE LAUNCH", "title": "NYSE RLP", "sub": "AUG 1, 2012", "badge": "NEW ORDER FLAG", "status": "ok"},
+          {"tag": "CONFIG COLLISION", "title": "REUSED FLAG", "sub": "OLD BIT REASSIGNED", "badge": "RLP == POWER PEG", "status": "warn"},
+          {"tag": "LEGACY CODE", "title": "POWER PEG", "sub": "NO STOP COUNTER", "badge": "DORMANT SINCE 2003", "status": "fail"},
+          {"tag": "PRODUCTION", "title": "SMARS ROUTER", "sub": "8 SERVERS", "badge": "17% RETAIL FLOW", "status": "ok"}
+        ]
       }
     },
     {
@@ -482,10 +488,20 @@
         "value": "UPDATED"
       },
       "diagram": {
-        "type": "data_flow",
+        "type": "server_grid",
         "title": "DEPLOYMENT PIPELINE",
         "subtitle": "7 of 8 SMARS servers received the new RLP binary",
-        "highlightNode": 1
+        "rootCause": "Manual file copy updated Servers 1-7 but missed Server 8",
+        "servers": [
+          {"label": "SRV-01", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-02", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-03", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-04", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-05", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-06", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-07", "sub": "RLP UPDATED", "status": "ok"},
+          {"label": "SRV-08", "sub": "OLD BINARY", "status": "fail"}
+        ]
       }
     },
     {
@@ -531,7 +547,14 @@
         "type": "code_crash",
         "title": "SERVER 8 MISMATCH",
         "subtitle": "New RLP flag hits unpatched Server 8 -> wakes Power Peg",
-        "highlightNode": 2
+        "rootCause": "Unpatched Server 8 misread RLP flag and fired unlimited Power Peg loops",
+        "highlightNode": 2,
+        "nodes": [
+          {"tag": "RETAIL FLOW", "title": "CLIENT ORDER", "sub": "09:30 AM EDT", "badge": "RLP FLAG = TRUE", "status": "ok"},
+          {"tag": "ROUTING", "title": "SERVER #8", "sub": "UNPATCHED NODE", "badge": "2003 BINARY", "status": "warn"},
+          {"tag": "ZOMBIE LOOP", "title": "POWER PEG", "sub": "NO STOP GUARD", "badge": "40 ORDERS / SEC", "status": "fail"},
+          {"tag": "NYSE / NASDAQ", "title": "4M TRADES", "sub": "154 STOCKS HIT", "badge": "$10M LOST / MIN", "status": "fail"}
+        ]
       }
     },
     {
@@ -793,12 +816,22 @@
           "word": "firing"
         }
       ],
-      "callouts": [
-        {
-          "text": "ROLLBACK MADE IT 8X WORSE",
-          "word": "eight"
-        }
-      ]
+      "diagram": {
+        "type": "server_grid",
+        "title": "ROLLBACK MULTIPLIER",
+        "subtitle": "Reverting Servers 1-7 turned 1 rogue node into all 8",
+        "rootCause": "Rollback restored old Power Peg binary across all 8 SMARS servers",
+        "servers": [
+          {"label": "SRV-01", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-02", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-03", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-04", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-05", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-06", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-07", "sub": "POWER PEG", "status": "fail"},
+          {"label": "SRV-08", "sub": "POWER PEG", "status": "fail"}
+        ]
+      }
     },
     {
       "text": "The well-meaning rollback poured gasoline directly onto a roaring financial fire.",
@@ -887,12 +920,20 @@
           "word": "forty"
         }
       ],
-      "callouts": [
-        {
-          "text": "LOSS: $440 MILLION",
-          "word": "loss"
-        }
-      ]
+      "diagram": {
+        "type": "loss_chart",
+        "title": "45-MINUTE CAPITAL WIPEOUT",
+        "subtitle": "Cumulative realized loss from 09:30 AM to 10:15 AM EDT",
+        "rootCause": "$440M pre-tax loss erased Knight Capital's equity in 45 minutes",
+        "unit": "$M",
+        "points": [
+          {"x": "09:30", "y": 0, "label": "$0"},
+          {"x": "09:38", "y": -80, "label": "-$80M"},
+          {"x": "09:50", "y": -180, "label": "-$180M"},
+          {"x": "09:58", "y": -220, "label": "8x ROLLBACK", "alert": true},
+          {"x": "10:15", "y": -440, "label": "-$440M", "alert": true}
+        ]
+      }
     },
     {
       "text": "Knight's stock price collapsed by seventy-five percent in forty-eight hours.",
@@ -960,7 +1001,14 @@
       "diagram": {
         "type": "swiss_cheese",
         "title": "KNIGHT CAPITAL FAILURE CHAIN",
-        "subtitle": "Dead Code -> Flag Reuse -> Manual Deploy -> Ignored Alerts -> Blind Rollback"
+        "subtitle": "Dead Code -> Flag Reuse -> Manual Deploy -> Ignored Alerts -> Blind Rollback",
+        "layers": [
+          {"title": "LAYER 1", "sub": "9-Yr Dead Code"},
+          {"title": "LAYER 2", "sub": "Reused Flag"},
+          {"title": "LAYER 3", "sub": "Manual Deploy"},
+          {"title": "LAYER 4", "sub": "97 Ignored Emails"},
+          {"title": "LAYER 5", "sub": "No Kill Switch"}
+        ]
       }
     },
     {

@@ -16,6 +16,7 @@ import { ArrowLabel, CalloutData, Callouts, Paper, PaperData, SpeechBubble } fro
 import { Weather, WeatherFx } from './Weather';
 import { KineticCaptions, WordTiming } from './KineticCaptions';
 import { TechnicalDiagram, DiagramProps } from './TechnicalDiagram';
+import { DocumentCard, DocumentCardData } from './DocumentCard';
 import { TimelineBar, TimelineEvent } from './TimelineBar';
 
 export type IconData = { icon: IconName; word: string; label?: string; at: number };
@@ -42,6 +43,7 @@ export type SceneData = {
 	fx?: Weather; // ambient effect over the scene
 	paper?: PaperData; // hand-written document that slides in, optionally with a word crossed out and rewritten
 	diagram?: DiagramProps; // technical schematic / data flow / mechanical cross-section
+	doc?: DocumentCardData; // archival living-document excerpt with animated highlight sweep
 	looks?: Record<string, Record<Expression, string>>; // per-scene heads overriding the cast, e.g. a younger "you"
 	speaker?: 'narrator' | 'friend';
 	counter?: { label: string; value: string };
@@ -208,7 +210,7 @@ export const Episode: React.FC<EpisodeProps> = ({
 		}
 		children.push(
 			<TransitionSeries.Sequence key={`s${i}`} durationInFrames={scene.frames}>
-				<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} index={i} shotBase={shotBase} captionWords={captionWords} captionStyle={captionStyle} iconStyle={iconStyle} cast={cast} />
+				<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} hasTimeline={hasTimeline} index={i} shotBase={shotBase} captionWords={captionWords} captionStyle={captionStyle} iconStyle={iconStyle} cast={cast} />
 			</TransitionSeries.Sequence>
 		);
 		shotBase += shotsIn(scene);
@@ -216,9 +218,31 @@ export const Episode: React.FC<EpisodeProps> = ({
 	return (
 		<AbsoluteFill>
 			<TransitionSeries>{children}</TransitionSeries>
+			<CinematicOverlay />
 			{music ? <Music tracks={typeof music === 'string' ? [{ from: 0, src: music }] : music} /> : null}
 			{hasTimeline && <TimelineBar events={timeline!} currentSceneIndex={currentSceneIndex} totalScenes={scenes.length} />}
 			{showCounter ? <Counter scenes={scenes} topOffset={hasTimeline ? 96 : 36} /> : null}
+		</AbsoluteFill>
+	);
+};
+
+// Subtle documentary vignette + animated film grain linking backgrounds, characters, and schematics.
+const CinematicOverlay: React.FC = () => {
+	const frame = useCurrentFrame();
+	const seed = Math.floor(frame / 2);
+	return (
+		<AbsoluteFill style={{ pointerEvents: 'none', zIndex: 15 }}>
+			<AbsoluteFill
+				style={{
+					background: 'radial-gradient(ellipse at center, transparent 58%, rgba(0, 0, 0, 0.44) 100%)',
+				}}
+			/>
+			<svg width="100%" height="100%" style={{ opacity: 0.045, mixBlendMode: 'overlay' }}>
+				<filter id="filmGrain">
+					<feTurbulence type="fractalNoise" baseFrequency="0.82" numOctaves="2" seed={seed} stitchTiles="stitch" />
+				</filter>
+				<rect width="100%" height="100%" filter="url(#filmGrain)" />
+			</svg>
 		</AbsoluteFill>
 	);
 };
@@ -249,6 +273,7 @@ const Counter: React.FC<{ scenes: SceneData[]; topOffset?: number }> = ({ scenes
 				position: 'absolute',
 				top: topOffset,
 				right: 56,
+				zIndex: 30,
 				padding: '14px 28px',
 				borderRadius: 18,
 				background: 'rgba(0,0,0,0.6)',
@@ -269,13 +294,14 @@ const Scene: React.FC<{
 	scene: SceneData;
 	withWhoosh: boolean;
 	hasFriend: boolean;
+	hasTimeline: boolean;
 	index: number;
 	shotBase: number;
 	captionWords: number;
 	captionStyle?: 'kinetic' | 'classic' | 'none';
 	iconStyle: 'panel' | 'bubble';
 	cast: Cast;
-}> = ({ scene, withWhoosh, hasFriend, index, shotBase, captionWords, captionStyle, iconStyle, cast }) => {
+}> = ({ scene, withWhoosh, hasFriend, hasTimeline, index, shotBase, captionWords, captionStyle, iconStyle, cast }) => {
 	const frame = useCurrentFrame();
 	const mouth = scene.mouth[frame] ?? 0;
 	const friendTalking = scene.speaker === 'friend';
@@ -433,6 +459,8 @@ const Scene: React.FC<{
 			</AbsoluteFill>
 			{scene.diagram ? (
 				<TechnicalDiagram {...scene.diagram} />
+			) : scene.doc ? (
+				<DocumentCard {...scene.doc} />
 			) : scene.title ? (
 				<Title text={scene.title} />
 			) : scene.empty ? null : iconStyle === 'bubble' ? (
@@ -460,7 +488,7 @@ const Scene: React.FC<{
 				return <SpeechBubble quote={scene.quote} head={head} side={quoteBy ? 'left' : 'right'} />;
 			})()}
 			{!scene.title && scene.paper && <Paper paper={scene.paper} />}
-			{scene.stamp && <Stamp text={scene.stamp} delay={withWhoosh ? TRANSITION_FRAMES : 0} />}
+			{scene.stamp && <Stamp text={scene.stamp} delay={withWhoosh ? TRANSITION_FRAMES : 0} topOffset={hasTimeline ? 104 : 36} />}
 			{!scene.title && (captionStyle ?? 'kinetic') === 'kinetic' ? (
 				<KineticCaptions
 					text={scene.text}
@@ -525,7 +553,7 @@ const Title: React.FC<{ text: string }> = ({ text }) => {
 
 // Place/year card, top left, like the reference channel's "ELTHAM, 1501": pops in once the scene
 // is fully on screen, holds about 3 s, then fades so it never sits over the whole scene.
-const Stamp: React.FC<{ text: string; delay: number }> = ({ text, delay }) => {
+const Stamp: React.FC<{ text: string; delay: number; topOffset?: number }> = ({ text, delay, topOffset = 36 }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
 	const t = frame - delay - 3;
@@ -537,11 +565,11 @@ const Stamp: React.FC<{ text: string; delay: number }> = ({ text, delay }) => {
 			style={{
 				position: 'absolute',
 				left: 56,
-				top: 36,
+				top: topOffset,
 				// One line, shrunk to stay under ~760 px: clear of the head below and the panel-style callout slots (x=820).
 				whiteSpace: 'nowrap',
 				fontFamily: 'Arial Black, Impact, sans-serif',
-				fontSize: Math.min(72, Math.floor(1000 / text.length)),
+				fontSize: Math.min(64, Math.floor(900 / text.length)),
 				lineHeight: 1,
 				color: '#fff',
 				WebkitTextStroke: '12px #111',

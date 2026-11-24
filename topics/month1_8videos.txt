@@ -1,0 +1,10 @@
+# Month 1 Rollout Plan: 8 Episodes (2 videos/week, 10-12 min each, Software & Cyber-Physical Disasters)
+# Generate scripts with: python make_video.py --topics-file topics/month1_8videos.txt --format disaster --minutes 12
+Knight Capital Group $440M Trading Algorithm Meltdown (2012)
+CrowdStrike 8.5 Million Windows BSOD Global Outage (2024)
+Therac-25 Radiation Therapy Software Race Condition (1985-1987)
+Ariane 5 Flight 501 64-Bit Integer Overflow Explosion (1996)
+Northeast Blackout of 2003 Alarm Software Race Condition (2003)
+Boeing 737 MAX MCAS Single-Sensor Flight Control Failure (2018-2019)
+Mars Climate Orbiter Metric vs Imperial Navigation Loss (1999)
+AT&T Long Distance Network Cascading Switch Collapse (1990)

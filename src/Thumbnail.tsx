@@ -18,7 +18,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 	title = '50% IN 45 DAYS?',
 	badge = 'TRUE STORY',
 	subtitle = 'THE $15M SCAM',
-	stat = '$0 ➜ $15,000,000',
+	stat,
 	statIcon,
 	face = 'faces/charles-ponzi_shock.png',
 	bg = 'bg/exchange.png',
@@ -34,6 +34,8 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 		title.toUpperCase().includes('CHERNOBYL');
 
 	const effectiveAccent = isDisaster ? '#ff3b30' : accentColor;
+	const accentGlow = isDisaster ? 'rgba(255,59,48,0.65)' : 'rgba(255,210,63,0.65)';
+	const borderGlow = isDisaster ? 'rgba(255,59,48,0.35)' : 'rgba(255,210,63,0.3)';
 
 	return (
 		<AbsoluteFill
@@ -41,7 +43,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				width: 1280,
 				height: 720,
 				backgroundColor: '#0c0e14',
-				fontFamily: 'Arial Black, Impact, sans-serif',
+				fontFamily: "'Montserrat', 'Segoe UI', 'Helvetica Neue', Arial, sans-serif",
 				overflow: 'hidden',
 			}}
 		>
@@ -90,106 +92,105 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				}}
 			/>
 
-			{/* Left Column: CTR Headline & Badges */}
+			{/* Left Column: Clean High-CTR Documentary Headline */}
 			<div
 				style={{
 					position: 'absolute',
-					top: 50,
-					left: 60,
-					width: 720,
+					top: 84,
+					left: 72,
+					width: 710,
 					display: 'flex',
 					flexDirection: 'column',
 					alignItems: 'flex-start',
 					zIndex: 10,
 				}}
 			>
-				{/* Category Badge (inline SVG icon avoids Linux missing-emoji tofu boxes) */}
-				<div
-					style={{
-						display: 'inline-flex',
-						alignItems: 'center',
-						gap: 12,
-						backgroundColor: '#ff2a2a',
-						color: '#ffffff',
-						fontSize: 26,
-						fontWeight: 900,
-						padding: '8px 22px',
-						borderRadius: 8,
-						letterSpacing: 2,
-						textTransform: 'uppercase',
-						boxShadow: '0 8px 20px rgba(255, 42, 42, 0.4), inset 0 2px 0 rgba(255,255,255,0.3)',
-						marginBottom: 20,
-						transform: 'rotate(-2deg)',
-					}}
-				>
-					<svg width="26" height="26" viewBox="0 0 24 24" fill="none">
-						<path d="M12 2L2 21H22L12 2Z" fill="#ffd23f" stroke="#000" strokeWidth="1.5" />
-						<rect x="11" y="8" width="2" height="6" fill="#000" />
-						<rect x="11" y="16" width="2" height="2" fill="#000" />
-					</svg>
-					{badge}
-				</div>
+				{/* Subtle Eyebrow Tag */}
+				{badge ? (
+					<div
+						style={{
+							display: 'inline-flex',
+							alignItems: 'center',
+							gap: 10,
+							backgroundColor: 'rgba(15, 23, 42, 0.85)',
+							borderLeft: `5px solid ${effectiveAccent}`,
+							color: '#e2e8f0',
+							fontSize: 22,
+							fontWeight: 800,
+							padding: '8px 18px',
+							borderRadius: 4,
+							letterSpacing: 3,
+							textTransform: 'uppercase',
+							marginBottom: 22,
+						}}
+					>
+						<span
+							style={{
+								width: 10,
+								height: 10,
+								borderRadius: '50%',
+								backgroundColor: effectiveAccent,
+								display: 'inline-block',
+							}}
+						/>
+						{badge}
+					</div>
+				) : null}
 
-				{/* Giant Hook Headline */}
+				{/* Giant Punchy Hook Headline (1-3 words for 2-inch mobile legibility) */}
 				<div
 					style={{
-						fontSize: 82,
-						lineHeight: 1.02,
+						fontSize: 104,
+						fontWeight: 900,
+						lineHeight: 0.98,
 						color: '#ffffff',
 						textTransform: 'uppercase',
-						WebkitTextStroke: '4px #000000',
-						textShadow: '0 8px 0 #000000, 0 18px 30px rgba(0,0,0,0.9)',
-						letterSpacing: -1,
+						textShadow: '0 8px 28px rgba(0,0,0,0.92), 0 2px 6px rgba(0,0,0,0.95)',
+						letterSpacing: -2,
 						marginBottom: 24,
 					}}
 				>
 					{title}
 				</div>
 
-				{/* High-Impact Subtitle Pill */}
+				{/* High-Contrast Accent Bar */}
 				{subtitle ? (
 					<div
 						style={{
 							backgroundColor: effectiveAccent,
-							color: '#000000',
-							fontSize: 44,
+							color: isDisaster ? '#ffffff' : '#000000',
+							fontSize: 46,
 							fontWeight: 900,
 							padding: '10px 26px',
-							borderRadius: 10,
+							borderRadius: 6,
+							letterSpacing: 1,
 							textTransform: 'uppercase',
-							boxShadow: '0 10px 25px rgba(0,0,0,0.6)',
-							transform: 'rotate(1.5deg)',
-							marginBottom: 28,
+							boxShadow: '0 12px 30px rgba(0,0,0,0.65)',
+							marginBottom: 24,
 						}}
 					>
 						{subtitle}
 					</div>
 				) : null}
 
-				{/* Stat / Proof Box */}
+				{/* Optional Minimalist Telemetry Proof Line */}
 				{stat ? (
 					<div
 						style={{
-							display: 'flex',
+							display: 'inline-flex',
 							alignItems: 'center',
-							gap: 14,
-							backgroundColor: 'rgba(0, 0, 0, 0.75)',
-							border: `3px solid ${effectiveAccent}`,
-							borderRadius: 14,
-							padding: '12px 24px',
-							backdropFilter: 'blur(8px)',
+							gap: 12,
+							borderTop: `2px solid ${effectiveAccent}`,
+							paddingTop: 12,
 						}}
 					>
-						<svg width="30" height="30" viewBox="0 0 24 24" fill="none">
-							<path d="M13 2L4 14H11L10 22L20 10H13L13 2Z" fill={effectiveAccent} />
-						</svg>
 						<span
 							style={{
-								fontSize: 34,
-								color: isDisaster ? '#ff4d4d' : '#00ff88',
-								fontWeight: 900,
-								letterSpacing: 1,
-								textShadow: isDisaster ? '0 4px 10px rgba(255, 77, 77, 0.5)' : '0 4px 10px rgba(0, 255, 136, 0.5)',
+								fontSize: 30,
+								color: isDisaster ? '#fca5a5' : '#bbf7d0',
+								fontWeight: 800,
+								letterSpacing: 1.5,
+								textShadow: '0 2px 10px rgba(0,0,0,0.9)',
 							}}
 						>
 							{stat}
@@ -198,7 +199,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				) : null}
 			</div>
 
-			{/* Right Column: Character with Shock/Exaggerated Face */}
+			{/* Right Column: Character Focal Point */}
 			<div
 				style={{
 					position: 'absolute',
@@ -226,7 +227,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 					}}
 				/>
 
-				{/* Character Head Cutout with Outline */}
+				{/* Character Head Cutout with Accent Rim */}
 				{face ? (
 					<Img
 						src={staticFile(face)}
@@ -235,29 +236,10 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 							height: 460,
 							objectFit: 'contain',
 							zIndex: 3,
-							filter: 'drop-shadow(0 0 10px #ffffff) drop-shadow(0 0 25px rgba(255,210,63,0.8)) drop-shadow(0 15px 30px rgba(0,0,0,0.8))',
+							filter: `drop-shadow(0 0 8px #ffffff) drop-shadow(0 0 24px ${accentGlow}) drop-shadow(0 15px 30px rgba(0,0,0,0.85))`,
 						}}
 					/>
 				) : null}
-
-				{/* Clean SVG Warning Stamp (no Linux emoji tofu boxes) */}
-				<svg
-					width="86"
-					height="86"
-					viewBox="0 0 64 64"
-					style={{
-						position: 'absolute',
-						top: 60,
-						left: -10,
-						transform: 'rotate(-18deg)',
-						filter: 'drop-shadow(0 10px 20px rgba(0,0,0,0.8))',
-						zIndex: 6,
-					}}
-				>
-					<path d="M32 6L6 56H58L32 6Z" fill={effectiveAccent} stroke="#ffffff" strokeWidth="4" strokeLinejoin="round" />
-					<rect x="29" y="22" width="6" height="18" rx="3" fill="#000000" />
-					<circle cx="32" cy="47" r="3.5" fill="#000000" />
-				</svg>
 			</div>
 
 			{/* Dramatic Corner Framing Elements */}
@@ -265,7 +247,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				style={{
 					position: 'absolute',
 					inset: 0,
-					boxShadow: 'inset 0 0 60px rgba(0,0,0,0.9), inset 0 0 15px rgba(255,210,63,0.3)',
+					boxShadow: `inset 0 0 60px rgba(0,0,0,0.9), inset 0 0 15px ${borderGlow}`,
 					pointerEvents: 'none',
 					zIndex: 20,
 				}}
