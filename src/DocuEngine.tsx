@@ -123,6 +123,7 @@ export type DocuScene = {
 	sfx?: string;
 	cueWord?: string;
 	cueFrame?: number;
+	cutFrames?: number[];
 	glossary?: DocuGlossary;
 	overlayMap?: 'nyse_link' | 'smars_nodes';
 	voxMode?: 'single_8' | 'all_8';
@@ -248,22 +249,22 @@ const GlossaryCard: React.FC<{ glossary?: DocuGlossary; duration: number }> = ({
 				position: 'absolute',
 				top: 66,
 				right: 54,
-				maxWidth: 460,
+				maxWidth: 680,
 				backgroundColor: 'rgba(6, 10, 18, 0.84)',
 				backdropFilter: 'blur(8px)',
 				borderLeft: '3px solid #38bdf8',
 				borderRadius: '0 8px 8px 0',
-				padding: '12px 18px',
+				padding: '16px 24px',
 				opacity,
 				transform: `translateX(${interpolate(pop, [0, 1], [18, 0])}px)`,
 				zIndex: 25,
 				pointerEvents: 'none',
 			}}
 		>
-			<div style={{ fontFamily: MONO, fontSize: 13, fontWeight: 700, letterSpacing: 2, color: '#38bdf8', marginBottom: 4 }}>
+			<div style={{ fontFamily: MONO, fontSize: 20, fontWeight: 700, letterSpacing: 2, color: '#38bdf8', marginBottom: 6 }}>
 				TERM  •  {glossary.term}
 			</div>
-			<div style={{ fontFamily: SANS, fontSize: 16, lineHeight: 1.38, color: '#e2e8f0' }}>
+			<div style={{ fontFamily: SANS, fontSize: 24, lineHeight: 1.38, color: '#e2e8f0' }}>
 				{glossary.definition}
 			</div>
 		</div>
@@ -283,7 +284,7 @@ const DoubleExposureOverlay: React.FC<{ kind?: 'nyse_link' | 'smars_nodes' }> = 
 				viewBox="0 0 1920 1080"
 				width="100%"
 				height="100%"
-				style={{ position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.42, zIndex: 8 }}
+				style={{ position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.65, zIndex: 8 }}
 			>
 				<path
 					d="M 420 340 Q 960 210 1500 340"
@@ -295,21 +296,21 @@ const DoubleExposureOverlay: React.FC<{ kind?: 'nyse_link' | 'smars_nodes' }> = 
 				/>
 				<circle cx="420" cy="340" r="10" fill="#38bdf8" />
 				<circle cx="420" cy="340" r={18 + 8 * pulse} fill="none" stroke="#38bdf8" strokeWidth="2" opacity="0.55" />
-				<rect x="275" y="366" width="290" height="54" rx="6" fill="rgba(6, 10, 18, 0.78)" stroke="#38bdf8" strokeWidth="1.5" />
-				<text x="420" y="391" fill="#38bdf8" fontSize="14" fontFamily={MONO} textAnchor="middle" fontWeight="bold">
+				<rect x="220" y="366" width="400" height="78" rx="6" fill="rgba(6, 10, 18, 0.78)" stroke="#38bdf8" strokeWidth="1.5" />
+				<text x="420" y="398" fill="#38bdf8" fontSize="21" fontFamily={MONO} textAnchor="middle" fontWeight="bold">
 					JERSEY CITY DC
 				</text>
-				<text x="420" y="410" fill="#e2e8f0" fontSize="13" fontFamily={MONO} textAnchor="middle">
+				<text x="420" y="428" fill="#e2e8f0" fontSize="19" fontFamily={MONO} textAnchor="middle">
 					KNIGHT SMARS ROUTER
 				</text>
 
 				<circle cx="1500" cy="340" r="10" fill="#ef4444" />
 				<circle cx="1500" cy="340" r={18 + 8 * pulse} fill="none" stroke="#ef4444" strokeWidth="2" opacity="0.55" />
-				<rect x="1355" y="366" width="290" height="54" rx="6" fill="rgba(6, 10, 18, 0.78)" stroke="#ef4444" strokeWidth="1.5" />
-				<text x="1500" y="391" fill="#fca5a5" fontSize="14" fontFamily={MONO} textAnchor="middle" fontWeight="bold">
+				<rect x="1300" y="366" width="400" height="78" rx="6" fill="rgba(6, 10, 18, 0.78)" stroke="#ef4444" strokeWidth="1.5" />
+				<text x="1500" y="398" fill="#fca5a5" fontSize="21" fontFamily={MONO} textAnchor="middle" fontWeight="bold">
 					WALL STREET, NY
 				</text>
-				<text x="1500" y="410" fill="#e2e8f0" fontSize="13" fontFamily={MONO} textAnchor="middle">
+				<text x="1500" y="428" fill="#e2e8f0" fontSize="19" fontFamily={MONO} textAnchor="middle">
 					NYSE  •  17% RETAIL FLOW
 				</text>
 			</svg>
@@ -321,28 +322,28 @@ const DoubleExposureOverlay: React.FC<{ kind?: 'nyse_link' | 'smars_nodes' }> = 
 			viewBox="0 0 1920 1080"
 			width="100%"
 			height="100%"
-			style={{ position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.40, zIndex: 8 }}
+			style={{ position: 'absolute', inset: 0, pointerEvents: 'none', opacity: 0.62, zIndex: 8 }}
 		>
 			{Array.from({ length: 8 }, (_, i) => {
 				const col = i % 4;
 				const row = Math.floor(i / 4);
-				const x = 1120 + col * 175;
-				const y = 320 + row * 120;
+				const x = 1020 + col * 204;
+				const y = 290 + row * 130;
 				const isEight = i === 7;
 				return (
 					<g key={i} transform={`translate(${x}, ${y})`}>
 						<rect
-							width="148"
-							height="86"
+							width="180"
+							height="104"
 							rx="8"
-							fill="rgba(6, 10, 18, 0.72)"
+							fill="rgba(6, 10, 18, 0.88)"
 							stroke={isEight ? '#f59e0b' : '#38bdf8'}
 							strokeWidth={isEight ? 2.5 : 1.5}
 						/>
-						<text x="74" y="40" fill="#ffffff" fontSize="18" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
+						<text x="90" y="48" fill="#ffffff" fontSize="26" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
 							SRV-0{i + 1}
 						</text>
-						<text x="74" y="64" fill={isEight ? '#fbbf24' : '#38bdf8'} fontSize="12" fontFamily={MONO} textAnchor="middle">
+						<text x="90" y="80" fill={isEight ? '#fbbf24' : '#38bdf8'} fontSize="18" fontFamily={MONO} textAnchor="middle">
 							{isEight ? 'NODE #8' : 'ONLINE'}
 						</text>
 					</g>
@@ -427,11 +428,11 @@ const SingleMediaShot: React.FC<{
 						top: 66,
 						right: 54,
 						fontFamily: MONO,
-						fontSize: 13,
+						fontSize: 19,
 						letterSpacing: 2,
 						color: 'rgba(226, 232, 240, 0.75)',
 						backgroundColor: 'rgba(6, 8, 13, 0.7)',
-						padding: '5px 12px',
+						padding: '7px 16px',
 						borderRadius: 4,
 						border: '1px solid rgba(148, 163, 184, 0.25)',
 						zIndex: 12,
@@ -503,10 +504,12 @@ const HOOK_LOGS = [
 
 const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
+	const { fps } = useVideoConfig();
 	const opacity = useFadeEnvelope(scene.duration, true);
 
-	const cut1End = Math.min(33, Math.floor(scene.duration * 0.31));
-	const cut2End = Math.min(66, Math.floor(scene.duration * 0.63));
+	const cut1End = scene.cutFrames?.[0] ?? Math.floor(scene.duration * 0.44);
+	const cut2End = scene.cutFrames?.[1] ?? Math.floor(scene.duration * 0.74);
+	const punchFrame = scene.cueFrame ?? Math.floor(cut1End * 0.52);
 	const cut = frame < cut1End ? 0 : frame < cut2End ? 1 : 2;
 
 	const localF = cut === 0 ? frame : cut === 1 ? frame - cut1End : frame - cut2End;
@@ -514,11 +517,21 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const shakeX = Math.sin(localF * 2.7) * shakeAmp;
 	const shakeY = Math.cos(localF * 3.3) * shakeAmp;
 	const burnDollar = Math.round(
-		interpolate(frame, [0, Math.max(10, cut1End - 10)], [163000, 440000000], {
+		interpolate(frame, [0, Math.max(15, punchFrame - 4)], [163000, 440000000], {
 			extrapolateLeft: 'clamp',
 			extrapolateRight: 'clamp',
 		})
 	);
+	const punchSpring = spring({
+		frame: Math.max(0, frame - punchFrame),
+		fps,
+		config: { damping: 14 },
+	});
+	const showPunch = frame >= punchFrame;
+	const cut2Scale = interpolate(localF, [0, 25], [1.06, 1.0], {
+		extrapolateLeft: 'clamp',
+		extrapolateRight: 'clamp',
+	});
 
 	return (
 		<AbsoluteFill style={{ backgroundColor: '#050609', opacity, transform: `translate(${shakeX}px, ${shakeY}px)` }}>
@@ -542,7 +555,7 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						justifyContent: 'center',
 					}}
 				>
-					<div style={{ fontFamily: MONO, fontSize: 36, letterSpacing: 5, color: '#fca5a5', marginBottom: 20 }}>
+					<div style={{ fontFamily: MONO, fontSize: 42, letterSpacing: 5, color: '#fca5a5', marginBottom: 20 }}>
 						{scene.eyebrow || '09:30:01 AM EDT  •  SYSTEM FAILURE DETECTED'}
 					</div>
 					<div
@@ -558,8 +571,30 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 					>
 						-${burnDollar.toLocaleString()}
 					</div>
-					<div style={{ fontFamily: MONO, fontSize: 42, color: '#f8fafc', marginTop: 28, letterSpacing: 3 }}>
-						{scene.subline || '163,000 DOLLARS LOST PER SECOND'}
+					<div style={{ marginTop: 28, minHeight: 92, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
+						{showPunch ? (
+							<div
+								style={{
+									backgroundColor: '#ff3b30',
+									color: '#ffffff',
+									fontFamily: SANS,
+									fontSize: 56,
+									fontWeight: 900,
+									letterSpacing: 4,
+									padding: '14px 44px',
+									borderRadius: 6,
+									boxShadow: '0 0 40px rgba(255, 59, 48, 0.5)',
+									opacity: punchSpring,
+									transform: `scale(${interpolate(punchSpring, [0, 1], [0.86, 1])})`,
+								}}
+							>
+								WIPED OUT IN 45 MINUTES
+							</div>
+						) : (
+							<div style={{ fontFamily: MONO, fontSize: 48, color: '#f8fafc', letterSpacing: 3 }}>
+								{scene.subline || '163,000 DOLLARS LOST PER SECOND'}
+							</div>
+						)}
 					</div>
 				</AbsoluteFill>
 			)}
@@ -589,7 +624,7 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						}}
 					>
 						<div>
-							<div style={{ fontFamily: MONO, fontSize: 30, color: '#fca5a5', letterSpacing: 3 }}>
+							<div style={{ fontFamily: MONO, fontSize: 36, color: '#fca5a5', letterSpacing: 3 }}>
 								PRODUCTION ROUTER  •  SMARS NODE 8 / 8
 							</div>
 							<div style={{ fontFamily: SANS, fontSize: 84, fontWeight: 900, color: '#ffffff', marginTop: 8 }}>
@@ -601,9 +636,9 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 								backgroundColor: '#ff3b30',
 								color: '#ffffff',
 								fontFamily: MONO,
-								fontSize: 34,
+								fontSize: 38,
 								fontWeight: 800,
-								padding: '16px 32px',
+								padding: '16px 34px',
 								borderRadius: 6,
 							}}
 						>
@@ -618,12 +653,19 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 							borderRadius: 10,
 							padding: '28px 40px',
 							fontFamily: MONO,
-							fontSize: 32,
+							fontSize: 36,
 							lineHeight: 1.75,
 						}}
 					>
 						{HOOK_LOGS.map((row, idx) => (
-							<div key={idx} style={{ color: idx === 0 || idx === 3 ? '#ff453a' : '#fbbf24' }}>
+							<div
+								key={idx}
+								style={{
+									color: idx === 0 || idx === 3 ? '#ff453a' : '#fbbf24',
+									opacity: localF >= idx * 6 ? 1 : 0,
+									transform: `translateY(${localF >= idx * 6 ? 0 : 8}px)`,
+								}}
+							>
 								{row}
 							</div>
 						))}
@@ -633,20 +675,22 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 
 			{cut === 2 && (
 				<AbsoluteFill style={{ backgroundColor: '#06080d' }}>
-					<MediaBackdrop media={scene.media} duration={scene.duration} brightness={0.26} grayscale={70} />
+					<AbsoluteFill style={{ transform: `scale(${cut2Scale})` }}>
+						<MediaBackdrop media={scene.media} duration={scene.duration} brightness={0.42} grayscale={35} />
+					</AbsoluteFill>
 					<AbsoluteFill
 						style={{
-							background: 'radial-gradient(circle at center, rgba(6,8,13,0.4) 0%, rgba(6,8,13,0.92) 80%)',
+							background: 'radial-gradient(circle at center, rgba(6,8,13,0.35) 0%, rgba(6,8,13,0.88) 82%)',
 							display: 'flex',
 							flexDirection: 'column',
 							alignItems: 'center',
 							justifyContent: 'center',
 						}}
 					>
-						<div style={{ fontFamily: SANS, fontSize: 198, fontWeight: 900, color: '#ffffff', letterSpacing: -4, lineHeight: 0.96 }}>
-							{scene.stat || '$440 MILLION'}
+						<div style={{ fontFamily: MONO, fontSize: 40, letterSpacing: 5, color: '#fca5a5', marginBottom: 22 }}>
+							09:30:00 AM EDT  •  WALL STREET OPENING BELL
 						</div>
-						<div style={{ fontFamily: SANS, fontSize: 80, fontWeight: 800, color: '#e2e8f0', marginTop: 18, letterSpacing: 2 }}>
+						<div style={{ fontFamily: SANS, fontSize: 124, fontWeight: 900, color: '#ffffff', letterSpacing: -2, lineHeight: 1.05, textAlign: 'center', maxWidth: 1680 }}>
 							{scene.headline || 'WIPED OUT IN 45 MINUTES'}
 						</div>
 						<div
@@ -655,9 +699,9 @@ const SceneHook3s: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 								backgroundColor: '#ff3b30',
 								color: '#ffffff',
 								fontFamily: MONO,
-								fontSize: 42,
+								fontSize: 48,
 								fontWeight: 800,
-								padding: '14px 38px',
+								padding: '16px 42px',
 								borderRadius: 4,
 								letterSpacing: 3,
 							}}
@@ -702,28 +746,28 @@ const SceneMediaHero: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 					position: 'absolute',
 					left: 72,
 					bottom: 72,
-					maxWidth: 820,
+					maxWidth: 1280,
 					backgroundColor: 'rgba(6, 8, 13, 0.62)',
 					backdropFilter: 'blur(6px)',
 					borderLeft: '4px solid #ef4444',
 					borderRadius: '0 8px 8px 0',
-					padding: '14px 24px',
+					padding: '20px 32px',
 					opacity: labelOpacity,
 					transform: `translateY(${interpolate(tagIn, [0, 1], [14, 0])}px)`,
 				}}
 			>
 				{scene.eyebrow ? (
-					<div style={{ fontFamily: MONO, fontSize: 14, letterSpacing: 2.5, color: '#cbd5e1', marginBottom: 4 }}>
+					<div style={{ fontFamily: MONO, fontSize: 21, letterSpacing: 2.5, color: '#cbd5e1', marginBottom: 6 }}>
 						{scene.eyebrow}
 					</div>
 				) : null}
 				{scene.headline ? (
-					<div style={{ fontFamily: SANS, fontSize: 34, fontWeight: 800, color: '#f8fafc', letterSpacing: -0.5, lineHeight: 1.12 }}>
+					<div style={{ fontFamily: SANS, fontSize: 52, fontWeight: 800, color: '#f8fafc', letterSpacing: -0.5, lineHeight: 1.12 }}>
 						{scene.headline}
 					</div>
 				) : null}
 				{scene.subline ? (
-					<div style={{ fontFamily: MONO, fontSize: 16, color: '#94a3b8', marginTop: 4 }}>{scene.subline}</div>
+					<div style={{ fontFamily: MONO, fontSize: 24, color: '#94a3b8', marginTop: 6 }}>{scene.subline}</div>
 				) : null}
 			</div>
 		</AbsoluteFill>
@@ -755,26 +799,26 @@ const SceneBigStat: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						position: 'absolute',
 						left: 72,
 						bottom: 72,
-						maxWidth: 760,
+						maxWidth: 1280,
 						backgroundColor: 'rgba(6, 8, 13, 0.78)',
 						backdropFilter: 'blur(8px)',
 						borderLeft: '4px solid #ef4444',
 						borderRadius: '0 10px 10px 0',
-						padding: '20px 28px',
+						padding: '26px 38px',
 						opacity: statIn,
 						transform: `translateY(${interpolate(statIn, [0, 1], [16, 0])}px)`,
 					}}
 				>
 					{scene.eyebrow ? (
-						<div style={{ fontFamily: MONO, fontSize: 14, letterSpacing: 2.5, color: '#38bdf8', marginBottom: 8 }}>
+						<div style={{ fontFamily: MONO, fontSize: 21, letterSpacing: 2.5, color: '#38bdf8', marginBottom: 10 }}>
 							{scene.eyebrow}
 						</div>
 					) : null}
-					<div style={{ display: 'flex', alignItems: 'baseline', gap: 22 }}>
+					<div style={{ display: 'flex', alignItems: 'baseline', gap: 30 }}>
 						<span
 							style={{
 								fontFamily: SANS,
-								fontSize: 68,
+								fontSize: 102,
 								fontWeight: 900,
 								color: (scene.stat ?? '').startsWith('-') ? '#ff3b30' : '#ffffff',
 								lineHeight: 0.95,
@@ -786,12 +830,12 @@ const SceneBigStat: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						</span>
 						<div>
 							{scene.headline ? (
-								<div style={{ fontFamily: SANS, fontSize: 24, fontWeight: 700, color: '#f1f5f9', lineHeight: 1.2 }}>
+								<div style={{ fontFamily: SANS, fontSize: 36, fontWeight: 700, color: '#f1f5f9', lineHeight: 1.18 }}>
 									{scene.headline}
 								</div>
 							) : null}
 							{scene.subline ? (
-								<div style={{ fontFamily: MONO, fontSize: 15, color: '#94a3b8', marginTop: 6 }}>{scene.subline}</div>
+								<div style={{ fontFamily: MONO, fontSize: 22, color: '#94a3b8', marginTop: 8 }}>{scene.subline}</div>
 							) : null}
 						</div>
 					</div>
@@ -807,21 +851,21 @@ const SceneBigStat: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 					position: 'absolute',
 					left: 120,
 					right: 120,
-					top: 260,
+					top: 240,
 					opacity: statIn,
 					transform: `translateY(${interpolate(statIn, [0, 1], [22, 0])}px)`,
 				}}
 			>
 				{scene.eyebrow ? (
-					<div style={{ fontFamily: MONO, fontSize: 22, letterSpacing: 4, color: '#38bdf8', marginBottom: 18 }}>
+					<div style={{ fontFamily: MONO, fontSize: 32, letterSpacing: 4, color: '#38bdf8', marginBottom: 20 }}>
 						{scene.eyebrow}
 					</div>
 				) : null}
-				<div style={{ display: 'flex', alignItems: 'baseline', gap: 40, flexWrap: 'wrap' }}>
+				<div style={{ display: 'flex', alignItems: 'baseline', gap: 44, flexWrap: 'wrap' }}>
 					<span
 						style={{
 							fontFamily: SANS,
-							fontSize: (scene.stat ?? '').length > 6 ? 148 : 196,
+							fontSize: (scene.stat ?? '').length > 6 ? 180 : 240,
 							fontWeight: 900,
 							color: (scene.stat ?? '').startsWith('-') ? '#ff3b30' : '#ffffff',
 							lineHeight: 0.92,
@@ -830,14 +874,14 @@ const SceneBigStat: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 					>
 						{scene.stat}
 					</span>
-					<div style={{ maxWidth: 740 }}>
+					<div style={{ maxWidth: 1020 }}>
 						{scene.headline ? (
-							<div style={{ fontFamily: SANS, fontSize: 44, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.16 }}>
+							<div style={{ fontFamily: SANS, fontSize: 64, fontWeight: 700, color: '#e2e8f0', lineHeight: 1.14 }}>
 								{scene.headline}
 							</div>
 						) : null}
 						{scene.subline ? (
-							<div style={{ fontFamily: MONO, fontSize: 24, color: '#94a3b8', marginTop: 18 }}>{scene.subline}</div>
+							<div style={{ fontFamily: MONO, fontSize: 36, color: '#94a3b8', marginTop: 20 }}>{scene.subline}</div>
 						) : null}
 					</div>
 				</div>
@@ -915,11 +959,11 @@ const SceneTerminal: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						<span style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#ef4444' }} />
 						<span style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#f59e0b' }} />
 						<span style={{ width: 12, height: 12, borderRadius: '50%', backgroundColor: '#22c55e' }} />
-						<span style={{ fontFamily: MONO, fontSize: 16, color: '#94a3b8', marginLeft: 12 }}>
+						<span style={{ fontFamily: MONO, fontSize: 24, color: '#94a3b8', marginLeft: 12 }}>
 							{scene.eyebrow || 'ops@jersey-city-dc: ~/smars-deploy'}
 						</span>
 					</div>
-					<div style={{ padding: '28px 32px', fontFamily: MONO, fontSize: 21, lineHeight: 1.85 }}>
+					<div style={{ padding: '28px 32px', fontFamily: MONO, fontSize: 30, lineHeight: 1.75 }}>
 						{lines.slice(0, visibleLines).map((line, i) => {
 							const isErr = line.startsWith('[ERR]') || line.startsWith('[FATAL]');
 							const isWarn = line.startsWith('[WARN]') || line.startsWith('[ALERT]');
@@ -944,7 +988,7 @@ const SceneTerminal: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 
 				{servers.length > 0 ? (
 					<div style={{ width: 680 }}>
-						<div style={{ fontFamily: MONO, fontSize: 18, color: '#94a3b8', letterSpacing: 3, marginBottom: 18 }}>
+						<div style={{ fontFamily: MONO, fontSize: 26, color: '#94a3b8', letterSpacing: 3, marginBottom: 18 }}>
 							{scene.headline || 'SMARS PRODUCTION CLUSTER'}
 						</div>
 						<div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: 16 }}>
@@ -967,10 +1011,10 @@ const SceneTerminal: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 										}}
 									>
 										<div>
-											<div style={{ fontFamily: SANS, fontSize: 24, fontWeight: 800, color: '#f8fafc' }}>
+											<div style={{ fontFamily: SANS, fontSize: 34, fontWeight: 800, color: '#f8fafc' }}>
 												{srv.label}
 											</div>
-											<div style={{ fontFamily: MONO, fontSize: 14, color: isFail ? '#fca5a5' : '#64748b', marginTop: 4 }}>
+											<div style={{ fontFamily: MONO, fontSize: 20, color: isFail ? '#fca5a5' : '#64748b', marginTop: 4 }}>
 												{srv.sub}
 											</div>
 										</div>
@@ -1004,7 +1048,7 @@ const SceneLossChart: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const reveal = Math.min(1, frame / endFrame);
 	const pulse = (Math.sin(frame / 4) + 1) / 2;
 
-	const left = 130;
+	const left = 160;
 	const right = 1470;
 	const top = 110;
 	const bottom = 580;
@@ -1054,14 +1098,14 @@ const SceneLossChart: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 			<AmbientParticles accent="#ef4444" />
 			<div style={{ width: 1600, marginBottom: 14, display: 'flex', justifyContent: 'space-between', alignItems: 'baseline', zIndex: 10 }}>
 				<div>
-					<span style={{ fontFamily: MONO, fontSize: 18, color: '#ef4444', letterSpacing: 3, display: 'block', marginBottom: 6 }}>
+					<span style={{ fontFamily: MONO, fontSize: 27, color: '#ef4444', letterSpacing: 3, display: 'block', marginBottom: 6 }}>
 						{scene.eyebrow || 'CUMULATIVE LOSS TRAJECTORY'}
 					</span>
-					<span style={{ fontFamily: SANS, fontSize: 44, fontWeight: 800, color: '#f8fafc', letterSpacing: -1 }}>
+					<span style={{ fontFamily: SANS, fontSize: 62, fontWeight: 800, color: '#f8fafc', letterSpacing: -1 }}>
 						{scene.headline || '45 MINUTES TO INSOLVENCY'}
 					</span>
 				</div>
-				{scene.stat ? <span style={{ fontFamily: MONO, fontSize: 44, fontWeight: 800, color: '#ff3b30' }}>{scene.stat}</span> : null}
+				{scene.stat ? <span style={{ fontFamily: MONO, fontSize: 62, fontWeight: 800, color: '#ff3b30' }}>{scene.stat}</span> : null}
 			</div>
 
 			<svg viewBox="0 0 1600 680" width={1600} height={680}>
@@ -1083,10 +1127,10 @@ const SceneLossChart: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 
 				<line x1={left} y1={top} x2={left} y2={bottom} stroke="#334155" strokeWidth="2" />
 				<line x1={left} y1={bottom} x2={right} y2={bottom} stroke="#334155" strokeWidth="2" />
-				<text x={left - 18} y={top + 8} fill="#94a3b8" fontSize="18" fontFamily={MONO} textAnchor="end">
+				<text x={left - 18} y={top + 10} fill="#94a3b8" fontSize="26" fontFamily={MONO} textAnchor="end">
 					{`${maxY}${unit}`}
 				</text>
-				<text x={left - 18} y={bottom} fill="#f87171" fontSize="18" fontFamily={MONO} textAnchor="end">
+				<text x={left - 18} y={bottom} fill="#f87171" fontSize="26" fontFamily={MONO} textAnchor="end">
 					{`${minY}${unit}`}
 				</text>
 
@@ -1104,19 +1148,19 @@ const SceneLossChart: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 
 				{coords.map((c, i) => {
 					if (tipX < c.px - 2) return null;
-					const labelY = c.py > bottom - 55 ? c.py - 26 : c.py + 38;
+					const labelY = c.py > bottom - 68 ? c.py - 30 : c.py + 44;
 					return (
 						<g key={i}>
 							{c.alert && <circle cx={c.px} cy={c.py} r={16 + 7 * pulse} fill="rgba(255,59,48,0.25)" />}
 							<circle cx={c.px} cy={c.py} r={c.alert ? 10 : 7} fill={c.alert ? '#ff3b30' : '#f8fafc'} stroke="#0b101b" strokeWidth="3" />
-							<text x={c.px} y={bottom + 42} fill="#cbd5e1" fontSize="20" fontFamily={MONO} textAnchor="middle">
+							<text x={c.px} y={bottom + 46} fill="#cbd5e1" fontSize="28" fontFamily={MONO} textAnchor="middle">
 								{c.x}
 							</text>
 							<text
 								x={c.px}
 								y={labelY}
 								fill={c.alert ? '#fca5a5' : '#f8fafc'}
-								fontSize="22"
+								fontSize="32"
 								fontWeight="bold"
 								fontFamily={SANS}
 								textAnchor="middle"
@@ -1151,6 +1195,8 @@ const SceneSilenceTwist: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 				alignItems: 'center',
 				justifyContent: 'center',
 				gap: 28,
+				padding: '0 80px',
+				textAlign: 'center',
 			}}
 		>
 			{lines.slice(0, 3).map((line, i) => {
@@ -1160,7 +1206,7 @@ const SceneSilenceTwist: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						key={i}
 						style={{
 							fontFamily: SANS,
-							fontSize: isLast ? 88 : 60,
+							fontSize: isLast ? 124 : 86,
 							fontWeight: isLast ? 900 : 700,
 							color: isLast ? '#ff3b30' : '#94a3b8',
 							letterSpacing: isLast ? -2 : 0,
@@ -1197,15 +1243,18 @@ const SceneDocument: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 		<AbsoluteFill style={{ backgroundColor: '#06080d', opacity, display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
 			<MediaBackdrop media={scene.media} mediaList={scene.mediaList} duration={scene.duration} brightness={0.22} grayscale={70} hideCredit={Boolean(scene.glossary)} />
 			<AmbientParticles accent="#fbbf24" />
+			<Sequence from={4} layout="none">
+				<Audio src={staticFile('sfx/paper_flip.wav')} volume={0.18} />
+			</Sequence>
 			<Sequence from={cue} layout="none">
 				<Audio src={staticFile('sfx/scribble.wav')} volume={0.26} />
 			</Sequence>
 			<div
 				style={{
-					width: 1240,
+					width: 1520,
 					backgroundColor: '#f4efe2',
 					borderRadius: 10,
-					padding: '54px 66px',
+					padding: '48px 64px',
 					boxShadow: '0 32px 80px rgba(0,0,0,0.88)',
 					transform: `scale(${cardScale})`,
 					position: 'relative',
@@ -1215,13 +1264,13 @@ const SceneDocument: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 				<div
 					style={{
 						fontFamily: MONO,
-						fontSize: 20,
+						fontSize: 28,
 						fontWeight: 700,
 						color: '#475569',
 						letterSpacing: 2,
 						borderBottom: '3px solid #1e293b',
 						paddingBottom: 16,
-						marginBottom: 28,
+						marginBottom: 24,
 					}}
 				>
 					{scene.source}
@@ -1231,14 +1280,14 @@ const SceneDocument: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 					<div
 						style={{
 							position: 'absolute',
-							top: 42,
+							top: 38,
 							right: 54,
 							border: '4px solid #b91c1c',
 							color: '#b91c1c',
 							fontFamily: SANS,
-							fontSize: 22,
+							fontSize: 30,
 							fontWeight: 900,
-							padding: '6px 16px',
+							padding: '8px 18px',
 							transform: 'rotate(-5deg)',
 							letterSpacing: 2,
 						}}
@@ -1246,10 +1295,10 @@ const SceneDocument: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 						{scene.stamp}
 					</div>
 				) : null}
-				<div style={{ fontFamily: SERIF, fontSize: 40, fontWeight: 700, color: '#0f172a', marginBottom: 22, paddingRight: 200 }}>
+				<div style={{ fontFamily: SERIF, fontSize: 54, fontWeight: 700, color: '#0f172a', marginBottom: 20, paddingRight: 250 }}>
 					{scene.headline}
 				</div>
-				<div style={{ fontFamily: SERIF, fontSize: 33, lineHeight: 1.55, color: '#1e293b' }}>
+				<div style={{ fontFamily: SERIF, fontSize: 44, lineHeight: 1.48, color: '#1e293b' }}>
 					<span>{before}</span>
 					<span
 						style={{
@@ -1284,21 +1333,21 @@ const SceneSwissCheese: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 		<AbsoluteFill style={{ backgroundColor: '#06080d', opacity, display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center' }}>
 			<AmbientParticles accent="#f59e0b" />
 			<div style={{ width: 1560, marginBottom: 14, zIndex: 10 }}>
-				<div style={{ fontFamily: MONO, fontSize: 18, color: '#f59e0b', letterSpacing: 3, marginBottom: 6 }}>
+				<div style={{ fontFamily: MONO, fontSize: 27, color: '#f59e0b', letterSpacing: 3, marginBottom: 6 }}>
 					{scene.eyebrow || 'SYSTEMIC FAILURE ANALYSIS'}
 				</div>
-				<div style={{ fontFamily: SANS, fontSize: 44, fontWeight: 800, color: '#f8fafc' }}>
+				<div style={{ fontFamily: SANS, fontSize: 62, fontWeight: 800, color: '#f8fafc' }}>
 					{scene.headline || 'THE SWISS CHEESE MODEL'}
 				</div>
 			</div>
-			<svg viewBox="0 0 1560 640" width={1560} height={640}>
+			<svg viewBox="0 0 1560 660" width={1560} height={660}>
 				<defs>
 					<linearGradient id="docuCheese" x1="0" y1="0" x2="1" y2="1">
 						<stop offset="0%" stopColor="#f59e0b" />
 						<stop offset="100%" stopColor="#b45309" />
 					</linearGradient>
 				</defs>
-				<rect width="1560" height="640" rx="14" fill="#0b101b" stroke="#334155" strokeWidth="2" />
+				<rect width="1560" height="660" rx="14" fill="#0b101b" stroke="#334155" strokeWidth="2" />
 				{layers.map((layer, i) => {
 					const x = startX + i * stepX;
 					return (
@@ -1307,10 +1356,10 @@ const SceneSwissCheese: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 							<ellipse cx={x + 48} cy={305 - x * 0.1} rx="30" ry="20" fill="#0b101b" stroke="#ff3b30" strokeWidth="3" />
 							<ellipse cx={x + 48} cy={200 - x * 0.1} rx="16" ry="12" fill="#0b101b" opacity="0.6" />
 							<ellipse cx={x + 48} cy={410 - x * 0.1} rx="18" ry="14" fill="#0b101b" opacity="0.6" />
-							<text x={x + 48} y="555" fill="#fde68a" fontSize="18" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
+							<text x={x + 48} y="552" fill="#fde68a" fontSize="24" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
 								{layer.title}
 							</text>
-							<text x={x + 48} y="585" fill="#cbd5e1" fontSize="16" fontFamily={MONO} textAnchor="middle">
+							<text x={x + 48} y="586" fill="#cbd5e1" fontSize="20" fontFamily={MONO} textAnchor="middle">
 								{layer.sub}
 							</text>
 						</g>
@@ -1328,8 +1377,8 @@ const SceneSwissCheese: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 				/>
 				{arrowOffset > 1180 && (
 					<g transform="translate(1450, 265)">
-						<circle r="48" fill="#ff2a2a" filter="drop-shadow(0 0 22px #ff2a2a)" />
-						<text y="7" fill="#ffffff" fontSize="18" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
+						<circle r="64" fill="#ff2a2a" filter="drop-shadow(0 0 22px #ff2a2a)" />
+						<text y="9" fill="#ffffff" fontSize="26" fontFamily={SANS} fontWeight="bold" textAnchor="middle">
 							-$440M
 						</text>
 					</g>
@@ -1810,9 +1859,9 @@ const SceneTimelineZoom: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 };
 
 // 12. Style A: Vox / Johnny Harris Archival Paper Desk (`editorial_vox`)
-const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
+const SceneEditorialVox: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const opacity = useFadeEnvelope(scene.duration);
 	const cue = scene.cueFrame ?? Math.floor(scene.duration * 0.45);
 	const cueReached = frame >= cue;
@@ -1820,8 +1869,8 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 	const camProgress = frame / Math.max(1, scene.duration);
 	const deskScale = interpolate(camProgress, [0, 1], [1.0, 1.035]);
 	const deskX = interpolate(camProgress, [0, 1], [8, -14]);
-	const photoIn = spring({frame: frame - 4, fps, config: {damping: 18}});
-	const slipIn = spring({frame: frame - 14, fps, config: {damping: 18}});
+	const photoIn = spring({ frame: frame - 4, fps, config: { damping: 18 } });
+	const slipIn = spring({ frame: frame - 14, fps, config: { damping: 18 } });
 	const hlStart = Math.max(12, cue - 34);
 	const hlEnd = Math.max(hlStart + 18, cue - 6);
 	const hlWidth = interpolate(frame, [hlStart, hlEnd], [0, 100], {
@@ -1847,7 +1896,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 	const postText = hlIdx >= 0 ? excerptText.slice(hlIdx + highlightPhrase.length) : '';
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#e7dfd0', opacity, overflow: 'hidden'}}>
+		<AbsoluteFill style={{ backgroundColor: '#e7dfd0', opacity, overflow: 'hidden' }}>
 			{/* Paper desk texture + subtle architectural ruled lines */}
 			<AbsoluteFill
 				style={{
@@ -1865,7 +1914,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 			/>
 			{/* Layered tactile SFX: paper placement -> yellow highlighter scribble -> red marker circle scratch */}
 			<Sequence from={4} layout="none">
-				<Audio src={staticFile('sfx/whoosh.wav')} volume={0.14} />
+				<Audio src={staticFile('sfx/paper_flip.wav')} volume={0.22} />
 			</Sequence>
 			<Sequence from={hlStart} layout="none">
 				<Audio src={staticFile('sfx/scribble.wav')} volume={0.28} />
@@ -1874,24 +1923,24 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 				<Audio src={staticFile('sfx/scratch.wav')} volume={0.32} />
 			</Sequence>
 
-			<AbsoluteFill style={{padding: '74px 90px 72px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-				<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start'}}>
+			<AbsoluteFill style={{ padding: '74px 90px 72px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+				<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
 					<div>
-						<div style={{fontFamily: MONO, fontSize: 16, letterSpacing: 3, color: '#7c2d12', fontWeight: 700, marginBottom: 6}}>
+						<div style={{ fontFamily: MONO, fontSize: 24, letterSpacing: 3, color: '#7c2d12', fontWeight: 700, marginBottom: 6 }}>
 							{scene.eyebrow || 'STYLE 01  •  EDITORIAL PAPER & CLIPPINGS'}
 						</div>
-						<div style={{fontFamily: SERIF, fontSize: 44, fontWeight: 700, color: '#1c1917', letterSpacing: -0.5, maxWidth: 1120}}>
+						<div style={{ fontFamily: SERIF, fontSize: 52, fontWeight: 700, color: '#1c1917', letterSpacing: -0.5, maxWidth: 1220, lineHeight: 1.12 }}>
 							{scene.headline || 'One Missed Server Left 2003 Test Code Live'}
 						</div>
 					</div>
 					<div
 						style={{
 							fontFamily: MONO,
-							fontSize: 13,
+							fontSize: 19,
 							letterSpacing: 2,
 							color: '#44403c',
 							border: '1.5px solid rgba(68, 64, 60, 0.45)',
-							padding: '6px 12px',
+							padding: '8px 16px',
 							backgroundColor: 'rgba(250, 246, 237, 0.75)',
 						}}
 					>
@@ -1899,12 +1948,12 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 					</div>
 				</div>
 
-				<div style={{display: 'flex', gap: 56, alignItems: 'center', flex: 1, marginTop: 14}}>
+				<div style={{ display: 'flex', gap: 56, alignItems: 'center', flex: 1, marginTop: 14 }}>
 					{/* Tilted physical archival photo clipping with masking tape */}
 					<div
 						style={{
 							position: 'relative',
-							width: 720,
+							width: 660,
 							backgroundColor: '#faf6ed',
 							padding: '18px 18px 46px 18px',
 							boxShadow: '0 22px 48px rgba(28, 25, 23, 0.26), 0 2px 8px rgba(28,25,23,0.14)',
@@ -1937,7 +1986,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 							}}
 						/>
 						{scene.media ? (
-							<div style={{width: '100%', height: 430, overflow: 'hidden', backgroundColor: '#1c1917'}}>
+							<div style={{ width: '100%', height: 430, overflow: 'hidden', backgroundColor: '#1c1917' }}>
 								<Img
 									src={staticFile(scene.media.src)}
 									style={{
@@ -1950,7 +1999,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 								/>
 							</div>
 						) : null}
-						<div style={{fontFamily: MONO, fontSize: 14, color: '#57534e', marginTop: 14, display: 'flex', justifyContent: 'space-between'}}>
+						<div style={{ fontFamily: MONO, fontSize: 19, color: '#57534e', marginTop: 14, display: 'flex', justifyContent: 'space-between' }}>
 							<span>{scene.media?.credit || 'ARCHIVE • NEW YORK STOCK EXCHANGE'}</span>
 							<span>AUG 01, 2012 • 09:30 EDT</span>
 						</div>
@@ -1963,16 +2012,16 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 							flex: 1,
 							backgroundColor: '#faf7f0',
 							border: '1px solid #cfc5b1',
-							padding: '38px 42px',
+							padding: '34px 40px',
 							boxShadow: '0 22px 46px rgba(28, 25, 23, 0.2)',
 							transform: `rotate(1.1deg) translateY(${interpolate(slipIn, [0, 1], [24, 0])}px)`,
 							opacity: slipIn,
 						}}
 					>
-						<div style={{fontFamily: MONO, fontSize: 13, letterSpacing: 2.5, color: '#78716c', borderBottom: '1px solid #d6cfc2', paddingBottom: 12, marginBottom: 22}}>
+						<div style={{ fontFamily: MONO, fontSize: 19, letterSpacing: 2.5, color: '#78716c', borderBottom: '1px solid #d6cfc2', paddingBottom: 12, marginBottom: 20 }}>
 							{scene.subline || 'INTERNAL DEPLOYMENT LOG • SMARS-CLUSTER (8 NODES)'}
 						</div>
-						<div style={{fontFamily: SERIF, fontSize: 30, lineHeight: 1.55, color: '#1c1917'}}>
+						<div style={{ fontFamily: SERIF, fontSize: 40, lineHeight: 1.45, color: '#1c1917' }}>
 							{preText}
 							{midText ? (
 								<span
@@ -1990,7 +2039,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 							{postText}
 						</div>
 
-						<div style={{marginTop: 32, position: 'relative', display: 'flex', gap: 12, alignItems: 'center', overflow: 'visible'}}>
+						<div style={{ marginTop: 28, position: 'relative', display: 'flex', gap: 12, alignItems: 'center', overflow: 'visible' }}>
 							{[1, 2, 3, 4, 5, 6, 7, 8].map((n) => {
 								const allMode = scene.voxMode === 'all_8';
 								const isLegacy = allMode ? cueReached : n === 8;
@@ -2010,19 +2059,19 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 											alignItems: 'center',
 											justifyContent: 'center',
 											fontFamily: MONO,
-											fontSize: 17,
+											fontSize: 20,
 											fontWeight: 800,
 											color: mark ? '#991b1b' : '#292524',
 										}}
 									>
 										<span>0{n}</span>
-										<span style={{fontSize: 10, color: mark ? '#b91c1c' : '#78716c'}}>{isLegacy ? '2003' : '2012'}</span>
+										<span style={{ fontSize: 12, color: mark ? '#b91c1c' : '#78716c' }}>{isLegacy ? '2003' : '2012'}</span>
 										{!allMode && n === 8 && (
 											<svg
 												viewBox="0 0 106 98"
 												width="106"
 												height="98"
-												style={{position: 'absolute', left: -22, top: -18, pointerEvents: 'none', overflow: 'visible'}}
+												style={{ position: 'absolute', left: -22, top: -18, pointerEvents: 'none', overflow: 'visible' }}
 											>
 												<ellipse
 													cx="53"
@@ -2047,7 +2096,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 									viewBox="0 0 624 108"
 									width="624"
 									height="108"
-									style={{position: 'absolute', left: -22, top: -23, pointerEvents: 'none', overflow: 'visible'}}
+									style={{ position: 'absolute', left: -22, top: -23, pointerEvents: 'none', overflow: 'visible' }}
 								>
 									<ellipse
 										cx="312"
@@ -2068,7 +2117,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 								style={{
 									marginLeft: 18,
 									fontFamily: MONO,
-									fontSize: 14,
+									fontSize: 20,
 									fontWeight: 800,
 									letterSpacing: 1.5,
 									color: '#b91c1c',
@@ -2087,7 +2136,7 @@ const SceneEditorialVox: React.FC<{scene: DocuScene}> = ({scene}) => {
 };
 
 // 13. Style B: LEMMiNO / Netflix Matte Dark Archive (`archive_lemmino`) — ZERO rounded boxes, ZERO neon glow
-const SceneArchiveLemmino: React.FC<{scene: DocuScene}> = ({scene}) => {
+const SceneArchiveLemmino: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
 	const opacity = useFadeEnvelope(scene.duration);
 	const cue = scene.cueFrame ?? Math.floor(scene.duration * 0.45);
@@ -2096,39 +2145,39 @@ const SceneArchiveLemmino: React.FC<{scene: DocuScene}> = ({scene}) => {
 	const t = frame / Math.max(1, scene.duration);
 	const rotY = interpolate(t, [0, 1], [-1.8, 1.8]);
 	const rotX = interpolate(t, [0, 1], [1.0, -0.6]);
-	const lineReveal = interpolate(frame, [6, 36], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
-	const faultReveal = interpolate(frame, [cue, cue + 18], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	const lineReveal = interpolate(frame, [6, 36], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+	const faultReveal = interpolate(frame, [cue, cue + 18], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#07080b', opacity}}>
+		<AbsoluteFill style={{ backgroundColor: '#07080b', opacity }}>
 			<MediaBackdrop media={scene.media} duration={scene.duration} brightness={0.22} grayscale={92} hideCredit />
 			<Sequence from={cue} layout="none">
 				<Audio src={staticFile('sfx/thud.wav')} volume={0.24} />
 			</Sequence>
 
 			{/* Precision corner registration ticks + subtle measurement frame */}
-			<AbsoluteFill style={{padding: '74px 90px 72px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between'}}>
-				<div style={{display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderBottom: '1px solid rgba(226, 232, 240, 0.18)', paddingBottom: 18}}>
+			<AbsoluteFill style={{ padding: '74px 90px 72px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between' }}>
+				<div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-end', borderBottom: '1px solid rgba(226, 232, 240, 0.18)', paddingBottom: 18 }}>
 					<div>
-						<div style={{fontFamily: MONO, fontSize: 15, letterSpacing: 4, color: '#94a3b8', marginBottom: 8}}>
+						<div style={{ fontFamily: MONO, fontSize: 15, letterSpacing: 4, color: '#94a3b8', marginBottom: 8 }}>
 							{scene.eyebrow || 'STYLE 02  •  MINIMAL ARCHIVE SCHEMATIC'}
 						</div>
-						<div style={{fontFamily: SERIF, fontSize: 44, fontWeight: 400, color: '#f1f5f9', letterSpacing: 0.4}}>
+						<div style={{ fontFamily: SERIF, fontSize: 44, fontWeight: 400, color: '#f1f5f9', letterSpacing: 0.4 }}>
 							{scene.headline || 'Architectural Divergence Inside SMARS'}
 						</div>
 					</div>
-					<div style={{fontFamily: MONO, fontSize: 14, letterSpacing: 3, color: cueReached ? '#c83e37' : '#64748b'}}>
+					<div style={{ fontFamily: MONO, fontSize: 14, letterSpacing: 3, color: cueReached ? '#c83e37' : '#64748b' }}>
 						{cueReached ? 'NODE 08  /  LEGACY ACTIVE' : 'CLUSTER SCAN  /  8 NODES'}
 					</div>
 				</div>
 
 				{/* 3D tilted ultra-thin 1px schematic — zero boxes, zero glow */}
-				<div style={{flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', perspective: '1400px'}}>
+				<div style={{ flex: 1, display: 'flex', alignItems: 'center', justifyContent: 'center', perspective: '1400px' }}>
 					<svg
 						viewBox="0 0 1560 540"
 						width={1560}
 						height={540}
-						style={{transform: `rotateY(${rotY}deg) rotateX(${rotX}deg)`}}
+						style={{ transform: `rotateY(${rotY}deg) rotateX(${rotX}deg)` }}
 					>
 						{/* Crosshair calibration marks */}
 						{[
@@ -2190,7 +2239,7 @@ const SceneArchiveLemmino: React.FC<{scene: DocuScene}> = ({scene}) => {
 					</svg>
 				</div>
 
-				<div style={{display: 'flex', justifyContent: 'space-between', borderTop: '1px solid rgba(226, 232, 240, 0.14)', paddingTop: 14, fontFamily: MONO, fontSize: 13, letterSpacing: 2.5, color: '#64748b'}}>
+				<div style={{ display: 'flex', justifyContent: 'space-between', borderTop: '1px solid rgba(226, 232, 240, 0.14)', paddingTop: 14, fontFamily: MONO, fontSize: 13, letterSpacing: 2.5, color: '#64748b' }}>
 					<span>FIG. 2.1 — SMARS ORDER ROUTING TOPOLOGY</span>
 					<span>SEC EXHIBIT A  •  NON-TRANSFORMED RENDER</span>
 				</div>
@@ -2200,9 +2249,9 @@ const SceneArchiveLemmino: React.FC<{scene: DocuScene}> = ({scene}) => {
 };
 
 // 14. Style C: 2.5D Multi-Layer Parallax Illustration (`parallax_noir`)
-const SceneParallaxNoir: React.FC<{scene: DocuScene}> = ({scene}) => {
+const SceneParallaxNoir: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const opacity = useFadeEnvelope(scene.duration);
 	const cue = scene.cueFrame ?? Math.floor(scene.duration * 0.45);
 	const cueReached = frame >= cue;
@@ -2211,15 +2260,15 @@ const SceneParallaxNoir: React.FC<{scene: DocuScene}> = ({scene}) => {
 	const bgScale = interpolate(t, [0, 1], [1.02, 1.09]);
 	const bgX = interpolate(t, [0, 1], [12, -18]);
 	const fgX = interpolate(t, [0, 1], [44, -68]);
-	const calloutIn = spring({frame: Math.max(0, frame - cue), fps, config: {damping: 18}});
-	const redShift = interpolate(frame, [cue, cue + 24], [0.04, 0.24], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	const calloutIn = spring({ frame: Math.max(0, frame - cue), fps, config: { damping: 18 } });
+	const redShift = interpolate(frame, [cue, cue + 24], [0.04, 0.24], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 
 	const artSrc = scene.media?.src || 'docu/media/noir_explain_art.png';
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#050609', opacity, overflow: 'hidden'}}>
+		<AbsoluteFill style={{ backgroundColor: '#050609', opacity, overflow: 'hidden' }}>
 			{/* Background illustration layer (slow dolly) */}
-			<AbsoluteFill style={{transform: `scale(${bgScale}) translateX(${bgX}px)`}}>
+			<AbsoluteFill style={{ transform: `scale(${bgScale}) translateX(${bgX}px)` }}>
 				<Img
 					src={staticFile(artSrc)}
 					style={{
@@ -2240,7 +2289,7 @@ const SceneParallaxNoir: React.FC<{scene: DocuScene}> = ({scene}) => {
 			/>
 
 			{/* 2.5D Foreground glass-partition mullions sliding faster than background */}
-			<AbsoluteFill style={{transform: `translateX(${fgX}px)`, pointerEvents: 'none'}}>
+			<AbsoluteFill style={{ transform: `translateX(${fgX}px)`, pointerEvents: 'none' }}>
 				<div
 					style={{
 						position: 'absolute',
@@ -2270,12 +2319,12 @@ const SceneParallaxNoir: React.FC<{scene: DocuScene}> = ({scene}) => {
 			</Sequence>
 
 			{/* Editorial minimal title + bottom-left serif thesis anchored by a 1px vertical bar */}
-			<AbsoluteFill style={{padding: '74px 90px 84px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', zIndex: 10}}>
+			<AbsoluteFill style={{ padding: '74px 90px 84px 90px', display: 'flex', flexDirection: 'column', justifyContent: 'space-between', zIndex: 10 }}>
 				<div>
-					<div style={{fontFamily: MONO, fontSize: 15, letterSpacing: 4, color: '#cbd5e1', opacity: 0.85, marginBottom: 8}}>
+					<div style={{ fontFamily: MONO, fontSize: 15, letterSpacing: 4, color: '#cbd5e1', opacity: 0.85, marginBottom: 8 }}>
 						{scene.eyebrow || 'STYLE 03  •  2.5D PARALLAX ILLUSTRATION'}
 					</div>
-					<div style={{fontFamily: SERIF, fontSize: 44, fontWeight: 400, color: '#f8fafc', textShadow: '0 4px 22px rgba(0,0,0,0.85)'}}>
+					<div style={{ fontFamily: SERIF, fontSize: 44, fontWeight: 400, color: '#f8fafc', textShadow: '0 4px 22px rgba(0,0,0,0.85)' }}>
 						{scene.headline || 'Forty-Five Minutes Before Someone Pulled the Plug'}
 					</div>
 				</div>
@@ -2289,10 +2338,10 @@ const SceneParallaxNoir: React.FC<{scene: DocuScene}> = ({scene}) => {
 						transform: `translateY(${cueReached ? interpolate(calloutIn, [0, 1], [10, 0]) : 0}px)`,
 					}}
 				>
-					<div style={{fontFamily: MONO, fontSize: 14, letterSpacing: 3, color: cueReached ? '#fca5a5' : '#94a3b8', marginBottom: 8}}>
+					<div style={{ fontFamily: MONO, fontSize: 14, letterSpacing: 3, color: cueReached ? '#fca5a5' : '#94a3b8', marginBottom: 8 }}>
 						{cueReached ? '09:30 – 10:15 EDT  •  $440,000,000 ERASED' : 'JERSEY CITY DATA CENTER  •  AUG 1, 2012'}
 					</div>
-					<div style={{fontFamily: SERIF, fontSize: 30, lineHeight: 1.4, color: '#f1f5f9', textShadow: '0 3px 16px rgba(0,0,0,0.9)'}}>
+					<div style={{ fontFamily: SERIF, fontSize: 30, lineHeight: 1.4, color: '#f1f5f9', textShadow: '0 3px 16px rgba(0,0,0,0.9)' }}>
 						{scene.subline || 'Four million rogue trades surged across 154 stocks before engineers located and killed the forgotten machine.'}
 					</div>
 				</div>
@@ -2323,22 +2372,22 @@ const SceneTitleCard: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 			<div
 				style={{
 					textAlign: 'center',
-					maxWidth: 1400,
+					maxWidth: 1620,
 					opacity: titleIn,
 					transform: `scale(${0.96 + 0.04 * titleIn})`,
 					zIndex: 10,
 				}}
 			>
 				{scene.eyebrow ? (
-					<div style={{ fontFamily: MONO, fontSize: 22, letterSpacing: 5, color: '#f87171', textShadow: '0 2px 12px rgba(0,0,0,0.85)', marginBottom: 22 }}>
+					<div style={{ fontFamily: MONO, fontSize: 32, letterSpacing: 5, color: '#f87171', textShadow: '0 2px 12px rgba(0,0,0,0.85)', marginBottom: 22 }}>
 						{scene.eyebrow}
 					</div>
 				) : null}
-				<div style={{ fontFamily: SANS, fontSize: 82, fontWeight: 900, color: '#ffffff', letterSpacing: -2, lineHeight: 1.08 }}>
+				<div style={{ fontFamily: SANS, fontSize: 114, fontWeight: 900, color: '#ffffff', letterSpacing: -2, lineHeight: 1.08, textShadow: '0 4px 28px rgba(0,0,0,0.85)' }}>
 					{scene.headline}
 				</div>
 				{scene.subline ? (
-					<div style={{ fontFamily: MONO, fontSize: 26, color: '#94a3b8', marginTop: 26, letterSpacing: 3 }}>
+					<div style={{ fontFamily: MONO, fontSize: 38, color: '#e2e8f0', textShadow: '0 2px 16px rgba(0,0,0,0.9)', marginTop: 26, letterSpacing: 3 }}>
 						{scene.subline}
 					</div>
 				) : null}

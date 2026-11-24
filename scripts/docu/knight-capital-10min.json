@@ -24,6 +24,8 @@
       "kind": "hook_3s",
       "mood": "tense",
       "text": "Four hundred forty million dollars vanished in just forty-five minutes because a single technician skipped one server before the Wall Street opening bell.",
+      "cueWord": "forty-five minutes",
+      "cutCues": ["because", "before"],
       "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "credit": "ARCHIVE • NEW YORK STOCK EXCHANGE"},
       "eyebrow": "09:30:01 AM EDT  •  SYSTEM FAILURE DETECTED",
       "stat": "$440 MILLION",
@@ -85,7 +87,8 @@
       "eyebrow": "U.S. EQUITIES MARKET SHARE • 2012",
       "stat": "17%",
       "headline": "OF ALL U.S. RETAIL STOCK VOLUME",
-      "subline": "ROUGHLY 1 IN 6 EVERYDAY INVESTOR ORDERS"
+      "subline": "ROUGHLY 1 IN 6 EVERYDAY INVESTOR ORDERS",
+      "sfx": "camera_shutter"
     },
     {
       "kind": "media_hero",
@@ -143,7 +146,7 @@
       "kind": "media_hero",
       "mood": "mystery",
       "text": "To keep the firm safe, every parent order carried a strict fill counter inside SMARS. The exact millisecond the requested share total filled, the server stopped trading immediately.",
-      "mediaQuery": {"type": "image", "query": "Wikimedia Foundation Servers rack", "cameraPreset": "wide", "credit": "PRODUCTION SAFETY LOGIC"},
+      "mediaQuery": {"type": "image", "query": "New York Stock Exchange trading floor", "cameraPreset": "crop_detail", "credit": "ARCHIVE • ORDER FILL SAFETY"},
       "eyebrow": "PARENT ORDER SAFETY RULE",
       "headline": "AUTOMATIC FILL-LIMIT TRACKING",
       "subline": "STOP ONCE CUMULATIVE EXECUTED SHARES EQUAL ORDER SIZE"
@@ -230,7 +233,7 @@
       "mood": "tense",
       "cueWord": "reused the flag",
       "text": "Instead of inventing a clean new message flag for RLP orders, Knight's developers reused the flag bit that had once pointed straight to Power Peg nine years earlier.",
-      "mediaQuery": {"type": "image", "query": "New York Stock Exchange building facade", "credit": "SEC RECORD"},
+      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "credit": "SEC RECORD"},
       "source": "SEC ORDER #70694 — SECTION III.C",
       "date": "JULY 2012",
       "stamp": "FLAG REUSED",
@@ -287,7 +290,8 @@
       "mediaQuery": {"type": "image", "query": "Wall Street Bull Charging Bull New York", "cameraPreset": "wide", "credit": "AUGUST 1, 2012 • 08:01 AM EDT"},
       "eyebrow": "08:01 AM EDT  •  PRE-MARKET BOOT",
       "headline": "THE CLUSTER KNEW SOMETHING WAS WRONG",
-      "subline": "97 WARNING EMAILS GENERATED BEFORE THE BELL"
+      "subline": "97 WARNING EMAILS GENERATED BEFORE THE BELL",
+      "sfx": "alarm"
     },
     {
       "kind": "document",
@@ -313,7 +317,8 @@
       ],
       "eyebrow": "09:29:59 AM EDT",
       "headline": "ONE SECOND BEFORE THE BELL",
-      "subline": "212 RETAIL LIQUIDITY ORDERS WAITING IN QUEUE"
+      "subline": "212 RETAIL LIQUIDITY ORDERS WAITING IN QUEUE",
+      "sfx": "bell"
     },
     {
       "kind": "big_stat",
@@ -510,7 +515,8 @@
       "mediaQuery": {"type": "image", "query": "New York Stock Exchange traders floor", "cameraPreset": "wide", "credit": "AUGUST 2, 2012 • PUBLIC RESPONSE"},
       "eyebrow": "AUGUST 2, 2012  •  PUBLIC ADMISSION",
       "headline": "A SOFTWARE BUG BROUGHT DOWN THE GIANT",
-      "subline": "CEO THOMAS JOYCE CONFIRMED THE $440M TRADING LOSS"
+      "subline": "CEO THOMAS JOYCE CONFIRMED THE $440M TRADING LOSS",
+      "sfx": "camera_shutter"
     },
     {
       "kind": "big_stat",
@@ -535,7 +541,7 @@
       "kind": "media_hero",
       "mood": "sad",
       "text": "Shockwaves rippled all the way to Washington. Regulators realized modern electronic routing moved so fast that one unpatched node could destabilize over a hundred public stocks before noon.",
-      "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "wide", "credit": "WASHINGTON, D.C. • REGULATORY SHIFT"},
+      "mediaQuery": {"type": "image", "query": "Wall Street street sign New York", "cameraPreset": "crop_right", "credit": "WALL STREET • REGULATORY SHIFT"},
       "eyebrow": "INDUSTRY WAKE-UP CALL",
       "headline": "MICROSECOND SPEED DEMANDS HARD LIMITS",
       "subline": "PRE-TRADE RISK GATES BECAME MANDATORY ON WALL STREET"
@@ -548,7 +554,8 @@
       "mediaQuery": {"type": "image", "query": "Securities and Exchange Commission headquarters Washington", "cameraPreset": "push_in", "credit": "SEC HEADQUARTERS • WASHINGTON, D.C."},
       "eyebrow": "OCTOBER 16, 2013  •  SEC RELEASE NO. 70694",
       "headline": "$12 MILLION SEC PENALTY",
-      "subline": "LANDMARK MARKET ACCESS RULE ENFORCEMENT ACTION"
+      "subline": "LANDMARK MARKET ACCESS RULE ENFORCEMENT ACTION",
+      "sfx": "gavel"
     },
     {
       "kind": "swiss_cheese",

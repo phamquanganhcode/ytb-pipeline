@@ -244,28 +244,49 @@ def main():
             starts.append(max(starts[-1] + 30, int(word_at[idx])))
         word_cursor += n_w
 
+    def find_cue_frame(phrase: str, scene_tokens: list[str], w_start: int, frm: int, dur: int, min_frame: int = 6) -> int | None:
+        cue_tokens = mv._words(phrase)
+        if not cue_tokens:
+            return None
+        match_pos = next(
+            (j for j in range(len(scene_tokens) - len(cue_tokens) + 1) if scene_tokens[j : j + len(cue_tokens)] == cue_tokens),
+            None,
+        )
+        if match_pos is None:
+            return None
+        global_idx = min(w_start + match_pos, len(word_at) - 1)
+        return max(min_frame, min(dur - 12, int(word_at[global_idx]) - frm))
+
     scenes_out = []
     for i, s in enumerate(raw_scenes):
         frm = starts[i]
         dur = (starts[i + 1] - frm) if i < len(raw_scenes) - 1 else max(45, total_frames - frm)
-        scene_obj = {k: v for k, v in s.items() if k not in ("text", "mediaQuery", "mediaListQueries", "cueWord")}
+        scene_obj = {k: v for k, v in s.items() if k not in ("text", "mediaQuery", "mediaListQueries", "cueWord", "cutCues")}
         scene_obj["from"] = frm
         scene_obj["duration"] = dur
+        w_start, w_end = scene_word_ranges[i]
+        scene_tokens = all_words[w_start:w_end]
         if s.get("cueWord"):
-            w_start, w_end = scene_word_ranges[i]
-            cue_tokens = mv._words(s["cueWord"])
-            scene_tokens = all_words[w_start:w_end]
-            match_pos = next(
-                (j for j in range(len(scene_tokens) - len(cue_tokens) + 1) if cue_tokens and scene_tokens[j : j + len(cue_tokens)] == cue_tokens),
-                None,
-            )
-            if match_pos is not None:
-                global_idx = min(w_start + match_pos, len(word_at) - 1)
-                cue_f = max(6, min(dur - 12, int(word_at[global_idx]) - frm))
+            cue_f = find_cue_frame(s["cueWord"], scene_tokens, w_start, frm, dur, min_frame=6)
+            if cue_f is not None:
                 scene_obj["cueFrame"] = cue_f
                 print(f"  [micro-sync] scene {i} ({s.get('kind')}): cueWord={s['cueWord']!r} -> cueFrame={cue_f}/{dur}")
             else:
                 print(f"  [warn] scene {i}: cueWord={s['cueWord']!r} not found in scene text")
+        if s.get("cutCues"):
+            cut_frames: list[int] = []
+            prev_f = 0
+            for phrase in s["cutCues"]:
+                cf = find_cue_frame(phrase, scene_tokens, w_start, frm, dur, min_frame=12)
+                if cf is not None:
+                    cf = min(dur - 12, max(prev_f + 12, cf))
+                    cut_frames.append(cf)
+                    prev_f = cf
+                    print(f"  [micro-sync] scene {i} ({s.get('kind')}): cutCue={phrase!r} -> cutFrame={cf}/{dur}")
+                else:
+                    print(f"  [warn] scene {i}: cutCue={phrase!r} not found in scene text")
+            if cut_frames:
+                scene_obj["cutFrames"] = cut_frames
         if resolved_media[i]:
             scene_obj["media"] = resolved_media[i]
         if resolved_lists[i]:
