@@ -51,7 +51,8 @@ export type BackdropKind =
 	| 'candlestick_chart'
 	| 'office'
 	| 'living_room'
-	| 'bank_counter';
+	| 'bank_counter'
+	| 'hacker_room';
 
 const INK = '#141418';
 
@@ -132,7 +133,7 @@ const CHIBI_SPRITE: Record<ChibiRole, string> = {
 };
 
 /**
- * Studio-illustrated 2D Chibi Character Cast (transparent cel-shaded PNG sprites).
+ * Studio-illustrated 2D Chibi Character Cast (clean Lóng-style — no clunky nameplate pills).
  */
 export const ChibiCharacter: React.FC<{
 	role: ChibiRole;
@@ -141,11 +142,11 @@ export const ChibiCharacter: React.FC<{
 	size?: number;
 	delay?: number;
 	flipX?: boolean;
-}> = ({ role, label, size = 340, delay = 0, flipX = false }) => {
+}> = ({ role, size = 390, delay = 0, flipX = false }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
-	const pop = spring({ frame: frame - delay, fps, config: { damping: 13, stiffness: 155 } });
-	const bob = Math.sin((frame + delay * 3) / 10) * 3.5;
+	const pop = spring({ frame: frame - delay, fps, config: { damping: 14, stiffness: 155 } });
+	const bob = Math.sin((frame + delay * 3) / 11) * 3;
 	const src = CHIBI_SPRITE[role] ?? CHIBI_SPRITE.trader;
 
 	return (
@@ -154,7 +155,7 @@ export const ChibiCharacter: React.FC<{
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				transform: `scale(${pop}) translateY(${bob}px)`,
+				transform: `scale(${0.92 + 0.08 * pop}) translateY(${bob}px)`,
 				opacity: pop,
 			}}
 		>
@@ -163,7 +164,7 @@ export const ChibiCharacter: React.FC<{
 					width: size,
 					height: size,
 					transform: `scaleX(${flipX ? -1 : 1})`,
-					filter: 'drop-shadow(0 12px 22px rgba(0,0,0,0.38))',
+					filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.25))',
 				}}
 			>
 				<Img
@@ -176,41 +177,22 @@ export const ChibiCharacter: React.FC<{
 					}}
 				/>
 			</div>
-			{label && (
-				<div
-					style={{
-						marginTop: -8,
-						padding: '7px 20px',
-						backgroundColor: '#141418',
-						color: '#ffe600',
-						fontFamily: "'Inter', 'Segoe UI', Arial, sans-serif",
-						fontWeight: 900,
-						fontSize: 22,
-						borderRadius: 8,
-						border: '3px solid #ffffff',
-						letterSpacing: 1.2,
-						boxShadow: '0 6px 14px rgba(0,0,0,0.35)',
-					}}
-				>
-					{label}
-				</div>
-			)}
 		</div>
 	);
 };
 
 /**
- * Hand-drawn-feel white comic speech bubble.
+ * Clean organic hand-drawn comic speech bubble (matches Lóng's 00:30 & 08:42 bubbles).
  */
 export const SpeechBubble: React.FC<{
 	text: string;
 	tail?: 'left' | 'right' | 'bottom';
 	delay?: number;
 	maxWidth?: number;
-}> = ({ text, tail = 'bottom', delay = 10, maxWidth = 480 }) => {
+}> = ({ text, tail = 'bottom', delay = 10, maxWidth = 460 }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
-	const pop = spring({ frame: frame - delay, fps, config: { damping: 12, stiffness: 180 } });
+	const pop = spring({ frame: frame - delay, fps, config: { damping: 13, stiffness: 185 } });
 
 	return (
 		<div
@@ -218,15 +200,14 @@ export const SpeechBubble: React.FC<{
 				position: 'relative',
 				maxWidth,
 				backgroundColor: '#ffffff',
-				border: `5px solid ${INK}`,
-				borderRadius: 34,
-				padding: '22px 30px',
-				boxShadow: '6px 8px 0 rgba(0,0,0,0.22)',
+				border: `4px solid ${INK}`,
+				borderRadius: 46,
+				padding: '22px 34px',
 				transform: `scale(${pop})`,
 				opacity: pop,
-				fontFamily: "'Comic Neue', 'Segoe UI', 'Inter', sans-serif",
-				fontWeight: 800,
-				fontSize: 30,
+				fontFamily: "'Georgia', 'Comic Sans MS', 'Segoe UI', serif",
+				fontWeight: 700,
+				fontSize: 31,
 				lineHeight: 1.28,
 				color: INK,
 				textAlign: 'center',
@@ -462,11 +443,9 @@ export const ComicBackdrop: React.FC<{ kind?: BackdropKind; blur?: number }> = (
 			<div
 				style={{
 					...wrapStyle,
-					backgroundColor: '#f4f2ec',
+					backgroundColor: '#f3f2ee',
 					backgroundImage:
-						'radial-gradient(ellipse at center, rgba(255,255,255,0.45) 0%, rgba(214,208,196,0.35) 100%), linear-gradient(rgba(20,20,24,0.05) 1px, transparent 1px), linear-gradient(90deg, rgba(20,20,24,0.05) 1px, transparent 1px)',
-					backgroundSize: '100% 100%, 48px 48px, 48px 48px',
-					backgroundPosition: `0 0, ${drift}px ${drift}px, ${drift}px ${drift}px`,
+						'radial-gradient(ellipse at center, rgba(255,255,255,0.5) 0%, rgba(215,211,202,0.32) 100%)',
 				}}
 			/>
 		);
@@ -474,28 +453,41 @@ export const ComicBackdrop: React.FC<{ kind?: BackdropKind; blur?: number }> = (
 
 	if (kind === 'candlestick_chart') {
 		const candles = [
-			{ x: 180, o: 580, c: 510, h: 480, l: 610, up: true },
-			{ x: 270, o: 510, c: 560, h: 490, l: 590, up: false },
-			{ x: 360, o: 560, c: 450, h: 430, l: 580, up: true },
-			{ x: 450, o: 450, c: 490, h: 420, l: 520, up: false },
-			{ x: 540, o: 490, c: 360, h: 330, l: 510, up: true },
-			{ x: 630, o: 360, c: 410, h: 340, l: 440, up: false },
-			{ x: 720, o: 410, c: 290, h: 250, l: 430, up: true },
-			{ x: 810, o: 290, c: 470, h: 270, l: 520, up: false },
-			{ x: 900, o: 470, c: 610, h: 450, l: 660, up: false },
-			{ x: 990, o: 610, c: 710, h: 580, l: 750, up: false },
-			{ x: 1080, o: 710, c: 660, h: 630, l: 730, up: true },
-			{ x: 1170, o: 660, c: 780, h: 640, l: 820, up: false },
+			{ x: 100, o: 580, c: 510, h: 470, l: 615, up: true },
+			{ x: 185, o: 510, c: 565, h: 485, l: 600, up: false },
+			{ x: 270, o: 565, c: 455, h: 425, l: 585, up: true },
+			{ x: 355, o: 455, c: 495, h: 420, l: 530, up: false },
+			{ x: 440, o: 495, c: 365, h: 330, l: 515, up: true },
+			{ x: 525, o: 365, c: 415, h: 340, l: 445, up: false },
+			{ x: 610, o: 415, c: 290, h: 245, l: 435, up: true },
+			{ x: 695, o: 290, c: 350, h: 265, l: 385, up: false },
+			{ x: 780, o: 350, c: 240, h: 205, l: 370, up: true },
+			{ x: 865, o: 240, c: 430, h: 225, l: 485, up: false },
+			{ x: 950, o: 430, c: 585, h: 410, l: 645, up: false },
+			{ x: 1035, o: 585, c: 690, h: 550, l: 735, up: false },
+			{ x: 1120, o: 690, c: 640, h: 610, l: 720, up: true },
+			{ x: 1205, o: 640, c: 760, h: 620, l: 800, up: false },
 		];
+		const coinPop1 = interpolate(frame, [40, 56], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+		const coinPop2 = interpolate(frame, [65, 81], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+		const coinPop3 = interpolate(frame, [90, 106], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 		return (
-			<div style={{ ...wrapStyle, backgroundColor: '#f4f2ec' }}>
+			<div style={{ ...wrapStyle, backgroundColor: '#f3f2ee' }}>
 				<svg viewBox="0 0 1920 1080" width="100%" height="100%">
-					<rect x="110" y="128" width="1640" height="752" rx="14" fill="#1e293b" stroke={INK} strokeWidth="6" />
-					{[240, 380, 520, 660, 800].map((y, idx) => (
+					<rect x="85" y="70" width="1645" height="785" fill="#232c3d" stroke={INK} strokeWidth="5" />
+					{[200, 345, 490, 635, 780].map((y, idx) => (
 						<g key={y}>
-							<line x1="110" y1={y} x2="1750" y2={y} stroke="rgba(255,255,255,0.12)" strokeWidth="2" />
-							<text x="1774" y={y + 8} fill="#334155" fontSize="24" fontWeight="800" fontFamily="Inter, Arial, sans-serif">
+							<line x1="85" y1={y} x2="1730" y2={y} stroke="rgba(255,255,255,0.14)" strokeWidth="2" />
+							<text x="1756" y={y + 8} fill="#1f2937" fontSize="26" fontWeight="700" fontFamily="Georgia, serif">
 								{['49.00', '48.50', '48.00', '47.50', '47.00'][idx]}
+							</text>
+						</g>
+					))}
+					{[320, 680, 1040, 1400].map((x, idx) => (
+						<g key={x}>
+							<line x1={x} y1="70" x2={x} y2="855" stroke="rgba(255,255,255,0.10)" strokeWidth="2" />
+							<text x={x - 18} y="902" fill="#1f2937" fontSize="28" fontWeight="700" fontFamily="Georgia, serif">
+								{['Jan', '17', '24', '31'][idx]}
 							</text>
 						</g>
 					))}
@@ -503,50 +495,64 @@ export const ComicBackdrop: React.FC<{ kind?: BackdropKind; blur?: number }> = (
 						const col = cd.up ? '#22c55e' : '#ef4444';
 						const top = Math.min(cd.o, cd.c);
 						const h = Math.max(16, Math.abs(cd.o - cd.c));
-						const grow = interpolate(frame, [i * 2, i * 2 + 12], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+						const grow = interpolate(frame, [i * 2, i * 2 + 10], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 						return (
 							<g key={i} opacity={grow}>
-								<line x1={cd.x + 250} y1={cd.h} x2={cd.x + 250} y2={cd.l} stroke={col} strokeWidth="6" />
-								<rect x={cd.x + 228} y={top} width="44" height={h} rx="4" fill={col} stroke={INK} strokeWidth="3" />
+								<line x1={cd.x + 170} y1={cd.h} x2={cd.x + 170} y2={cd.l} stroke={col} strokeWidth="6" />
+								<rect x={cd.x + 152} y={top} width="36" height={h} rx="3" fill={col} stroke={INK} strokeWidth="2.5" />
 							</g>
 						);
 					})}
+					{/* Floating crypto coins popping above candlesticks (exact Lóng 00:09-00:15 motif) */}
+					<g transform={`translate(460, ${235 + Math.sin(frame / 10) * 6}) scale(${coinPop1})`} opacity={coinPop1}>
+						<circle r="62" fill="#f7931a" stroke={INK} strokeWidth="5" />
+						<text y="22" textAnchor="middle" fontSize="64" fontWeight="900" fill="#ffffff" fontFamily="Inter, Arial, sans-serif">₿</text>
+					</g>
+					<g transform={`translate(930, ${195 + Math.sin(frame / 10 + 1.5) * 6}) scale(${coinPop2})`} opacity={coinPop2}>
+						<circle r="62" fill="#6366f1" stroke={INK} strokeWidth="5" />
+						<text y="22" textAnchor="middle" fontSize="60" fontWeight="900" fill="#ffffff" fontFamily="Inter, Arial, sans-serif">Ξ</text>
+					</g>
+					<g transform={`translate(1390, ${245 + Math.sin(frame / 10 + 3.0) * 6}) scale(${coinPop3})`} opacity={coinPop3}>
+						<circle r="58" fill="#10b981" stroke={INK} strokeWidth="5" />
+						<text y="20" textAnchor="middle" fontSize="58" fontWeight="900" fill="#ffffff" fontFamily="Inter, Arial, sans-serif">₮</text>
+					</g>
 				</svg>
 			</div>
 		);
 	}
 
-	if (kind === 'office' || kind === 'living_room' || kind === 'bank_counter') {
-		const tone =
-			kind === 'bank_counter'
-				? 'sepia(0.18) brightness(0.95)'
-				: kind === 'living_room'
-					? 'saturate(0.92) brightness(0.96)'
-					: 'none';
+	if (kind === 'office' || kind === 'living_room' || kind === 'bank_counter' || kind === 'hacker_room') {
+		const bgMap: Record<string, string> = {
+			office: 'comic/art/bg_office.jpg',
+			living_room: 'comic/art/bg_office.jpg',
+			bank_counter: 'comic/art/bg_bank_counter.jpg',
+			hacker_room: 'comic/art/bg_hacker_room.jpg',
+		};
+		const slowZoom = interpolate(frame, [0, 360], [1.0, 1.045], { extrapolateRight: 'clamp' });
 		return (
 			<div style={{ ...wrapStyle, overflow: 'hidden' }}>
 				<Img
-					src={staticFile('comic/art/bg_office.jpg')}
+					src={staticFile(bgMap[kind])}
 					style={{
 						width: '100%',
 						height: '100%',
 						objectFit: 'cover',
-						filter: tone,
+						transform: `scale(${slowZoom})`,
 					}}
 				/>
 			</div>
 		);
 	}
 
-	// Default: Lóng's signature Dark Grid with subtle vignette
+	// Default: Lóng's exact Dark Grid (#1d1f23 with crisp subtle 42px grid lines)
 	return (
 		<div
 			style={{
 				...wrapStyle,
-				backgroundColor: '#15171c',
+				backgroundColor: '#1d1f23',
 				backgroundImage:
-					'radial-gradient(ellipse at center, rgba(30,41,59,0.22) 0%, rgba(7,9,13,0.72) 100%), linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px)',
-				backgroundSize: '100% 100%, 48px 48px, 48px 48px',
+					'radial-gradient(ellipse at center, rgba(255,255,255,0.02) 0%, rgba(0,0,0,0.42) 100%), linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)',
+				backgroundSize: '100% 100%, 42px 42px, 42px 42px',
 				backgroundPosition: `0 0, ${drift}px ${drift}px, ${drift}px ${drift}px`,
 			}}
 		/>

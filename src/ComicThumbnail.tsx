@@ -17,7 +17,8 @@ const INK = '#141418';
 /**
  * High-CTR 1280x720 Documentary-Comic Thumbnail:
  * - Dramatic full-bleed crisis/editorial background
- * - Real-person hero portrait from the story (e.g. CZ for Binance) — highest CTR & authenticity
+ * - Illustrated MascotHost on the right (copyright-safe & consistent channel branding;
+ *   optional licensed heroPhotoSrc still supported if explicitly provided)
  * - Fixed yellow/black brand badge in top-right corner
  * - Extra-bold yellow/white ALL-CAPS punchline across bottom third
  */
@@ -25,7 +26,7 @@ export const ComicThumbnail: React.FC<ComicThumbnailProps> = ({
 	brand = 'BRIEFED',
 	headline = '-$6 BILLION',
 	subline = 'HOW BINANCE GOT HIT',
-	mascot,
+	mascot = 'shocked',
 	mediaSrc = 'comic/art/bg_thumbnail.jpg',
 	heroPhotoSrc,
 }) => {
@@ -39,9 +40,7 @@ export const ComicThumbnail: React.FC<ComicThumbnailProps> = ({
 						width: '100%',
 						height: '100%',
 						objectFit: 'cover',
-						filter: heroPhotoSrc
-							? 'contrast(1.16) saturate(1.15) brightness(0.68)'
-							: 'contrast(1.12) saturate(1.12) brightness(0.85)',
+						filter: 'contrast(1.16) saturate(1.15) brightness(0.72)',
 					}}
 				/>
 			) : (
@@ -56,7 +55,7 @@ export const ComicThumbnail: React.FC<ComicThumbnailProps> = ({
 				}}
 			/>
 
-			{/* Real Person Hero Portrait from the Story (preferred over cartoon mascot on thumbnail) */}
+			{/* Illustrated Mascot Host (default, copyright-safe) or optional licensed hero photo */}
 			{heroPhotoSrc ? (
 				<div
 					style={{
@@ -80,8 +79,16 @@ export const ComicThumbnail: React.FC<ComicThumbnailProps> = ({
 					/>
 				</div>
 			) : mascot ? (
-				<div style={{position: 'absolute', right: 20, bottom: 90, zIndex: 20}}>
-					<MascotHost pose={mascot} size={500} flipX talking={false} />
+				<div
+					style={{
+						position: 'absolute',
+						right: 16,
+						bottom: -12,
+						zIndex: 18,
+						filter: 'drop-shadow(0 0 28px rgba(255, 230, 0, 0.28)) drop-shadow(0 14px 28px rgba(0,0,0,0.85))',
+					}}
+				>
+					<MascotHost pose={mascot} size={620} flipX talking={false} />
 				</div>
 			) : null}
 

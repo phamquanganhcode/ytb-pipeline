@@ -33,13 +33,41 @@ def slugify(text: str) -> str:
     return re.sub(r"[^a-z0-9]+", "_", text.lower()).strip("_")[:48]
 
 
-def fetch_wikimedia_image(query: str, dest: Path) -> bool:
-    if dest.exists() and dest.stat().st_size > 15000:
-        return True
+def _strip_html(raw: str) -> str:
+    return re.sub(r"\s+", " ", re.sub(r"<[^>]+>", "", raw or "")).strip()
+
+
+def _is_commercial_safe_license(license_short: str) -> bool:
+    """Allow only Public Domain, CC0, CC BY, and CC BY-SA (reject NC, ND, fair use, unknown)."""
+    lic = (license_short or "").strip().lower()
+    if not lic:
+        return False
+    if any(bad in lic for bad in ("nc", "nd", "fair use", "copyrighted", "restricted", "non-free")):
+        return False
+    return (
+        "public domain" in lic
+        or lic.startswith("pd")
+        or "cc0" in lic
+        or "cc-by" in lic
+        or "cc by" in lic
+    )
+
+
+def fetch_wikimedia_image(query: str, dest: Path) -> dict | None:
+    """Fetch a commercial-safe Wikimedia Commons image and persist license/attribution metadata."""
+    meta_path = dest.with_suffix(".meta.json")
+    if dest.exists() and dest.stat().st_size > 15000 and meta_path.exists():
+        try:
+            meta = json.loads(meta_path.read_text(encoding="utf-8"))
+            if _is_commercial_safe_license(meta.get("license", "")):
+                return meta
+        except Exception:
+            pass
+
     api = (
         "https://commons.wikimedia.org/w/api.php?action=query&generator=search"
-        f"&gsrnamespace=6&gsrsearch={urllib.parse.quote(query)}&gsrlimit=6"
-        "&prop=imageinfo&iiprop=url|mime&iiurlwidth=1920&format=json"
+        f"&gsrnamespace=6&gsrsearch={urllib.parse.quote(query)}&gsrlimit=10"
+        "&prop=imageinfo&iiprop=url|mime|extmetadata&iiurlwidth=1920&format=json"
     )
     try:
         req = urllib.request.Request(api, headers=HEADERS)
@@ -49,15 +77,29 @@ def fetch_wikimedia_image(query: str, dest: Path) -> bool:
             info = (p.get("imageinfo") or [{}])[0]
             mime = info.get("mime", "")
             img_url = info.get("thumburl") or info.get("url")
+            ext = info.get("extmetadata") or {}
+            lic = _strip_html((ext.get("LicenseShortName") or {}).get("value", ""))
+            if not _is_commercial_safe_license(lic):
+                continue
+            artist = _strip_html((ext.get("Artist") or {}).get("value", "")) or "Wikimedia Commons contributor"
+            desc_url = info.get("descriptionurl") or ""
             if img_url and mime in ("image/jpeg", "image/png"):
                 raw = urllib.request.urlopen(urllib.request.Request(img_url, headers=HEADERS), timeout=20).read()
                 if len(raw) > 15000:
                     dest.write_bytes(raw)
-                    print(f"  [image] {dest.name} ({len(raw) // 1024} KB)")
-                    return True
+                    meta = {
+                        "license": lic,
+                        "artist": artist,
+                        "url": desc_url,
+                        "credit": f"{artist} ({lic})",
+                    }
+                    meta_path.write_text(json.dumps(meta, indent=2, ensure_ascii=False), encoding="utf-8")
+                    print(f"  [image] {dest.name} ({len(raw) // 1024} KB) — {lic}")
+                    return meta
+        print(f"  [warn] no commercial-safe Wikimedia image found for {query!r}")
     except Exception as e:
         print(f"  [warn] image fetch failed for {query!r}: {e}")
-    return False
+    return None
 
 
 def resolve_media(scene: dict) -> dict | None:
@@ -67,10 +109,17 @@ def resolve_media(scene: dict) -> dict | None:
     if not mq:
         return None
     query = mq.get("query", "")
-    credit = mq.get("credit")
     jpg = MEDIA_DIR / f"{slugify(query)}.jpg"
-    if fetch_wikimedia_image(query, jpg):
-        return {"type": "image", "src": f"comic/media/{jpg.name}", "credit": credit}
+    meta = fetch_wikimedia_image(query, jpg)
+    if meta:
+        credit = mq.get("credit") or meta["credit"]
+        return {
+            "type": "image",
+            "src": f"comic/media/{jpg.name}",
+            "credit": credit,
+            "license": meta["license"],
+            "sourceUrl": meta.get("url", ""),
+        }
     return None
 
 
@@ -116,10 +165,12 @@ def main():
     resolved_media = [resolve_media(s) for s in raw_scenes]
 
     thumb_cfg = dict(script.get("thumbnail") or {})
+    thumb_media_meta = None
     if thumb_cfg.get("mediaQuery"):
         tm = resolve_media({"mediaQuery": thumb_cfg["mediaQuery"]})
         if tm:
             thumb_cfg["mediaSrc"] = tm["src"]
+            thumb_media_meta = tm
         thumb_cfg.pop("mediaQuery", None)
     thumb_cfg.setdefault("brand", brand)
 
@@ -202,8 +253,12 @@ def main():
             cf = find_cue_frame(s["cueWord"], scene_tokens, w_start, frm, dur)
             if cf is not None:
                 scene_obj["cueFrame"] = cf
+            else:
+                print(f"  [warn] scene {i}: cueWord {s['cueWord']!r} not found in narration text")
         if resolved_media[i]:
-            scene_obj["media"] = resolved_media[i]
+            scene_obj["media"] = {
+                k: v for k, v in resolved_media[i].items() if k in ("type", "src", "credit") and v is not None
+            }
         scenes_out.append(scene_obj)
 
     manifest = {
@@ -212,6 +267,7 @@ def main():
         "fps": FPS,
         "durationInFrames": total_frames,
         "audio": f"comic/{wav_path.name}",
+        "bgm": script.get("bgm", "music/calm.mp3"),
         "thumbnail": thumb_cfg,
         "scenes": scenes_out,
     }
@@ -232,11 +288,44 @@ def main():
         "We're just curious researchers who love breaking down big stories—not financial or security experts. "
         "If you spot any mistakes or updates, drop a comment below!"
     )
+    # Collect Sources & Media Credits automatically for YouTube description
+    source_lines = []
+    seen_sources = set()
+    for src in script.get("sources", []):
+        s_clean = src.strip()
+        if s_clean and s_clean.lower() not in seen_sources:
+            seen_sources.add(s_clean.lower())
+            source_lines.append(f"- {s_clean}")
+    for s in raw_scenes:
+        src = (s.get("source") or "").strip()
+        if src and not any(src.lower() in existing for existing in seen_sources):
+            seen_sources.add(src.lower())
+            source_lines.append(f"- {src}")
+
+    credit_lines = []
+    seen_credits = set()
+    all_media_items = [m for m in resolved_media if m] + ([thumb_media_meta] if thumb_media_meta else [])
+    for m in all_media_items:
+        cr = (m.get("credit") or "").strip()
+        url = (m.get("sourceUrl") or "").strip()
+        if cr:
+            line = f"- {cr}" + (f" — {url}" if url else "")
+            if line not in seen_credits:
+                seen_credits.add(line)
+                credit_lines.append(line)
+
+    sources_block = (
+        "SOURCES:\n" + ("\n".join(source_lines) if source_lines else "- Compiled from public reports (verify before publishing)") + "\n\n"
+    )
+    credits_block = ("MEDIA CREDITS:\n" + "\n".join(credit_lines) + "\n\n") if credit_lines else ""
+
     yt_pack = (
         f"TITLE:\n{script['title']}\n\n"
         f"DESCRIPTION:\n{script.get('description', disclaimer)}\n\n"
         f"DISCLAIMER:\n{disclaimer}\n\n"
         f"CHAPTERS:\n" + "\n".join(chapters) + "\n\n"
+        f"{sources_block}"
+        f"{credits_block}"
         f"PINNED COMMENT:\n{script.get('pinnedComment', 'What part of this breakdown surprised you most? Drop it below!')}\n"
     )
     (ROOT / "out" / f"{slug}_youtube.txt").write_text(yt_pack, encoding="utf-8")
