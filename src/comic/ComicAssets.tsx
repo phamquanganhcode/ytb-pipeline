@@ -90,26 +90,21 @@ export const MascotHost: React.FC<{
 	const { fps } = useVideoConfig();
 	const ctxMouth = useContext(MouthLevelContext);
 
-	const pop = talking ? spring({ frame, fps, config: { damping: 14, stiffness: 150 } }) : 1;
+	const pop = talking ? spring({ frame, fps, config: { damping: 16, stiffness: 140 } }) : 1;
 	const mouthLevel = talking ? ctxMouth : pose === 'shocked' ? 3 : 0;
-	const isTalkingNow = talking && mouthLevel > 0;
 
-	const breatheY = talking ? Math.sin(frame / 14) * 2.5 : 0;
-	const headTilt = talking
-		? Math.sin(frame / 17) * 2.2 + (isTalkingNow ? Math.sin(frame / 4) * 1.4 : 0)
-		: pose === 'shocked'
-			? -2
-			: 1.5;
-	const headBobY = talking ? (isTalkingNow ? -Math.abs(Math.sin(frame / 4.5)) * 3.5 : Math.sin(frame / 14) * 1.5) : 0;
+	// Calm, Lóng-style restrained animation: held poses, slow subtle tilt, zero hyperactive bobbing
+	const breatheY = talking ? Math.sin(frame / 36) * 0.8 : 0;
+	const headTilt = talking ? Math.sin(frame / 42) * 1.1 : pose === 'shocked' ? -1.5 : 1;
+	const headBobY = 0;
 
-	const blink = talking && pose !== 'shocked' && pose !== 'shades' && useBlink(frame, 17, 102);
-	const shockShake = talking && pose === 'shocked' ? Math.sin(frame * 1.7) * 3.2 : 0;
-	const gestureSwing = talking
-		? (isTalkingNow ? Math.sin(frame / 5.5) * 9 : Math.sin(frame / 16) * 3)
-		: 0;
-	const pointPulse = talking ? Math.sin(frame / 7) * 4.5 : 0;
-	const sweatY = talking ? ((frame * 1.6) % 36) : 10;
-	const shineX = talking ? interpolate((frame % 75), [0, 22, 75], [-36, 46, 46], { extrapolateRight: 'clamp' }) : 6;
+	const blink = talking && pose !== 'shocked' && pose !== 'shades' && useBlink(frame, 17, 118);
+	// Brief 0.45s shock jolt on entrance only, then hold steady
+	const shockShake = talking && pose === 'shocked' && frame < 14 ? Math.sin(frame * 1.4) * (2.2 * (1 - frame / 14)) : 0;
+	const gestureSwing = talking ? Math.sin(frame / 34) * 1.8 : 0;
+	const pointPulse = talking ? Math.sin(frame / 32) * 1.4 : 0;
+	const sweatY = talking ? ((frame * 0.45) % 24) : 8;
+	const shineX = talking ? interpolate((frame % 110), [0, 18, 110], [-36, 46, 46], { extrapolateRight: 'clamp' }) : 6;
 
 	const renderMouth = () => {
 		if (pose === 'shocked' && (!talking || mouthLevel >= 2)) {
@@ -410,7 +405,7 @@ export const MascotHost: React.FC<{
 							/>
 						</g>
 					) : pose === 'shades' ? (
-						<g transform={`rotate(${Math.sin(frame / 12) * 3}, 230, 232)`}>
+						<g transform={`rotate(${Math.sin(frame / 36) * 1.2}, 230, 232)`}>
 							<path
 								d="M 226 226 L 274 248 L 236 144 L 214 152 L 244 226 L 214 214 Z"
 								fill="#c99352"
@@ -526,16 +521,20 @@ export const ChibiCharacter: React.FC<{
 }> = ({ role, mood = 'neutral', size = 390, delay = 0, flipX = false, speaking = false }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
-	const pop = spring({ frame: frame - delay, fps, config: { damping: 14, stiffness: 155 } });
-	const blink = mood !== 'panic' && useBlink(frame, role.length * 13, 94);
+	const localAge = Math.max(0, frame - delay);
+	const pop = spring({ frame: frame - delay, fps, config: { damping: 16, stiffness: 145 } });
+	const blink = mood !== 'panic' && useBlink(frame, role.length * 13, 114);
 
-	const breatheY = Math.sin((frame + delay * 2) / 12) * 2.5;
-	const panicShakeX = mood === 'panic' ? Math.sin(frame * 2.2) * 4.5 : 0;
-	const panicShakeRot = mood === 'panic' ? Math.sin(frame * 1.9) * 3.5 : Math.sin(frame / 15) * 1.8;
-	const typeLeftY = Math.sin(frame * 1.8) * 5.5;
-	const typeRightY = Math.cos(frame * 1.8) * 5.5;
-	const sweatY = (frame * 1.8) % 34;
-	const talkOpen = speaking && Math.sin(frame * 0.9) > 0;
+	// Calm, held-pose chibi motion: brief entrance reaction, then natural stillness + blinking
+	const breatheY = Math.sin((frame + delay * 2) / 36) * 0.8;
+	const panicShakeX = mood === 'panic' && localAge < 16 ? Math.sin(localAge * 1.6) * (3 * (1 - localAge / 16)) : 0;
+	const panicShakeRot = mood === 'panic' && localAge < 16 ? Math.sin(localAge * 1.4) * (2.2 * (1 - localAge / 16)) : Math.sin(frame / 45) * 0.9;
+	// Gentle intermittent typing burst (types 25 frames, rests 35 frames) instead of constant piston motion
+	const typingActive = (frame % 60) < 24;
+	const typeLeftY = typingActive ? Math.sin(frame * 0.85) * 2.2 : 0;
+	const typeRightY = typingActive ? Math.cos(frame * 0.85) * 2.2 : 0;
+	const sweatY = (frame * 0.45) % 24;
+	const talkOpen = speaking && Math.floor(frame / 4) % 2 === 0;
 
 	const kind =
 		role === 'hacker' || role === 'fbi'
@@ -803,8 +802,8 @@ export const ChibiCharacter: React.FC<{
 							<circle cx="152" cy={254 + typeRightY} r="13" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
 						</g>
 					) : mood === 'happy' ? (
-						/* Happy waving / counter clerk hand */
-						<g transform={`rotate(${Math.sin(frame / 6) * 10}, 196, 224)`}>
+						/* Happy counter clerk hand (calm held pose) */
+						<g transform={`rotate(${Math.sin(frame / 28) * 2.5}, 196, 224)`}>
 							<path d="M 190 226 L 228 192" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
 							<circle cx="232" cy="186" r="14" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
 						</g>

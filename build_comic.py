@@ -214,7 +214,7 @@ def main():
     total_frames = math.ceil(len(audio) / mv.SAMPLE_RATE * FPS)
     speech_frames = max(1, total_frames - int(1.0 * FPS))
 
-    # Compute per-frame audio lip-sync envelope (0=closed, 1=slight, 2=open, 3=wide)
+    # Compute per-frame audio lip-sync envelope held on 3s (~10fps, natural 2D animation)
     spf = max(1, mv.SAMPLE_RATE // FPS)
     rms_vals = np.array(
         [
@@ -229,15 +229,18 @@ def main():
     peak_rms = max(peak_rms, 1e-4)
     norm_rms = rms_vals / peak_rms
     mouth_chars = []
-    for v in norm_rms:
-        if v < 0.08:
-            mouth_chars.append("0")
-        elif v < 0.30:
-            mouth_chars.append("1")
-        elif v < 0.65:
-            mouth_chars.append("2")
+    step_hold = 3  # hold each mouth shape for 3 frames (~10fps, avoids 30fps jitter)
+    for f in range(0, total_frames, step_hold):
+        v = float(np.mean(norm_rms[f : f + step_hold]))
+        if v < 0.12:
+            ch = "0"
+        elif v < 0.42:
+            ch = "1"
+        elif v < 0.78:
+            ch = "2"
         else:
-            mouth_chars.append("3")
+            ch = "3"
+        mouth_chars.extend([ch] * min(step_hold, total_frames - f))
     mouth_track = "".join(mouth_chars)
 
     word_at = mv.word_frames(audio, full_text, "en", speech_frames)
