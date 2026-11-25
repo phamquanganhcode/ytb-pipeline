@@ -4,6 +4,8 @@ import {Episode, EpisodeProps, overlapBefore, SceneData} from './Episode';
 import {Thumbnail, ThumbnailProps} from './Thumbnail';
 import {DocuPrototype, DocuPrototypeProps} from './DocuPrototype';
 import {DocuEngine, DocuManifest} from './DocuEngine';
+import {ComicExplainer, ComicManifest} from './ComicExplainer';
+import {ComicThumbnail, ComicThumbnailProps} from './ComicThumbnail';
 
 // Scenes and durations come from public/manifest.json, written by make_video.py.
 export const Root: React.FC = () => (
@@ -155,6 +157,72 @@ export const Root: React.FC = () => (
 						fps: manifest.fps ?? 30,
 						durationInFrames: manifest.durationInFrames ?? 5400,
 						props: manifest as DocuManifest,
+					};
+				} catch {
+					return {props};
+				}
+			}}
+		/>
+
+		<Composition
+			id="ComicExplainer"
+			component={ComicExplainer}
+			width={1920}
+			height={1080}
+			fps={30}
+			durationInFrames={4500}
+			defaultProps={
+				{
+					title: 'Comic Explainer',
+					brand: 'BRIEFED',
+					fps: 30,
+					durationInFrames: 4500,
+					audio: 'comic/narration.wav',
+					scenes: [],
+				} as ComicManifest
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const manifest = await fetch(staticFile('comic/manifest.json')).then((r) => r.json());
+					return {
+						fps: manifest.fps ?? 30,
+						durationInFrames: manifest.durationInFrames ?? 4500,
+						props: manifest as ComicManifest,
+					};
+				} catch {
+					return {props};
+				}
+			}}
+		/>
+
+		<Composition
+			id="ComicThumbnail"
+			component={ComicThumbnail}
+			width={1280}
+			height={720}
+			fps={30}
+			durationInFrames={1}
+			defaultProps={
+				{
+					brand: 'BRIEFED',
+					headline: '-$6 BILLION',
+					subline: 'HOW BINANCE GOT HIT',
+					mascot: 'shades',
+				} as ComicThumbnailProps
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const manifest = await fetch(staticFile('comic/manifest.json')).then((r) => r.json());
+					const th = manifest.thumbnail || {};
+					return {
+						props: {
+							brand: th.brand || manifest.brand || 'BRIEFED',
+							headline: th.headline || manifest.title || '-$6 BILLION',
+							subline: th.subline,
+							mascot: th.mascot,
+							mediaSrc: th.mediaSrc,
+							heroPhotoSrc: th.heroPhotoSrc,
+						} as ComicThumbnailProps,
 					};
 				} catch {
 					return {props};

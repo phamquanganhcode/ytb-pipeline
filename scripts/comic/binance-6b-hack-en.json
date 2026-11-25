@@ -1,0 +1,260 @@
+{
+  "title": "Everything You Need to Know About the $6 Billion Binance Hack",
+  "slug": "binance_6b_comic_en",
+  "brand": "BRIEFED",
+  "voice": "am_adam",
+  "description": "Over $6.3 billion drained across ten blockchains in a single night—without leaking a single private key. Here's how the alleged TraderTraitor heist unfolded, how EIP-7702 and 50 pre-signed nonces were exploited, and how stablecoin issuers froze $3 billion in minutes.",
+  "pinnedComment": "Which part of this heist blew your mind most—the 50-ticket nonce trick, the $3B stablecoin freeze, or the Rolex-at-a-pawnshop Aave move?",
+  "thumbnail": {
+    "brand": "BRIEFED",
+    "subline": "HOW BINANCE GOT HIT",
+    "headline": "-$6 BILLION",
+    "mediaSrc": "comic/art/bg_tower_fire.jpg",
+    "heroPhotoSrc": "comic/art/cz_hero.png"
+  },
+  "chapters": [
+    {
+      "title": "Crypto Pain & The $6B Shock",
+      "scene": 0
+    },
+    {
+      "title": "How Big Is Binance?",
+      "scene": 3
+    },
+    {
+      "title": "The Night $6.3B Vanished",
+      "scene": 4
+    },
+    {
+      "title": "EIP-7702 & The 50-Ticket Trick",
+      "scene": 5
+    },
+    {
+      "title": "The $3B Freeze vs. The Pawnshop Move",
+      "scene": 8
+    },
+    {
+      "title": "Who Done It & 3 Takeaways",
+      "scene": 10
+    }
+  ],
+  "scenes": [
+    {
+      "kind": "comic_skit",
+      "backdrop": "candlestick_chart",
+      "headline": "CRYPTO PORTFOLIO: -90%",
+      "text": "While retail crypto traders are still arguing whether the market is actually dead or just playing dead to rug-pull us one last time, half of us have already achieved financial freedom—freedom from money, freedom from assets, and freedom to ask our parents for twenty bucks of gas money.",
+      "actors": [
+        {
+          "role": "trader",
+          "mood": "sad",
+          "label": "DIAMOND HANDS"
+        },
+        {
+          "role": "victim",
+          "mood": "panic",
+          "label": "RETIRE AT 30",
+          "speech": "Dad... can I get $20 for gas?"
+        }
+      ],
+      "sfx": "pop"
+    },
+    {
+      "kind": "stock_cutaway",
+      "eyebrow": "OCTOBER 30, 2026  •  BREAKING BREACH",
+      "headline": "$6.3 BILLION DRAINED",
+      "subline": "TEN BLOCKCHAINS HIT IN A SINGLE NIGHT",
+      "mascot": "shocked",
+      "mediaQuery": {
+        "query": "Server room dark blue lights cybersecurity",
+        "credit": "ARCHIVE • DATA CENTER"
+      },
+      "text": "Think that's painful? Something way wilder just happened. Binance—the largest crypto exchange on Earth—got hit by a six-point-three-billion-dollar cyber heist across ten different blockchains in just a few hours.",
+      "sfx": "boom"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "dark_grid",
+      "mascot": "explaining",
+      "headline": "HOW DO YOU ROB A $95B/DAY GIANT?",
+      "subline": "Compiled from public forensic reports — still under active investigation.",
+      "text": "How did hackers walk past a fortress of security engineers without even leaking a private key? Why did ten completely different blockchains empty at the exact same time? And is your money on an exchange actually safe? Let's break it all down.",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "light_paper",
+      "headline": "WHY TARGET BINANCE?",
+      "mascot": "pointing",
+      "items": [
+        {
+          "icon": "globe",
+          "label": "335M USERS",
+          "sublabel": "Bigger than Indonesia"
+        },
+        {
+          "icon": "building",
+          "label": "BINANCE",
+          "sublabel": "Founded 2017"
+        },
+        {
+          "icon": "cash",
+          "label": "$95B / DAY",
+          "sublabel": "Daily trading volume"
+        }
+      ],
+      "text": "First, why Binance? Simple: if you're going to cut the cameras and pick the locks all night, you rob the biggest mansion on the block. By 2026, Binance served over three hundred thirty-five million users and moved ninety-five billion dollars in daily trading volume.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "headline": "03:05 AM — MULTI-CHAIN DRAIN",
+      "items": [
+        {
+          "icon": "xrp",
+          "label": "233M XRP",
+          "sublabel": "First 4 minutes"
+        },
+        {
+          "icon": "bitcoin",
+          "label": "$1.5B BTC",
+          "sublabel": "18,270 Bitcoin"
+        },
+        {
+          "icon": "eth",
+          "label": "$3.8B ETH",
+          "sublabel": "167K ETH + 63 tokens"
+        },
+        {
+          "icon": "wallet",
+          "label": "$6.3B TOTAL",
+          "sublabel": "10+ blockchains"
+        }
+      ],
+      "text": "At 20:05 UTC, five Binance XRP wallets emptied two hundred thirty-three million XRP in four minutes. Fifteen minutes later, a Bitcoin hot wallet wired out one-point-five billion dollars in a single transaction—followed by three-point-eight billion on Ethereum. Imagine depositing money at eight different banks, and one morning all eight politely wire everything to the exact same burglar.",
+      "sfx": "alarm"
+    },
+    {
+      "kind": "source_receipt",
+      "articleTitle": "How the attacker took over a Binance hot wallet",
+      "excerpt": "EIP-7702, introduced in Ethereum's Pectra upgrade in May 2025, allows an ordinary wallet to hand control of its behavior to a smart contract by signing an authorization. At 20:20 UTC, the operator submitted a single transaction containing 50 authorizations signed by the Binance hot wallet.",
+      "highlight": "hand control of its behavior to a smart contract by signing an authorization",
+      "cueWord": "smart contract",
+      "source": "TRM LABS",
+      "mascot": "skeptical",
+      "text": "Binance said no private keys were leaked. So how did the funds move? According to TRM Labs, on Ethereum the attackers abused EIP-7702, a feature that lets a regular wallet delegate control to a smart contract—like a store owner signing a power-of-attorney letter, except the burglar walks in holding it.",
+      "sfx": "paper"
+    },
+    {
+      "kind": "concept_card",
+      "backdrop": "light_paper",
+      "headline": "NONCE",
+      "subline": "TRANSACTION SEQUENCE NUMBER OF A WALLET",
+      "items": [
+        {
+          "icon": "document",
+          "label": "TICKET #1"
+        },
+        {
+          "icon": "document",
+          "label": "TICKET #25"
+        },
+        {
+          "icon": "document",
+          "label": "TICKET #50"
+        }
+      ],
+      "text": "Why submit fifty authorizations at once? Because of a wallet's nonce—its transaction queue number. Binance's hot wallet moves so fast that hackers couldn't guess the exact number. So they did what you'd do at a crowded hospital: grab the next fifty queue tickets in a row so one is guaranteed to get called.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "office",
+      "headline": "DON'T FORGE THE SIGNATURE — OWN THE SIGNER",
+      "actors": [
+        {
+          "role": "hacker",
+          "mood": "smug",
+          "label": "ATTACKER",
+          "speech": "Hey bro, just sign this real quick."
+        },
+        {
+          "role": "engineer",
+          "mood": "neutral",
+          "label": "SIGNING SYSTEM",
+          "flipX": true
+        }
+      ],
+      "text": "Worse still, Bitcoin and XRP don't even use EIP-7702. Investigators later revealed attackers infected DevOps laptops via a poisoned coding tool and a fake job test, then pivoted straight into Binance's internal signing system. They didn't pick the vault—they made the vault open itself.",
+      "sfx": "glitch"
+    },
+    {
+      "kind": "source_receipt",
+      "articleTitle": "Stablecoin freezes and conversion race",
+      "excerpt": "Stablecoin issuers moved quickly. Tether froze roughly $1.77 billion USDT, Circle froze over $825 million USDC, and Ripple plus Arbitrum stepped in—freezing nearly $3 billion onchain before the attackers could liquidate it.",
+      "highlight": "freezing nearly $3 billion onchain before the attackers could liquidate it",
+      "cueWord": "freezing",
+      "source": "TRM LABS",
+      "mascot": "deadpan",
+      "text": "Then came the wildest plot twist: crypto isn't as unstoppable as the slogans claim. Tether, Circle, and partners hit the freeze button on nearly three billion dollars in stablecoins—turning the hackers into billionaires on screen who couldn't spend a dime.",
+      "sfx": "cash"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "bank_counter",
+      "headline": "THE PAWNSHOP ESCAPE (AAVE + UNISWAP)",
+      "actors": [
+        {
+          "role": "hacker",
+          "mood": "smug",
+          "label": "STOLEN USDT",
+          "speech": "Keep the watch—give me ETH cash now!"
+        },
+        {
+          "role": "support",
+          "mood": "happy",
+          "label": "DEFI PAWNSHOP",
+          "flipX": true
+        }
+      ],
+      "text": "Knowing the clock was ticking, the hackers dumped USDT on Uniswap and even deposited tainted USDT as collateral on Aave to borrow clean Ethereum. It's like stealing a Rolex, hearing the serial number is about to be blacklisted, and sprinting straight to a pawnshop for cash.",
+      "sfx": "coin"
+    },
+    {
+      "kind": "bullet_breakdown",
+      "backdrop": "light_paper",
+      "headline": "WHY THE FBI BLAMES TRADER-TRAITOR",
+      "mascot": "pointing",
+      "bullets": [
+        "Seed wallets funded via Tornado Cash",
+        "Infrastructure pre-built days in advance",
+        "Dry-run test transactions rehearsed early",
+        "50 pre-signed authorizations queued up",
+        "All chains drained in one rapid burst"
+      ],
+      "text": "Within twenty-four hours, the FBI and Chainalysis linked the heist to North Korea's TraderTraitor group—citing Tornado Cash funding, rehearsed test runs, and a synchronized multi-chain blitz. Remember the golden rule of security: hackers only need to win once, while Binance has to win every single day.",
+      "sfx": "thud"
+    },
+    {
+      "kind": "recap_cards",
+      "headline": "3 THINGS TO REMEMBER",
+      "items": [
+        {
+          "icon": "cash",
+          "label": "$6.3B DRAINED ACROSS 10+ CHAINS"
+        },
+        {
+          "icon": "bug",
+          "label": "EIP-7702 & INTERNAL SIGNER ABUSED"
+        },
+        {
+          "icon": "freeze",
+          "label": "~$3B FROZEN & BINANCE COVERED USERS"
+        }
+      ],
+      "text": "So here are the three takeaways: six-point-three billion moved in hours, attackers hijacked the signing pipeline itself, and nearly half was frozen while Binance pledged to cover user losses. What do you think—still keeping your coins on exchanges? Drop a comment below and subscribe so you don't miss the next breakdown.",
+      "sfx": "pop"
+    }
+  ]
+}

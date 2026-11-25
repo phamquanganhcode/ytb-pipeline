@@ -17,4 +17,7 @@ public/*/
 !public/fonts/
 !public/music/
 !public/sfx/
+!public/comic/
+public/comic/*
+!public/comic/art/
 public/manifest.json
