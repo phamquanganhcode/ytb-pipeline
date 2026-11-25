@@ -213,6 +213,33 @@ def main():
 
     total_frames = math.ceil(len(audio) / mv.SAMPLE_RATE * FPS)
     speech_frames = max(1, total_frames - int(1.0 * FPS))
+
+    # Compute per-frame audio lip-sync envelope (0=closed, 1=slight, 2=open, 3=wide)
+    spf = max(1, mv.SAMPLE_RATE // FPS)
+    rms_vals = np.array(
+        [
+            float(np.sqrt(np.mean(audio[f * spf : (f + 1) * spf] ** 2)))
+            if f * spf < len(audio)
+            else 0.0
+            for f in range(total_frames)
+        ],
+        dtype=np.float32,
+    )
+    peak_rms = float(np.percentile(rms_vals, 95)) if len(rms_vals) else 0.1
+    peak_rms = max(peak_rms, 1e-4)
+    norm_rms = rms_vals / peak_rms
+    mouth_chars = []
+    for v in norm_rms:
+        if v < 0.08:
+            mouth_chars.append("0")
+        elif v < 0.30:
+            mouth_chars.append("1")
+        elif v < 0.65:
+            mouth_chars.append("2")
+        else:
+            mouth_chars.append("3")
+    mouth_track = "".join(mouth_chars)
+
     word_at = mv.word_frames(audio, full_text, "en", speech_frames)
     all_words = mv._words(full_text)
 
@@ -326,6 +353,7 @@ def main():
         "fps": FPS,
         "durationInFrames": total_frames,
         "audio": f"comic/{wav_path.name}",
+        "mouth": mouth_track,
         "bgm": script.get("bgm", "music/calm.mp3"),
         "thumbnail": thumb_cfg,
         "scenes": scenes_out,

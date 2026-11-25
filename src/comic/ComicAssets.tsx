@@ -1,5 +1,8 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
+
+/** Real-time per-frame mouth openness (0=closed, 1=slight, 2=open, 3=wide) computed from narration audio. */
+export const MouthLevelContext = React.createContext<number>(0);
 
 export type MascotPose =
 	| 'explaining'
@@ -56,18 +59,18 @@ export type BackdropKind =
 
 const INK = '#141418';
 
-const HOST_SPRITE: Record<MascotPose, string> = {
-	explaining: 'host_deadpan',
-	deadpan: 'host_deadpan',
-	skeptical: 'host_deadpan',
-	pointing: 'host_pointing',
-	shades: 'host_glasses',
-	shocked: 'host_shocked',
+/** Shared natural blink helper: returns true for 4 frames every ~period frames. */
+const useBlink = (frame: number, offset = 0, period = 104): boolean => {
+	const mod = (frame + offset) % period;
+	return mod >= period - 4;
 };
 
 /**
- * Original 2D Comic Investigator Host (charcoal turtleneck, camel trench coat, round glasses).
- * Completely distinct from animal/dragon mascots — built for English finance & tech explainers.
+ * Animated 2D SVG Puppet Investigator Host (Lóng-style cutout rigging):
+ * - Independent breathing torso (charcoal turtleneck + camel trench coat)
+ * - Pivoting head with talking nod + natural eye blinking + expressive eyebrows
+ * - Audio-driven 4-shape lip-sync mouth synced to WAV narration
+ * - Independent animated arms/hands per pose (explaining, pointing, shocked, deadpan, skeptical, shades)
  */
 export const MascotHost: React.FC<{
 	pose?: MascotPose;
@@ -83,57 +86,434 @@ export const MascotHost: React.FC<{
 	talking = true,
 	style,
 }) => {
-		const frame = useCurrentFrame();
-		const { fps } = useVideoConfig();
-		const pop = talking ? spring({ frame, fps, config: { damping: 14, stiffness: 150 } }) : 1;
-		const bobY = talking ? Math.sin(frame / 7) * 4.5 : 0;
-		const tilt = talking ? Math.sin(frame / 13) * 1.4 : 0;
+	const frame = useCurrentFrame();
+	const { fps } = useVideoConfig();
+	const ctxMouth = useContext(MouthLevelContext);
 
-		const base = HOST_SPRITE[pose] ?? 'host_deadpan';
-		const file = `comic/art/${base}.png`;
+	const pop = talking ? spring({ frame, fps, config: { damping: 14, stiffness: 150 } }) : 1;
+	const mouthLevel = talking ? ctxMouth : pose === 'shocked' ? 3 : 0;
+	const isTalkingNow = talking && mouthLevel > 0;
 
-		return (
-			<div
-				style={{
-					width: size,
-					height: size,
-					display: 'flex',
-					alignItems: 'flex-end',
-					justifyContent: 'center',
-					transform: `translateY(${bobY}px) scale(${0.92 + 0.08 * pop}) scaleX(${flipX ? -1 : 1}) rotate(${tilt}deg)`,
-					opacity: pop,
-					filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.45))',
-					pointerEvents: 'none',
-					...style,
-				}}
-			>
-				<Img
-					src={staticFile(file)}
-					style={{
-						width: '100%',
-						height: '100%',
-						objectFit: 'contain',
-						objectPosition: 'bottom center',
-					}}
+	const breatheY = talking ? Math.sin(frame / 14) * 2.5 : 0;
+	const headTilt = talking
+		? Math.sin(frame / 17) * 2.2 + (isTalkingNow ? Math.sin(frame / 4) * 1.4 : 0)
+		: pose === 'shocked'
+			? -2
+			: 1.5;
+	const headBobY = talking ? (isTalkingNow ? -Math.abs(Math.sin(frame / 4.5)) * 3.5 : Math.sin(frame / 14) * 1.5) : 0;
+
+	const blink = talking && pose !== 'shocked' && pose !== 'shades' && useBlink(frame, 17, 102);
+	const shockShake = talking && pose === 'shocked' ? Math.sin(frame * 1.7) * 3.2 : 0;
+	const gestureSwing = talking
+		? (isTalkingNow ? Math.sin(frame / 5.5) * 9 : Math.sin(frame / 16) * 3)
+		: 0;
+	const pointPulse = talking ? Math.sin(frame / 7) * 4.5 : 0;
+	const sweatY = talking ? ((frame * 1.6) % 36) : 10;
+	const shineX = talking ? interpolate((frame % 75), [0, 22, 75], [-36, 46, 46], { extrapolateRight: 'clamp' }) : 6;
+
+	const renderMouth = () => {
+		if (pose === 'shocked' && (!talking || mouthLevel >= 2)) {
+			return (
+				<g>
+					<path
+						d="M 142 154 Q 160 144 178 154 Q 182 174 160 176 Q 138 174 142 154 Z"
+						fill="#5c1622"
+						stroke={INK}
+						strokeWidth="3.8"
+						strokeLinejoin="round"
+					/>
+					<path d="M 146 153 Q 160 148 174 153 L 172 158 Q 160 155 148 158 Z" fill="#ffffff" />
+					<ellipse cx="160" cy="171" rx="11" ry="4.5" fill="#e06377" />
+				</g>
+			);
+		}
+		if (mouthLevel === 0) {
+			if (pose === 'deadpan' || pose === 'skeptical') {
+				return <path d="M 147 161 Q 160 159 173 161" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />;
+			}
+			return <path d="M 146 159 Q 160 167 175 158" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />;
+		}
+		if (mouthLevel === 1) {
+			return (
+				<path
+					d="M 147 158 Q 160 155 173 158 Q 172 165 160 166 Q 148 165 147 158 Z"
+					fill="#691c28"
+					stroke={INK}
+					strokeWidth="3.5"
+					strokeLinejoin="round"
 				/>
-			</div>
+			);
+		}
+		if (mouthLevel === 2) {
+			return (
+				<g>
+					<path
+						d="M 145 156 Q 160 153 175 156 Q 176 169 160 171 Q 144 169 145 156 Z"
+						fill="#691c28"
+						stroke={INK}
+						strokeWidth="3.6"
+						strokeLinejoin="round"
+					/>
+					<path d="M 148 156 L 172 156 L 170 160 L 150 160 Z" fill="#ffffff" />
+					<ellipse cx="160" cy="168" rx="9" ry="3.5" fill="#e06377" />
+				</g>
+			);
+		}
+		return (
+			<g>
+				<path
+					d="M 143 154 Q 160 150 177 154 Q 179 173 160 175 Q 141 173 143 154 Z"
+					fill="#5c1622"
+					stroke={INK}
+					strokeWidth="3.8"
+					strokeLinejoin="round"
+				/>
+				<path d="M 147 154 L 173 154 L 171 160 L 149 160 Z" fill="#ffffff" />
+				<ellipse cx="160" cy="171" rx="11" ry="4.5" fill="#e06377" />
+			</g>
 		);
 	};
 
-const CHIBI_SPRITE: Record<ChibiRole, string> = {
-	trader: 'comic/art/chibi_trader.png',
-	investor: 'comic/art/chibi_trader.png',
-	victim: 'comic/art/chibi_victim.png',
-	hacker: 'comic/art/chibi_hacker.png',
-	engineer: 'comic/art/chibi_engineer.png',
-	boss: 'comic/art/chibi_engineer.png',
-	support: 'comic/art/chibi_engineer.png',
-	fbi: 'comic/art/chibi_hacker.png',
-	dad: 'comic/art/chibi_trader.png',
+	const renderEyes = () => {
+		if (pose === 'shades') {
+			return (
+				<g>
+					{/* Cool dark round sunglasses + animated gleam */}
+					<defs>
+						<clipPath id="hostShadesClip">
+							<circle cx="136" cy="123" r="19" />
+							<circle cx="184" cy="123" r="19" />
+						</clipPath>
+					</defs>
+					<line x1="155" y1="122" x2="165" y2="122" stroke={INK} strokeWidth="4.5" />
+					<circle cx="136" cy="123" r="19" fill="#18181f" stroke={INK} strokeWidth="4.5" />
+					<circle cx="184" cy="123" r="19" fill="#18181f" stroke={INK} strokeWidth="4.5" />
+					<g clipPath="url(#hostShadesClip)">
+						<polygon
+							points={`${120 + shineX},98 ${134 + shineX},98 ${116 + shineX},148 ${102 + shineX},148`}
+							fill="rgba(255,255,255,0.42)"
+						/>
+						<polygon
+							points={`${168 + shineX},98 ${182 + shineX},98 ${164 + shineX},148 ${150 + shineX},148`}
+							fill="rgba(255,255,255,0.42)"
+						/>
+					</g>
+					<path d="M 120 98 Q 136 93 150 97" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+					<path d="M 170 97 Q 184 93 200 98" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+				</g>
+			);
+		}
+
+		const pupilR = pose === 'shocked' ? 3.2 : 5;
+		const eyeRy = blink ? 1 : pose === 'shocked' ? 12.5 : pose === 'deadpan' ? 7 : 9.5;
+		const lookX = pose === 'pointing' ? 3.5 : pose === 'skeptical' ? -2 : 0;
+
+		return (
+			<g>
+				{/* Eyebrows */}
+				{pose === 'shocked' ? (
+					<>
+						<path d="M 120 94 Q 136 84 150 93" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 170 93 Q 184 84 200 94" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+					</>
+				) : pose === 'skeptical' ? (
+					<>
+						<path d="M 120 100 Q 136 96 151 101" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 169 94 Q 184 85 200 93" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+					</>
+				) : (
+					<>
+						<path d="M 120 99 Q 136 94 151 99" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 169 99 Q 184 94 200 99" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+					</>
+				)}
+
+				{/* Eyes */}
+				{blink ? (
+					<>
+						<path d="M 124 123 Q 136 128 148 123" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+						<path d="M 172 123 Q 184 128 196 123" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+					</>
+				) : (
+					<>
+						<ellipse cx="136" cy="123" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="3.2" />
+						<ellipse cx="184" cy="123" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="3.2" />
+						<circle cx={136 + lookX} cy="123" r={pupilR} fill={INK} />
+						<circle cx={184 + lookX} cy="123" r={pupilR} fill={INK} />
+						<circle cx={138 + lookX} cy="120.5" r="1.8" fill="#ffffff" />
+						<circle cx={186 + lookX} cy="120.5" r="1.8" fill="#ffffff" />
+						{(pose === 'deadpan' || pose === 'skeptical') && (
+							<>
+								<path d="M 124 117 L 148 117" stroke={INK} strokeWidth="3.2" strokeLinecap="round" />
+								{pose === 'deadpan' && <path d="M 172 117 L 196 117" stroke={INK} strokeWidth="3.2" strokeLinecap="round" />}
+							</>
+						)}
+					</>
+				)}
+
+				{/* Round Signature Glasses */}
+				<circle cx="136" cy="123" r="19" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="3.8" />
+				<circle cx="184" cy="123" r="19" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="3.8" />
+				<line x1="155" y1="122" x2="165" y2="122" stroke={INK} strokeWidth="3.8" />
+				<line x1="117" y1="121" x2="108" y2="119" stroke={INK} strokeWidth="3.5" />
+				<line x1="203" y1="121" x2="212" y2="119" stroke={INK} strokeWidth="3.5" />
+			</g>
+		);
+	};
+
+	return (
+		<div
+			style={{
+				width: size,
+				height: size,
+				display: 'flex',
+				alignItems: 'flex-end',
+				justifyContent: 'center',
+				transform: `scale(${0.92 + 0.08 * pop}) scaleX(${flipX ? -1 : 1})`,
+				opacity: pop,
+				filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.45))',
+				pointerEvents: 'none',
+				...style,
+			}}
+		>
+			<svg viewBox="0 0 320 340" width="100%" height="100%" style={{ overflow: 'visible' }}>
+				{/* Torso Group (breathing) */}
+				<g transform={`translate(0, ${breatheY})`}>
+					{/* Back coat / shoulders */}
+					<path
+						d="M 78 228 Q 92 200 132 196 L 188 196 Q 228 200 242 228 L 258 340 L 62 340 Z"
+						fill="#c99352"
+						stroke={INK}
+						strokeWidth="5"
+						strokeLinejoin="round"
+					/>
+					{/* Coat side shading */}
+					<path d="M 86 232 L 72 340 L 104 340 L 114 236 Z" fill="#b37f40" />
+					<path d="M 234 232 L 248 340 L 216 340 L 206 236 Z" fill="#b37f40" />
+
+					{/* Charcoal turtleneck */}
+					<path
+						d="M 122 198 L 198 198 L 190 340 L 130 340 Z"
+						fill="#3c464f"
+						stroke={INK}
+						strokeWidth="4.5"
+						strokeLinejoin="round"
+					/>
+					{/* Turtleneck collar */}
+					<path
+						d="M 134 180 Q 160 190 186 180 L 190 212 Q 160 222 130 212 Z"
+						fill="#47535e"
+						stroke={INK}
+						strokeWidth="4.5"
+						strokeLinejoin="round"
+					/>
+					<path d="M 136 196 Q 160 205 184 196" fill="none" stroke="#2a323a" strokeWidth="3" />
+
+					{/* Trench coat lapels */}
+					<path
+						d="M 132 196 L 106 226 L 122 246 L 104 268 L 132 340 L 140 340 L 132 206 Z"
+						fill="#d8a566"
+						stroke={INK}
+						strokeWidth="4.5"
+						strokeLinejoin="round"
+					/>
+					<path
+						d="M 188 196 L 214 226 L 198 246 L 216 268 L 188 340 L 180 340 L 188 206 Z"
+						fill="#d8a566"
+						stroke={INK}
+						strokeWidth="4.5"
+						strokeLinejoin="round"
+					/>
+
+					{/* Left Arm (viewer's left) */}
+					{pose === 'shocked' ? (
+						<g transform={`rotate(${-14 + shockShake}, 88, 232)`}>
+							<path
+								d="M 88 232 L 42 268 L 32 192"
+								fill="none"
+								stroke="#c99352"
+								strokeWidth="30"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+							/>
+							<path
+								d="M 88 232 L 42 268 L 32 192"
+								fill="none"
+								stroke={INK}
+								strokeWidth="39"
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								opacity="0"
+							/>
+							<path
+								d="M 76 224 L 30 264 Q 20 272 24 256 L 20 188 L 46 188 L 52 246 L 94 218 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+							{/* Raised shocked left hand */}
+							<path
+								d="M 16 192 L 10 162 Q 13 155 18 162 L 24 176 L 24 152 Q 29 146 33 153 L 34 174 L 39 156 Q 44 151 47 158 L 44 180 L 52 172 Q 57 174 52 184 L 44 196 Z"
+								fill="#f2c6a0"
+								stroke={INK}
+								strokeWidth="4"
+								strokeLinejoin="round"
+							/>
+						</g>
+					) : (
+						<g transform={`rotate(${-gestureSwing * 0.35}, 88, 236)`}>
+							<path
+								d="M 76 226 L 56 338 L 96 338 L 106 244 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+						</g>
+					)}
+
+					{/* Right Arm (viewer's right — primary expressive gesture arm!) */}
+					{pose === 'shocked' ? (
+						<g transform={`rotate(${14 - shockShake}, 232, 232)`}>
+							<path
+								d="M 244 224 L 290 264 Q 300 272 296 256 L 300 188 L 274 188 L 268 246 L 226 218 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+							<path
+								d="M 304 192 L 310 162 Q 307 155 302 162 L 296 176 L 296 152 Q 291 146 287 153 L 286 174 L 281 156 Q 276 151 273 158 L 276 180 L 268 172 Q 263 174 268 184 L 276 196 Z"
+								fill="#f2c6a0"
+								stroke={INK}
+								strokeWidth="4"
+								strokeLinejoin="round"
+							/>
+						</g>
+					) : pose === 'pointing' ? (
+						<g transform={`rotate(${-6 + pointPulse}, 232, 234)`}>
+							<path
+								d="M 226 224 L 278 242 L 298 168 L 270 162 L 258 216 L 216 208 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+							{/* Pointing hand with index finger up */}
+							<path
+								d="M 272 164 L 276 144 L 284 114 Q 290 107 296 115 L 292 145 L 304 148 Q 310 154 304 162 L 296 172 L 272 170 Z"
+								fill="#f2c6a0"
+								stroke={INK}
+								strokeWidth="4"
+								strokeLinejoin="round"
+							/>
+						</g>
+					) : pose === 'shades' ? (
+						<g transform={`rotate(${Math.sin(frame / 12) * 3}, 230, 232)`}>
+							<path
+								d="M 226 226 L 274 248 L 236 144 L 214 152 L 244 226 L 214 214 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+							{/* Hand adjusting glasses */}
+							<path
+								d="M 212 146 L 200 124 Q 204 118 212 124 L 222 136 L 232 132 Q 238 136 234 146 L 220 156 Z"
+								fill="#f2c6a0"
+								stroke={INK}
+								strokeWidth="4"
+								strokeLinejoin="round"
+							/>
+						</g>
+					) : (
+						/* Default explaining / deadpan / skeptical open-palm gesturing arm */
+						<g transform={`rotate(${gestureSwing}, 232, 238)`}>
+							<path
+								d="M 228 228 L 274 268 L 296 206 L 270 198 L 256 244 L 216 218 Z"
+								fill="#c99352"
+								stroke={INK}
+								strokeWidth="4.8"
+								strokeLinejoin="round"
+							/>
+							{/* Expressive open explaining palm */}
+							<path
+								d="M 270 202 L 268 184 Q 272 177 278 184 L 282 192 L 298 176 Q 305 174 304 182 L 294 196 L 308 188 Q 314 191 308 198 L 294 212 L 274 212 Z"
+								fill="#f2c6a0"
+								stroke={INK}
+								strokeWidth="4"
+								strokeLinejoin="round"
+							/>
+						</g>
+					)}
+				</g>
+
+				{/* Head Group (pivots from neck with speaking nod & tilt) */}
+				<g transform={`translate(0, ${headBobY}) rotate(${headTilt}, 160, 188)`}>
+					{/* Neck */}
+					<rect x="144" y="166" width="32" height="30" rx="10" fill="#e6b38a" stroke={INK} strokeWidth="4.5" />
+					<path d="M 146 174 Q 160 184 174 174 L 174 184 Q 160 192 146 184 Z" fill="#cf9970" />
+
+					{/* Ears */}
+					<ellipse cx="108" cy="128" rx="11" ry="15" fill="#f2c6a0" stroke={INK} strokeWidth="4.5" />
+					<ellipse cx="212" cy="128" rx="11" ry="15" fill="#f2c6a0" stroke={INK} strokeWidth="4.5" />
+
+					{/* Face Shape */}
+					<path
+						d="M 110 108 Q 110 62 160 62 Q 210 62 210 108 L 207 142 Q 204 180 160 184 Q 116 180 113 142 Z"
+						fill="#f5cba7"
+						stroke={INK}
+						strokeWidth="4.8"
+						strokeLinejoin="round"
+					/>
+					{/* Cheek / Jaw subtle shadow */}
+					<path d="M 118 158 Q 160 182 202 158 Q 196 179 160 182 Q 124 179 118 158 Z" fill="#e6b68e" />
+
+					{/* Nose */}
+					<path d="M 161 124 L 165 140 Q 160 144 155 141" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
+
+					{/* Eyes + Brows + Glasses */}
+					{renderEyes()}
+
+					{/* Lip-Sync Mouth */}
+					{renderMouth()}
+
+					{/* Messy Dark Brown Hair */}
+					<path
+						d="M 105 118 Q 96 84 114 60 Q 126 44 152 44 Q 164 34 180 44 Q 204 44 214 66 Q 224 88 214 118 Q 208 98 198 86 Q 186 78 172 86 Q 160 72 142 84 Q 124 76 114 96 Z"
+						fill="#4a2e20"
+						stroke={INK}
+						strokeWidth="4.8"
+						strokeLinejoin="round"
+					/>
+					{/* Hair highlight */}
+					<path d="M 134 58 Q 158 50 184 58" fill="none" stroke="#6c4532" strokeWidth="4" strokeLinecap="round" />
+
+					{/* Comic FX: Shocked Sweat Drop + Alert Lines */}
+					{pose === 'shocked' && (
+						<g>
+							<path
+								d={`M 224 ${76 + sweatY * 0.5} Q 232 ${88 + sweatY * 0.5} 224 ${94 + sweatY * 0.5} Q 216 ${88 + sweatY * 0.5} 224 ${76 + sweatY * 0.5} Z`}
+								fill="#38bdf8"
+								stroke={INK}
+								strokeWidth="3"
+							/>
+							<line x1="92" y1="54" x2="76" y2="38" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
+							<line x1="84" y1="74" x2="64" y2="68" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
+							<line x1="228" y1="54" x2="244" y2="38" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
+						</g>
+					)}
+				</g>
+			</svg>
+		</div>
+	);
 };
 
 /**
- * Studio-illustrated 2D Chibi Character Cast (clean Lóng-style — no clunky nameplate pills).
+ * Animated 2D Puppet Chibi Cast (trader, victim, hacker, engineer):
+ * Real per-part animation: blinking eyes, typing hands on laptop, panic head-grab shaking,
+ * sweat drops, breathing, and talking mouth bounce!
  */
 export const ChibiCharacter: React.FC<{
 	role: ChibiRole;
@@ -142,12 +522,151 @@ export const ChibiCharacter: React.FC<{
 	size?: number;
 	delay?: number;
 	flipX?: boolean;
-}> = ({ role, size = 390, delay = 0, flipX = false }) => {
+	speaking?: boolean;
+}> = ({ role, mood = 'neutral', size = 390, delay = 0, flipX = false, speaking = false }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
 	const pop = spring({ frame: frame - delay, fps, config: { damping: 14, stiffness: 155 } });
-	const bob = Math.sin((frame + delay * 3) / 11) * 3;
-	const src = CHIBI_SPRITE[role] ?? CHIBI_SPRITE.trader;
+	const blink = mood !== 'panic' && useBlink(frame, role.length * 13, 94);
+
+	const breatheY = Math.sin((frame + delay * 2) / 12) * 2.5;
+	const panicShakeX = mood === 'panic' ? Math.sin(frame * 2.2) * 4.5 : 0;
+	const panicShakeRot = mood === 'panic' ? Math.sin(frame * 1.9) * 3.5 : Math.sin(frame / 15) * 1.8;
+	const typeLeftY = Math.sin(frame * 1.8) * 5.5;
+	const typeRightY = Math.cos(frame * 1.8) * 5.5;
+	const sweatY = (frame * 1.8) % 34;
+	const talkOpen = speaking && Math.sin(frame * 0.9) > 0;
+
+	const kind =
+		role === 'hacker' || role === 'fbi'
+			? 'hacker'
+			: role === 'victim'
+				? 'victim'
+				: role === 'engineer' || role === 'boss' || role === 'support'
+					? 'engineer'
+					: 'trader';
+
+	const shirtColor =
+		kind === 'hacker'
+			? '#263147'
+			: kind === 'victim'
+				? '#dc2626'
+				: kind === 'engineer'
+					? '#93c5fd'
+					: '#166534';
+
+	const hairColor =
+		kind === 'victim'
+			? '#16a34a'
+			: kind === 'engineer'
+				? '#1e293b'
+				: '#5c3824';
+
+	const renderChibiFace = () => {
+		if (kind === 'hacker') {
+			return (
+				<g>
+					{/* Fierce narrow hacker eyes */}
+					<path d="M 102 120 L 130 127" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+					<path d="M 178 120 L 150 127" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+					{blink ? (
+						<>
+							<line x1="106" y1="136" x2="128" y2="136" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+							<line x1="152" y1="136" x2="174" y2="136" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+						</>
+					) : (
+						<>
+							<path d="M 105 132 Q 118 144 130 135 Q 118 128 105 132 Z" fill="#ffffff" stroke={INK} strokeWidth="3.5" />
+							<path d="M 175 132 Q 162 144 150 135 Q 162 128 175 132 Z" fill="#ffffff" stroke={INK} strokeWidth="3.5" />
+						</>
+					)}
+					{/* Black face mask */}
+					<path
+						d="M 88 148 Q 140 138 192 148 Q 190 186 140 190 Q 90 186 88 148 Z"
+						fill="#1f2430"
+						stroke={INK}
+						strokeWidth="4.5"
+						strokeLinejoin="round"
+					/>
+					<path d="M 114 166 Q 140 172 166 166" fill="none" stroke="#363f52" strokeWidth="3" strokeLinecap="round" />
+				</g>
+			);
+		}
+
+		const eyeR = mood === 'panic' ? 11.5 : 8.5;
+		const pupilR = mood === 'panic' ? 3.5 : 4.5;
+
+		return (
+			<g>
+				{/* Eyebrows */}
+				{mood === 'sad' || mood === 'panic' ? (
+					<>
+						<path d="M 102 120 Q 116 112 128 117" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
+						<path d="M 178 120 Q 164 112 152 117" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
+					</>
+				) : (
+					<>
+						<path d="M 104 118 Q 116 114 128 118" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+						<path d="M 152 118 Q 164 114 176 118" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+					</>
+				)}
+
+				{/* Eyes */}
+				{blink ? (
+					<>
+						<path d="M 106 136 Q 117 141 128 136" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+						<path d="M 152 136 Q 163 141 174 136" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+					</>
+				) : (
+					<>
+						<circle cx="117" cy="136" r={eyeR} fill="#ffffff" stroke={INK} strokeWidth="3.5" />
+						<circle cx="163" cy="136" r={eyeR} fill="#ffffff" stroke={INK} strokeWidth="3.5" />
+						<circle cx="117" cy="136" r={pupilR} fill={INK} />
+						<circle cx="163" cy="136" r={pupilR} fill={INK} />
+						<circle cx="119" cy="133.5" r="2" fill="#ffffff" />
+						<circle cx="165" cy="133.5" r="2" fill="#ffffff" />
+					</>
+				)}
+
+				{/* Engineer Glasses */}
+				{kind === 'engineer' && (
+					<g>
+						<circle cx="117" cy="136" r="16" fill="none" stroke={INK} strokeWidth="3.8" />
+						<circle cx="163" cy="136" r="16" fill="none" stroke={INK} strokeWidth="3.8" />
+						<line x1="133" y1="136" x2="147" y2="136" stroke={INK} strokeWidth="3.8" />
+					</g>
+				)}
+
+				{/* Mouth */}
+				{mood === 'panic' ? (
+					<g>
+						<path
+							d="M 122 162 Q 140 150 158 162 Q 162 178 140 179 Q 118 178 122 162 Z"
+							fill="#7f1d1d"
+							stroke={INK}
+							strokeWidth="3.8"
+						/>
+						<path d="M 126 161 L 154 161 L 152 166 L 128 166 Z" fill="#ffffff" />
+						<ellipse cx="140" cy="175" rx="9" ry="4" fill="#f87171" />
+					</g>
+				) : mood === 'sad' ? (
+					<path d="M 128 168 Q 140 158 152 168" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+				) : mood === 'happy' ? (
+					<path
+						d="M 126 160 Q 140 174 154 160 Z"
+						fill={talkOpen ? '#7f1d1d' : '#ffffff'}
+						stroke={INK}
+						strokeWidth="3.8"
+						strokeLinejoin="round"
+					/>
+				) : talkOpen ? (
+					<ellipse cx="140" cy="164" rx="9" ry="6" fill="#7f1d1d" stroke={INK} strokeWidth="3.5" />
+				) : (
+					<path d="M 129 164 Q 140 166 151 164" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+				)}
+			</g>
+		);
+	};
 
 	return (
 		<div
@@ -155,7 +674,7 @@ export const ChibiCharacter: React.FC<{
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				transform: `scale(${0.92 + 0.08 * pop}) translateY(${bob}px)`,
+				transform: `scale(${0.92 + 0.08 * pop}) translateX(${panicShakeX}px)`,
 				opacity: pop,
 			}}
 		>
@@ -164,18 +683,139 @@ export const ChibiCharacter: React.FC<{
 					width: size,
 					height: size,
 					transform: `scaleX(${flipX ? -1 : 1})`,
-					filter: 'drop-shadow(0 8px 16px rgba(0,0,0,0.25))',
+					filter: 'drop-shadow(0 10px 18px rgba(0,0,0,0.28))',
 				}}
 			>
-				<Img
-					src={staticFile(src)}
-					style={{
-						width: '100%',
-						height: '100%',
-						objectFit: 'contain',
-						objectPosition: 'bottom center',
-					}}
-				/>
+				<svg viewBox="0 0 280 300" width="100%" height="100%" style={{ overflow: 'visible' }}>
+					{/* Chibi Body */}
+					<g transform={`translate(0, ${breatheY})`}>
+						<path
+							d="M 88 214 Q 94 190 140 190 Q 186 190 192 214 L 204 298 L 76 298 Z"
+							fill={shirtColor}
+							stroke={INK}
+							strokeWidth="5"
+							strokeLinejoin="round"
+						/>
+						{/* Outfit details */}
+						{kind === 'trader' && (
+							<>
+								<rect x="85" y="232" width="110" height="16" fill="#f8fafc" stroke={INK} strokeWidth="3.5" />
+								<path d="M 124 192 L 140 214 L 156 192" fill="#f8fafc" stroke={INK} strokeWidth="3.8" strokeLinejoin="round" />
+							</>
+						)}
+						{kind === 'victim' && (
+							<>
+								<line x1="126" y1="202" x2="124" y2="244" stroke="#f8fafc" strokeWidth="4.5" strokeLinecap="round" />
+								<line x1="154" y1="202" x2="156" y2="244" stroke="#f8fafc" strokeWidth="4.5" strokeLinecap="round" />
+							</>
+						)}
+						{kind === 'engineer' && (
+							<>
+								<path d="M 122 192 L 140 214 L 158 192" fill="#ffffff" stroke={INK} strokeWidth="3.8" strokeLinejoin="round" />
+								<polygon points="140,210 133,262 140,274 147,262" fill="#1d4ed8" stroke={INK} strokeWidth="3.5" />
+							</>
+						)}
+						{kind === 'hacker' && (
+							<>
+								<line x1="126" y1="202" x2="124" y2="242" stroke="#cbd5e1" strokeWidth="4" strokeLinecap="round" />
+								<line x1="154" y1="202" x2="156" y2="242" stroke="#cbd5e1" strokeWidth="4" strokeLinecap="round" />
+							</>
+						)}
+					</g>
+
+					{/* Chibi Head */}
+					<g transform={`rotate(${panicShakeRot}, 140, 190)`}>
+						{/* Hacker Hoodie Back */}
+						{kind === 'hacker' && (
+							<path
+								d="M 62 150 Q 58 58 140 50 Q 222 58 218 150 Q 214 202 140 206 Q 66 202 62 150 Z"
+								fill="#263147"
+								stroke={INK}
+								strokeWidth="5.5"
+							/>
+						)}
+
+						{/* Ears */}
+						{kind !== 'hacker' && (
+							<>
+								<circle cx="80" cy="138" r="12" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+								<circle cx="200" cy="138" r="12" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+							</>
+						)}
+
+						{/* Round Chibi Head */}
+						<ellipse cx="140" cy="132" rx="60" ry="58" fill="#f5cba7" stroke={INK} strokeWidth="5" />
+
+						{/* Hair */}
+						<path
+							d={
+								kind === 'hacker'
+									? 'M 86 116 Q 100 84 140 82 Q 180 84 194 116 Q 174 102 156 110 Q 140 96 122 110 Q 104 100 86 116 Z'
+									: 'M 74 126 Q 70 72 112 58 Q 142 46 174 62 Q 212 74 204 128 Q 194 104 176 96 Q 158 106 142 90 Q 120 106 102 96 Q 86 106 74 126 Z'
+							}
+							fill={hairColor}
+							stroke={INK}
+							strokeWidth="4.8"
+							strokeLinejoin="round"
+						/>
+
+						{/* Face */}
+						{renderChibiFace()}
+
+						{/* Panic / Sad Sweat Drop */}
+						{(mood === 'panic' || mood === 'sad') && (
+							<path
+								d={`M 206 ${92 + sweatY * 0.6} Q 214 ${104 + sweatY * 0.6} 206 ${110 + sweatY * 0.6} Q 198 ${104 + sweatY * 0.6} 206 ${92 + sweatY * 0.6} Z`}
+								fill="#38bdf8"
+								stroke={INK}
+								strokeWidth="3"
+							/>
+						)}
+					</g>
+
+					{/* Animated Arms / Props */}
+					{mood === 'panic' ? (
+						/* Victim grabbing head with both hands shaking! */
+						<g transform={`rotate(${panicShakeRot * 1.4}, 140, 190)`}>
+							<path d="M 84 218 Q 52 184 74 134" fill="none" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
+							<path d="M 84 218 Q 52 184 74 134" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+							<circle cx="76" cy="130" r="15" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+							<path d="M 196 218 Q 228 184 206 134" fill="none" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
+							<path d="M 196 218 Q 228 184 206 134" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+							<circle cx="204" cy="130" r="15" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+						</g>
+					) : kind === 'hacker' || (kind === 'engineer' && mood !== 'happy') ? (
+						/* Animated Typing on Laptop */
+						<g>
+							{/* Laptop Base & Screen */}
+							<polygon
+								points="116,254 222,254 236,204 130,204"
+								fill={kind === 'hacker' ? '#334155' : '#cbd5e1'}
+								stroke={INK}
+								strokeWidth="4.5"
+								strokeLinejoin="round"
+							/>
+							<polygon points="134,209 230,209 218,249 122,249" fill={kind === 'hacker' ? '#0f172a' : '#e2e8f0'} />
+							{/* Glowing screen indicator */}
+							<circle cx="177" cy="229" r="7" fill={kind === 'hacker' ? '#22d3ee' : '#64748b'} opacity={0.7 + Math.sin(frame / 4) * 0.25} />
+							{/* Animated Left & Right Typing Hands */}
+							<circle cx="118" cy={254 + typeLeftY} r="13" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
+							<circle cx="152" cy={254 + typeRightY} r="13" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
+						</g>
+					) : mood === 'happy' ? (
+						/* Happy waving / counter clerk hand */
+						<g transform={`rotate(${Math.sin(frame / 6) * 10}, 196, 224)`}>
+							<path d="M 190 226 L 228 192" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
+							<circle cx="232" cy="186" r="14" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
+						</g>
+					) : (
+						/* Resting sad arms */
+						<g transform={`translate(0, ${breatheY})`}>
+							<ellipse cx="82" cy="252" rx="14" ry="26" fill={shirtColor} stroke={INK} strokeWidth="4.5" />
+							<ellipse cx="198" cy="252" rx="14" ry="26" fill={shirtColor} stroke={INK} strokeWidth="4.5" />
+						</g>
+					)}
+				</svg>
 			</div>
 		</div>
 	);

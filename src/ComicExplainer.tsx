@@ -20,6 +20,7 @@ import {
 	ComicIconName,
 	MascotHost,
 	MascotPose,
+	MouthLevelContext,
 	SpeechBubble,
 } from './comic/ComicAssets';
 
@@ -42,18 +43,18 @@ export type ComicActor = {
 	speechCueFrame?: number;
 };
 
-export type ComicBullet = string | {text: string; cueFrame?: number};
+export type ComicBullet = string | { text: string; cueFrame?: number };
 
 export type ComicScene = {
 	kind:
-		| 'comic_skit'
-		| 'stock_cutaway'
-		| 'grid_explainer'
-		| 'concept_card'
-		| 'source_receipt'
-		| 'bullet_breakdown'
-		| 'recap_cards'
-		| 'mascot_commentary';
+	| 'comic_skit'
+	| 'stock_cutaway'
+	| 'grid_explainer'
+	| 'concept_card'
+	| 'source_receipt'
+	| 'bullet_breakdown'
+	| 'recap_cards'
+	| 'mascot_commentary';
 	from: number;
 	duration: number;
 	backdrop?: BackdropKind;
@@ -89,6 +90,7 @@ export type ComicManifest = {
 	fps: number;
 	durationInFrames: number;
 	audio: string;
+	mouth?: string;
 	bgm?: string;
 	thumbnail?: {
 		brand?: string;
@@ -119,7 +121,7 @@ const SFX_FILE: Record<string, string> = {
 
 const useSceneFade = (duration: number) => {
 	const frame = useCurrentFrame();
-	const fadeIn = interpolate(frame, [0, 5], [0, 1], {extrapolateLeft: 'clamp', extrapolateRight: 'clamp'});
+	const fadeIn = interpolate(frame, [0, 5], [0, 1], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
 	const fadeOut = interpolate(frame, [Math.max(0, duration - 5), duration], [1, 0], {
 		extrapolateLeft: 'clamp',
 		extrapolateRight: 'clamp',
@@ -128,14 +130,14 @@ const useSceneFade = (duration: number) => {
 };
 
 // 1. Comic Skit (Clean Lóng-style: full-bleed room/chart + expressive chibi cast + organic speech bubbles, NO loud banners)
-const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
 	const actors = scene.actors ?? [];
 	const focusBlur = scene.mascotFocus
 		? interpolate(frame, [Math.floor(scene.duration * 0.55), Math.floor(scene.duration * 0.55) + 14], [0, 9], {
-				extrapolateLeft: 'clamp',
-				extrapolateRight: 'clamp',
-			})
+			extrapolateLeft: 'clamp',
+			extrapolateRight: 'clamp',
+		})
 		: 0;
 
 	return (
@@ -159,7 +161,7 @@ const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 					const actorDelay = act.cueFrame ?? idx * 8;
 					const speechDelay = act.speechCueFrame ?? act.cueFrame ?? 14 + idx * 24;
 					return (
-						<div key={idx} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14}}>
+						<div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
 							{act.speech && (
 								<SpeechBubble
 									text={act.speech}
@@ -174,6 +176,7 @@ const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 								size={410}
 								delay={actorDelay}
 								flipX={act.flipX}
+								speaking={Boolean(act.speech) && frame >= speechDelay}
 							/>
 						</div>
 					);
@@ -189,9 +192,9 @@ const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 						transform: scene.mascotFocus ? 'translateX(-50%)' : undefined,
 						opacity: scene.mascotFocus
 							? interpolate(frame, [Math.floor(scene.duration * 0.55), Math.floor(scene.duration * 0.55) + 12], [0, 1], {
-									extrapolateLeft: 'clamp',
-									extrapolateRight: 'clamp',
-								})
+								extrapolateLeft: 'clamp',
+								extrapolateRight: 'clamp',
+							})
 							: 1,
 					}}
 				>
@@ -203,19 +206,19 @@ const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 2. Stock Cutaway (Dramatic real photo + punchy centered italic uppercase chapter title — exact Lóng 03:34 motif)
-const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const StockCutawayScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const zoom = interpolate(frame, [0, Math.max(30, scene.duration)], [1.02, 1.11], {extrapolateRight: 'clamp'});
+	const { fps } = useVideoConfig();
+	const zoom = interpolate(frame, [0, Math.max(30, scene.duration)], [1.02, 1.11], { extrapolateRight: 'clamp' });
 	const headDelay = scene.headlineCueFrame ?? 4;
 	const subDelay = scene.sublineCueFrame ?? headDelay;
 	const mascotDelay = scene.mascotCueFrame ?? 0;
-	const titlePop = spring({frame: frame - headDelay, fps, config: {damping: 15, stiffness: 145}});
-	const subPop = spring({frame: frame - subDelay, fps, config: {damping: 15, stiffness: 145}});
-	const mascotPop = spring({frame: frame - mascotDelay, fps, config: {damping: 14, stiffness: 150}});
+	const titlePop = spring({ frame: frame - headDelay, fps, config: { damping: 15, stiffness: 145 } });
+	const subPop = spring({ frame: frame - subDelay, fps, config: { damping: 15, stiffness: 145 } });
+	const mascotPop = spring({ frame: frame - mascotDelay, fps, config: { damping: 14, stiffness: 150 } });
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#090b10', overflow: 'hidden'}}>
+		<AbsoluteFill style={{ backgroundColor: '#090b10', overflow: 'hidden' }}>
 			<Img
 				src={staticFile(scene.media?.src || 'comic/art/bg_thumbnail.jpg')}
 				style={{
@@ -281,7 +284,7 @@ const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			</AbsoluteFill>
 
 			{scene.mascot && (
-				<div style={{position: 'absolute', bottom: -16, right: 72, opacity: mascotPop, transform: `translateY(${interpolate(mascotPop, [0, 1], [40, 0])}px)`}}>
+				<div style={{ position: 'absolute', bottom: -16, right: 72, opacity: mascotPop, transform: `translateY(${interpolate(mascotPop, [0, 1], [40, 0])}px)` }}>
 					<MascotHost pose={scene.mascot} size={460} flipX />
 				</div>
 			)}
@@ -309,9 +312,9 @@ const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 3. Grid Explainer (Minimalist Lóng Dark Grid / Warm Paper + progressive left-to-right icons, dashed arrows, crisp white/dark text)
-const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const GridExplainerScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const isLight = scene.backdrop === 'light_paper';
 	const items = scene.items ?? [];
 	const stepFrames = Math.max(18, Math.floor((scene.duration * 0.62) / Math.max(1, items.length)));
@@ -334,9 +337,9 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			>
 				{items.map((item, idx) => {
 					const startAt = item.cueFrame ?? idx * stepFrames + 6;
-					const pop = spring({frame: frame - startAt, fps, config: {damping: 13, stiffness: 175}});
+					const pop = spring({ frame: frame - startAt, fps, config: { damping: 13, stiffness: 175 } });
 					const nextStart = items[idx + 1]?.cueFrame ?? (idx + 1) * stepFrames + 6;
-					const arrowPop = spring({frame: frame - nextStart, fps, config: {damping: 13, stiffness: 175}});
+					const arrowPop = spring({ frame: frame - nextStart, fps, config: { damping: 13, stiffness: 175 } });
 					return (
 						<React.Fragment key={idx}>
 							<div
@@ -380,7 +383,7 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 								)}
 							</div>
 							{item.arrowToNext && idx < items.length - 1 && (
-								<svg width="108" height="36" viewBox="0 0 108 36" style={{opacity: arrowPop, transform: 'translateY(-28px)'}}>
+								<svg width="108" height="36" viewBox="0 0 108 36" style={{ opacity: arrowPop, transform: 'translateY(-28px)' }}>
 									<line
 										x1="4"
 										y1="18"
@@ -399,7 +402,7 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			</div>
 
 			{scene.mascot && (
-				<div style={{position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)'}}>
+				<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)' }}>
 					<MascotHost pose={scene.mascot} size={440} />
 				</div>
 			)}
@@ -408,10 +411,10 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 4. Concept Card (Exact Lóng 07:58: Warm Light Paper + bold uppercase term + parenthetical plain-English subtitle + row of icons)
-const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const ConceptCardScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
-	const headPop = spring({frame: frame - (scene.headlineCueFrame ?? 4), fps, config: {damping: 14, stiffness: 155}});
+	const { fps } = useVideoConfig();
+	const headPop = spring({ frame: frame - (scene.headlineCueFrame ?? 4), fps, config: { damping: 14, stiffness: 155 } });
 	const items = scene.items ?? [];
 
 	return (
@@ -457,10 +460,10 @@ const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 						({scene.subline})
 					</div>
 				)}
-				<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 72, marginTop: 48}}>
+				<div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 72, marginTop: 48 }}>
 					{items.map((item, idx) => {
 						const startAt = item.cueFrame ?? 16 + idx * 16;
-						const pop = spring({frame: frame - startAt, fps, config: {damping: 12, stiffness: 165}});
+						const pop = spring({ frame: frame - startAt, fps, config: { damping: 12, stiffness: 165 } });
 						return (
 							<div
 								key={idx}
@@ -474,7 +477,7 @@ const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 								}}
 							>
 								<ComicIcon name={item.icon} size={172} crossedOut={item.crossedOut} />
-								<div style={{fontFamily: SANS, fontWeight: 800, fontSize: 28, color: INK}}>{item.label}</div>
+								<div style={{ fontFamily: SANS, fontWeight: 800, fontSize: 28, color: INK }}>{item.label}</div>
 							</div>
 						);
 					})}
@@ -485,7 +488,7 @@ const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 5. Source Receipt (Exact Lóng 06:52 & 10:10: FULL-SCREEN off-white editorial webpage + dense context paragraphs + yellow marker sweep + bottom-right SOURCE + Host foreground)
-const SourceReceiptScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const SourceReceiptScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
 	const hlStart = scene.cueFrame ?? 22;
 	const hlProgress = interpolate(frame, [hlStart, hlStart + 28], [0, 100], {
@@ -498,7 +501,7 @@ const SourceReceiptScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 	const idx = hl ? excerpt.toLowerCase().indexOf(hl.toLowerCase()) : -1;
 
 	return (
-		<AbsoluteFill style={{backgroundColor: '#f7f7f5'}}>
+		<AbsoluteFill style={{ backgroundColor: '#f7f7f5' }}>
 			<div
 				style={{
 					position: 'absolute',
@@ -580,7 +583,7 @@ const SourceReceiptScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			</div>
 
 			{scene.mascot && (
-				<div style={{position: 'absolute', bottom: -18, left: 110}}>
+				<div style={{ position: 'absolute', bottom: -18, left: 110 }}>
 					<MascotHost pose={scene.mascot} size={500} />
 				</div>
 			)}
@@ -607,9 +610,9 @@ const SourceReceiptScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 6. Bullet Breakdown (Exact Lóng 12:00: Warm Paper + Host bottom-left + staggered red square bullets right)
-const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const BulletBreakdownScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const isLight = scene.backdrop !== 'dark_grid';
 	const bullets = scene.bullets ?? [];
 	const step = Math.max(16, Math.floor((scene.duration * 0.62) / Math.max(1, bullets.length)));
@@ -632,7 +635,7 @@ const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				{bullets.map((b, idx) => {
 					const text = typeof b === 'string' ? b : b.text;
 					const startAt = (typeof b === 'string' ? undefined : b.cueFrame) ?? idx * step + 8;
-					const pop = spring({frame: frame - startAt, fps, config: {damping: 14, stiffness: 165}});
+					const pop = spring({ frame: frame - startAt, fps, config: { damping: 14, stiffness: 165 } });
 					return (
 						<div
 							key={idx}
@@ -669,7 +672,7 @@ const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				})}
 			</div>
 
-			<div style={{position: 'absolute', bottom: -18, left: 72}}>
+			<div style={{ position: 'absolute', bottom: -18, left: 72 }}>
 				<MascotHost pose={scene.mascot ?? 'pointing'} size={520} />
 			</div>
 		</AbsoluteFill>
@@ -677,9 +680,9 @@ const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 7. Recap Cards (Exact Lóng 14:56-15:18: Clean Dark Grid + 3 icons popping in left-to-right with crisp white uppercase text)
-const RecapCardsScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const RecapCardsScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
-	const {fps} = useVideoConfig();
+	const { fps } = useVideoConfig();
 	const items = scene.items ?? [];
 	const step = Math.max(22, Math.floor((scene.duration * 0.58) / Math.max(1, items.length)));
 
@@ -699,7 +702,7 @@ const RecapCardsScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			>
 				{items.map((item, idx) => {
 					const startAt = item.cueFrame ?? idx * step + 10;
-					const pop = spring({frame: frame - startAt, fps, config: {damping: 13, stiffness: 155}});
+					const pop = spring({ frame: frame - startAt, fps, config: { damping: 13, stiffness: 155 } });
 					return (
 						<div
 							key={idx}
@@ -736,7 +739,7 @@ const RecapCardsScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 };
 
 // 8. Mascot Commentary (Exact Lóng 00:33 / 09:26 / 12:22: Blurred full-bleed background + big expressive Host centered at bottom edge)
-const MascotCommentaryScene: React.FC<{scene: ComicScene}> = ({scene}) => {
+const MascotCommentaryScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	return (
 		<AbsoluteFill>
 			{scene.media?.src ? (
@@ -754,16 +757,19 @@ const MascotCommentaryScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				<ComicBackdrop kind={scene.backdrop ?? 'hacker_room'} blur={8} />
 			)}
 
-			<div style={{position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)'}}>
+			<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)' }}>
 				<MascotHost pose={scene.mascot ?? 'deadpan'} size={580} />
 			</div>
 		</AbsoluteFill>
 	);
 };
 
-const SceneWrapper: React.FC<{scene: ComicScene}> = ({scene}) => {
+const SceneWrapper: React.FC<{ scene: ComicScene; mouth?: string }> = ({ scene, mouth }) => {
+	const localFrame = useCurrentFrame();
 	const opacity = useSceneFade(scene.duration);
 	const sfxSrc = scene.sfx ? SFX_FILE[scene.sfx] : undefined;
+	const globalFrame = scene.from + localFrame;
+	const mouthLevel = mouth && globalFrame >= 0 && globalFrame < mouth.length ? Number(mouth[globalFrame]) || 0 : 0;
 
 	const renderBody = () => {
 		switch (scene.kind) {
@@ -787,19 +793,21 @@ const SceneWrapper: React.FC<{scene: ComicScene}> = ({scene}) => {
 	};
 
 	return (
-		<AbsoluteFill style={{opacity}}>
-			{renderBody()}
-			{sfxSrc && <Audio src={staticFile(sfxSrc)} volume={0.28} />}
-		</AbsoluteFill>
+		<MouthLevelContext.Provider value={mouthLevel}>
+			<AbsoluteFill style={{ opacity }}>
+				{renderBody()}
+				{sfxSrc && <Audio src={staticFile(sfxSrc)} volume={0.28} />}
+			</AbsoluteFill>
+		</MouthLevelContext.Provider>
 	);
 };
 
-export const ComicExplainer: React.FC<ComicManifest> = ({audio, bgm, scenes}) => {
+export const ComicExplainer: React.FC<ComicManifest> = ({ audio, mouth, bgm, scenes }) => {
 	return (
-		<AbsoluteFill style={{backgroundColor: '#1d1f23'}}>
+		<AbsoluteFill style={{ backgroundColor: '#1d1f23' }}>
 			{scenes.map((scene, idx) => (
 				<Sequence key={idx} from={scene.from} durationInFrames={scene.duration}>
-					<SceneWrapper scene={scene} />
+					<SceneWrapper scene={scene} mouth={mouth} />
 				</Sequence>
 			))}
 
