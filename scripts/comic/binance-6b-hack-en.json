@@ -49,15 +49,19 @@
     {
       "kind": "comic_skit",
       "backdrop": "candlestick_chart",
+      "interaction": "beg",
       "text": "While retail crypto traders are still arguing whether the market is actually dead or just playing dead to rug-pull us one last time, half of us have already achieved financial freedom—freedom from money, freedom from assets, and freedom to ask our parents for twenty bucks of gas money.",
       "actors": [
         {
           "role": "trader",
-          "mood": "sad"
+          "mood": "sad",
+          "speech": "Is the market dead... or just playing dead?",
+          "speechCueWord": "market is"
         },
         {
           "role": "victim",
           "mood": "panic",
+          "flipX": true,
           "cueWord": "ask our parents",
           "speechCueWord": "ask our parents",
           "speech": "Dad... can I get $20 for gas?"
@@ -68,11 +72,10 @@
     {
       "kind": "stock_cutaway",
       "headline": "OCTOBER 2026",
-      "headlineCueWord": "Binance",
       "subline": "$6.3 BILLION DRAINED IN ONE NIGHT",
       "sublineCueWord": "six point three",
       "mascot": "shocked",
-      "mascotCueWord": "cyber heist",
+      "mascotCueWord": "Binance",
       "media": {
         "type": "image",
         "src": "comic/art/bg_crypto_breach.jpg"
@@ -122,8 +125,7 @@
       "items": [
         {
           "icon": "xrp",
-          "label": "233M XRP",
-          "cueWord": "two hundred"
+          "label": "233M XRP"
         },
         {
           "icon": "bitcoin",
@@ -161,7 +163,6 @@
       "kind": "concept_card",
       "backdrop": "light_paper",
       "headline": "NONCE",
-      "headlineCueWord": "nonce",
       "subline": "TRANSACTION SEQUENCE NUMBER OF A WALLET",
       "items": [
         {
@@ -186,6 +187,7 @@
     {
       "kind": "comic_skit",
       "backdrop": "office",
+      "interaction": "phish",
       "actors": [
         {
           "role": "hacker",
@@ -197,7 +199,9 @@
         {
           "role": "engineer",
           "mood": "neutral",
-          "flipX": true
+          "flipX": true,
+          "speech": "Just running a coding test...",
+          "speechCueWord": "Bitcoin"
         }
       ],
       "text": "Worse still, Bitcoin and XRP don't even use EIP-7702. Investigators later revealed attackers infected DevOps laptops via a poisoned coding tool and a fake job test, then pivoted straight into Binance's internal signing system. They didn't pick the vault—they made the vault open itself.",
@@ -219,6 +223,7 @@
     {
       "kind": "comic_skit",
       "backdrop": "bank_counter",
+      "interaction": "swap",
       "actors": [
         {
           "role": "hacker",
@@ -230,7 +235,9 @@
         {
           "role": "engineer",
           "mood": "happy",
-          "flipX": true
+          "flipX": true,
+          "speech": "Welcome! Got something to trade?",
+          "speechCueWord": "clock"
         }
       ],
       "text": "Knowing the clock was ticking, the hackers dumped USDT on Uniswap and even deposited tainted USDT as collateral on Aave to borrow clean Ethereum. It's like stealing a Rolex, hearing the serial number is about to be blacklisted, and sprinting straight to a pawnshop for cash.",

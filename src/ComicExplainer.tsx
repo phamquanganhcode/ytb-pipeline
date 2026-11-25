@@ -78,6 +78,8 @@ export type ComicScene = {
 		credit?: string;
 	};
 	sfx?: string;
+	interaction?: 'phish' | 'swap' | 'beg';
+	interactionCueFrame?: number;
 	cueFrame?: number;
 	headlineCueFrame?: number;
 	sublineCueFrame?: number;
@@ -129,9 +131,10 @@ const useSceneFade = (duration: number) => {
 	return Math.min(fadeIn, fadeOut);
 };
 
-// 1. Comic Skit (Clean Lóng-style: full-bleed room/chart + expressive chibi cast + organic speech bubbles, NO loud banners)
+// 1. Comic Skit (Clean Lóng-style: large characters facing each other + back-and-forth speech + interaction prop)
 const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	const frame = useCurrentFrame();
+	const { fps } = useVideoConfig();
 	const actors = scene.actors ?? [];
 	const focusBlur = scene.mascotFocus
 		? interpolate(frame, [Math.floor(scene.duration * 0.55), Math.floor(scene.duration * 0.55) + 14], [0, 9], {
@@ -139,6 +142,9 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 			extrapolateRight: 'clamp',
 		})
 		: 0;
+
+	const interactAt = scene.interactionCueFrame ?? actors[1]?.speechCueFrame ?? actors[0]?.speechCueFrame ?? 90;
+	const interactProgress = spring({ frame: frame - interactAt, fps, config: { damping: 14, stiffness: 120 } });
 
 	return (
 		<AbsoluteFill>
@@ -150,30 +156,48 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 					inset: 0,
 					display: 'flex',
 					alignItems: 'flex-end',
-					justifyContent: 'space-evenly',
+					justifyContent: 'center',
+					gap: 140,
 					paddingBottom: 0,
-					paddingLeft: 140,
-					paddingRight: 140,
+					paddingLeft: 80,
+					paddingRight: 80,
 					filter: focusBlur > 0 ? `blur(${focusBlur}px)` : undefined,
 				}}
 			>
 				{actors.map((act, idx) => {
-					const actorDelay = act.cueFrame ?? idx * 8;
-					const speechDelay = act.speechCueFrame ?? act.cueFrame ?? 14 + idx * 24;
+					const actorDelay = act.cueFrame ?? 0;
+					const speechDelay = act.speechCueFrame ?? act.cueFrame ?? 12 + idx * 24;
+					const enterSlide =
+						actorDelay > 0
+							? interpolate(
+									spring({ frame: frame - actorDelay, fps, config: { damping: 15, stiffness: 130 } }),
+									[0, 1],
+									[idx === 0 ? -120 : 120, 0]
+								)
+							: 0;
 					return (
-						<div key={idx} style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14 }}>
+						<div
+							key={idx}
+							style={{
+								display: 'flex',
+								flexDirection: 'column',
+								alignItems: 'center',
+								gap: 10,
+								transform: `translateX(${enterSlide}px)`,
+							}}
+						>
 							{act.speech && (
 								<SpeechBubble
 									text={act.speech}
 									tail="bottom"
 									delay={speechDelay}
-									maxWidth={470}
+									maxWidth={500}
 								/>
 							)}
 							<ChibiCharacter
 								role={act.role}
 								mood={act.mood}
-								size={410}
+								size={560}
 								delay={actorDelay}
 								flipX={act.flipX}
 								speaking={Boolean(act.speech) && frame >= speechDelay}
@@ -182,6 +206,73 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 					);
 				})}
 			</div>
+
+			{/* Animated Interaction Prop passing cleanly into the center gap between the 2 characters */}
+			{scene.interaction && frame >= interactAt && (
+				<div
+					style={{
+						position: 'absolute',
+						bottom: 300,
+						left: '50%',
+						transform: `translateX(calc(-50% + ${interpolate(interactProgress, [0, 1], [-130, 0])}px)) translateY(${Math.sin(interactProgress * Math.PI) * -55}px) scale(${0.75 + 0.25 * interactProgress})`,
+						opacity: interactProgress,
+						zIndex: 15,
+						pointerEvents: 'none',
+					}}
+				>
+					{scene.interaction === 'phish' && (
+						<div
+							style={{
+								backgroundColor: '#ef4444',
+								color: '#ffffff',
+								border: `5px solid ${INK}`,
+								borderRadius: 16,
+								padding: '12px 22px',
+								fontFamily: SANS,
+								fontWeight: 900,
+								fontSize: 28,
+								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
+							}}
+						>
+							⚠ SIGN_TX.EXE
+						</div>
+					)}
+					{scene.interaction === 'swap' && (
+						<div
+							style={{
+								backgroundColor: '#facc15',
+								color: INK,
+								border: `5px solid ${INK}`,
+								borderRadius: 16,
+								padding: '12px 24px',
+								fontFamily: SANS,
+								fontWeight: 900,
+								fontSize: 28,
+								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
+							}}
+						>
+							⌚ ROLEX → 💵 ETH
+						</div>
+					)}
+					{scene.interaction === 'beg' && (
+						<div
+							style={{
+								backgroundColor: '#22c55e',
+								color: '#ffffff',
+								border: `5px solid ${INK}`,
+								borderRadius: 16,
+								padding: '10px 22px',
+								fontFamily: SANS,
+								fontWeight: 900,
+								fontSize: 30,
+								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
+							}}
+						>
+							💵 $20 GAS?
+						</div>
+					)}
+				</div>
+			)}
 
 			{scene.mascot && (
 				<div
@@ -198,7 +289,7 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 							: 1,
 					}}
 				>
-					<MascotHost pose={scene.mascot} size={520} />
+					<MascotHost pose={scene.mascot} size={580} />
 				</div>
 			)}
 		</AbsoluteFill>
@@ -284,8 +375,8 @@ const StockCutawayScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 			</AbsoluteFill>
 
 			{scene.mascot && (
-				<div style={{ position: 'absolute', bottom: -16, right: 72, opacity: mascotPop, transform: `translateY(${interpolate(mascotPop, [0, 1], [40, 0])}px)` }}>
-					<MascotHost pose={scene.mascot} size={460} flipX />
+				<div style={{ position: 'absolute', bottom: -16, right: 64, opacity: mascotPop, transform: `translateY(${interpolate(mascotPop, [0, 1], [40, 0])}px)` }}>
+					<MascotHost pose={scene.mascot} size={560} flipX />
 				</div>
 			)}
 
@@ -403,7 +494,7 @@ const GridExplainerScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 
 			{scene.mascot && (
 				<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)' }}>
-					<MascotHost pose={scene.mascot} size={440} />
+					<MascotHost pose={scene.mascot} size={520} />
 				</div>
 			)}
 		</AbsoluteFill>
@@ -583,8 +674,8 @@ const SourceReceiptScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 			</div>
 
 			{scene.mascot && (
-				<div style={{ position: 'absolute', bottom: -18, left: 110 }}>
-					<MascotHost pose={scene.mascot} size={500} />
+				<div style={{ position: 'absolute', bottom: -18, left: 96 }}>
+					<MascotHost pose={scene.mascot} size={580} />
 				</div>
 			)}
 
@@ -672,8 +763,8 @@ const BulletBreakdownScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 				})}
 			</div>
 
-			<div style={{ position: 'absolute', bottom: -18, left: 72 }}>
-				<MascotHost pose={scene.mascot ?? 'pointing'} size={520} />
+			<div style={{ position: 'absolute', bottom: -18, left: 56 }}>
+				<MascotHost pose={scene.mascot ?? 'pointing'} size={600} />
 			</div>
 		</AbsoluteFill>
 	);
@@ -758,7 +849,7 @@ const MascotCommentaryScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 			)}
 
 			<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)' }}>
-				<MascotHost pose={scene.mascot ?? 'deadpan'} size={580} />
+				<MascotHost pose={scene.mascot ?? 'deadpan'} size={660} />
 			</div>
 		</AbsoluteFill>
 	);
