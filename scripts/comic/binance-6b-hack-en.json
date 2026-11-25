@@ -31,20 +31,21 @@
     {
       "kind": "comic_skit",
       "backdrop": "candlestick_chart",
-      "mascot": "deadpan",
-      "mascotFocus": true,
       "text": "While retail crypto traders are still arguing whether the market is actually dead or just playing dead to rug-pull us one last time, half of us have already achieved financial freedom—freedom from money, freedom from assets, and freedom to ask our parents for twenty bucks of gas money.",
       "actors": [
         {"role": "trader", "mood": "sad"},
-        {"role": "victim", "mood": "panic", "speech": "Dad... can I get $20 for gas?"}
+        {"role": "victim", "mood": "panic", "cueWord": "ask our parents", "speechCueWord": "ask our parents", "speech": "Dad... can I get $20 for gas?"}
       ],
       "sfx": "pop"
     },
     {
       "kind": "stock_cutaway",
       "headline": "OCTOBER 2026",
+      "headlineCueWord": "Binance",
       "subline": "$6.3 BILLION DRAINED IN ONE NIGHT",
+      "sublineCueWord": "six point three",
       "mascot": "shocked",
+      "mascotCueWord": "cyber heist",
       "media": {"type": "image", "src": "comic/art/bg_thumbnail.jpg"},
       "text": "Think that's painful? Something way wilder just happened. Binance—the largest crypto exchange on Earth—got hit by a six-point-three-billion-dollar cyber heist across ten different blockchains in just a few hours.",
       "sfx": "boom"
@@ -61,9 +62,9 @@
       "backdrop": "light_paper",
       "mascot": "pointing",
       "items": [
-        {"icon": "globe", "label": "335 MILLION", "sublabel": "Registered users"},
-        {"icon": "building", "label": "BINANCE", "sublabel": "Founded 2017", "arrowToNext": true},
-        {"icon": "cash", "label": "$95 BILLION", "sublabel": "Daily volume"}
+        {"icon": "building", "label": "BINANCE", "sublabel": "Founded 2017", "arrowToNext": true, "cueWord": "why Binance"},
+        {"icon": "globe", "label": "335 MILLION", "sublabel": "Registered users", "arrowToNext": true, "cueWord": "three hundred"},
+        {"icon": "cash", "label": "$95 BILLION", "sublabel": "Daily volume", "cueWord": "ninety five"}
       ],
       "text": "First, why Binance? Simple: if you're going to cut the cameras and pick the locks all night, you rob the biggest mansion on the block. By 2026, Binance served over three hundred thirty-five million users and moved ninety-five billion dollars in daily trading volume.",
       "sfx": "pop"
@@ -72,10 +73,10 @@
       "kind": "grid_explainer",
       "backdrop": "dark_grid",
       "items": [
-        {"icon": "xrp", "label": "233M XRP"},
-        {"icon": "bitcoin", "label": "$1.5 BILLION"},
-        {"icon": "eth", "label": "$3.8 BILLION"},
-        {"icon": "wallet", "label": "$6.3B TOTAL"}
+        {"icon": "xrp", "label": "233M XRP", "cueWord": "two hundred"},
+        {"icon": "bitcoin", "label": "$1.5 BILLION", "cueWord": "Bitcoin"},
+        {"icon": "eth", "label": "$3.8 BILLION", "cueWord": "Ethereum"},
+        {"icon": "wallet", "label": "$6.3B TOTAL", "cueWord": "eight different"}
       ],
       "text": "At 20:05 UTC, five Binance XRP wallets emptied two hundred thirty-three million XRP in four minutes. Fifteen minutes later, a Bitcoin hot wallet wired out one-point-five billion dollars in a single transaction—followed by three-point-eight billion on Ethereum. Imagine depositing money at eight different banks, and one morning all eight politely wire everything to the exact same burglar.",
       "sfx": "alarm"
@@ -97,11 +98,12 @@
       "kind": "concept_card",
       "backdrop": "light_paper",
       "headline": "NONCE",
+      "headlineCueWord": "nonce",
       "subline": "TRANSACTION SEQUENCE NUMBER OF A WALLET",
       "items": [
-        {"icon": "wallet", "label": "#1041"},
-        {"icon": "wallet", "label": "#1042"},
-        {"icon": "wallet", "label": "#1090"}
+        {"icon": "wallet", "label": "#1041", "cueWord": "grab the next"},
+        {"icon": "wallet", "label": "#1042", "cueWord": "queue tickets"},
+        {"icon": "wallet", "label": "#1090", "cueWord": "in a row"}
       ],
       "text": "Why submit fifty authorizations at once? Because of a wallet's nonce—its transaction queue number. Binance's hot wallet moves so fast that hackers couldn't guess the exact number. So they did what you'd do at a crowded hospital: grab the next fifty queue tickets in a row so one is guaranteed to get called.",
       "sfx": "pop"
@@ -110,8 +112,8 @@
       "kind": "comic_skit",
       "backdrop": "office",
       "actors": [
-        {"role": "hacker", "mood": "smug", "speech": "Hey bro, just sign this real quick."},
-        {"role": "engineer", "mood": "neutral", "flipX": true}
+        {"role": "hacker", "mood": "smug", "cueWord": "poisoned", "speechCueWord": "internal signing", "speech": "Hey bro, just sign this real quick."},
+        {"role": "engineer", "mood": "neutral", "cueWord": "DevOps", "flipX": true}
       ],
       "text": "Worse still, Bitcoin and XRP don't even use EIP-7702. Investigators later revealed attackers infected DevOps laptops via a poisoned coding tool and a fake job test, then pivoted straight into Binance's internal signing system. They didn't pick the vault—they made the vault open itself.",
       "sfx": "glitch"
@@ -133,8 +135,8 @@
       "kind": "comic_skit",
       "backdrop": "bank_counter",
       "actors": [
-        {"role": "hacker", "mood": "smug", "speech": "Keep the Rolex—give me cash right now!"},
-        {"role": "engineer", "mood": "happy", "flipX": true}
+        {"role": "hacker", "mood": "smug", "cueWord": "stealing a Rolex", "speechCueWord": "sprinting straight", "speech": "Keep the Rolex—give me cash right now!"},
+        {"role": "engineer", "mood": "happy", "cueWord": "pawnshop", "flipX": true}
       ],
       "text": "Knowing the clock was ticking, the hackers dumped USDT on Uniswap and even deposited tainted USDT as collateral on Aave to borrow clean Ethereum. It's like stealing a Rolex, hearing the serial number is about to be blacklisted, and sprinting straight to a pawnshop for cash.",
       "sfx": "coin"
@@ -144,11 +146,11 @@
       "backdrop": "light_paper",
       "mascot": "pointing",
       "bullets": [
-        "Seed wallets funded via Tornado Cash",
-        "Infrastructure pre-built days in advance",
-        "Dry-run test transactions rehearsed early",
-        "50 pre-signed authorizations queued up",
-        "All chains drained in one rapid burst"
+        {"text": "Seed wallets funded via Tornado Cash", "cueWord": "Tornado Cash"},
+        {"text": "Dry-run test transactions rehearsed early", "cueWord": "rehearsed"},
+        {"text": "Synchronized multi-chain blitz in one burst", "cueWord": "synchronized"},
+        {"text": "Hackers only need to win once", "cueWord": "win once"},
+        {"text": "Exchanges must defend every single day", "cueWord": "every single day"}
       ],
       "text": "Within twenty-four hours, the FBI and Chainalysis linked the heist to North Korea's TraderTraitor group—citing Tornado Cash funding, rehearsed test runs, and a synchronized multi-chain blitz. Remember the golden rule of security: hackers only need to win once, while Binance has to win every single day.",
       "sfx": "thud"
@@ -156,9 +158,9 @@
     {
       "kind": "recap_cards",
       "items": [
-        {"icon": "cash", "label": "$6.3B DRAINED ACROSS 10+ CHAINS"},
-        {"icon": "bug", "label": "EIP-7702 & INTERNAL SIGNER ABUSED"},
-        {"icon": "freeze", "label": "~$3B FROZEN & USERS COVERED"}
+        {"icon": "cash", "label": "$6.3B DRAINED ACROSS 10+ CHAINS", "cueWord": "six point three"},
+        {"icon": "bug", "label": "EIP-7702 & INTERNAL SIGNER ABUSED", "cueWord": "hijacked"},
+        {"icon": "freeze", "label": "~$3B FROZEN & USERS COVERED", "cueWord": "nearly half"}
       ],
       "text": "So here are the three takeaways: six-point-three billion moved in hours, attackers hijacked the signing pipeline itself, and nearly half was frozen while Binance pledged to cover user losses. What do you think—still keeping your coins on exchanges? Drop a comment below and subscribe so you don't miss the next breakdown.",
       "sfx": "pop"

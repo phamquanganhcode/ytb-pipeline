@@ -29,6 +29,7 @@ export type ComicGridItem = {
 	sublabel?: string;
 	crossedOut?: boolean;
 	arrowToNext?: boolean;
+	cueFrame?: number;
 };
 
 export type ComicActor = {
@@ -37,7 +38,11 @@ export type ComicActor = {
 	label?: string;
 	speech?: string;
 	flipX?: boolean;
+	cueFrame?: number;
+	speechCueFrame?: number;
 };
+
+export type ComicBullet = string | {text: string; cueFrame?: number};
 
 export type ComicScene = {
 	kind:
@@ -59,7 +64,7 @@ export type ComicScene = {
 	mascotFocus?: boolean;
 	actors?: ComicActor[];
 	items?: ComicGridItem[];
-	bullets?: string[];
+	bullets?: ComicBullet[];
 	source?: string;
 	articleTitle?: string;
 	leadParagraph?: string;
@@ -73,6 +78,9 @@ export type ComicScene = {
 	};
 	sfx?: string;
 	cueFrame?: number;
+	headlineCueFrame?: number;
+	sublineCueFrame?: number;
+	mascotCueFrame?: number;
 };
 
 export type ComicManifest = {
@@ -147,25 +155,29 @@ const ComicSkitScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 					filter: focusBlur > 0 ? `blur(${focusBlur}px)` : undefined,
 				}}
 			>
-				{actors.map((act, idx) => (
-					<div key={idx} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14}}>
-						{act.speech && (
-							<SpeechBubble
-								text={act.speech}
-								tail="bottom"
-								delay={14 + idx * 24}
-								maxWidth={470}
+				{actors.map((act, idx) => {
+					const actorDelay = act.cueFrame ?? idx * 8;
+					const speechDelay = act.speechCueFrame ?? act.cueFrame ?? 14 + idx * 24;
+					return (
+						<div key={idx} style={{display: 'flex', flexDirection: 'column', alignItems: 'center', gap: 14}}>
+							{act.speech && (
+								<SpeechBubble
+									text={act.speech}
+									tail="bottom"
+									delay={speechDelay}
+									maxWidth={470}
+								/>
+							)}
+							<ChibiCharacter
+								role={act.role}
+								mood={act.mood}
+								size={410}
+								delay={actorDelay}
+								flipX={act.flipX}
 							/>
-						)}
-						<ChibiCharacter
-							role={act.role}
-							mood={act.mood}
-							size={410}
-							delay={idx * 8}
-							flipX={act.flipX}
-						/>
-					</div>
-				))}
+						</div>
+					);
+				})}
 			</div>
 
 			{scene.mascot && (
@@ -195,7 +207,12 @@ const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
 	const zoom = interpolate(frame, [0, Math.max(30, scene.duration)], [1.02, 1.11], {extrapolateRight: 'clamp'});
-	const titlePop = spring({frame: frame - 4, fps, config: {damping: 15, stiffness: 145}});
+	const headDelay = scene.headlineCueFrame ?? 4;
+	const subDelay = scene.sublineCueFrame ?? headDelay;
+	const mascotDelay = scene.mascotCueFrame ?? 0;
+	const titlePop = spring({frame: frame - headDelay, fps, config: {damping: 15, stiffness: 145}});
+	const subPop = spring({frame: frame - subDelay, fps, config: {damping: 15, stiffness: 145}});
+	const mascotPop = spring({frame: frame - mascotDelay, fps, config: {damping: 14, stiffness: 150}});
 
 	return (
 		<AbsoluteFill style={{backgroundColor: '#090b10', overflow: 'hidden'}}>
@@ -254,7 +271,8 @@ const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 							letterSpacing: 1.5,
 							textTransform: 'uppercase',
 							textShadow: '0 4px 18px rgba(0,0,0,0.92)',
-							opacity: titlePop,
+							transform: `scale(${interpolate(subPop, [0, 1], [0.92, 1])})`,
+							opacity: subPop,
 						}}
 					>
 						{scene.subline}
@@ -263,7 +281,7 @@ const StockCutawayScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 			</AbsoluteFill>
 
 			{scene.mascot && (
-				<div style={{position: 'absolute', bottom: -16, right: 72}}>
+				<div style={{position: 'absolute', bottom: -16, right: 72, opacity: mascotPop, transform: `translateY(${interpolate(mascotPop, [0, 1], [40, 0])}px)`}}>
 					<MascotHost pose={scene.mascot} size={460} flipX />
 				</div>
 			)}
@@ -315,8 +333,10 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				}}
 			>
 				{items.map((item, idx) => {
-					const startAt = idx * stepFrames + 6;
+					const startAt = item.cueFrame ?? idx * stepFrames + 6;
 					const pop = spring({frame: frame - startAt, fps, config: {damping: 13, stiffness: 175}});
+					const nextStart = items[idx + 1]?.cueFrame ?? (idx + 1) * stepFrames + 6;
+					const arrowPop = spring({frame: frame - nextStart, fps, config: {damping: 13, stiffness: 175}});
 					return (
 						<React.Fragment key={idx}>
 							<div
@@ -360,7 +380,7 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 								)}
 							</div>
 							{item.arrowToNext && idx < items.length - 1 && (
-								<svg width="108" height="36" viewBox="0 0 108 36" style={{opacity: pop, transform: 'translateY(-28px)'}}>
+								<svg width="108" height="36" viewBox="0 0 108 36" style={{opacity: arrowPop, transform: 'translateY(-28px)'}}>
 									<line
 										x1="4"
 										y1="18"
@@ -391,7 +411,7 @@ const GridExplainerScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 	const frame = useCurrentFrame();
 	const {fps} = useVideoConfig();
-	const headPop = spring({frame: frame - 4, fps, config: {damping: 14, stiffness: 155}});
+	const headPop = spring({frame: frame - (scene.headlineCueFrame ?? 4), fps, config: {damping: 14, stiffness: 155}});
 	const items = scene.items ?? [];
 
 	return (
@@ -439,7 +459,8 @@ const ConceptCardScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				)}
 				<div style={{display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 72, marginTop: 48}}>
 					{items.map((item, idx) => {
-						const pop = spring({frame: frame - (16 + idx * 16), fps, config: {damping: 12, stiffness: 165}});
+						const startAt = item.cueFrame ?? 16 + idx * 16;
+						const pop = spring({frame: frame - startAt, fps, config: {damping: 12, stiffness: 165}});
 						return (
 							<div
 								key={idx}
@@ -609,7 +630,9 @@ const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				}}
 			>
 				{bullets.map((b, idx) => {
-					const pop = spring({frame: frame - (idx * step + 8), fps, config: {damping: 14, stiffness: 165}});
+					const text = typeof b === 'string' ? b : b.text;
+					const startAt = (typeof b === 'string' ? undefined : b.cueFrame) ?? idx * step + 8;
+					const pop = spring({frame: frame - startAt, fps, config: {damping: 14, stiffness: 165}});
 					return (
 						<div
 							key={idx}
@@ -639,7 +662,7 @@ const BulletBreakdownScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 									lineHeight: 1.25,
 								}}
 							>
-								{b}
+								{text}
 							</div>
 						</div>
 					);
@@ -675,7 +698,8 @@ const RecapCardsScene: React.FC<{scene: ComicScene}> = ({scene}) => {
 				}}
 			>
 				{items.map((item, idx) => {
-					const pop = spring({frame: frame - (idx * step + 10), fps, config: {damping: 13, stiffness: 155}});
+					const startAt = item.cueFrame ?? idx * step + 10;
+					const pop = spring({frame: frame - startAt, fps, config: {damping: 13, stiffness: 155}});
 					return (
 						<div
 							key={idx}

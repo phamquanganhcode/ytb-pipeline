@@ -238,23 +238,82 @@ def main():
         if match_pos is None:
             return None
         global_idx = min(w_start + match_pos, len(word_at) - 1)
-        return max(6, min(dur - 12, int(word_at[global_idx]) - frm))
+        return max(0, min(dur - 12, int(word_at[global_idx]) - frm))
+
+    SCENE_CUE_KEYS = (
+        ("cueWord", "cueFrame"),
+        ("headlineCueWord", "headlineCueFrame"),
+        ("sublineCueWord", "sublineCueFrame"),
+        ("mascotCueWord", "mascotCueFrame"),
+    )
+    STRIP_SCENE_KEYS = {"text", "mediaQuery"} | {k for k, _ in SCENE_CUE_KEYS}
 
     scenes_out = []
     for i, s in enumerate(raw_scenes):
         frm = starts[i]
         dur = (starts[i + 1] - frm) if i < len(raw_scenes) - 1 else max(45, total_frames - frm)
-        scene_obj = {k: v for k, v in s.items() if k not in ("text", "mediaQuery", "cueWord")}
+        scene_obj = {k: v for k, v in s.items() if k not in STRIP_SCENE_KEYS}
         scene_obj["from"] = frm
         scene_obj["duration"] = dur
         w_start, w_end = scene_word_ranges[i]
         scene_tokens = all_words[w_start:w_end]
-        if s.get("cueWord"):
-            cf = find_cue_frame(s["cueWord"], scene_tokens, w_start, frm, dur)
-            if cf is not None:
-                scene_obj["cueFrame"] = cf
-            else:
-                print(f"  [warn] scene {i}: cueWord {s['cueWord']!r} not found in narration text")
+
+        for cue_key, frame_key in SCENE_CUE_KEYS:
+            if s.get(cue_key):
+                cf = find_cue_frame(s[cue_key], scene_tokens, w_start, frm, dur)
+                if cf is not None:
+                    scene_obj[frame_key] = cf
+                else:
+                    print(f"  [warn] scene {i}: {cue_key} {s[cue_key]!r} not found in narration text")
+
+        if s.get("actors"):
+            actors_out = []
+            for a_idx, act in enumerate(s["actors"]):
+                act_obj = {k: v for k, v in act.items() if k not in ("cueWord", "speechCueWord")}
+                if act.get("cueWord"):
+                    cf = find_cue_frame(act["cueWord"], scene_tokens, w_start, frm, dur)
+                    if cf is not None:
+                        act_obj["cueFrame"] = cf
+                    else:
+                        print(f"  [warn] scene {i} actor {a_idx}: cueWord {act['cueWord']!r} not found")
+                if act.get("speechCueWord"):
+                    cf = find_cue_frame(act["speechCueWord"], scene_tokens, w_start, frm, dur)
+                    if cf is not None:
+                        act_obj["speechCueFrame"] = cf
+                    else:
+                        print(f"  [warn] scene {i} actor {a_idx}: speechCueWord {act['speechCueWord']!r} not found")
+                actors_out.append(act_obj)
+            scene_obj["actors"] = actors_out
+
+        if s.get("items"):
+            items_out = []
+            for it_idx, item in enumerate(s["items"]):
+                it_obj = {k: v for k, v in item.items() if k != "cueWord"}
+                if item.get("cueWord"):
+                    cf = find_cue_frame(item["cueWord"], scene_tokens, w_start, frm, dur)
+                    if cf is not None:
+                        it_obj["cueFrame"] = cf
+                    else:
+                        print(f"  [warn] scene {i} item {it_idx}: cueWord {item['cueWord']!r} not found")
+                items_out.append(it_obj)
+            scene_obj["items"] = items_out
+
+        if s.get("bullets"):
+            bullets_out = []
+            for b_idx, b in enumerate(s["bullets"]):
+                if isinstance(b, dict):
+                    b_obj = {"text": b["text"]}
+                    if b.get("cueWord"):
+                        cf = find_cue_frame(b["cueWord"], scene_tokens, w_start, frm, dur)
+                        if cf is not None:
+                            b_obj["cueFrame"] = cf
+                        else:
+                            print(f"  [warn] scene {i} bullet {b_idx}: cueWord {b['cueWord']!r} not found")
+                    bullets_out.append(b_obj)
+                else:
+                    bullets_out.append(b)
+            scene_obj["bullets"] = bullets_out
+
         if resolved_media[i]:
             scene_obj["media"] = {
                 k: v for k, v in resolved_media[i].items() if k in ("type", "src", "credit") and v is not None
