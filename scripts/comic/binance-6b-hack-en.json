@@ -197,7 +197,6 @@
         {
           "role": "engineer",
           "mood": "neutral",
-          "cueWord": "DevOps",
           "flipX": true
         }
       ],
@@ -231,7 +230,6 @@
         {
           "role": "engineer",
           "mood": "happy",
-          "cueWord": "pawnshop",
           "flipX": true
         }
       ],

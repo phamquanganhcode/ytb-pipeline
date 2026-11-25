@@ -1,4 +1,4 @@
-import React, { useContext } from 'react';
+import React from 'react';
 import { Img, interpolate, spring, staticFile, useCurrentFrame, useVideoConfig } from 'remotion';
 
 /** Real-time per-frame mouth openness (0=closed, 1=slight, 2=open, 3=wide) computed from narration audio. */
@@ -66,11 +66,10 @@ const useBlink = (frame: number, offset = 0, period = 104): boolean => {
 };
 
 /**
- * Animated 2D SVG Puppet Investigator Host (Lóng-style cutout rigging):
- * - Independent breathing torso (charcoal turtleneck + camel trench coat)
- * - Pivoting head with talking nod + natural eye blinking + expressive eyebrows
- * - Audio-driven 4-shape lip-sync mouth synced to WAV narration
- * - Independent animated arms/hands per pose (explaining, pointing, shocked, deadpan, skeptical, shades)
+ * Lóng-Style 2D Comic Investigator Host (matches reference image 2 & 3 aesthetic):
+ * - Bold uniform ink outlines, big expressive round head, pill-shaped trench coat torso
+ * - Floating cartoon hands (no awkward elbow joints or broken arm paths)
+ * - Static expressive mouth (NO lip-sync flapping), calm held pose + natural blink only
  */
 export const MascotHost: React.FC<{
 	pose?: MascotPose;
@@ -88,170 +87,188 @@ export const MascotHost: React.FC<{
 }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
-	const ctxMouth = useContext(MouthLevelContext);
 
-	const pop = talking ? spring({ frame, fps, config: { damping: 16, stiffness: 140 } }) : 1;
-	const mouthLevel = talking ? ctxMouth : pose === 'shocked' ? 3 : 0;
+	const pop = talking ? spring({ frame, fps, config: { damping: 16, stiffness: 150 } }) : 1;
+	const blink = talking && pose !== 'shocked' && pose !== 'shades' && useBlink(frame, 19, 120);
+	const handFloat = talking ? Math.sin(frame / 28) * 3 : 0;
+	const shineX = talking ? interpolate(frame % 110, [0, 18, 110], [-36, 46, 46], { extrapolateRight: 'clamp' }) : 6;
 
-	// Calm, Lóng-style restrained animation: held poses, slow subtle tilt, zero hyperactive bobbing
-	const breatheY = talking ? Math.sin(frame / 36) * 0.8 : 0;
-	const headTilt = talking ? Math.sin(frame / 42) * 1.1 : pose === 'shocked' ? -1.5 : 1;
-	const headBobY = 0;
-
-	const blink = talking && pose !== 'shocked' && pose !== 'shades' && useBlink(frame, 17, 118);
-	// Brief 0.45s shock jolt on entrance only, then hold steady
-	const shockShake = talking && pose === 'shocked' && frame < 14 ? Math.sin(frame * 1.4) * (2.2 * (1 - frame / 14)) : 0;
-	const gestureSwing = talking ? Math.sin(frame / 34) * 1.8 : 0;
-	const pointPulse = talking ? Math.sin(frame / 32) * 1.4 : 0;
-	const sweatY = talking ? ((frame * 0.45) % 24) : 8;
-	const shineX = talking ? interpolate((frame % 110), [0, 18, 110], [-36, 46, 46], { extrapolateRight: 'clamp' }) : 6;
-
-	const renderMouth = () => {
-		if (pose === 'shocked' && (!talking || mouthLevel >= 2)) {
-			return (
-				<g>
-					<path
-						d="M 142 154 Q 160 144 178 154 Q 182 174 160 176 Q 138 174 142 154 Z"
-						fill="#5c1622"
-						stroke={INK}
-						strokeWidth="3.8"
-						strokeLinejoin="round"
-					/>
-					<path d="M 146 153 Q 160 148 174 153 L 172 158 Q 160 155 148 158 Z" fill="#ffffff" />
-					<ellipse cx="160" cy="171" rx="11" ry="4.5" fill="#e06377" />
-				</g>
-			);
-		}
-		if (mouthLevel === 0) {
-			if (pose === 'deadpan' || pose === 'skeptical') {
-				return <path d="M 147 161 Q 160 159 173 161" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />;
-			}
-			return <path d="M 146 159 Q 160 167 175 158" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />;
-		}
-		if (mouthLevel === 1) {
-			return (
-				<path
-					d="M 147 158 Q 160 155 173 158 Q 172 165 160 166 Q 148 165 147 158 Z"
-					fill="#691c28"
-					stroke={INK}
-					strokeWidth="3.5"
-					strokeLinejoin="round"
-				/>
-			);
-		}
-		if (mouthLevel === 2) {
-			return (
-				<g>
-					<path
-						d="M 145 156 Q 160 153 175 156 Q 176 169 160 171 Q 144 169 145 156 Z"
-						fill="#691c28"
-						stroke={INK}
-						strokeWidth="3.6"
-						strokeLinejoin="round"
-					/>
-					<path d="M 148 156 L 172 156 L 170 160 L 150 160 Z" fill="#ffffff" />
-					<ellipse cx="160" cy="168" rx="9" ry="3.5" fill="#e06377" />
-				</g>
-			);
-		}
-		return (
-			<g>
-				<path
-					d="M 143 154 Q 160 150 177 154 Q 179 173 160 175 Q 141 173 143 154 Z"
-					fill="#5c1622"
-					stroke={INK}
-					strokeWidth="3.8"
-					strokeLinejoin="round"
-				/>
-				<path d="M 147 154 L 173 154 L 171 160 L 149 160 Z" fill="#ffffff" />
-				<ellipse cx="160" cy="171" rx="11" ry="4.5" fill="#e06377" />
-			</g>
-		);
-	};
-
-	const renderEyes = () => {
+	const renderFace = () => {
 		if (pose === 'shades') {
 			return (
 				<g>
-					{/* Cool dark round sunglasses + animated gleam */}
 					<defs>
 						<clipPath id="hostShadesClip">
-							<circle cx="136" cy="123" r="19" />
-							<circle cx="184" cy="123" r="19" />
+							<circle cx="136" cy="122" r="20" />
+							<circle cx="184" cy="122" r="20" />
 						</clipPath>
 					</defs>
-					<line x1="155" y1="122" x2="165" y2="122" stroke={INK} strokeWidth="4.5" />
-					<circle cx="136" cy="123" r="19" fill="#18181f" stroke={INK} strokeWidth="4.5" />
-					<circle cx="184" cy="123" r="19" fill="#18181f" stroke={INK} strokeWidth="4.5" />
+					<path d="M 118 95 Q 136 90 152 94" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+					<path d="M 168 94 Q 184 90 202 95" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+					<line x1="156" y1="121" x2="164" y2="121" stroke={INK} strokeWidth="5.5" />
+					<circle cx="136" cy="122" r="20" fill="#18181f" stroke={INK} strokeWidth="5.5" />
+					<circle cx="184" cy="122" r="20" fill="#18181f" stroke={INK} strokeWidth="5.5" />
 					<g clipPath="url(#hostShadesClip)">
 						<polygon
-							points={`${120 + shineX},98 ${134 + shineX},98 ${116 + shineX},148 ${102 + shineX},148`}
+							points={`${120 + shineX},96 ${134 + shineX},96 ${116 + shineX},148 ${102 + shineX},148`}
 							fill="rgba(255,255,255,0.42)"
 						/>
 						<polygon
-							points={`${168 + shineX},98 ${182 + shineX},98 ${164 + shineX},148 ${150 + shineX},148`}
+							points={`${168 + shineX},96 ${182 + shineX},96 ${164 + shineX},148 ${150 + shineX},148`}
 							fill="rgba(255,255,255,0.42)"
 						/>
 					</g>
-					<path d="M 120 98 Q 136 93 150 97" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
-					<path d="M 170 97 Q 184 93 200 98" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+					<path d="M 147 160 Q 160 168 175 158" fill="none" stroke={INK} strokeWidth="5.5" strokeLinecap="round" />
 				</g>
 			);
 		}
 
-		const pupilR = pose === 'shocked' ? 3.2 : 5;
-		const eyeRy = blink ? 1 : pose === 'shocked' ? 12.5 : pose === 'deadpan' ? 7 : 9.5;
-		const lookX = pose === 'pointing' ? 3.5 : pose === 'skeptical' ? -2 : 0;
+		const pupilR = pose === 'shocked' ? 3.5 : 5;
+		const eyeRy = pose === 'shocked' ? 12 : pose === 'deadpan' ? 6.5 : 9.5;
+		const lookX = pose === 'pointing' ? 3 : pose === 'skeptical' ? -2 : 0;
 
 		return (
 			<g>
 				{/* Eyebrows */}
 				{pose === 'shocked' ? (
 					<>
-						<path d="M 120 94 Q 136 84 150 93" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
-						<path d="M 170 93 Q 184 84 200 94" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 118 93 Q 136 82 152 92" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+						<path d="M 168 92 Q 184 82 202 93" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
 					</>
 				) : pose === 'skeptical' ? (
 					<>
-						<path d="M 120 100 Q 136 96 151 101" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
-						<path d="M 169 94 Q 184 85 200 93" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 118 100 Q 136 96 152 101" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+						<path d="M 168 93 Q 184 84 202 92" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
 					</>
 				) : (
 					<>
-						<path d="M 120 99 Q 136 94 151 99" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
-						<path d="M 169 99 Q 184 94 200 99" fill="none" stroke="#2c1d16" strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 118 98 Q 136 93 152 98" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+						<path d="M 168 98 Q 184 93 202 98" fill="none" stroke={INK} strokeWidth="6" strokeLinecap="round" />
 					</>
 				)}
 
 				{/* Eyes */}
 				{blink ? (
 					<>
-						<path d="M 124 123 Q 136 128 148 123" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
-						<path d="M 172 123 Q 184 128 196 123" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+						<path d="M 124 122 Q 136 128 148 122" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
+						<path d="M 172 122 Q 184 128 196 122" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
 					</>
 				) : (
 					<>
-						<ellipse cx="136" cy="123" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="3.2" />
-						<ellipse cx="184" cy="123" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="3.2" />
-						<circle cx={136 + lookX} cy="123" r={pupilR} fill={INK} />
-						<circle cx={184 + lookX} cy="123" r={pupilR} fill={INK} />
-						<circle cx={138 + lookX} cy="120.5" r="1.8" fill="#ffffff" />
-						<circle cx={186 + lookX} cy="120.5" r="1.8" fill="#ffffff" />
+						<ellipse cx="136" cy="122" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="4" />
+						<ellipse cx="184" cy="122" rx="11.5" ry={eyeRy} fill="#ffffff" stroke={INK} strokeWidth="4" />
+						<circle cx={136 + lookX} cy="122" r={pupilR} fill={INK} />
+						<circle cx={184 + lookX} cy="122" r={pupilR} fill={INK} />
+						<circle cx={138 + lookX} cy="119.5" r="2" fill="#ffffff" />
+						<circle cx={186 + lookX} cy="119.5" r="2" fill="#ffffff" />
 						{(pose === 'deadpan' || pose === 'skeptical') && (
 							<>
-								<path d="M 124 117 L 148 117" stroke={INK} strokeWidth="3.2" strokeLinecap="round" />
-								{pose === 'deadpan' && <path d="M 172 117 L 196 117" stroke={INK} strokeWidth="3.2" strokeLinecap="round" />}
+								<line x1="123" y1="115" x2="149" y2="115" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+								{pose === 'deadpan' && <line x1="171" y1="115" x2="197" y2="115" stroke={INK} strokeWidth="4" strokeLinecap="round" />}
 							</>
 						)}
 					</>
 				)}
 
 				{/* Round Signature Glasses */}
-				<circle cx="136" cy="123" r="19" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="3.8" />
-				<circle cx="184" cy="123" r="19" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="3.8" />
-				<line x1="155" y1="122" x2="165" y2="122" stroke={INK} strokeWidth="3.8" />
-				<line x1="117" y1="121" x2="108" y2="119" stroke={INK} strokeWidth="3.5" />
-				<line x1="203" y1="121" x2="212" y2="119" stroke={INK} strokeWidth="3.5" />
+				<circle cx="136" cy="122" r="20" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="4.8" />
+				<circle cx="184" cy="122" r="20" fill="rgba(255,255,255,0.08)" stroke={INK} strokeWidth="4.8" />
+				<line x1="156" y1="121" x2="164" y2="121" stroke={INK} strokeWidth="4.8" />
+				<line x1="116" y1="120" x2="104" y2="118" stroke={INK} strokeWidth="4.5" />
+				<line x1="204" y1="120" x2="216" y2="118" stroke={INK} strokeWidth="4.5" />
+
+				{/* Static Expressive Mouth (no lip-sync flapping) */}
+				{pose === 'shocked' ? (
+					<g>
+						<path
+							d="M 143 154 Q 160 145 177 154 Q 180 173 160 175 Q 140 173 143 154 Z"
+							fill="#5c1622"
+							stroke={INK}
+							strokeWidth="4.5"
+							strokeLinejoin="round"
+						/>
+						<path d="M 147 154 L 173 154 L 171 159 L 149 159 Z" fill="#ffffff" />
+						<ellipse cx="160" cy="170" rx="10" ry="4" fill="#e06377" />
+					</g>
+				) : pose === 'deadpan' || pose === 'skeptical' ? (
+					<path d="M 147 161 Q 160 159 173 161" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+				) : (
+					<path d="M 146 158 Q 160 168 174 158" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+				)}
+			</g>
+		);
+	};
+
+	const renderFloatingHands = () => {
+		if (pose === 'shocked') {
+			return (
+				<g transform={`translate(0, ${handFloat})`}>
+					{/* Left floating shocked palm */}
+					<path
+						d="M 46 244 L 38 206 Q 42 198 49 205 L 55 220 L 56 196 Q 62 190 67 197 L 68 218 L 74 200 Q 80 195 84 203 L 80 226 L 89 218 Q 95 221 89 232 L 77 248 Q 62 254 46 244 Z"
+						fill="#fde3d2"
+						stroke={INK}
+						strokeWidth="6"
+						strokeLinejoin="round"
+					/>
+					{/* Right floating shocked palm */}
+					<path
+						d="M 274 244 L 282 206 Q 278 198 271 205 L 265 220 L 264 196 Q 258 190 253 197 L 252 218 L 246 200 Q 240 195 236 203 L 240 226 L 231 218 Q 225 221 231 232 L 243 248 Q 258 254 274 244 Z"
+						fill="#fde3d2"
+						stroke={INK}
+						strokeWidth="6"
+						strokeLinejoin="round"
+					/>
+				</g>
+			);
+		}
+		if (pose === 'pointing') {
+			return (
+				/* Floating pointing hand (exact reference image 3 style!) */
+				<g transform={`translate(0, ${handFloat})`}>
+					<path
+						d="M 232 232 Q 226 218 240 210 L 274 176 Q 284 168 292 177 Q 297 185 288 195 L 268 214 L 278 218 Q 286 224 280 234 L 272 246 Q 254 256 238 246 Z"
+						fill="#fde3d2"
+						stroke={INK}
+						strokeWidth="6.5"
+						strokeLinejoin="round"
+					/>
+					<path d="M 256 222 Q 266 222 268 230" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+					<path d="M 250 232 Q 260 232 262 240" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+				</g>
+			);
+		}
+		if (pose === 'explaining') {
+			return (
+				/* Two floating open palms shrugging/explaining (exact reference image 2 style!) */
+				<g transform={`translate(0, ${handFloat})`}>
+					<path
+						d="M 86 244 Q 68 248 48 232 Q 38 224 44 216 Q 52 212 64 218 L 46 204 Q 40 196 49 192 Q 56 190 70 202 L 62 192 Q 62 184 71 188 L 90 208 Q 98 228 86 244 Z"
+						fill="#fde3d2"
+						stroke={INK}
+						strokeWidth="6"
+						strokeLinejoin="round"
+					/>
+					<path
+						d="M 234 244 Q 252 248 272 232 Q 282 224 276 216 Q 268 212 256 218 L 274 204 Q 280 196 271 192 Q 264 190 250 202 L 258 192 Q 258 184 249 188 L 230 208 Q 222 228 234 244 Z"
+						fill="#fde3d2"
+						stroke={INK}
+						strokeWidth="6"
+						strokeLinejoin="round"
+					/>
+				</g>
+			);
+		}
+		/* Deadpan / skeptical / shades: single floating explaining/pointing hand on right */
+		return (
+			<g transform={`translate(0, ${handFloat})`}>
+				<path
+					d="M 236 248 Q 254 252 272 236 Q 282 228 276 220 Q 268 216 256 222 L 272 208 Q 278 200 269 196 Q 262 194 248 206 L 232 220 Q 224 236 236 248 Z"
+					fill="#fde3d2"
+					stroke={INK}
+					strokeWidth="6"
+					strokeLinejoin="round"
+				/>
 			</g>
 		);
 	};
@@ -266,249 +283,100 @@ export const MascotHost: React.FC<{
 				justifyContent: 'center',
 				transform: `scale(${0.92 + 0.08 * pop}) scaleX(${flipX ? -1 : 1})`,
 				opacity: pop,
-				filter: 'drop-shadow(0 14px 28px rgba(0,0,0,0.45))',
+				filter: 'drop-shadow(0 12px 24px rgba(0,0,0,0.35))',
 				pointerEvents: 'none',
 				...style,
 			}}
 		>
 			<svg viewBox="0 0 320 340" width="100%" height="100%" style={{ overflow: 'visible' }}>
-				{/* Torso Group (breathing) */}
-				<g transform={`translate(0, ${breatheY})`}>
-					{/* Back coat / shoulders */}
-					<path
-						d="M 78 228 Q 92 200 132 196 L 188 196 Q 228 200 242 228 L 258 340 L 62 340 Z"
-						fill="#c99352"
-						stroke={INK}
-						strokeWidth="5"
-						strokeLinejoin="round"
-					/>
-					{/* Coat side shading */}
-					<path d="M 86 232 L 72 340 L 104 340 L 114 236 Z" fill="#b37f40" />
-					<path d="M 234 232 L 248 340 L 216 340 L 206 236 Z" fill="#b37f40" />
+				{/* Pill-Shaped Trench Coat Torso (exact Lóng silhouette — clean, no broken arms!) */}
+				<path
+					d="M 102 224 Q 108 192 160 192 Q 212 192 218 224 L 226 340 L 94 340 Z"
+					fill="#c99352"
+					stroke={INK}
+					strokeWidth="7"
+					strokeLinejoin="round"
+				/>
+				{/* Charcoal turtleneck center */}
+				<path
+					d="M 134 194 L 186 194 L 182 340 L 138 340 Z"
+					fill="#3c464f"
+					stroke={INK}
+					strokeWidth="5.5"
+					strokeLinejoin="round"
+				/>
+				{/* Turtleneck collar */}
+				<path
+					d="M 138 184 Q 160 192 182 184 L 185 212 Q 160 220 135 212 Z"
+					fill="#47535e"
+					stroke={INK}
+					strokeWidth="5.5"
+					strokeLinejoin="round"
+				/>
+				{/* Clean Trench Coat Lapels */}
+				<path
+					d="M 134 196 L 116 226 L 130 244 L 118 264 L 138 340"
+					fill="none"
+					stroke={INK}
+					strokeWidth="5.5"
+					strokeLinejoin="round"
+				/>
+				<path
+					d="M 186 196 L 204 226 L 190 244 L 202 264 L 182 340"
+					fill="none"
+					stroke={INK}
+					strokeWidth="5.5"
+					strokeLinejoin="round"
+				/>
 
-					{/* Charcoal turtleneck */}
-					<path
-						d="M 122 198 L 198 198 L 190 340 L 130 340 Z"
-						fill="#3c464f"
-						stroke={INK}
-						strokeWidth="4.5"
-						strokeLinejoin="round"
-					/>
-					{/* Turtleneck collar */}
-					<path
-						d="M 134 180 Q 160 190 186 180 L 190 212 Q 160 222 130 212 Z"
-						fill="#47535e"
-						stroke={INK}
-						strokeWidth="4.5"
-						strokeLinejoin="round"
-					/>
-					<path d="M 136 196 Q 160 205 184 196" fill="none" stroke="#2a323a" strokeWidth="3" />
-
-					{/* Trench coat lapels */}
-					<path
-						d="M 132 196 L 106 226 L 122 246 L 104 268 L 132 340 L 140 340 L 132 206 Z"
-						fill="#d8a566"
-						stroke={INK}
-						strokeWidth="4.5"
-						strokeLinejoin="round"
-					/>
-					<path
-						d="M 188 196 L 214 226 L 198 246 L 216 268 L 188 340 L 180 340 L 188 206 Z"
-						fill="#d8a566"
-						stroke={INK}
-						strokeWidth="4.5"
-						strokeLinejoin="round"
-					/>
-
-					{/* Left Arm (viewer's left) */}
-					{pose === 'shocked' ? (
-						<g transform={`rotate(${-14 + shockShake}, 88, 232)`}>
-							<path
-								d="M 88 232 L 42 268 L 32 192"
-								fill="none"
-								stroke="#c99352"
-								strokeWidth="30"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-							/>
-							<path
-								d="M 88 232 L 42 268 L 32 192"
-								fill="none"
-								stroke={INK}
-								strokeWidth="39"
-								strokeLinecap="round"
-								strokeLinejoin="round"
-								opacity="0"
-							/>
-							<path
-								d="M 76 224 L 30 264 Q 20 272 24 256 L 20 188 L 46 188 L 52 246 L 94 218 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-							{/* Raised shocked left hand */}
-							<path
-								d="M 16 192 L 10 162 Q 13 155 18 162 L 24 176 L 24 152 Q 29 146 33 153 L 34 174 L 39 156 Q 44 151 47 158 L 44 180 L 52 172 Q 57 174 52 184 L 44 196 Z"
-								fill="#f2c6a0"
-								stroke={INK}
-								strokeWidth="4"
-								strokeLinejoin="round"
-							/>
-						</g>
-					) : (
-						<g transform={`rotate(${-gestureSwing * 0.35}, 88, 236)`}>
-							<path
-								d="M 76 226 L 56 338 L 96 338 L 106 244 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-						</g>
-					)}
-
-					{/* Right Arm (viewer's right — primary expressive gesture arm!) */}
-					{pose === 'shocked' ? (
-						<g transform={`rotate(${14 - shockShake}, 232, 232)`}>
-							<path
-								d="M 244 224 L 290 264 Q 300 272 296 256 L 300 188 L 274 188 L 268 246 L 226 218 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-							<path
-								d="M 304 192 L 310 162 Q 307 155 302 162 L 296 176 L 296 152 Q 291 146 287 153 L 286 174 L 281 156 Q 276 151 273 158 L 276 180 L 268 172 Q 263 174 268 184 L 276 196 Z"
-								fill="#f2c6a0"
-								stroke={INK}
-								strokeWidth="4"
-								strokeLinejoin="round"
-							/>
-						</g>
-					) : pose === 'pointing' ? (
-						<g transform={`rotate(${-6 + pointPulse}, 232, 234)`}>
-							<path
-								d="M 226 224 L 278 242 L 298 168 L 270 162 L 258 216 L 216 208 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-							{/* Pointing hand with index finger up */}
-							<path
-								d="M 272 164 L 276 144 L 284 114 Q 290 107 296 115 L 292 145 L 304 148 Q 310 154 304 162 L 296 172 L 272 170 Z"
-								fill="#f2c6a0"
-								stroke={INK}
-								strokeWidth="4"
-								strokeLinejoin="round"
-							/>
-						</g>
-					) : pose === 'shades' ? (
-						<g transform={`rotate(${Math.sin(frame / 36) * 1.2}, 230, 232)`}>
-							<path
-								d="M 226 226 L 274 248 L 236 144 L 214 152 L 244 226 L 214 214 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-							{/* Hand adjusting glasses */}
-							<path
-								d="M 212 146 L 200 124 Q 204 118 212 124 L 222 136 L 232 132 Q 238 136 234 146 L 220 156 Z"
-								fill="#f2c6a0"
-								stroke={INK}
-								strokeWidth="4"
-								strokeLinejoin="round"
-							/>
-						</g>
-					) : (
-						/* Default explaining / deadpan / skeptical open-palm gesturing arm */
-						<g transform={`rotate(${gestureSwing}, 232, 238)`}>
-							<path
-								d="M 228 228 L 274 268 L 296 206 L 270 198 L 256 244 L 216 218 Z"
-								fill="#c99352"
-								stroke={INK}
-								strokeWidth="4.8"
-								strokeLinejoin="round"
-							/>
-							{/* Expressive open explaining palm */}
-							<path
-								d="M 270 202 L 268 184 Q 272 177 278 184 L 282 192 L 298 176 Q 305 174 304 182 L 294 196 L 308 188 Q 314 191 308 198 L 294 212 L 274 212 Z"
-								fill="#f2c6a0"
-								stroke={INK}
-								strokeWidth="4"
-								strokeLinejoin="round"
-							/>
-						</g>
-					)}
-				</g>
-
-				{/* Head Group (pivots from neck with speaking nod & tilt) */}
-				<g transform={`translate(0, ${headBobY}) rotate(${headTilt}, 160, 188)`}>
-					{/* Neck */}
-					<rect x="144" y="166" width="32" height="30" rx="10" fill="#e6b38a" stroke={INK} strokeWidth="4.5" />
-					<path d="M 146 174 Q 160 184 174 174 L 174 184 Q 160 192 146 184 Z" fill="#cf9970" />
-
+				{/* Big Round Head */}
+				<g>
 					{/* Ears */}
-					<ellipse cx="108" cy="128" rx="11" ry="15" fill="#f2c6a0" stroke={INK} strokeWidth="4.5" />
-					<ellipse cx="212" cy="128" rx="11" ry="15" fill="#f2c6a0" stroke={INK} strokeWidth="4.5" />
-
-					{/* Face Shape */}
+					<circle cx="102" cy="126" r="13" fill="#fde3d2" stroke={INK} strokeWidth="6" />
+					<circle cx="218" cy="126" r="13" fill="#fde3d2" stroke={INK} strokeWidth="6" />
+					{/* Round Head Base */}
+					<ellipse cx="160" cy="124" rx="58" ry="60" fill="#fde3d2" stroke={INK} strokeWidth="7" />
+					{/* Messy Dark Hair Cap */}
 					<path
-						d="M 110 108 Q 110 62 160 62 Q 210 62 210 108 L 207 142 Q 204 180 160 184 Q 116 180 113 142 Z"
-						fill="#f5cba7"
-						stroke={INK}
-						strokeWidth="4.8"
-						strokeLinejoin="round"
-					/>
-					{/* Cheek / Jaw subtle shadow */}
-					<path d="M 118 158 Q 160 182 202 158 Q 196 179 160 182 Q 124 179 118 158 Z" fill="#e6b68e" />
-
-					{/* Nose */}
-					<path d="M 161 124 L 165 140 Q 160 144 155 141" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" />
-
-					{/* Eyes + Brows + Glasses */}
-					{renderEyes()}
-
-					{/* Lip-Sync Mouth */}
-					{renderMouth()}
-
-					{/* Messy Dark Brown Hair */}
-					<path
-						d="M 105 118 Q 96 84 114 60 Q 126 44 152 44 Q 164 34 180 44 Q 204 44 214 66 Q 224 88 214 118 Q 208 98 198 86 Q 186 78 172 86 Q 160 72 142 84 Q 124 76 114 96 Z"
+						d="M 102 118 Q 98 64 158 56 Q 218 60 218 118 Q 206 94 188 86 Q 170 96 154 82 Q 134 96 116 88 Q 106 98 102 118 Z"
 						fill="#4a2e20"
 						stroke={INK}
-						strokeWidth="4.8"
+						strokeWidth="6.5"
 						strokeLinejoin="round"
 					/>
-					{/* Hair highlight */}
-					<path d="M 134 58 Q 158 50 184 58" fill="none" stroke="#6c4532" strokeWidth="4" strokeLinecap="round" />
+					{/* Subtle cheeks */}
+					<path d="M 118 148 Q 124 154 132 152" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" opacity="0.45" />
+					<path d="M 202 148 Q 196 154 188 152" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" opacity="0.45" />
+					{/* Face */}
+					{renderFace()}
 
-					{/* Comic FX: Shocked Sweat Drop + Alert Lines */}
+					{/* Shocked Comic FX */}
 					{pose === 'shocked' && (
 						<g>
 							<path
-								d={`M 224 ${76 + sweatY * 0.5} Q 232 ${88 + sweatY * 0.5} 224 ${94 + sweatY * 0.5} Q 216 ${88 + sweatY * 0.5} 224 ${76 + sweatY * 0.5} Z`}
+								d="M 226 80 Q 234 92 226 98 Q 218 92 226 80 Z"
 								fill="#38bdf8"
 								stroke={INK}
-								strokeWidth="3"
+								strokeWidth="3.5"
 							/>
-							<line x1="92" y1="54" x2="76" y2="38" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
-							<line x1="84" y1="74" x2="64" y2="68" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
-							<line x1="228" y1="54" x2="244" y2="38" stroke="#facc15" strokeWidth="5" strokeLinecap="round" />
+							<line x1="90" y1="54" x2="74" y2="38" stroke="#facc15" strokeWidth="6" strokeLinecap="round" />
+							<line x1="230" y1="54" x2="246" y2="38" stroke="#facc15" strokeWidth="6" strokeLinecap="round" />
 						</g>
 					)}
 				</g>
+
+				{/* Floating Hands */}
+				{renderFloatingHands()}
 			</svg>
 		</div>
 	);
 };
 
 /**
- * Animated 2D Puppet Chibi Cast (trader, victim, hacker, engineer):
- * Real per-part animation: blinking eyes, typing hands on laptop, panic head-grab shaking,
- * sweat drops, breathing, and talking mouth bounce!
+ * Lóng-Style 2D Pill-Body Chibi Cast (matches reference images 2 & 3):
+ * - Clean tapered pill torso with thick crisp #141418 outline
+ * - Floating cartoon hands (shrugging, pointing, holding laptop, grabbing head)
+ * - Calm held poses + natural blinking (zero hyperactive jitter)
  */
 export const ChibiCharacter: React.FC<{
 	role: ChibiRole;
@@ -518,23 +386,12 @@ export const ChibiCharacter: React.FC<{
 	delay?: number;
 	flipX?: boolean;
 	speaking?: boolean;
-}> = ({ role, mood = 'neutral', size = 390, delay = 0, flipX = false, speaking = false }) => {
+}> = ({ role, mood = 'neutral', size = 390, delay = 0, flipX = false }) => {
 	const frame = useCurrentFrame();
 	const { fps } = useVideoConfig();
-	const localAge = Math.max(0, frame - delay);
-	const pop = spring({ frame: frame - delay, fps, config: { damping: 16, stiffness: 145 } });
+	const pop = spring({ frame: frame - delay, fps, config: { damping: 16, stiffness: 150 } });
 	const blink = mood !== 'panic' && useBlink(frame, role.length * 13, 114);
-
-	// Calm, held-pose chibi motion: brief entrance reaction, then natural stillness + blinking
-	const breatheY = Math.sin((frame + delay * 2) / 36) * 0.8;
-	const panicShakeX = mood === 'panic' && localAge < 16 ? Math.sin(localAge * 1.6) * (3 * (1 - localAge / 16)) : 0;
-	const panicShakeRot = mood === 'panic' && localAge < 16 ? Math.sin(localAge * 1.4) * (2.2 * (1 - localAge / 16)) : Math.sin(frame / 45) * 0.9;
-	// Gentle intermittent typing burst (types 25 frames, rests 35 frames) instead of constant piston motion
-	const typingActive = (frame % 60) < 24;
-	const typeLeftY = typingActive ? Math.sin(frame * 0.85) * 2.2 : 0;
-	const typeRightY = typingActive ? Math.cos(frame * 0.85) * 2.2 : 0;
-	const sweatY = (frame * 0.45) % 24;
-	const talkOpen = speaking && Math.floor(frame / 4) % 2 === 0;
+	const handFloat = Math.sin((frame + delay * 3) / 30) * 2.5;
 
 	const kind =
 		role === 'hacker' || role === 'fbi'
@@ -545,123 +402,114 @@ export const ChibiCharacter: React.FC<{
 					? 'engineer'
 					: 'trader';
 
-	const shirtColor =
+	const torsoColor =
 		kind === 'hacker'
 			? '#263147'
 			: kind === 'victim'
 				? '#dc2626'
 				: kind === 'engineer'
-					? '#93c5fd'
-					: '#166534';
+					? '#334155'
+					: '#1e3a5f';
 
 	const hairColor =
 		kind === 'victim'
 			? '#16a34a'
 			: kind === 'engineer'
 				? '#1e293b'
-				: '#5c3824';
+				: '#3f2a1d';
 
 	const renderChibiFace = () => {
 		if (kind === 'hacker') {
 			return (
 				<g>
-					{/* Fierce narrow hacker eyes */}
-					<path d="M 102 120 L 130 127" stroke={INK} strokeWidth="6" strokeLinecap="round" />
-					<path d="M 178 120 L 150 127" stroke={INK} strokeWidth="6" strokeLinecap="round" />
+					<path d="M 104 114 L 130 122" stroke={INK} strokeWidth="6.5" strokeLinecap="round" />
+					<path d="M 176 114 L 150 122" stroke={INK} strokeWidth="6.5" strokeLinecap="round" />
 					{blink ? (
 						<>
-							<line x1="106" y1="136" x2="128" y2="136" stroke={INK} strokeWidth="4" strokeLinecap="round" />
-							<line x1="152" y1="136" x2="174" y2="136" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+							<line x1="108" y1="132" x2="128" y2="132" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+							<line x1="152" y1="132" x2="172" y2="132" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
 						</>
 					) : (
 						<>
-							<path d="M 105 132 Q 118 144 130 135 Q 118 128 105 132 Z" fill="#ffffff" stroke={INK} strokeWidth="3.5" />
-							<path d="M 175 132 Q 162 144 150 135 Q 162 128 175 132 Z" fill="#ffffff" stroke={INK} strokeWidth="3.5" />
+							<path d="M 106 128 Q 118 140 130 131 Q 118 124 106 128 Z" fill="#ffffff" stroke={INK} strokeWidth="4" />
+							<path d="M 174 128 Q 162 140 150 131 Q 162 124 174 128 Z" fill="#ffffff" stroke={INK} strokeWidth="4" />
 						</>
 					)}
-					{/* Black face mask */}
+					{/* Black mask */}
 					<path
-						d="M 88 148 Q 140 138 192 148 Q 190 186 140 190 Q 90 186 88 148 Z"
+						d="M 88 144 Q 140 134 192 144 Q 190 182 140 186 Q 90 182 88 144 Z"
 						fill="#1f2430"
 						stroke={INK}
-						strokeWidth="4.5"
+						strokeWidth="5.5"
 						strokeLinejoin="round"
 					/>
-					<path d="M 114 166 Q 140 172 166 166" fill="none" stroke="#363f52" strokeWidth="3" strokeLinecap="round" />
 				</g>
 			);
 		}
 
-		const eyeR = mood === 'panic' ? 11.5 : 8.5;
-		const pupilR = mood === 'panic' ? 3.5 : 4.5;
-
 		return (
 			<g>
-				{/* Eyebrows */}
+				{/* Brows */}
 				{mood === 'sad' || mood === 'panic' ? (
 					<>
-						<path d="M 102 120 Q 116 112 128 117" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
-						<path d="M 178 120 Q 164 112 152 117" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
+						<path d="M 104 114 Q 118 106 128 112" fill="none" stroke={INK} strokeWidth="5.5" strokeLinecap="round" />
+						<path d="M 176 114 Q 162 106 152 112" fill="none" stroke={INK} strokeWidth="5.5" strokeLinecap="round" />
 					</>
 				) : (
 					<>
-						<path d="M 104 118 Q 116 114 128 118" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
-						<path d="M 152 118 Q 164 114 176 118" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+						<path d="M 106 112 Q 118 108 128 112" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+						<path d="M 152 112 Q 162 108 174 112" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
 					</>
 				)}
 
 				{/* Eyes */}
 				{blink ? (
 					<>
-						<path d="M 106 136 Q 117 141 128 136" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
-						<path d="M 152 136 Q 163 141 174 136" fill="none" stroke={INK} strokeWidth="3.8" strokeLinecap="round" />
+						<path d="M 108 130 Q 118 136 128 130" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
+						<path d="M 152 130 Q 162 136 172 130" fill="none" stroke={INK} strokeWidth="4.5" strokeLinecap="round" />
 					</>
 				) : (
 					<>
-						<circle cx="117" cy="136" r={eyeR} fill="#ffffff" stroke={INK} strokeWidth="3.5" />
-						<circle cx="163" cy="136" r={eyeR} fill="#ffffff" stroke={INK} strokeWidth="3.5" />
-						<circle cx="117" cy="136" r={pupilR} fill={INK} />
-						<circle cx="163" cy="136" r={pupilR} fill={INK} />
-						<circle cx="119" cy="133.5" r="2" fill="#ffffff" />
-						<circle cx="165" cy="133.5" r="2" fill="#ffffff" />
+						<circle cx="118" cy="130" r={mood === 'panic' ? 11 : 8.5} fill="#ffffff" stroke={INK} strokeWidth="4.2" />
+						<circle cx="162" cy="130" r={mood === 'panic' ? 11 : 8.5} fill="#ffffff" stroke={INK} strokeWidth="4.2" />
+						<circle cx="118" cy="130" r={mood === 'panic' ? 3.5 : 4.5} fill={INK} />
+						<circle cx="162" cy="130" r={mood === 'panic' ? 3.5 : 4.5} fill={INK} />
 					</>
 				)}
 
-				{/* Engineer Glasses */}
+				{/* Engineer glasses */}
 				{kind === 'engineer' && (
 					<g>
-						<circle cx="117" cy="136" r="16" fill="none" stroke={INK} strokeWidth="3.8" />
-						<circle cx="163" cy="136" r="16" fill="none" stroke={INK} strokeWidth="3.8" />
-						<line x1="133" y1="136" x2="147" y2="136" stroke={INK} strokeWidth="3.8" />
+						<circle cx="118" cy="130" r="15" fill="none" stroke={INK} strokeWidth="4.2" />
+						<circle cx="162" cy="130" r="15" fill="none" stroke={INK} strokeWidth="4.2" />
+						<line x1="133" y1="130" x2="147" y2="130" stroke={INK} strokeWidth="4.2" />
 					</g>
 				)}
 
-				{/* Mouth */}
+				{/* Cheek dimples (reference image 3 charm) */}
+				<path d="M 104 152 Q 110 158 116 156" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" opacity="0.55" />
+				<path d="M 176 152 Q 170 158 164 156" fill="none" stroke={INK} strokeWidth="3.5" strokeLinecap="round" opacity="0.55" />
+
+				{/* Static Expressive Mouth */}
 				{mood === 'panic' ? (
-					<g>
-						<path
-							d="M 122 162 Q 140 150 158 162 Q 162 178 140 179 Q 118 178 122 162 Z"
-							fill="#7f1d1d"
-							stroke={INK}
-							strokeWidth="3.8"
-						/>
-						<path d="M 126 161 L 154 161 L 152 166 L 128 166 Z" fill="#ffffff" />
-						<ellipse cx="140" cy="175" rx="9" ry="4" fill="#f87171" />
-					</g>
+					<path
+						d="M 122 158 Q 140 148 158 158 Q 160 174 140 175 Q 120 174 122 158 Z"
+						fill="#7f1d1d"
+						stroke={INK}
+						strokeWidth="4.5"
+					/>
 				) : mood === 'sad' ? (
-					<path d="M 128 168 Q 140 158 152 168" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+					<path d="M 128 164 Q 140 154 152 164" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
 				) : mood === 'happy' ? (
 					<path
-						d="M 126 160 Q 140 174 154 160 Z"
-						fill={talkOpen ? '#7f1d1d' : '#ffffff'}
+						d="M 126 156 Q 140 170 154 156 Z"
+						fill="#ffffff"
 						stroke={INK}
-						strokeWidth="3.8"
+						strokeWidth="4.5"
 						strokeLinejoin="round"
 					/>
-				) : talkOpen ? (
-					<ellipse cx="140" cy="164" rx="9" ry="6" fill="#7f1d1d" stroke={INK} strokeWidth="3.5" />
 				) : (
-					<path d="M 129 164 Q 140 166 151 164" fill="none" stroke={INK} strokeWidth="4" strokeLinecap="round" />
+					<path d="M 129 160 Q 140 163 151 160" fill="none" stroke={INK} strokeWidth="4.8" strokeLinecap="round" />
 				)}
 			</g>
 		);
@@ -673,7 +521,7 @@ export const ChibiCharacter: React.FC<{
 				display: 'flex',
 				flexDirection: 'column',
 				alignItems: 'center',
-				transform: `scale(${0.92 + 0.08 * pop}) translateX(${panicShakeX}px)`,
+				transform: `scale(${0.92 + 0.08 * pop})`,
 				opacity: pop,
 			}}
 		>
@@ -682,136 +530,122 @@ export const ChibiCharacter: React.FC<{
 					width: size,
 					height: size,
 					transform: `scaleX(${flipX ? -1 : 1})`,
-					filter: 'drop-shadow(0 10px 18px rgba(0,0,0,0.28))',
+					filter: 'drop-shadow(0 10px 18px rgba(0,0,0,0.26))',
 				}}
 			>
 				<svg viewBox="0 0 280 300" width="100%" height="100%" style={{ overflow: 'visible' }}>
-					{/* Chibi Body */}
-					<g transform={`translate(0, ${breatheY})`}>
-						<path
-							d="M 88 214 Q 94 190 140 190 Q 186 190 192 214 L 204 298 L 76 298 Z"
-							fill={shirtColor}
-							stroke={INK}
-							strokeWidth="5"
-							strokeLinejoin="round"
-						/>
-						{/* Outfit details */}
-						{kind === 'trader' && (
-							<>
-								<rect x="85" y="232" width="110" height="16" fill="#f8fafc" stroke={INK} strokeWidth="3.5" />
-								<path d="M 124 192 L 140 214 L 156 192" fill="#f8fafc" stroke={INK} strokeWidth="3.8" strokeLinejoin="round" />
-							</>
-						)}
-						{kind === 'victim' && (
-							<>
-								<line x1="126" y1="202" x2="124" y2="244" stroke="#f8fafc" strokeWidth="4.5" strokeLinecap="round" />
-								<line x1="154" y1="202" x2="156" y2="244" stroke="#f8fafc" strokeWidth="4.5" strokeLinecap="round" />
-							</>
-						)}
-						{kind === 'engineer' && (
-							<>
-								<path d="M 122 192 L 140 214 L 158 192" fill="#ffffff" stroke={INK} strokeWidth="3.8" strokeLinejoin="round" />
-								<polygon points="140,210 133,262 140,274 147,262" fill="#1d4ed8" stroke={INK} strokeWidth="3.5" />
-							</>
-						)}
-						{kind === 'hacker' && (
-							<>
-								<line x1="126" y1="202" x2="124" y2="242" stroke="#cbd5e1" strokeWidth="4" strokeLinecap="round" />
-								<line x1="154" y1="202" x2="156" y2="242" stroke="#cbd5e1" strokeWidth="4" strokeLinecap="round" />
-							</>
-						)}
-					</g>
+					{/* Clean Pill-Shaped Torso (exact reference image 2 & 3 shape!) */}
+					<path
+						d="M 94 214 Q 100 186 140 186 Q 180 186 186 214 L 194 298 L 86 298 Z"
+						fill={torsoColor}
+						stroke={INK}
+						strokeWidth="7"
+						strokeLinejoin="round"
+					/>
 
-					{/* Chibi Head */}
-					<g transform={`rotate(${panicShakeRot}, 140, 190)`}>
-						{/* Hacker Hoodie Back */}
+					{/* Simple Crisp Outfit Accents */}
+					{kind === 'trader' && (
+						<>
+							<path d="M 122 188 L 140 212 L 158 188 Z" fill="#ffffff" stroke={INK} strokeWidth="4.5" strokeLinejoin="round" />
+							<polygon points="140,206 134,254 140,264 146,254" fill="#3b82f6" stroke={INK} strokeWidth="4" />
+						</>
+					)}
+					{kind === 'engineer' && (
+						<>
+							{/* Blue open jacket + dark tee + yellow diamond badge (exact reference image 3!) */}
+							<path d="M 94 214 Q 100 190 120 188 L 122 268 L 90 268 Z" fill="#60a5fa" stroke={INK} strokeWidth="5.5" strokeLinejoin="round" />
+							<path d="M 186 214 Q 180 190 160 188 L 158 268 L 190 268 Z" fill="#60a5fa" stroke={INK} strokeWidth="5.5" strokeLinejoin="round" />
+							<polygon points="140,214 148,224 140,234 132,224" fill="#facc15" />
+						</>
+					)}
+					{kind === 'victim' && (
+						<>
+							<line x1="128" y1="196" x2="126" y2="236" stroke="#ffffff" strokeWidth="4.5" strokeLinecap="round" />
+							<line x1="152" y1="196" x2="154" y2="236" stroke="#ffffff" strokeWidth="4.5" strokeLinecap="round" />
+						</>
+					)}
+
+					{/* Big Round Head */}
+					<g>
 						{kind === 'hacker' && (
 							<path
-								d="M 62 150 Q 58 58 140 50 Q 222 58 218 150 Q 214 202 140 206 Q 66 202 62 150 Z"
+								d="M 68 144 Q 64 56 140 50 Q 216 56 212 144 Q 208 194 140 198 Q 72 194 68 144 Z"
 								fill="#263147"
 								stroke={INK}
-								strokeWidth="5.5"
+								strokeWidth="7"
 							/>
 						)}
-
-						{/* Ears */}
 						{kind !== 'hacker' && (
 							<>
-								<circle cx="80" cy="138" r="12" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
-								<circle cx="200" cy="138" r="12" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+								<circle cx="82" cy="134" r="12" fill="#fde3d2" stroke={INK} strokeWidth="6" />
+								<circle cx="198" cy="134" r="12" fill="#fde3d2" stroke={INK} strokeWidth="6" />
 							</>
 						)}
+						<ellipse cx="140" cy="128" rx="56" ry="56" fill="#fde3d2" stroke={INK} strokeWidth="7" />
 
-						{/* Round Chibi Head */}
-						<ellipse cx="140" cy="132" rx="60" ry="58" fill="#f5cba7" stroke={INK} strokeWidth="5" />
-
-						{/* Hair */}
+						{/* Clean Hair Cap */}
 						<path
 							d={
 								kind === 'hacker'
-									? 'M 86 116 Q 100 84 140 82 Q 180 84 194 116 Q 174 102 156 110 Q 140 96 122 110 Q 104 100 86 116 Z'
-									: 'M 74 126 Q 70 72 112 58 Q 142 46 174 62 Q 212 74 204 128 Q 194 104 176 96 Q 158 106 142 90 Q 120 106 102 96 Q 86 106 74 126 Z'
+									? 'M 88 112 Q 104 82 140 80 Q 176 82 192 112 Q 170 98 140 100 Q 110 98 88 112 Z'
+									: 'M 82 122 Q 78 68 140 62 Q 202 68 198 122 Q 186 96 164 90 Q 142 100 124 88 Q 102 98 82 122 Z'
 							}
 							fill={hairColor}
 							stroke={INK}
-							strokeWidth="4.8"
+							strokeWidth="6"
 							strokeLinejoin="round"
 						/>
-
-						{/* Face */}
 						{renderChibiFace()}
 
-						{/* Panic / Sad Sweat Drop */}
 						{(mood === 'panic' || mood === 'sad') && (
 							<path
-								d={`M 206 ${92 + sweatY * 0.6} Q 214 ${104 + sweatY * 0.6} 206 ${110 + sweatY * 0.6} Q 198 ${104 + sweatY * 0.6} 206 ${92 + sweatY * 0.6} Z`}
+								d="M 204 94 Q 212 106 204 112 Q 196 106 204 94 Z"
 								fill="#38bdf8"
 								stroke={INK}
-								strokeWidth="3"
+								strokeWidth="3.5"
 							/>
 						)}
 					</g>
 
-					{/* Animated Arms / Props */}
+					{/* Floating Cartoon Hands / Props (reference image 2 & 3 style — ZERO ugly elbows!) */}
 					{mood === 'panic' ? (
-						/* Victim grabbing head with both hands shaking! */
-						<g transform={`rotate(${panicShakeRot * 1.4}, 140, 190)`}>
-							<path d="M 84 218 Q 52 184 74 134" fill="none" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
-							<path d="M 84 218 Q 52 184 74 134" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
-							<circle cx="76" cy="130" r="15" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
-							<path d="M 196 218 Q 228 184 206 134" fill="none" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
-							<path d="M 196 218 Q 228 184 206 134" fill="none" stroke={INK} strokeWidth="5" strokeLinecap="round" />
-							<circle cx="204" cy="130" r="15" fill="#f5cba7" stroke={INK} strokeWidth="4.5" />
+						<g transform={`translate(0, ${handFloat})`}>
+							{/* Two floating hands raised near head in panic */}
+							<circle cx="64" cy="158" r="18" fill="#fde3d2" stroke={INK} strokeWidth="6" />
+							<circle cx="216" cy="158" r="18" fill="#fde3d2" stroke={INK} strokeWidth="6" />
 						</g>
-					) : kind === 'hacker' || (kind === 'engineer' && mood !== 'happy') ? (
-						/* Animated Typing on Laptop */
-						<g>
-							{/* Laptop Base & Screen */}
+					) : kind === 'hacker' ? (
+						/* Floating laptop + two resting hands */
+						<g transform={`translate(0, ${handFloat * 0.6})`}>
 							<polygon
-								points="116,254 222,254 236,204 130,204"
-								fill={kind === 'hacker' ? '#334155' : '#cbd5e1'}
+								points="120,256 218,256 232,208 134,208"
+								fill="#334155"
 								stroke={INK}
-								strokeWidth="4.5"
+								strokeWidth="5.5"
 								strokeLinejoin="round"
 							/>
-							<polygon points="134,209 230,209 218,249 122,249" fill={kind === 'hacker' ? '#0f172a' : '#e2e8f0'} />
-							{/* Glowing screen indicator */}
-							<circle cx="177" cy="229" r="7" fill={kind === 'hacker' ? '#22d3ee' : '#64748b'} opacity={0.7 + Math.sin(frame / 4) * 0.25} />
-							{/* Animated Left & Right Typing Hands */}
-							<circle cx="118" cy={254 + typeLeftY} r="13" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
-							<circle cx="152" cy={254 + typeRightY} r="13" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
-						</g>
-					) : mood === 'happy' ? (
-						/* Happy counter clerk hand (calm held pose) */
-						<g transform={`rotate(${Math.sin(frame / 28) * 2.5}, 196, 224)`}>
-							<path d="M 190 226 L 228 192" stroke={shirtColor} strokeWidth="22" strokeLinecap="round" />
-							<circle cx="232" cy="186" r="14" fill="#f5cba7" stroke={INK} strokeWidth="4.2" />
+							<polygon points="138,214 226,214 214,250 126,250" fill="#0f172a" />
+							<circle cx="176" cy="232" r="6" fill="#22d3ee" />
+							<circle cx="122" cy="256" r="13" fill="#fde3d2" stroke={INK} strokeWidth="5.5" />
+							<circle cx="154" cy="256" r="13" fill="#fde3d2" stroke={INK} strokeWidth="5.5" />
 						</g>
 					) : (
-						/* Resting sad arms */
-						<g transform={`translate(0, ${breatheY})`}>
-							<ellipse cx="82" cy="252" rx="14" ry="26" fill={shirtColor} stroke={INK} strokeWidth="4.5" />
-							<ellipse cx="198" cy="252" rx="14" ry="26" fill={shirtColor} stroke={INK} strokeWidth="4.5" />
+						/* Floating shrugging / pointing cartoon hands (exact reference image 2 & 3!) */
+						<g transform={`translate(0, ${handFloat})`}>
+							<path
+								d="M 74 234 Q 58 238 42 224 Q 34 218 40 210 Q 48 206 58 212 L 44 200 Q 38 192 48 188 Q 54 188 68 200 L 78 214 Q 84 226 74 234 Z"
+								fill="#fde3d2"
+								stroke={INK}
+								strokeWidth="5.5"
+								strokeLinejoin="round"
+							/>
+							<path
+								d="M 206 234 Q 222 238 238 224 Q 246 218 240 210 Q 232 206 222 212 L 236 200 Q 242 192 232 188 Q 226 188 212 200 L 202 214 Q 196 226 206 234 Z"
+								fill="#fde3d2"
+								stroke={INK}
+								strokeWidth="5.5"
+								strokeLinejoin="round"
+							/>
 						</g>
 					)}
 				</svg>
