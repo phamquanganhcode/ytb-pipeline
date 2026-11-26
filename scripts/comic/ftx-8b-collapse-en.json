@@ -1,0 +1,535 @@
+{
+  "title": "How FTX Lost $8 Billion in 10 Days (Everything Explained)",
+  "slug": "ftx_8b_collapse_en",
+  "brand": "BRIEFED",
+  "voice": "am_adam",
+  "bgm": "music/calm.mp3",
+  "description": "In January 2022, FTX was valued at $32 billion—with a Super Bowl ad, an NBA arena, and A-list celebrity endorsements. Ten months later, it vanished in ten days, leaving an $8 billion hole in customer funds. Here is the complete, plain-English breakdown of how the FTX and Alameda Research empire collapsed.",
+  "pinnedComment": "Which part of the FTX collapse still blows your mind most—the $65 billion secret credit line, the CoinDesk balance sheet leak, or the fact they used QuickBooks for a $32B empire?",
+  "thumbnail": {
+    "brand": "BRIEFED",
+    "subline": "HOW FTX VANISHED IN 10 DAYS",
+    "headline": "-$8 BILLION",
+    "mediaSrc": "comic/art/bg_ftx_collapse.jpg",
+    "mascot": "shocked"
+  },
+  "sources": [
+    "CoinDesk (Nov 2, 2022) — Divisions in Sam Bankman-Fried's Crypto Empire Blur on His Trading Titan Alameda's Balance Sheet",
+    "U.S. Department of Justice (SDNY) — United States v. Samuel Bankman-Fried Indictment, Trial Verdict & Sentencing (2022–2024)",
+    "U.S. Securities and Exchange Commission (SEC) — Complaint Against Samuel Bankman-Fried, Caroline Ellison & Gary Wang",
+    "U.S. Bankruptcy Court (District of Delaware) — Declaration of John J. Ray III in Support of Chapter 11 Petitions (Nov 2022)"
+  ],
+  "chapters": [
+    {"title": "The Safe Bank Illusion", "scene": 0},
+    {"title": "The $32 Billion Golden Boy", "scene": 3},
+    {"title": "The Secret Sibling: Alameda Research", "scene": 8},
+    {"title": "The CoinDesk Leak & The Arcade Token Trick", "scene": 12},
+    {"title": "The Tweet That Triggered a $6B Bank Run", "scene": 16},
+    {"title": "Inside the $65 Billion Backdoor", "scene": 20},
+    {"title": "Collapse, $400M Mystery Hack & 25 Years", "scene": 26},
+    {"title": "3 Brutal Lessons for Your Money", "scene": 31}
+  ],
+  "scenes": [
+    {
+      "kind": "comic_skit",
+      "backdrop": "bank_counter",
+      "interaction": "beg",
+      "interactionCueWord": "twenty bucks",
+      "actors": [
+        {
+          "role": "trader",
+          "mood": "neutral",
+          "speech": "Hey, I'd like to withdraw my $1,000.",
+          "speechCueWord": "walk into"
+        },
+        {
+          "role": "engineer",
+          "mood": "panic",
+          "flipX": true,
+          "cueWord": "manager",
+          "speechCueWord": "twenty bucks",
+          "speech": "Best I can do is $20 and an IOU."
+        }
+      ],
+      "text": "Imagine you walk into your bank on a Tuesday morning to withdraw a thousand dollars of your own savings. The teller smiles, walks into the back room, and comes out sweating—telling you the manager took your cash to Vegas, lost it on blackjack, and the best they can do right now is twenty bucks and a handwritten IOU.",
+      "textVi": "Hãy tưởng tượng sáng thứ Ba bạn bước vào ngân hàng để rút 1.000 đô tiền tiết kiệm của chính mình. Nhân viên quầy mỉm cười, đi vào phòng sau rồi chạy ra mồ hôi nhễ nhại—báo rằng giám đốc đã cầm tiền của bạn sang Vegas đánh bài thua sạch, giờ chỉ còn 20 đô với một tờ giấy ghi nợ viết tay.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "stock_cutaway",
+      "headline": "NOVEMBER 2022",
+      "subline": "$8 BILLION VANISHED IN 10 DAYS",
+      "sublineCueWord": "eight billion",
+      "mascot": "shocked",
+      "mascotCueWord": "FTX",
+      "media": {
+        "type": "image",
+        "src": "comic/art/bg_ftx_collapse.jpg"
+      },
+      "text": "Sound too absurd for real life? That is almost word-for-word what happened at FTX. In just ten chaotic days in November twenty twenty-two, a thirty-two-billion-dollar crypto empire imploded—and eight billion dollars of everyday customers' money simply wasn't there.",
+      "textVi": "Nghe quá vô lý so với đời thực đúng không? Nhưng đó gần như là nguyên văn những gì đã xảy ra tại FTX. Chỉ trong 10 ngày hỗn loạn tháng 11 năm 2022, một đế chế crypto trị giá 32 tỷ đô sụp đổ hoàn toàn—và 8 tỷ đô tiền của khách hàng đơn giản là không cánh mà bay.",
+      "sfx": "boom"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "hacker_room",
+      "mascot": "explaining",
+      "items": [
+        {"icon": "building", "label": "HOW DID IT GROW?", "sublabel": "$32B in 3 years", "cueWord": "Wall Street"},
+        {"icon": "bug", "label": "THE $65B BACKDOOR", "sublabel": "Hidden in code", "cueWord": "missing"},
+        {"icon": "shield", "label": "HOW TO STAY SAFE", "sublabel": "Red flags to spot", "cueWord": "protect"}
+      ],
+      "text": "How did a thirty-year-old in cargo shorts convince Wall Street's smartest billionaires to hand him two billion dollars? Where did eight billion dollars of customer deposits actually go missing? And what red flags can protect your own money next time? Let's unpack the whole story—no jargon, just straight facts.",
+      "textVi": "Làm sao một chàng trai 30 tuổi mặc quần đùi lại thuyết phục được những tỷ phú sành sỏi nhất Phố Wall đưa cho mình 2 tỷ đô? 8 tỷ đô tiền gửi của khách hàng thực sự đã biến mất đi đâu? Và những dấu hiệu cảnh báo nào giúp bạn bảo vệ tiền của mình lần sau? Cùng bóc tách toàn bộ câu chuyện—không thuật ngữ hàn lâm, chỉ có sự thật rõ ràng.",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "light_paper",
+      "mascot": "pointing",
+      "items": [
+        {"icon": "building", "label": "FTX (2019)", "sublabel": "Founded by SBF", "arrowToNext": true},
+        {"icon": "cash", "label": "$32 BILLION", "sublabel": "Peak valuation", "arrowToNext": true, "cueWord": "thirty two billion"},
+        {"icon": "globe", "label": "5M+ USERS", "sublabel": "Top 3 exchange", "cueWord": "millions"}
+      ],
+      "text": "First, you have to understand how massive FTX looked from the outside. Founded in May twenty nineteen by MIT physics graduate Sam Bankman-Fried and coder Gary Wang, FTX rocketed from a tiny startup to a thirty-two-billion-dollar valuation in less than three years, serving millions of traders worldwide.",
+      "textVi": "Đầu tiên, bạn cần hiểu nhìn từ bên ngoài FTX khổng lồ đến mức nào. Thành lập vào tháng 5 năm 2019 bởi cử nhân vật lý MIT Sam Bankman-Fried và lập trình viên Gary Wang, FTX phi mã từ một startup nhỏ lên mức định giá 32 tỷ đô trong chưa đầy 3 năm, phục vụ hàng triệu nhà giao dịch toàn cầu.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "building", "label": "$135M ARENA", "sublabel": "Miami Heat stadium"},
+        {"icon": "globe", "label": "SUPER BOWL AD", "sublabel": "Larry David", "cueWord": "Super Bowl"},
+        {"icon": "cash", "label": "A-LIST STARS", "sublabel": "Tom Brady & Curry", "cueWord": "Tom Brady"},
+        {"icon": "shield", "label": "SAFE IMAGE", "sublabel": "Regulated vibe", "highlight": true, "cueWord": "responsible"}
+      ],
+      "text": "And FTX didn't look like a shady offshore casino—it spent hundreds of millions buying trust. They paid one hundred thirty-five million dollars to put their name on the Miami Heat's basketball arena, aired a famous Super Bowl commercial starring Larry David, signed Tom Brady and Steph Curry, and pitched themselves to Congress as the responsible adult in crypto.",
+      "textVi": "Và FTX không hề trông giống một sòng bạc chui—họ chi hàng trăm triệu đô để mua niềm tin. Họ trả 135 triệu đô để gắn tên lên sân vận động của đội bóng rổ Miami Heat, phát quảng cáo Super Bowl đình đám có Larry David, ký hợp đồng với Tom Brady và Steph Curry, đồng thời tự quảng bá trước Quốc hội Mỹ là người lớn có trách nhiệm nhất ngành crypto.",
+      "sfx": "cash"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "office",
+      "interaction": "beg",
+      "interactionCueWord": "two hundred million",
+      "actors": [
+        {
+          "role": "hacker",
+          "mood": "smug",
+          "speech": "Hold on—I'm mid-game in League of Legends.",
+          "speechCueWord": "League"
+        },
+        {
+          "role": "trader",
+          "mood": "happy",
+          "flipX": true,
+          "speech": "Take our $200 million! Genius!",
+          "speechCueWord": "two hundred million"
+        }
+      ],
+      "text": "Even legendary Silicon Valley investors fell for the quirkiness. During a pitch meeting with Sequoia Capital, Sam was literally playing League of Legends on his screen while answering questions. Instead of walking out, investors called him a generational genius and wired over two hundred million dollars.",
+      "textVi": "Ngay cả những nhà đầu tư huyền thoại ở Thung lũng Silicon cũng bị vẻ lập dị đó thuyết phục. Trong buổi gọi vốn với quỹ Sequoia Capital, Sam thậm chí vừa chơi Liên Minh Huyền Thoại trên màn hình vừa trả lời câu hỏi. Thay vì bỏ về, các nhà đầu tư khen anh ta là thiên tài trăm năm có một và chuyển thẳng hơn 200 triệu đô.",
+      "sfx": "coin"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "light_paper",
+      "mascot": "deadpan",
+      "items": [
+        {"icon": "cash", "label": "TOYOTA COROLLA", "sublabel": "Humble PR image"},
+        {"icon": "globe", "label": "GIVE IT ALL AWAY", "sublabel": "Effective Altruism", "cueWord": "charity"},
+        {"icon": "shield", "label": "HALO EFFECT", "sublabel": "Nobody questioned him", "highlight": true, "cueWord": "questioned"}
+      ],
+      "text": "He also perfected the ultimate billionaire disguise: driving a beaten-up Toyota Corolla, sleeping on a beanbag at the office, and promising to give away ninety-nine percent of his fortune to charity under a philosophy called Effective Altruism. When someone looks that humble, almost nobody questioned what was happening behind the curtain.",
+      "textVi": "Anh ta còn hoàn thiện màn hóa trang tỷ phú đỉnh cao: lái chiếc Toyota Corolla cũ kỹ, ngủ trên ghế lười ngay tại văn phòng, và tuyên bố sẽ quyên góp 99% tài sản làm từ thiện theo triết lý Vị tha Hiệu quả. Khi ai đó trông giản dị đến vậy, gần như chẳng ai đặt câu hỏi chuyện gì đang diễn ra sau bức màn.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "hacker_room",
+      "mascot": "skeptical",
+      "items": [
+        {"icon": "building", "label": "$40M PENTHOUSE", "sublabel": "Bahamas HQ", "cueWord": "Bahamas"},
+        {"icon": "warning", "label": "ZERO BOARD", "sublabel": "No real oversight", "cueWord": "board"}
+      ],
+      "text": "Here is the catch nobody noticed while crypto was booming: Sam moved FTX's headquarters to a forty-million-dollar luxury penthouse in the Bahamas, surrounded himself with a tiny inner circle of college friends, and ran a thirty-two-billion-dollar financial giant with no independent board of directors and no real CFO. Wait—how could that possibly go wrong?",
+      "textVi": "Đây là điểm chết chẳng ai để ý khi crypto đang tăng nóng: Sam chuyển trụ sở FTX tới một căn penthouse sang trọng trị giá 40 triệu đô ở Bahamas, vây quanh mình bằng một nhóm nhỏ bạn đại học, và điều hành gã khổng lồ tài chính 32 tỷ đô mà không có hội đồng quản trị độc lập hay giám đốc tài chính thực thụ. Khoan—làm sao chuyện đó lại có thể không xảy ra sự cố được?",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "concept_card",
+      "backdrop": "light_paper",
+      "headline": "ALAMEDA RESEARCH",
+      "subline": "THE SECRET SISTER HEDGE FUND",
+      "items": [
+        {"icon": "building", "label": "FTX EXCHANGE"},
+        {"icon": "chart", "label": "ALAMEDA FUND", "cueWord": "Alameda"},
+        {"icon": "warning", "label": "SAME OWNER", "cueWord": "ninety percent"}
+      ],
+      "text": "To understand the crash, you have to meet FTX's older sibling: Alameda Research. Before FTX even existed, Sam founded Alameda in twenty seventeen as a crypto trading hedge fund—and he owned ninety percent of it. Publicly, FTX swore Alameda was just another regular customer with zero special privileges.",
+      "textVi": "Để hiểu cú sập, bạn phải biết đến người anh em của FTX: Alameda Research. Ngay từ trước khi FTX ra đời, Sam đã lập Alameda vào năm 2017 như một quỹ giao dịch crypto—và nắm tới 90% cổ phần. Công khai trước truyền thông, FTX thề rằng Alameda chỉ là một khách hàng bình thường không có bất kỳ đặc quyền nào.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "bank_counter",
+      "interaction": "swap",
+      "interactionCueWord": "horse track",
+      "actors": [
+        {
+          "role": "hacker",
+          "mood": "smug",
+          "cueWord": "back door",
+          "speechCueWord": "horse track",
+          "speech": "I'll put the cash back if my horse wins!"
+        },
+        {
+          "role": "engineer",
+          "mood": "neutral",
+          "flipX": true,
+          "speech": "Your vault deposits are 100% safe!",
+          "speechCueWord": "safe"
+        }
+      ],
+      "text": "Think of it like this. A crypto exchange is supposed to be a coat check—you hand in your jacket, they hang it up safe, and they give it back when you show your ticket. Instead, FTX was secretly slipping customers' jackets out the back door to Alameda, who pawned them to bet at the horse track.",
+      "textVi": "Hãy hình dung thế này. Một sàn giao dịch đúng nghĩa phải giống quầy gửi áo—bạn gửi áo khoác, họ cất giữ an toàn rồi trả lại khi bạn đưa vé. Đằng này, FTX lại lén tuồn áo của khách qua cửa sau cho Alameda mang đi cầm cố để đánh cược ở trường đua ngựa.",
+      "sfx": "glitch"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "fire", "label": "MAY 2022", "sublabel": "Terra Luna crash"},
+        {"icon": "chart", "label": "MARKET -70%", "sublabel": "Crypto winter", "cueWord": "seventy percent"},
+        {"icon": "skull", "label": "LENDERS CALL", "sublabel": "Pay us back NOW", "cueWord": "lenders"},
+        {"icon": "cash", "label": "HUGE HOLE", "sublabel": "Alameda broke", "highlight": true, "cueWord": "billions"}
+      ],
+      "text": "That scheme stayed hidden while prices only went up. Then came May twenty twenty-two. Terra Luna collapsed, crypto prices crashed seventy percent, and crypto lenders began demanding their loans back from Alameda immediately. Alameda had lost billions—and it didn't have the money to pay anyone back.",
+      "textVi": "Trò này được giấu kín suốt thời gian thị trường chỉ có tăng. Rồi tháng 5 năm 2022 ập đến. Terra Luna sụp đổ, giá crypto lao dốc 70%, và các bên cho vay lập tức đòi nợ Alameda. Alameda đã thua lỗ hàng tỷ đô—và không còn tiền để trả cho bất kỳ ai.",
+      "sfx": "alarm"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "office",
+      "mascot": "deadpan",
+      "items": [
+        {"icon": "wallet", "label": "CUSTOMER FUNDS", "sublabel": "Used to plug losses", "cueWord": "customer"},
+        {"icon": "warning", "label": "STILL HIDDEN", "sublabel": "Until Nov 2, 2022", "cueWord": "November"}
+      ],
+      "text": "According to testimony from Alameda's own CEO Caroline Ellison, instead of admitting defeat, they plugged Alameda's massive losses using customer deposits sitting inside FTX. For months, nobody on Earth knew the vault was half-empty—until one leaked spreadsheet landed on a reporter's desk on November second, twenty twenty-two.",
+      "textVi": "Theo lời khai của chính CEO Alameda Caroline Ellison, thay vì thừa nhận thua lỗ, họ lấy tiền gửi của khách hàng nằm trong FTX để vá lỗ hổng khổng lồ của Alameda. Suốt nhiều tháng, chẳng ai trên Trái Đất biết két sắt đã rỗng một nửa—cho đến khi một bảng tính bị rò rỉ rơi lên bàn của một phóng viên vào ngày 2 tháng 11 năm 2022.",
+      "sfx": "thud"
+    },
+    {
+      "kind": "source_receipt",
+      "articleTitle": "Divisions in Sam Bankman-Fried's Crypto Empire Blur on Alameda's Balance Sheet",
+      "leadParagraph": "A private financial document reviewed by CoinDesk showed that Alameda Research held $14.6 billion in assets as of June 30, 2022—yet its single biggest holding wasn't cash, Bitcoin, or Ethereum.",
+      "excerpt": "Much of the $14.6 billion on Alameda's balance sheet consists of a token centrally controlled by FTX: $3.66 billion of unlocked FTT and $2.16 billion of FTT collateral—meaning the trading giant rests on a foundation largely made up of a coin invented by a sister company.",
+      "trailingParagraph": "The document raised immediate alarms across the crypto industry: if FTT's price dropped sharply, Alameda's collateral would evaporate overnight.",
+      "highlight": "a foundation largely made up of a coin invented by a sister company",
+      "cueWord": "invented",
+      "source": "COINDESK (NOV 2, 2022)",
+      "mascot": "skeptical",
+      "text": "On November second, CoinDesk published a bombshell leak of Alameda's balance sheet. Out of fourteen-point-six billion dollars in supposed assets, nearly six billion dollars was FTT—a digital token invented out of thin air by FTX itself.",
+      "textVi": "Ngày 2 tháng 11, CoinDesk tung ra bài viết chấn động phanh phui bảng cân đối kế toán của Alameda. Trong số 14,6 tỷ đô tài sản trên giấy tờ, gần 6 tỷ đô lại là FTT—một đồng token kỹ thuật số do chính FTX tự in ra từ hư không.",
+      "sfx": "paper"
+    },
+    {
+      "kind": "concept_card",
+      "backdrop": "light_paper",
+      "headline": "THE FTT LOOP",
+      "subline": "PRINTING YOUR OWN COLLATERAL",
+      "items": [
+        {"icon": "cash", "label": "PRINT FTT", "cueWord": "arcade"},
+        {"icon": "bank", "label": "BORROW REAL $", "cueWord": "lend me"},
+        {"icon": "fire", "label": "HOUSE OF CARDS", "cueWord": "worthless"}
+      ],
+      "text": "Imagine opening an arcade, stamping one million plastic game tokens with your own face on them, selling ten tokens to your friend for ten dollars each, and then walking into a bank saying: hey, I own ten million dollars of tokens—lend me real cash! If anyone tries to sell those tokens at once, the price crashes to worthless.",
+      "textVi": "Hãy tưởng tượng bạn mở tiệm game, tự dập 1 triệu xu nhựa in mặt mình lên, bán cho bạn thân 10 xu với giá 10 đô một xu, rồi bước vào ngân hàng tuyên bố: tôi đang có 10 triệu đô xu game—cho tôi vay tiền mặt thật đi! Chỉ cần ai đó xả bán đống xu đó cùng lúc, giá trị của chúng sẽ lập tức về 0.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "wallet", "label": "$3.66B UNLOCKED", "sublabel": "FTT on Alameda books"},
+        {"icon": "lock", "label": "$2.16B COLLATERAL", "sublabel": "Pledged for loans", "cueWord": "collateral"},
+        {"icon": "warning", "label": "THIN MARKET", "sublabel": "No real buyers", "cueWord": "buyers"},
+        {"icon": "fire", "label": "DEATH SPIRAL", "sublabel": "One push = collapse", "highlight": true, "cueWord": "push"}
+      ],
+      "text": "Alameda held three-point-six-six billion dollars in unlocked FTT and another two-point-one-six billion pledged as loan collateral. The problem? Almost nobody outside FTX actually traded FTT—there were barely any real buyers. All it took was one big seller to push the first domino.",
+      "textVi": "Alameda nắm 3,66 tỷ đô FTT mở khóa cùng 2,16 tỷ đô nữa mang đi thế chấp vay nợ. Vấn đề là gì? Gần như chẳng ai ngoài FTX giao dịch FTT—không có đủ người mua thật. Chỉ cần một tay to bấm nút bán là quân domino đầu tiên sẽ đổ.",
+      "sfx": "alarm"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "hacker_room",
+      "mascot": "pointing",
+      "items": [
+        {"icon": "building", "label": "BINANCE (CZ)", "sublabel": "Held ~$530M in FTT", "cueWord": "Binance"},
+        {"icon": "fire", "label": "NOV 6, 2022", "sublabel": "One public tweet", "cueWord": "tweet"}
+      ],
+      "text": "And who happened to be sitting on more than half a billion dollars' worth of FTT from an early exit deal? FTX's biggest rival on Earth: Binance. Four days after the CoinDesk leak, on Sunday November sixth, Binance CEO Changpeng Zhao sent one public tweet.",
+      "textVi": "Và ai tình cờ đang nắm hơn nửa tỷ đô tiền FTT từ thương vụ thoái vốn trước đó? Chính là đối thủ lớn nhất hành tinh của FTX: Binance. Bốn ngày sau bài rò rỉ của CoinDesk, vào Chủ Nhật ngày 6 tháng 11, CEO Binance Triệu Trường Bằng đăng một dòng tweet công khai.",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "office",
+      "interaction": "phish",
+      "interactionCueWord": "twenty two",
+      "actors": [
+        {
+          "role": "trader",
+          "mood": "smug",
+          "speech": "We're liquidating all our FTT.",
+          "speechCueWord": "liquidate"
+        },
+        {
+          "role": "engineer",
+          "mood": "panic",
+          "flipX": true,
+          "cueWord": "Caroline",
+          "speechCueWord": "twenty two",
+          "speech": "Wait! We'll buy it all at $22!"
+        }
+      ],
+      "text": "CZ announced Binance would liquidate every single FTT token on its books due to recent revelations. Minutes later, Caroline Ellison replied publicly offering to buy all of Binance's FTT at twenty-two dollars. Instead of calming people down, that reply accidentally told the entire market the exact price where Alameda would blow up.",
+      "textVi": "CZ tuyên bố Binance sẽ thanh lý sạch toàn bộ số FTT họ đang nắm giữ vì những tiết lộ gần đây. Vài phút sau, Caroline Ellison công khai đáp trả, đề nghị mua lại toàn bộ FTT của Binance ở mức 22 đô. Thay vì trấn an dư luận, câu trả lời đó vô tình chỉ điểm cho cả thị trường đúng mức giá khiến Alameda nổ tung.",
+      "sfx": "glitch"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "cash", "label": "$6 BILLION", "sublabel": "Withdrawn in 72 hrs"},
+        {"icon": "chart", "label": "FTT -80%", "sublabel": "Crashed in 24 hrs", "cueWord": "eighty percent"},
+        {"icon": "lock", "label": "NOV 8 FREEZE", "sublabel": "Withdrawals halted", "cueWord": "froze"},
+        {"icon": "skull", "label": "GAME OVER", "sublabel": "Vault was empty", "highlight": true, "cueWord": "empty"}
+      ],
+      "text": "Instant panic. In seventy-two hours, terrified FTX users requested six billion dollars in withdrawals. FTT plunged eighty percent in a single day, wiping out Alameda's collateral. On Tuesday morning, November eighth, FTX froze all customer withdrawals—because the vault was already empty.",
+      "textVi": "Cơn hoảng loạn bùng nổ ngay lập tức. Trong 72 giờ, khách hàng hoảng sợ của FTX ồ ạt rút tới 6 tỷ đô. Đồng FTT rơi tự do 80% chỉ trong một ngày, thổi bay toàn bộ tài sản thế chấp của Alameda. Sáng thứ Ba ngày 8 tháng 11, FTX khóa toàn bộ lệnh rút tiền—bởi két sắt thực sự đã cạn sạch.",
+      "sfx": "boom"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "bank_counter",
+      "interaction": "swap",
+      "interactionCueWord": "walked away",
+      "actors": [
+        {
+          "role": "victim",
+          "mood": "panic",
+          "speech": "Please buy FTX! Save us!",
+          "speechCueWord": "rescue"
+        },
+        {
+          "role": "trader",
+          "mood": "sad",
+          "flipX": true,
+          "cueWord": "looked",
+          "speechCueWord": "walked away",
+          "speech": "Nope. This $8B hole is way too big."
+        }
+      ],
+      "text": "Desperate, Sam called his rival CZ to beg for an emergency rescue deal. Binance briefly signed a non-binding letter of intent to buy FTX—then looked inside the accounting books, saw an eight-billion-dollar hole, and walked away less than twenty-four hours later.",
+      "textVi": "Trong cơn tuyệt vọng, Sam gọi cho chính đối thủ CZ để cầu cứu một thương vụ giải cứu khẩn cấp. Binance tạm ký thỏa thuận sơ bộ không ràng buộc để mua lại FTX—nhưng vừa mở sổ sách kế toán ra nhìn thấy lỗ hổng 8 tỷ đô, họ lập tức rút lui chỉ chưa đầy 24 giờ sau.",
+      "sfx": "buzzer"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "hacker_room",
+      "mascot": "shocked",
+      "items": [
+        {"icon": "bug", "label": "HOW DID IT HAPPEN?", "sublabel": "Inside FTX's code", "cueWord": "software"},
+        {"icon": "cash", "label": "WHERE DID $8B GO?", "sublabel": "Follow the money", "cueWord": "eight billion"}
+      ],
+      "text": "Wait a second—exchanges have automated risk engines that are supposed to shut down any account the second it runs out of money. So how did Alameda lose eight billion dollars of other people's cash without the software ever stopping them? That's where the real crime happened.",
+      "textVi": "Khoan đã—các sàn giao dịch đều có hệ thống quản trị rủi ro tự động, lập tức thanh lý bất kỳ tài khoản nào ngay khi hết tiền. Vậy làm sao Alameda có thể nướng sạch 8 tỷ đô tiền của người khác mà phần mềm không hề chặn lại? Đó chính là nơi tội ác thực sự diễn ra.",
+      "sfx": "whoosh"
+    },
+    {
+      "kind": "source_receipt",
+      "articleTitle": "SEC & DOJ Findings: The Secret Alameda Backdoor in FTX's Code",
+      "leadParagraph": "Normally, FTX's automated risk engine liquidated any trader whose collateral fell below their borrowed positions—protecting customer deposits from losses.",
+      "excerpt": "At Bankman-Fried's direction, FTX co-founder Gary Wang modified FTX's core code to give Alameda Research a secret 'allow_negative' flag and a virtually unlimited $65 billion line of credit—exempting Alameda from automatic liquidation.",
+      "trailingParagraph": "This single hidden exception allowed Alameda to withdraw billions in customer funds directly from FTX whenever it needed cash.",
+      "highlight": "a secret 'allow_negative' flag and a virtually unlimited $65 billion line of credit",
+      "cueWord": "sixty five billion",
+      "source": "U.S. SEC & DOJ COURT FILINGS",
+      "mascot": "deadpan",
+      "text": "Court filings revealed the smoking gun. FTX co-founder Gary Wang testified that Sam instructed him to hard-code a secret exception just for Alameda: an allow-negative flag and a sixty-five-billion-dollar line of credit. Every regular user got liquidated at zero—while Alameda could go negative by billions.",
+      "textVi": "Hồ sơ tòa án đã phanh phui bằng chứng không thể chối cãi. Đồng sáng lập Gary Wang khai rằng Sam đã chỉ đạo anh ta cài cứng một ngoại lệ bí mật dành riêng cho Alameda: cờ cho phép số dư âm cùng hạn mức tín dụng 65 tỷ đô. Người dùng thường chạm 0 là bị thanh lý ngay—còn Alameda được phép âm tới hàng tỷ đô.",
+      "sfx": "paper"
+    },
+    {
+      "kind": "concept_card",
+      "backdrop": "light_paper",
+      "headline": "ALLOW_NEGATIVE",
+      "subline": "ONE LINE OF CODE THAT BROKE EVERYTHING",
+      "items": [
+        {"icon": "shield", "label": "USERS: $0 LIMIT"},
+        {"icon": "bug", "label": "ALAMEDA: -$65B", "cueWord": "unlimited"},
+        {"icon": "wallet", "label": "CUSTOMER CASH", "cueWord": "customer"}
+      ],
+      "text": "Picture a casino where every regular player gets kicked off the table the second they run out of chips—except the owner's secret account has an unlimited overdraft button wired straight into the casino's customer bank vault. That one line of code turned a trading exchange into an open piggy bank.",
+      "textVi": "Hãy tưởng tượng một sòng bạc nơi mọi người chơi thường đều bị mời khỏi bàn ngay khi hết phỉnh—ngoại trừ tài khoản bí mật của ông chủ có nút thấu chi không giới hạn nối thẳng vào két tiền gửi của khách. Đúng một dòng code đó đã biến cả sàn giao dịch thành con heo đất mở nắp.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "bullet_breakdown",
+      "backdrop": "light_paper",
+      "mascot": "pointing",
+      "bullets": [
+        {"text": "Covering billions in Alameda trading losses", "cueWord": "trading losses"},
+        {"text": "$5B+ in risky venture investments", "cueWord": "venture"},
+        {"text": "$250M+ in Bahamas luxury real estate", "cueWord": "real estate"},
+        {"text": "$100M+ in U.S. political donations", "cueWord": "political"},
+        {"text": "Super Bowl ads & celebrity sponsorships", "cueWord": "celebrity"}
+      ],
+      "text": "So where did the eight billion dollars actually go? Prosecutors traced it to five buckets: covering massive Alameda trading losses, pouring over five billion into risky venture investments, buying over two hundred fifty million in Bahamas real estate, spending over a hundred million on political donations, and funding Super Bowl ads and celebrity deals.",
+      "textVi": "Vậy 8 tỷ đô đó thực sự đã chảy đi đâu? Công tố viên lần ra 5 hướng chính: bù lỗ giao dịch khổng lồ cho Alameda, rót hơn 5 tỷ đô vào các thương vụ đầu tư mạo hiểm, mua hơn 250 triệu đô bất động sản ở Bahamas, chi hơn 100 triệu đô quyên góp chính trị, và tài trợ quảng cáo Super Bowl cùng dàn sao nổi tiếng.",
+      "sfx": "thud"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "office",
+      "interaction": "phish",
+      "interactionCueWord": "emojis",
+      "actors": [
+        {
+          "role": "engineer",
+          "mood": "neutral",
+          "speech": "Can I get $10M approved?",
+          "speechCueWord": "approved"
+        },
+        {
+          "role": "hacker",
+          "mood": "happy",
+          "flipX": true,
+          "cueWord": "emojis",
+          "speechCueWord": "emojis",
+          "speech": "Sure, here's a smiley emoji!"
+        }
+      ],
+      "text": "And the internal bookkeeping was jaw-dropping. When bankruptcy investigators took over, they discovered this thirty-two-billion-dollar financial company was tracking finances on basic QuickBooks software, had no list of its own bank accounts, and approved multi-million-dollar expense requests in chat rooms using smiley-face emojis.",
+      "textVi": "Và khâu kế toán nội bộ thì khiến ai nghe cũng sốc. Khi nhóm điều tra phá sản tiếp quản, họ phát hiện công ty tài chính 32 tỷ đô này theo dõi sổ sách bằng phần mềm kế toán cơ bản QuickBooks, thậm chí không có danh sách tài khoản ngân hàng của chính mình, và duyệt các khoản chi hàng triệu đô trong nhóm chat chỉ bằng biểu tượng mặt cười.",
+      "sfx": "pop"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "warning", "label": "AUTO-DELETE", "sublabel": "Signal chat policy"},
+        {"icon": "document", "label": "7 BALANCE SHEETS", "sublabel": "Fake versions made", "cueWord": "seven"},
+        {"icon": "skull", "label": "COVER-UP", "sublabel": "Hide the $8B hole", "highlight": true, "cueWord": "lenders"}
+      ],
+      "text": "Worse still, prosecutors revealed Sam ordered executives to set their internal Signal chats to auto-delete so there would be no paper trail. When lenders demanded to see Alameda's finances in mid twenty twenty-two, Caroline Ellison testified she prepared seven alternative balance sheets so Sam could pick whichever version looked least terrifying to send to lenders.",
+      "textVi": "Tệ hơn nữa, công tố viên tiết lộ Sam ra lệnh cho dàn lãnh đạo bật chế độ tự xóa tin nhắn trên ứng dụng Signal để không để lại dấu vết. Khi các chủ nợ đòi xem sổ sách của Alameda vào giữa năm 2022, Caroline Ellison khai rằng cô đã làm sẵn 7 phiên bản bảng cân đối kế toán khác nhau để Sam chọn bản nào trông đỡ đáng sợ nhất gửi cho chủ nợ.",
+      "sfx": "glitch"
+    },
+    {
+      "kind": "source_receipt",
+      "articleTitle": "Declaration of John J. Ray III in Support of Chapter 11 Bankruptcy",
+      "leadParagraph": "On November 11, 2022, FTX filed for Chapter 11 bankruptcy. Restructuring veteran John J. Ray III—the man who cleaned up the infamous Enron scandal—stepped in as CEO.",
+      "excerpt": "Never in my career have I seen such a complete failure of corporate controls and such a complete absence of trustworthy financial information as occurred here.",
+      "trailingParagraph": "From compromised systems integrity to the concentration of control in the hands of a very small group of inexperienced individuals, this situation is unprecedented.",
+      "highlight": "Never in my career have I seen such a complete failure of corporate controls",
+      "cueWord": "complete failure",
+      "source": "U.S. BANKRUPTCY COURT (NOV 2022)",
+      "mascot": "deadpan",
+      "text": "On November eleventh, twenty twenty-two, FTX filed for bankruptcy and Sam resigned. The man brought in to clean up the mess was John J. Ray the Third—the veteran who handled the Enron collapse. His verdict in court was brutal: never in my career have I seen such a complete failure of corporate controls.",
+      "textVi": "Ngày 11 tháng 11 năm 2022, FTX nộp đơn xin phá sản và Sam từ chức. Người được đưa về dọn dẹp đống đổ nát là John J. Ray III—chuyên gia kỳ cựu từng xử lý đại án Enron. Nhận xét của ông trước tòa cực kỳ đanh thép: trong cả sự nghiệp của mình, tôi chưa từng thấy sự sụp đổ hoàn toàn về kiểm soát nội bộ nào đến mức này.",
+      "sfx": "paper"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "hacker_room",
+      "mascot": "shocked",
+      "items": [
+        {"icon": "bug", "label": "$400M HACK", "sublabel": "Hours after filing", "cueWord": "four hundred"},
+        {"icon": "skull", "label": "SIM-SWAP RING", "sublabel": "Charged in 2024", "cueWord": "SIM"}
+      ],
+      "text": "And as if losing eight billion dollars wasn't chaotic enough, just hours after FTX filed for bankruptcy, another four hundred million dollars suddenly drained out of FTX wallets in the middle of the night. At first everyone blamed insiders—until federal prosecutors later indicted an outside SIM-swapping gang for pulling off one of the boldest crypto heists in history during the chaos.",
+      "textVi": "Và như thể mất 8 tỷ đô vẫn chưa đủ hỗn loạn, chỉ vài giờ sau khi FTX nộp đơn phá sản, thêm 400 triệu đô nữa bỗng nhiên bị rút sạch khỏi các ví FTX ngay giữa đêm. Ban đầu ai cũng nghi là người nội bộ—cho đến khi công tố viên liên bang sau đó truy tố một băng nhóm đánh cắp SIM bên ngoài đã lợi dụng hỗn loạn để thực hiện một trong những vụ trộm crypto táo tợn nhất lịch sử.",
+      "sfx": "alarm"
+    },
+    {
+      "kind": "grid_explainer",
+      "backdrop": "dark_grid",
+      "items": [
+        {"icon": "warning", "label": "DEC 2022", "sublabel": "Arrested in Bahamas"},
+        {"icon": "document", "label": "NOV 2023", "sublabel": "Guilty on 7 counts", "cueWord": "seven counts"},
+        {"icon": "lock", "label": "MAR 2024", "sublabel": "25 years in prison", "cueWord": "twenty five"},
+        {"icon": "cash", "label": "$11B FORFEITURE", "sublabel": "Federal court order", "highlight": true, "cueWord": "eleven billion"}
+      ],
+      "text": "The fallout moved fast. One month later, Sam was arrested in the Bahamas and extradited to New York. His closest inner circle—including Caroline Ellison and Gary Wang—pleaded guilty and testified against him. In November twenty twenty-three, a jury found him guilty on all seven counts of fraud in under five hours. In March twenty twenty-four, he was sentenced to twenty-five years in federal prison and ordered to forfeit eleven billion dollars.",
+      "textVi": "Hậu quả ập đến cực nhanh. Một tháng sau, Sam bị bắt tại Bahamas và dẫn độ về New York. Nhóm thân tín nhất—gồm Caroline Ellison và Gary Wang—đều nhận tội và ra làm chứng chống lại anh ta. Tháng 11 năm 2023, bồi thẩm đoàn tuyên Sam có tội trên cả 7 tội danh lừa đảo chỉ trong chưa đầy 5 giờ. Đến tháng 3 năm 2024, anh ta lĩnh án 25 năm tù liên bang cùng lệnh tịch thu 11 tỷ đô.",
+      "sfx": "thud"
+    },
+    {
+      "kind": "mascot_commentary",
+      "backdrop": "office",
+      "mascot": "shades",
+      "items": [
+        {"icon": "chart", "label": "$500M ANTHROPIC", "sublabel": "Early AI investment", "cueWord": "Anthropic"},
+        {"icon": "cash", "label": "100%+ USD CLAIMS", "sublabel": "Based on 2022 prices", "cueWord": "hundred percent"}
+      ],
+      "text": "Now here is the weirdest plot twist of the entire saga: did customers actually get their money back? Surprisingly, yes—sort of. Before collapsing, Sam had invested five hundred million dollars into an AI startup called Anthropic, which later exploded in value. Combined with recovering crypto prices, the bankruptcy estate collected enough cash to pay customers back over one hundred percent of their November twenty twenty-two dollar claim values.",
+      "textVi": "Và đây là cú ngoặt kỳ lạ nhất của cả vụ án: cuối cùng khách hàng có lấy lại được tiền không? Đáng ngạc nhiên là có—một phần. Trước khi sập, Sam từng rót 500 triệu đô vào startup AI mang tên Anthropic, công ty sau đó tăng giá trị phi mã. Cộng với việc thị trường crypto hồi phục, ban quản lý phá sản gom đủ tiền trả lại hơn 100% giá trị quy đổi ra đô la tại thời điểm tháng 11 năm 2022.",
+      "sfx": "cash"
+    },
+    {
+      "kind": "comic_skit",
+      "backdrop": "candlestick_chart",
+      "interaction": "beg",
+      "interactionCueWord": "missed",
+      "actors": [
+        {
+          "role": "trader",
+          "mood": "sad",
+          "speech": "Wait—my Bitcoin was worth $16K then...",
+          "speechCueWord": "sixteen thousand"
+        },
+        {
+          "role": "victim",
+          "mood": "panic",
+          "flipX": true,
+          "cueWord": "missed",
+          "speechCueWord": "missed",
+          "speech": "And I missed the entire bull run!"
+        }
+      ],
+      "text": "Sounds like a happy ending, right? Not quite. Customers were paid back in dollars measured at the bottom of the twenty twenty-two crash—when Bitcoin was around sixteen thousand dollars. So if you held one Bitcoin on FTX, you got cash for the crash price—and missed out on the entire massive rally that followed.",
+      "textVi": "Nghe như cái kết có hậu đúng không? Chưa hẳn đâu. Khách hàng được trả bằng đô la tính theo đúng đáy sập năm 2022—lúc Bitcoin chỉ khoảng 16.000 đô. Tức là nếu bạn giữ 1 Bitcoin trên FTX, bạn chỉ nhận lại tiền mặt theo giá đáy—và lỡ sạch toàn bộ sóng tăng khổng lồ sau đó.",
+      "sfx": "buzzer"
+    },
+    {
+      "kind": "bullet_breakdown",
+      "backdrop": "light_paper",
+      "mascot": "pointing",
+      "bullets": [
+        {"text": "Celebrities & Super Bowl ads are NOT audits", "cueWord": "celebrities"},
+        {"text": "Never trust an exchange with its own token collateral", "cueWord": "own token"},
+        {"text": "Not your keys, not your coins—use self-custody", "cueWord": "self custody"},
+        {"text": "Watch for missing boards & secret sister funds", "cueWord": "sister"}
+      ],
+      "text": "So what should you actually take away from the eight-billion-dollar FTX disaster? First, celebrities and Super Bowl ads are marketing—not financial audits. Second, whenever a platform backs its loans with its own token, run. Third, if you hold serious crypto long-term, remember self-custody—don't treat an exchange like a savings vault. And fourth, always watch for missing boards and secret sister companies.",
+      "textVi": "Vậy bạn thực sự rút ra được gì từ thảm họa 8 tỷ đô của FTX? Thứ nhất, người nổi tiếng và quảng cáo Super Bowl chỉ là marketing—không phải kiểm toán tài chính. Thứ hai, hễ nền tảng nào dùng chính đồng token do mình tự in ra làm tài sản thế chấp, hãy chạy ngay. Thứ ba, nếu giữ crypto dài hạn, hãy nhớ tự lưu trữ ví cá nhân—đừng coi sàn giao dịch như két tiết kiệm. Và thứ tư, luôn cảnh giác với công ty không có hội đồng quản trị và có công ty sân sau bí mật.",
+      "sfx": "thud"
+    },
+    {
+      "kind": "recap_cards",
+      "items": [
+        {"icon": "building", "label": "$32B EMPIRE BUILT ON HYPE"},
+        {"icon": "bug", "label": "$65B SECRET ALAMEDA BACKDOOR", "cueWord": "backdoor"},
+        {"icon": "lock", "label": "10-DAY COLLAPSE & 25-YEAR SENTENCE", "cueWord": "twenty five"}
+      ],
+      "text": "To wrap it all up in three points: FTX built a thirty-two-billion-dollar illusion on hype, secretly wired a sixty-five-billion-dollar backdoor to Alameda Research, and collapsed in ten days—ending with a twenty-five-year prison sentence. What do you think—did investors ignore obvious red flags, or was the cover-up just too good? Drop your thoughts in the comments, hit subscribe, and I'll see you in the next breakdown.",
+      "textVi": "Tóm gọn lại trong 3 ý chính: FTX dựng lên ảo ảnh 32 tỷ đô bằng chiêu trò quảng bá, lén cài cửa hậu 65 tỷ đô cho Alameda Research, và sụp đổ chỉ trong 10 ngày—khép lại bằng bản án 25 năm tù. Bạn nghĩ sao—do nhà đầu tư cố tình phớt lờ cảnh báo rõ ràng, hay màn che đậy quá tinh vi? Bình luận bên dưới, bấm đăng ký kênh và hẹn gặp bạn ở tập phân tích tiếp theo nhé.",
+      "sfx": "pop"
+    }
+  ]
+}
