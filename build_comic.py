@@ -276,7 +276,7 @@ def main():
         ("sublineCueWord", "sublineCueFrame"),
         ("mascotCueWord", "mascotCueFrame"),
     )
-    STRIP_SCENE_KEYS = {"text", "mediaQuery"} | {k for k, _ in SCENE_CUE_KEYS}
+    STRIP_SCENE_KEYS = {"text", "textVi", "mediaQuery"} | {k for k, _ in SCENE_CUE_KEYS}
 
     scenes_out = []
     for i, s in enumerate(raw_scenes):
@@ -363,14 +363,58 @@ def main():
     }
     (COMIC_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
 
-    # Write YouTube CC (.srt) and Lóng-style humble English Metadata Pack
+    # Write YouTube CC (.srt), Vietnamese review subtitle (_vi.srt), and bilingual review sheet (_review_vi.md)
     (ROOT / "out").mkdir(exist_ok=True)
     srt_scenes = [{"text": raw_scenes[i]["text"], "frames": scenes_out[i]["duration"], "transition": "cut"} for i in range(len(raw_scenes))]
     (ROOT / "out" / f"{slug}.srt").write_text(mv.srt(srt_scenes, 8), encoding="utf-8")
 
+    if any(s.get("textVi") for s in raw_scenes):
+        vi_srt_scenes = [
+            {"text": raw_scenes[i].get("textVi") or raw_scenes[i]["text"], "frames": scenes_out[i]["duration"], "transition": "cut"}
+            for i in range(len(raw_scenes))
+        ]
+        (ROOT / "out" / f"{slug}_vi.srt").write_text(mv.srt(vi_srt_scenes, 8), encoding="utf-8")
+
     def fmt_ts(frame: int) -> str:
         sec = max(0, round(frame / FPS))
         return f"{sec // 60:02d}:{sec % 60:02d}"
+
+    # Build bilingual QA review sheet so non-native English creators can verify every scene & cue
+    review_lines = [
+        f"# Bảng Duyệt Kịch Bản Song Ngữ: {script['title']}",
+        "",
+        f"- **Thời lượng:** {total_frames / FPS:.1f}s | **Số cảnh:** {len(scenes_out)} | **Tốc độ:** {len(all_words) / max(0.1, (total_frames / FPS) / 60.0):.0f} WPM",
+        f"- **Cách duyệt nhanh video:** Mở `out/kaggle_comic/{slug}.mp4` bằng VLC / PotPlayer và kéo file `{slug}_vi.srt` thả vào để xem phụ đề tiếng Việt khớp từng giây.",
+        "",
+        "---",
+        "",
+    ]
+    for i, s_out in enumerate(scenes_out):
+        s_raw = raw_scenes[i]
+        t_start = fmt_ts(s_out["from"])
+        t_end = fmt_ts(s_out["from"] + s_out["duration"])
+        cues = []
+        for k in ("cueFrame", "headlineCueFrame", "sublineCueFrame", "mascotCueFrame"):
+            if k in s_out:
+                cues.append(f"`{k}` @ {fmt_ts(s_out['from'] + s_out[k])}")
+        for a in s_out.get("actors", []):
+            role = a.get("role", "actor")
+            t_a = fmt_ts(s_out["from"] + a.get("cueFrame", 0))
+            sp = f" + thoại \"{a['speech']}\" @ {fmt_ts(s_out['from'] + a.get('speechCueFrame', a.get('cueFrame', 0)))}" if a.get("speech") else ""
+            cues.append(f"Nhân vật `{role}` @ {t_a}{sp}")
+        for it in s_out.get("items", []):
+            cues.append(f"Thẻ `{it['label']}` @ {fmt_ts(s_out['from'] + it.get('cueFrame', 0))}")
+        for b in s_out.get("bullets", []):
+            if isinstance(b, dict):
+                cues.append(f"Gạch đầu dòng \"{b['text']}\" @ {fmt_ts(s_out['from'] + b.get('cueFrame', 0))}")
+        review_lines.append(f"### Cảnh {i:02d} — `{s_out['kind']}` ({t_start} → {t_end})")
+        review_lines.append(f"- **EN:** {s_raw['text']}")
+        if s_raw.get("textVi"):
+            review_lines.append(f"- **VI:** {s_raw['textVi']}")
+        if cues:
+            review_lines.append("- **Hình ảnh / Nhịp bật:** " + " | ".join(cues))
+        review_lines.append("")
+    (ROOT / "out" / f"{slug}_review_vi.md").write_text("\n".join(review_lines), encoding="utf-8")
 
     chapters = [f"{fmt_ts(starts[c['scene']])} {c['title']}" for c in script.get("chapters", []) if 0 <= c.get("scene", -1) < len(starts)]
     disclaimer = (

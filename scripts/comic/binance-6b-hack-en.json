@@ -67,7 +67,8 @@
           "speech": "Dad... can I get $20 for gas?"
         }
       ],
-      "sfx": "pop"
+      "sfx": "pop",
+      "textVi": "Trong khi dân trade nhỏ lẻ còn đang cãi nhau xem thị trường chết thật hay chỉ giả chết để úp bô thêm lần cuối, thì một nửa chúng ta đã đạt tự do tài chính—tự do khỏi tiền bạc, tự do khỏi tài sản, và tự do xin bố mẹ 20 đô đổ xăng."
     },
     {
       "kind": "stock_cutaway",
@@ -81,14 +82,36 @@
         "src": "comic/art/bg_crypto_breach.jpg"
       },
       "text": "Think that's painful? Something way wilder just happened. Binance—the largest crypto exchange on Earth—got hit by a six-point-three-billion-dollar cyber heist across ten different blockchains in just a few hours.",
-      "sfx": "boom"
+      "sfx": "boom",
+      "textVi": "Tưởng thế đã đau? Một chuyện điên rồ hơn nhiều vừa xảy ra. Binance—sàn crypto lớn nhất hành tinh—vừa bị tin tặc cuỗm mất 6,3 tỷ đô trên 10 blockchain khác nhau chỉ trong vài giờ."
     },
     {
       "kind": "mascot_commentary",
       "backdrop": "hacker_room",
       "mascot": "explaining",
       "text": "How did hackers walk past a fortress of security engineers without even leaking a private key? Why did ten completely different blockchains empty at the exact same time? And is your money on an exchange actually safe? Let's break it all down.",
-      "sfx": "whoosh"
+      "sfx": "whoosh",
+      "items": [
+        {
+          "icon": "lock",
+          "label": "NO LEAKED KEY?",
+          "sublabel": "How did they sign?",
+          "cueWord": "private key"
+        },
+        {
+          "icon": "globe",
+          "label": "10 BLOCKCHAINS?",
+          "sublabel": "Emptied at once",
+          "cueWord": "blockchains"
+        },
+        {
+          "icon": "shield",
+          "label": "MONEY SAFE?",
+          "sublabel": "Coins on exchanges",
+          "cueWord": "your money"
+        }
+      ],
+      "textVi": "Làm sao tin tặc vượt qua cả pháo đài kỹ sư bảo mật mà thậm chí không làm lộ khóa cá nhân? Vì sao 10 blockchain hoàn toàn khác nhau lại cạn sạch cùng một lúc? Và tiền của bạn để trên sàn có thực sự an toàn không? Cùng mổ xẻ nhé."
     },
     {
       "kind": "grid_explainer",
@@ -117,7 +140,8 @@
         }
       ],
       "text": "First, why Binance? Simple: if you're going to cut the cameras and pick the locks all night, you rob the biggest mansion on the block. By 2026, Binance served over three hundred thirty-five million users and moved ninety-five billion dollars in daily trading volume.",
-      "sfx": "pop"
+      "sfx": "pop",
+      "textVi": "Đầu tiên, tại sao lại là Binance? Đơn giản thôi: nếu đã mất công cắt camera và phá khóa cả đêm, bạn sẽ trộm căn biệt thự to nhất phố. Đến năm 2026, Binance phục vụ hơn 335 triệu người dùng với khối lượng giao dịch 95 tỷ đô mỗi ngày."
     },
     {
       "kind": "grid_explainer",
@@ -144,7 +168,8 @@
         }
       ],
       "text": "At 20:05 UTC, five Binance XRP wallets emptied two hundred thirty-three million XRP in four minutes. Fifteen minutes later, a Bitcoin hot wallet wired out one-point-five billion dollars in a single transaction—followed by three-point-eight billion on Ethereum. Imagine depositing money at eight different banks, and one morning all eight politely wire everything to the exact same burglar.",
-      "sfx": "alarm"
+      "sfx": "alarm",
+      "textVi": "Lúc 20:05 UTC, năm ví XRP của Binance bị rút sạch 233 triệu XRP trong 4 phút. 15 phút sau, một ví nóng Bitcoin chuyển đi 1,5 tỷ đô trong một lệnh duy nhất—tiếp theo là 3,8 tỷ đô trên Ethereum. Hãy tưởng tượng bạn gửi tiền ở 8 ngân hàng khác nhau, và một sáng cả 8 nơi đều lịch sự chuyển sạch tiền cho đúng một tên trộm."
     },
     {
       "kind": "source_receipt",
@@ -157,7 +182,8 @@
       "source": "TRM LABS",
       "mascot": "skeptical",
       "text": "Binance said no private keys were leaked. So how did the funds move? According to TRM Labs, on Ethereum the attackers abused EIP-7702, a feature that lets a regular wallet delegate control to a smart contract—like a store owner signing a power-of-attorney letter, except the burglar walks in holding it.",
-      "sfx": "paper"
+      "sfx": "paper",
+      "textVi": "Binance nói không hề lộ khóa cá nhân. Vậy tiền đi bằng cách nào? Theo TRM Labs, trên Ethereum kẻ tấn công đã lợi dụng EIP-7702—tính năng cho phép ví thường ủy quyền kiểm soát cho một hợp đồng thông minh—giống như chủ tiệm ký giấy ủy quyền, chỉ khác là tên trộm lại cầm tờ giấy đó bước vào."
     },
     {
       "kind": "concept_card",
@@ -182,7 +208,8 @@
         }
       ],
       "text": "Why submit fifty authorizations at once? Because of a wallet's nonce—its transaction queue number. Binance's hot wallet moves so fast that hackers couldn't guess the exact number. So they did what you'd do at a crowded hospital: grab the next fifty queue tickets in a row so one is guaranteed to get called.",
-      "sfx": "pop"
+      "sfx": "pop",
+      "textVi": "Tại sao phải gửi 50 lệnh ủy quyền cùng lúc? Là vì nonce của ví—tức số thứ tự giao dịch. Ví nóng Binance chạy quá nhanh khiến tin tặc không đoán nổi số chính xác. Thế là chúng làm đúng cách bạn làm ở bệnh viện đông người: rút luôn 50 số thứ tự liên tiếp để chắc chắn có một số được gọi."
     },
     {
       "kind": "comic_skit",
@@ -205,7 +232,8 @@
         }
       ],
       "text": "Worse still, Bitcoin and XRP don't even use EIP-7702. Investigators later revealed attackers infected DevOps laptops via a poisoned coding tool and a fake job test, then pivoted straight into Binance's internal signing system. They didn't pick the vault—they made the vault open itself.",
-      "sfx": "glitch"
+      "sfx": "glitch",
+      "textVi": "Tệ hơn nữa, Bitcoin và XRP còn chẳng dùng EIP-7702. Các nhà điều tra sau đó phát hiện tin tặc đã cài mã độc vào laptop DevOps qua một công cụ lập trình bị tẩm độc và bài test xin việc giả, rồi đột nhập thẳng vào hệ thống ký nội bộ của Binance. Chúng không phá két sắt—chúng bắt két sắt tự mở."
     },
     {
       "kind": "source_receipt",
@@ -218,7 +246,8 @@
       "source": "TRM LABS",
       "mascot": "deadpan",
       "text": "Then came the wildest plot twist: crypto isn't as unstoppable as the slogans claim. Tether, Circle, and partners hit the freeze button on nearly three billion dollars in stablecoins—turning the hackers into billionaires on screen who couldn't spend a dime.",
-      "sfx": "cash"
+      "sfx": "cash",
+      "textVi": "Rồi cú ngoặt điên rồ nhất xuất hiện: crypto không hề bất khả xâm phạm như khẩu hiệu. Tether, Circle và các đối tác bấm nút đóng băng gần 3 tỷ đô stablecoin—biến đám tin tặc thành tỷ phú trên màn hình nhưng chẳng tiêu nổi một xu."
     },
     {
       "kind": "comic_skit",
@@ -241,7 +270,8 @@
         }
       ],
       "text": "Knowing the clock was ticking, the hackers dumped USDT on Uniswap and even deposited tainted USDT as collateral on Aave to borrow clean Ethereum. It's like stealing a Rolex, hearing the serial number is about to be blacklisted, and sprinting straight to a pawnshop for cash.",
-      "sfx": "coin"
+      "sfx": "coin",
+      "textVi": "Biết thời gian không còn nhiều, tin tặc xả gấp USDT trên Uniswap và thậm chí mang USDT bẩn đi thế chấp trên Aave để vay Ethereum sạch. Giống hệt chuyện trộm một chiếc Rolex, nghe tin số seri sắp bị khóa, liền chạy thẳng ra tiệm cầm đồ đổi lấy tiền mặt."
     },
     {
       "kind": "bullet_breakdown",
@@ -270,7 +300,8 @@
         }
       ],
       "text": "Within twenty-four hours, the FBI and Chainalysis linked the heist to North Korea's TraderTraitor group—citing Tornado Cash funding, rehearsed test runs, and a synchronized multi-chain blitz. Remember the golden rule of security: hackers only need to win once, while Binance has to win every single day.",
-      "sfx": "thud"
+      "sfx": "thud",
+      "textVi": "Trong vòng 24 giờ, FBI và Chainalysis lần ra dấu vết dẫn tới nhóm TraderTraitor của Triều Tiên—chỉ ra nguồn tiền từ Tornado Cash, các lần chạy thử trước đó và đòn tấn công đồng bộ đa chuỗi. Nhớ quy tắc vàng của bảo mật: tin tặc chỉ cần thắng một lần, còn Binance phải thắng mỗi ngày."
     },
     {
       "kind": "recap_cards",
@@ -292,7 +323,8 @@
         }
       ],
       "text": "So here are the three takeaways: six-point-three billion moved in hours, attackers hijacked the signing pipeline itself, and nearly half was frozen while Binance pledged to cover user losses. What do you think—still keeping your coins on exchanges? Drop a comment below and subscribe so you don't miss the next breakdown.",
-      "sfx": "pop"
+      "sfx": "pop",
+      "textVi": "Vậy đây là 3 điểm cốt lõi: 6,3 tỷ đô bay hơi trong vài giờ, kẻ tấn công chiếm quyền chính hệ thống ký nội bộ, và gần một nửa đã bị đóng băng trong khi Binance cam kết đền bù cho người dùng. Bạn nghĩ sao—có còn để tiền trên sàn không? Bình luận bên dưới và đăng ký kênh để không lỡ tập phân tích tiếp theo nhé."
     }
   ]
 }

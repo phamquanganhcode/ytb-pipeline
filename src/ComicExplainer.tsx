@@ -170,10 +170,10 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 					const enterSlide =
 						actorDelay > 0
 							? interpolate(
-									spring({ frame: frame - actorDelay, fps, config: { damping: 15, stiffness: 130 } }),
-									[0, 1],
-									[idx === 0 ? -120 : 120, 0]
-								)
+								spring({ frame: frame - actorDelay, fps, config: { damping: 15, stiffness: 130 } }),
+								[0, 1],
+								[idx === 0 ? -120 : 120, 0]
+							)
 							: 0;
 					return (
 						<div
@@ -829,8 +829,13 @@ const RecapCardsScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 	);
 };
 
-// 8. Mascot Commentary (Exact Lóng 00:33 / 09:26 / 12:22: Blurred full-bleed background + big expressive Host centered at bottom edge)
+// 8. Mascot Commentary (Exact Lóng 00:33 / 09:26 / 12:22: Blurred background + floating keyword callout cards + big Host centered)
 const MascotCommentaryScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
+	const frame = useCurrentFrame();
+	const { fps } = useVideoConfig();
+	const items = scene.items ?? [];
+	const stepFrames = Math.max(18, Math.floor((scene.duration * 0.6) / Math.max(1, items.length)));
+
 	return (
 		<AbsoluteFill>
 			{scene.media?.src ? (
@@ -848,8 +853,78 @@ const MascotCommentaryScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 				<ComicBackdrop kind={scene.backdrop ?? 'hacker_room'} blur={8} />
 			)}
 
-			<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)' }}>
-				<MascotHost pose={scene.mascot ?? 'deadpan'} size={660} />
+			{items.length > 0 && (
+				<div
+					style={{
+						position: 'absolute',
+						top: 86,
+						left: 80,
+						right: 80,
+						display: 'flex',
+						alignItems: 'center',
+						justifyContent: 'center',
+						gap: 42,
+						zIndex: 12,
+					}}
+				>
+					{items.map((item, idx) => {
+						const startAt = item.cueFrame ?? idx * stepFrames + 8;
+						const pop = spring({ frame: frame - startAt, fps, config: { damping: 14, stiffness: 165 } });
+						return (
+							<div
+								key={idx}
+								style={{
+									display: 'flex',
+									flexDirection: 'column',
+									alignItems: 'center',
+									gap: 14,
+									width: 380,
+									padding: '22px 24px',
+									backgroundColor: 'rgba(15, 23, 42, 0.90)',
+									border: `5px solid ${INK}`,
+									borderRadius: 24,
+									boxShadow: '0 14px 32px rgba(0,0,0,0.52)',
+									transform: `scale(${pop}) translateY(${interpolate(pop, [0, 1], [24, 0])}px)`,
+									opacity: pop,
+								}}
+							>
+								<ComicIcon name={item.icon} size={96} crossedOut={item.crossedOut} />
+								<div
+									style={{
+										fontFamily: SANS,
+										fontWeight: 900,
+										fontSize: 28,
+										color: '#ffe600',
+										textAlign: 'center',
+										textTransform: 'uppercase',
+										lineHeight: 1.2,
+										letterSpacing: 0.6,
+									}}
+								>
+									{item.label}
+								</div>
+								{item.sublabel && (
+									<div
+										style={{
+											fontFamily: SANS,
+											fontWeight: 600,
+											fontSize: 20,
+											color: '#e2e8f0',
+											textAlign: 'center',
+											lineHeight: 1.25,
+										}}
+									>
+										{item.sublabel}
+									</div>
+								)}
+							</div>
+						);
+					})}
+				</div>
+			)}
+
+			<div style={{ position: 'absolute', bottom: -18, left: '50%', transform: 'translateX(-50%)', zIndex: 10 }}>
+				<MascotHost pose={scene.mascot ?? 'deadpan'} size={620} />
 			</div>
 		</AbsoluteFill>
 	);
