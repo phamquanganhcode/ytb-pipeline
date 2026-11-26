@@ -3,6 +3,7 @@ import {
 	AbsoluteFill,
 	Audio,
 	Img,
+	OffthreadVideo,
 	Sequence,
 	interpolate,
 	spring,
@@ -74,12 +75,15 @@ export type ComicScene = {
 	trailingParagraph?: string;
 	highlight?: string;
 	media?: {
-		type: 'image';
+		type: 'image' | 'video';
 		src: string;
 		credit?: string;
 	};
 	sfx?: string;
 	interaction?: 'phish' | 'swap' | 'beg';
+	interactionLabel?: string;
+	interactionIcon?: ComicIconName;
+	interactionColor?: 'red' | 'yellow' | 'green' | 'blue';
 	interactionCueFrame?: number;
 	cueFrame?: number;
 	headlineCueFrame?: number;
@@ -208,8 +212,8 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 				})}
 			</div>
 
-			{/* Animated Interaction Prop (inline SVG icons — zero broken emojis on Linux!) */}
-			{scene.interaction && frame >= interactAt && (
+			{/* Animated Interaction Prop (custom label+icon OR preset — inline SVG only!) */}
+			{(scene.interactionLabel || scene.interaction) && frame >= interactAt && (
 				<div
 					style={{
 						position: 'absolute',
@@ -221,7 +225,35 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 						pointerEvents: 'none',
 					}}
 				>
-					{scene.interaction === 'phish' && (
+					{scene.interactionLabel ? (
+						<div
+							style={{
+								display: 'flex',
+								alignItems: 'center',
+								gap: 12,
+								backgroundColor:
+									scene.interactionColor === 'green'
+										? '#22c55e'
+										: scene.interactionColor === 'yellow'
+											? '#facc15'
+											: scene.interactionColor === 'blue'
+												? '#2563eb'
+												: '#ef4444',
+								color: scene.interactionColor === 'yellow' ? INK : '#ffffff',
+								border: `5px solid ${INK}`,
+								borderRadius: 16,
+								padding: '10px 22px',
+								fontFamily: SANS,
+								fontWeight: 900,
+								fontSize: 28,
+								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
+								whiteSpace: 'nowrap',
+							}}
+						>
+							{scene.interactionIcon && <ComicIcon name={scene.interactionIcon} size={34} />}
+							<span>{scene.interactionLabel}</span>
+						</div>
+					) : scene.interaction === 'phish' ? (
 						<div
 							style={{
 								display: 'flex',
@@ -241,8 +273,7 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 							<ComicIcon name="warning" size={34} />
 							<span>SIGN_TX.EXE</span>
 						</div>
-					)}
-					{scene.interaction === 'swap' && (
+					) : scene.interaction === 'swap' ? (
 						<div
 							style={{
 								display: 'flex',
@@ -274,8 +305,7 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 							<ComicIcon name="eth" size={32} />
 							<span>ETH</span>
 						</div>
-					)}
-					{scene.interaction === 'beg' && (
+					) : (
 						<div
 							style={{
 								display: 'flex',
@@ -335,16 +365,30 @@ const StockCutawayScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 
 	return (
 		<AbsoluteFill style={{ backgroundColor: '#090b10', overflow: 'hidden' }}>
-			<Img
-				src={staticFile(scene.media?.src || 'comic/art/bg_thumbnail.jpg')}
-				style={{
-					width: '100%',
-					height: '100%',
-					objectFit: 'cover',
-					transform: `scale(${zoom})`,
-					filter: 'brightness(0.58) contrast(1.14)',
-				}}
-			/>
+			{scene.media?.type === 'video' ? (
+				<OffthreadVideo
+					src={staticFile(scene.media.src)}
+					muted
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover',
+						transform: `scale(${zoom})`,
+						filter: 'brightness(0.55) contrast(1.16)',
+					}}
+				/>
+			) : (
+				<Img
+					src={staticFile(scene.media?.src || 'comic/art/bg_thumbnail.jpg')}
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover',
+						transform: `scale(${zoom})`,
+						filter: 'brightness(0.58) contrast(1.14)',
+					}}
+				/>
+			)}
 			<AbsoluteFill
 				style={{
 					background: 'radial-gradient(circle at center, rgba(0,0,0,0.08) 0%, rgba(0,0,0,0.70) 100%)',
@@ -485,12 +529,12 @@ const GridExplainerScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 									maxWidth: isHi ? 380 : 310,
 									...(isHi
 										? {
-												padding: '28px 34px',
-												borderRadius: 24,
-												backgroundColor: isLight ? 'rgba(250, 204, 21, 0.18)' : 'rgba(239, 68, 68, 0.22)',
-												border: `5px solid ${isLight ? '#dc2626' : '#ffe600'}`,
-												boxShadow: '0 14px 36px rgba(239, 68, 68, 0.35)',
-											}
+											padding: '28px 34px',
+											borderRadius: 24,
+											backgroundColor: isLight ? 'rgba(250, 204, 21, 0.18)' : 'rgba(239, 68, 68, 0.22)',
+											border: `5px solid ${isLight ? '#dc2626' : '#ffe600'}`,
+											boxShadow: '0 14px 36px rgba(239, 68, 68, 0.35)',
+										}
 										: {}),
 								}}
 							>
@@ -888,14 +932,26 @@ const MascotCommentaryScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 
 	return (
 		<AbsoluteFill>
-			{scene.media?.src ? (
+			{scene.media?.type === 'video' ? (
+				<OffthreadVideo
+					src={staticFile(scene.media.src)}
+					muted
+					style={{
+						width: '100%',
+						height: '100%',
+						objectFit: 'cover',
+						filter: 'blur(6px) brightness(0.52)',
+						transform: 'scale(1.06)',
+					}}
+				/>
+			) : scene.media?.src ? (
 				<Img
 					src={staticFile(scene.media.src)}
 					style={{
 						width: '100%',
 						height: '100%',
 						objectFit: 'cover',
-						filter: 'blur(9px) brightness(0.62)',
+						filter: 'blur(8px) brightness(0.58)',
 						transform: 'scale(1.06)',
 					}}
 				/>

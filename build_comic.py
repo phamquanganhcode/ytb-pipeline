@@ -102,13 +102,98 @@ def fetch_wikimedia_image(query: str, dest: Path) -> dict | None:
     return None
 
 
+def fetch_archive_video(query: str, dest: Path, archive_id: str | None = None, start_sec: int = 10) -> dict | None:
+    """Fetch a public-domain Internet Archive video clip and normalize to 1280x720 30fps H.264."""
+    meta_path = dest.with_suffix(".meta.json")
+    if dest.exists() and dest.stat().st_size > 100000 and meta_path.exists():
+        try:
+            return json.loads(meta_path.read_text(encoding="utf-8"))
+        except Exception:
+            pass
+    search_url = (
+        "https://archive.org/advancedsearch.php?"
+        f"q=title:({urllib.parse.quote(query)})+AND+mediatype:movies"
+        "&fl[]=identifier,title&sort[]=downloads+desc&rows=6&page=1&output=json"
+    )
+    try:
+        if archive_id:
+            idents = [archive_id]
+        else:
+            res = json.loads(urllib.request.urlopen(urllib.request.Request(search_url, headers=HEADERS), timeout=15).read().decode("utf-8"))
+            idents = [d["identifier"] for d in res.get("response", {}).get("docs", []) if d.get("identifier")]
+        for ident in idents:
+            meta_url = f"https://archive.org/metadata/{ident}/files"
+            meta = json.loads(urllib.request.urlopen(urllib.request.Request(meta_url, headers=HEADERS), timeout=15).read().decode("utf-8"))
+            mp4s = [
+                f for f in meta.get("result", [])
+                if str(f.get("name", "")).lower().endswith(".mp4")
+                and 300_000 < int(f.get("size") or 0) < 35_000_000
+            ]
+            if not mp4s:
+                continue
+            mp4s.sort(key=lambda f: int(f.get("size") or 0))
+            fname = urllib.parse.quote(mp4s[0]["name"])
+            dl_url = f"https://archive.org/download/{ident}/{fname}"
+            raw_path = dest.with_suffix(".raw.mp4")
+            try:
+                req = urllib.request.Request(dl_url, headers=HEADERS)
+                with urllib.request.urlopen(req, timeout=45) as resp, open(raw_path, "wb") as out_f:
+                    out_f.write(resp.read())
+                for ss in (str(start_sec), "0"):
+                    try:
+                        cmd = [
+                            mv.FFMPEG, "-y", "-hide_banner", "-loglevel", "error",
+                            "-ss", ss, "-stream_loop", "-1", "-i", str(raw_path),
+                            "-t", "18",
+                            "-vf", "scale=1280:720:force_original_aspect_ratio=increase,crop=1280:720",
+                            "-r", "30",
+                            "-c:v", "libx264", "-preset", "veryfast", "-crf", "23", "-pix_fmt", "yuv420p",
+                            "-an", "-movflags", "+faststart", str(dest),
+                        ]
+                        subprocess.run(cmd, check=True)
+                        if dest.exists() and dest.stat().st_size > 100000:
+                            break
+                    except Exception:
+                        dest.unlink(missing_ok=True)
+                raw_path.unlink(missing_ok=True)
+                if dest.exists() and dest.stat().st_size > 100000:
+                    info = {
+                        "license": "Public Domain / Archive.org",
+                        "artist": "Internet Archive",
+                        "url": f"https://archive.org/details/{ident}",
+                        "credit": f"Internet Archive ({ident})",
+                    }
+                    meta_path.write_text(json.dumps(info, indent=2), encoding="utf-8")
+                    print(f"  [video] {dest.name} <- archive.org/{ident} ({dest.stat().st_size // 1024} KB)")
+                    return info
+            except Exception:
+                raw_path.unlink(missing_ok=True)
+                dest.unlink(missing_ok=True)
+    except Exception as e:
+        print(f"  [warn] archive video search failed for {query!r}: {e}")
+    return None
+
+
 def resolve_media(scene: dict) -> dict | None:
     if scene.get("media"):
         return scene["media"]
     mq = scene.get("mediaQuery")
     if not mq:
         return None
+    kind = mq.get("type", "image")
     query = mq.get("query", "")
+    if kind == "video":
+        mp4 = MEDIA_DIR / f"{slugify(mq.get('archiveId') or query)}.mp4"
+        meta = fetch_archive_video(query, mp4, archive_id=mq.get("archiveId"), start_sec=int(mq.get("clipStartSec", 10)))
+        if meta:
+            return {
+                "type": "video",
+                "src": f"comic/media/{mp4.name}",
+                "credit": mq.get("credit") or meta["credit"],
+                "license": meta["license"],
+                "sourceUrl": meta.get("url", ""),
+            }
+        query = mq.get("fallbackQuery") or query
     jpg = MEDIA_DIR / f"{slugify(query)}.jpg"
     meta = fetch_wikimedia_image(query, jpg)
     if meta:
