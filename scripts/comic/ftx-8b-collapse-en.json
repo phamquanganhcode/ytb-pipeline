@@ -122,10 +122,10 @@
       "text": "How did a thirty-year-old in cargo shorts convince Wall Street's smartest billionaires to hand him two billion dollars? Where did eight billion dollars of customer deposits actually go missing? And what red flags can protect your own money next time? Let's unpack the whole story—no jargon, just straight facts.",
       "textVi": "Làm sao một chàng trai 30 tuổi mặc quần đùi lại thuyết phục được những tỷ phú sành sỏi nhất Phố Wall đưa cho mình 2 tỷ đô? 8 tỷ đô tiền gửi của khách hàng thực sự đã biến mất đi đâu? Và những dấu hiệu cảnh báo nào giúp bạn bảo vệ tiền của mình lần sau? Cùng bóc tách toàn bộ câu chuyện—không thuật ngữ hàn lâm, chỉ có sự thật rõ ràng.",
       "sfx": "whoosh",
-      "media": {
+      "mediaQuery": {
         "type": "video",
-        "src": "docu/media/stockmarketcrashof2008.mp4",
-        "credit": "Internet Archive (Public Domain)"
+        "query": "Wall Street stock exchange",
+        "fallbackQuery": "Wall Street New York Stock Exchange"
       }
     },
     {
@@ -308,10 +308,11 @@
       "sublineCueWord": "seventy percent",
       "mascot": "shocked",
       "mascotCueWord": "billions",
-      "media": {
+      "mediaQuery": {
         "type": "video",
-        "src": "docu/media/stockmarketcrashof2008.mp4",
-        "credit": "Internet Archive (Public Domain)"
+        "archiveId": "stockmarketcrashof2008",
+        "query": "stock market crash",
+        "fallbackQuery": "New York Stock Exchange trading floor"
       },
       "text": "That scheme stayed hidden while prices only went up. Then came May twenty twenty-two. Terra Luna collapsed, crypto prices crashed seventy percent, and crypto lenders began demanding their loans back from Alameda immediately. Alameda had lost billions—and it didn't have the money to pay anyone back.",
       "textVi": "Trò này được giấu kín suốt thời gian thị trường chỉ có tăng. Rồi tháng 5 năm 2022 ập đến. Terra Luna sụp đổ, giá crypto lao dốc 70%, và các bên cho vay lập tức đòi nợ Alameda. Alameda đã thua lỗ hàng tỷ đô—và không còn tiền để trả cho bất kỳ ai.",
@@ -337,10 +338,8 @@
       "text": "According to testimony from Alameda's own CEO Caroline Ellison, instead of admitting defeat, they plugged Alameda's massive losses using customer deposits sitting inside FTX. For months, nobody on Earth knew the vault was half-empty—until one leaked spreadsheet landed on a reporter's desk on November second, twenty twenty-two.",
       "textVi": "Theo lời khai của chính CEO Alameda Caroline Ellison, thay vì thừa nhận thua lỗ, họ lấy tiền gửi của khách hàng nằm trong FTX để vá lỗ hổng khổng lồ của Alameda. Suốt nhiều tháng, chẳng ai trên Trái Đất biết két sắt đã rỗng một nửa—cho đến khi một bảng tính bị rò rỉ rơi lên bàn của một phóng viên vào ngày 2 tháng 11 năm 2022.",
       "sfx": "thud",
-      "media": {
-        "type": "image",
-        "src": "docu/media/new_york_stock_exchange_trading_floor.jpg",
-        "credit": "Wikimedia Commons"
+      "mediaQuery": {
+        "query": "New York Stock Exchange trading floor"
       }
     },
     {
@@ -436,10 +435,8 @@
       "text": "And who happened to be sitting on more than half a billion dollars' worth of FTT from an early exit deal? FTX's biggest rival on Earth: Binance. Four days after the CoinDesk leak, on Sunday November sixth, Binance CEO Changpeng Zhao sent one public tweet.",
       "textVi": "Và ai tình cờ đang nắm hơn nửa tỷ đô tiền FTT từ thương vụ thoái vốn trước đó? Chính là đối thủ lớn nhất hành tinh của FTX: Binance. Bốn ngày sau bài rò rỉ của CoinDesk, vào Chủ Nhật ngày 6 tháng 11, CEO Binance Triệu Trường Bằng đăng một dòng tweet công khai.",
       "sfx": "whoosh",
-      "media": {
-        "type": "image",
-        "src": "docu/media/lower_manhattan_financial_district_skyline.jpg",
-        "credit": "Wikimedia Commons"
+      "mediaQuery": {
+        "query": "Lower Manhattan financial district skyline"
       }
     },
     {
@@ -549,10 +546,10 @@
       "text": "Wait a second—exchanges have automated risk engines that are supposed to shut down any account the second it runs out of money. So how did Alameda lose eight billion dollars of other people's cash without the software ever stopping them? That's where the real crime happened.",
       "textVi": "Khoan đã—các sàn giao dịch đều có hệ thống quản trị rủi ro tự động, lập tức thanh lý bất kỳ tài khoản nào ngay khi hết tiền. Vậy làm sao Alameda có thể nướng sạch 8 tỷ đô tiền của người khác mà phần mềm không hề chặn lại? Đó chính là nơi tội ác thực sự diễn ra.",
       "sfx": "whoosh",
-      "media": {
+      "mediaQuery": {
         "type": "video",
-        "src": "docu/media/server_room_with_seismic_isolation_floor_in_east.mp4",
-        "credit": "Internet Archive (Public Domain)"
+        "query": "server room data center",
+        "fallbackQuery": "data center server racks"
       }
     },
     {
@@ -748,10 +745,8 @@
       "text": "Now here is the weirdest plot twist of the entire saga: did customers actually get their money back? Surprisingly, yes—sort of. Before collapsing, Sam had invested five hundred million dollars into an AI startup called Anthropic, which later exploded in value. Combined with recovering crypto prices, the bankruptcy estate collected enough cash to pay customers back over one hundred percent of their November twenty twenty-two dollar claim values.",
       "textVi": "Và đây là cú ngoặt kỳ lạ nhất của cả vụ án: cuối cùng khách hàng có lấy lại được tiền không? Đáng ngạc nhiên là có—một phần. Trước khi sập, Sam từng rót 500 triệu đô vào startup AI mang tên Anthropic, công ty sau đó tăng giá trị phi mã. Cộng với việc thị trường crypto hồi phục, ban quản lý phá sản gom đủ tiền trả lại hơn 100% giá trị quy đổi ra đô la tại thời điểm tháng 11 năm 2022.",
       "sfx": "cash",
-      "media": {
-        "type": "image",
-        "src": "docu/media/securities_and_exchange_commission_headquarters_.jpg",
-        "credit": "Wikimedia Commons"
+      "mediaQuery": {
+        "query": "Securities and Exchange Commission headquarters"
       }
     },
     {
