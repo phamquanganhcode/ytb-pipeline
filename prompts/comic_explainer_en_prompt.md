@@ -38,3 +38,7 @@ You are writing a high-retention English YouTube explainer script for a faceless
   - `subline`: 3–5 words ALL CAPS context (e.g. `"THE BINANCE HEIST"`).
   - `mascot`: Expressive pose (`shades`, `shocked`, `pointing`, `deadpan`).
   - `mediaQuery`: Dramatic real-world photo for the background.
+
+## 5. Unified Background Art Style Template (Mandatory for ALL Generated Backgrounds)
+Whenever generating a new room/location background for any episode, ALWAYS reuse this exact style prefix so every scene looks like it belongs to the same show:
+> `16:9 widescreen clean modern 2D vector comic interior background, flat-color webcomic explainer style matching a bright tidy anime/vector office: clean thin dark ink outlines, soft pastel cream/warm beige and light-blue palette, bright even daylight, subtle cel-shading, uncluttered lower third so foreground characters stand out cleanly. NO muddy sepia/brown tones, NO text, NO letters, NO numbers, NO logos, NO people.`

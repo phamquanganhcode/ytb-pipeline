@@ -30,6 +30,7 @@ export type ComicGridItem = {
 	sublabel?: string;
 	crossedOut?: boolean;
 	arrowToNext?: boolean;
+	highlight?: boolean;
 	cueFrame?: number;
 };
 
@@ -207,7 +208,7 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 				})}
 			</div>
 
-			{/* Animated Interaction Prop passing cleanly into the center gap between the 2 characters */}
+			{/* Animated Interaction Prop (inline SVG icons — zero broken emojis on Linux!) */}
 			{scene.interaction && frame >= interactAt && (
 				<div
 					style={{
@@ -223,40 +224,63 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 					{scene.interaction === 'phish' && (
 						<div
 							style={{
+								display: 'flex',
+								alignItems: 'center',
+								gap: 12,
 								backgroundColor: '#ef4444',
 								color: '#ffffff',
 								border: `5px solid ${INK}`,
 								borderRadius: 16,
-								padding: '12px 22px',
+								padding: '10px 20px',
 								fontFamily: SANS,
 								fontWeight: 900,
 								fontSize: 28,
 								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
 							}}
 						>
-							⚠ SIGN_TX.EXE
+							<ComicIcon name="warning" size={34} />
+							<span>SIGN_TX.EXE</span>
 						</div>
 					)}
 					{scene.interaction === 'swap' && (
 						<div
 							style={{
+								display: 'flex',
+								alignItems: 'center',
+								gap: 12,
 								backgroundColor: '#facc15',
 								color: INK,
 								border: `5px solid ${INK}`,
 								borderRadius: 16,
-								padding: '12px 24px',
+								padding: '10px 22px',
 								fontFamily: SANS,
 								fontWeight: 900,
 								fontSize: 28,
 								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
 							}}
 						>
-							⌚ ROLEX → 💵 ETH
+							<svg width="32" height="32" viewBox="0 0 32 32">
+								<rect x="11" y="2" width="10" height="6" rx="2" fill="#94a3b8" stroke={INK} strokeWidth="2.5" />
+								<rect x="11" y="24" width="10" height="6" rx="2" fill="#94a3b8" stroke={INK} strokeWidth="2.5" />
+								<circle cx="16" cy="16" r="9.5" fill="#fef08a" stroke={INK} strokeWidth="3" />
+								<line x1="16" y1="16" x2="16" y2="11" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+								<line x1="16" y1="16" x2="20" y2="16" stroke={INK} strokeWidth="2.5" strokeLinecap="round" />
+							</svg>
+							<span>ROLEX</span>
+							<svg width="26" height="20" viewBox="0 0 26 20">
+								<line x1="2" y1="10" x2="18" y2="10" stroke={INK} strokeWidth="3.5" strokeLinecap="round" />
+								<polygon points="16,4 25,10 16,16" fill={INK} />
+							</svg>
+							<ComicIcon name="eth" size={32} />
+							<span>ETH</span>
 						</div>
 					)}
 					{scene.interaction === 'beg' && (
 						<div
 							style={{
+								display: 'flex',
+								alignItems: 'center',
+								gap: 12,
 								backgroundColor: '#22c55e',
 								color: '#ffffff',
 								border: `5px solid ${INK}`,
@@ -268,7 +292,8 @@ const ComicSkitScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 								boxShadow: '0 10px 24px rgba(0,0,0,0.35)',
 							}}
 						>
-							💵 $20 GAS?
+							<ComicIcon name="cash" size={36} />
+							<span>$20 GAS?</span>
 						</div>
 					)}
 				</div>
@@ -431,26 +456,51 @@ const GridExplainerScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 					const pop = spring({ frame: frame - startAt, fps, config: { damping: 13, stiffness: 175 } });
 					const nextStart = items[idx + 1]?.cueFrame ?? (idx + 1) * stepFrames + 6;
 					const arrowPop = spring({ frame: frame - nextStart, fps, config: { damping: 13, stiffness: 175 } });
+					const isHi = Boolean(item.highlight);
 					return (
 						<React.Fragment key={idx}>
+							{isHi && idx > 0 && (
+								<div
+									style={{
+										fontFamily: SANS,
+										fontWeight: 900,
+										fontSize: 64,
+										color: '#ffe600',
+										opacity: pop,
+										transform: `scale(${pop})`,
+										marginRight: -16,
+									}}
+								>
+									=
+								</div>
+							)}
 							<div
 								style={{
 									display: 'flex',
 									flexDirection: 'column',
 									alignItems: 'center',
-									gap: 18,
+									gap: 16,
 									transform: `scale(${pop})`,
 									opacity: pop,
-									maxWidth: 310,
+									maxWidth: isHi ? 380 : 310,
+									...(isHi
+										? {
+												padding: '28px 34px',
+												borderRadius: 24,
+												backgroundColor: isLight ? 'rgba(250, 204, 21, 0.18)' : 'rgba(239, 68, 68, 0.22)',
+												border: `5px solid ${isLight ? '#dc2626' : '#ffe600'}`,
+												boxShadow: '0 14px 36px rgba(239, 68, 68, 0.35)',
+											}
+										: {}),
 								}}
 							>
-								<ComicIcon name={item.icon} size={146} crossedOut={item.crossedOut} />
+								<ComicIcon name={item.icon} size={isHi ? 160 : 146} crossedOut={item.crossedOut} />
 								<div
 									style={{
 										fontFamily: SANS,
 										fontWeight: 900,
-										fontSize: 36,
-										color: isLight ? INK : '#ffffff',
+										fontSize: isHi ? 42 : 36,
+										color: isHi ? (isLight ? '#dc2626' : '#ffe600') : isLight ? INK : '#ffffff',
 										textAlign: 'center',
 										lineHeight: 1.15,
 										letterSpacing: 0.5,
@@ -462,9 +512,9 @@ const GridExplainerScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 									<div
 										style={{
 											fontFamily: SANS,
-											fontWeight: 600,
+											fontWeight: 700,
 											fontSize: 23,
-											color: isLight ? '#475569' : '#9ca3af',
+											color: isHi ? (isLight ? INK : '#fef08a') : isLight ? '#475569' : '#9ca3af',
 											textAlign: 'center',
 											lineHeight: 1.25,
 										}}

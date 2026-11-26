@@ -275,6 +275,7 @@ def main():
         ("headlineCueWord", "headlineCueFrame"),
         ("sublineCueWord", "sublineCueFrame"),
         ("mascotCueWord", "mascotCueFrame"),
+        ("interactionCueWord", "interactionCueFrame"),
     )
     STRIP_SCENE_KEYS = {"text", "textVi", "mediaQuery"} | {k for k, _ in SCENE_CUE_KEYS}
 

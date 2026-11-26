@@ -50,6 +50,7 @@
       "kind": "comic_skit",
       "backdrop": "candlestick_chart",
       "interaction": "beg",
+      "interactionCueWord": "ask our parents",
       "text": "While retail crypto traders are still arguing whether the market is actually dead or just playing dead to rug-pull us one last time, half of us have already achieved financial freedom—freedom from money, freedom from assets, and freedom to ask our parents for twenty bucks of gas money.",
       "actors": [
         {
@@ -164,6 +165,8 @@
         {
           "icon": "wallet",
           "label": "$6.3B TOTAL",
+          "sublabel": "STOLEN IN ONE NIGHT",
+          "highlight": true,
           "cueWord": "eight different"
         }
       ],
@@ -215,6 +218,7 @@
       "kind": "comic_skit",
       "backdrop": "office",
       "interaction": "phish",
+      "interactionCueWord": "internal signing",
       "actors": [
         {
           "role": "hacker",
@@ -253,6 +257,7 @@
       "kind": "comic_skit",
       "backdrop": "bank_counter",
       "interaction": "swap",
+      "interactionCueWord": "stealing a Rolex",
       "actors": [
         {
           "role": "hacker",
