@@ -159,6 +159,7 @@ def synth(text, voice, engine, style="", rate="+0%", pitch="+0Hz", pad_seconds=P
         if not Path(edge_bin).exists():
             edge_bin = "edge-tts"
         audio = None
+        last_err = ""
         for attempt in range(8):
             tmp = ROOT / "public" / f"_edge_{os.getpid()}_{int(time.time()*1000)}.mp3"
             try:
@@ -170,13 +171,20 @@ def synth(text, voice, engine, style="", rate="+0%", pitch="+0Hz", pad_seconds=P
                     if sr != SAMPLE_RATE:
                         raise ValueError(f"Edge TTS returned {sr} Hz audio; expected {SAMPLE_RATE}")
                     break
-            except Exception:
+            except Exception as e:
+                if isinstance(e, subprocess.CalledProcessError) and e.stderr:
+                    raw = e.stderr.decode("utf-8", "replace") if isinstance(e.stderr, bytes) else str(e.stderr)
+                    last_err = raw.strip().splitlines()[-1] if raw.strip() else str(e)
+                else:
+                    last_err = str(e)
+                if attempt >= 2:
+                    print(f"  [edge-tts retry {attempt + 1}/8] {last_err}")
                 time.sleep(2.0 * (attempt + 1))
             finally:
                 if tmp.exists():
                     tmp.unlink()
         if audio is None:
-            raise RuntimeError(f"Edge TTS failed for {text!r} after 8 attempts")
+            raise RuntimeError(f"Edge TTS failed for {text!r} after 8 attempts: {last_err}")
     elif engine == "gemini":
         body = {"contents": [{"parts": [{"text": style + text}]}],
                 "generationConfig": {"responseModalities": ["AUDIO"], "speechConfig": {"voiceConfig": {"prebuiltVoiceConfig": {"voiceName": voice}}}}}
