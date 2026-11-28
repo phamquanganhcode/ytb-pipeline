@@ -15,6 +15,7 @@ Target length: **{{LENGTH_MINUTES}} minutes** of narration (about 150 spoken wor
 ## Story structure
 
 1. **Hook (first 30 s, about 75 words).** Viewers leave in the first 30 seconds, so earn them:
+   - **Thumbnail ↔ Opening Alignment:** Scene 1–2 MUST directly validate the main keyword, number, or promise from `meta.thumbnail` so viewers immediately know they clicked the right video.
    - Scene 1 drops the viewer into the single most dramatic moment of the life, mid-action, in
      present tense ("It's 1873. Wall Street is collapsing, and you are the only calm person in
      the room."). No birth, no background yet.
@@ -27,8 +28,9 @@ Target length: **{{LENGTH_MINUTES}} minutes** of narration (about 150 spoken wor
      reaches it.
 2. **Setups and payoffs.** Plant at least three concrete details early, each followed by
    "Remember that." Pay every one of them off later in the video.
-3. **Turning points.** A new turning point every 30–60 seconds: a decision, a deal, a loss, a
-   betrayal. Use real years; the counter shows the year and your money at that moment.
+3. **Turning points & the "But / Therefore" Rule.** A new turning point every 30–60 seconds: a decision, a deal, a loss, a
+   betrayal. Connect scenes with conflict (`but`, `yet`, `however`) or consequence (`so`, `therefore`, `because`)—NEVER chain beats chronologically with `"and then ... and then ..."`. Use real years; the counter shows the year and your money at that moment.
+4. **Mandatory Mid-Video Rehooks (~30% and ~50% mark).** Plant two explicit curiosity-gap rehooks around the 30% and 50% runtime marks (tag those scenes with `"rehook": true`), reminding the viewer of the main stakes and teasing an upcoming twist before diving into the next act.
 4. **One explainer.** In the first third, explain the money idea at the center of this life
    (a bubble, short selling, a Ponzi scheme, compound interest, a bank run) with one everyday
    analogy, in under a minute.
@@ -201,7 +203,7 @@ Reply with **one JSON object only**, no markdown fences, no commentary, in this 
   ],
   "meta": {
     "titleOptions": ["<3 alternative titles>"],
-    "thumbnail": "<one sentence: the single image, plus at most 3 words of text>",
+    "thumbnail": "<Editorial Photo-Collage scene (real archival photo cutouts, torn newspaper/ledger with yellow highlighter, red marker arrow/circle); text: '<1-3 WORDS MAX>'>",
     "chapters": [{"scene": 0, "title": "<2-5 words>", "mood": "tense"}],
     "description": "<YouTube description: 2-line hook, the line 'A comedic dramatization of documented history.', a chapter list with timestamps estimated from word counts, then sources>",
     "factCheck": ["<each year, amount and claim, with its basis>"],

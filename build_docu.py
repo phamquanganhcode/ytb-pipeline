@@ -291,13 +291,45 @@ def main():
             scene_obj["media"] = resolved_media[i]
         if resolved_lists[i]:
             scene_obj["mediaList"] = resolved_lists[i]
+        # Auto-beats for long scenes (> 12s) lacking frequent internal cues
+        if dur > 12 * FPS:
+            existing_cues = ([scene_obj["cueFrame"]] if "cueFrame" in scene_obj else []) + scene_obj.get("cutFrames", [])
+            raw_text = s.get("text", "")
+            sent_offsets = []
+            for m in re.finditer(r"[.!?;:—]\s+", raw_text):
+                prefix_tokens = mv._words(raw_text[: m.end()])
+                if prefix_tokens and w_start + len(prefix_tokens) < len(word_at):
+                    rel_f = int(word_at[w_start + len(prefix_tokens)]) - frm
+                    if 45 <= rel_f <= dur - 45:
+                        sent_offsets.append(rel_f)
+            beats = []
+            last_b = 0
+            for cand in sent_offsets:
+                if cand - last_b >= int(4.0 * FPS) and all(abs(cand - c) >= 45 for c in existing_cues):
+                    beats.append(cand)
+                    last_b = cand
+            cursor = int(5.0 * FPS)
+            while cursor <= dur - 45:
+                if all(abs(cursor - b) >= int(4.0 * FPS) for b in beats) and all(abs(cursor - c) >= 45 for c in existing_cues):
+                    beats.append(cursor)
+                cursor += int(5.0 * FPS)
+            if beats:
+                scene_obj["beats"] = sorted(beats)
         scenes_out.append(scene_obj)
+
+    long_docu = [(idx, round(sc["duration"] / FPS, 1)) for idx, sc in enumerate(scenes_out) if sc["duration"] > 12 * FPS]
+    avg_sec = (total_frames / FPS) / max(1, len(scenes_out))
+    print(f"[Pacing Audit] scenes={len(scenes_out)} | avg={avg_sec:.1f}s/scene | scenes>12s={len(long_docu)}")
+    if long_docu:
+        sample = ", ".join(f"#{idx}({d}s)" for idx, d in long_docu[:6])
+        print(f"  [INFO] Auto-beats injected for >12s scenes: {sample}")
 
     manifest = {
         "title": script["title"],
         "fps": FPS,
         "durationInFrames": total_frames,
         "audio": f"docu/{wav_path.name}",
+        **({"thumbnail": script["thumbnail"]} if script.get("thumbnail") else {}),
         "scenes": scenes_out,
     }
     (DOCU_DIR / "manifest.json").write_text(json.dumps(manifest, indent=2), encoding="utf-8")
@@ -328,6 +360,14 @@ def main():
     remotion_bin = ROOT / "node_modules" / ".bin" / ("remotion.cmd" if sys.platform == "win32" else "remotion")
     remotion_cmd = [str(remotion_bin)] if remotion_bin.exists() else ["npx", "remotion"]
     out_mp4 = ROOT / "out" / f"{slug}.mp4"
+    thumb_out = ROOT / "out" / f"{slug}_thumb.png"
+    subprocess.run(
+        remotion_cmd + ["still", "src/index.ts", "DocuThumbnail", str(thumb_out)],
+        cwd=ROOT,
+        check=True,
+        shell=(sys.platform == "win32"),
+    )
+    print(f"Rendered thumbnail: {thumb_out}")
     subprocess.run(
         remotion_cmd + ["render", "src/index.ts", "DocuEngine", str(out_mp4)],
         cwd=ROOT,

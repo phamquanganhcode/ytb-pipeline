@@ -21,20 +21,21 @@ Target length: **{{LENGTH_MINUTES}} minutes** of narration (about 150 spoken wor
 ## Story structure (follow in order)
 
 1. **Cold open (0–10 s).** Start with "Day 1." and a concrete, surprising action already
-   happening. No greeting, no "in this video", no rhetorical question first.
+   happening that directly references the promise/keyword in `meta.thumbnail` (Thumbnail ↔ Opening Alignment). No greeting, no "in this video", no rhetorical question first.
 2. **The rule (by 15 s).** State the premise as a hard rule in one or two short sentences.
 3. **The bet (by 60 s).** {{FRIEND_NAME}} makes a specific, small, funny bet with you, with a
    stake that is not money (e.g. "Loser washes the other one's car for a year."). Never use
    "Twenty bucks says". It must be settled in the final minute.
-4. **Escalation ladder.** Jump forward on a clear counter (Day 1, Day 2, Day 7, Year 1...).
-   Every jump is bigger and has a new consequence: first fun, then strange, then a real problem.
+4. **Escalation ladder & "But / Therefore" Rule.** Jump forward on a clear counter (Day 1, Day 2, Day 7, Year 1...).
+   Every jump is bigger and has a new consequence: connect jumps with conflict (`but`, `yet`, `however`) or consequence (`so`, `therefore`, `because`)—never `"and then ... and then ..."`. First fun, then strange, then a real problem.
    Reuse one transition line at least twice (like "Then the numbers start to get bigger.").
-5. **A real fact every ~20 seconds.** Economics, banking, inflation, taxes, history, physics of
+5. **Mandatory Rehooks (~30% and ~50% mark).** At ~30% and ~50% of the episode, drop a sharp rehook teasing the bigger twist ahead and reminding viewers of the bet/stakes (tag `"rehook": true`).
+6. **A real fact every ~20 seconds.** Economics, banking, inflation, taxes, history, physics of
    cash (weight, volume). Each fact must be true and checkable; list a source for each.
-6. **Comedy.** {{FRIEND_NAME}} gets a short line every 15–25 seconds. Jokes come from character,
+7. **Comedy.** {{FRIEND_NAME}} gets a short line every 15–25 seconds. Jokes come from character,
    not from puns.
-7. **One emotional beat** in the second half: something money cannot fix.
-8. **Twist + ending.** A final turn that reframes the premise, then settle the bet, then end with
+8. **One emotional beat** in the second half: something money cannot fix.
+9. **Twist + ending.** A final turn that reframes the premise, then settle the bet, then end with
    one question to the viewer that invites a comment.
 
 ## Originality rules

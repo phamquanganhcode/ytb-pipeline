@@ -11,7 +11,7 @@ import sys
 import unicodedata
 from pathlib import Path
 
-from make_video import FPS, LANGS, PAINTED, PROMPTS, TRANSITION_FRAMES, count_words, validate, validate_unique_faces
+from make_video import FPS, LANGS, PAD_SECONDS, PAINTED, PROMPTS, TRANSITION_FRAMES, audit_retention, count_words, validate, validate_unique_faces
 
 ROOT = Path(__file__).parent
 TOPICS = ROOT / "topics" / "life.txt"
@@ -69,6 +69,17 @@ def check(path):
     chapters = script.get("meta", {}).get("chapters", [])
     if chapters and any(not c.get("mood") for c in chapters):
         raise SystemExit("every chapter in meta.chapters must have a 'mood' (one of: tense, calm, mystery, triumph, sad)")
+    rate_wps = LANGS[script.get("lang", "en")]["rate"] / 60.0
+    too_long = [
+        (i, round(len(s.get("text", "").split()) / rate_wps + PAD_SECONDS, 1))
+        for i, s in enumerate(script["scenes"])
+        if len(s.get("text", "").split()) / rate_wps + PAD_SECONDS > 15.0
+    ]
+    if too_long:
+        raise SystemExit(f"scenes exceed 15s (split at comma/colon for tighter pacing): {too_long[:5]}")
+    warnings = audit_retention(script)
+    if "--strict" in sys.argv and warnings:
+        raise SystemExit(f"strict retention check failed with {len(warnings)} warning(s)")
     path.write_text(json.dumps(script, indent=2, ensure_ascii=False), encoding="utf-8")
     print(f"ok: {words} words, {len(script['scenes'])} scenes")
 
@@ -102,13 +113,15 @@ def chapters(script, name):
         scenes, starts = manifest["scenes"], [0]
         for prev, s in zip(scenes, scenes[1:]):
             starts.append(starts[-1] + prev["frames"] - (0 if s["transition"] == "cut" else TRANSITION_FRAMES))
+        shift = 1 if scenes and scenes[0].get("kind") == "montage" else 0
         starts = [f // FPS for f in starts]
     else:
         starts = srt_starts(script, name)
+        shift = 0
         if not starts:
             return []
     assert marks[0]["scene"] == 0, "YouTube needs the first chapter at 0:00"
-    secs = [starts[m["scene"]] for m in marks]
+    secs = [starts[0 if m["scene"] == 0 else m["scene"] + shift] for m in marks]
     assert all(b - a >= 10 for a, b in zip(secs, secs[1:])), "YouTube chapters must be at least 10 s long"
     return [f"{s // 60}:{s % 60:02} {m['title']}" for s, m in zip(secs, marks)]
 
@@ -139,7 +152,7 @@ if __name__ == "__main__":
     cmd = sys.argv[1] if len(sys.argv) > 1 else ""
     if cmd == "next":
         next_topic()
-    elif cmd in ("check", "upload") and len(sys.argv) == 3:
+    elif cmd in ("check", "upload") and len(sys.argv) >= 3 and not sys.argv[2].startswith("-"):
         (check if cmd == "check" else upload)(Path(sys.argv[2]))
     else:
         raise SystemExit(__doc__)

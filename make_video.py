@@ -820,6 +820,7 @@ def main():
     # In tests Flash-Lite reached the length this way but narrated the outline ("Real fact check:", "The final
     # scene settles the wager") and invented sources, so the default Flash models stay the recommended path.
     parser.add_argument("--chunked", action="store_true", help="write an outline, then one chapter per call (for Flash-Lite, which writes short replies)")
+    parser.add_argument("--montage", action="store_true", help="prepend a 3.5s flash-forward montage built from peak scenes")
     parser.add_argument("--no-render", action="store_true", help="stop after voices and manifest")
     args = parser.parse_args()
     if args.minutes is None:
@@ -975,6 +976,12 @@ def main():
         })
         print(f"[{i + 1}/{len(script['scenes'])}] scene {i}: {frames / FPS:.1f}s - {scene['text'][:40]}", flush=True)
 
+    if (args.montage or script.get("montage")) and len(scenes) >= 4:
+        montage_scene = build_montage_scene(scenes, out_dir, episode)
+        scenes[0]["transition"] = "cut"
+        scenes.insert(0, montage_scene)
+        print(f"Prepended flash-forward montage: {len(montage_scene['montageClips'])} clips ({montage_scene['frames'] / FPS:.1f}s)")
+
     # Burned-in captions and the corner counter are off by default, like the reference channel;
     # "captions": true / "showCounter": true in a script turn them back on. The .srt goes to YouTube CC.
     manifest = {"title": script["title"], "fps": FPS,
@@ -997,6 +1004,7 @@ def main():
     (ROOT / "out" / f"{episode}.srt").write_text(srt(scenes, lang["captionWords"] * 2), encoding="utf-8")
     (ROOT / "out" / f"{episode}_youtube.txt").write_text(youtube_pack(script, scenes), encoding="utf-8")
     audit_monetization(script, scenes)
+    audit_retention(script, scenes)
 
     if not args.no_render:
         remotion_bin = str(ROOT / "node_modules" / ".bin" / "remotion.cmd") if sys.platform == "win32" and (ROOT / "node_modules" / ".bin" / "remotion.cmd").exists() else "npx"
@@ -1029,6 +1037,7 @@ def music_tracks(script, scenes):
     starts = [0]
     for i, s in enumerate(scenes[1:], 1):
         starts.append(starts[-1] + scenes[i - 1]["frames"] - (0 if s["transition"] == "cut" else TRANSITION_FRAMES))
+    shift = 1 if scenes and scenes[0].get("kind") == "montage" else 0
     tracks = []
     for c in script.get("meta", {}).get("chapters", []):
         mood = c.get("mood")
@@ -1040,8 +1049,10 @@ def music_tracks(script, scenes):
         if not (ROOT / "public" / src).exists():
             print(f"warning: public/{src} missing; chapter {c.get('title')!r} keeps the previous music")
             src = tracks[-1]["src"] if tracks else single
+        idx = c.get("scene", 0)
+        mapped = 0 if idx == 0 else min(len(starts) - 1, idx + shift)
         if not tracks or tracks[-1]["src"] != src:
-            tracks.append({"from": 0 if not tracks else starts[c["scene"]], "src": src})
+            tracks.append({"from": 0 if not tracks else starts[mapped], "src": src})
     return tracks or [{"from": 0, "src": single}]
 
 
@@ -1084,6 +1095,8 @@ def srt(scenes, per_cue):
         if i:
             start += scenes[i - 1]["frames"] - (0 if s["transition"] == "cut" else TRANSITION_FRAMES)
         words = s["text"].split()
+        if not words:
+            continue
         groups = [words[j:j + per_cue] for j in range(0, len(words), per_cue)]
         speech = s["frames"] - int(PAD_SECONDS * FPS)
         for g, chunk in enumerate(groups):
@@ -1091,6 +1104,96 @@ def srt(scenes, per_cue):
             b = start + speech * (g + 1) // len(groups)
             cues.append(f"{len(cues) + 1}\n{ts(a)} --> {ts(b)}\n{' '.join(chunk)}\n")
     return "\n".join(cues)
+
+
+def _extract_thumb_text(thumb):
+    """Return display text string from either dict (disaster) or string (life) meta.thumbnail."""
+    if isinstance(thumb, dict):
+        return " ".join(str(thumb.get(k, "") or "") for k in ("title", "subtitle", "stat", "headline", "subline")).strip()
+    if isinstance(thumb, str):
+        m = re.search(r"text:\s*['\"‘“]([^'\"’”]+)", thumb)
+        return m.group(1).strip() if m else ""
+    return ""
+
+
+def build_montage_scene(scenes, out_dir, episode, frames=105):
+    """Build a 3.5s flash-forward montage scene from 3-4 peak mid-episode moments."""
+    n = len(scenes)
+    lo = max(1, int(n * 0.20)) if n >= 6 else 0
+    hi = max(lo + 1, int(n * 0.85)) if n >= 6 else n
+    scored = []
+    for idx in range(lo, hi):
+        s = scenes[idx]
+        score = 0
+        if any(a.get("expression") == "shock" for a in s.get("actions", [])):
+            score += 3
+        if any(x.get("sound") in ("boom", "explosion", "alarm", "cash") for x in s.get("sfx", [])):
+            score += 3
+        if s.get("diagram") or s.get("quote"):
+            score += 2
+        if s.get("fx") or s.get("stamp"):
+            score += 1
+        scored.append((score, idx, s))
+    scored.sort(key=lambda item: (-item[0], item[1]))
+    picked, seen_bgs = [], set()
+    for _, idx, s in scored:
+        if s["bg"] not in seen_bgs:
+            picked.append((idx, s))
+            seen_bgs.add(s["bg"])
+            if len(picked) == 4:
+                break
+    if len(picked) < 4:
+        for _, idx, s in scored:
+            if all(p_idx != idx for p_idx, _ in picked):
+                picked.append((idx, s))
+                if len(picked) == 4:
+                    break
+    picked.sort(key=lambda item: item[0])
+    clips = []
+    for _, s in picked:
+        expr = next(
+            (a.get("expression") for a in reversed(s.get("actions", [])) if a.get("expression")),
+            s.get("start", {}).get("you", {}).get("expression", "shock"),
+        )
+        clips.append({
+            "bg": s["bg"],
+            **({"stamp": s["stamp"]} if s.get("stamp") else {}),
+            **({"fx": s["fx"]} if s.get("fx") else {}),
+            "expression": expr or "shock",
+        })
+
+    wav_path = out_dir / "montage.wav"
+    sr = SAMPLE_RATE
+    total_samples = int(frames / FPS * sr)
+    rng = np.random.default_rng(42)
+    riser_freq = np.linspace(48, 140, total_samples)
+    riser = np.sin(2 * np.pi * np.cumsum(riser_freq) / sr) * np.linspace(0.2, 0.85, total_samples)
+    noise = np.convolve(rng.standard_normal(total_samples), np.ones(40) / 40, "same") * np.linspace(0.05, 0.45, total_samples)
+    wave = riser * 0.55 + noise * 0.45
+    for k in range(max(1, len(clips))):
+        pos = int(k * total_samples / max(1, len(clips)))
+        tick_len = min(int(0.08 * sr), total_samples - pos)
+        if tick_len > 0:
+            tt = np.arange(tick_len) / sr
+            wave[pos:pos + tick_len] += np.sin(2 * np.pi * np.linspace(420, 90, tick_len) * tt) * np.exp(-tt * 28) * 0.7
+    peak = float(np.abs(wave).max()) or 1.0
+    sf.write(wav_path, (wave / peak * 0.45).astype(np.float32), sr)
+
+    return {
+        "kind": "montage",
+        "text": "",
+        "bg": clips[0]["bg"],
+        "transition": "cut",
+        "audio": f"{episode}/{wav_path.name}",
+        "frames": frames,
+        "mouth": [0] * frames,
+        "words": [],
+        "icons": [],
+        "actions": [],
+        "start": scenes[0]["start"],
+        "sfx": [{"sound": "boom", "at": 0, "volume": 0.32}],
+        "montageClips": clips,
+    }
 
 
 def audit_monetization(script, scenes=None):
@@ -1120,12 +1223,122 @@ def audit_monetization(script, scenes=None):
     if generic_flow:
         warnings.append(f"{generic_flow} data_flow/code_crash diagram(s) lack custom 'nodes' and will fall back to CrowdStrike defaults.")
 
-    thumb = script.get("meta", {}).get("thumbnail", {})
-    thumb_words = len((thumb.get("title", "") + " " + thumb.get("subtitle", "") + " " + thumb.get("stat", "")).split())
+    thumb_text = _extract_thumb_text(script.get("meta", {}).get("thumbnail"))
+    thumb_words = len(thumb_text.split())
     if thumb_words > 6:
         warnings.append(f"Thumbnail text has {thumb_words} words (> 6): trim to 2-4 punchy words for mobile legibility.")
 
     print(f"[Monetization Audit] words={words} | est_duration={minutes:.1f}m | diagrams={len(diagrams)} | docs={len(docs)} | thumb_words={thumb_words}")
+    for w in warnings:
+        print(f"  [WARN] {w}")
+    return warnings
+
+
+RETENTION_EVENT_KEYS = ("icons", "callouts", "actions", "quote", "paper", "doc", "vision", "diagram", "sfx", "crowd", "stamp")
+REHOOK_PAT = re.compile(
+    r"\b(wait|but first|later|what happened next|until|still ahead|years away|minutes away|about to|twist|never saw|remember that|before we|chưa dừng lại|nhưng khoan|sắp tới)\b",
+    re.I,
+)
+THUMB_STOP_WORDS = {
+    "story", "true", "system", "postmortem", "with", "from", "that", "this", "text", "image", "shows",
+    "background", "cartoon", "style", "shocked", "happy", "left", "right", "bold", "words", "title",
+    "into", "over", "under", "about", "after", "before", "your", "life", "only", "plus", "single",
+}
+
+
+def audit_retention(script, scenes=None):
+    """Audit script/scene pacing, visual density, causal connectors, mid-roll rehooks, and thumbnail alignment."""
+    warnings = []
+    raw_scenes = script.get("scenes", [])
+    if not raw_scenes:
+        return warnings
+    lang_code = script.get("lang", "en")
+    rate_wps = LANGS.get(lang_code, LANGS["en"])["rate"] / 60.0
+
+    content_scenes = [s for s in (scenes or raw_scenes) if s.get("kind") != "montage"]
+    durs = []
+    for idx, sc in enumerate(raw_scenes):
+        if scenes and idx < len(content_scenes):
+            durs.append(content_scenes[idx]["frames"] / FPS)
+        else:
+            durs.append(len(str(sc.get("text", "")).split()) / rate_wps + PAD_SECONDS)
+    total_sec = sum(durs) or 1.0
+
+    long_scenes = [(i, round(d, 1)) for i, d in enumerate(durs) if d > 10.0]
+    if long_scenes:
+        top = ", ".join(f"#{i}({d}s)" for i, d in sorted(long_scenes, key=lambda x: -x[1])[:5])
+        warnings.append(f"{len(long_scenes)} scene(s) exceed 10s ({top}); split at comma/colon for tighter micro-pacing.")
+
+    total_events = 0
+    dry_streak = 0
+    max_dry = 0
+    prev_bg = None
+    for sc in raw_scenes:
+        ev = 0
+        for k in RETENTION_EVENT_KEYS:
+            v = sc.get(k)
+            if isinstance(v, list):
+                ev += len(v)
+            elif v:
+                ev += 1
+        if prev_bg is not None and sc.get("bg") != prev_bg:
+            ev += 1
+        prev_bg = sc.get("bg")
+        total_events += ev
+        if ev == 0:
+            dry_streak += 1
+            max_dry = max(max_dry, dry_streak)
+        else:
+            dry_streak = 0
+    sec_per_event = total_sec / max(total_events, 1)
+    if sec_per_event > 4.0:
+        warnings.append(f"Low visual density: 1 event per {sec_per_event:.1f}s (> 4.0s target); add icons, callouts, actions, or SFX.")
+    if max_dry >= 3:
+        warnings.append(f"{max_dry} consecutive scenes have zero visual events or background changes.")
+
+    full_text = " ".join(str(sc.get("text", "")) for sc in raw_scenes)
+    causal_cnt = len(re.findall(r"\b(but|yet|however|therefore|instead|nhưng|vì thế|tuy nhiên)\b", full_text, re.I))
+    then_cnt = len(re.findall(r"\b(and then|then|rồi thì|sau đó)\b", full_text, re.I))
+    if total_sec >= 180 and (then_cnt > causal_cnt or causal_cnt < max(2, int(total_sec / 120))):
+        warnings.append(f"Weak causal pacing ('then'={then_cnt} vs 'but/therefore'={causal_cnt}); replace 'and then' chains with conflict/consequence.")
+
+    if total_sec >= 300:
+        has_30 = False
+        has_50 = False
+        cum = 0.0
+        for sc, d in zip(raw_scenes, durs):
+            mid = (cum + d * 0.5) / total_sec
+            cum += d
+            is_rehook = bool(sc.get("rehook")) or bool(REHOOK_PAT.search(str(sc.get("text", ""))))
+            if is_rehook and 0.25 <= mid <= 0.38:
+                has_30 = True
+            if is_rehook and 0.45 <= mid <= 0.60:
+                has_50 = True
+        if not has_30:
+            warnings.append("Missing mid-video rehook in 25%-38% window (~30% mark); add a curiosity tease or tag 'rehook': true.")
+        if not has_50:
+            warnings.append("Missing mid-video rehook in 45%-60% window (~50% mark); add a curiosity tease or tag 'rehook': true.")
+
+    thumb_raw = script.get("meta", {}).get("thumbnail")
+    thumb_str = _extract_thumb_text(thumb_raw)
+    if isinstance(thumb_raw, str) and not thumb_str:
+        thumb_str = thumb_raw
+    thumb_tokens = {
+        tok.lower()
+        for tok in re.findall(r"[A-Za-z0-9$€£%]+", thumb_str)
+        if (len(tok) >= 4 or any(c.isdigit() for c in tok)) and tok.lower() not in THUMB_STOP_WORDS
+    }
+    opening_blob = " ".join(
+        f"{sc.get('text', '')} {sc.get('stamp', '')} " + " ".join(c.get("text", "") for c in sc.get("callouts", []))
+        for sc in raw_scenes[:3]
+    ).lower()
+    if thumb_tokens and not any(tok in opening_blob for tok in thumb_tokens):
+        warnings.append(f"Thumbnail promise ({sorted(thumb_tokens)[:4]}) not echoed in first 3 scenes; align opening hook with thumbnail.")
+
+    print(
+        f"[Retention Audit] sec/event={sec_per_event:.1f}s | max_dry={max_dry} | "
+        f"but/therefore={causal_cnt} vs then={then_cnt} | scenes>10s={len(long_scenes)}"
+    )
     for w in warnings:
         print(f"  [WARN] {w}")
     return warnings
@@ -1137,6 +1350,7 @@ def youtube_pack(script, scenes):
     starts = [0]
     for i, s in enumerate(scenes[1:], 1):
         starts.append(starts[-1] + scenes[i - 1]["frames"] - (0 if s.get("transition") == "cut" else TRANSITION_FRAMES))
+    shift = 1 if scenes and scenes[0].get("kind") == "montage" else 0
 
     def fmt_ts(frame):
         sec = max(0, round(frame / FPS))
@@ -1145,8 +1359,9 @@ def youtube_pack(script, scenes):
     chapters = []
     for c in meta.get("chapters", []):
         idx = c.get("scene", 0)
-        if 0 <= idx < len(starts):
-            chapters.append(f"{fmt_ts(starts[idx])} {c.get('title', 'Chapter')}")
+        mapped = 0 if idx == 0 else idx + shift
+        if 0 <= mapped < len(starts):
+            chapters.append(f"{fmt_ts(starts[mapped])} {c.get('title', 'Chapter')}")
     if not chapters:
         chapters.append("00:00 Introduction")
 

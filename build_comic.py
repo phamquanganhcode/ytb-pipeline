@@ -434,7 +434,43 @@ def main():
             scene_obj["media"] = {
                 k: v for k, v in resolved_media[i].items() if k in ("type", "src", "credit") and v is not None
             }
+        # Auto-beats for long scenes (> 12s) lacking frequent internal cues
+        if dur > 12 * FPS:
+            existing_cues = [scene_obj[fk] for _, fk in SCENE_CUE_KEYS if fk in scene_obj]
+            existing_cues += [a[k] for a in scene_obj.get("actors", []) for k in ("cueFrame", "speechCueFrame") if k in a]
+            existing_cues += [it["cueFrame"] for it in scene_obj.get("items", []) if "cueFrame" in it]
+            existing_cues += [b["cueFrame"] for b in scene_obj.get("bullets", []) if isinstance(b, dict) and "cueFrame" in b]
+            raw_text = s.get("text", "")
+            sent_offsets = [0]
+            for m in re.finditer(r"[.!?;:—]\s+", raw_text):
+                prefix_tokens = mv._words(raw_text[: m.end()])
+                if prefix_tokens and w_start + len(prefix_tokens) < len(word_at):
+                    rel_f = int(word_at[w_start + len(prefix_tokens)]) - frm
+                    if 45 <= rel_f <= dur - 45:
+                        sent_offsets.append(rel_f)
+            beats = []
+            target_step = int(5.0 * FPS)
+            last_b = 0
+            for cand in sent_offsets[1:]:
+                if cand - last_b >= int(4.0 * FPS) and all(abs(cand - c) >= 45 for c in existing_cues):
+                    beats.append(cand)
+                    last_b = cand
+            # Fill any remaining gaps > 6s with evenly spaced mid-scene beats
+            cursor = target_step
+            while cursor <= dur - 45:
+                if all(abs(cursor - b) >= int(4.0 * FPS) for b in beats) and all(abs(cursor - c) >= 45 for c in existing_cues):
+                    beats.append(cursor)
+                cursor += target_step
+            if beats:
+                scene_obj["beats"] = sorted(beats)
         scenes_out.append(scene_obj)
+
+    long_comic = [(idx, round(sc["duration"] / FPS, 1)) for idx, sc in enumerate(scenes_out) if sc["duration"] > 12 * FPS]
+    avg_sec = (total_frames / FPS) / max(1, len(scenes_out))
+    print(f"[Pacing Audit] scenes={len(scenes_out)} | avg={avg_sec:.1f}s/scene | scenes>12s={len(long_comic)}")
+    if long_comic:
+        sample = ", ".join(f"#{idx}({d}s)" for idx, d in long_comic[:6])
+        print(f"  [INFO] Auto-beats injected for >12s scenes: {sample}")
 
     manifest = {
         "title": script["title"],

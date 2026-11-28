@@ -21,3 +21,5 @@ public/*/
 public/comic/*
 !public/comic/art/
 public/manifest.json
+public/short_manifest.json
+public/_shorts_tmp/

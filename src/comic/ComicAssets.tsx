@@ -867,13 +867,53 @@ export const ComicIcon: React.FC<{
 						<path d="M 28 28 L 100 100 M 100 28 L 28 100" stroke={INK} strokeWidth="4" strokeLinecap="round" opacity="0.25" />
 					</g>
 				);
+			case 'globe':
+				return (
+					<g>
+						<circle cx="64" cy="64" r="50" fill="#0ea5e9" stroke={INK} strokeWidth="6" />
+						<path d="M 38 36 C 48 32, 62 42, 56 58 C 50 70, 62 84, 52 96 C 40 90, 26 74, 28 54 C 30 44, 34 38, 38 36 Z" fill="#22c55e" stroke={INK} strokeWidth="4" strokeLinejoin="round" />
+						<path d="M 74 34 C 88 38, 98 54, 94 72 C 90 86, 78 96, 72 88 C 68 78, 76 68, 70 58 C 66 50, 68 38, 74 34 Z" fill="#22c55e" stroke={INK} strokeWidth="4" strokeLinejoin="round" />
+						<ellipse cx="64" cy="64" rx="26" ry="50" fill="none" stroke="rgba(255,255,255,0.45)" strokeWidth="3.5" />
+						<line x1="16" y1="64" x2="112" y2="64" stroke="rgba(255,255,255,0.45)" strokeWidth="3.5" />
+						<circle cx="64" cy="64" r="50" fill="none" stroke={INK} strokeWidth="6" />
+					</g>
+				);
+			case 'chart':
+				return (
+					<g>
+						<rect x="16" y="20" width="96" height="88" rx="12" fill="#1e293b" stroke={INK} strokeWidth="6" />
+						<rect x="30" y="54" width="14" height="40" rx="2" fill="#22c55e" stroke={INK} strokeWidth="3" />
+						<rect x="52" y="40" width="14" height="54" rx="2" fill="#38bdf8" stroke={INK} strokeWidth="3" />
+						<rect x="74" y="66" width="14" height="28" rx="2" fill="#ef4444" stroke={INK} strokeWidth="3" />
+						<polyline points="26,42 54,32 76,58 100,88" fill="none" stroke="#ff3b30" strokeWidth="7" strokeLinecap="round" strokeLinejoin="round" />
+						<polygon points="104,94 86,90 100,76" fill="#ff3b30" />
+					</g>
+				);
+			case 'fire':
+				return (
+					<g>
+						<path d="M 64 14 C 82 34, 102 52, 98 80 C 95 100, 82 114, 64 114 C 42 114, 28 96, 30 74 C 32 58, 42 50, 44 38 C 48 48, 54 50, 56 38 C 58 26, 60 20, 64 14 Z" fill="#ef4444" stroke={INK} strokeWidth="6" strokeLinejoin="round" />
+						<path d="M 64 44 C 76 58, 84 70, 82 86 C 80 100, 72 108, 64 108 C 52 108, 44 96, 46 82 C 47 72, 54 66, 56 58 C 59 62, 62 56, 64 44 Z" fill="#f97316" />
+						<path d="M 64 68 C 72 78, 74 88, 72 96 C 70 103, 67 106, 64 106 C 58 106, 55 99, 56 90 C 57 84, 61 78, 64 68 Z" fill="#facc15" />
+					</g>
+				);
+			case 'skull':
+				return (
+					<g>
+						<path d="M 24 58 C 24 30, 42 16, 64 16 C 86 16, 104 30, 104 58 C 104 74, 94 84, 86 88 V 104 C 86 109, 82 112, 76 112 H 52 C 46 112, 42 109, 42 104 V 88 C 34 84, 24 74, 24 58 Z" fill="#f8fafc" stroke={INK} strokeWidth="6" strokeLinejoin="round" />
+						<circle cx="47" cy="58" r="11" fill={INK} />
+						<circle cx="81" cy="58" r="11" fill={INK} />
+						<polygon points="64,68 58,80 70,80" fill={INK} />
+						<line x1="54" y1="94" x2="54" y2="112" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+						<line x1="64" y1="94" x2="64" y2="112" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+						<line x1="74" y1="94" x2="74" y2="112" stroke={INK} strokeWidth="5" strokeLinecap="round" />
+					</g>
+				);
 			default:
 				return (
 					<g>
 						<circle cx="64" cy="64" r="50" fill="#38bdf8" stroke={INK} strokeWidth="6" />
-						<text x="64" y="76" textAnchor="middle" fontSize="42" fontWeight="900" fill="#ffffff">
-							★
-						</text>
+						<polygon points="64,26 74,48 98,51 80,68 85,92 64,80 43,92 48,68 30,51 54,48" fill="#ffffff" stroke={INK} strokeWidth="4" strokeLinejoin="round" />
 					</g>
 				);
 		}
@@ -994,11 +1034,101 @@ export const ComicBackdrop: React.FC<{ kind?: BackdropKind; blur?: number }> = (
 		);
 	}
 
-	if (kind === 'office' || kind === 'living_room' || kind === 'bank_counter' || kind === 'hacker_room') {
+	if (kind === 'bank_counter') {
+		const slowZoom = interpolate(frame, [0, 360], [1.0, 1.045], { extrapolateRight: 'clamp' });
+		return (
+			<div style={{ ...wrapStyle, overflow: 'hidden', backgroundColor: '#f6efe2' }}>
+				<svg
+					viewBox="0 0 1920 1080"
+					width="100%"
+					height="100%"
+					style={{ transform: `scale(${slowZoom})`, transformOrigin: 'center center' }}
+				>
+					{/* Bright cream/warm-beige walls + daylight windows */}
+					<rect width="1920" height="710" fill="#f6efe2" />
+					<rect x="0" y="710" width="1920" height="370" fill="#ebe0cd" stroke={INK} strokeWidth="4" />
+					{/* Subtle floor tile lines */}
+					{[240, 480, 720, 960, 1200, 1440, 1680].map((x) => (
+						<line key={x} x1={x} y1="710" x2={x + (x - 960) * 0.45} y2="1080" stroke="rgba(20,20,24,0.12)" strokeWidth="3" />
+					))}
+					<line x1="0" y1="840" x2="1920" y2="840" stroke="rgba(20,20,24,0.10)" strokeWidth="3" />
+					<line x1="0" y1="965" x2="1920" y2="965" stroke="rgba(20,20,24,0.10)" strokeWidth="3" />
+
+					{/* Left tall daylight glass windows */}
+					<rect x="70" y="75" width="380" height="515" rx="8" fill="#dbeafe" stroke={INK} strokeWidth="5" />
+					<line x1="260" y1="75" x2="260" y2="590" stroke={INK} strokeWidth="5" />
+					<line x1="70" y1="320" x2="450" y2="320" stroke={INK} strokeWidth="5" />
+					<polygon points="105,110 215,110 155,550 85,550" fill="rgba(255,255,255,0.45)" />
+					<polygon points="295,110 385,110 330,550 275,550" fill="rgba(255,255,255,0.35)" />
+
+					{/* Back wall vertical wood paneling & recessed vault alcove on right */}
+					<rect x="490" y="85" width="840" height="430" rx="10" fill="#efe4d1" stroke={INK} strokeWidth="4" />
+					{[690, 910, 1130].map((x) => (
+						<line key={x} x1={x} y1="85" x2={x} y2="515" stroke="rgba(20,20,24,0.18)" strokeWidth="3" />
+					))}
+					{/* Digital rate / queue board (blank clean lines, zero text) */}
+					<rect x="545" y="135" width="360" height="175" rx="12" fill="#232c3d" stroke={INK} strokeWidth="5" />
+					<line x1="580" y1="185" x2="780" y2="185" stroke="#22c55e" strokeWidth="8" strokeLinecap="round" />
+					<line x1="580" y1="225" x2="845" y2="225" stroke="#38bdf8" strokeWidth="8" strokeLinecap="round" />
+					<line x1="580" y1="265" x2="730" y2="265" stroke="#facc15" strokeWidth="8" strokeLinecap="round" />
+
+					{/* Steel circular bank vault door in back-right */}
+					<rect x="1420" y="120" width="410" height="445" rx="16" fill="#cbd5e1" stroke={INK} strokeWidth="5" />
+					<circle cx="1625" cy="340" r="145" fill="#94a3b8" stroke={INK} strokeWidth="6" />
+					<circle cx="1625" cy="340" r="108" fill="#cbd5e1" stroke={INK} strokeWidth="4.5" />
+					{[0, 60, 120, 180, 240, 300].map((deg) => {
+						const rad = (deg * Math.PI) / 180;
+						return (
+							<line
+								key={deg}
+								x1={1625 + Math.cos(rad) * 28}
+								y1={340 + Math.sin(rad) * 28}
+								x2={1625 + Math.cos(rad) * 95}
+								y2={340 + Math.sin(rad) * 95}
+								stroke={INK}
+								strokeWidth="7"
+								strokeLinecap="round"
+							/>
+						);
+					})}
+					<circle cx="1625" cy="340" r="30" fill="#64748b" stroke={INK} strokeWidth="5" />
+
+					{/* Potted bank plants */}
+					{[505, 1365].map((px) => (
+						<g key={px}>
+							<path d={`M ${px - 28} 485 L ${px + 28} 485 L ${px + 20} 540 L ${px - 20} 540 Z`} fill="#d97706" stroke={INK} strokeWidth="4" />
+							<ellipse cx={px} cy="455" rx="34" ry="38" fill="#22c55e" stroke={INK} strokeWidth="4" />
+							<ellipse cx={px - 22} cy="468" rx="22" ry="24" fill="#16a34a" stroke={INK} strokeWidth="4" />
+							<ellipse cx={px + 22} cy="468" rx="22" ry="24" fill="#4ade80" stroke={INK} strokeWidth="4" />
+						</g>
+					))}
+
+					{/* Modern Teller Counter + Security Glass Partitions (mid-ground) */}
+					<rect x="260" y="340" width="1360" height="190" rx="8" fill="rgba(186, 230, 253, 0.38)" stroke={INK} strokeWidth="5" />
+					{[595, 940, 1285].map((vx) => (
+						<g key={vx}>
+							<rect x={vx - 10} y="340" width="20" height="190" fill="#94a3b8" stroke={INK} strokeWidth="4" />
+							{/* Teller pass-through tray */}
+							<rect x={vx - 195} y="492" width="140" height="22" rx="6" fill="#475569" stroke={INK} strokeWidth="3.5" />
+						</g>
+					))}
+					{/* Sleek wood & marble teller desk front */}
+					<rect x="230" y="525" width="1420" height="32" rx="6" fill="#f8fafc" stroke={INK} strokeWidth="5" />
+					<rect x="250" y="557" width="1380" height="165" fill="#d6b48c" stroke={INK} strokeWidth="5" />
+					{[480, 710, 940, 1170, 1400].map((px) => (
+						<line key={px} x1={px} y1="557" x2={px} y2="722" stroke="rgba(20,20,24,0.28)" strokeWidth="4" />
+					))}
+					{/* Base kickboard */}
+					<rect x="250" y="698" width="1380" height="24" fill="#334155" stroke={INK} strokeWidth="4" />
+				</svg>
+			</div>
+		);
+	}
+
+	if (kind === 'office' || kind === 'living_room' || kind === 'hacker_room') {
 		const bgMap: Record<string, string> = {
 			office: 'comic/art/bg_office.jpg',
 			living_room: 'comic/art/bg_office.jpg',
-			bank_counter: 'comic/art/bg_bank_counter.jpg',
 			hacker_room: 'comic/art/bg_hacker_room.jpg',
 		};
 		const slowZoom = interpolate(frame, [0, 360], [1.0, 1.045], { extrapolateRight: 'clamp' });

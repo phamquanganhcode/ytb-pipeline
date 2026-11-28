@@ -4,8 +4,10 @@ import {Episode, EpisodeProps, overlapBefore, SceneData} from './Episode';
 import {Thumbnail, ThumbnailProps} from './Thumbnail';
 import {DocuPrototype, DocuPrototypeProps} from './DocuPrototype';
 import {DocuEngine, DocuManifest} from './DocuEngine';
+import {DocuThumbnail, DocuThumbnailProps} from './DocuThumbnail';
 import {ComicExplainer, ComicManifest} from './ComicExplainer';
 import {ComicThumbnail, ComicThumbnailProps} from './ComicThumbnail';
+import {ShortEpisode, ShortManifest} from './ShortEpisode';
 
 // Scenes and durations come from public/manifest.json, written by make_video.py.
 export const Root: React.FC = () => (
@@ -67,26 +69,30 @@ export const Root: React.FC = () => (
 					// Extract high-impact headline from manifest title (or explicit meta.thumbnail override)
 					const rawTitle: string = manifest.title || '';
 					const parts = rawTitle.split('|').map((s) => s.trim());
-					const mainHeadline = parts.length > 1 ? parts[1] : parts[0] || 'TRUE STORY';
+					const colonParts = (parts.length > 1 ? parts[1] : parts[0] || '').split(':').map((s) => s.trim());
+					const statMatch = rawTitle.match(/(?:^|\s)(-\$?\d+(?:\.\d+)?[MBK]?|\$\d+(?:\.\d+)?[MBK]?|\d+(?:\.\d+)?[MBK]?\s*(?:PCs|MILLION|BILLION|%|DAYS|MINUTES))/i);
+					const autoHeadline = statMatch ? statMatch[1].trim().toUpperCase() : colonParts[0] || 'TRUE STORY';
+					const autoSubtitle = statMatch ? colonParts[0] || undefined : colonParts[1] || (parts.length > 1 ? parts[0] : undefined);
 					const isDisaster =
 						manifest.meta?.format === 'disaster' ||
 						manifest.meta?.theme === 'disaster' ||
 						rawTitle.toUpperCase().includes('CHERNOBYL') ||
 						rawTitle.toUpperCase().includes('THẢM HỌA') ||
 						rawTitle.toUpperCase().includes('DISASTER');
-					const thumb = manifest.meta?.thumbnail || {};
+					const rawThumb = manifest.meta?.thumbnail;
+					const thumb = rawThumb && typeof rawThumb === 'object' ? rawThumb : {};
 					const defaultBadge = isDisaster
 						? manifest.lang === 'vi'
 							? 'THẢM HỌA KỸ THUẬT'
 							: 'SYSTEM POSTMORTEM'
 						: 'TRUE STORY';
 
-					const hasExplicitThumb = Boolean(manifest.meta?.thumbnail);
+					const hasExplicitThumb = Boolean(rawThumb && typeof rawThumb === 'object');
 					return {
 						props: {
-							title: (thumb.title || mainHeadline).toUpperCase().slice(0, 32),
+							title: (thumb.title || autoHeadline).toUpperCase().slice(0, 26),
 							badge: thumb.badge || defaultBadge,
-							subtitle: (thumb.subtitle || (parts.length > 1 ? parts[0] : '') || '').toUpperCase().slice(0, 36) || undefined,
+							subtitle: (thumb.subtitle || autoSubtitle || '').toUpperCase().slice(0, 30) || undefined,
 							face,
 							bg,
 							stat:
@@ -165,6 +171,75 @@ export const Root: React.FC = () => (
 		/>
 
 		<Composition
+			id="DocuThumbnail"
+			component={DocuThumbnail}
+			width={1280}
+			height={720}
+			fps={30}
+			durationInFrames={1}
+			defaultProps={
+				{
+					layout: 'fern_evidence',
+					headline: '-$440M',
+					subline: 'IN 45 MINUTES',
+					badge: 'SYSTEM POSTMORTEM',
+					visual: 'server_fault',
+				} as DocuThumbnailProps
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const manifest = await fetch(staticFile('docu/manifest.json')).then((r) => r.json());
+					const scenes = manifest.scenes || [];
+					const first = scenes[0] || {};
+					const th = manifest.thumbnail || {};
+					const hasServers = scenes.some((s: {servers?: unknown[]}) => Array.isArray(s.servers) && s.servers.length > 0);
+					const hasChart = scenes.some((s: {points?: unknown[]}) => Array.isArray(s.points) && s.points.length > 0);
+					const titleUpper = String(manifest.title || '').toUpperCase();
+					const autoVisual =
+						hasServers || titleUpper.includes('SERVER')
+							? 'server_fault'
+							: hasChart
+								? 'crash_chart'
+								: 'alert_terminal';
+					const imgs: string[] = [];
+					for (const s of scenes as Array<{media?: {type?: string; src?: string}}>) {
+						if (s.media?.type === 'image' && s.media.src && !imgs.includes(s.media.src)) {
+							imgs.push(s.media.src);
+						}
+					}
+					const docScene = scenes.find((s: {kind?: string; source?: string}) => s.kind === 'document') || {};
+					const statRaw = String(first.stat || '').trim();
+					const headRaw = String(first.headline || '').trim();
+					const autoQuote =
+						statRaw && headRaw
+							? `${statRaw.charAt(0).toUpperCase() + statRaw.slice(1).toLowerCase()} ${headRaw.toLowerCase()}.`
+							: headRaw || String(manifest.title || 'System failure breakdown.');
+					const preferBg =
+						imgs.find((src) => src.includes('trading_floor')) ||
+						(imgs.some((src) => src.includes('stock_exchange')) ? 'docu/media/new_york_stock_exchange_trading_floor.jpg' : imgs[0]);
+					return {
+						props: {
+							layout: th.layout || 'fern_evidence',
+							headline: (th.headline || first.stat || '-$440M').toUpperCase(),
+							subline: (th.subline || first.headline || 'IN 45 MINUTES').toUpperCase(),
+							badge: th.badge || 'SYSTEM POSTMORTEM',
+							proof: th.proof || first.subline,
+							mediaSrc: th.mediaSrc || preferBg || imgs[0],
+							centerPhotoSrc: th.centerPhotoSrc || imgs[1] || imgs[0],
+							centerLabel: th.centerLabel,
+							evidenceQuote: th.evidenceQuote || autoQuote,
+							highlightPhrase: th.highlightPhrase,
+							evidenceSource: th.evidenceSource || docScene.source || 'OFFICIAL RECORD',
+							visual: th.visual || autoVisual,
+						} as DocuThumbnailProps,
+					};
+				} catch {
+					return {props};
+				}
+			}}
+		/>
+
+		<Composition
 			id="ComicExplainer"
 			component={ComicExplainer}
 			width={1920}
@@ -222,7 +297,42 @@ export const Root: React.FC = () => (
 							mascot: th.mascot,
 							mediaSrc: th.mediaSrc,
 							heroPhotoSrc: th.heroPhotoSrc,
+							tag: th.tag,
+							theme: th.theme,
+							showChart: th.showChart,
 						} as ComicThumbnailProps,
+					};
+				} catch {
+					return {props};
+				}
+			}}
+		/>
+
+		<Composition
+			id="ShortEpisode"
+			component={ShortEpisode}
+			width={1080}
+			height={1920}
+			fps={30}
+			durationInFrames={840}
+			defaultProps={
+				{
+					title: 'Watch the full story',
+					hookBadge: 'FULL BREAKDOWN',
+					fps: 30,
+					durationInFrames: 840,
+					videoSrc: '',
+					ctaText: 'WATCH FULL VIDEO BELOW ↓',
+					cues: [],
+				} as ShortManifest
+			}
+			calculateMetadata={async ({props}) => {
+				try {
+					const manifest = await fetch(staticFile('short_manifest.json')).then((r) => r.json());
+					return {
+						fps: manifest.fps ?? 30,
+						durationInFrames: manifest.durationInFrames ?? 840,
+						props: manifest as ShortManifest,
 					};
 				} catch {
 					return {props};

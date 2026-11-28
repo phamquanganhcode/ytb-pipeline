@@ -25,8 +25,9 @@ from pathlib import Path
 from PIL import Image, ImageDraw, ImageFont
 
 from gen_face import EXPRESSIONS, PROMPT, save_face
+from make_editorial_thumb import EDITORIAL_THUMB_PROMPT, extract_thumb_meta, render_editorial_thumb
 from make_video import PAINTED, bg_ready, gemini_call
-from prep_bg import prep, remove_logo
+from prep_bg import prep
 
 ROOT = Path(__file__).parent
 BG_SRC = ROOT / "assets" / "bg-src"
@@ -39,11 +40,7 @@ Eye-level camera. Leave the floor or ground across the lower fifth clear and fla
 characters will stand there. No people, no animals, no text or lettering anywhere (blank barrels,
 blank signs), no frame or border."""
 THUMB_SRC = ROOT / "assets" / "thumbs-src"
-THUMB_FONT = "C:/Windows/Fonts/ariblk.ttf"  # Arial Black, same as the video's stamps
-THUMB_PROMPT = """Create an image. Wide 16:9 background for a YouTube thumbnail of a 2D animated history video: {idea}
-Do NOT draw the main character: her cartoon head is pasted on the left third later, so keep that area simple.
-Full rich color, bold dark-brown ink outlines, flat color fills with soft cel shading, high contrast and
-dramatic lighting, like a polished animated cartoon. No text or lettering anywhere, no frame or border."""
+THUMB_PROMPT = EDITORIAL_THUMB_PROMPT
 SRC = ROOT / "assets" / "faces-src"
 FACES = ROOT / "public" / "faces"
 OUT = ROOT / "out"
@@ -115,46 +112,16 @@ def thumb_text(script):
 
 
 def make_thumb(script, name, expr="happy"):
-    """1280x720 JPEG: Gemini scene + the hero's face (left) + title words (right), under YouTube's 2 MB limit.
-    A <name>_hero.png (Gemini drew the hero in, from her face attached as reference) is used as is, no face pasted."""
-    hero = (THUMB_SRC / f"{name}_hero.png").exists()
-    face_name = script.get("cast", {}).get("you", {}).get("face")
-    if not hero and not (FACES / f"{face_name}_neutral.png").exists():
-        return False  # face not installed yet (new episode): retry on the next run instead of a faceless thumbnail
-    img = remove_logo(Image.open(THUMB_SRC / f"{name}{'_hero' if hero else ''}.png").convert("RGB"))
-    scale = max(1280 / img.width, 720 / img.height)
-    img = img.resize((round(img.width * scale), round(img.height * scale)), Image.LANCZOS)
-    img = img.crop(((img.width - 1280) // 2, (img.height - 720) // 2, (img.width - 1280) // 2 + 1280, (img.height - 720) // 2 + 720))
-    shade = Image.linear_gradient("L").rotate(90).resize((1280, 720))  # dark on the right, where the text goes
-    img = Image.composite(Image.new("RGB", img.size, "black"), img, shade.point(lambda v: v * 0.55))
-    for expr in () if hero else (expr, "neutral"):  # default: knowing smile against the chaos behind her; neutral always exists
-        f = FACES / f"{face_name}_{expr}.png"
-        if face_name and f.exists():
-            face = Image.open(f)
-            face = face.resize((round(face.width * 620 / face.height), 620), Image.LANCZOS)
-            img.paste(face, (30, 720 - face.height + 20), face)
-            break
-    draw = ImageDraw.Draw(img)
-    words, lines = thumb_text(script).split(), []
-    for w in words:  # greedy wrap into the right half
-        if lines and len(lines[-1]) + 1 + len(w) <= 10:
-            lines[-1] += " " + w
-        else:
-            lines.append(w)
-    size = min(150, 560 // len(lines))
-    font = ImageFont.truetype(THUMB_FONT, size)
-    while size > 40 and max(draw.textlength(l, font=font) for l in lines) > 680:  # right half is 560..1240
-        size -= 6
-        font = ImageFont.truetype(THUMB_FONT, size)
-    y = (720 - size * 1.1 * len(lines)) / 2
-    for line in lines:
-        w = draw.textlength(line, font=font)
-        draw.text((max(560, 1240 - w), y), line, font=font, fill="#ffd400", stroke_width=10, stroke_fill="black")
-        y += size * 1.1
+    """1280x720 Editorial Photo-Collage JPEG: real photo collage + condensed headline + optional torn red tape."""
+    src_hero = THUMB_SRC / f"{name}_hero.png"
+    src_plain = THUMB_SRC / f"{name}.png"
+    src = src_hero if src_hero.exists() else src_plain
+    if not src.exists():
+        return False
+    _, headline, tape = extract_thumb_meta(script)
     out = OUT / f"{name}_thumb.jpg"
-    img.save(out, quality=90)
-    assert out.stat().st_size < 2_000_000, "YouTube thumbnails must be under 2 MB"
-    print(f"  thumbnail: {out.relative_to(ROOT)}")
+    render_editorial_thumb(src, out, headline, tape)
+    return True
 
 
 def todo_text(missing):

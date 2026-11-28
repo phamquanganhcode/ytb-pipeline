@@ -25,7 +25,10 @@ type Face = 'left' | 'right';
 type CharState = { pose: Pose; expression: Expression; hold: IconName | null; face: Face };
 type Action = { who: Variant; word: string; at: number; pose?: Pose; expression?: Expression; hold?: IconName | null; face?: Face };
 const STATE_KEYS = ['pose', 'expression', 'hold', 'face'];
+export type MontageClip = { bg: BgName; stamp?: string; fx?: Weather; expression?: Expression };
 export type SceneData = {
+	kind?: 'montage';
+	montageClips?: MontageClip[];
 	text: string;
 	words?: WordTiming[];
 	start: Record<Variant, CharState>; // carried over from the previous scene by make_video.py
@@ -210,7 +213,11 @@ export const Episode: React.FC<EpisodeProps> = ({
 		}
 		children.push(
 			<TransitionSeries.Sequence key={`s${i}`} durationInFrames={scene.frames}>
-				<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} hasTimeline={hasTimeline} index={i} shotBase={shotBase} captionWords={captionWords} captionStyle={captionStyle} iconStyle={iconStyle} cast={cast} />
+				{scene.kind === 'montage' ? (
+					<MontageScene scene={scene} />
+				) : (
+					<Scene scene={scene} withWhoosh={overlap > 0} hasFriend={hasFriend} hasTimeline={hasTimeline} index={i} shotBase={shotBase} captionWords={captionWords} captionStyle={captionStyle} iconStyle={iconStyle} cast={cast} />
+				)}
 			</TransitionSeries.Sequence>
 		);
 		shotBase += shotsIn(scene);
@@ -519,6 +526,58 @@ const Scene: React.FC<{
 					{scene.title || (withWhoosh && frame < TRANSITION_FRAMES) || frame >= scene.frames - PAD_FRAMES ? null : caption}
 				</div>
 			) : null}
+		</AbsoluteFill>
+	);
+};
+
+// High-energy 3.5s flash-forward montage at frame 0 using peak scenes from later in the episode.
+const MontageScene: React.FC<{ scene: SceneData }> = ({ scene }) => {
+	const frame = useCurrentFrame();
+	const clips: MontageClip[] = scene.montageClips?.length
+		? scene.montageClips
+		: [{ bg: scene.bg, stamp: scene.stamp, fx: scene.fx }];
+	const clipLen = scene.frames / clips.length;
+	const clipIdx = Math.min(clips.length - 1, Math.floor(frame / clipLen));
+	const localF = frame - clipIdx * clipLen;
+	const progress = Math.min(1, localF / Math.max(1, clipLen));
+	const clip = clips[clipIdx];
+	const zoom = 1.04 + 0.14 * progress;
+	const flashOpacity = clipIdx > 0 && localF < 3 ? interpolate(localF, [0, 3], [0.75, 0], { extrapolateRight: 'clamp' }) : 0;
+
+	return (
+		<AbsoluteFill style={{ overflow: 'hidden', background: '#000' }}>
+			{scene.audio && <Audio src={staticFile(scene.audio)} />}
+			{scene.sfx?.map((s, idx) => (
+				<Sequence key={`msfx-${idx}`} from={s.at} layout="none">
+					<Audio src={staticFile(`sfx/${s.sound}.wav`)} volume={s.volume ?? 0.32} />
+				</Sequence>
+			))}
+			<AbsoluteFill style={{ transform: `scale(${zoom})`, transformOrigin: '50% 45%' }}>
+				<Background name={clip.bg} shot={clipIdx} progress={progress} />
+				{clip.fx && <WeatherFx kind={clip.fx} />}
+			</AbsoluteFill>
+			{clip.stamp && (
+				<div
+					style={{
+						position: 'absolute',
+						left: 80,
+						right: 80,
+						bottom: 130,
+						textAlign: 'center',
+						fontFamily: 'Arial Black, Impact, sans-serif',
+						fontSize: 72,
+						letterSpacing: 3,
+						color: '#ffd23f',
+						WebkitTextStroke: '10px #000',
+						paintOrder: 'stroke fill',
+						textShadow: '0 8px 24px rgba(0,0,0,0.85)',
+						transform: `scale(${1 + 0.04 * progress})`,
+					}}
+				>
+					{clip.stamp}
+				</div>
+			)}
+			{flashOpacity > 0 && <AbsoluteFill style={{ background: '#fff', opacity: flashOpacity }} />}
 		</AbsoluteFill>
 	);
 };

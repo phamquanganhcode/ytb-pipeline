@@ -17,7 +17,7 @@ export type ThumbnailProps = {
 export const Thumbnail: React.FC<ThumbnailProps> = ({
 	title = '50% IN 45 DAYS?',
 	badge = 'TRUE STORY',
-	subtitle = 'THE $15M SCAM',
+	subtitle,
 	stat,
 	statIcon,
 	face = 'faces/charles-ponzi_shock.png',
@@ -34,8 +34,10 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 		title.toUpperCase().includes('CHERNOBYL');
 
 	const effectiveAccent = isDisaster ? '#ff3b30' : accentColor;
-	const accentGlow = isDisaster ? 'rgba(255,59,48,0.65)' : 'rgba(255,210,63,0.65)';
-	const borderGlow = isDisaster ? 'rgba(255,59,48,0.35)' : 'rgba(255,210,63,0.3)';
+	const accentGlow = isDisaster ? 'rgba(255,59,48,0.75)' : 'rgba(255,210,63,0.65)';
+	const borderGlow = isDisaster ? 'rgba(255,59,48,0.45)' : 'rgba(255,210,63,0.3)';
+	const titleLen = title.trim().length;
+	const titleSize = titleLen <= 10 ? 128 : titleLen <= 16 ? 104 : titleLen <= 24 ? 86 : 72;
 
 	return (
 		<AbsoluteFill
@@ -57,7 +59,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 								position: 'absolute',
 								width: '100%',
 								height: '100%',
-								filter: 'brightness(0.38) contrast(1.25) saturate(1.2)',
+								filter: 'brightness(0.62) contrast(1.22) saturate(1.15)',
 							}}
 						>
 							<svg viewBox="0 0 1920 1080" width="100%" height="100%">
@@ -76,7 +78,7 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 								width: '100%',
 								height: '100%',
 								objectFit: 'cover',
-								filter: 'brightness(0.38) contrast(1.25) saturate(1.2)',
+								filter: 'brightness(0.62) contrast(1.22) saturate(1.15)',
 							}}
 						/>
 					);
@@ -84,13 +86,34 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				return null;
 			})()}
 
-			{/* Contrast Vignette Gradient (Dark on left for text, clear on right for face) */}
+			{/* Contrast Vignette Gradient (Dark on left for text, clear on right for background & face) */}
 			<AbsoluteFill
 				style={{
 					background:
-						'radial-gradient(circle at 75% 50%, rgba(20,20,35,0.2) 0%, rgba(5,6,10,0.85) 60%, rgba(3,4,6,0.98) 100%), linear-gradient(90deg, rgba(5,6,10,0.95) 0%, rgba(5,6,10,0.8) 45%, rgba(5,6,10,0.2) 100%)',
+						'radial-gradient(circle at 76% 50%, rgba(20,24,40,0.08) 0%, rgba(5,6,10,0.68) 65%, rgba(3,4,6,0.92) 100%), linear-gradient(95deg, rgba(5,6,10,0.90) 0%, rgba(5,6,10,0.72) 44%, rgba(5,6,10,0.12) 100%)',
 				}}
 			/>
+
+			{isDisaster && (
+				<svg viewBox="0 0 1280 720" width="1280" height="720" style={{position: 'absolute', inset: 0, pointerEvents: 'none', zIndex: 2}}>
+					<defs>
+						<pattern id="thumbGrid" width="44" height="44" patternUnits="userSpaceOnUse">
+							<path d="M 44 0 L 0 0 0 44" fill="none" stroke="rgba(56,189,248,0.08)" strokeWidth="1" />
+						</pattern>
+					</defs>
+					<rect width="1280" height="720" fill="url(#thumbGrid)" />
+					<path
+						d="M 480 420 L 610 340 L 700 365 L 810 215 L 940 530"
+						fill="none"
+						stroke="#ff3b30"
+						strokeWidth="9"
+						strokeLinecap="round"
+						strokeLinejoin="round"
+						opacity="0.72"
+					/>
+					<polygon points="956,568 906,522 962,498" fill="#ff3b30" opacity="0.85" />
+				</svg>
+			)}
 
 			{/* Left Column: Clean High-CTR Documentary Headline */}
 			<div
@@ -140,11 +163,13 @@ export const Thumbnail: React.FC<ThumbnailProps> = ({
 				{/* Giant Punchy Hook Headline (1-3 words for 2-inch mobile legibility) */}
 				<div
 					style={{
-						fontSize: 104,
+						fontSize: titleSize,
 						fontWeight: 900,
-						lineHeight: 0.98,
-						color: '#ffffff',
+						lineHeight: 0.96,
+						color: isDisaster ? '#ffe600' : '#ffffff',
 						textTransform: 'uppercase',
+						WebkitTextStroke: '8px #05060a',
+						paintOrder: 'stroke fill',
 						textShadow: '0 8px 28px rgba(0,0,0,0.92), 0 2px 6px rgba(0,0,0,0.95)',
 						letterSpacing: -2,
 						marginBottom: 24,

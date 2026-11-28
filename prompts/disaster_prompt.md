@@ -12,13 +12,14 @@ Target length: **{{LENGTH_MINUTES}} minutes** of narration (aim for **10–12 mi
 ## Packaging Rules (CTR + YPP Originality)
 
 - **Episode Title (`title`):** Use natural **Title Case** (never ALL CAPS). Follow high-performing documentary curiosity formulas (e.g., `"One Missed Server Cost $440 Million in 45 Minutes | Knight Capital"` or `"The 64-Bit Overflow That Blew Up a $370M Rocket | Ariane 5"`).
-- **Thumbnail (`meta.thumbnail`):** Keep mobile legibility razor-sharp with **2–4 total words** across `title` + `subtitle` that create curiosity *without* repeating the video title verbatim. Omit `stat` unless adding a crucial 2-word proof. Example:
-  `{"badge": "SYSTEM POSTMORTEM", "title": "-$440M", "subtitle": "IN 45 MINUTES"}`
+- **Thumbnail (`meta.thumbnail`, Editorial Photo-Collage standard):** Keep mobile legibility razor-sharp with **1–3 punchy words** in `title` (giant white/yellow condensed headline) + optional **2-word red torn-tape label** in `subtitle` (`make_editorial_thumb.py` / `EDITORIAL_THUMB_PROMPT` — real photo cutouts, torn incident report/newspaper, yellow highlighter, red marker circle/arrow, clean bottom-right corner; NO cartoon faces or UI boxes). Example:
+  `{"badge": "SYSTEM POSTMORTEM", "title": "-$440M", "subtitle": "45 MINUTES"}`
 - **Visual Originality (Anti-Template Guard):** Every episode MUST include **8–12 episode-specific `diagram` scenes** using custom `nodes`, `servers`, `points`, `layers`, and `rootCause` tailored strictly to this incident. Never leave `data_flow`/`code_crash` without `nodes`.
 
 ## Story Structure (The Swiss Cheese Model)
 
 1. **Cold Open / T-Minus Hook (0–30 s).**
+   - **Thumbnail ↔ Opening Alignment:** Scene 0–1 MUST directly reference the main keyword, number, or failure promised in `meta.thumbnail` so viewers immediately know they clicked the right video.
    - Drop the viewer directly into the critical room moments before disaster (e.g., "It's 1:23 AM. You are staring at a blinking red annunciator panel inside Control Room Four.").
    - State the catastrophic stakes in concrete numbers: lives lost, billions of dollars destroyed, or systems crippled worldwide.
    - Establish the central mystery: "On paper, this machine had three fail-safes. How did all three fail in under sixty seconds?"
@@ -26,10 +27,11 @@ Target length: **{{LENGTH_MINUTES}} minutes** of narration (aim for **10–12 mi
    - Rewind to the inception: the original design, the budget shortcuts, the ignored engineering warnings, or the fateful management compromise.
    - Plant 3 specific design flaws or warning signs ("Remember that graphite tip", "Remember that missing backup pump").
 3. **The Escalation / Chain Reaction (Minute 3–8).**
+   - **"But / Therefore" Causal Rule:** Connect every stage of the cascade using conflict (`but`, `yet`, `however`) or consequence (`therefore`, `so`, `because`)—never list events as `"and then ... and then ..."`.
    - A step-by-step technical breakdown of the countdown. Use `counter` to show time (`T-MINUS 00:03:00`), pressure (`200 ATM`), or reactor power (`30,000 MW`).
    - The Swiss Cheese Model: Show how human fatigue, flawed procedures, and hidden design bugs aligned one by one.
    - One crystal-clear everyday analogy for the core physics/engineering principle (e.g., cavitation, aerodynamic resonance, integer overflow, positive void coefficient).
-   - **Mid-Video Rehook & Subscribe Prompt (around 45–55% mark):** Right after the first major twist, drop a 1-sentence natural CTA (*"If you want to see more engineering postmortems like this every week, hit subscribe — because what happened next made everything eight times worse."*).
+   - **Mandatory Rehooks (~30% and ~50% mark):** Place explicit curiosity-gap rehooks around 30% and 50% runtime (tag those scenes with `"rehook": true`), reminding viewers of the ticking clock and teasing the fatal twist ahead (include a 1-sentence natural subscribe CTA on the 50% rehook).
 4. **The Catastrophe (The Climax).**
    - The point of no return. The physical failure: structural buckling, steam explosion, or global server crash.
    - Pacing becomes rapid-fire (2–4 seconds per scene). Heavy use of `alarm`, `explosion`, `creak`, `glitch` SFX and `alarm`/`smoke`/`fire` FX.

@@ -89,6 +89,7 @@ export type ComicScene = {
 	headlineCueFrame?: number;
 	sublineCueFrame?: number;
 	mascotCueFrame?: number;
+	beats?: number[];
 };
 
 export type ComicManifest = {
@@ -415,6 +416,8 @@ const StockCutawayScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 							color: '#ffffff',
 							textTransform: 'uppercase',
 							lineHeight: 1.04,
+							WebkitTextStroke: '4px rgba(0,0,0,0.82)',
+							paintOrder: 'stroke fill',
 							textShadow: '0 8px 34px rgba(0,0,0,0.92)',
 							transform: `scale(${interpolate(titlePop, [0, 1], [0.88, 1])})`,
 							opacity: titlePop,
@@ -426,14 +429,18 @@ const StockCutawayScene: React.FC<{ scene: ComicScene }> = ({ scene }) => {
 				{scene.subline && (
 					<div
 						style={{
-							marginTop: 16,
+							marginTop: 18,
 							fontFamily: SANS,
-							fontWeight: 700,
-							fontSize: 32,
-							color: '#e2e8f0',
+							fontWeight: 800,
+							fontSize: 34,
+							color: '#ffe600',
+							backgroundColor: 'rgba(9, 11, 16, 0.78)',
+							border: '2px solid rgba(255, 230, 0, 0.45)',
+							borderRadius: 12,
+							padding: '10px 26px',
 							letterSpacing: 1.5,
 							textTransform: 'uppercase',
-							textShadow: '0 4px 18px rgba(0,0,0,0.92)',
+							boxShadow: '0 8px 24px rgba(0,0,0,0.65)',
 							transform: `scale(${interpolate(subPop, [0, 1], [0.92, 1])})`,
 							opacity: subPop,
 						}}
@@ -1043,6 +1050,22 @@ const SceneWrapper: React.FC<{ scene: ComicScene; mouth?: string }> = ({ scene, 
 	const globalFrame = scene.from + localFrame;
 	const mouthLevel = mouth && globalFrame >= 0 && globalFrame < mouth.length ? Number(mouth[globalFrame]) || 0 : 0;
 
+	// Subtle punch-in camera reset on auto-beats for long scenes (>12s)
+	const beats = scene.beats ?? [];
+	let beatScale = 1;
+	let beatIdx = -1;
+	for (let i = 0; i < beats.length; i++) {
+		if (localFrame >= beats[i]) beatIdx = i;
+	}
+	if (beatIdx >= 0) {
+		const isZoomed = beatIdx % 2 === 0;
+		const dt = localFrame - beats[beatIdx];
+		const fromScale = isZoomed ? 1 : 1.05;
+		const toScale = isZoomed ? 1.05 : 1;
+		beatScale = interpolate(dt, [0, 8], [fromScale, toScale], { extrapolateLeft: 'clamp', extrapolateRight: 'clamp' });
+	}
+	const beatOrigin = beatIdx % 2 === 0 ? '48% 42%' : '52% 48%';
+
 	const renderBody = () => {
 		switch (scene.kind) {
 			case 'comic_skit':
@@ -1066,9 +1089,20 @@ const SceneWrapper: React.FC<{ scene: ComicScene; mouth?: string }> = ({ scene, 
 
 	return (
 		<MouthLevelContext.Provider value={mouthLevel}>
-			<AbsoluteFill style={{ opacity }}>
+			<AbsoluteFill
+				style={{
+					opacity,
+					transform: beatScale !== 1 ? `scale(${beatScale})` : undefined,
+					transformOrigin: beatOrigin,
+				}}
+			>
 				{renderBody()}
 				{sfxSrc && <Audio src={staticFile(sfxSrc)} volume={0.28} />}
+				{beats.map((b, i) => (
+					<Sequence key={`beat-${i}`} from={b} layout="none">
+						<Audio src={staticFile('sfx/pop.wav')} volume={0.12} />
+					</Sequence>
+				))}
 			</AbsoluteFill>
 		</MouthLevelContext.Provider>
 	);

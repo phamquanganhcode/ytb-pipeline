@@ -124,6 +124,7 @@ export type DocuScene = {
 	cueWord?: string;
 	cueFrame?: number;
 	cutFrames?: number[];
+	beats?: number[];
 	glossary?: DocuGlossary;
 	overlayMap?: 'nyse_link' | 'smars_nodes';
 	voxMode?: 'single_8' | 'all_8';
@@ -2396,6 +2397,29 @@ const SceneTitleCard: React.FC<{ scene: DocuScene }> = ({ scene }) => {
 	);
 };
 
+const BeatCameraWrapper: React.FC<{ beats?: number[]; children: React.ReactNode }> = ({ beats, children }) => {
+	const frame = useCurrentFrame();
+	if (!beats || beats.length === 0) return <>{children}</>;
+	let beatIdx = -1;
+	for (let i = 0; i < beats.length; i++) {
+		if (frame >= beats[i]) beatIdx = i;
+	}
+	let scale = 1;
+	if (beatIdx >= 0) {
+		const isZoomed = beatIdx % 2 === 0;
+		const dt = frame - beats[beatIdx];
+		scale = interpolate(dt, [0, 8], [isZoomed ? 1 : 1.05, isZoomed ? 1.05 : 1], {
+			extrapolateLeft: 'clamp',
+			extrapolateRight: 'clamp',
+		});
+	}
+	return (
+		<AbsoluteFill style={{ transform: scale !== 1 ? `scale(${scale})` : undefined, transformOrigin: beatIdx % 2 === 0 ? '46% 44%' : '54% 48%' }}>
+			{children}
+		</AbsoluteFill>
+	);
+};
+
 export const DocuEngine: React.FC<DocuManifest> = ({ audio, durationInFrames, scenes }) => {
 	const frame = useCurrentFrame();
 	let activeMood: 'tense' | 'mystery' | 'sad' | 'silence' = 'mystery';
@@ -2439,37 +2463,39 @@ export const DocuEngine: React.FC<DocuManifest> = ({ audio, durationInFrames, sc
 							<Audio src={staticFile(`sfx/${scene.sfx}.wav`)} volume={0.18} />
 						</Sequence>
 					) : null}
-					{scene.kind === 'hook_3s' ? (
-						<SceneHook3s scene={scene} />
-					) : scene.kind === 'media_hero' ? (
-						<SceneMediaHero scene={scene} />
-					) : scene.kind === 'big_stat' ? (
-						<SceneBigStat scene={scene} />
-					) : scene.kind === 'terminal' ? (
-						<SceneTerminal scene={scene} />
-					) : scene.kind === 'loss_chart' ? (
-						<SceneLossChart scene={scene} />
-					) : scene.kind === 'silence_twist' ? (
-						<SceneSilenceTwist scene={scene} />
-					) : scene.kind === 'document' ? (
-						<SceneDocument scene={scene} />
-					) : scene.kind === 'swiss_cheese' ? (
-						<SceneSwissCheese scene={scene} />
-					) : scene.kind === 'expected_vs_reality' ? (
-						<SceneExpectedVsReality scene={scene} />
-					) : scene.kind === 'flow_sim' ? (
-						<SceneFlowSim scene={scene} />
-					) : scene.kind === 'timeline_zoom' ? (
-						<SceneTimelineZoom scene={scene} />
-					) : scene.kind === 'editorial_vox' ? (
-						<SceneEditorialVox scene={scene} />
-					) : scene.kind === 'archive_lemmino' ? (
-						<SceneArchiveLemmino scene={scene} />
-					) : scene.kind === 'parallax_noir' ? (
-						<SceneParallaxNoir scene={scene} />
-					) : (
-						<SceneTitleCard scene={scene} />
-					)}
+					<BeatCameraWrapper beats={scene.beats}>
+						{scene.kind === 'hook_3s' ? (
+							<SceneHook3s scene={scene} />
+						) : scene.kind === 'media_hero' ? (
+							<SceneMediaHero scene={scene} />
+						) : scene.kind === 'big_stat' ? (
+							<SceneBigStat scene={scene} />
+						) : scene.kind === 'terminal' ? (
+							<SceneTerminal scene={scene} />
+						) : scene.kind === 'loss_chart' ? (
+							<SceneLossChart scene={scene} />
+						) : scene.kind === 'silence_twist' ? (
+							<SceneSilenceTwist scene={scene} />
+						) : scene.kind === 'document' ? (
+							<SceneDocument scene={scene} />
+						) : scene.kind === 'swiss_cheese' ? (
+							<SceneSwissCheese scene={scene} />
+						) : scene.kind === 'expected_vs_reality' ? (
+							<SceneExpectedVsReality scene={scene} />
+						) : scene.kind === 'flow_sim' ? (
+							<SceneFlowSim scene={scene} />
+						) : scene.kind === 'timeline_zoom' ? (
+							<SceneTimelineZoom scene={scene} />
+						) : scene.kind === 'editorial_vox' ? (
+							<SceneEditorialVox scene={scene} />
+						) : scene.kind === 'archive_lemmino' ? (
+							<SceneArchiveLemmino scene={scene} />
+						) : scene.kind === 'parallax_noir' ? (
+							<SceneParallaxNoir scene={scene} />
+						) : (
+							<SceneTitleCard scene={scene} />
+						)}
+					</BeatCameraWrapper>
 				</Sequence>
 			))}
 
